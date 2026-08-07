@@ -1,0 +1,291 @@
+version: 1
+window:
+  initial_lookback_hours: 36
+  overlap_minutes: 120
+  max_catchup_hours: 96
+  minimum_split_minutes: 15
+search:
+  per_page: 100
+  max_pages_per_slice: 10
+  request_interval_seconds: 2.1
+  public_only: true
+  exclude_archived: true
+  locations:
+  - name
+  - description
+  - topics
+  - readme
+  minimum_topic_relevance_score: 0.35
+  minimum_venue_relevance_score: 0.2
+  pushed_minimum_stars: 10
+  max_readme_enrichments_per_run: 100
+query_families:
+- id: recognition_segmentation
+  queries:
+  - id: image_classification
+    text: '"image classification"'
+    topics:
+    - image_classification
+  - id: object_detection
+    text: '"object detection"'
+    topics:
+    - object_detection
+  - id: semantic_segmentation
+    text: '"semantic segmentation"'
+    topics:
+    - semantic_segmentation
+  - id: instance_segmentation
+    text: '"instance segmentation"'
+    topics:
+    - instance_segmentation
+  - id: panoptic_segmentation
+    text: '"panoptic segmentation"'
+    topics:
+    - panoptic_segmentation
+- id: foundation_representation
+  queries:
+  - id: open_vocabulary_recognition
+    text: '"open-vocabulary recognition"'
+    topics:
+    - open_vocabulary_recognition
+  - id: vision_foundation_models
+    text: '"vision foundation model"'
+    topics:
+    - vision_foundation_models
+  - id: visual_representation_learning
+    text: '"visual representation learning"'
+    topics:
+    - visual_representation_learning
+  - id: vision_language_models
+    text: '"vision-language model"'
+    topics:
+    - vision_language_models
+- id: matching_video_restoration
+  queries:
+  - id: feature_matching
+    text: '"feature matching"'
+    topics:
+    - feature_matching
+  - id: object_tracking
+    text: '"object tracking"'
+    topics:
+    - object_tracking
+  - id: video_understanding
+    text: '"video understanding"'
+    topics:
+    - video_understanding
+  - id: image_restoration
+    text: '"image restoration"'
+    topics:
+    - image_restoration
+  - id: super_resolution
+    text: '"super-resolution"'
+    topics:
+    - super_resolution
+- id: geometry_calibration
+  queries:
+  - id: structure_from_motion
+    text: '"structure from motion"'
+    topics:
+    - structure_from_motion
+  - id: multi_view_stereo
+    text: '"multi-view stereo"'
+    topics:
+    - multi_view_stereo
+  - id: camera_pose_estimation
+    text: '"camera pose estimation"'
+    topics:
+    - camera_pose_estimation
+  - id: camera_calibration
+    text: '"camera calibration"'
+    topics:
+    - camera_calibration
+- id: depth
+  queries:
+  - id: monocular_depth
+    text: '"monocular depth"'
+    topics:
+    - monocular_depth
+  - id: metric_depth
+    text: '"metric depth"'
+    topics:
+    - metric_depth
+  - id: stereo_depth
+    text: '"stereo depth"'
+    topics:
+    - stereo_depth
+  - id: multi_view_depth
+    text: '"multi-view depth"'
+    topics:
+    - multi_view_depth
+- id: reconstruction_3d
+  queries:
+  - id: feed_forward_3d_reconstruction
+    text: '"feed-forward 3d reconstruction"'
+    topics:
+    - feed_forward_3d_reconstruction
+  - id: pose_free_3d_reconstruction
+    text: '"pose-free 3d reconstruction"'
+    topics:
+    - pose_free_3d_reconstruction
+  - id: unposed_3d_reconstruction
+    text: '"unposed 3d reconstruction"'
+    topics:
+    - unposed_3d_reconstruction
+  - id: sparse_view_3d_reconstruction
+    text: '"sparse-view 3d reconstruction"'
+    topics:
+    - sparse_view_3d_reconstruction
+  - id: point_cloud_reconstruction
+    text: '"point cloud reconstruction"'
+    topics:
+    - point_cloud_reconstruction
+  - id: surface_reconstruction
+    text: '"surface reconstruction"'
+    topics:
+    - surface_reconstruction
+  - id: mesh_reconstruction
+    text: '"mesh reconstruction"'
+    topics:
+    - mesh_reconstruction
+- id: neural_rendering
+  queries:
+  - id: nerf
+    text: '"NeRF"'
+    topics:
+    - nerf
+  - id: gaussian_splatting
+    text: '"gaussian splatting"'
+    topics:
+    - gaussian_splatting
+  - id: novel_view_synthesis
+    text: '"novel-view synthesis"'
+    topics:
+    - novel_view_synthesis
+  - id: dynamic_4d_reconstruction
+    text: '"dynamic reconstruction"'
+    topics:
+    - dynamic_4d_reconstruction
+- id: generative_3d
+  queries:
+  - id: image_to_3d
+    text: '"image-to-3d"'
+    topics:
+    - image_to_3d
+  - id: text_to_3d
+    text: '"text-to-3d"'
+    topics:
+    - text_to_3d
+  - id: scene_generation
+    text: '"scene generation"'
+    topics:
+    - scene_generation
+- id: robotics_embodied
+  queries:
+  - id: slam
+    text: '"SLAM"'
+    topics:
+    - slam
+  - id: robotics_mapping
+    text: '"robotics mapping"'
+    topics:
+    - robotics_mapping
+  - id: robotics_perception
+    text: '"robotics perception"'
+    topics:
+    - robotics_perception
+  - id: embodied_vision
+    text: '"embodied vision"'
+    topics:
+    - embodied_vision
+- id: humans_avatars
+  queries:
+  - id: human_pose_estimation
+    text: '"human pose estimation"'
+    topics:
+    - human_pose_estimation
+  - id: human_mesh_reconstruction
+    text: '"human mesh reconstruction"'
+    topics:
+    - human_mesh_reconstruction
+  - id: avatar
+    text: '"avatar reconstruction"'
+    topics:
+    - avatar
+  - id: clothed_human_reconstruction
+    text: '"clothed human reconstruction"'
+    topics:
+    - clothed_human_reconstruction
+  - id: hand_reconstruction
+    text: '"hand reconstruction"'
+    topics:
+    - hand_reconstruction
+  - id: face_reconstruction
+    text: '"face reconstruction"'
+    topics:
+    - face_reconstruction
+  - id: body_reconstruction
+    text: '"body reconstruction"'
+    topics:
+    - body_reconstruction
+- id: efficiency_compression
+  queries:
+  - id: knowledge_distillation
+    text: '"knowledge distillation"'
+    topics:
+    - knowledge_distillation
+  - id: efficient_vision_models
+    text: '"efficient vision model"'
+    topics:
+    - efficient_vision_models
+  - id: model_compression
+    text: '"model compression"'
+    topics:
+    - model_compression
+  - id: quantization
+    text: '"quantization"'
+    topics:
+    - quantization
+  - id: pruning
+    text: '"model pruning"'
+    topics:
+    - pruning
+- id: adaptation_data
+  queries:
+  - id: test_time_adaptation
+    text: '"test-time adaptation"'
+    topics:
+    - test_time_adaptation
+  - id: self_supervised_learning
+    text: '"self-supervised learning"'
+    topics:
+    - self_supervised_learning
+  - id: synthetic_data
+    text: '"synthetic data"'
+    topics:
+    - synthetic_data
+  - id: pseudo_ground_truth
+    text: '"pseudo ground truth"'
+    topics:
+    - pseudo_ground_truth
+  - id: foundation_model_adaptation
+    text: '"foundation model adaptation"'
+    topics:
+    - foundation_model_adaptation
+- id: xr
+  queries:
+  - id: vr_mr_xr
+    text: '"virtual reality"'
+    topics:
+    - vr_mr_xr
+venue_search:
+  enabled: true
+  priorities:
+  - core
+  year_offsets:
+  - -1
+  - 0
+  - 1
+  modes:
+  - created
+  - pushed

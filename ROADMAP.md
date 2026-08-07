@@ -64,7 +64,7 @@ detected and normalized without relying on GitHub search.
 
 ## Phase 2 — GitHub Discovery
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -88,7 +88,7 @@ watchlist while keeping the candidate volume operationally manageable.
 
 ## Phase 3 — Academic Discovery
 
-**Status:** planned
+**Status:** active
 
 ### Goal
 

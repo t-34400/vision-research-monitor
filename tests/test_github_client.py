@@ -45,3 +45,17 @@ def test_server_error_retries_with_backoff() -> None:
     assert result.data == {"ok": True}
     assert attempts == 2
     assert delays == [1]
+
+
+def test_get_text_requests_raw_content() -> None:
+    accepts: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        accepts.append(request.headers["accept"])
+        return httpx.Response(200, text="# Project\nREADME")
+
+    with GitHubClient(None, {}, transport=httpx.MockTransport(handler)) as client:
+        result = client.get_text("/repos/example/project/readme")
+
+    assert result.data == "# Project\nREADME"
+    assert accepts == ["application/vnd.github.raw+json"]

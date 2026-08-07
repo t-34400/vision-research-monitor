@@ -70,3 +70,40 @@ def load_venues(path: Path, schema_path: Path) -> dict[str, Any]:
     if len(venue_ids) != len(set(venue_ids)):
         raise ConfigError("Academic venue IDs must be unique")
     return data
+
+
+def load_github_discovery(
+    path: Path,
+    schema_path: Path,
+    topic_ids: set[str],
+    venue_ids: set[str],
+) -> dict[str, Any]:
+    data = _load_yaml(path)
+    _validate_schema(data, schema_path)
+
+    family_ids = [family["id"] for family in data["query_families"]]
+    if len(family_ids) != len(set(family_ids)):
+        raise ConfigError("GitHub discovery query family IDs must be unique")
+
+    query_ids: list[str] = []
+    covered_topics: set[str] = set()
+    for family in data["query_families"]:
+        for query in family["queries"]:
+            query_ids.append(query["id"])
+            unknown = sorted(set(query["topics"]) - topic_ids)
+            if unknown:
+                raise ConfigError(f"Unknown discovery topics for {query['id']}: {', '.join(unknown)}")
+            covered_topics.update(query["topics"])
+
+    if len(query_ids) != len(set(query_ids)):
+        raise ConfigError("GitHub discovery query IDs must be unique")
+
+    uncovered = sorted(topic_ids - covered_topics)
+    if uncovered:
+        raise ConfigError(f"Taxonomy topics missing discovery queries: {', '.join(uncovered)}")
+
+    configured_venues = set(data["venue_search"].get("venue_ids", []))
+    unknown_venues = sorted(configured_venues - venue_ids)
+    if unknown_venues:
+        raise ConfigError(f"Unknown discovery venues: {', '.join(unknown_venues)}")
+    return data

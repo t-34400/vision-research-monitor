@@ -131,6 +131,32 @@ class GitHubClient:
             return ApiResult(response.json(), response.status_code, response.headers, cache_key=cache_key)
         raise AssertionError("retry loop exhausted unexpectedly")
 
+    def get_text(
+        self,
+        path: str,
+        *,
+        params: Mapping[str, Any] | None = None,
+        accept: str = "application/vnd.github.raw+json",
+    ) -> ApiResult:
+        for attempt in range(self.max_retries + 1):
+            response = self._client.get(path, params=params, headers={"Accept": accept})
+            if response.status_code == 404:
+                raise GitHubNotFoundError(f"GitHub resource not found: {response.request.url}")
+            if self._should_retry_rate_limit(response):
+                self._retry_or_raise(response, attempt, rate_limited=True)
+                continue
+            if response.status_code == 429 or 500 <= response.status_code < 600:
+                self._retry_or_raise(response, attempt, rate_limited=response.status_code == 429)
+                continue
+            try:
+                response.raise_for_status()
+            except httpx.HTTPStatusError as exc:
+                raise GitHubApiError(
+                    f"GitHub API request failed ({response.status_code}): {response.request.url}"
+                ) from exc
+            return ApiResult(response.text, response.status_code, response.headers)
+        raise AssertionError("retry loop exhausted unexpectedly")
+
     def get_paginated(
         self,
         path: str,

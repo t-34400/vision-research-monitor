@@ -39,16 +39,16 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 
 ## Phase 2 — GitHub Discovery
 
-- [ ] `GHD-001` Define discovery query configuration schema.
-- [ ] `GHD-002` Add topic query families.
-- [ ] `GHD-003` Add repository `created:` discovery.
-- [ ] `GHD-004` Add repository `pushed:` discovery.
-- [ ] `GHD-005` Add venue/year README discovery.
-- [ ] `GHD-006` Add bounded collection windows and checkpoints.
-- [ ] `GHD-007` Add lexical candidate scoring.
-- [ ] `GHD-008` Normalize discovered repositories.
-- [ ] `GHD-009` Add fixture-based tests.
-- [ ] `GHD-010` Add `collect-github-discovery.yml`.
+- [x] `GHD-001` Define discovery query configuration schema.
+- [x] `GHD-002` Add topic query families.
+- [x] `GHD-003` Add repository `created:` discovery.
+- [x] `GHD-004` Add repository `pushed:` discovery.
+- [x] `GHD-005` Add venue/year README discovery.
+- [x] `GHD-006` Add bounded collection windows and checkpoints.
+- [x] `GHD-007` Add lexical candidate scoring.
+- [x] `GHD-008` Normalize discovered repositories.
+- [x] `GHD-009` Add fixture-based tests.
+- [x] `GHD-010` Add `collect-github-discovery.yml`.
 
 ## Phase 3 — Academic Discovery
 

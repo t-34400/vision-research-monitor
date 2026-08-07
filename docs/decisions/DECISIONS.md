@@ -186,11 +186,57 @@ Phase 1 sends `X-GitHub-Api-Version: 2026-03-10`. API-version changes are explic
 maintenance work and must be validated against the GitHub collector tests and
 source documentation before updating the pin.
 
+
+### D-115 — Cover every taxonomy topic with explicit GitHub discovery queries
+
+**Status:** Accepted
+
+`config/github_discovery.yaml` groups repository-search queries by topic family,
+and semantic validation requires every taxonomy topic to be referenced by at
+least one query. Query wording can evolve independently from taxonomy labels.
+
+### D-116 — Separate new-repository and active-repository discovery
+
+**Status:** Accepted
+
+Every normal topic query uses both bounded `created` and `pushed` searches.
+`created` has no popularity floor so new research code can be found immediately;
+`pushed` requires at least 10 stars initially to prevent broad mature-topic
+queries from overwhelming the discovery stream.
+
+### D-117 — Use overlapping bounded discovery checkpoints
+
+**Status:** Accepted
+
+The first run looks back 36 hours. Scheduled runs overlap the previous successful
+checkpoint by two hours and permit at most 96 hours of automatic catch-up. A
+staler checkpoint requires an explicit `--from` / `--to` backfill rather than
+silently skipping history or launching an unbounded crawl.
+
+### D-118 — Split dense GitHub searches by time instead of truncating
+
+**Status:** Accepted
+
+Each search slice may page through at most 1,000 results. If GitHub reports more
+results than that capacity or marks results incomplete, the collector recursively
+splits the UTC time range. A slice that remains unsafe at 15 minutes fails the
+query and prevents checkpoint advancement.
+
+### D-119 — Use deterministic lexical relevance before semantic classification
+
+**Status:** Accepted
+
+Topic-query evidence establishes a deterministic baseline and repository
+name/description/topics can add stronger or additional taxonomy evidence.
+Venue-only candidates receive no query-topic baseline and are gated by taxonomy
+matches, with up to 100 README enrichments per run. Search requests are paced at
+2.1 seconds to remain below the documented 30-request-per-minute repository
+search limit.
+
 ## Future decisions
 
 The following choices are intentionally deferred until their roadmap phases:
 
-- discovery query weighting and candidate thresholds (Phase 2);
 - source-specific venue edition resolution (Phase 3);
 - fuzzy entity-link thresholds (Phase 4);
 - ranking weights and digest cutoffs (Phase 5);

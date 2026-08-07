@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from vision_research_monitor.config import load_taxonomy, load_venues, load_watchlist
+from vision_research_monitor.config import load_github_discovery, load_taxonomy, load_venues, load_watchlist
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,3 +27,17 @@ def test_project_configuration_is_valid() -> None:
     assert watchlist["accounts"]
     assert watchlist["repositories"]
     assert len(venues["venues"]) == 15
+
+    discovery = load_github_discovery(
+        ROOT / "config/github_discovery.yaml",
+        ROOT / "config/schemas/github-discovery.schema.json",
+        topics,
+        {venue["id"] for venue in venues["venues"]},
+    )
+    query_topics = {
+        topic
+        for family in discovery["query_families"]
+        for query in family["queries"]
+        for topic in query["topics"]
+    }
+    assert query_topics == topics
