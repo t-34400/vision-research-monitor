@@ -1,0 +1,93 @@
+version: 1
+
+venues:
+  - id: cvpr
+    name: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+    domains: [vision]
+    priority: core
+    aliases: [CVPR]
+    sources: [openreview, cvf, homepage]
+  - id: iccv
+    name: IEEE/CVF International Conference on Computer Vision
+    domains: [vision]
+    priority: core
+    aliases: [ICCV]
+    sources: [openreview, cvf, homepage]
+  - id: eccv
+    name: European Conference on Computer Vision
+    domains: [vision]
+    priority: core
+    aliases: [ECCV]
+    sources: [openreview, publisher, homepage]
+  - id: wacv
+    name: IEEE/CVF Winter Conference on Applications of Computer Vision
+    domains: [vision]
+    priority: core
+    aliases: [WACV]
+    sources: [openreview, cvf, homepage]
+  - id: threedv
+    name: International Conference on 3D Vision
+    domains: [vision]
+    priority: core
+    aliases: [3DV, International Conference on 3D Vision]
+    sources: [openreview, homepage]
+  - id: neurips
+    name: Conference on Neural Information Processing Systems
+    domains: [machine_learning]
+    priority: secondary
+    aliases: [NeurIPS, NIPS]
+    sources: [openreview, homepage]
+  - id: iclr
+    name: International Conference on Learning Representations
+    domains: [machine_learning]
+    priority: secondary
+    aliases: [ICLR]
+    sources: [openreview, homepage]
+  - id: icml
+    name: International Conference on Machine Learning
+    domains: [machine_learning]
+    priority: secondary
+    aliases: [ICML]
+    sources: [openreview, publisher, homepage]
+  - id: siggraph
+    name: ACM SIGGRAPH
+    domains: [graphics]
+    priority: core
+    aliases: [SIGGRAPH]
+    sources: [publisher, homepage]
+  - id: siggraph_asia
+    name: ACM SIGGRAPH Asia
+    domains: [graphics]
+    priority: core
+    aliases: [SIGGRAPH Asia, SIGGRAPH ASIA]
+    sources: [publisher, homepage]
+  - id: icra
+    name: IEEE International Conference on Robotics and Automation
+    domains: [robotics]
+    priority: core
+    aliases: [ICRA]
+    sources: [publisher, homepage]
+  - id: iros
+    name: IEEE/RSJ International Conference on Intelligent Robots and Systems
+    domains: [robotics]
+    priority: core
+    aliases: [IROS]
+    sources: [publisher, homepage]
+  - id: corl
+    name: Conference on Robot Learning
+    domains: [robotics, machine_learning]
+    priority: core
+    aliases: [CoRL, CORL]
+    sources: [openreview, homepage]
+  - id: ieee_vr
+    name: IEEE Conference on Virtual Reality and 3D User Interfaces
+    domains: [xr]
+    priority: secondary
+    aliases: [IEEE VR, VR]
+    sources: [publisher, homepage]
+  - id: ismar
+    name: IEEE International Symposium on Mixed and Augmented Reality
+    domains: [xr]
+    priority: secondary
+    aliases: [ISMAR]
+    sources: [publisher, homepage]

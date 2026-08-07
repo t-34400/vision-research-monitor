@@ -1,0 +1,18 @@
+{
+  "id": 101,
+  "name": "vision-project",
+  "full_name": "example/vision-project",
+  "html_url": "https://github.com/example/vision-project",
+  "description": "A Gaussian splatting research project",
+  "homepage": "https://example.org/vision-project",
+  "topics": ["3dgs", "computer-vision"],
+  "archived": false,
+  "disabled": false,
+  "fork": false,
+  "visibility": "public",
+  "default_branch": "main",
+  "created_at": "2026-08-01T00:00:00Z",
+  "updated_at": "2026-08-08T00:00:00Z",
+  "pushed_at": "2026-08-08T00:00:00Z",
+  "owner": {"login": "example"}
+}

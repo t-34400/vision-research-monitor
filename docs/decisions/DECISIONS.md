@@ -38,7 +38,8 @@ measured.
 **Status:** Accepted
 
 Updates from explicitly configured high-priority sources are included even if
-their normal ranking score would be low.
+their normal ranking score would be low. Event significance rules may still
+suppress low-value commit noise.
 
 ### D-006 — Persist ranking signals separately
 
@@ -61,81 +62,137 @@ are connected through `related_items` unless evidence is strong enough to merge.
 Artifacts/logs may be used for diagnostics or temporary outputs but not as the
 only long-term source of collected data or state.
 
-## Proposed / Open
+### D-101 — Use repository-tracked JSONL and explicit state initially
 
-### D-101 — Canonical persistence backend
+**Status:** Accepted
 
-**Status:** Proposed
+The initial durable store uses date-partitioned JSONL for normalized items and
+explicit JSON files for collector checkpoints. Markdown reports are derived from
+that canonical data. The persistence boundary must permit later migration to
+object storage or a database without changing collector contracts.
 
-Choose the initial durable persistence model.
+### D-102 — Publish the initial digest as committed Markdown
 
-Candidates:
+**Status:** Accepted
 
-- versioned JSONL/state files committed to the repository;
-- SQLite committed or published separately;
-- GitHub Releases / object storage;
-- external database.
+The initial report target is `reports/daily/YYYY-MM-DD.md` committed with the
+canonical data. GitHub Pages and external notification channels are deferred
+until the underlying digest is stable.
 
-The first implementation should prefer simplicity but must support deterministic
-rebuilds and safe checkpointing.
+### D-103 — Use staggered scheduled collection
 
-### D-102 — Daily report publication target
+**Status:** Accepted
 
-**Status:** Proposed
+Initial `Asia/Tokyo` schedules are:
 
-Choose whether reports are:
+- GitHub Watch: 00:17, 06:17, 12:17, 18:17;
+- Academic: 01:37, 07:37, 13:37, 19:37;
+- GitHub Discovery: 04:47, 16:47;
+- Daily Digest: 00:27, summarizing the previous local calendar day.
 
-- committed Markdown only;
-- published through GitHub Pages;
-- delivered to an external notification channel;
-- some combination of the above.
+Cron expressions are stored in UTC and avoid top-of-hour execution.
 
-### D-103 — Collection cadence
+### D-104 — Start with a small explicit GitHub watchlist
 
-**Status:** Proposed
+**Status:** Accepted
 
-Choose the exact schedules for:
+The initial watchlist is defined in `config/github_watchlist.yaml`. It covers
+Google research organizations, Microsoft, NVIDIA research organizations, Meta
+research, and nerfstudio projects. Broad organizations require topic filtering
+where appropriate, while research-focused targets can receive high priority.
 
-- GitHub Watch;
-- GitHub Discovery;
-- academic collection;
-- daily digest.
+### D-105 — Start with cross-domain venues centered on vision and 3D
 
-Avoid top-of-hour schedules.
+**Status:** Accepted
 
-### D-104 — Initial watchlist
+The initial registry in `config/venues.yaml` treats CVPR, ICCV, ECCV, WACV, 3DV,
+SIGGRAPH/SIGGRAPH Asia, ICRA, IROS, and CoRL as core sources, with major ML and
+XR venues included as secondary sources.
 
-**Status:** Proposed
+### D-106 — Defer semantic-classification provider selection until Phase 6
 
-Finalize the first organizations/users/repositories and their priority levels.
-The initial candidate set includes major research organizations and projects
-already discussed, but the concrete configuration should be reviewed before
-implementation.
+**Status:** Accepted
 
-### D-105 — Initial venue set
+No embedding or LLM provider is selected during the collection phases. The
+collector and normalized-item contracts must remain provider-independent. A
+provider is chosen only after a deterministic baseline and evaluation set exist.
 
-**Status:** Proposed
+### D-107 — Retain normalized history and reports, not raw API payloads
 
-Finalize the initial academic/conference venue set and distinguish core venues
-from optional broader ML/robotics venues.
+**Status:** Accepted
 
-### D-106 — Semantic classification provider
+Normalized items and daily reports are retained indefinitely under the initial
+repository-backed store. Only current collector state is required canonically.
+Raw upstream responses are not committed by default; diagnostic CI artifacts are
+short-lived and non-canonical.
 
-**Status:** Proposed
+### D-108 — Use Asia/Tokyo for reporting and UTC for storage
 
-Defer provider/model selection until Phase 6. The collector contracts must not
-depend on this choice.
+**Status:** Accepted
 
-### D-107 — Retention and history policy
+Persisted timestamps and checkpoints use UTC. Human-facing daily boundaries and
+digest dates use `Asia/Tokyo`.
 
-**Status:** Proposed
+### D-109 — Use YAML configuration validated by JSON Schema
 
-Decide how long raw normalized items, repository snapshots, and detailed change
-history are retained.
+**Status:** Accepted
 
-### D-108 — Report timezone
+Human-edited taxonomy, watchlist, and venue registries use YAML. Their structural
+contracts are versioned JSON Schema files under `config/schemas/`. Cross-file
+references such as repository topic IDs require an additional semantic
+validation step because JSON Schema alone cannot enforce them cleanly.
 
-**Status:** Proposed
+### D-110 — Treat the first GitHub watch run as a baseline
 
-Store UTC internally. Choose the explicit display/report timezone before
-scheduling the daily digest.
+**Status:** Accepted
+
+Initial account inventories and direct-repository detail scans seed state without
+emitting historical repository, release, tag, or commit activity. Timestamped
+activity that occurs after monitoring began can still be recovered if a detail
+endpoint was temporarily unavailable.
+
+### D-111 — Inventory accounts directly and detail only active repositories
+
+**Status:** Accepted
+
+Every watched account is enumerated directly through the account repository API.
+Release/tag/default-branch detail calls are limited to explicitly watched
+repositories and account repositories that are new or whose repository snapshot
+changed. This preserves direct monitoring while controlling API cost for broad
+organizations.
+
+### D-112 — Represent default-branch activity by head transitions
+
+**Status:** Accepted
+
+Phase 1 tracks the latest default-branch SHA and emits head changes rather than
+materializing every commit between scheduled runs. Full commit history can be
+added later if a concrete reporting need justifies the volume.
+
+### D-113 — Commit HTTP validators only after logical processing succeeds
+
+**Status:** Accepted
+
+ETag and Last-Modified validators are persisted only after the caller has
+successfully interpreted a response and updated the related logical state. This
+prevents a later 304 response from masking data that was fetched but never
+checkpointed.
+
+### D-114 — Pin the GitHub REST API version
+
+**Status:** Accepted
+
+Phase 1 sends `X-GitHub-Api-Version: 2026-03-10`. API-version changes are explicit
+maintenance work and must be validated against the GitHub collector tests and
+source documentation before updating the pin.
+
+## Future decisions
+
+The following choices are intentionally deferred until their roadmap phases:
+
+- discovery query weighting and candidate thresholds (Phase 2);
+- source-specific venue edition resolution (Phase 3);
+- fuzzy entity-link thresholds (Phase 4);
+- ranking weights and digest cutoffs (Phase 5);
+- semantic provider/model and evaluation threshold (Phase 6);
+- external storage or dashboard migration triggers (Phase 7/8).

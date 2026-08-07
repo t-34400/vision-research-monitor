@@ -12,30 +12,30 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `FND-006` Draft system overview specification.
 - [x] `FND-007` Draft normalized item schema specification.
 - [x] `FND-008` Draft collector contract specification.
-- [ ] `FND-009` Define initial taxonomy configuration schema.
-- [ ] `FND-010` Populate initial taxonomy from the agreed research themes.
-- [ ] `FND-011` Define watchlist configuration schema.
-- [ ] `FND-012` Populate initial organization/user/repository watchlist.
-- [ ] `FND-013` Define venue configuration schema.
-- [ ] `FND-014` Resolve Phase 0 open decisions in the decision list.
-- [ ] `FND-015` Define repository data-retention strategy.
-- [ ] `FND-016` Define reporting timezone and schedule policy.
+- [x] `FND-009` Define initial taxonomy configuration schema.
+- [x] `FND-010` Populate initial taxonomy from the agreed research themes.
+- [x] `FND-011` Define watchlist configuration schema.
+- [x] `FND-012` Populate initial organization/user/repository watchlist.
+- [x] `FND-013` Define venue configuration schema.
+- [x] `FND-014` Resolve Phase 0 open decisions in the decision list.
+- [x] `FND-015` Define repository data-retention strategy.
+- [x] `FND-016` Define reporting timezone and schedule policy.
 
 ## Phase 1 — GitHub Watch
 
-- [ ] `GHW-001` Implement GitHub API client abstraction.
-- [ ] `GHW-002` Implement rate-limit and retry handling.
-- [ ] `GHW-003` Implement conditional request support.
-- [ ] `GHW-004` Implement organization/user repository enumeration.
-- [ ] `GHW-005` Detect newly created repositories for watch targets.
-- [ ] `GHW-006` Detect repository metadata changes.
-- [ ] `GHW-007` Collect releases and tags.
-- [ ] `GHW-008` Collect default-branch activity.
-- [ ] `GHW-009` Define persistent watch state/checkpoints.
-- [ ] `GHW-010` Normalize GitHub watch events to the common item model.
-- [ ] `GHW-011` Add fixture-based tests.
-- [ ] `GHW-012` Add `collect-github-watch.yml`.
-- [ ] `GHW-013` Verify idempotent reruns.
+- [x] `GHW-001` Implement GitHub API client abstraction.
+- [x] `GHW-002` Implement rate-limit and retry handling.
+- [x] `GHW-003` Implement conditional request support.
+- [x] `GHW-004` Implement organization/user repository enumeration.
+- [x] `GHW-005` Detect newly created repositories for watch targets.
+- [x] `GHW-006` Detect repository metadata changes.
+- [x] `GHW-007` Collect releases and tags.
+- [x] `GHW-008` Collect default-branch activity.
+- [x] `GHW-009` Define persistent watch state/checkpoints.
+- [x] `GHW-010` Normalize GitHub watch events to the common item model.
+- [x] `GHW-011` Add fixture-based tests.
+- [x] `GHW-012` Add `collect-github-watch.yml`.
+- [x] `GHW-013` Verify idempotent reruns.
 
 ## Phase 2 — GitHub Discovery
 

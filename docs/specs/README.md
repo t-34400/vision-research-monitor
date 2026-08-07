@@ -10,6 +10,12 @@ their rationale belong in `../decisions/DECISIONS.md`.
 - `000-system-overview.md` — system boundaries and pipeline stages.
 - `010-normalized-item.md` — common item model shared by all sources.
 - `020-collector-contract.md` — required behavior of source collectors.
+- `030-taxonomy.md` — research-topic taxonomy contract.
+- `040-github-watchlist.md` — known GitHub target configuration.
+- `050-venues.md` — academic venue registry.
+- `100-github-watch.md` — known-target GitHub monitoring behavior.
+- `510-persistence-retention.md` — canonical storage and retention policy.
+- `610-scheduling.md` — workflow cadence and timezone policy.
 - `_template.md` — template for future specifications.
 
 ## Naming

@@ -1,0 +1,263 @@
+version: 1
+
+groups:
+  - id: recognition_segmentation
+    label: Recognition and Segmentation
+  - id: foundation_representation
+    label: Foundation and Representation Learning
+  - id: matching_video_restoration
+    label: Matching, Video, and Restoration
+  - id: geometry_calibration
+    label: Geometry, SfM, and Calibration
+  - id: depth
+    label: Depth Estimation
+  - id: reconstruction_3d
+    label: 3D Reconstruction
+  - id: neural_rendering
+    label: Neural Rendering and Novel Views
+  - id: generative_3d
+    label: Generative 3D
+  - id: robotics_embodied
+    label: Robotics and Embodied Vision
+  - id: humans_avatars
+    label: Humans and Avatars
+  - id: efficiency_compression
+    label: Efficient Vision and Compression
+  - id: adaptation_data
+    label: Adaptation, Self-Supervision, and Data
+  - id: xr
+    label: VR, MR, and XR
+
+topics:
+  - id: image_classification
+    label: Image Classification
+    group: recognition_segmentation
+    aliases: [image classification, visual classification]
+  - id: object_detection
+    label: Object Detection
+    group: recognition_segmentation
+    aliases: [object detection, detection]
+  - id: semantic_segmentation
+    label: Semantic Segmentation
+    group: recognition_segmentation
+    aliases: [semantic segmentation]
+  - id: instance_segmentation
+    label: Instance Segmentation
+    group: recognition_segmentation
+    aliases: [instance segmentation]
+  - id: panoptic_segmentation
+    label: Panoptic Segmentation
+    group: recognition_segmentation
+    aliases: [panoptic segmentation]
+  - id: open_vocabulary_recognition
+    label: Open-Vocabulary Recognition
+    group: foundation_representation
+    aliases: [open-vocabulary recognition, open vocabulary recognition, open-vocabulary detection, open-vocabulary segmentation]
+  - id: vision_foundation_models
+    label: Vision Foundation Models
+    group: foundation_representation
+    aliases: [vision foundation model, visual foundation model, foundation vision model]
+  - id: visual_representation_learning
+    label: Visual Representation Learning
+    group: foundation_representation
+    aliases: [visual representation learning, representation learning]
+  - id: feature_matching
+    label: Feature Matching
+    group: matching_video_restoration
+    aliases: [feature matching, image matching, local feature matching]
+  - id: object_tracking
+    label: Object Tracking
+    group: matching_video_restoration
+    aliases: [object tracking, visual tracking, multi-object tracking, single-object tracking]
+  - id: video_understanding
+    label: Video Understanding
+    group: matching_video_restoration
+    aliases: [video understanding, video recognition, video representation]
+  - id: image_restoration
+    label: Image Restoration
+    group: matching_video_restoration
+    aliases: [image restoration, image denoising, deblurring, image deblurring]
+  - id: super_resolution
+    label: Super-Resolution
+    group: matching_video_restoration
+    aliases: [super-resolution, super resolution, image super-resolution]
+  - id: vision_language_models
+    label: Vision-Language Models
+    group: foundation_representation
+    aliases: [vision-language model, vision language model, VLM, multimodal vision-language]
+  - id: structure_from_motion
+    label: Structure from Motion
+    group: geometry_calibration
+    aliases: [structure from motion, structure-from-motion, SfM]
+  - id: multi_view_stereo
+    label: Multi-View Stereo
+    group: geometry_calibration
+    aliases: [multi-view stereo, multi view stereo, MVS]
+  - id: camera_pose_estimation
+    label: Camera Pose Estimation
+    group: geometry_calibration
+    aliases: [camera pose estimation, camera pose, visual localization, camera localization]
+  - id: camera_calibration
+    label: Camera Calibration
+    group: geometry_calibration
+    aliases: [camera calibration, intrinsic calibration, extrinsic calibration]
+  - id: monocular_depth
+    label: Monocular Depth
+    group: depth
+    aliases: [monocular depth, monocular depth estimation]
+  - id: metric_depth
+    label: Metric Depth
+    group: depth
+    aliases: [metric depth, metric depth estimation, absolute depth]
+  - id: stereo_depth
+    label: Stereo Depth
+    group: depth
+    aliases: [stereo depth, stereo depth estimation, stereo matching]
+  - id: multi_view_depth
+    label: Multi-View Depth
+    group: depth
+    aliases: [multi-view depth, multi view depth, multi-view depth estimation]
+  - id: feed_forward_3d_reconstruction
+    label: Feed-Forward 3D Reconstruction
+    group: reconstruction_3d
+    aliases: [feed-forward 3d reconstruction, feed forward 3d reconstruction, feed-forward reconstruction]
+  - id: pose_free_3d_reconstruction
+    label: Pose-Free 3D Reconstruction
+    group: reconstruction_3d
+    aliases: [pose-free 3d reconstruction, pose free 3d reconstruction, pose-free reconstruction]
+  - id: unposed_3d_reconstruction
+    label: Unposed 3D Reconstruction
+    group: reconstruction_3d
+    aliases: [unposed 3d reconstruction, unposed reconstruction, unposed images]
+  - id: sparse_view_3d_reconstruction
+    label: Sparse-View 3D Reconstruction
+    group: reconstruction_3d
+    aliases: [sparse-view 3d reconstruction, sparse view 3d reconstruction, sparse-view reconstruction]
+  - id: point_cloud_reconstruction
+    label: Point Cloud Reconstruction
+    group: reconstruction_3d
+    aliases: [point cloud reconstruction, point-cloud reconstruction]
+  - id: surface_reconstruction
+    label: Surface Reconstruction
+    group: reconstruction_3d
+    aliases: [surface reconstruction, implicit surface reconstruction]
+  - id: mesh_reconstruction
+    label: Mesh Reconstruction
+    group: reconstruction_3d
+    aliases: [mesh reconstruction, 3d mesh reconstruction]
+  - id: nerf
+    label: NeRF
+    group: neural_rendering
+    aliases: [NeRF, neural radiance field, neural radiance fields]
+  - id: gaussian_splatting
+    label: Gaussian Splatting
+    group: neural_rendering
+    aliases: [gaussian splatting, 3d gaussian splatting, 3DGS, gaussian splats]
+  - id: novel_view_synthesis
+    label: Novel-View Synthesis
+    group: neural_rendering
+    aliases: [novel-view synthesis, novel view synthesis, NVS]
+  - id: dynamic_4d_reconstruction
+    label: Dynamic and 4D Reconstruction
+    group: neural_rendering
+    aliases: [dynamic reconstruction, 4d reconstruction, dynamic scene reconstruction, 4DGS]
+  - id: image_to_3d
+    label: Image-to-3D
+    group: generative_3d
+    aliases: [image-to-3d, image to 3d, single image to 3d]
+  - id: text_to_3d
+    label: Text-to-3D
+    group: generative_3d
+    aliases: [text-to-3d, text to 3d]
+  - id: scene_generation
+    label: Scene Generation
+    group: generative_3d
+    aliases: [scene generation, 3d scene generation, generative 3d scene]
+  - id: slam
+    label: SLAM
+    group: robotics_embodied
+    aliases: [SLAM, simultaneous localization and mapping, visual slam, visual-inertial slam]
+  - id: robotics_mapping
+    label: Robotics Mapping
+    group: robotics_embodied
+    aliases: [robotics mapping, robot mapping, mapping for robotics]
+  - id: robotics_perception
+    label: Robotics Perception
+    group: robotics_embodied
+    aliases: [robotics perception, robot perception, robotic perception]
+  - id: embodied_vision
+    label: Embodied Vision
+    group: robotics_embodied
+    aliases: [embodied vision, embodied perception, embodied visual perception]
+  - id: human_pose_estimation
+    label: Human Pose Estimation
+    group: humans_avatars
+    aliases: [human pose estimation, 3d human pose, 2d human pose]
+  - id: human_mesh_reconstruction
+    label: Human Mesh Reconstruction
+    group: humans_avatars
+    aliases: [human mesh reconstruction, human mesh recovery, HMR]
+  - id: avatar
+    label: Avatar
+    group: humans_avatars
+    aliases: [avatar reconstruction, human avatar, neural avatar, 3d avatar]
+  - id: clothed_human_reconstruction
+    label: Clothed Human Reconstruction
+    group: humans_avatars
+    aliases: [clothed human reconstruction, clothed human, clothing reconstruction]
+  - id: hand_reconstruction
+    label: Hand Reconstruction
+    group: humans_avatars
+    aliases: [hand reconstruction, 3d hand reconstruction, hand mesh reconstruction]
+  - id: face_reconstruction
+    label: Face Reconstruction
+    group: humans_avatars
+    aliases: [face reconstruction, 3d face reconstruction, facial reconstruction]
+  - id: body_reconstruction
+    label: Body Reconstruction
+    group: humans_avatars
+    aliases: [body reconstruction, 3d body reconstruction, human body reconstruction]
+  - id: knowledge_distillation
+    label: Knowledge Distillation
+    group: efficiency_compression
+    aliases: [knowledge distillation, model distillation, teacher student learning]
+  - id: efficient_vision_models
+    label: Efficient Vision Models
+    group: efficiency_compression
+    aliases: [efficient vision model, efficient vision models, efficient visual model]
+  - id: model_compression
+    label: Model Compression
+    group: efficiency_compression
+    aliases: [model compression, neural network compression]
+  - id: quantization
+    label: Quantization
+    group: efficiency_compression
+    aliases: [quantization, model quantization, neural network quantization]
+  - id: pruning
+    label: Pruning
+    group: efficiency_compression
+    aliases: [model pruning, network pruning, neural pruning]
+  - id: test_time_adaptation
+    label: Test-Time Adaptation
+    group: adaptation_data
+    aliases: [test-time adaptation, test time adaptation, TTA]
+  - id: self_supervised_learning
+    label: Self-Supervised Learning
+    group: adaptation_data
+    aliases: [self-supervised learning, self supervised learning, SSL]
+  - id: synthetic_data
+    label: Synthetic Data
+    group: adaptation_data
+    aliases: [synthetic data, synthetic training data, generated training data]
+  - id: pseudo_ground_truth
+    label: Pseudo Ground Truth
+    group: adaptation_data
+    aliases: [pseudo ground truth, pseudo-ground-truth, pseudo labels, pseudo-labeling]
+  - id: foundation_model_adaptation
+    label: Foundation Model Adaptation
+    group: adaptation_data
+    aliases: [foundation model adaptation, adapting foundation models, vision foundation model adaptation]
+  - id: vr_mr_xr
+    label: VR / MR / XR
+    group: xr
+    aliases: [virtual reality, mixed reality, extended reality, VR, MR, XR]

@@ -1,0 +1,9 @@
+{
+  "sha": "abcdef1234567890",
+  "html_url": "https://github.com/example/vision-project/commit/abcdef1234567890",
+  "commit": {
+    "message": "Improve reconstruction quality\n\nDetails",
+    "committer": {"date": "2026-08-08T01:10:00Z"},
+    "author": {"date": "2026-08-08T01:10:00Z"}
+  }
+}

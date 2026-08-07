@@ -12,7 +12,7 @@ Statuses:
 
 ## Phase 0 — Foundation
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -39,7 +39,7 @@ Create the project contracts before implementing collectors.
 
 ## Phase 1 — GitHub Watch
 
-**Status:** planned
+**Status:** complete
 
 ### Goal
 
@@ -64,7 +64,7 @@ detected and normalized without relying on GitHub search.
 
 ## Phase 2 — GitHub Discovery
 
-**Status:** planned
+**Status:** active
 
 ### Goal
 

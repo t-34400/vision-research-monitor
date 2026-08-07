@@ -29,7 +29,7 @@ metadata
 id: string
 source: string
 source_id: string
-kind: repository | release | commit | paper | project | event
+kind: repository | release | tag | commit | paper | project | event
 
 title: string
 url: string

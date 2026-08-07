@@ -94,6 +94,7 @@ The system must support:
 - `.chatgpt-workspace-manifest.json` is managed externally as a workspace management tag.
 - Never create, edit, reformat, regenerate, delete, rename, or otherwise modify `.chatgpt-workspace-manifest.json`.
 - Preserve that file exactly when modifying, packaging, or exporting the repository.
+- Automation that creates commits must stage explicit allowlisted paths and must never stage `.chatgpt-workspace-manifest.json`.
 
 ## 9. Documentation rules
 

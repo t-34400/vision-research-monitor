@@ -1,0 +1,52 @@
+version: 1
+
+accounts:
+  - login: google-research
+    type: organization
+    priority: high
+    topic_filter_required: false
+    notes: Research-focused Google organization.
+  - login: google-deepmind
+    type: organization
+    priority: high
+    topic_filter_required: true
+    notes: Broad research organization; only topic-relevant repositories should enter the digest.
+  - login: microsoft
+    type: organization
+    priority: normal
+    topic_filter_required: true
+    notes: Broad organization; watch changes but require topic relevance for normal inclusion.
+  - login: NVlabs
+    type: organization
+    priority: high
+    topic_filter_required: false
+    notes: NVIDIA research repositories with strong vision and graphics relevance.
+  - login: nv-tlabs
+    type: organization
+    priority: high
+    topic_filter_required: false
+    notes: NVIDIA Toronto AI Lab research repositories.
+  - login: facebookresearch
+    type: organization
+    priority: high
+    topic_filter_required: true
+    notes: Meta research organization spanning vision and adjacent machine learning topics.
+  - login: nerfstudio-project
+    type: organization
+    priority: high
+    topic_filter_required: false
+    notes: High-priority neural rendering and 3D reconstruction project organization.
+
+repositories:
+  - repo: nerfstudio-project/nerfstudio
+    priority: high
+    topics: [nerf, gaussian_splatting, novel_view_synthesis]
+    notes: Primary nerfstudio repository.
+  - repo: nerfstudio-project/gsplat
+    priority: high
+    topics: [gaussian_splatting, novel_view_synthesis]
+    notes: High-priority Gaussian splatting library.
+  - repo: NVlabs/instant-ngp
+    priority: high
+    topics: [nerf, novel_view_synthesis]
+    notes: Established neural graphics repository worth tracking for meaningful releases or maintenance changes.
