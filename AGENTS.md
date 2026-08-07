@@ -89,7 +89,13 @@ The system must support:
 - Prefer targeted validation during development; broad integration tests should
   be deliberate rather than the default.
 
-## 8. Documentation rules
+## 8. Workspace metadata protection
+
+- `.chatgpt-workspace-manifest.json` is managed externally as a workspace management tag.
+- Never create, edit, reformat, regenerate, delete, rename, or otherwise modify `.chatgpt-workspace-manifest.json`.
+- Preserve that file exactly when modifying, packaging, or exporting the repository.
+
+## 9. Documentation rules
 
 - `ROADMAP.md` describes sequencing and phase outcomes.
 - `TASKS.md` contains executable work items and their status.
@@ -100,7 +106,7 @@ The system must support:
 - When a choice changes architecture or long-term conventions, update the
   decision list in the same change.
 
-## 9. Definition of done
+## 10. Definition of done
 
 A task is done only when:
 
