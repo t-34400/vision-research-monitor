@@ -57,7 +57,7 @@ def test_openreview_bootstrap_filters_and_normalizes_notes() -> None:
     assert edition_state["bootstrapped"] is True
 
 
-def test_openreview_incremental_collection_uses_creation_checkpoint() -> None:
+def test_openreview_incremental_collection_uses_modification_order() -> None:
     config, taxonomy = load_inputs()
     payload = json.loads((FIXTURES / "openreview_notes.json").read_text())
     requests: list[httpx.Request] = []
@@ -89,7 +89,8 @@ def test_openreview_incremental_collection_uses_creation_checkpoint() -> None:
         )
         collector.collect(datetime(2026, 8, 8, tzinfo=timezone.utc))
 
-    assert "mintcdate" in requests[0].url.params
+    assert requests[0].url.params["sort"] == "tmdate:desc"
+    assert "mintcdate" not in requests[0].url.params
 
 
 def test_openreview_status_normalization() -> None:
@@ -97,3 +98,51 @@ def test_openreview_status_normalization() -> None:
     assert normalize_status({"content": {"venue": {"value": "Rejected"}}}) == "rejected"
     assert normalize_status({"pdate": 1, "content": {"venue": {"value": "CVPR 2026"}}}) == "accepted"
     assert normalize_status({"content": {"venue": {"value": "CVPR 2026 Submission"}}}) == "submitted"
+
+
+def test_openreview_emits_status_transition_for_modified_note() -> None:
+    config, taxonomy = load_inputs()
+    payload = json.loads((FIXTURES / "openreview_notes.json").read_text())
+    state = {
+        "academic": {
+            "openreview": {
+                "last_successful_at": "2026-08-07T12:00:00Z",
+                "editions": {
+                    "thecvf.com/CVPR/2026/Conference": {
+                        "bootstrapped": True,
+                        "notes": {
+                            "note-gaussian": {
+                                "status": "submitted",
+                                "tmdate": 1786032000000,
+                                "last_seen_at": "2026-08-06T16:00:00Z",
+                            }
+                        },
+                    }
+                },
+            }
+        }
+    }
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json=payload)
+
+    with AcademicHttpClient(
+        config["openreview"]["base_url"],
+        transport=httpx.MockTransport(handler),
+        sleeper=lambda _: None,
+    ) as client:
+        result = OpenReviewCollector(
+            client,
+            state,
+            config,
+            taxonomy,
+            sleeper=lambda _: None,
+            monotonic=lambda: 0.0,
+        ).collect(datetime(2026, 8, 8, tzinfo=timezone.utc))
+
+    transition = next(item for item in result.items if item.kind == "event")
+    assert transition.metadata["action"] == "status_changed"
+    assert transition.metadata["previous_status"] == "submitted"
+    assert transition.metadata["status"] == "accepted"
+    assert transition.metadata["paper_id"] == "note-gaussian"
+    assert state["academic"]["openreview"]["editions"]["thecvf.com/CVPR/2026/Conference"]["notes"]["note-gaussian"]["status"] == "accepted"

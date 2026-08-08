@@ -22,10 +22,11 @@ Define the initial GitHub Actions cadence and time semantics.
 | arXiv | 01:37, 07:37, 13:37, 19:37 daily | `37 4,10,16,22 * * *` |
 | OpenReview | 01:43, 07:43, 13:43, 19:43 daily | `43 4,10,16,22 * * *` |
 | GitHub Discovery | 04:47, 16:47 daily | `47 7,19 * * *` |
-| Daily Digest | 00:27 daily | `27 15 * * *` |
+| Daily Digest | 08:11 daily | `11 23 * * *` |
 
-The daily digest run at 00:27 local time summarizes the previous
-`Asia/Tokyo` calendar day.
+The daily digest uses an 08:00 local reporting boundary and runs at 08:11,
+after the 07:37 arXiv and 07:43 OpenReview collection slots. A digest date is the
+end date of the preceding 24-hour reporting window.
 
 ## Scheduling rules
 

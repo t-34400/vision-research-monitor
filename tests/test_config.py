@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from vision_research_monitor.config import load_academic, load_github_discovery, load_linking, load_taxonomy, load_venues, load_watchlist
+from vision_research_monitor.config import load_academic, load_github_discovery, load_linking, load_reporting, load_taxonomy, load_venues, load_watchlist
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,3 +55,10 @@ def test_project_configuration_is_valid() -> None:
         ROOT / "config/schemas/linking.schema.json",
     )
     assert linking["matching"]["fuzzy_title"]["minimum_similarity"] == 0.94
+
+    reporting = load_reporting(
+        ROOT / "config/reporting.yaml",
+        ROOT / "config/schemas/reporting.schema.json",
+        {venue["priority"] for venue in venues["venues"]},
+    )
+    assert reporting["timezone"] == "Asia/Tokyo"

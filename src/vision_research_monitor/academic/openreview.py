@@ -60,6 +60,7 @@ class OpenReviewCollector:
                 continue
             venue_id = edition["venue_id"]
             edition_state = editions_state.setdefault(venue_id, {})
+            note_state = edition_state.setdefault("notes", {})
             bootstrap = (
                 self.config["openreview"]["bootstrap_full_scan"]
                 and not edition_state.get("bootstrapped", False)
@@ -78,9 +79,33 @@ class OpenReviewCollector:
                 match = self.matcher.match(title, abstract, keywords=keywords)
                 if match.score < threshold:
                     continue
-                result.items.append(
-                    normalize_openreview_note(note, edition, match.score, match.topics, match.matched_terms, run_at)
-                )
+
+                item = normalize_openreview_note(note, edition, match.score, match.topics, match.matched_terms, run_at)
+                result.items.append(item)
+                note_id = str(note["id"])
+                current_status = str(item.metadata["status"])
+                previous = note_state.get(note_id)
+                if isinstance(previous, dict):
+                    previous_status = previous.get("status")
+                    if isinstance(previous_status, str) and previous_status != current_status:
+                        result.items.append(
+                            normalize_status_transition(
+                                note,
+                                edition,
+                                previous_status,
+                                current_status,
+                                match.score,
+                                match.topics,
+                                match.matched_terms,
+                                run_at,
+                            )
+                        )
+                note_state[note_id] = {
+                    "status": current_status,
+                    "tmdate": integer_value(note.get("tmdate")),
+                    "last_seen_at": to_iso8601(run_at),
+                }
+
             if bootstrap:
                 edition_state["bootstrapped"] = True
                 edition_state["bootstrapped_at"] = to_iso8601(run_at)
@@ -108,10 +133,8 @@ class OpenReviewCollector:
                 "content.venueid": edition["venue_id"],
                 "limit": page_size,
                 "offset": offset,
-                "sort": "tcdate:asc",
+                "sort": "tcdate:asc" if bootstrap else "tmdate:desc",
             }
-            if not bootstrap:
-                params["mintcdate"] = start_ms
             self._pace()
             response = self.client.get_json("/notes", params=params)
             payload = response.data
@@ -122,16 +145,22 @@ class OpenReviewCollector:
             for note in notes:
                 if not isinstance(note, dict):
                     continue
-                tcdate = integer_value(note.get("tcdate") or note.get("cdate"))
-                if bootstrap or tcdate is None or start_ms <= tcdate <= end_ms:
+                if bootstrap:
+                    collected.append(note)
+                    continue
+                activity = note_activity_ms(note)
+                if activity is None or start_ms <= activity <= end_ms:
                     collected.append(note)
 
             offset += len(notes)
             if len(notes) < page_size:
                 return collected
             if not bootstrap and notes:
-                last_tcdate = integer_value(notes[-1].get("tcdate") or notes[-1].get("cdate"))
-                if last_tcdate is not None and last_tcdate > end_ms:
+                oldest_activity = min(
+                    (value for note in notes if isinstance(note, dict) and (value := note_activity_ms(note)) is not None),
+                    default=None,
+                )
+                if oldest_activity is not None and oldest_activity < start_ms:
                     return collected
 
         raise AcademicCoverageError(
@@ -196,6 +225,51 @@ def normalize_openreview_note(
     )
 
 
+def normalize_status_transition(
+    note: dict[str, Any],
+    edition: dict[str, Any],
+    previous_status: str,
+    current_status: str,
+    relevance: float,
+    topics: list[str],
+    matched_terms: list[str],
+    run_at: datetime,
+) -> NormalizedItem:
+    note_id = str(note["id"])
+    transition_ms = first_integer(note, "tmdate", "mdate", "pdate", "odate", "tcdate", "cdate")
+    transition_key = str(transition_ms) if transition_ms is not None else to_iso8601(run_at)
+    source_id = f"{note_id}:status:{previous_status}:{current_status}:{transition_key}"
+    title = string_content(note, "title")
+    return NormalizedItem(
+        id=f"openreview:event:{source_id}",
+        source="openreview",
+        source_id=source_id,
+        kind="event",
+        title=title,
+        url=f"https://openreview.net/forum?id={note_id}",
+        discovered_at=to_iso8601(run_at),
+        published_at=milliseconds_to_iso(transition_ms) or to_iso8601(run_at),
+        updated_at=milliseconds_to_iso(transition_ms),
+        summary=string_content(note, "abstract") or None,
+        authors=list_content(note, "authors"),
+        venue=edition["venue"],
+        topics=topics,
+        matched_terms=matched_terms,
+        scores={"relevance": relevance},
+        metadata={
+            "action": "status_changed",
+            "paper_id": note_id,
+            "paper_url": f"https://openreview.net/forum?id={note_id}",
+            "previous_status": previous_status,
+            "status": current_status,
+            "venue_year": edition["year"],
+            "openreview_venue_id": edition["venue_id"],
+            "tmdate": integer_value(note.get("tmdate")),
+            "pdate": integer_value(note.get("pdate")),
+        },
+    )
+
+
 def normalize_status(note: dict[str, Any]) -> str:
     venue_label = string_content(note, "venue").casefold()
     if "withdraw" in venue_label:
@@ -205,6 +279,10 @@ def normalize_status(note: dict[str, Any]) -> str:
     if integer_value(note.get("pdate")) is not None:
         return "accepted"
     return "submitted"
+
+
+def note_activity_ms(note: dict[str, Any]) -> int | None:
+    return first_integer(note, "tmdate", "tcdate", "mdate", "cdate")
 
 
 def content_value(note: dict[str, Any], key: str) -> Any:

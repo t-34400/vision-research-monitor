@@ -386,6 +386,7 @@ class GitHubDiscoveryCollector:
                 "github_topics": sorted(repo.get("topics") or []),
                 "homepage": repo.get("homepage"),
                 "stars": int(repo.get("stargazers_count") or 0),
+                "stars_delta": 0,
                 "forks": int(repo.get("forks_count") or 0),
                 "language": repo.get("language"),
                 "fork": bool(repo.get("fork")),

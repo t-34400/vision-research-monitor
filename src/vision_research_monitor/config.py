@@ -143,3 +143,18 @@ def load_linking(path: Path, schema_path: Path) -> dict[str, Any]:
         raise ConfigError("Linking fuzzy-title similarity must be positive")
     return data
 
+
+
+def load_reporting(path: Path, schema_path: Path, venue_priorities: set[str]) -> dict[str, Any]:
+    data = _load_yaml(path)
+    _validate_schema(data, schema_path)
+
+    weights = data["ranking"]["weights"]
+    total_weight = sum(float(value) for value in weights.values())
+    if total_weight <= 0:
+        raise ConfigError("Ranking weights must sum to a positive value")
+
+    unknown_priorities = sorted(set(data["ranking"]["venue_priority"]) - venue_priorities)
+    if unknown_priorities:
+        raise ConfigError(f"Unknown venue priority classes: {', '.join(unknown_priorities)}")
+    return data

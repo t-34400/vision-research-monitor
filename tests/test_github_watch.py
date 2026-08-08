@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from vision_research_monitor.github.client import ApiResult
-from vision_research_monitor.github.watch import GitHubWatchCollector
+from vision_research_monitor.github.watch import GitHubWatchCollector, repository_popularity
 
 
 FIXTURES = Path(__file__).parent / "fixtures/github"
@@ -114,3 +114,13 @@ def test_subsequent_tag_is_emitted_after_tag_baseline_exists() -> None:
 
     assert [item.kind for item in result.items].count("tag") == 1
     assert any(item.metadata.get("tag_name") == "v1.2.0" for item in result.items)
+
+
+def test_repository_popularity_uses_previous_snapshot() -> None:
+    repository = fixture("repository.json")
+    repository["stargazers_count"] = 145
+    repository["forks_count"] = 12
+
+    popularity = repository_popularity(repository, {"stars": 120})
+
+    assert popularity == {"stars": 145, "forks": 12, "stars_delta": 25}

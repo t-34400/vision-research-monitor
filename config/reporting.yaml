@@ -1,0 +1,50 @@
+version: 1
+
+timezone: Asia/Tokyo
+day_boundary_hour: 8
+
+ranking:
+  minimum_total_score: 0.35
+  weights:
+    priority: 0.30
+    relevance: 0.30
+    freshness: 0.15
+    novelty: 0.20
+    popularity: 0.05
+  source_priority_defaults:
+    github: 0.10
+    arxiv: 0.20
+    openreview: 0.25
+  venue_priority:
+    core: 0.70
+    secondary: 0.40
+  relevance_fallback_with_topics: 0.55
+  freshness_half_life_hours: 72
+  popularity_reference_delta: 100
+  novelty:
+    repository: 1.00
+    paper: 0.90
+    release: 1.00
+    tag: 0.65
+    commit: 0.45
+    event: 0.55
+    actions:
+      created: 1.00
+      discovered: 1.00
+      released: 1.00
+      status_changed: 0.95
+      metadata_updated: 0.55
+      default_branch_advanced: 0.45
+      tagged: 0.65
+      missing_from_account: 0.35
+
+report:
+  title: Vision Research Digest
+  include_score: true
+  summary_max_characters: 280
+  section_limits:
+    accepted_papers: 40
+    new_papers: 60
+    new_repositories: 40
+    project_updates: 60
+    other: 30

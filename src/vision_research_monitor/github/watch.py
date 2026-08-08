@@ -94,7 +94,8 @@ class GitHubWatchCollector:
             repo_state = self.state["repositories"].get(repo_id)
             if repo_state is None:
                 repo_state = self._ensure_repository_state(repo, run_at)
-                result.items.append(self._repository_created_item(repo, account, run_at))
+                popularity = repository_popularity(repo, None)
+                result.items.append(self._repository_created_item(repo, account, run_at, popularity))
                 self._collect_repository_details(
                     repo,
                     repo_state,
@@ -102,11 +103,13 @@ class GitHubWatchCollector:
                     run_at,
                     result,
                     initial_since=previous_checked,
+                    popularity=popularity,
                 )
                 continue
 
             old_snapshot = repo_state["snapshot"]
             new_snapshot = repository_snapshot(repo)
+            popularity = repository_popularity(repo, old_snapshot)
             changed = meaningful_changes(old_snapshot, new_snapshot)
             activity_changed = (
                 old_snapshot.get("updated_at") != new_snapshot.get("updated_at")
@@ -115,7 +118,7 @@ class GitHubWatchCollector:
             repo_state["snapshot"] = new_snapshot
             repo_state["last_seen_at"] = to_iso8601(run_at)
             if changed:
-                result.items.append(self._repository_updated_item(repo, account, changed, run_at))
+                result.items.append(self._repository_updated_item(repo, account, changed, run_at, popularity))
             if activity_changed:
                 self._collect_repository_details(
                     repo,
@@ -124,6 +127,7 @@ class GitHubWatchCollector:
                     run_at,
                     result,
                     initial_since=parse_iso8601(repo_state.get("first_observed_at")) or previous_checked,
+                    popularity=popularity,
                 )
 
         for missing_id in sorted(previous_ids - current_ids):
@@ -168,7 +172,9 @@ class GitHubWatchCollector:
             repo_state = self._ensure_repository_state(repo, run_at)
             repo_state.setdefault("configured_names", []).append(configured["repo"])
             self.client.commit_cache(api_result)
-            self._collect_repository_details(repo, repo_state, configured, run_at, result, initial_since=None)
+            self._collect_repository_details(
+                repo, repo_state, configured, run_at, result, initial_since=None, popularity=repository_popularity(repo, None)
+            )
             return
 
         configured_names = repo_state.setdefault("configured_names", [])
@@ -177,13 +183,14 @@ class GitHubWatchCollector:
 
         old_snapshot = repo_state["snapshot"]
         new_snapshot = repository_snapshot(repo)
+        popularity = repository_popularity(repo, old_snapshot)
         changed = meaningful_changes(old_snapshot, new_snapshot)
         repo_state["snapshot"] = new_snapshot
         repo_state["last_seen_at"] = to_iso8601(run_at)
         if changed:
-            result.items.append(self._repository_updated_item(repo, configured, changed, run_at))
+            result.items.append(self._repository_updated_item(repo, configured, changed, run_at, popularity))
         self.client.commit_cache(api_result)
-        self._collect_repository_details(repo, repo_state, configured, run_at, result, initial_since=None)
+        self._collect_repository_details(repo, repo_state, configured, run_at, result, initial_since=None, popularity=popularity)
 
     def _collect_repository_details_from_state(
         self,
@@ -200,8 +207,13 @@ class GitHubWatchCollector:
             "description": snapshot.get("description"),
             "default_branch": snapshot.get("default_branch"),
             "owner": {"login": snapshot.get("owner_login")},
+            "stargazers_count": snapshot.get("stars", 0),
+            "forks_count": snapshot.get("forks", 0),
         }
-        self._collect_repository_details(repo, repo_state, source_config, run_at, result, initial_since=None)
+        self._collect_repository_details(
+            repo, repo_state, source_config, run_at, result, initial_since=None,
+            popularity=repository_popularity(repo, snapshot),
+        )
 
     def _collect_repository_details(
         self,
@@ -212,6 +224,7 @@ class GitHubWatchCollector:
         result: WatchRunResult,
         *,
         initial_since: datetime | None,
+        popularity: dict[str, int],
     ) -> None:
         details = repo_state.setdefault("details", {})
         first_observed = parse_iso8601(repo_state.get("first_observed_at")) or run_at
@@ -219,17 +232,17 @@ class GitHubWatchCollector:
         commit_since = parse_iso8601(details.get("commit_checked_at")) or initial_since or first_observed
 
         try:
-            self._collect_releases(repo, details, source_config, run_at, result, release_since)
+            self._collect_releases(repo, details, source_config, run_at, result, release_since, popularity)
         except GitHubApiError as exc:
             result.add_error(f"releases:{repo['full_name']}", exc)
 
         try:
-            self._collect_tags(repo, details, source_config, run_at, result)
+            self._collect_tags(repo, details, source_config, run_at, result, popularity)
         except GitHubApiError as exc:
             result.add_error(f"tags:{repo['full_name']}", exc)
 
         try:
-            self._collect_default_branch_head(repo, details, source_config, run_at, result, commit_since)
+            self._collect_default_branch_head(repo, details, source_config, run_at, result, commit_since, popularity)
         except GitHubApiError as exc:
             result.add_error(f"commit:{repo['full_name']}", exc)
 
@@ -241,6 +254,7 @@ class GitHubWatchCollector:
         run_at: datetime,
         result: WatchRunResult,
         since: datetime,
+        popularity: dict[str, int],
     ) -> None:
         repo_id = str(repo["id"])
         path = f"/repos/{repo['full_name']}/releases"
@@ -277,7 +291,7 @@ class GitHubWatchCollector:
             else:
                 should_emit = published is not None and published > since
             if should_emit:
-                result.items.append(self._release_item(repo, release, source_config, run_at))
+                result.items.append(self._release_item(repo, release, source_config, run_at, popularity))
 
         details["seen_release_ids"] = dedupe_keep_order(observed_ids + seen_list)[:200]
         details["release_initialized"] = True
@@ -291,6 +305,7 @@ class GitHubWatchCollector:
         source_config: dict[str, Any],
         run_at: datetime,
         result: WatchRunResult,
+        popularity: dict[str, int],
     ) -> None:
         path = f"/repos/{repo['full_name']}/tags"
         seen_list = [str(value) for value in details.get("seen_tags", [])]
@@ -318,7 +333,7 @@ class GitHubWatchCollector:
                 continue
             observed.append(name)
             if initialized and name not in seen:
-                result.items.append(self._tag_item(repo, tag, source_config, run_at))
+                result.items.append(self._tag_item(repo, tag, source_config, run_at, popularity))
 
         details["seen_tags"] = dedupe_keep_order(observed + seen_list)[:200]
         details["tag_initialized"] = True
@@ -333,6 +348,7 @@ class GitHubWatchCollector:
         run_at: datetime,
         result: WatchRunResult,
         since: datetime,
+        popularity: dict[str, int],
     ) -> None:
         branch = repo.get("default_branch")
         if not isinstance(branch, str) or not branch:
@@ -363,7 +379,7 @@ class GitHubWatchCollector:
         else:
             should_emit = committed is not None and committed > since
         if should_emit:
-            result.items.append(self._commit_item(repo, commit, source_config, run_at, previous))
+            result.items.append(self._commit_item(repo, commit, source_config, run_at, previous, popularity))
 
         details["default_branch_head"] = sha
         details["commit_initialized"] = True
@@ -411,6 +427,7 @@ class GitHubWatchCollector:
         repo: dict[str, Any],
         source_config: dict[str, Any],
         run_at: datetime,
+        popularity: dict[str, int],
     ) -> NormalizedItem:
         repo_id = str(repo["id"])
         return NormalizedItem(
@@ -432,6 +449,7 @@ class GitHubWatchCollector:
                 "homepage": repo.get("homepage"),
                 "fork": bool(repo.get("fork")),
                 "archived": bool(repo.get("archived")),
+                **popularity,
             },
         )
 
@@ -441,6 +459,7 @@ class GitHubWatchCollector:
         source_config: dict[str, Any],
         changes: dict[str, dict[str, Any]],
         run_at: datetime,
+        popularity: dict[str, int],
     ) -> NormalizedItem:
         repo_id = str(repo["id"])
         fingerprint = hashlib.sha256(json.dumps(changes, sort_keys=True).encode("utf-8")).hexdigest()[:16]
@@ -459,7 +478,7 @@ class GitHubWatchCollector:
             discovered_at=to_iso8601(run_at),
             topics=list(source_config.get("topics", [])),
             priority=source_priority(source_config),
-            metadata={"action": "metadata_updated", "changes": changes},
+            metadata={"action": "metadata_updated", "changes": changes, **popularity},
         )
 
     def _repository_missing_item(
@@ -493,6 +512,7 @@ class GitHubWatchCollector:
         release: dict[str, Any],
         source_config: dict[str, Any],
         run_at: datetime,
+        popularity: dict[str, int],
     ) -> NormalizedItem:
         release_id = str(release["id"])
         source_id = f"{repo['id']}:release:{release_id}"
@@ -517,6 +537,7 @@ class GitHubWatchCollector:
                 "tag_name": tag,
                 "prerelease": bool(release.get("prerelease")),
                 "draft": bool(release.get("draft")),
+                **popularity,
             },
         )
 
@@ -526,6 +547,7 @@ class GitHubWatchCollector:
         tag: dict[str, Any],
         source_config: dict[str, Any],
         run_at: datetime,
+        popularity: dict[str, int],
     ) -> NormalizedItem:
         name = str(tag["name"])
         source_id = f"{repo['id']}:tag:{name}"
@@ -541,7 +563,7 @@ class GitHubWatchCollector:
             discovered_at=to_iso8601(run_at),
             topics=list(source_config.get("topics", [])),
             priority=source_priority(source_config),
-            metadata={"action": "tagged", "tag_name": name, "commit_sha": commit.get("sha")},
+            metadata={"action": "tagged", "tag_name": name, "commit_sha": commit.get("sha"), **popularity},
         )
 
     def _commit_item(
@@ -551,6 +573,7 @@ class GitHubWatchCollector:
         source_config: dict[str, Any],
         run_at: datetime,
         previous_head: str | None,
+        popularity: dict[str, int],
     ) -> NormalizedItem:
         sha = str(commit["sha"])
         source_id = f"{repo['id']}:commit:{sha}"
@@ -575,6 +598,7 @@ class GitHubWatchCollector:
                 "sha": sha,
                 "previous_head": previous_head,
                 "default_branch": repo.get("default_branch"),
+                **popularity,
             },
         )
 
@@ -597,7 +621,16 @@ def repository_snapshot(repo: dict[str, Any]) -> dict[str, Any]:
         "created_at": repo.get("created_at"),
         "updated_at": repo.get("updated_at"),
         "pushed_at": repo.get("pushed_at"),
+        "stars": int(repo.get("stargazers_count") or 0),
+        "forks": int(repo.get("forks_count") or 0),
     }
+
+
+def repository_popularity(repo: dict[str, Any], previous_snapshot: dict[str, Any] | None) -> dict[str, int]:
+    stars = int(repo.get("stargazers_count") or 0)
+    forks = int(repo.get("forks_count") or 0)
+    previous_stars = int(previous_snapshot.get("stars") or 0) if previous_snapshot else stars
+    return {"stars": stars, "forks": forks, "stars_delta": stars - previous_stars}
 
 
 def meaningful_changes(old: dict[str, Any], new: dict[str, Any]) -> dict[str, dict[str, Any]]:

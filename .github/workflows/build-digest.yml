@@ -1,0 +1,67 @@
+name: Build Daily Digest
+
+on:
+  schedule:
+    - cron: "11 23 * * *"
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Digest period end date (YYYY-MM-DD); empty uses the current Asia/Tokyo date"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-monitor-writes
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install monitor
+        run: python -m pip install .
+
+      - name: Build daily digest
+        shell: bash
+        env:
+          REPORT_DATE: ${{ inputs.report_date }}
+        run: |
+          if [[ -n "$REPORT_DATE" ]]; then
+            python -m vision_research_monitor.cli.build_digest --date "$REPORT_DATE"
+          else
+            python -m vision_research_monitor.cli.build_digest
+          fi
+
+      - name: Verify protected workspace metadata
+        shell: bash
+        run: |
+          if ! git diff --quiet -- .chatgpt-workspace-manifest.json; then
+            echo ".chatgpt-workspace-manifest.json must never be modified"
+            exit 1
+          fi
+
+      - name: Commit derived links, ranking, and report
+        shell: bash
+        run: |
+          if [[ -z "$(git status --porcelain -- data/entities data/ranking reports/daily)" ]]; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/entities data/ranking reports/daily
+          git commit -m "Update daily research digest"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

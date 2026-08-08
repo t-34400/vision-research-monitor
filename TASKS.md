@@ -72,16 +72,16 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 
 ## Phase 5 — Ranking and Reporting
 
-- [ ] `RPT-001` Define ranking signal schema.
-- [ ] `RPT-002` Implement source priority.
-- [ ] `RPT-003` Implement relevance score.
-- [ ] `RPT-004` Implement freshness and novelty signals.
-- [ ] `RPT-005` Implement popularity-delta signal.
-- [ ] `RPT-006` Implement watched-source inclusion override.
-- [ ] `RPT-007` Generate deterministic Markdown daily digest.
-- [ ] `RPT-008` Add change labels.
-- [ ] `RPT-009` Add `build-digest.yml`.
-- [ ] `RPT-010` Track OpenReview status transitions before emitting academic change labels.
+- [x] `RPT-001` Define ranking signal schema.
+- [x] `RPT-002` Implement source priority.
+- [x] `RPT-003` Implement relevance score.
+- [x] `RPT-004` Implement freshness and novelty signals.
+- [x] `RPT-005` Implement popularity-delta signal.
+- [x] `RPT-006` Implement watched-source inclusion override.
+- [x] `RPT-007` Generate deterministic Markdown daily digest.
+- [x] `RPT-008` Add change labels.
+- [x] `RPT-009` Add `build-digest.yml`.
+- [x] `RPT-010` Track OpenReview status transitions before emitting academic change labels.
 
 ## Phase 6 — Semantic Classification
 

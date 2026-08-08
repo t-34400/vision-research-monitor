@@ -89,7 +89,7 @@ Initial `Asia/Tokyo` schedules are:
 - arXiv: 01:37, 07:37, 13:37, 19:37;
 - OpenReview: 01:43, 07:43, 13:43, 19:43;
 - GitHub Discovery: 04:47, 16:47;
-- Daily Digest: 00:27, summarizing the previous local calendar day.
+- Daily Digest: 08:11, using an 08:00 local reporting boundary.
 
 Cron expressions are stored in UTC and avoid top-of-hour execution.
 
@@ -258,8 +258,10 @@ year-specific.
 
 The first successful run for each configured edition scans its public notes to
 establish an inventory even when notes were created before deployment. Later
-runs use overlapping `mintcdate` windows. The collector locally applies the
-upper window boundary and fails rather than silently truncating page overflow.
+runs scan `tmdate:desc` and stop after crossing the overlapping checkpoint
+window so modifications to older notes remain observable. The collector locally
+applies the upper window boundary and fails rather than silently truncating page
+overflow.
 
 ### D-123 — Keep academic relevance deterministic through Phase 3
 
@@ -318,10 +320,56 @@ Generic names such as `nerf`, `depth`, `slam`, `code`, and `project` are denied 
 standalone evidence. Direct `related_items` preserve the actual accepted edges;
 transitive entity membership does not invent pairwise evidence.
 
+
+### D-129 — Rank with five independent deterministic signals
+
+**Status:** Accepted
+
+Phase 5 computes priority, relevance, freshness, novelty, and popularity
+independently and persists all five in the daily ranking sidecar. The initial
+weights are 0.30, 0.30, 0.15, 0.20, and 0.05 respectively, with a total-score
+inclusion threshold of 0.35. Reweighting does not require recollection.
+
+### D-130 — Preserve high-priority watch coverage in the digest
+
+**Status:** Accepted
+
+Items with explicit `priority.source >= 1.0` bypass the normal score threshold
+and are rendered in an unlimited Priority Watch section. They still receive
+normal ranking signals and a total score for explainability.
+
+### D-131 — Use observed GitHub star growth as supporting popularity evidence
+
+**Status:** Accepted
+
+Phase 5 stores the positive star-count delta between GitHub watch snapshots and
+maps it through a logarithmic popularity signal. Absolute star count does not
+control ranking, and a star-only change does not emit a news item. First-time
+discovery has no prior observation and therefore starts with zero delta.
+
+### D-132 — Emit append-only OpenReview status-transition events
+
+**Status:** Accepted
+
+OpenReview note state records the last observed normalized status. Incremental
+collection scans by descending true modification time; when a relevant note
+changes status, a separate event records the previous and new status rather than
+rewriting the canonical first-seen paper item. This makes later acceptance,
+rejection, and withdrawal changes reportable without violating append-only item
+storage.
+
+### D-133 — Build the daily digest on an 08:00 Asia/Tokyo boundary
+
+**Status:** Accepted
+
+A digest date ends at 08:00 `Asia/Tokyo` and covers the preceding 24 hours by
+`discovered_at`. The scheduled builder runs at 08:11 so the 07:37 arXiv and
+07:43 OpenReview collection slots can be included. Entity links, per-day ranking
+JSON, and Markdown are derived from canonical normalized items.
+
 ## Future decisions
 
 The following choices are intentionally deferred until their roadmap phases:
 
-- ranking weights and digest cutoffs (Phase 5);
 - semantic provider/model and evaluation threshold (Phase 6);
 - external storage or dashboard migration triggers (Phase 7/8).

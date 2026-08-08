@@ -90,9 +90,13 @@ For an edition without a bootstrap marker, the collector scans all public notes
 for that configured `venueid`. This establishes the relevant-paper inventory even
 when the original note creation predates deployment.
 
-After bootstrap, collection uses `mintcdate` from the overlapping source window
-and locally enforces the upper window boundary. A page limit is a hard coverage
-failure rather than a silent truncation.
+After bootstrap, collection requests notes in descending `tmdate` order and
+scans until the oldest true modification on a page is older than the overlapping
+source window. The collector locally enforces the upper window boundary. A page
+limit is a hard coverage failure rather than a silent truncation.
+
+This modification-ordered scan is required because a note can be created before
+the current collection window and later change publication/status metadata.
 
 ### Status normalization
 
@@ -103,9 +107,11 @@ OpenReview notes normalize to:
 - `accepted` when `pdate` is present;
 - `submitted` otherwise.
 
-The current status is stored in item metadata. Phase 3 treats a normalized paper
-as first-seen discovery data; durable status-transition events for an already
-stored note are implemented before Phase 5 change labels are generated.
+The current status is stored in item metadata and in the source-specific note
+state. When an already observed relevant note changes status, the collector emits
+a separate append-only `event` record with `action: status_changed`. This keeps
+the original paper record immutable while supporting later Phase 5 change
+labels.
 
 ### Identity
 
@@ -156,6 +162,6 @@ all configured targets for that source succeeded.
 - [x] configured venue editions map to canonical venue IDs;
 - [x] current OpenReview status is normalized;
 - [x] source checkpoints are independent and bounded;
-- [x] fixture tests cover parsing, relevance, bootstrap, incremental collection,
-  and stale-checkpoint behavior;
+- [x] fixture tests cover parsing, relevance, bootstrap, modification-ordered
+  incremental collection, status transitions, and stale-checkpoint behavior;
 - [x] scheduled source workflows are present.

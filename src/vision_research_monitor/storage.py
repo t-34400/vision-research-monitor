@@ -117,3 +117,14 @@ class JsonDocumentStore:
         temporary = self.path.with_suffix(self.path.suffix + ".tmp")
         temporary.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         os.replace(temporary, self.path)
+
+
+class TextDocumentStore:
+    def __init__(self, path: Path) -> None:
+        self.path = path
+
+    def save(self, value: str) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = self.path.with_suffix(self.path.suffix + ".tmp")
+        temporary.write_text(value, encoding="utf-8")
+        os.replace(temporary, self.path)

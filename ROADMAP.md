@@ -135,7 +135,7 @@ merges.
 
 ## Phase 5 — Ranking and Daily Digest
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -160,7 +160,7 @@ A daily report can be generated deterministically from persisted normalized data
 
 ## Phase 6 — Semantic Classification
 
-**Status:** planned
+**Status:** active
 
 ### Goal
 
