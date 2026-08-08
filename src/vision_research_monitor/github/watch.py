@@ -301,7 +301,8 @@ class GitHubWatchCollector:
             if initialized and any(str(item.get("id")) in seen for item in pages[-1]):
                 break
             if not initialized and any(
-                release_time(item) and release_time(item) <= since for item in pages[-1]
+                (timestamp := release_time(item)) is not None and timestamp <= since
+                for item in pages[-1]
             ):
                 break
             page = self.client.get_json(path, params={"per_page": 100, "page": page_number})

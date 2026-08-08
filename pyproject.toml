@@ -51,5 +51,9 @@ warn_unreachable = true
 pretty = true
 show_error_codes = true
 
+[[tool.mypy.overrides]]
+module = ["jsonschema", "jsonschema.*"]
+ignore_missing_imports = true
+
 [tool.setuptools.packages.find]
 where = ["src"]

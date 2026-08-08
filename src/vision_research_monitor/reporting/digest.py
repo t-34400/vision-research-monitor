@@ -63,9 +63,9 @@ class DailyDigestBuilder:
 
     def _dedupe_papers(self, ranked: list[RankedItem], links: EntityLinkResult) -> list[RankedItem]:
         entity_by_item: dict[str, str] = {}
-        for entity_id, item_ids in links.entities.items():
+        for linked_entity_id, item_ids in links.entities.items():
             for item_id in item_ids:
-                entity_by_item[item_id] = entity_id
+                entity_by_item[item_id] = linked_entity_id
 
         best: dict[str, RankedItem] = {}
         passthrough: list[RankedItem] = []
@@ -73,13 +73,13 @@ class DailyDigestBuilder:
             if candidate.item.kind != "paper":
                 passthrough.append(candidate)
                 continue
-            entity_id = entity_by_item.get(candidate.item.id)
-            if entity_id is None:
+            candidate_entity_id = entity_by_item.get(candidate.item.id)
+            if candidate_entity_id is None:
                 passthrough.append(candidate)
                 continue
-            current = best.get(entity_id)
+            current = best.get(candidate_entity_id)
             if current is None or ranked_sort_key(candidate) < ranked_sort_key(current):
-                best[entity_id] = candidate
+                best[candidate_entity_id] = candidate
         combined = passthrough + list(best.values())
         combined.sort(key=ranked_sort_key)
         return combined
@@ -135,7 +135,7 @@ class DailyDigestBuilder:
         return "\n".join(lines).rstrip() + "\n"
 
     def _sections(self, ranked: list[RankedItem]) -> dict[str, list[RankedItem]]:
-        sections = {
+        sections: dict[str, list[RankedItem]] = {
             "priority_watch": [],
             "accepted_papers": [],
             "new_papers": [],

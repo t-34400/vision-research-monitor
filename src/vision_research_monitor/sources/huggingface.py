@@ -81,7 +81,14 @@ class HuggingFaceCollector:
                     if not model_id:
                         continue
                     current = candidates.get(model_id)
-                    if current is None or model_last_modified(model) > model_last_modified(current):
+                    if current is None:
+                        candidates[model_id] = model
+                        continue
+                    modified = model_last_modified(model)
+                    current_modified = model_last_modified(current)
+                    if modified is not None and (
+                        current_modified is None or modified > current_modified
+                    ):
                         candidates[model_id] = model
             except Exception as exc:
                 result.add_error(f"huggingface:{query['id']}", exc)
@@ -251,7 +258,8 @@ def normalize_huggingface_model(
     source_key = f"{model_id}@{to_iso8601(modified)}"
     digest = hashlib.sha256(source_key.encode("utf-8")).hexdigest()[:24]
     tags = string_list(model.get("tags"))
-    card_data = model.get("cardData") if isinstance(model.get("cardData"), dict) else {}
+    raw_card_data = model.get("cardData")
+    card_data: dict[str, Any] = raw_card_data if isinstance(raw_card_data, dict) else {}
     links = sorted(set(extract_urls(model_card))) if model_card else []
     summary = model_summary(model_card, card_data)
     organization = model_id.split("/", 1)[0] if "/" in model_id else None
@@ -322,7 +330,7 @@ def model_summary(model_card: str, card_data: dict[str, Any]) -> str | None:
     without_frontmatter = re.sub(
         r"\A---\s*\n.*?\n---\s*\n", "", model_card, count=1, flags=re.DOTALL
     )
-    lines = []
+    lines: list[str] = []
     for line in without_frontmatter.splitlines():
         stripped = line.strip()
         if not stripped or stripped.startswith(("#", "[", "!", "<")):

@@ -189,9 +189,10 @@ class SemanticClassificationPipeline:
         matched_terms: list[str],
         lexical_threshold: float,
     ) -> ClassificationResult:
+        evidence: dict[str, Any]
         if lexical_score >= lexical_threshold:
             topics = set(lexical_topics)
-            evidence: dict[str, Any] = {
+            evidence = {
                 "method": "lexical",
                 "lexical_score": round(float(lexical_score), 4),
                 "semantic_model": None,
@@ -225,7 +226,7 @@ class SemanticClassificationPipeline:
         semantic = self.semantic.match(title, text)
         semantic_relevance = self.semantic.relevance(semantic.best_score)
         acceptance_similarity = float(self.config["classification"]["acceptance_similarity"])
-        evidence: dict[str, Any] = {
+        evidence = {
             "method": "semantic_profile",
             "lexical_score": round(float(lexical_score), 4),
             "semantic_model": self.semantic.model_id,
