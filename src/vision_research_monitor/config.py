@@ -107,3 +107,25 @@ def load_github_discovery(
     if unknown_venues:
         raise ConfigError(f"Unknown discovery venues: {', '.join(unknown_venues)}")
     return data
+
+def load_academic(
+    path: Path,
+    schema_path: Path,
+    venue_ids: set[str],
+) -> dict[str, Any]:
+    data = _load_yaml(path)
+    _validate_schema(data, schema_path)
+
+    editions = data["openreview"]["editions"]
+    openreview_ids = [edition["venue_id"] for edition in editions]
+    if len(openreview_ids) != len(set(openreview_ids)):
+        raise ConfigError("OpenReview venue edition IDs must be unique")
+
+    unknown_venues = sorted({edition["venue"] for edition in editions} - venue_ids)
+    if unknown_venues:
+        raise ConfigError(f"Unknown academic venues: {', '.join(unknown_venues)}")
+
+    if data["window"]["initial_lookback_hours"] > data["window"]["max_catchup_hours"]:
+        raise ConfigError("Academic initial lookback cannot exceed maximum catch-up window")
+    return data
+

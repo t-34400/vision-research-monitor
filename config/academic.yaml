@@ -1,0 +1,54 @@
+version: 1
+
+window:
+  initial_lookback_hours: 48
+  overlap_minutes: 180
+  max_catchup_hours: 120
+
+matching:
+  minimum_relevance_score: 0.30
+  title_weight: 0.60
+  abstract_weight: 0.30
+  keyword_weight: 0.35
+
+arxiv:
+  enabled: true
+  base_url: https://export.arxiv.org
+  categories: [cs.CV, cs.RO]
+  page_size: 200
+  max_results_per_category: 5000
+  request_interval_seconds: 3.0
+  user_agent: vision-research-monitor/0.1
+
+openreview:
+  enabled: true
+  base_url: https://api2.openreview.net
+  page_size: 1000
+  max_pages_per_edition: 30
+  request_interval_seconds: 0.25
+  bootstrap_full_scan: true
+  editions:
+    - venue: cvpr
+      year: 2026
+      venue_id: thecvf.com/CVPR/2026/Conference
+    - venue: eccv
+      year: 2026
+      venue_id: thecvf.com/ECCV/2026/Conference
+    - venue: wacv
+      year: 2026
+      venue_id: thecvf.com/WACV/2026/Conference
+    - venue: threedv
+      year: 2026
+      venue_id: 3DV/2026/Conference
+    - venue: iclr
+      year: 2026
+      venue_id: ICLR.cc/2026/Conference
+    - venue: icml
+      year: 2026
+      venue_id: ICML.cc/2026/Conference
+    - venue: neurips
+      year: 2026
+      venue_id: NeurIPS.cc/2026/Conference
+    - venue: corl
+      year: 2026
+      venue_id: robot-learning.org/CoRL/2026/Conference

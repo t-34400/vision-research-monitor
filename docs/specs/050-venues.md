@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-013`  
-**Related decisions:** `D-105`, `D-109`
+**Related decisions:** `D-105`, `D-109`, `D-121`
 
 ## Purpose
 
@@ -41,9 +41,9 @@ the academic collector. This avoids editing the core venue registry every year.
 
 ## Workshops
 
-Workshop discovery is in scope for Phase 3 but workshops are not enumerated as
-permanent venue entries here. They should inherit the parent conference context
-when possible and retain their own source identifiers.
+The initial Phase 3 configuration monitors conference editions only. Workshop
+collection is deferred until a concrete source/coverage policy is defined; it
+should not require permanent workshop entries in this series registry.
 
 ## Acceptance criteria
 

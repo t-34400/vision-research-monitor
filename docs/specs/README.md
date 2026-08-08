@@ -15,6 +15,7 @@ their rationale belong in `../decisions/DECISIONS.md`.
 - `050-venues.md` — academic venue registry.
 - `100-github-watch.md` — known-target GitHub monitoring behavior.
 - `110-github-discovery.md` — bounded discovery of unknown GitHub repositories.
+- `200-academic-discovery.md` — arXiv and OpenReview paper discovery.
 - `510-persistence-retention.md` — canonical storage and retention policy.
 - `610-scheduling.md` — workflow cadence and timezone policy.
 - `_template.md` — template for future specifications.

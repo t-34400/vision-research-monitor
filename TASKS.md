@@ -52,14 +52,14 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 
 ## Phase 3 — Academic Discovery
 
-- [ ] `ACA-001` Implement arXiv collector.
-- [ ] `ACA-002` Add arXiv checkpointing.
-- [ ] `ACA-003` Implement title + abstract lexical matching.
-- [ ] `ACA-004` Implement OpenReview collector.
-- [ ] `ACA-005` Add venue mapping and status normalization.
-- [ ] `ACA-006` Normalize academic records to the common item model.
-- [ ] `ACA-007` Add fixture-based tests.
-- [ ] `ACA-008` Add academic GitHub Actions workflows.
+- [x] `ACA-001` Implement arXiv collector.
+- [x] `ACA-002` Add arXiv checkpointing.
+- [x] `ACA-003` Implement title + abstract lexical matching.
+- [x] `ACA-004` Implement OpenReview collector.
+- [x] `ACA-005` Add venue mapping and status normalization.
+- [x] `ACA-006` Normalize academic records to the common item model.
+- [x] `ACA-007` Add fixture-based tests.
+- [x] `ACA-008` Add academic GitHub Actions workflows.
 
 ## Phase 4 — Deduplication and Entity Linking
 
@@ -81,6 +81,7 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [ ] `RPT-007` Generate deterministic Markdown daily digest.
 - [ ] `RPT-008` Add change labels.
 - [ ] `RPT-009` Add `build-digest.yml`.
+- [ ] `RPT-010` Track OpenReview status transitions before emitting academic change labels.
 
 ## Phase 6 — Semantic Classification
 

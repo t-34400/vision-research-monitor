@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from vision_research_monitor.config import load_github_discovery, load_taxonomy, load_venues, load_watchlist
+from vision_research_monitor.config import load_academic, load_github_discovery, load_taxonomy, load_venues, load_watchlist
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,3 +41,11 @@ def test_project_configuration_is_valid() -> None:
         for topic in query["topics"]
     }
     assert query_topics == topics
+
+    academic = load_academic(
+        ROOT / "config/academic.yaml",
+        ROOT / "config/schemas/academic.schema.json",
+        {venue["id"] for venue in venues["venues"]},
+    )
+    assert academic["arxiv"]["categories"] == ["cs.CV", "cs.RO"]
+    assert len(academic["openreview"]["editions"]) == 8

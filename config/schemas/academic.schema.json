@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/academic.schema.json",
+  "title": "Academic discovery configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "window", "matching", "arxiv", "openreview"],
+  "properties": {
+    "version": {"type": "integer", "const": 1},
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["initial_lookback_hours", "overlap_minutes", "max_catchup_hours"],
+      "properties": {
+        "initial_lookback_hours": {"type": "integer", "minimum": 1},
+        "overlap_minutes": {"type": "integer", "minimum": 0},
+        "max_catchup_hours": {"type": "integer", "minimum": 1}
+      }
+    },
+    "matching": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_relevance_score", "title_weight", "abstract_weight", "keyword_weight"],
+      "properties": {
+        "minimum_relevance_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "title_weight": {"type": "number", "minimum": 0, "maximum": 1},
+        "abstract_weight": {"type": "number", "minimum": 0, "maximum": 1},
+        "keyword_weight": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "arxiv": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "base_url", "categories", "page_size", "max_results_per_category", "request_interval_seconds", "user_agent"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "base_url": {"type": "string", "format": "uri"},
+        "categories": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "page_size": {"type": "integer", "minimum": 1, "maximum": 2000},
+        "max_results_per_category": {"type": "integer", "minimum": 1, "maximum": 30000},
+        "request_interval_seconds": {"type": "number", "minimum": 0},
+        "user_agent": {"type": "string", "minLength": 1}
+      }
+    },
+    "openreview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "base_url", "page_size", "max_pages_per_edition", "request_interval_seconds", "bootstrap_full_scan", "editions"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "base_url": {"type": "string", "format": "uri"},
+        "page_size": {"type": "integer", "minimum": 1, "maximum": 1000},
+        "max_pages_per_edition": {"type": "integer", "minimum": 1},
+        "request_interval_seconds": {"type": "number", "minimum": 0},
+        "bootstrap_full_scan": {"type": "boolean"},
+        "editions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["venue", "year", "venue_id"],
+            "properties": {
+              "venue": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+              "year": {"type": "integer", "minimum": 2000, "maximum": 2200},
+              "venue_id": {"type": "string", "minLength": 1},
+              "enabled": {"type": "boolean", "default": true}
+            }
+          }
+        }
+      }
+    }
+  }
+}

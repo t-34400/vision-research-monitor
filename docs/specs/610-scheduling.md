@@ -19,7 +19,8 @@ Define the initial GitHub Actions cadence and time semantics.
 | Workflow | Local schedule (Asia/Tokyo) | UTC cron |
 | --- | --- | --- |
 | GitHub Watch | 00:17, 06:17, 12:17, 18:17 daily | `17 3,9,15,21 * * *` |
-| Academic | 01:37, 07:37, 13:37, 19:37 daily | `37 4,10,16,22 * * *` |
+| arXiv | 01:37, 07:37, 13:37, 19:37 daily | `37 4,10,16,22 * * *` |
+| OpenReview | 01:43, 07:43, 13:43, 19:43 daily | `43 4,10,16,22 * * *` |
 | GitHub Discovery | 04:47, 16:47 daily | `47 7,19 * * *` |
 | Daily Digest | 00:27 daily | `27 15 * * *` |
 

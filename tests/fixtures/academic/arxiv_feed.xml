@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <entry>
+    <id>https://arxiv.org/abs/2608.01234v2</id>
+    <updated>2026-08-07T12:30:00Z</updated>
+    <published>2026-08-07T10:00:00Z</published>
+    <title>Fast 3D Gaussian Splatting from Sparse Views</title>
+    <summary>We present feed-forward 3D reconstruction using gaussian splatting for novel view synthesis.</summary>
+    <author><name>Alice Example</name></author>
+    <author><name>Bob Example</name></author>
+    <category term="cs.CV" />
+    <category term="cs.GR" />
+    <arxiv:primary_category term="cs.CV" />
+    <arxiv:comment>Accepted to ECCV 2026</arxiv:comment>
+    <arxiv:doi>10.0000/example</arxiv:doi>
+    <link href="https://arxiv.org/abs/2608.01234v2" rel="alternate" type="text/html" />
+    <link title="pdf" href="https://arxiv.org/pdf/2608.01234v2" rel="related" type="application/pdf" />
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2608.09999v1</id>
+    <updated>2026-08-07T13:00:00Z</updated>
+    <published>2026-08-07T13:00:00Z</published>
+    <title>A General Optimization Result</title>
+    <summary>This paper studies a generic mathematical optimization problem.</summary>
+    <author><name>Carol Example</name></author>
+    <category term="cs.CV" />
+    <arxiv:primary_category term="cs.CV" />
+    <link href="https://arxiv.org/abs/2608.09999v1" rel="alternate" type="text/html" />
+  </entry>
+</feed>

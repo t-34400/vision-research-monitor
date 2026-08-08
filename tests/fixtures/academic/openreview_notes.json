@@ -1,0 +1,32 @@
+{
+  "notes": [
+    {
+      "id": "note-gaussian",
+      "tcdate": 1786032000000,
+      "tmdate": 1786118400000,
+      "pdate": 1786122000000,
+      "invitations": ["thecvf.com/CVPR/2026/Conference/-/Submission"],
+      "content": {
+        "title": {"value": "Pose-Free Gaussian Splatting for Sparse-View Reconstruction"},
+        "abstract": {"value": "A feed-forward method for unposed 3D reconstruction and novel view synthesis."},
+        "authors": {"value": ["Alice Example", "Bob Example"]},
+        "authorids": {"value": ["~Alice_Example1", "~Bob_Example1"]},
+        "keywords": {"value": ["gaussian splatting", "pose-free reconstruction"]},
+        "venue": {"value": "CVPR 2026"},
+        "venueid": {"value": "thecvf.com/CVPR/2026/Conference"},
+        "pdf": {"value": "/pdf?id=note-gaussian"}
+      }
+    },
+    {
+      "id": "note-unrelated",
+      "tcdate": 1786033000000,
+      "content": {
+        "title": {"value": "An Optimization Lemma"},
+        "abstract": {"value": "A generic optimization result without visual experiments."},
+        "authors": {"value": ["Carol Example"]},
+        "venue": {"value": "CVPR 2026"},
+        "venueid": {"value": "thecvf.com/CVPR/2026/Conference"}
+      }
+    }
+  ]
+}

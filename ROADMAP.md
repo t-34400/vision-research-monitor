@@ -88,7 +88,7 @@ watchlist while keeping the candidate volume operationally manageable.
 
 ## Phase 3 — Academic Discovery
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -110,7 +110,7 @@ Relevant papers are normalized into the same item model as GitHub events.
 
 ## Phase 4 — Deduplication and Entity Linking
 
-**Status:** planned
+**Status:** active
 
 ### Goal
 

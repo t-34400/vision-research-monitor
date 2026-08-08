@@ -86,7 +86,8 @@ until the underlying digest is stable.
 Initial `Asia/Tokyo` schedules are:
 
 - GitHub Watch: 00:17, 06:17, 12:17, 18:17;
-- Academic: 01:37, 07:37, 13:37, 19:37;
+- arXiv: 01:37, 07:37, 13:37, 19:37;
+- OpenReview: 01:43, 07:43, 13:43, 19:43;
 - GitHub Discovery: 04:47, 16:47;
 - Daily Digest: 00:27, summarizing the previous local calendar day.
 
@@ -233,11 +234,55 @@ matches, with up to 100 README enrichments per run. Search requests are paced at
 2.1 seconds to remain below the documented 30-request-per-minute repository
 search limit.
 
+### D-120 — Query arXiv by bounded submission windows
+
+**Status:** Accepted
+
+Phase 3 queries `cs.CV` and `cs.RO` independently with bounded `submittedDate`
+ranges. Requests are paced at three seconds, arXiv version suffixes are removed
+from normalized source identity, and cross-listed results are deduplicated by the
+base arXiv ID before classification.
+
+### D-121 — Configure OpenReview conference editions explicitly
+
+**Status:** Accepted
+
+Each monitored OpenReview edition declares its canonical venue ID, year, and
+OpenReview `venueid` in `config/academic.yaml`. Runtime inference from conference
+name strings is avoided because group identifiers are source-specific and
+year-specific.
+
+### D-122 — Bootstrap OpenReview editions before incremental discovery
+
+**Status:** Accepted
+
+The first successful run for each configured edition scans its public notes to
+establish an inventory even when notes were created before deployment. Later
+runs use overlapping `mintcdate` windows. The collector locally applies the
+upper window boundary and fails rather than silently truncating page overflow.
+
+### D-123 — Keep academic relevance deterministic through Phase 3
+
+**Status:** Accepted
+
+Academic candidates use multi-label lexical matching over title, abstract, and
+source keywords. The initial weights are 0.60, 0.30, and 0.35 respectively with
+a minimum relevance score of 0.30. Semantic classification remains deferred to
+Phase 6.
+
+### D-124 — Keep arXiv and OpenReview checkpoints independent
+
+**Status:** Accepted
+
+Each source commits its own checkpoint only after successful item persistence.
+Scheduled collection starts with a 48-hour lookback, overlaps by 180 minutes,
+and allows 120 hours of automatic catch-up. Explicit backfills do not advance
+the scheduled checkpoint.
+
 ## Future decisions
 
 The following choices are intentionally deferred until their roadmap phases:
 
-- source-specific venue edition resolution (Phase 3);
 - fuzzy entity-link thresholds (Phase 4);
 - ranking weights and digest cutoffs (Phase 5);
 - semantic provider/model and evaluation threshold (Phase 6);
