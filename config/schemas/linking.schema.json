@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/linking.schema.json",
+  "title": "Entity linking configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "url", "identifier", "matching"],
+  "properties": {
+    "version": {"const": 1},
+    "url": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tracking_query_prefixes", "tracking_query_keys"],
+      "properties": {
+        "tracking_query_prefixes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "tracking_query_keys": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "identifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scan_metadata_keys"],
+      "properties": {
+        "scan_metadata_keys": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      }
+    },
+    "matching": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exact_title", "fuzzy_title", "repository_title"],
+      "properties": {
+        "exact_title": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["minimum_characters", "minimum_author_overlap"],
+          "properties": {
+            "minimum_characters": {"type": "integer", "minimum": 1},
+            "minimum_author_overlap": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        },
+        "fuzzy_title": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["minimum_similarity", "minimum_author_overlap", "minimum_shared_tokens", "maximum_block_size"],
+          "properties": {
+            "minimum_similarity": {"type": "number", "minimum": 0, "maximum": 1},
+            "minimum_author_overlap": {"type": "number", "minimum": 0, "maximum": 1},
+            "minimum_shared_tokens": {"type": "integer", "minimum": 1},
+            "maximum_block_size": {"type": "integer", "minimum": 2}
+          }
+        },
+        "repository_title": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["minimum_name_characters", "require_topic_overlap", "generic_names"],
+          "properties": {
+            "minimum_name_characters": {"type": "integer", "minimum": 1},
+            "require_topic_overlap": {"type": "boolean"},
+            "generic_names": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+          }
+        }
+      }
+    }
+  }
+}

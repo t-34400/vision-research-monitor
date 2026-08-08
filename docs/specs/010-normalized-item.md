@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-007`  
-**Related decisions:** `D-002`, `D-006`, `D-007`
+**Related decisions:** `D-002`, `D-006`, `D-007`, `D-125`
 
 ## Purpose
 
@@ -80,6 +80,16 @@ Topic classification is multi-label.
 
 An empty `topics` list is valid for a collected candidate that has not yet been
 classified.
+
+## Related items
+
+`related_items` contains direct accepted links to other normalized item IDs.
+Canonical append-only JSONL does not need to be rewritten when new links are
+discovered: Phase 4 persists a derived relationship sidecar and materializes
+`related_items` at read time.
+
+Transitive membership in the same derived entity does not imply direct matching
+evidence between every pair.
 
 ## Scores
 

@@ -279,11 +279,49 @@ Scheduled collection starts with a 48-hour lookback, overlaps by 180 minutes,
 and allows 120 hours of automatic catch-up. Explicit backfills do not advance
 the scheduled checkpoint.
 
+### D-125 — Persist entity links as a derived sidecar
+
+**Status:** Accepted
+
+Phase 4 does not rewrite append-only normalized JSONL when new cross-source links
+are discovered. It regenerates `data/entities/links.json` from canonical items
+and materializes `related_items` at read time. This keeps collection history
+stable while allowing linking rules to evolve.
+
+### D-126 — Prefer exact external identifiers over fuzzy evidence
+
+**Status:** Accepted
+
+Base arXiv IDs, OpenReview note IDs, GitHub repository IDs/URLs, DOI values, and
+canonical external URLs are the strongest Phase 4 evidence. GitHub release, tag,
+commit, and repository events share the stable numeric repository ID extracted
+from their source identity.
+
+### D-127 — Require author support for paper title links
+
+**Status:** Accepted
+
+Normalized exact titles require at least 0.50 author overlap. Fuzzy title links
+require at least 0.94 sequence similarity, 0.50 author overlap, and two shared
+title tokens. Token blocks above 200 papers are skipped to prevent quadratic
+candidate expansion. Title similarity or author overlap alone never links papers.
+Thresholds live in `config/linking.yaml` so they can be evaluated and revised
+without changing the algorithm contract.
+
+### D-128 — Treat repository names as conservative supporting evidence
+
+**Status:** Accepted
+
+A repository-to-paper fallback link requires a distinctive repository name to
+appear in the normalized paper title and at least one shared taxonomy topic.
+Generic names such as `nerf`, `depth`, `slam`, `code`, and `project` are denied as
+standalone evidence. Direct `related_items` preserve the actual accepted edges;
+transitive entity membership does not invent pairwise evidence.
+
 ## Future decisions
 
 The following choices are intentionally deferred until their roadmap phases:
 
-- fuzzy entity-link thresholds (Phase 4);
 - ranking weights and digest cutoffs (Phase 5);
 - semantic provider/model and evaluation threshold (Phase 6);
 - external storage or dashboard migration triggers (Phase 7/8).

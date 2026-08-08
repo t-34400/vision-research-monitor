@@ -63,12 +63,12 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 
 ## Phase 4 — Deduplication and Entity Linking
 
-- [ ] `LNK-001` Normalize URLs and source identifiers.
-- [ ] `LNK-002` Implement exact identifier linking.
-- [ ] `LNK-003` Implement normalized-title matching.
-- [ ] `LNK-004` Add author/repository supporting evidence.
-- [ ] `LNK-005` Implement conservative `related_items`.
-- [ ] `LNK-006` Add false-merge regression tests.
+- [x] `LNK-001` Normalize URLs and source identifiers.
+- [x] `LNK-002` Implement exact identifier linking.
+- [x] `LNK-003` Implement normalized-title matching.
+- [x] `LNK-004` Add author/repository supporting evidence.
+- [x] `LNK-005` Implement conservative `related_items`.
+- [x] `LNK-006` Add false-merge regression tests.
 
 ## Phase 5 — Ranking and Reporting
 

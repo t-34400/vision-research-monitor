@@ -110,7 +110,7 @@ Relevant papers are normalized into the same item model as GitHub events.
 
 ## Phase 4 — Deduplication and Entity Linking
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -135,7 +135,7 @@ merges.
 
 ## Phase 5 — Ranking and Daily Digest
 
-**Status:** planned
+**Status:** active
 
 ### Goal
 

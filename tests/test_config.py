@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from vision_research_monitor.config import load_academic, load_github_discovery, load_taxonomy, load_venues, load_watchlist
+from vision_research_monitor.config import load_academic, load_github_discovery, load_linking, load_taxonomy, load_venues, load_watchlist
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,3 +49,9 @@ def test_project_configuration_is_valid() -> None:
     )
     assert academic["arxiv"]["categories"] == ["cs.CV", "cs.RO"]
     assert len(academic["openreview"]["editions"]) == 8
+
+    linking = load_linking(
+        ROOT / "config/linking.yaml",
+        ROOT / "config/schemas/linking.schema.json",
+    )
+    assert linking["matching"]["fuzzy_title"]["minimum_similarity"] == 0.94

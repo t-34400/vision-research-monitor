@@ -4,7 +4,7 @@ import json
 import os
 from collections import defaultdict
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Iterable, Iterator
 
 from .models import NormalizedItem, parse_iso8601
 
@@ -58,6 +58,24 @@ class JsonlItemStore:
                     known.add(item_id)
         return known
 
+    def iter_records(self) -> Iterator[dict[str, Any]]:
+        if not self.root.exists():
+            return
+        for path in sorted(self.root.rglob("*.jsonl")):
+            for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+                if not line.strip():
+                    continue
+                try:
+                    record = json.loads(line)
+                except json.JSONDecodeError as exc:
+                    raise ValueError(f"Invalid JSONL at {path}:{line_number}") from exc
+                if not isinstance(record, dict):
+                    raise ValueError(f"Expected object JSONL record at {path}:{line_number}")
+                yield record
+
+    def load_items(self) -> list[NormalizedItem]:
+        return [NormalizedItem.from_dict(record) for record in self.iter_records()]
+
     def append(self, items: Iterable[NormalizedItem]) -> int:
         grouped: dict[Path, list[dict[str, Any]]] = defaultdict(list)
         for item in items:
@@ -80,3 +98,22 @@ class JsonlItemStore:
             os.replace(temporary, path)
             written += len(records)
         return written
+
+
+class JsonDocumentStore:
+    def __init__(self, path: Path) -> None:
+        self.path = path
+
+    def load(self) -> dict[str, Any]:
+        if not self.path.exists():
+            return {}
+        data = json.loads(self.path.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            raise ValueError(f"Expected JSON object in {self.path}")
+        return data
+
+    def save(self, data: dict[str, Any]) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = self.path.with_suffix(self.path.suffix + ".tmp")
+        temporary.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        os.replace(temporary, self.path)

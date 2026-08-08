@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-015`  
-**Related decisions:** `D-008`, `D-101`, `D-107`
+**Related decisions:** `D-008`, `D-101`, `D-107`, `D-125`
 
 ## Purpose
 
@@ -19,6 +19,8 @@ data/
     YYYY/
       MM/
         DD.jsonl
+  entities/
+    links.json
   state/
     <collector>.json
 reports/
@@ -27,7 +29,9 @@ reports/
 ```
 
 Normalized items use append-friendly JSONL partitioned by UTC discovery date.
-Collector state is explicit mutable JSON. Daily reports are derived Markdown.
+Collector state is explicit mutable JSON. Entity-link output is a derived JSON
+sidecar that can be regenerated from normalized items. Daily reports are derived
+Markdown.
 
 The storage abstraction may migrate later, but collectors and normalized item
 semantics must not depend on Git as a database-specific API.
@@ -36,6 +40,7 @@ semantics must not depend on Git as a database-specific API.
 
 - normalized items: retained indefinitely unless a future storage migration
   changes the policy;
+- entity-link sidecar: retained as the current derived graph and freely regenerable;
 - daily reports: retained indefinitely;
 - collector state/checkpoints: only the current state is required canonically;
 - raw upstream API responses: not committed by default;

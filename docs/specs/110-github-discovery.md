@@ -135,6 +135,7 @@ Discovery-specific metadata includes:
 - query IDs and query-family IDs;
 - venue/year hits;
 - GitHub topics;
+- repository homepage;
 - stars and forks;
 - primary language;
 - fork/archive flags.

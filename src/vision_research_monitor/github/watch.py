@@ -427,7 +427,12 @@ class GitHubWatchCollector:
             discovered_at=to_iso8601(run_at),
             topics=list(source_config.get("topics", [])),
             priority=source_priority(source_config),
-            metadata={"action": "created", "fork": bool(repo.get("fork")), "archived": bool(repo.get("archived"))},
+            metadata={
+                "action": "created",
+                "homepage": repo.get("homepage"),
+                "fork": bool(repo.get("fork")),
+                "archived": bool(repo.get("archived")),
+            },
         )
 
     def _repository_updated_item(

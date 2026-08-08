@@ -1,0 +1,41 @@
+version: 1
+
+url:
+  tracking_query_prefixes:
+    - utm_
+  tracking_query_keys:
+    - ref
+    - source
+
+identifier:
+  scan_metadata_keys:
+    - homepage
+    - comment
+    - doi
+    - pdf_url
+    - pdf
+
+matching:
+  exact_title:
+    minimum_characters: 12
+    minimum_author_overlap: 0.5
+  fuzzy_title:
+    minimum_similarity: 0.94
+    minimum_author_overlap: 0.5
+    minimum_shared_tokens: 2
+    maximum_block_size: 200
+  repository_title:
+    minimum_name_characters: 4
+    require_topic_overlap: true
+    generic_names:
+      - code
+      - demo
+      - depth
+      - model
+      - nerf
+      - paper
+      - project
+      - reconstruction
+      - repo
+      - slam
+      - vision

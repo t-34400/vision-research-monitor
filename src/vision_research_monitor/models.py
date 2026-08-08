@@ -43,3 +43,13 @@ class NormalizedItem:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> "NormalizedItem":
+        fields = {
+            "id", "source", "source_id", "kind", "title", "url", "discovered_at",
+            "published_at", "updated_at", "summary", "authors", "organization",
+            "venue", "topics", "matched_terms", "priority", "scores",
+            "related_items", "metadata",
+        }
+        return cls(**{key: value for key, value in data.items() if key in fields})

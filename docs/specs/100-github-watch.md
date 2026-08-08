@@ -79,6 +79,8 @@ when the SHA changes rather than replaying every intervening commit.
 
 ## Repository metadata events
 
+Repository creation records preserve `homepage` in normalized metadata so later entity linking can use an explicit project/paper URL without re-fetching the repository.
+
 The following fields are considered meaningful metadata for Phase 1:
 
 - full name;

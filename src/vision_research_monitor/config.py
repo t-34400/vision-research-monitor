@@ -108,6 +108,7 @@ def load_github_discovery(
         raise ConfigError(f"Unknown discovery venues: {', '.join(unknown_venues)}")
     return data
 
+
 def load_academic(
     path: Path,
     schema_path: Path,
@@ -127,5 +128,18 @@ def load_academic(
 
     if data["window"]["initial_lookback_hours"] > data["window"]["max_catchup_hours"]:
         raise ConfigError("Academic initial lookback cannot exceed maximum catch-up window")
+    return data
+
+
+def load_linking(path: Path, schema_path: Path) -> dict[str, Any]:
+    data = _load_yaml(path)
+    _validate_schema(data, schema_path)
+
+    exact = data["matching"]["exact_title"]
+    fuzzy = data["matching"]["fuzzy_title"]
+    if exact["minimum_author_overlap"] < 0 or fuzzy["minimum_author_overlap"] < 0:
+        raise ConfigError("Linking author-overlap thresholds must be non-negative")
+    if fuzzy["minimum_similarity"] <= 0:
+        raise ConfigError("Linking fuzzy-title similarity must be positive")
     return data
 
