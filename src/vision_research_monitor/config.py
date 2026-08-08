@@ -218,3 +218,22 @@ def load_reporting(path: Path, schema_path: Path, venue_priorities: set[str]) ->
     if unknown_priorities:
         raise ConfigError(f"Unknown venue priority classes: {', '.join(unknown_priorities)}")
     return data
+
+
+def load_analytics(path: Path, schema_path: Path) -> dict[str, Any]:
+    data = _load_yaml(path)
+    _validate_schema(data, schema_path)
+
+    windows = [int(value) for value in data["trend_windows_days"]]
+    largest_required = max(
+        2 * max(windows),
+        2 * int(data["growth"]["primary_window_days"]),
+        int(data["recurring_entities"]["lookback_days"]),
+    )
+    if int(data["history_days"]) < largest_required:
+        raise ConfigError("Analytics history_days must cover two trend/growth windows and the recurring lookback")
+    if int(data["recurring_entities"]["minimum_active_days"]) > int(data["recurring_entities"]["lookback_days"]):
+        raise ConfigError("Recurring minimum active days cannot exceed lookback days")
+    if int(data["archive"]["default_search_limit"]) > int(data["archive"]["maximum_search_limit"]):
+        raise ConfigError("Archive default search limit cannot exceed maximum search limit")
+    return data

@@ -45,6 +45,17 @@ jobs:
             python -m vision_research_monitor.cli.build_digest
           fi
 
+      - name: Build long-term analytics
+        shell: bash
+        env:
+          REPORT_DATE: ${{ inputs.report_date }}
+        run: |
+          if [[ -n "$REPORT_DATE" ]]; then
+            python -m vision_research_monitor.cli.build_trends --date "$REPORT_DATE"
+          else
+            python -m vision_research_monitor.cli.build_trends
+          fi
+
       - name: Verify protected workspace metadata
         shell: bash
         run: |
@@ -53,15 +64,15 @@ jobs:
             exit 1
           fi
 
-      - name: Commit derived links, ranking, and report
+      - name: Commit derived reports and analytics
         shell: bash
         run: |
-          if [[ -z "$(git status --porcelain -- data/entities data/ranking reports/daily)" ]]; then
+          if [[ -z "$(git status --porcelain -- data/entities data/ranking data/analytics data/archive reports/daily reports/trends)" ]]; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/entities data/ranking reports/daily
-          git commit -m "Update daily research digest"
+          git add -- data/entities data/ranking data/analytics data/archive reports/daily reports/trends
+          git commit -m "Update daily research reports"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"

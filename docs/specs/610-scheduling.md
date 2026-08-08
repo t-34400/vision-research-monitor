@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-016`  
-**Related decisions:** `D-103`, `D-108`, `D-145`
+**Related decisions:** `D-103`, `D-108`, `D-145`, `D-151`
 
 ## Purpose
 
@@ -25,10 +25,11 @@ Define the initial GitHub Actions cadence and time semantics.
 | CVF Open Access | 03:23 daily | `23 18 * * *` |
 | Research Blogs | 03:31, 09:31, 15:31, 21:31 daily | `31 0,6,12,18 * * *` |
 | GitHub Discovery | 04:47, 16:47 daily | `47 7,19 * * *` |
-| Daily Digest | 08:11 daily | `11 23 * * *` |
+| Daily Digest + Long-Term Analysis | 08:11 daily | `11 23 * * *` |
 
-The daily digest uses an 08:00 local reporting boundary and runs at 08:11,
-after the 07:37 arXiv and 07:43 OpenReview collection slots. Expanded-source
+The daily digest and long-term analysis share the 08:00 local reporting boundary
+and run in one 08:11 workflow, after the 07:37 arXiv and 07:43 OpenReview
+collection slots. Expanded-source
 workflows are deliberately staggered away from that pre-digest pair to reduce
 contention in the shared repository-write concurrency group. A digest date is the
 end date of the preceding 24-hour reporting window.

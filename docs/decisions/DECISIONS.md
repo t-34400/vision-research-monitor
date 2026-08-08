@@ -496,10 +496,67 @@ research feeds every six hours at `:31` on alternating hours. This reduces the
 chance of multiple pending writers around the 07:37/07:43 academic collection
 and 08:11 digest sequence.
 
+### D-146 — Align longitudinal buckets with the daily digest boundary
+
+**Status:** Accepted
+
+Long-term analytics use `discovered_at` and the same Asia/Tokyo 08:00 reporting
+boundary as the daily digest. This keeps "today" consistent across daily reports
+and trend history while avoiding incomparable upstream timestamp semantics.
+
+### D-147 — Measure topic momentum with entity-normalized share change
+
+**Status:** Accepted
+
+Topic momentum compares distinct logical entities in equal rolling windows.
+The score is the base-2 logarithm of Laplace-smoothed current topic share over
+previous topic share. Raw counts and count growth remain visible, but share-based
+momentum reduces false acceleration when overall collection volume changes after
+new sources are added.
+
+### D-148 — Define repository/paper growth by first-seen logical entities
+
+**Status:** Accepted
+
+Repository and paper growth count the first observation of each Phase 4 logical
+entity. Multiple records for one work across arXiv, OpenReview, CVF, or GitHub do
+not multiply the growth count. Zero previous volume is represented as a new
+baseline rather than infinite percentage growth.
+
+### D-149 — Separate recurring activity from new-entity growth
+
+**Status:** Accepted
+
+Recurring entities are a distinct signal: initially at least three reportable
+records across at least two reporting days in a 30-day lookback. This surfaces
+projects or research entities with sustained activity without treating repeated
+updates as newly created research.
+
+### D-150 — Use a derived searchable archive before adding a hosted dashboard
+
+**Status:** Accepted
+
+Phase 8 generates `data/archive/index.json` and a local search CLI with text,
+topic, source, kind, and time filters. The index preserves logical entity IDs and
+is a stable future UI boundary. A hosted dashboard or external database remains
+deferred until archive size or interactive-use requirements justify the added
+operational complexity.
+
+### D-151 — Build trends in the existing daily reporting workflow
+
+**Status:** Accepted
+
+Long-term analytics run after the daily digest in the existing 08:11 JST
+workflow and share its repository-write concurrency. This avoids a second daily
+writer while keeping analytics failure isolated from collector checkpoints. The
+workflow stages only explicit derived-data/report paths and never stages the
+workspace manifest.
+
 ## Future decisions
 
-The following choices are intentionally deferred until their roadmap phases:
+The following choices remain intentionally deferred until measured operational
+need justifies them:
 
-- whether a hosted embedding/LLM provider provides enough measured value to add beyond the provider-neutral Phase 6 contract;
-- external storage or dashboard migration triggers (Phase 8).
-
+- whether a hosted embedding/LLM provider adds enough measured value beyond the provider-neutral Phase 6 contract;
+- when repository-tracked canonical history is large enough to justify external storage;
+- whether interactive archive usage justifies a hosted dashboard beyond the Phase 8 search index/CLI.

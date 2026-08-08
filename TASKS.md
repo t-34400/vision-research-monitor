@@ -102,11 +102,11 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 
 ## Phase 8 — Long-Term Analysis
 
-- [ ] `TRD-001` Define time-series aggregation model.
-- [ ] `TRD-002` Track per-topic item counts.
-- [ ] `TRD-003` Track repository/paper momentum.
-- [ ] `TRD-004` Add rolling-window trend detection.
-- [ ] `TRD-005` Evaluate searchable archive/dashboard options.
+- [x] `TRD-001` Define time-series aggregation model.
+- [x] `TRD-002` Track per-topic item counts.
+- [x] `TRD-003` Track repository/paper momentum.
+- [x] `TRD-004` Add rolling-window trend detection.
+- [x] `TRD-005` Evaluate searchable archive/dashboard options.
 
 ## Task conventions
 

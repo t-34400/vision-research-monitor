@@ -27,6 +27,9 @@ CVF/HF/official feeds -> Expanded Sources ─┘
                                                  │
                                                  v
                                               Report
+                                                 │
+                                                 v
+                                      Analyze / Archive
 ```
 
 ## Stage responsibilities
@@ -61,6 +64,12 @@ than one hidden score.
 
 Reports are derived outputs. The canonical data must not depend on a report
 having been generated successfully.
+
+### Analyze / Archive
+
+Long-term analytics, trend reports, and the searchable archive index are derived
+from canonical items plus the entity graph. They do not advance source state or
+change normalized records.
 
 ## Source classes
 

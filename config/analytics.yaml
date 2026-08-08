@@ -1,0 +1,25 @@
+version: 1
+
+history_days: 180
+trend_windows_days:
+  - 7
+  - 30
+
+momentum:
+  smoothing: 1.0
+  minimum_current_entities: 2
+  top_topics_per_window: 15
+
+growth:
+  primary_window_days: 7
+
+recurring_entities:
+  lookback_days: 30
+  minimum_activity_items: 3
+  minimum_active_days: 2
+  limit: 20
+
+archive:
+  maximum_summary_characters: 320
+  default_search_limit: 20
+  maximum_search_limit: 200

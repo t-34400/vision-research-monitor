@@ -13,6 +13,7 @@ their rationale belong in `../decisions/DECISIONS.md`.
 - `400-ranking.md` — deterministic ranking signals and inclusion behavior.
 - `410-semantic-classification.md` — semantic topic recovery, evidence, and optional LLM contract.
 - `520-daily-digest.md` — daily window, change labels, and report generation.
+- `530-long-term-analysis.md` — time-series aggregation, momentum, growth, recurring entities, and searchable archive.
 - `030-taxonomy.md` — research-topic taxonomy contract.
 - `040-github-watchlist.md` — known GitHub target configuration.
 - `050-venues.md` — academic venue registry.

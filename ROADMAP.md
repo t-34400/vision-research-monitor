@@ -210,7 +210,7 @@ Explicit project/code links also feed the existing entity linker.
 
 ## Phase 8 — Long-Term Analysis
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -228,3 +228,7 @@ Move from daily monitoring to trend analysis.
 
 The system can answer both “what changed today?” and “what is accelerating over
 the last N days?” from stored data.
+
+**Completed:** entity-aware daily history, 7/30-day topic momentum, first-seen
+repository/paper growth, recurring-entity detection, deterministic trend reports,
+and a searchable archive index/CLI are generated from canonical stored data.
