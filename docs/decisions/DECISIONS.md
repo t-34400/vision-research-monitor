@@ -636,6 +636,19 @@ GitHub acceptance uses a stricter threshold than the shared semantic baseline.
 Daily Digest gates discovered GitHub repositories on this research score while
 explicit watch priority still bypasses the gate.
 
+### D-159 — Run canonical GitHub Actions from the validated uv lockfile
+
+**Status:** Accepted
+
+Scheduled and manually dispatched canonical workflows use the pinned
+`astral-sh/setup-uv` Action with uv `0.12.3` and Python `3.13`, synchronize runtime
+dependencies with `uv sync --locked --no-dev`, and execute project commands through
+`uv run --locked --no-sync`. Canonical writers explicitly check out the repository
+default branch, serialize through `research-monitor-writes`, stage only allowlisted
+runtime paths, and rebase immediately before push. This makes the Action environment
+match the locally validated lockfile and avoids queued workflow runs writing from an
+older trigger SHA. OpenReview remains outside scheduled automation per D-156.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational

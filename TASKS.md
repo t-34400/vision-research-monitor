@@ -115,7 +115,7 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `DEV-003` Document the local uv setup and validation workflow.
 - [x] `DEV-004` Generate and commit `uv.lock` in a network-enabled local environment.
 - [x] `DEV-005` Run the full local Ruff, mypy, and pytest validation sequence.
-- [ ] `DEV-006` Migrate GitHub Actions dependency setup to the validated uv lockfile.
+- [x] `DEV-006` Migrate GitHub Actions dependency setup to the validated uv lockfile.
 
 ## Post-roadmap stabilization
 
@@ -123,13 +123,14 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `STB-002` Reduce GitHub Discovery noise using metadata-only topic search and vision-context gates.
 - [x] `STB-003` Add GitHub Discovery progress and per-query acceptance diagnostics.
 - [x] `STB-004` Replace direct OpenReview HTTP access with the official API v2 Python client.
-- [ ] `STB-005` Regenerate `uv.lock` for the new `openreview-py` runtime dependency in a network-enabled environment.
+- [x] `STB-005` Regenerate `uv.lock` for the new `openreview-py` runtime dependency in a network-enabled environment.
 - [x] `STB-006` Remove OpenReview from GitHub Actions while unattended API access requires challenge verification.
 - [x] `STB-007` Add an isolated runtime work root for local smoke-test data and reports.
 - [x] `STB-008` Separate GitHub topic relevance from research value and suppress low-value discovery repositories in the digest.
 - [x] `STB-009` Distinguish newly created repositories from first-time discovery of existing repositories in digest labels.
 - [x] `STB-010` Preserve word boundaries when parsing inline RSS/Atom markup.
 - [x] `STB-011` Preserve feed text boundaries across punctuation-adjacent inline markup.
+- [x] `STB-012` Migrate scheduled Actions to locked uv execution and canonical default-branch writes.
 
 ## Task conventions
 

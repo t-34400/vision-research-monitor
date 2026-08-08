@@ -133,3 +133,34 @@ with the official client. Keep OpenReview as a local/manual diagnostic collector
 it is intentionally excluded from GitHub Actions until unattended access is reliable.
 `OPENREVIEW_TOKEN`, or `OPENREVIEW_USERNAME` plus `OPENREVIEW_PASSWORD`, may still
 be supplied for manual authenticated experiments.
+
+## GitHub Actions runtime
+
+Production workflows use the same locked project environment as local validation.
+They install uv `0.12.3` and Python `3.13` through the pinned `astral-sh/setup-uv`
+Action, run `uv sync --locked --no-dev`, then invoke application commands with
+`uv run --locked --no-sync`. Workflows do not set `VRM_WORK_ROOT`, so canonical
+outputs remain under repository-tracked `data/**` and `reports/**`.
+
+All canonical writer workflows explicitly check out the repository default branch and
+share the `research-monitor-writes` concurrency group. Manual `workflow_dispatch`
+runs therefore validate the same branch, persistence paths, and commit/push behavior
+as scheduled runs. OpenReview remains local/manual only while unattended challenge
+verification is unresolved.
+
+After pushing the workflow migration, a production-equivalent manual cycle can be
+started with GitHub CLI from the repository root:
+
+```bash
+gh workflow run collect-github-watch.yml
+gh workflow run collect-arxiv.yml
+gh workflow run collect-huggingface.yml
+gh workflow run collect-cvf.yml
+gh workflow run collect-research-blogs.yml
+gh workflow run collect-github-discovery.yml
+gh workflow run build-digest.yml
+```
+
+Because all writers use the same concurrency group, these runs are serialized even if
+they are dispatched close together. Verify each run succeeds and that only the
+allowlisted canonical data/report paths are committed.

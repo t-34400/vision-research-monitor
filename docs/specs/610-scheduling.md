@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-016`  
-**Related decisions:** `D-103`, `D-108`, `D-145`, `D-151`
+**Related decisions:** `D-103`, `D-108`, `D-145`, `D-151`, `D-159`
 
 ## Purpose
 
@@ -33,6 +33,21 @@ GitHub Actions while unattended API access requires challenge verification. Expa
 workflows are deliberately staggered away from that pre-digest pair to reduce
 contention in the shared repository-write concurrency group. A digest date is the
 end date of the preceding 24-hour reporting window.
+
+## Action runtime policy
+
+Scheduled and manually dispatched workflows:
+
+- check out the repository default branch explicitly because canonical runtime data is stored there;
+- install uv with `astral-sh/setup-uv`, pinned to the reviewed Action revision;
+- install uv `0.12.3` and Python `3.13`, matching the locally validated toolchain;
+- run `uv sync --locked --no-dev` before application commands;
+- execute application commands with `uv run --locked --no-sync` so the lockfile cannot be silently changed and the already-synchronized environment is reused;
+- serialize all canonical writers with the shared `research-monitor-writes` concurrency group;
+- stage only the allowlisted data/state/report paths owned by that workflow;
+- rebase the resulting commit onto the current default branch immediately before push, handling unrelated repository changes without staging them.
+
+OpenReview remains excluded from scheduled Actions per `D-156`.
 
 ## Scheduling rules
 

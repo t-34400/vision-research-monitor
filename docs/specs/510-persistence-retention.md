@@ -66,9 +66,11 @@ checkpoint.
 
 ## Concurrent automation
 
-Workflows that write canonical data must serialize repository writes or use an
-explicit conflict-safe strategy. Automated commits must stage only expected data,
-state, and report paths rather than staging the entire working tree.
+Workflows that write canonical data serialize through the shared
+`research-monitor-writes` concurrency group. They explicitly check out the repository
+default branch, stage only expected data/state/report paths, and rebase the generated
+commit immediately before push. This keeps queued runs from treating an older trigger
+SHA as the canonical data base and avoids staging unrelated working-tree changes.
 
 ## Workspace metadata
 
