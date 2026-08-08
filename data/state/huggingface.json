@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-08T12:16:32.445138Z",
+      "last_successful_at": "2026-08-08T23:47:11.566111Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -34,6 +34,10 @@
           "last_modified": "2026-08-05T18:07:19Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
         },
+        "Tanishjain9/fast-scnn-floor-segmentation": {
+          "last_modified": "2026-08-08T18:36:00Z",
+          "last_seen_at": "2026-08-08T23:47:11.566111Z"
+        },
         "aneforge/vit-image-classification": {
           "last_modified": "2026-08-05T20:09:49Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
@@ -57,6 +61,10 @@
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "salma33/brain-lesion-segmentation": {
+          "last_modified": "2026-08-08T15:56:34Z",
+          "last_seen_at": "2026-08-08T23:47:11.566111Z"
         },
         "turhancan97/visbench-generic_segmentation-dinov2_vitb14": {
           "last_modified": "2026-08-07T16:40:27Z",
