@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-006`  
-**Related decisions:** `D-001`, `D-002`, `D-003`, `D-004`
+**Related decisions:** `D-001`, `D-002`, `D-003`, `D-004`, `D-157`
 
 ## Purpose
 
@@ -48,7 +48,8 @@ Source records become the common normalized item described in
 ### Persist
 
 Normalized items and source checkpoints are stored independently. Replaying a
-collector window must be safe.
+collector window must be safe. Runtime output uses the switchable work-root
+layout defined in `540-runtime-work-root.md`; configuration remains repository-anchored.
 
 ### Link / Deduplicate
 

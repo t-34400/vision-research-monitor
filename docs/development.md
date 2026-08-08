@@ -98,10 +98,11 @@ failures are discovered.
 
 ## Live smoke tests
 
-Use fresh local state paths when re-testing GitHub Discovery so results from a
-previous noisy run cannot hide behavior changes through item deduplication:
+Use an isolated runtime work root so collector state, items, derived data, and
+reports never mix with the repository-tracked Action outputs:
 
 ```bash
+export VRM_WORK_ROOT=.local/smoke
 export GITHUB_TOKEN="$(gh auth token)"
 TO="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 FROM_2H="$(date -u -d '2 hours ago' +%Y-%m-%dT%H:%M:%SZ)"
@@ -109,14 +110,21 @@ FROM_24H="$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)"
 
 uv run --locked python -m vision_research_monitor.cli.github_discovery \
   --from "$FROM_2H" \
-  --to "$TO" \
-  --state .local/smoke-v2/github_discovery.json \
-  --items .local/smoke-v2/items
+  --to "$TO"
+
+uv run --locked python -m vision_research_monitor.cli.link_items
+uv run --locked python -m vision_research_monitor.cli.build_digest --date 2026-08-09
+uv run --locked python -m vision_research_monitor.cli.build_trends --date 2026-08-09
+uv run --locked python -m vision_research_monitor.cli.search_archive "gaussian splatting"
 
 uv run --locked python -m vision_research_monitor.cli.openreview \
   --from "$FROM_24H" \
   --to "$TO"
 ```
+
+Unset `VRM_WORK_ROOT` to return to the repository-tracked `data/` and `reports/`
+layout used by GitHub Actions. `--work-root` can be supplied to one command when
+a shell-wide environment override is not desired.
 
 GitHub Discovery prints each search target to stderr and finishes with per-query
 raw/accepted counts. OpenReview uses the official `openreview-py` API v2 client,

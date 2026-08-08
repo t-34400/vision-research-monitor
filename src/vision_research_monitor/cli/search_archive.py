@@ -8,6 +8,7 @@ from pathlib import Path
 from ..analytics.archive import archive_index_from_dict, search_archive
 from ..config import load_analytics
 from ..models import parse_iso8601
+from ..runtime import RuntimePaths
 from ..storage import JsonDocumentStore
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -22,15 +23,17 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--since", help="UTC timestamp or YYYY-MM-DD")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--include-hidden", action="store_true")
+    parser.add_argument("--work-root", type=Path)
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    paths = RuntimePaths.resolve(args.work_root)
     config = load_analytics(
         ROOT / "config/analytics.yaml", ROOT / "config/schemas/analytics.schema.json"
     )
-    path = ROOT / "data/archive/index.json"
+    path = paths.archive / "index.json"
     data = JsonDocumentStore(path).load()
     if not data:
         raise SystemExit("Archive index is missing; run build_trends first")

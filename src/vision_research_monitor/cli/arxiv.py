@@ -10,6 +10,7 @@ from vision_research_monitor.academic.http import AcademicHttpClient
 from vision_research_monitor.classification.semantic import SemanticClassificationPipeline
 from vision_research_monitor.config import load_academic, load_semantic, load_taxonomy, load_venues
 from vision_research_monitor.models import parse_iso8601, to_iso8601
+from vision_research_monitor.runtime import RuntimePaths
 from vision_research_monitor.storage import JsonlItemStore, JsonStateStore
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -17,10 +18,12 @@ ROOT = Path(__file__).resolve().parents[3]
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Collect relevant arXiv papers")
+    parser.add_argument("--work-root", type=Path)
     parser.add_argument("--from", dest="window_start")
     parser.add_argument("--to", dest="window_end")
     parser.add_argument("--run-at")
     args = parser.parse_args()
+    paths = RuntimePaths.resolve(args.work_root)
 
     run_at = parse_iso8601(args.run_at) if args.run_at else datetime.now(UTC)
     if run_at is None:
@@ -46,7 +49,7 @@ def main() -> int:
         {topic["id"] for topic in taxonomy["topics"]},
     )
     classifier = SemanticClassificationPipeline(taxonomy, semantic)
-    state_store = JsonStateStore(ROOT / "data/state/arxiv.json")
+    state_store = JsonStateStore(paths.state / "arxiv.json")
     state = state_store.load()
 
     with AcademicHttpClient(
@@ -59,7 +62,7 @@ def main() -> int:
             window_end=end,
         )
 
-    written = JsonlItemStore(ROOT / "data/items").append(result.items)
+    written = JsonlItemStore(paths.items).append(result.items)
     if result.failed_targets == 0 and not explicit:
         state.setdefault("academic", {}).setdefault("arxiv", {})["last_successful_at"] = to_iso8601(
             run_at

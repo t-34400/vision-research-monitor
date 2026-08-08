@@ -10,6 +10,7 @@ from pathlib import Path
 from ..config import load_taxonomy, load_watchlist
 from ..github.client import GitHubClient
 from ..github.watch import GitHubWatchCollector
+from ..runtime import RuntimePaths
 from ..storage import JsonlItemStore, JsonStateStore
 
 
@@ -25,20 +26,22 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--watchlist-schema", type=Path, default=Path("config/schemas/watchlist.schema.json")
     )
-    parser.add_argument("--state", type=Path, default=Path("data/state/github_watch.json"))
-    parser.add_argument("--items", type=Path, default=Path("data/items"))
+    parser.add_argument("--work-root", type=Path)
+    parser.add_argument("--state", type=Path)
+    parser.add_argument("--items", type=Path)
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    paths = RuntimePaths.resolve(args.work_root)
     taxonomy = load_taxonomy(args.taxonomy, args.taxonomy_schema)
     topic_ids = {topic["id"] for topic in taxonomy["topics"]}
     watchlist = load_watchlist(args.watchlist, args.watchlist_schema, topic_ids)
 
-    state_store = JsonStateStore(args.state)
+    state_store = JsonStateStore(args.state or paths.state / "github_watch.json")
     state = state_store.load()
-    item_store = JsonlItemStore(args.items)
+    item_store = JsonlItemStore(args.items or paths.items)
     token = os.environ.get("GH_WATCH_TOKEN") or os.environ.get("GITHUB_TOKEN")
     run_at = datetime.now(UTC)
 

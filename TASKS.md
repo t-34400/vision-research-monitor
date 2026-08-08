@@ -125,6 +125,7 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `STB-004` Replace direct OpenReview HTTP access with the official API v2 Python client.
 - [ ] `STB-005` Regenerate `uv.lock` for the new `openreview-py` runtime dependency in a network-enabled environment.
 - [x] `STB-006` Remove OpenReview from GitHub Actions while unattended API access requires challenge verification.
+- [x] `STB-007` Add an isolated runtime work root for local smoke-test data and reports.
 
 ## Task conventions
 

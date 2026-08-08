@@ -10,6 +10,7 @@ from ..config import load_linking, load_reporting, load_taxonomy, load_venues
 from ..linking.linker import EntityLinker
 from ..models import NormalizedItem
 from ..reporting.digest import DailyDigestBuilder
+from ..runtime import RuntimePaths, display_path
 from ..storage import JsonDocumentStore, JsonlItemStore, TextDocumentStore
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -18,11 +19,13 @@ ROOT = Path(__file__).resolve().parents[3]
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Build the deterministic daily research digest")
     parser.add_argument("--date", dest="report_date", help="Digest period end date in YYYY-MM-DD")
+    parser.add_argument("--work-root", type=Path)
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    paths = RuntimePaths.resolve(args.work_root)
     taxonomy = load_taxonomy(
         ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json"
     )
@@ -37,16 +40,16 @@ def main(argv: list[str] | None = None) -> int:
     )
     report_date = parse_report_date(args.report_date, reporting["timezone"])
 
-    items = JsonlItemStore(ROOT / "data/items").load_items()
+    items = JsonlItemStore(paths.items).load_items()
     link_result = EntityLinker(linking).link(items, generated_at=deterministic_link_time(items))
-    JsonDocumentStore(ROOT / "data/entities/links.json").save(link_result.to_dict())
+    JsonDocumentStore(paths.entities / "links.json").save(link_result.to_dict())
 
     digest = DailyDigestBuilder(reporting, taxonomy, venues).build(
         items, link_result, report_date=report_date
     )
     date_text = report_date.isoformat()
-    JsonDocumentStore(ROOT / f"data/ranking/{date_text}.json").save(digest.ranking_document())
-    TextDocumentStore(ROOT / f"reports/daily/{date_text}.md").save(digest.markdown)
+    JsonDocumentStore(paths.ranking / f"{date_text}.json").save(digest.ranking_document())
+    TextDocumentStore(paths.daily_reports / f"{date_text}.md").save(digest.markdown)
 
     print(
         json.dumps(
@@ -54,7 +57,7 @@ def main(argv: list[str] | None = None) -> int:
                 "report_date": date_text,
                 "ranked_items": len(digest.ranked),
                 "links": len(link_result.edges),
-                "report": f"reports/daily/{date_text}.md",
+                "report": display_path(paths.daily_reports / f"{date_text}.md"),
             },
             sort_keys=True,
         )

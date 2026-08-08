@@ -600,6 +600,27 @@ identity, authentication, and 429/5xx retry behavior to the official client.
 Guest access is the default; bearer-token or username/password authentication
 remains optional.
 
+### D-156 — Suspend scheduled OpenReview collection while challenge verification is required
+
+**Status:** Accepted
+
+OpenReview remains available through its local/manual collector, but no scheduled
+GitHub Actions workflow invokes it while API requests can require interactive
+challenge verification. This avoids deterministic Action failures without
+removing the source integration or its persisted data model.
+
+### D-157 — Mirror runtime output under a switchable work root
+
+**Status:** Accepted
+
+Runtime data and reports are resolved from one work root. With no override, the
+root is the repository and existing `data/**` plus `reports/**` paths remain
+unchanged for GitHub Actions. Local smoke tests set `VRM_WORK_ROOT` or
+`--work-root` and receive the same `data/**` and `reports/**` hierarchy beneath
+that isolated root, normally `.local/smoke`. Explicit command-specific paths
+remain higher-precedence debugging overrides. Configuration stays anchored to
+the repository rather than the runtime root.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational

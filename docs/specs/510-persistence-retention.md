@@ -81,3 +81,8 @@ or reporting automation.
 If repository growth becomes operationally expensive, move canonical data to an
 external/object storage backend behind the persistence boundary. Such a migration
 requires a new architectural decision and a reproducible export/import path.
+
+
+## Runtime root
+
+Canonical Action output uses the repository root. Local smoke tests may mirror the same `data/**` and `reports/**` layout beneath an isolated work root as defined in `540-runtime-work-root.md`.

@@ -12,6 +12,7 @@ from ..config import load_github_discovery, load_semantic, load_taxonomy, load_v
 from ..github.client import GitHubClient
 from ..github.discovery import GitHubDiscoveryCollector
 from ..models import parse_iso8601, to_iso8601
+from ..runtime import RuntimePaths
 from ..storage import JsonlItemStore, JsonStateStore
 
 
@@ -33,8 +34,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--semantic-schema", type=Path, default=Path("config/schemas/semantic.schema.json")
     )
-    parser.add_argument("--state", type=Path, default=Path("data/state/github_discovery.json"))
-    parser.add_argument("--items", type=Path, default=Path("data/items"))
+    parser.add_argument("--work-root", type=Path)
+    parser.add_argument("--state", type=Path)
+    parser.add_argument("--items", type=Path)
     parser.add_argument("--from", dest="from_time")
     parser.add_argument("--to", dest="to_time")
     return parser
@@ -42,6 +44,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    paths = RuntimePaths.resolve(args.work_root)
     taxonomy = load_taxonomy(args.taxonomy, args.taxonomy_schema)
     venues = load_venues(args.venues, args.venues_schema)
     topic_ids = {topic["id"] for topic in taxonomy["topics"]}
@@ -58,9 +61,9 @@ def main(argv: list[str] | None = None) -> int:
     if explicit_window and (window_start is None or window_end is None):
         raise SystemExit("--from and --to must be valid ISO 8601 timestamps")
 
-    state_store = JsonStateStore(args.state)
+    state_store = JsonStateStore(args.state or paths.state / "github_discovery.json")
     state = state_store.load()
-    item_store = JsonlItemStore(args.items)
+    item_store = JsonlItemStore(args.items or paths.items)
     token = os.environ.get("GH_DISCOVERY_TOKEN") or os.environ.get("GITHUB_TOKEN")
     run_at = datetime.now(UTC)
 
