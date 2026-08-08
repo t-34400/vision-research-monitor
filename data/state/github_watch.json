@@ -2,197 +2,198 @@
   "accounts": {
     "organization:facebookresearch": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-08T13:26:35.435158Z",
+      "last_checked_at": "2026-08-08T23:36:38.138853Z",
       "login": "facebookresearch",
       "type": "organization"
     },
     "organization:google-deepmind": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-08T13:26:35.435158Z",
+      "last_checked_at": "2026-08-08T23:36:38.138853Z",
       "login": "google-deepmind",
       "type": "organization"
     },
     "organization:google-research": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-08T13:26:35.435158Z",
+      "last_checked_at": "2026-08-08T23:36:38.138853Z",
       "login": "google-research",
       "type": "organization"
     },
     "organization:microsoft": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-08T13:26:35.435158Z",
+      "last_checked_at": "2026-08-08T23:36:38.138853Z",
       "login": "microsoft",
       "type": "organization"
     },
     "organization:nerfstudio-project": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-08T13:26:35.435158Z",
+      "last_checked_at": "2026-08-08T23:36:38.138853Z",
       "login": "nerfstudio-project",
       "type": "organization"
     },
     "organization:nv-tlabs": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-08T13:26:35.435158Z",
+      "last_checked_at": "2026-08-08T23:36:38.138853Z",
       "login": "nv-tlabs",
       "type": "organization"
     },
     "organization:nvlabs": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-08T13:26:35.435158Z",
+      "last_checked_at": "2026-08-08T23:36:38.138853Z",
       "login": "NVlabs",
       "type": "organization"
     }
   },
   "http_cache": {
     "/repos/ArgoHA/D-FINE-seg": {
-      "etag": "W/\"482b6d3c913651003df33ddad74133ef3e97759571475f9d3d2ee9ab3c85b94c\"",
+      "etag": "W/\"b491ede075345d60831d9576f2cabc0b223cb625bec26c51f542d9450a315181\"",
       "last_modified": "Sat, 08 Aug 2026 10:22:35 GMT"
     },
     "/repos/ArgoHA/D-FINE-seg/commits/main": {
-      "etag": "W/\"5ca2e73e0019757719246f80e53ab0409a1a9495b5b7326227590a4370b35397\"",
+      "etag": "W/\"2091a56bccde0c749e72e2a8d63054d852c83afebd225f64074b3710cf3ee9ca\"",
       "last_modified": "Sat, 08 Aug 2026 10:22:25 GMT"
     },
     "/repos/ArgoHA/D-FINE-seg/releases?page=1&per_page=100": {
-      "etag": "W/\"708693cd6e601c120f92df3a7beb590b6b86054c6383c753bbe2b17c6d8ddd51\""
+      "etag": "W/\"ac5e11de1fbc81b18114c8d1439e1aa904d3b1dad320f1208f82d60cb31a91ca\""
     },
     "/repos/ArgoHA/D-FINE-seg/tags?page=1&per_page=100": {
-      "etag": "W/\"361b8ef63ebb21ea96c849efe43b24c1edd0d893ecb9855d2c7a4ead2523860f\"",
+      "etag": "W/\"58d1f9126e7269146b35265f26508ada7955ab3ace6842cca87631281468ec9d\"",
       "last_modified": "Sat, 08 Aug 2026 10:22:35 GMT"
     },
     "/repos/NVlabs/instant-ngp": {
-      "etag": "W/\"5178e6ee63ed15d41b14df0f54845116415752458712ae9a337bceb241773325\"",
+      "etag": "W/\"6c7113cf892fc93b1de82cf1555315d723c0e51cdb68b260ec3992a0f752448c\"",
       "last_modified": "Sat, 08 Aug 2026 03:17:40 GMT"
     },
     "/repos/NVlabs/instant-ngp/commits/master": {
-      "etag": "W/\"bb1cc10dcac9e7647a0bc2e3e518a03b55d47cd1eda4e97b8790e9836aa65392\"",
+      "etag": "W/\"1d219919b578854b9dd070f3fff415ab18c5ec5bc7e5cbb585d3254ee01a0cfd\"",
       "last_modified": "Mon, 02 Feb 2026 12:01:38 GMT"
     },
     "/repos/NVlabs/instant-ngp/releases?page=1&per_page=100": {
-      "etag": "W/\"e205a67f69b71c5c7e596b1f3d667770183e4cc3dbb38a61f840bf9ea9642f93\""
+      "etag": "W/\"6f49cd9aafb4d5b92d5bf45e8bfa0da83a787c1e16d33138da3f3548c6cc31ee\""
     },
     "/repos/NVlabs/instant-ngp/tags?page=1&per_page=100": {
-      "etag": "W/\"51bb0c81b393184dd089b72841063cc3a53bd1d04f002465134039a6b86bb385\"",
+      "etag": "W/\"6f26c51885563967733eb826dff4287d9c11638525cf0f1519c66a947cd5a48a\"",
       "last_modified": "Sat, 08 Aug 2026 03:17:40 GMT"
     },
     "/repos/blakeblackshear/frigate": {
-      "etag": "W/\"3159bb16acf16561b8ea675809137e20af1beb0ec83bafe5895c4ea3be1f0395\"",
-      "last_modified": "Sat, 08 Aug 2026 13:20:51 GMT"
+      "etag": "W/\"4c45667aee6c2beb70218736f0c99a56eef80106273f74e5ec94e1b051e2aee6\"",
+      "last_modified": "Sat, 08 Aug 2026 21:29:15 GMT"
     },
     "/repos/blakeblackshear/frigate/commits/dev": {
-      "etag": "W/\"69b448650a8ecd7c24fef6927c54de67a8f01bfe2c2fe22fdd6f42b75023a181\"",
-      "last_modified": "Sat, 08 Aug 2026 13:20:09 GMT"
+      "etag": "W/\"876974d915e55523ddf0f480ff28b5760b3f6e89b07cf97647a6ec1711b64d34\"",
+      "last_modified": "Sat, 08 Aug 2026 17:12:13 GMT"
     },
     "/repos/blakeblackshear/frigate/releases?page=1&per_page=100": {
-      "etag": "W/\"19151aa7d1fcebecc2fbb3431744272bcb476ea500b487a52fad6b1aa30baee4\""
+      "etag": "W/\"a5003088a9c55c993ca20690412afe24a8214155b00cd18398f096f72e3a91fe\""
     },
     "/repos/blakeblackshear/frigate/tags?page=1&per_page=100": {
-      "etag": "W/\"9d5758c9c0392e0cd10d169ed27643084eba390af697a34c993cebcf52f2979c\"",
-      "last_modified": "Sat, 08 Aug 2026 13:20:51 GMT"
+      "etag": "W/\"8201edd171f5d22b46aeb486f68a4b9a2c5aa6dde89a27d7261317e9c4e2fed2\"",
+      "last_modified": "Sat, 08 Aug 2026 21:29:15 GMT"
     },
     "/repos/johe123qwe/github-trending": {
-      "etag": "W/\"d54531b271cd94b08bbb7ee1d1e2b4aa38718bcad9b78b32c621b3a61258b063\"",
+      "etag": "W/\"34c7d95367028dc534979172e5f50292a4eeb1584f4aaebca4483a65b8fcd9ce\"",
       "last_modified": "Sat, 08 Aug 2026 12:54:03 GMT"
     },
     "/repos/johe123qwe/github-trending/commits/main": {
-      "etag": "W/\"90c3e8272abb23fbfd7be646dcf077e49ce7709dbfaed32c68b6d21a28548056\"",
+      "etag": "W/\"c4b24b8ec36b206b121e3d08dfd8d40cdfcfe67b28199acb513a9ef71785f353\"",
       "last_modified": "Sat, 08 Aug 2026 12:53:55 GMT"
     },
     "/repos/johe123qwe/github-trending/releases?page=1&per_page=100": {
-      "etag": "\"bf059cb49850331034c9c5aa451a7df0c29964f0d592868c3673c4de30bce649\""
+      "etag": "\"f7407b2c75d4c0587c232ec569028a6bcff72033affdec3fdfc6de6ef82324cd\""
     },
     "/repos/johe123qwe/github-trending/tags?page=1&per_page=100": {
-      "etag": "\"bf059cb49850331034c9c5aa451a7df0c29964f0d592868c3673c4de30bce649\"",
+      "etag": "\"f7407b2c75d4c0587c232ec569028a6bcff72033affdec3fdfc6de6ef82324cd\"",
       "last_modified": "Sat, 08 Aug 2026 12:54:03 GMT"
     },
     "/repos/nerfstudio-project/gsplat": {
-      "etag": "W/\"0c52d11ef7227d8dc50f7c88d6b5cc5b5c92de9586df2bad4a6de01f892d1346\"",
-      "last_modified": "Sat, 08 Aug 2026 08:44:57 GMT"
+      "etag": "W/\"50e4a4bcfb669d1fced1dc5c9db892394773d011c7bc2403394dd66c610f45a9\"",
+      "last_modified": "Sat, 08 Aug 2026 17:22:16 GMT"
     },
     "/repos/nerfstudio-project/gsplat/commits/main": {
-      "etag": "W/\"9d5b208d70c3ebcf940026e37c41666f523ab3375ed5e73f54294580f80af326\"",
+      "etag": "W/\"90ce5d73dc749e8e04918e3cb08c947e91d98790cd01f782078ea9e8479b4416\"",
       "last_modified": "Fri, 24 Jul 2026 11:53:54 GMT"
     },
     "/repos/nerfstudio-project/gsplat/releases?page=1&per_page=100": {
-      "etag": "W/\"5208b330d955fa052007ad6b0ea3b6e1e740c91e16a70ca99be7792d7487ebc3\""
+      "etag": "W/\"b49fd218c56e9cb38574477b4adafd1fb0b75b5697a4104b3cbae6608bd65e29\""
     },
     "/repos/nerfstudio-project/gsplat/tags?page=1&per_page=100": {
-      "etag": "W/\"76bfcd733366c57ac8a34fe05b9ca1cfbd3b50c546404dd4b1e7d434a9728978\"",
-      "last_modified": "Sat, 08 Aug 2026 08:44:57 GMT"
+      "etag": "W/\"cd957db19b42e0dd4944108612db5741108e37fc8352b038dc39ad7c08e3feef\"",
+      "last_modified": "Sat, 08 Aug 2026 17:22:16 GMT"
     },
     "/repos/nerfstudio-project/nerfstudio": {
-      "etag": "W/\"82b11834b19264439decd79e46894917cbca109cdfcb6937df54c84c056f7e46\"",
+      "etag": "W/\"c8913b05c499558993a9c5b994f2dabef2d979d7a4e80b2af86fb763f00b0480\"",
       "last_modified": "Sat, 08 Aug 2026 13:15:52 GMT"
     },
     "/repos/nerfstudio-project/nerfstudio/commits/main": {
-      "etag": "W/\"833d2d83165ae6ed64cd38d5bf6e72a9b9e322b58e14a086d22b9db7b53aed2b\"",
+      "etag": "W/\"10bde9533e53fd5d0038236d769c0bcfa133952fc43f7a1c6a0e3ad87d2be39a\"",
       "last_modified": "Tue, 29 Jul 2025 02:28:48 GMT"
     },
     "/repos/nerfstudio-project/nerfstudio/releases?page=1&per_page=100": {
-      "etag": "W/\"5ef2b1145e9ed9138178161de9fabfb270e042731a3f5da906e32ec7f4ea03e1\""
+      "etag": "W/\"8fd006e08e3242f2a723082b2616c7d74f57ceca1e31236db9a1a8d44fa5f661\""
     },
     "/repos/nerfstudio-project/nerfstudio/tags?page=1&per_page=100": {
-      "etag": "W/\"03c4a34b7d3e863954aad58eb0dd58d348a40e9bfdeaf97c75c52cceea2e38d2\"",
+      "etag": "W/\"7f583dff0fd74cc33373159de7238e8f4a7fa6a9278fb2c924384f93b09222d3\"",
       "last_modified": "Sat, 08 Aug 2026 13:15:52 GMT"
     },
     "/repos/ultralytics/ultralytics": {
-      "etag": "W/\"16dd9609131cf56d70506c21b671b1a607ce005936501cf326153c24f89b7c9f\"",
-      "last_modified": "Sat, 08 Aug 2026 11:53:32 GMT"
+      "etag": "W/\"3dc90b0d448c4fe8e5b049c3c44f0dd18e07ac8173b1c13fc14638ff9618a198\"",
+      "last_modified": "Sat, 08 Aug 2026 23:30:06 GMT"
     },
     "/repos/ultralytics/ultralytics/commits/main": {
-      "etag": "W/\"18b0b0b76be87a16a6a91643381f590ca8e332f858666040167e6b319ba95743\"",
+      "etag": "W/\"d966c7ec5466d2821844d857d2961d05a0ab7184183ac6f65d74f38b9524b9f5\"",
       "last_modified": "Fri, 07 Aug 2026 11:49:58 GMT"
     },
     "/repos/ultralytics/ultralytics/releases?page=1&per_page=100": {
-      "etag": "W/\"b9641a484181df11dcf21b032688bce52f49a812c2e4213a7d8b1d5a0cc27cb1\""
+      "etag": "W/\"87b55eb38b9c45d83873e42c47b9d3836a4664f936872a31d37fb3e5503c27d4\""
     },
     "/repos/ultralytics/ultralytics/tags?page=1&per_page=100": {
-      "etag": "W/\"ea2bd3c27e9f6b25efcd0403c720d2e634e6fbaed7293e60898867d6dc7ba5c2\"",
-      "last_modified": "Sat, 08 Aug 2026 11:53:32 GMT"
+      "etag": "W/\"e30dba79ab178cfa6b71fde31f1804a69fd3e9901389814d66f1bc0663c8a667\"",
+      "last_modified": "Sat, 08 Aug 2026 23:30:06 GMT"
     },
     "/repos/yuhaozhang7/NGD-SLAM": {
-      "etag": "W/\"c6a4161696c35b044666ae8dc882b076d41ce72f6d022563fe46afd3c4a3c89c\"",
+      "etag": "W/\"8148f97dc1fcb04e0eaba1a0487a13497342bf0b8f27cb1d62358da5788de2b4\"",
       "last_modified": "Sat, 08 Aug 2026 13:14:22 GMT"
     },
     "/repos/yuhaozhang7/NGD-SLAM/commits/main": {
-      "etag": "W/\"87940727f8117d4c9c3c50d6dcede6a5af206c979311b4bb3a6d93f11f3867ae\"",
+      "etag": "W/\"529967e9c9ae8aa77c3ad65b506c0d14a6e291365b96c768987c344a294f1db0\"",
       "last_modified": "Sat, 08 Aug 2026 13:14:11 GMT"
     },
     "/repos/yuhaozhang7/NGD-SLAM/releases?page=1&per_page=100": {
-      "etag": "\"bf059cb49850331034c9c5aa451a7df0c29964f0d592868c3673c4de30bce649\""
+      "etag": "\"f7407b2c75d4c0587c232ec569028a6bcff72033affdec3fdfc6de6ef82324cd\""
     },
     "/repos/yuhaozhang7/NGD-SLAM/tags?page=1&per_page=100": {
-      "etag": "\"bf059cb49850331034c9c5aa451a7df0c29964f0d592868c3673c4de30bce649\"",
+      "etag": "\"f7407b2c75d4c0587c232ec569028a6bcff72033affdec3fdfc6de6ef82324cd\"",
       "last_modified": "Sat, 08 Aug 2026 13:14:22 GMT"
     },
     "/repos/yyyanbj/arxiv-daily": {
-      "etag": "W/\"396c33a6955033a88437fe0c55b550631e59c0ad8b5d590bb706cb955dd5887b\"",
-      "last_modified": "Sat, 08 Aug 2026 12:45:11 GMT"
+      "etag": "W/\"9b8a8575a1e0a7a2d5d8c8149e5319599808314dcf0532eaf536fb69f7a54077\"",
+      "last_modified": "Sat, 08 Aug 2026 13:33:54 GMT"
     },
     "/repos/yyyanbj/arxiv-daily/commits/main": {
-      "etag": "W/\"ea356a9b0f5e8533fb525ec6087d02fb7c445e4cc57237a592ddccea5cce3d83\"",
-      "last_modified": "Sat, 08 Aug 2026 12:45:03 GMT"
+      "etag": "W/\"21bc2eba875d90b235af0015f9a8bd2c3c14de45abfbb23ba965940b1d2df5ad\"",
+      "last_modified": "Sat, 08 Aug 2026 13:33:48 GMT"
     },
     "/repos/yyyanbj/arxiv-daily/releases?page=1&per_page=100": {
-      "etag": "\"bf059cb49850331034c9c5aa451a7df0c29964f0d592868c3673c4de30bce649\""
+      "etag": "\"f7407b2c75d4c0587c232ec569028a6bcff72033affdec3fdfc6de6ef82324cd\""
     },
     "/repos/yyyanbj/arxiv-daily/tags?page=1&per_page=100": {
-      "etag": "\"bf059cb49850331034c9c5aa451a7df0c29964f0d592868c3673c4de30bce649\"",
-      "last_modified": "Sat, 08 Aug 2026 12:45:11 GMT"
+      "etag": "\"f7407b2c75d4c0587c232ec569028a6bcff72033affdec3fdfc6de6ef82324cd\"",
+      "last_modified": "Sat, 08 Aug 2026 13:33:54 GMT"
     }
   },
-  "last_run_completed_at": "2026-08-08T13:26:35.435158Z",
+  "last_run_completed_at": "2026-08-08T23:36:38.138853Z",
   "repositories": {
     "167694194": {
       "configured_names": [
         "blakeblackshear/frigate"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
-        "default_branch_head": "344efb6bc1e8db164bb5d3ec9bbfc6dbaf44deb7",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "default_branch_head": "2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [
+          "360119879",
           "352813583",
           "303692767",
           "324413080",
@@ -275,6 +276,7 @@
           "16075724"
         ],
         "seen_tags": [
+          "v0.18.0-beta3",
           "v0.18.0-beta2",
           "v0.18.0-beta1",
           "v0.17.2",
@@ -376,11 +378,11 @@
           "v0.9.0",
           "v0.9.0-rc6"
         ],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2019-01-26T13:52:38Z",
@@ -388,15 +390,15 @@
         "description": "NVR with realtime local object detection for IP cameras",
         "disabled": false,
         "fork": false,
-        "forks": 3463,
+        "forks": 3465,
         "full_name": "blakeblackshear/frigate",
         "homepage": "https://frigate.video",
         "html_url": "https://github.com/blakeblackshear/frigate",
         "id": 167694194,
         "name": "frigate",
         "owner_login": "blakeblackshear",
-        "pushed_at": "2026-08-08T13:20:16Z",
-        "stars": 34914,
+        "pushed_at": "2026-08-08T17:12:16Z",
+        "stars": 34920,
         "topics": [
           "ai",
           "camera",
@@ -411,7 +413,7 @@
           "rtsp",
           "tensorflow"
         ],
-        "updated_at": "2026-08-08T13:20:51Z",
+        "updated_at": "2026-08-08T21:29:15Z",
         "visibility": "public"
       }
     },
@@ -420,18 +422,18 @@
         "yyyanbj/arxiv-daily"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
-        "default_branch_head": "b7533541b9f03395f6a6d85a582bad067dcd351c",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "default_branch_head": "aea8327c4ff3a9a67351d5cb4a47643012631f34",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2021-10-29T13:23:18Z",
@@ -446,7 +448,7 @@
         "id": 422584085,
         "name": "arxiv-daily",
         "owner_login": "yyyanbj",
-        "pushed_at": "2026-08-08T12:48:43Z",
+        "pushed_at": "2026-08-08T13:37:52Z",
         "stars": 178,
         "topics": [
           "arxiv",
@@ -460,7 +462,7 @@
           "robotics",
           "slam"
         ],
-        "updated_at": "2026-08-08T12:45:11Z",
+        "updated_at": "2026-08-08T13:33:54Z",
         "visibility": "public"
       }
     },
@@ -469,10 +471,10 @@
         "NVlabs/instant-ngp"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
         "default_branch_head": "abe236ee00cf90cfca6e36e65c00435d5b21f50a",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [
           "88230914",
@@ -482,11 +484,11 @@
           "v2.0",
           "continuous"
         ],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T12:13:31.593378Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2022-01-05T17:11:30Z",
@@ -526,10 +528,10 @@
         "nerfstudio-project/nerfstudio"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
         "default_branch_head": "50e0e3c70c775e89333256213363badbf074f29d",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [
           "184762158",
@@ -615,11 +617,11 @@
           "v0.1.0",
           "SIGGRAPH-2023"
         ],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T12:13:31.593378Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2022-05-31T18:17:37Z",
@@ -657,10 +659,10 @@
         "ultralytics/ultralytics"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
         "default_branch_head": "76595b8030abf57c6d1580b1cbc62640c58880a7",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [
           "366678069",
@@ -866,11 +868,11 @@
           "v8.4.18",
           "v8.4.17"
         ],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2022-09-11T16:39:45Z",
@@ -878,15 +880,15 @@
         "description": "Ultralytics YOLO26, YOLO11, YOLOv8 \u2014 object detection, instance segmentation, semantic segmentation, image classification, pose estimation, object tracking",
         "disabled": false,
         "fork": false,
-        "forks": 11545,
+        "forks": 11546,
         "full_name": "ultralytics/ultralytics",
         "homepage": "https://platform.ultralytics.com",
         "html_url": "https://github.com/ultralytics/ultralytics",
         "id": 535360445,
         "name": "ultralytics",
         "owner_login": "ultralytics",
-        "pushed_at": "2026-08-08T13:08:28Z",
-        "stars": 60369,
+        "pushed_at": "2026-08-08T23:29:04Z",
+        "stars": 60377,
         "topics": [
           "computer-vision",
           "deep-learning",
@@ -909,7 +911,7 @@
           "yolo26",
           "yolov8"
         ],
-        "updated_at": "2026-08-08T11:53:32Z",
+        "updated_at": "2026-08-08T23:30:06Z",
         "visibility": "public"
       }
     },
@@ -918,18 +920,18 @@
         "johe123qwe/github-trending"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
         "default_branch_head": "a2bd06476b788dc2e9005a813969f5bf7ad94342",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2023-04-15T05:54:54Z",
@@ -956,10 +958,10 @@
         "nerfstudio-project/gsplat"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
         "default_branch_head": "2b902ff1891fc7f73f0f9b8c8bfc932cef2b198c",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [
           "230087820",
@@ -1014,11 +1016,11 @@
           "v0.1.1",
           "v0.1.0"
         ],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T12:13:31.593378Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2023-08-25T22:48:24Z",
@@ -1034,11 +1036,11 @@
         "name": "gsplat",
         "owner_login": "nerfstudio-project",
         "pushed_at": "2026-07-24T11:55:32Z",
-        "stars": 5503,
+        "stars": 5505,
         "topics": [
           "gaussian-splatting"
         ],
-        "updated_at": "2026-08-08T08:44:57Z",
+        "updated_at": "2026-08-08T17:22:16Z",
         "visibility": "public"
       }
     },
@@ -1047,18 +1049,18 @@
         "yuhaozhang7/NGD-SLAM"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
         "default_branch_head": "a93a14c4019efc7a209be5fbf9fefa46f5d1d90f",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2024-05-09T23:18:52Z",
@@ -1085,10 +1087,10 @@
         "ArgoHA/D-FINE-seg"
       ],
       "details": {
-        "commit_checked_at": "2026-08-08T13:26:35.435158Z",
+        "commit_checked_at": "2026-08-08T23:36:38.138853Z",
         "commit_initialized": true,
         "default_branch_head": "8346f3e8b697cf1e79c27094e84de053046961fc",
-        "release_checked_at": "2026-08-08T13:26:35.435158Z",
+        "release_checked_at": "2026-08-08T23:36:38.138853Z",
         "release_initialized": true,
         "seen_release_ids": [
           "357957762",
@@ -1098,11 +1100,11 @@
           "v0.2.0",
           "v0.1.0"
         ],
-        "tag_checked_at": "2026-08-08T13:26:35.435158Z",
+        "tag_checked_at": "2026-08-08T23:36:38.138853Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-08T13:26:35.435158Z",
+      "last_seen_at": "2026-08-08T23:36:38.138853Z",
       "snapshot": {
         "archived": false,
         "created_at": "2025-01-21T18:57:00Z",
