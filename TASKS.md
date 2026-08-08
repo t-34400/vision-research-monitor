@@ -108,6 +108,15 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `TRD-004` Add rolling-window trend detection.
 - [x] `TRD-005` Evaluate searchable archive/dashboard options.
 
+## Development environment
+
+- [x] `DEV-001` Standardize Python version and development dependencies for uv.
+- [x] `DEV-002` Configure Ruff, mypy, and pytest in `pyproject.toml`.
+- [x] `DEV-003` Document the local uv setup and validation workflow.
+- [ ] `DEV-004` Generate and commit `uv.lock` in a network-enabled local environment.
+- [ ] `DEV-005` Run the full local Ruff, mypy, and pytest validation sequence.
+- [ ] `DEV-006` Migrate GitHub Actions dependency setup to the validated uv lockfile.
+
 ## Task conventions
 
 Each implementation PR/change should:

@@ -552,6 +552,18 @@ writer while keeping analytics failure isolated from collector checkpoints. The
 workflow stages only explicit derived-data/report paths and never stages the
 workspace manifest.
 
+### D-152 — Standardize local development on uv
+
+**Status:** Accepted
+
+Local Python setup, dependency resolution, locking, and command execution use uv.
+Python 3.13 is pinned through `.python-version`, while `pyproject.toml` declares
+the supported `>=3.13,<3.14` range. Development tools live in the PEP 735 `dev`
+dependency group. `uv.lock` is committed after generation in a network-enabled
+environment; subsequent validation uses `--locked` so local and CI dependency
+resolution cannot drift silently. Existing GitHub Actions may continue using the
+current install path until that lockfile is generated and validated locally.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational

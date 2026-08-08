@@ -79,7 +79,16 @@ The system must support:
 - Workflows should expose useful failure context without leaking secrets.
 - A workflow should be restartable without manual cleanup.
 
-## 7. Testing rules
+## 7. Development environment
+
+- Use `uv` as the project Python environment and dependency manager.
+- `.python-version` is the canonical local Python minor-version request.
+- Declare runtime and development dependencies in `pyproject.toml`; do not add parallel requirements files unless an external integration requires one.
+- Commit `uv.lock` once it has been generated from a network-enabled environment, and use `uv sync --locked` / `uv run --locked` for reproducible validation thereafter.
+- Do not use `pip install` or an independently managed virtual environment for normal project development.
+- Run Ruff formatting check, Ruff lint, mypy, then pytest before the first GitHub push and before dependency/tooling changes are accepted.
+
+## 8. Testing rules
 
 - Unit-test normalization, matching, deduplication, state transitions, and
   ranking logic with local fixtures.
@@ -89,14 +98,14 @@ The system must support:
 - Prefer targeted validation during development; broad integration tests should
   be deliberate rather than the default.
 
-## 8. Workspace metadata protection
+## 9. Workspace metadata protection
 
 - `.chatgpt-workspace-manifest.json` is managed externally as a workspace management tag.
 - Never create, edit, reformat, regenerate, delete, rename, or otherwise modify `.chatgpt-workspace-manifest.json`.
 - Preserve that file exactly when modifying, packaging, or exporting the repository.
 - Automation that creates commits must stage explicit allowlisted paths and must never stage `.chatgpt-workspace-manifest.json`.
 
-## 9. Documentation rules
+## 10. Documentation rules
 
 - `ROADMAP.md` describes sequencing and phase outcomes.
 - `TASKS.md` contains executable work items and their status.
@@ -107,7 +116,7 @@ The system must support:
 - When a choice changes architecture or long-term conventions, update the
   decision list in the same change.
 
-## 10. Definition of done
+## 11. Definition of done
 
 A task is done only when:
 
