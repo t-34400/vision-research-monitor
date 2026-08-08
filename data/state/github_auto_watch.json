@@ -1,0 +1,125 @@
+{
+  "last_updated_at": "2026-08-08T13:19:49.174985Z",
+  "repositories": {
+    "167694194": {
+      "first_promoted_at": "2026-08-08T13:19:49.174985Z",
+      "full_name": "blakeblackshear/frigate",
+      "last_observed_at": "2026-08-08T13:19:49.174985Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool"
+      ],
+      "repo_id": "167694194",
+      "research_category": "research",
+      "research_relevance": 0.4,
+      "stars": 34914,
+      "topics": [
+        "object_detection"
+      ],
+      "url": "https://github.com/blakeblackshear/frigate"
+    },
+    "422584085": {
+      "first_promoted_at": "2026-08-08T13:19:49.174985Z",
+      "full_name": "yyyanbj/arxiv-daily",
+      "last_observed_at": "2026-08-08T13:19:49.174985Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "research_tool"
+      ],
+      "repo_id": "422584085",
+      "research_category": "research",
+      "research_relevance": 0.6,
+      "stars": 178,
+      "topics": [
+        "slam"
+      ],
+      "url": "https://github.com/yyyanbj/arxiv-daily"
+    },
+    "535360445": {
+      "first_promoted_at": "2026-08-08T13:19:49.174985Z",
+      "full_name": "ultralytics/ultralytics",
+      "last_observed_at": "2026-08-08T13:19:49.174985Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool"
+      ],
+      "repo_id": "535360445",
+      "research_category": "research",
+      "research_relevance": 0.4,
+      "stars": 60369,
+      "topics": [
+        "image_classification",
+        "instance_segmentation",
+        "object_detection",
+        "object_tracking",
+        "semantic_segmentation"
+      ],
+      "url": "https://github.com/ultralytics/ultralytics"
+    },
+    "628172384": {
+      "first_promoted_at": "2026-08-08T13:19:49.174985Z",
+      "full_name": "johe123qwe/github-trending",
+      "last_observed_at": "2026-08-08T13:19:49.174985Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "strong_research"
+      ],
+      "repo_id": "628172384",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 59,
+      "topics": [
+        "feature_matching",
+        "gaussian_splatting",
+        "human_pose_estimation",
+        "object_detection",
+        "object_tracking",
+        "synthetic_data",
+        "vision_language_models",
+        "visual_representation_learning"
+      ],
+      "url": "https://github.com/johe123qwe/github-trending"
+    },
+    "798507899": {
+      "first_promoted_at": "2026-08-08T13:19:49.174985Z",
+      "full_name": "yuhaozhang7/NGD-SLAM",
+      "last_observed_at": "2026-08-08T13:19:49.174985Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "research_tool"
+      ],
+      "repo_id": "798507899",
+      "research_category": "research",
+      "research_relevance": 0.4,
+      "stars": 232,
+      "topics": [
+        "dynamic_4d_reconstruction",
+        "slam"
+      ],
+      "url": "https://github.com/yuhaozhang7/NGD-SLAM"
+    },
+    "920212664": {
+      "first_promoted_at": "2026-08-08T13:19:49.174985Z",
+      "full_name": "ArgoHA/D-FINE-seg",
+      "last_observed_at": "2026-08-08T13:19:49.174985Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "920212664",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 192,
+      "topics": [
+        "instance_segmentation",
+        "object_detection",
+        "panoptic_segmentation"
+      ],
+      "url": "https://github.com/ArgoHA/D-FINE-seg"
+    }
+  },
+  "version": 1
+}
