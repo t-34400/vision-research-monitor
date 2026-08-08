@@ -2,7 +2,8 @@ name: Collect Hugging Face
 
 on:
   schedule:
-    - cron: "29 5,11,17,23 * * *"
+    - cron: "15 8 * * *"
+      timezone: "Asia/Tokyo"
   workflow_dispatch:
 
 permissions:

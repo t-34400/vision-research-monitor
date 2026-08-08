@@ -31,7 +31,7 @@ reports/daily/2026-08-08.md
   covers 2026-08-07 08:00 JST <= discovered_at < 2026-08-08 08:00 JST
 ```
 
-The scheduled builder runs at 08:11 JST after the active morning collectors.
+The scheduled builder runs at 08:45 JST after the active morning collectors.
 OpenReview is currently manual-only while unattended API access requires
 challenge verification. Manual `--date YYYY-MM-DD` builds the same deterministic
 window.

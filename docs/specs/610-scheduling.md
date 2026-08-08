@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-016`  
-**Related decisions:** `D-103`, `D-108`, `D-145`, `D-151`, `D-159`, `D-160`
+**Related decisions:** `D-103`, `D-108`, `D-145`, `D-151`, `D-159`, `D-160`, `D-161`
 
 ## Purpose
 
@@ -12,27 +12,28 @@ Define the initial GitHub Actions cadence and time semantics.
 
 - persisted timestamps: UTC;
 - report/display timezone: `Asia/Tokyo`;
-- GitHub Actions cron expressions: UTC, as required by the platform.
+- GitHub Actions schedules: `timezone: "Asia/Tokyo"`, so cron expressions use local wall-clock time.
 
-## Initial cadence
+## Current cadence
 
-| Workflow | Local schedule (Asia/Tokyo) | UTC cron |
+| Workflow | Local schedule (Asia/Tokyo) | Cron |
 | --- | --- | --- |
-| GitHub Watch | 00:17, 06:17, 12:17, 18:17 daily | `17 3,9,15,21 * * *` |
-| arXiv | 01:37, 07:37, 13:37, 19:37 daily | `37 4,10,16,22 * * *` |
-| Hugging Face | 02:29, 08:29, 14:29, 20:29 daily | `29 5,11,17,23 * * *` |
-| CVF Open Access | 03:23 daily | `23 18 * * *` |
-| Research Blogs | 03:31, 09:31, 15:31, 21:31 daily | `31 0,6,12,18 * * *` |
-| GitHub Discovery | 04:47, 16:47 daily | `47 7,19 * * *` |
-| Daily Digest + Long-Term Analysis | 08:11 daily | `11 23 * * *` |
+| GitHub Watch | 08:05 daily | `5 8 * * *` |
+| arXiv | 08:10 daily | `10 8 * * *` |
+| Hugging Face | 08:15 daily | `15 8 * * *` |
+| CVF Open Access | 08:20 daily | `20 8 * * *` |
+| Research Blogs | 08:25 daily | `25 8 * * *` |
+| GitHub Discovery | 08:30 daily | `30 8 * * *` |
+| Daily Digest + Long-Term Analysis | 08:45 daily | `45 8 * * *` |
 
-The daily digest and long-term analysis share the 08:00 local reporting boundary
-and run in one 08:11 workflow, after the 07:37 arXiv collection slot. OpenReview
-remains available as a manual/local collector but is intentionally not scheduled in
-GitHub Actions while unattended API access requires challenge verification. Expanded-source
-workflows are deliberately staggered away from that pre-digest pair to reduce
-contention in the shared repository-write concurrency group. A digest date is the
-end date of the preceding 24-hour reporting window.
+The daily digest and long-term analysis keep the 08:00 local reporting boundary.
+Collectors start just after the boundary and are staggered at five-minute intervals;
+the shared queued writer group serializes them if a previous collector is still
+running. The digest workflow is scheduled for 08:45 so it naturally follows the
+morning collection batch. OpenReview remains available as a manual/local collector
+but is intentionally not scheduled in GitHub Actions while unattended API access
+requires challenge verification. A digest date is the end date of the preceding
+24-hour reporting window.
 
 ## Action runtime policy
 

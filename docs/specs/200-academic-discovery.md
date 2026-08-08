@@ -167,8 +167,7 @@ all configured targets for that source succeeded.
 
 ## GitHub Actions
 
-- arXiv: `collect-arxiv.yml` at `01:37`, `07:37`, `13:37`, and `19:37`
-  `Asia/Tokyo`;
+- arXiv: `collect-arxiv.yml` at `08:10 Asia/Tokyo` daily;
 - OpenReview has no GitHub Actions workflow while unattended requests require
   challenge verification; use the local/manual CLI when explicitly needed;
 - arXiv uses the repository-write concurrency group;

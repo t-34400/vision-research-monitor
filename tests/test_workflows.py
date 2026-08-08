@@ -15,6 +15,15 @@ ACTIVE_WORKFLOWS = {
     "collect-research-blogs.yml",
 }
 SETUP_UV_REVISION = "c771a70e6277c0a99b617c7a806ffedaca235ff9"
+EXPECTED_DAILY_CRONS = {
+    "collect-github-watch.yml": "5 8 * * *",
+    "collect-arxiv.yml": "10 8 * * *",
+    "collect-huggingface.yml": "15 8 * * *",
+    "collect-cvf.yml": "20 8 * * *",
+    "collect-research-blogs.yml": "25 8 * * *",
+    "collect-github-discovery.yml": "30 8 * * *",
+    "build-digest.yml": "45 8 * * *",
+}
 
 
 def workflow_text(name: str) -> str:
@@ -24,6 +33,14 @@ def workflow_text(name: str) -> str:
 def test_only_active_workflows_are_scheduled() -> None:
     assert {path.name for path in WORKFLOWS.glob("*.yml")} == ACTIVE_WORKFLOWS
     assert not (WORKFLOWS / "collect-openreview.yml").exists()
+
+
+def test_workflows_use_daily_morning_schedule() -> None:
+    for name, cron in EXPECTED_DAILY_CRONS.items():
+        text = workflow_text(name)
+        assert text.count("- cron:") == 1
+        assert f'- cron: "{cron}"' in text
+        assert 'timezone: "Asia/Tokyo"' in text
 
 
 def test_workflows_use_locked_uv_runtime_and_queued_default_branch_writes() -> None:

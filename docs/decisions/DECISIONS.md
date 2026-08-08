@@ -84,18 +84,19 @@ until the underlying digest is stable.
 
 **Status:** Accepted
 
-Initial `Asia/Tokyo` schedules are:
+Current `Asia/Tokyo` schedules are:
 
-- GitHub Watch: 00:17, 06:17, 12:17, 18:17;
-- arXiv: 01:37, 07:37, 13:37, 19:37;
+- GitHub Watch: 08:05;
+- arXiv: 08:10;
 - OpenReview: unscheduled; manual/local only per D-156;
-- Hugging Face: 02:29, 08:29, 14:29, 20:29;
-- CVF Open Access: 03:23;
-- official research blogs: 03:31, 09:31, 15:31, 21:31;
-- GitHub Discovery: 04:47, 16:47;
-- Daily Digest: 08:11, using an 08:00 local reporting boundary.
+- Hugging Face: 08:15;
+- CVF Open Access: 08:20;
+- official research blogs: 08:25;
+- GitHub Discovery: 08:30;
+- Daily Digest: 08:45, using an 08:00 local reporting boundary.
 
-Cron expressions are stored in UTC and avoid top-of-hour execution.
+Cron expressions use an explicit `Asia/Tokyo` timezone and avoid top-of-hour execution.
+The morning batch supersedes the earlier multi-run daily cadence per D-161.
 
 ### D-104 — Start with a small explicit GitHub watchlist
 
@@ -367,7 +368,7 @@ storage.
 **Status:** Accepted
 
 A digest date ends at 08:00 `Asia/Tokyo` and covers the preceding 24 hours by
-`discovered_at`. The scheduled builder runs at 08:11 after the 07:37 arXiv slot.
+`discovered_at`. The scheduled builder runs at 08:45 after the morning collector batch.
 Any manually collected OpenReview records before the boundary are included normally.
 Entity links, per-day ranking JSON, and Markdown are derived from canonical normalized items.
 
@@ -487,14 +488,11 @@ machine-readable feed/API or is explicitly promoted to a high-value watch target
 
 ### D-145 — Stagger expanded-source workflows away from the pre-digest cluster
 
-**Status:** Accepted
+**Status:** Superseded by D-161
 
-New source workflows share the repository-write concurrency group with existing
-collectors, but their schedules are intentionally spread across otherwise quiet
-periods. Hugging Face runs every six hours at `:29`, CVF daily at 03:23 JST, and
-research feeds every six hours at `:31` on alternating hours. This reduces the
-chance of multiple pending writers around the 07:37 academic collection and
-08:11 digest sequence.
+The initial source-expansion cadence spread collectors across the day to reduce
+write contention. The queued writer policy introduced later makes that distribution
+unnecessary, so scheduled collection is now consolidated into one morning batch.
 
 ### D-146 — Align longitudinal buckets with the daily digest boundary
 
@@ -546,7 +544,7 @@ operational complexity.
 
 **Status:** Accepted
 
-Long-term analytics run after the daily digest in the existing 08:11 JST
+Long-term analytics run after the daily digest in the existing 08:45 JST
 workflow and share its repository-write concurrency. This avoids a second daily
 writer while keeping analytics failure isolated from collector checkpoints. The
 workflow stages only explicit derived-data/report paths and never stages the
@@ -660,6 +658,18 @@ helper that stages a requested path only when it contains materialized files or
 tracked entries. This lets zero-result collectors commit checkpoint/state changes
 without failing when `data/items` has not been created, while retaining narrow
 staging and manifest protection.
+
+### D-161 — Consolidate scheduled collection into one morning batch
+
+**Status:** Accepted
+
+Scheduled collection runs once per day after the 08:00 Asia/Tokyo reporting
+boundary: GitHub Watch at 08:05, arXiv at 08:10, Hugging Face at 08:15, CVF at
+08:20, official research blogs at 08:25, and GitHub Discovery at 08:30. Daily
+Digest and Long-Term Analysis run at 08:45. The shared queued writer group handles
+overlap if collectors take longer than their nominal five-minute spacing. This
+keeps the operational cadence simple while preserving the existing 08:00 report
+boundary.
 
 ## Future decisions
 
