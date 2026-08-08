@@ -55,7 +55,8 @@ configuration.
 
 ## Change labels
 
-- `NEW`: paper/repository discovery or explicit creation/discovery action;
+- `NEW`: newly published papers and repositories confirmed by GitHub `created:` discovery or watch creation events;
+- `DISCOVERED`: an existing GitHub repository first observed through discovery, such as a `pushed:` search hit;
 - `RELEASED`: GitHub release records;
 - `ACCEPTED`: accepted OpenReview paper discovery or submitted-to-accepted
   status transition event;
@@ -87,7 +88,7 @@ The initial Markdown sections are:
 1. Priority Watch
 2. Accepted Papers
 3. New Papers
-4. New Repositories
+4. Repositories
 5. Models & Demos
 6. Research Announcements
 7. Project Updates
@@ -120,7 +121,7 @@ that `.chatgpt-workspace-manifest.json` was not modified.
 - [x] high-priority watch items bypass the threshold;
 - [x] positive star deltas influence popularity without using absolute stars;
 - [x] OpenReview status changes produce append-only transition events;
-- [x] `NEW`, `UPDATED`, `RELEASED`, and `ACCEPTED` are deterministic;
+- [x] `NEW`, `DISCOVERED`, `UPDATED`, `RELEASED`, and `ACCEPTED` are deterministic;
 - [x] linked paper duplicates render once;
 - [x] Markdown and ranking sidecars are reproducible for a fixed input set;
 - [x] scheduled and manual digest builds use the same CLI path.

@@ -127,6 +127,8 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `STB-006` Remove OpenReview from GitHub Actions while unattended API access requires challenge verification.
 - [x] `STB-007` Add an isolated runtime work root for local smoke-test data and reports.
 - [x] `STB-008` Separate GitHub topic relevance from research value and suppress low-value discovery repositories in the digest.
+- [x] `STB-009` Distinguish newly created repositories from first-time discovery of existing repositories in digest labels.
+- [x] `STB-010` Preserve word boundaries when parsing inline RSS/Atom markup.
 
 ## Task conventions
 

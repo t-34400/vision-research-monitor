@@ -159,8 +159,15 @@ def change_label(item: NormalizedItem) -> str:
         return "ACCEPTED"
     if item.kind == "release" or action == "released":
         return "RELEASED"
-    if item.kind in {"repository", "paper"} or action in {"created", "discovered", "published"}:
+    if item.kind == "repository" and action == "discovered":
+        discovery_modes = item.metadata.get("discovery_modes")
+        if isinstance(discovery_modes, list) and "created" in discovery_modes:
+            return "NEW"
+        return "DISCOVERED"
+    if item.kind == "paper" or action in {"created", "published"}:
         return "NEW"
+    if item.kind == "repository":
+        return "DISCOVERED"
     return "UPDATED"
 
 

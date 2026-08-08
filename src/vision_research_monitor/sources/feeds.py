@@ -282,7 +282,7 @@ def html_to_text(value: str | None) -> str:
         return ""
     parser = _TextExtractor()
     parser.feed(value)
-    return clean_text(" ".join(parser.parts))
+    return join_text_fragments(parser.parts)
 
 
 def child_text(node: ET.Element, name: str) -> str | None:
@@ -293,8 +293,20 @@ def child_text(node: ET.Element, name: str) -> str | None:
 def first_child_text_by_local(node: ET.Element, name: str) -> str | None:
     for child in node:
         if local_name(child.tag) == name:
-            return "".join(child.itertext())
+            return join_text_fragments(list(child.itertext()))
     return None
+
+
+def join_text_fragments(parts: list[str]) -> str:
+    joined = ""
+    for part in parts:
+        if not part:
+            continue
+        if joined and not joined[-1].isspace() and not part[0].isspace():
+            if joined[-1].isalnum() and part[0].isalnum():
+                joined += " "
+        joined += part
+    return clean_text(joined)
 
 
 def local_name(tag: str) -> str:

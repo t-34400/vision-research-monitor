@@ -552,7 +552,7 @@ class GitHubDiscoveryCollector:
                 "research_relevance": research.score,
             },
             metadata={
-                "action": "discovered",
+                "action": "created" if "created" in candidate.modes else "discovered",
                 "discovery_modes": sorted(candidate.modes),
                 "query_ids": sorted(candidate.query_ids),
                 "query_families": sorted(candidate.families),

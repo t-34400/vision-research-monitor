@@ -35,6 +35,25 @@ def test_feed_parser_supports_rss_and_atom() -> None:
     assert atom[0].authors == ["Alice Example"]
 
 
+def test_atom_parser_preserves_word_boundaries_across_inline_elements() -> None:
+    atom = parse_feed(
+        """<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <id>alignment</id>
+    <title>Understanding <em>Multimodal</em><strong>LLMs</strong>: A Study</title>
+    <link rel="alternate" href="https://research.example.org/alignment" />
+    <published>2026-08-08T03:00:00Z</published>
+    <summary>Similar to <em>language</em><strong>models</strong>, those<strong>features</strong> matter.</summary>
+  </entry>
+</feed>
+"""
+    )
+
+    assert atom[0].title == "Understanding Multimodal LLMs: A Study"
+    assert atom[0].summary == "Similar to language models, those features matter."
+
+
 def test_research_feed_collector_filters_irrelevant_posts() -> None:
     config, taxonomy = load_inputs()
     feed = (FIXTURES / "research_feed.xml").read_text()

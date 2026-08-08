@@ -86,10 +86,51 @@ def test_topic_discovery_aggregates_created_and_pushed_hits() -> None:
     assert item.id == "github:repository:101"
     assert "gaussian_splatting" in item.topics
     assert item.metadata["discovery_modes"] == ["created", "pushed"]
+    assert item.metadata["action"] == "created"
     assert item.scores["relevance"] >= 0.35
     queries = [request.url.params["q"] for request in requests]
     assert any("created:" in query for query in queries)
     assert any("pushed:" in query and "stars:>=50" in query for query in queries)
+
+
+def test_pushed_only_repository_is_marked_as_discovered() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["query_families"] = [
+        {
+            "id": "neural_rendering",
+            "queries": [
+                {
+                    "id": "gaussian_splatting",
+                    "text": '"gaussian splatting"',
+                    "topics": ["gaussian_splatting"],
+                    "modes": ["pushed"],
+                }
+            ],
+        }
+    ]
+    config["venue_search"]["enabled"] = False
+    existing = repository()
+    existing["created_at"] = "2024-01-01T00:00:00Z"
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            200, json={"total_count": 1, "incomplete_results": False, "items": [existing]}
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert len(result.items) == 1
+    assert result.items[0].metadata["discovery_modes"] == ["pushed"]
+    assert result.items[0].metadata["action"] == "discovered"
 
 
 def test_dense_search_window_is_split_before_pagination_limit() -> None:

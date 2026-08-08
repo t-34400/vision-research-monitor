@@ -150,7 +150,7 @@ Turn collected items into a readable daily research digest.
 - popularity delta;
 - watched-source override;
 - Markdown daily report;
-- `NEW`, `UPDATED`, `RELEASED`, and `ACCEPTED` change labels.
+- `NEW`, `DISCOVERED`, `UPDATED`, `RELEASED`, and `ACCEPTED` change labels.
 
 ### Exit criteria
 

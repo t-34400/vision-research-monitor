@@ -90,7 +90,7 @@ def test_repository_freshness_uses_activity_time() -> None:
     assert ranked.signals.freshness > 0.98
 
 
-def test_change_labels_cover_acceptance_release_and_new_items() -> None:
+def test_change_labels_cover_acceptance_release_new_and_discovered_items() -> None:
     accepted = make_item(
         "openreview:event:a",
         source="openreview",
@@ -100,10 +100,27 @@ def test_change_labels_cover_acceptance_release_and_new_items() -> None:
     )
     release = make_item("github:release:1", kind="release", metadata={"action": "released"})
     paper = make_item("arxiv:paper:1", source="arxiv", source_id="1", kind="paper")
+    created_repository = make_item(
+        "github:repository:created", metadata={"action": "created", "stars_delta": 0}
+    )
+    discovered_repository = make_item(
+        "github:repository:discovered", metadata={"action": "discovered", "stars_delta": 0}
+    )
+    legacy_created_repository = make_item(
+        "github:repository:legacy-created",
+        metadata={
+            "action": "discovered",
+            "discovery_modes": ["created", "pushed"],
+            "stars_delta": 0,
+        },
+    )
 
     assert change_label(accepted) == "ACCEPTED"
     assert change_label(release) == "RELEASED"
     assert change_label(paper) == "NEW"
+    assert change_label(created_repository) == "NEW"
+    assert change_label(discovered_repository) == "DISCOVERED"
+    assert change_label(legacy_created_repository) == "NEW"
 
 
 def test_daily_digest_uses_fixed_jst_window_and_deduplicates_linked_papers() -> None:
@@ -160,6 +177,30 @@ def test_daily_digest_uses_fixed_jst_window_and_deduplicates_linked_papers() -> 
     assert "## Priority Watch" in result.markdown
     assert "## Accepted Papers" in result.markdown
     assert "[UPDATED]" in result.markdown
+
+
+def test_repository_section_uses_neutral_heading_for_discovered_existing_repo() -> None:
+    reporting, taxonomy, venues, linking = load_inputs()
+    repository = make_item(
+        "github:repository:existing",
+        title="example/existing",
+        url="https://github.com/example/existing",
+        scores={"relevance": 0.9, "research_relevance": 0.8},
+        metadata={
+            "action": "discovered",
+            "discovery_modes": ["pushed"],
+            "stars_delta": 0,
+        },
+    )
+    links = EntityLinker(linking).link([repository], generated_at="2026-08-08T06:00:00Z")
+
+    result = DailyDigestBuilder(reporting, taxonomy, venues).build(
+        [repository], links, report_date=date(2026, 8, 9)
+    )
+
+    assert "## Repositories" in result.markdown
+    assert "## New Repositories" not in result.markdown
+    assert "[DISCOVERED]" in result.markdown
 
 
 def test_source_expansion_items_get_sections_and_hidden_sidecars_stay_out() -> None:

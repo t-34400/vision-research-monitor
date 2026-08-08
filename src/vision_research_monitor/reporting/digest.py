@@ -109,7 +109,7 @@ class DailyDigestBuilder:
             ("Priority Watch", "priority_watch"),
             ("Accepted Papers", "accepted_papers"),
             ("New Papers", "new_papers"),
-            ("New Repositories", "new_repositories"),
+            ("Repositories", "new_repositories"),
             ("Models & Demos", "models_and_demos"),
             ("Research Announcements", "research_announcements"),
             ("Project Updates", "project_updates"),
