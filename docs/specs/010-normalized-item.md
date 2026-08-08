@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-007`  
-**Related decisions:** `D-002`, `D-006`, `D-007`, `D-125`
+**Related decisions:** `D-002`, `D-006`, `D-007`, `D-125`, `D-136`
 
 ## Purpose
 
@@ -95,6 +95,17 @@ evidence between every pair.
 
 Scores remain separate so ranking behavior is explainable and can be reweighted
 without recollecting source data.
+
+## Classification evidence
+
+When classification evidence is available, collectors store it under
+`metadata.classification`. The evidence may include the lexical score, semantic
+model identifier, semantic similarity and per-topic scores, and optional LLM
+model/reason.
+
+`topics` and `scores.relevance` remain the normalized outputs consumed by
+downstream ranking. Classifier-specific evidence stays in metadata so model or
+provider changes do not alter the common item schema.
 
 ## Metadata
 

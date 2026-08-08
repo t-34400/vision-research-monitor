@@ -144,6 +144,35 @@ def load_linking(path: Path, schema_path: Path) -> dict[str, Any]:
     return data
 
 
+def load_semantic(path: Path, schema_path: Path, topic_ids: set[str]) -> dict[str, Any]:
+    data = _load_yaml(path)
+    _validate_schema(data, schema_path)
+
+    profile_topics = [profile["topic"] for profile in data["profiles"]]
+    if len(profile_topics) != len(set(profile_topics)):
+        raise ConfigError("Semantic topic profile IDs must be unique")
+    unknown = sorted(set(profile_topics) - topic_ids)
+    missing = sorted(topic_ids - set(profile_topics))
+    if unknown:
+        raise ConfigError(f"Unknown semantic topic profiles: {', '.join(unknown)}")
+    if missing:
+        raise ConfigError(f"Semantic profiles missing taxonomy topics: {', '.join(missing)}")
+
+    model = data["model"]
+    if model["word_ngram_min"] > model["word_ngram_max"]:
+        raise ConfigError("Semantic word n-gram minimum cannot exceed maximum")
+    if model["char_ngram_min"] > model["char_ngram_max"]:
+        raise ConfigError("Semantic character n-gram minimum cannot exceed maximum")
+    if float(model["word_weight"]) + float(model["char_weight"]) <= 0:
+        raise ConfigError("Semantic feature weights must have positive total weight")
+
+    classification = data["classification"]
+    if classification["acceptance_similarity"] < classification["minimum_topic_similarity"]:
+        raise ConfigError("Semantic acceptance similarity cannot be below topic selection threshold")
+    llm = data["llm"]
+    if llm["minimum_semantic_score"] > llm["maximum_semantic_score"]:
+        raise ConfigError("Semantic LLM minimum score cannot exceed maximum score")
+    return data
 
 def load_reporting(path: Path, schema_path: Path, venue_priorities: set[str]) -> dict[str, Any]:
     data = _load_yaml(path)

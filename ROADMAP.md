@@ -160,7 +160,7 @@ A daily report can be generated deterministically from persisted normalized data
 
 ## Phase 6 — Semantic Classification
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -183,7 +183,7 @@ matching without becoming a collection dependency.
 
 ## Phase 7 — Source Expansion
 
-**Status:** planned
+**Status:** active
 
 ### Goal
 

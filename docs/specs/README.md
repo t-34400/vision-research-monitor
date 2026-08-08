@@ -11,6 +11,7 @@ their rationale belong in `../decisions/DECISIONS.md`.
 - `010-normalized-item.md` — common item model shared by all sources.
 - `020-collector-contract.md` — required behavior of source collectors.
 - `400-ranking.md` — deterministic ranking signals and inclusion behavior.
+- `410-semantic-classification.md` — semantic topic recovery, evidence, and optional LLM contract.
 - `520-daily-digest.md` — daily window, change labels, and report generation.
 - `030-taxonomy.md` — research-topic taxonomy contract.
 - `040-github-watchlist.md` — known GitHub target configuration.

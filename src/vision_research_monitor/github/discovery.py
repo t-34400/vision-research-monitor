@@ -8,6 +8,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any, Callable
 from zoneinfo import ZoneInfo
 
+from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
 from ..models import NormalizedItem, parse_iso8601, to_iso8601
 from .client import GitHubApiError, GitHubClient, GitHubNotFoundError
 
@@ -112,6 +113,7 @@ class GitHubDiscoveryCollector:
         config: dict[str, Any],
         taxonomy: dict[str, Any],
         venues: dict[str, Any],
+        classifier: SemanticClassificationPipeline | None = None,
         *,
         sleeper: Callable[[float], None] = time.sleep,
         monotonic: Callable[[], float] = time.monotonic,
@@ -122,6 +124,7 @@ class GitHubDiscoveryCollector:
         self.taxonomy = taxonomy
         self.venues = venues
         self.scorer = LexicalScorer(taxonomy)
+        self.classifier = classifier
         self.sleeper = sleeper
         self.monotonic = monotonic
         self._last_search_request_at: float | None = None
@@ -309,6 +312,7 @@ class GitHubDiscoveryCollector:
         search = self.config["search"]
         items: list[NormalizedItem] = []
         for candidate in candidates.values():
+            readme: str | None = None
             lexical = self.scorer.score(
                 candidate.repository,
                 query_topics=candidate.query_topics,
@@ -330,10 +334,52 @@ class GitHubDiscoveryCollector:
                 if is_venue_only
                 else search["minimum_topic_relevance_score"]
             )
-            if lexical.score < threshold or (is_venue_only and not lexical.topics):
+            classification = self._classify_candidate(candidate, lexical, threshold, readme)
+            if not classification.accepted:
                 continue
-            items.append(self._repository_item(candidate, lexical, run_at))
+            items.append(self._repository_item(candidate, classification, run_at))
         return sorted(items, key=lambda item: (-float(item.scores.get("relevance") or 0), item.title.casefold()))
+
+    def _classify_candidate(
+        self,
+        candidate: Candidate,
+        lexical: LexicalMatch,
+        threshold: float,
+        readme: str | None,
+    ) -> ClassificationResult:
+        if self.classifier is None:
+            if lexical.score < threshold:
+                return rejected_lexical(lexical.score, lexical.topics, lexical.matched_terms)
+            return ClassificationResult(
+                accepted=True,
+                relevance=lexical.score,
+                topics=lexical.topics,
+                matched_terms=lexical.matched_terms,
+                evidence={
+                    "method": "lexical",
+                    "lexical_score": lexical.score,
+                    "semantic_model": None,
+                    "llm_model": None,
+                },
+            )
+        repository = candidate.repository
+        text = " ".join(
+            value
+            for value in [
+                str(repository.get("description") or ""),
+                " ".join(repository.get("topics") or []),
+                readme or "",
+            ]
+            if value
+        )
+        return self.classifier.classify(
+            title=str(repository.get("full_name") or repository.get("name") or ""),
+            text=text,
+            lexical_score=lexical.score,
+            lexical_topics=lexical.topics,
+            matched_terms=lexical.matched_terms,
+            lexical_threshold=threshold,
+        )
 
     def _readme_for_candidate(self, candidate: Candidate, result: DiscoveryRunResult) -> str | None:
         limit = self.config["search"]["max_readme_enrichments_per_run"]
@@ -354,7 +400,7 @@ class GitHubDiscoveryCollector:
         return response.data if isinstance(response.data, str) else None
 
     @staticmethod
-    def _repository_item(candidate: Candidate, lexical: LexicalMatch, run_at: datetime) -> NormalizedItem:
+    def _repository_item(candidate: Candidate, classification: ClassificationResult, run_at: datetime) -> NormalizedItem:
         repo = candidate.repository
         repo_id = str(repo["id"])
         venue_hits = [
@@ -373,10 +419,10 @@ class GitHubDiscoveryCollector:
             published_at=repo.get("created_at"),
             updated_at=repo.get("updated_at") or repo.get("pushed_at"),
             discovered_at=to_iso8601(run_at),
-            topics=lexical.topics,
-            matched_terms=lexical.matched_terms,
+            topics=classification.topics,
+            matched_terms=classification.matched_terms,
             priority={"source": 0.0},
-            scores={"relevance": lexical.score},
+            scores={"relevance": classification.relevance},
             metadata={
                 "action": "discovered",
                 "discovery_modes": sorted(candidate.modes),
@@ -391,6 +437,7 @@ class GitHubDiscoveryCollector:
                 "language": repo.get("language"),
                 "fork": bool(repo.get("fork")),
                 "archived": bool(repo.get("archived")),
+                "classification": classification.evidence,
             },
         )
 

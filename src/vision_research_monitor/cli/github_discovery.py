@@ -7,7 +7,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from ..config import load_github_discovery, load_taxonomy, load_venues
+from ..classification.semantic import SemanticClassificationPipeline
+from ..config import load_github_discovery, load_semantic, load_taxonomy, load_venues
 from ..github.client import GitHubClient
 from ..github.discovery import GitHubDiscoveryCollector
 from ..models import parse_iso8601, to_iso8601
@@ -22,6 +23,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--venues-schema", type=Path, default=Path("config/schemas/venues.schema.json"))
     parser.add_argument("--config", type=Path, default=Path("config/github_discovery.yaml"))
     parser.add_argument("--config-schema", type=Path, default=Path("config/schemas/github-discovery.schema.json"))
+    parser.add_argument("--semantic", type=Path, default=Path("config/semantic.yaml"))
+    parser.add_argument("--semantic-schema", type=Path, default=Path("config/schemas/semantic.schema.json"))
     parser.add_argument("--state", type=Path, default=Path("data/state/github_discovery.json"))
     parser.add_argument("--items", type=Path, default=Path("data/items"))
     parser.add_argument("--from", dest="from_time")
@@ -36,6 +39,8 @@ def main(argv: list[str] | None = None) -> int:
     topic_ids = {topic["id"] for topic in taxonomy["topics"]}
     venue_ids = {venue["id"] for venue in venues["venues"]}
     config = load_github_discovery(args.config, args.config_schema, topic_ids, venue_ids)
+    semantic = load_semantic(args.semantic, args.semantic_schema, topic_ids)
+    classifier = SemanticClassificationPipeline(taxonomy, semantic)
 
     explicit_window = args.from_time is not None or args.to_time is not None
     if explicit_window and not (args.from_time and args.to_time):
@@ -52,7 +57,7 @@ def main(argv: list[str] | None = None) -> int:
     run_at = datetime.now(timezone.utc)
 
     with GitHubClient(token, state["http_cache"]) as client:
-        collector = GitHubDiscoveryCollector(client, state, config, taxonomy, venues)
+        collector = GitHubDiscoveryCollector(client, state, config, taxonomy, venues, classifier)
         result = collector.collect(run_at, window_start=window_start, window_end=window_end)
 
     written = item_store.append(result.items)

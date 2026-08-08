@@ -1,0 +1,408 @@
+version: 1
+enabled: true
+model:
+  id: topic-profile-tfidf-v1
+  word_ngram_min: 1
+  word_ngram_max: 2
+  char_ngram_min: 3
+  char_ngram_max: 5
+  word_weight: 0.7
+  char_weight: 0.3
+classification:
+  minimum_topic_similarity: 0.12
+  relative_topic_ratio: 0.68
+  maximum_topics: 4
+  acceptance_similarity: 0.16
+  full_scale_similarity: 0.4
+  enrichment_similarity: 0.22
+llm:
+  enabled: false
+  minimum_semantic_score: 0.1
+  maximum_semantic_score: 0.28
+  maximum_candidate_topics: 4
+profiles:
+- topic: image_classification
+  hints:
+  - categorize an entire image
+  - assign an image-level class label
+  - recognize the category of a picture
+- topic: object_detection
+  hints:
+  - localize objects with bounding boxes
+  - find and classify objects in an image
+  - object localization
+- topic: semantic_segmentation
+  hints:
+  - assign a class to every pixel
+  - pixel-wise scene parsing
+  - dense per-pixel classification
+- topic: instance_segmentation
+  hints:
+  - separate object instances with masks
+  - instance-level masks
+  - segment individual objects
+- topic: panoptic_segmentation
+  hints:
+  - unify semantic and instance segmentation
+  - panoptic scene parsing
+  - things and stuff segmentation
+- topic: open_vocabulary_recognition
+  hints:
+  - recognize unseen categories from text
+  - text-guided detection or segmentation
+  - open set visual categories
+- topic: vision_foundation_models
+  hints:
+  - general-purpose pretrained vision model
+  - large visual pretraining model
+  - transferable visual foundation model
+  required_any:
+  - vision
+  - visual
+  - image
+  - video
+  - camera
+  - perception
+- topic: visual_representation_learning
+  hints:
+  - learn transferable visual features
+  - visual embeddings for downstream tasks
+  - feature representation pretraining
+- topic: feature_matching
+  hints:
+  - establish correspondences between images
+  - match local keypoints across views
+  - image pair correspondence
+- topic: object_tracking
+  hints:
+  - maintain object identities through video
+  - track trajectories across frames
+  - temporal object association
+- topic: video_understanding
+  hints:
+  - recognize actions and events in video
+  - temporal video representation
+  - reason over video sequences
+- topic: image_restoration
+  hints:
+  - recover clean images from degraded observations
+  - remove blur or noise
+  - inverse imaging restoration
+- topic: super_resolution
+  hints:
+  - increase image spatial resolution
+  - recover high-resolution detail from low-resolution input
+  - image upsampling
+- topic: vision_language_models
+  hints:
+  - joint image and language reasoning
+  - multimodal image text model
+  - visual question answering with language models
+  required_groups:
+  - - vision
+    - visual
+    - image
+    - multimodal
+    - video
+  - - language
+    - text
+    - caption
+    - question
+    - multimodal
+- topic: structure_from_motion
+  hints:
+  - recover camera motion and sparse 3d geometry from photos
+  - joint camera pose and sparse structure estimation
+  - unordered image reconstruction
+- topic: multi_view_stereo
+  hints:
+  - recover dense geometry from multiple calibrated views
+  - dense multi-view reconstruction
+  - depth fusion from many images
+- topic: camera_pose_estimation
+  hints:
+  - estimate six degree of freedom camera pose
+  - localize a camera in a scene
+  - relative or absolute camera orientation and position
+- topic: camera_calibration
+  hints:
+  - estimate camera intrinsics and extrinsics
+  - recover focal length or lens distortion
+  - calibrate imaging geometry
+- topic: monocular_depth
+  hints:
+  - estimate depth from a single rgb image
+  - single-view depth prediction
+  - per-pixel depth from one camera
+- topic: metric_depth
+  hints:
+  - predict depth in absolute physical scale
+  - depth measured in meters
+  - absolute scene distance
+- topic: stereo_depth
+  hints:
+  - estimate disparity and depth from a stereo pair
+  - two-camera depth estimation
+  - binocular correspondence for depth
+- topic: multi_view_depth
+  hints:
+  - estimate depth from several camera views
+  - multi-camera depth prediction
+  - aggregate views for depth
+- topic: feed_forward_3d_reconstruction
+  hints:
+  - reconstruct 3d in one network forward pass
+  - direct neural 3d reconstruction without optimization
+  - single-pass 3d reconstruction
+- topic: pose_free_3d_reconstruction
+  hints:
+  - reconstruct 3d without known camera poses
+  - joint reconstruction and pose inference
+  - 3d reconstruction from pose-unknown images
+- topic: unposed_3d_reconstruction
+  hints:
+  - reconstruct from images without camera extrinsics
+  - unordered unposed image reconstruction
+  - unknown-viewpoint 3d reconstruction
+- topic: sparse_view_3d_reconstruction
+  hints:
+  - reconstruct 3d from very few input views
+  - few-view scene reconstruction
+  - limited-view geometry recovery
+- topic: point_cloud_reconstruction
+  hints:
+  - recover 3d geometry as points
+  - generate or complete point clouds
+  - point-based scene reconstruction
+- topic: surface_reconstruction
+  hints:
+  - recover continuous object or scene surfaces
+  - implicit surface fitting
+  - signed distance or occupancy surface recovery
+- topic: mesh_reconstruction
+  hints:
+  - recover triangle meshes from images or points
+  - predict vertices and faces
+  - explicit mesh geometry reconstruction
+- topic: nerf
+  hints:
+  - represent scenes with neural radiance fields
+  - volumetric neural rendering from camera rays
+  - neural scene representation for rendering
+  required_any:
+  - nerf
+  - radiance
+  - render*
+  - camera
+  - view
+- topic: gaussian_splatting
+  hints:
+  - represent scenes with 3d gaussian primitives
+  - render splatted anisotropic gaussians
+  - gaussian point primitives for real-time novel views
+- topic: novel_view_synthesis
+  hints:
+  - render unseen camera viewpoints
+  - synthesize images from new views
+  - view interpolation and extrapolation
+- topic: dynamic_4d_reconstruction
+  hints:
+  - reconstruct time-varying 3d scenes
+  - dynamic geometry across time
+  - four-dimensional scene representation
+- topic: image_to_3d
+  hints:
+  - generate a 3d asset from one or more images
+  - lift images into 3d objects
+  - image-conditioned 3d generation
+  required_groups:
+  - - image
+    - photo
+    - photograph
+    - rgb
+    - picture
+  - - 3d
+    - mesh
+    - geometry
+    - asset
+    - object
+- topic: text_to_3d
+  hints:
+  - generate 3d content from language prompts
+  - language-conditioned 3d asset synthesis
+  - text-guided 3d generation
+  required_groups:
+  - - text
+    - language
+    - prompt
+    - caption
+  - - 3d
+    - mesh
+    - geometry
+    - asset
+    - scene
+- topic: scene_generation
+  hints:
+  - generate complete 3d scenes and layouts
+  - synthesize rooms or environments
+  - generative spatial scene modeling
+  required_any:
+  - scene
+  - 3d
+  - spatial
+  - room
+  - environment
+- topic: slam
+  hints:
+  - simultaneously localize a moving sensor and build a map
+  - online camera trajectory and mapping
+  - visual or visual-inertial odometry with mapping
+- topic: robotics_mapping
+  hints:
+  - build maps for robot navigation and planning
+  - robot-centric environment mapping
+  - spatial maps from onboard sensors
+- topic: robotics_perception
+  hints:
+  - perception for autonomous robots
+  - robot sensor understanding
+  - visual perception for manipulation or navigation
+- topic: embodied_vision
+  hints:
+  - visual perception for an acting agent
+  - vision grounded in navigation and interaction
+  - embodied agent scene understanding
+- topic: human_pose_estimation
+  hints:
+  - estimate human body joints and keypoints
+  - recover 2d or 3d skeleton pose
+  - body joint localization
+- topic: human_mesh_reconstruction
+  hints:
+  - recover a parametric human mesh from images
+  - estimate SMPL body shape and pose
+  - human mesh recovery
+- topic: avatar
+  hints:
+  - create animatable digital humans
+  - reconstruct a personalized human avatar
+  - neural or 3d human representation for animation
+- topic: clothed_human_reconstruction
+  hints:
+  - recover clothing and dressed-body geometry
+  - reconstruct clothed people in 3d
+  - model garments on a human body
+- topic: hand_reconstruction
+  hints:
+  - recover 3d hand pose and mesh
+  - estimate articulated hand geometry
+  - MANO-style hand reconstruction
+- topic: face_reconstruction
+  hints:
+  - recover 3d facial shape from images
+  - estimate face geometry or 3d morphable model
+  - facial surface reconstruction
+- topic: body_reconstruction
+  hints:
+  - recover full human body geometry
+  - reconstruct 3d body shape
+  - human body surface estimation
+- topic: knowledge_distillation
+  hints:
+  - transfer knowledge from teacher to student model
+  - train a compact student from teacher predictions or features
+  - teacher-student supervision
+- topic: efficient_vision_models
+  hints:
+  - low-latency or mobile vision architecture
+  - compute-efficient visual model
+  - reduce inference cost for vision networks
+  required_any:
+  - vision
+  - visual
+  - image
+  - video
+  - mobile
+  - edge
+- topic: model_compression
+  hints:
+  - reduce neural network size or compute
+  - compress model parameters and representations
+  - compact a trained vision model
+  required_any:
+  - compress*
+  - compact
+  - size
+  - memory
+  - parameter
+- topic: quantization
+  hints:
+  - use low-bit weights or activations
+  - integer or mixed-precision neural inference
+  - quantize a vision network
+  required_any:
+  - bit
+  - integer
+  - quantiz*
+  - precision
+  - weight
+  - activation
+- topic: pruning
+  hints:
+  - remove weights channels heads or tokens
+  - sparsify a neural network
+  - structured or unstructured model pruning
+  required_any:
+  - prun*
+  - spars*
+  - channel
+  - head
+  - weight
+  - token
+- topic: test_time_adaptation
+  hints:
+  - adapt a model during inference on unlabeled test data
+  - online adaptation to distribution shift
+  - test-domain model adaptation
+- topic: self_supervised_learning
+  hints:
+  - learn visual representations without manual labels
+  - pretrain from unlabeled images or video
+  - contrastive or masked self-supervision
+- topic: synthetic_data
+  hints:
+  - train with rendered or generated examples
+  - synthetic images as training data
+  - simulation or generative data augmentation
+- topic: pseudo_ground_truth
+  hints:
+  - train from automatically generated pseudo labels
+  - teacher predictions used as targets
+  - pseudo supervision without manual annotations
+  required_any:
+  - pseudo
+  - teacher
+  - label
+  - target
+- topic: foundation_model_adaptation
+  hints:
+  - adapt a pretrained foundation vision model to new tasks
+  - parameter-efficient tuning of visual foundation models
+  - prompt adapters or fine-tuning for foundation models
+  required_groups:
+  - - vision
+    - visual
+    - image
+    - video
+    - camera
+    - perception
+  - - adapt*
+    - finetun*
+    - adapter
+    - prompt
+    - tuning
+- topic: vr_mr_xr
+  hints:
+  - immersive virtual augmented or mixed reality
+  - head-mounted spatial computing
+  - extended reality perception and interaction

@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any, Callable
 
+from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
 from ..models import NormalizedItem, to_iso8601
 from .common import AcademicCoverageError, AcademicRunResult, collection_window, initialize_result, normalize_window
 from .http import AcademicHttpClient
@@ -42,6 +43,7 @@ class ArxivCollector:
         config: dict[str, Any],
         taxonomy: dict[str, Any],
         venues: dict[str, Any],
+        classifier: SemanticClassificationPipeline | None = None,
         *,
         sleeper: Callable[[float], None] = time.sleep,
         monotonic: Callable[[], float] = time.monotonic,
@@ -51,6 +53,7 @@ class ArxivCollector:
         self.config = config
         self.matcher = AcademicLexicalMatcher(taxonomy, config["matching"])
         self.venues = venues
+        self.classifier = classifier
         self.sleeper = sleeper
         self.monotonic = monotonic
         self._last_request_at: float | None = None
@@ -89,9 +92,19 @@ class ArxivCollector:
         threshold = float(self.config["matching"]["minimum_relevance_score"])
         for paper in papers.values():
             match = self.matcher.match(paper.title, paper.abstract)
-            if match.score < threshold:
+            classification = self._classify(paper.title, paper.abstract, match, threshold)
+            if not classification.accepted:
                 continue
-            result.items.append(self._normalize(paper, match.score, match.topics, match.matched_terms, run_at))
+            result.items.append(
+                self._normalize(
+                    paper,
+                    classification.relevance,
+                    classification.topics,
+                    classification.matched_terms,
+                    classification.evidence,
+                    run_at,
+                )
+            )
 
         result.items.sort(key=lambda item: (item.published_at or "", item.source_id))
         return result
@@ -134,12 +147,42 @@ class ArxivCollector:
                 self.sleeper(wait)
         self._last_request_at = self.monotonic()
 
+    def _classify(self, title: str, abstract: str, match: Any, threshold: float) -> ClassificationResult:
+        if self.classifier is None:
+            if match.score >= threshold:
+                return self.classifier_result_from_lexical(match)
+            return rejected_lexical(match.score, match.topics, match.matched_terms)
+        return self.classifier.classify(
+            title=title,
+            text=abstract,
+            lexical_score=match.score,
+            lexical_topics=match.topics,
+            matched_terms=match.matched_terms,
+            lexical_threshold=threshold,
+        )
+
+    @staticmethod
+    def classifier_result_from_lexical(match: Any) -> ClassificationResult:
+        return ClassificationResult(
+            accepted=True,
+            relevance=match.score,
+            topics=match.topics,
+            matched_terms=match.matched_terms,
+            evidence={
+                "method": "lexical",
+                "lexical_score": match.score,
+                "semantic_model": None,
+                "llm_model": None,
+            },
+        )
+
     def _normalize(
         self,
         paper: ArxivPaper,
         score: float,
         topics: list[str],
         matched_terms: list[str],
+        classification_evidence: dict[str, Any],
         run_at: datetime,
     ) -> NormalizedItem:
         venue = infer_venue(paper, self.venues)
@@ -167,6 +210,7 @@ class ArxivCollector:
                 "journal_ref": paper.journal_ref,
                 "doi": paper.doi,
                 "pdf_url": paper.pdf_url,
+                "classification": classification_evidence,
             },
         )
 

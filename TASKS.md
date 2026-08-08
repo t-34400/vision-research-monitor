@@ -85,12 +85,12 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 
 ## Phase 6 — Semantic Classification
 
-- [ ] `SEM-001` Build a small manually reviewed evaluation set.
-- [ ] `SEM-002` Add semantic similarity baseline.
-- [ ] `SEM-003` Measure precision/recall against lexical baseline.
-- [ ] `SEM-004` Design optional LLM classifier contract.
-- [ ] `SEM-005` Add semantic/LLM classification only after candidate reduction.
-- [ ] `SEM-006` Record classification evidence and model/version metadata.
+- [x] `SEM-001` Build a small manually reviewed evaluation set.
+- [x] `SEM-002` Add semantic similarity baseline.
+- [x] `SEM-003` Measure precision/recall against lexical baseline.
+- [x] `SEM-004` Design optional LLM classifier contract.
+- [x] `SEM-005` Add semantic/LLM classification only after candidate reduction.
+- [x] `SEM-006` Record classification evidence and model/version metadata.
 
 ## Phase 7 — Source Expansion
 

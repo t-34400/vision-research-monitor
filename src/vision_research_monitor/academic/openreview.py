@@ -4,6 +4,7 @@ import time
 from datetime import datetime, timezone
 from typing import Any, Callable
 
+from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
 from ..models import NormalizedItem, to_iso8601
 from .common import AcademicCoverageError, AcademicRunResult, collection_window, initialize_result, normalize_window
 from .http import AcademicHttpClient
@@ -17,6 +18,7 @@ class OpenReviewCollector:
         state: dict[str, Any],
         config: dict[str, Any],
         taxonomy: dict[str, Any],
+        classifier: SemanticClassificationPipeline | None = None,
         *,
         sleeper: Callable[[float], None] = time.sleep,
         monotonic: Callable[[], float] = time.monotonic,
@@ -25,6 +27,7 @@ class OpenReviewCollector:
         self.state = state
         self.config = config
         self.matcher = AcademicLexicalMatcher(taxonomy, config["matching"])
+        self.classifier = classifier
         self.sleeper = sleeper
         self.monotonic = monotonic
         self._last_request_at: float | None = None
@@ -77,10 +80,26 @@ class OpenReviewCollector:
                 abstract = string_content(note, "abstract")
                 keywords = list_content(note, "keywords")
                 match = self.matcher.match(title, abstract, keywords=keywords)
-                if match.score < threshold:
+                classification = self._classify(
+                    title,
+                    " ".join([abstract, *keywords]),
+                    match.score,
+                    match.topics,
+                    match.matched_terms,
+                    threshold,
+                )
+                if not classification.accepted:
                     continue
 
-                item = normalize_openreview_note(note, edition, match.score, match.topics, match.matched_terms, run_at)
+                item = normalize_openreview_note(
+                    note,
+                    edition,
+                    classification.relevance,
+                    classification.topics,
+                    classification.matched_terms,
+                    classification.evidence,
+                    run_at,
+                )
                 result.items.append(item)
                 note_id = str(note["id"])
                 current_status = str(item.metadata["status"])
@@ -94,9 +113,10 @@ class OpenReviewCollector:
                                 edition,
                                 previous_status,
                                 current_status,
-                                match.score,
-                                match.topics,
-                                match.matched_terms,
+                                classification.relevance,
+                                classification.topics,
+                                classification.matched_terms,
+                                classification.evidence,
                                 run_at,
                             )
                         )
@@ -112,6 +132,39 @@ class OpenReviewCollector:
 
         result.items.sort(key=lambda item: (item.published_at or "", item.source_id))
         return result
+
+    def _classify(
+        self,
+        title: str,
+        text: str,
+        lexical_score: float,
+        lexical_topics: list[str],
+        matched_terms: list[str],
+        threshold: float,
+    ) -> ClassificationResult:
+        if self.classifier is None:
+            if lexical_score >= threshold:
+                return ClassificationResult(
+                    accepted=True,
+                    relevance=lexical_score,
+                    topics=lexical_topics,
+                    matched_terms=matched_terms,
+                    evidence={
+                        "method": "lexical",
+                        "lexical_score": lexical_score,
+                        "semantic_model": None,
+                        "llm_model": None,
+                    },
+                )
+            return rejected_lexical(lexical_score, lexical_topics, matched_terms)
+        return self.classifier.classify(
+            title=title,
+            text=text,
+            lexical_score=lexical_score,
+            lexical_topics=lexical_topics,
+            matched_terms=matched_terms,
+            lexical_threshold=threshold,
+        )
 
     def _collect_edition(
         self,
@@ -182,6 +235,7 @@ def normalize_openreview_note(
     relevance: float,
     topics: list[str],
     matched_terms: list[str],
+    classification_evidence: dict[str, Any],
     run_at: datetime,
 ) -> NormalizedItem:
     note_id = str(note["id"])
@@ -221,6 +275,7 @@ def normalize_openreview_note(
             "pdate": integer_value(note.get("pdate")),
             "odate": integer_value(note.get("odate")),
             "invitations": note.get("invitations", []),
+            "classification": classification_evidence,
         },
     )
 
@@ -233,6 +288,7 @@ def normalize_status_transition(
     relevance: float,
     topics: list[str],
     matched_terms: list[str],
+    classification_evidence: dict[str, Any],
     run_at: datetime,
 ) -> NormalizedItem:
     note_id = str(note["id"])
@@ -266,6 +322,7 @@ def normalize_status_transition(
             "openreview_venue_id": edition["venue_id"],
             "tmdate": integer_value(note.get("tmdate")),
             "pdate": integer_value(note.get("pdate")),
+            "classification": classification_evidence,
         },
     )
 

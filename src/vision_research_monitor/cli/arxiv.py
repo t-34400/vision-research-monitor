@@ -7,7 +7,8 @@ from pathlib import Path
 
 from vision_research_monitor.academic.arxiv import ArxivCollector
 from vision_research_monitor.academic.http import AcademicHttpClient
-from vision_research_monitor.config import load_academic, load_taxonomy, load_venues
+from vision_research_monitor.classification.semantic import SemanticClassificationPipeline
+from vision_research_monitor.config import load_academic, load_semantic, load_taxonomy, load_venues
 from vision_research_monitor.models import parse_iso8601, to_iso8601
 from vision_research_monitor.storage import JsonStateStore, JsonlItemStore
 
@@ -38,6 +39,12 @@ def main() -> int:
         ROOT / "config/schemas/academic.schema.json",
         {venue["id"] for venue in venues["venues"]},
     )
+    semantic = load_semantic(
+        ROOT / "config/semantic.yaml",
+        ROOT / "config/schemas/semantic.schema.json",
+        {topic["id"] for topic in taxonomy["topics"]},
+    )
+    classifier = SemanticClassificationPipeline(taxonomy, semantic)
     state_store = JsonStateStore(ROOT / "data/state/arxiv.json")
     state = state_store.load()
 
@@ -45,7 +52,7 @@ def main() -> int:
         config["arxiv"]["base_url"],
         user_agent=config["arxiv"]["user_agent"],
     ) as client:
-        result = ArxivCollector(client, state, config, taxonomy, venues).collect(
+        result = ArxivCollector(client, state, config, taxonomy, venues, classifier).collect(
             run_at,
             window_start=start,
             window_end=end,

@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `GHD-001` through `GHD-010`  
-**Related decisions:** `D-001`, `D-003`, `D-004`, `D-115`, `D-116`, `D-117`, `D-118`, `D-119`
+**Related decisions:** `D-001`, `D-003`, `D-004`, `D-115`, `D-116`, `D-117`, `D-118`, `D-119`, `D-134`, `D-135`
 
 ## Purpose
 
@@ -94,9 +94,9 @@ and rate-limit handling remains active as a second line of defense.
 README enrichment uses the normal REST API resource, is attempted only when
 needed for venue-only topical gating, and has a per-run cap.
 
-## Lexical relevance baseline
+## Relevance classification
 
-Phase 2 uses deterministic lexical scoring only.
+Phase 2 established deterministic lexical scoring as the baseline.
 
 Evidence is drawn from:
 
@@ -111,8 +111,15 @@ metadata matches can raise that score and add additional taxonomy topics. Venue
 candidates have no topic-query baseline and must independently match at least one
 taxonomy topic.
 
-The normalized item stores the relevance score separately under
-`scores.relevance`. Semantic or LLM-based relevance is deferred to Phase 6.
+From Phase 6 onward, a candidate that does not pass the configured lexical
+threshold may be evaluated by the local semantic-profile classifier. This does
+not broaden GitHub Search itself: semantic classification runs only after the
+repository has already been surfaced by a configured topic query or venue/year
+search. Accepted lexical candidates may also receive conservative semantic
+multi-label enrichment.
+
+The normalized item stores final relevance under `scores.relevance` and records
+classification method/model evidence in `metadata.classification`.
 
 ## Normalized output
 

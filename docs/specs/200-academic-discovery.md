@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `ACA-001` through `ACA-008`  
-**Related decisions:** `D-120`, `D-121`, `D-122`, `D-123`, `D-124`
+**Related decisions:** `D-120`, `D-121`, `D-122`, `D-123`, `D-124`, `D-134`, `D-135`
 
 ## Purpose
 
@@ -31,8 +31,15 @@ The initial deterministic weights are:
 - keywords: `0.35`;
 - minimum relevance: `0.30`.
 
-Topic classification is multi-label. Semantic classification remains deferred to
-Phase 6.
+Topic classification is multi-label. Phase 3 lexical matching remains the first
+filter. From Phase 6 onward, candidates below the lexical threshold can be
+recovered by the deterministic semantic-profile classifier after source-level
+candidate reduction. Lexically accepted papers may also receive semantic
+multi-label enrichment.
+
+The semantic classifier is local and optional from the collector contract's
+perspective. A collector instantiated without it retains Phase 3 lexical-only
+behavior, so semantic classification is not an external collection dependency.
 
 ## arXiv
 

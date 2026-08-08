@@ -367,9 +367,51 @@ A digest date ends at 08:00 `Asia/Tokyo` and covers the preceding 24 hours by
 07:43 OpenReview collection slots can be included. Entity links, per-day ranking
 JSON, and Markdown are derived from canonical normalized items.
 
+### D-134 — Use a local semantic-profile TF-IDF model as the Phase 6 baseline
+
+**Status:** Accepted
+
+The default semantic classifier is `topic-profile-tfidf-v1`. Each taxonomy topic
+has a curated profile composed of its label, aliases, and descriptive hints. The
+classifier uses deterministic word/character n-gram TF-IDF cosine similarity and
+requires no model download, hosted API, or new runtime dependency. This provides
+an auditable semantic-similarity baseline before introducing learned embeddings.
+
+### D-135 — Run semantic classification only after source-level candidate reduction
+
+**Status:** Accepted
+
+Semantic classification never broadens source crawling or GitHub Search. GitHub
+repositories must first come from configured search/venue discovery, arXiv papers
+must come from configured categories and bounded windows, and OpenReview papers
+must come from configured editions. Lexical classification runs first; semantic
+scoring can recover low-lexical candidates or conservatively enrich labels on an
+already accepted lexical candidate.
+
+### D-136 — Persist classifier evidence without changing the common item schema
+
+**Status:** Accepted
+
+Final topics remain in `topics` and final relevance remains in
+`scores.relevance`. New records store classification provenance under
+`metadata.classification`, including the method, lexical score, semantic model
+ID, semantic similarity/per-topic scores, and optional LLM model/reason. This
+keeps downstream ranking independent from classifier implementation details.
+
+### D-137 — Keep hosted LLM classification optional and provider-neutral
+
+**Status:** Accepted
+
+Phase 6 defines an `LLMTopicClassifier` contract but does not select or require a
+hosted provider. An LLM may be invoked only for lexically insufficient candidates
+that already have a bounded semantic topic shortlist and whose semantic score is
+inside a configured ambiguity range. Collection must still succeed with no LLM
+provider configured.
+
 ## Future decisions
 
 The following choices are intentionally deferred until their roadmap phases:
 
-- semantic provider/model and evaluation threshold (Phase 6);
+- whether a hosted embedding/LLM provider provides enough measured value to add beyond the provider-neutral Phase 6 contract;
 - external storage or dashboard migration triggers (Phase 7/8).
+

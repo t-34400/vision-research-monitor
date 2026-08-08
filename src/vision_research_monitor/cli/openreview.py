@@ -8,7 +8,8 @@ from pathlib import Path
 
 from vision_research_monitor.academic.http import AcademicHttpClient
 from vision_research_monitor.academic.openreview import OpenReviewCollector
-from vision_research_monitor.config import load_academic, load_taxonomy, load_venues
+from vision_research_monitor.classification.semantic import SemanticClassificationPipeline
+from vision_research_monitor.config import load_academic, load_semantic, load_taxonomy, load_venues
 from vision_research_monitor.models import parse_iso8601, to_iso8601
 from vision_research_monitor.storage import JsonStateStore, JsonlItemStore
 
@@ -39,6 +40,12 @@ def main() -> int:
         ROOT / "config/schemas/academic.schema.json",
         {venue["id"] for venue in venues["venues"]},
     )
+    semantic = load_semantic(
+        ROOT / "config/semantic.yaml",
+        ROOT / "config/schemas/semantic.schema.json",
+        {topic["id"] for topic in taxonomy["topics"]},
+    )
+    classifier = SemanticClassificationPipeline(taxonomy, semantic)
     state_store = JsonStateStore(ROOT / "data/state/openreview.json")
     state = state_store.load()
 
@@ -46,7 +53,7 @@ def main() -> int:
         config["openreview"]["base_url"],
         token=os.environ.get("OPENREVIEW_TOKEN"),
     ) as client:
-        result = OpenReviewCollector(client, state, config, taxonomy).collect(
+        result = OpenReviewCollector(client, state, config, taxonomy, classifier).collect(
             run_at,
             window_start=start,
             window_end=end,

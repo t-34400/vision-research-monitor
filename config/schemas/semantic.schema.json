@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/semantic.schema.json",
+  "title": "Semantic classification configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "enabled",
+    "model",
+    "classification",
+    "llm",
+    "profiles"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "word_ngram_min",
+        "word_ngram_max",
+        "char_ngram_min",
+        "char_ngram_max",
+        "word_weight",
+        "char_weight"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "word_ngram_min": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "word_ngram_max": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "char_ngram_min": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 6
+        },
+        "char_ngram_max": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 8
+        },
+        "word_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "char_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimum_topic_similarity",
+        "relative_topic_ratio",
+        "maximum_topics",
+        "acceptance_similarity",
+        "full_scale_similarity",
+        "enrichment_similarity"
+      ],
+      "properties": {
+        "minimum_topic_similarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "relative_topic_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "maximum_topics": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "acceptance_similarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "full_scale_similarity": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "enrichment_similarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "llm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "minimum_semantic_score",
+        "maximum_semantic_score",
+        "maximum_candidate_topics"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "minimum_semantic_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "maximum_semantic_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "maximum_candidate_topics": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        }
+      }
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "topic",
+          "hints"
+        ],
+        "properties": {
+          "topic": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "hints": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 3
+            }
+          },
+          "required_any": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 2
+            }
+          },
+          "required_groups": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

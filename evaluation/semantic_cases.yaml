@@ -1,0 +1,123 @@
+version: 1
+reviewed: true
+cases:
+  - id: sfm_paraphrase
+    title: Recovering camera motion and sparse geometry from unordered photographs
+    text: We jointly estimate cameras and a sparse 3D point structure from an Internet photo collection.
+    expected_topics: [structure_from_motion]
+  - id: metric_monocular_paraphrase
+    title: Absolute scene distance from one RGB frame
+    text: A network predicts per-pixel distances in meters from a single color image.
+    expected_topics: [metric_depth, monocular_depth]
+  - id: sparse_unposed_paraphrase
+    title: Few-shot scene reconstruction with unknown viewpoints
+    text: We recover a complete 3D scene from only three input images without camera extrinsics.
+    expected_topics: [sparse_view_3d_reconstruction, unposed_3d_reconstruction, pose_free_3d_reconstruction]
+  - id: gaussian_paraphrase
+    title: Real-time rendering with anisotropic 3D primitives
+    text: The scene is represented by millions of oriented Gaussian primitives splatted to the image plane.
+    expected_topics: [gaussian_splatting]
+  - id: distillation_paraphrase
+    title: A compact student ViT trained from a large teacher
+    text: Teacher predictions and intermediate features supervise a smaller visual transformer.
+    expected_topics: [knowledge_distillation]
+  - id: tta_paraphrase
+    title: Online adaptation under camera domain shift
+    text: At inference time the model updates itself using unlabeled test frames.
+    expected_topics: [test_time_adaptation]
+  - id: mvs_paraphrase
+    title: Dense geometry from calibrated image collections
+    text: We infer per-view depth and fuse observations from many cameras into a surface.
+    expected_topics: [multi_view_stereo]
+  - id: tracking_paraphrase
+    title: Temporal identity association in crowded videos
+    text: Detections are linked across frames to maintain trajectories for many people.
+    expected_topics: [object_tracking]
+  - id: image_to_3d_paraphrase
+    title: Generate a textured object from a photograph
+    text: A single input image conditions the synthesis of a 3D asset.
+    expected_topics: [image_to_3d]
+  - id: embodied_paraphrase
+    title: Interactive agents that see and navigate
+    text: An embodied agent uses visual observations to explore rooms and interact with objects.
+    expected_topics: [embodied_vision]
+  - id: pruning_paraphrase
+    title: Remove channels to accelerate a vision transformer
+    text: Structured sparsification eliminates redundant channels and attention heads.
+    expected_topics: [pruning]
+  - id: quantization_paraphrase
+    title: Low-bit visual inference on edge devices
+    text: Weights and activations are represented with 4-bit integers for efficient deployment.
+    expected_topics: [quantization, efficient_vision_models]
+  - id: ssl_paraphrase
+    title: Learning visual features without human annotations
+    text: Masked image prediction on unlabeled photos yields transferable representations.
+    expected_topics: [self_supervised_learning, visual_representation_learning]
+  - id: vlm_paraphrase
+    title: Joint image and text reasoning for charts
+    text: A multimodal model answers natural language questions grounded in visual inputs.
+    expected_topics: [vision_language_models]
+  - id: calibration_paraphrase
+    title: Estimating focal length and lens distortion from ordinary photos
+    text: The method recovers intrinsic imaging parameters without a calibration target.
+    expected_topics: [camera_calibration]
+  - id: human_mesh_paraphrase
+    title: Recovering an articulated body surface from a single portrait
+    text: We estimate SMPL pose and shape parameters and output a full human mesh.
+    expected_topics: [human_mesh_reconstruction, body_reconstruction]
+  - id: slam_paraphrase
+    title: Online trajectory estimation while building an environment map
+    text: A moving monocular sensor jointly localizes itself and incrementally maps the scene.
+    expected_topics: [slam]
+  - id: pseudo_label_paraphrase
+    title: Training segmentation with teacher-generated targets
+    text: Unlabeled images receive pseudo labels from a teacher and are reused as supervision.
+    expected_topics: [pseudo_ground_truth]
+  - id: direct_nerf
+    title: Fast NeRF Rendering
+    text: We accelerate neural radiance field rendering.
+    expected_topics: [nerf]
+  - id: direct_segmentation
+    title: Semantic Segmentation with Better Boundaries
+    text: A model improves per-pixel scene labels.
+    expected_topics: [semantic_segmentation]
+  - id: direct_super_resolution
+    title: Image Super-Resolution with Diffusion Priors
+    text: We reconstruct high-resolution images from low-resolution inputs.
+    expected_topics: [super_resolution]
+  - id: direct_detection
+    title: Open-Vocabulary Object Detection
+    text: Text embeddings enable detection of unseen categories.
+    expected_topics: [open_vocabulary_recognition, object_detection]
+  - id: direct_vr
+    title: Mixed Reality Scene Understanding
+    text: A headset estimates spatial geometry for immersive interaction.
+    expected_topics: [vr_mr_xr]
+  - id: direct_depth
+    title: Stereo Depth Estimation
+    text: We predict disparity from rectified stereo image pairs.
+    expected_topics: [stereo_depth]
+  - id: negative_graph_networks
+    title: Graph routing for datacenter networks
+    text: We optimize packet scheduling in large communication graphs.
+    expected_topics: []
+  - id: negative_protein
+    title: Protein sequence generation with diffusion
+    text: A generative model designs amino-acid sequences conditioned on molecular structure.
+    expected_topics: []
+  - id: negative_theorem
+    title: Large language model theorem proving
+    text: We improve formal mathematical reasoning with search and language models.
+    expected_topics: []
+  - id: negative_audio
+    title: Audio source separation from mixtures
+    text: A neural model isolates speakers from waveform recordings.
+    expected_topics: []
+  - id: negative_database
+    title: Learned indexing for analytical databases
+    text: We reduce query latency for column stores with adaptive indexes.
+    expected_topics: []
+  - id: negative_genomics
+    title: Foundation models for genomic sequence analysis
+    text: A pretrained transformer models DNA and predicts regulatory elements.
+    expected_topics: []
