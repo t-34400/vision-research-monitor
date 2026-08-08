@@ -1,0 +1,221 @@
+{
+  "entities": [
+    {
+      "id": "entity:0bc17df6b7c4012d",
+      "items": [
+        "github:repository:1327484875",
+        "github:repository:1327506890"
+      ]
+    },
+    {
+      "id": "entity:a890473b88ea4611",
+      "items": [
+        "arxiv:paper:2608.05964",
+        "github:repository:1326644356",
+        "github:repository:1327685861"
+      ]
+    },
+    {
+      "id": "entity:aa9c4816553c9072",
+      "items": [
+        "huggingface:model:91d8784804eb136c7e73af04",
+        "huggingface:model:93804237970bf3cca14afa99"
+      ]
+    },
+    {
+      "id": "entity:ce574598106c0f72",
+      "items": [
+        "arxiv:paper:2608.06205",
+        "github:repository:1326245051",
+        "github:repository:1326659968",
+        "github:repository:1327163199"
+      ]
+    },
+    {
+      "id": "entity:d638861fb84a2b6e",
+      "items": [
+        "github:repository:1326098078",
+        "github:repository:1327341301"
+      ]
+    }
+  ],
+  "generated_at": "2026-08-08T12:17:46.156591Z",
+  "links": [
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1326644356"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1327685861"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1326245051"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1326659968"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1327163199"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://recapo.ai/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1326098078",
+      "right_id": "github:repository:1327341301"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:narendra7013/object-detection-system-using-yolo-based-models (github_repository)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/Narendra7013/object-detection-system-using-yolo-based-models (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1327484875",
+      "right_id": "github:repository:1327506890"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:turhancan97/visbench (github_repository)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/turhancan97/VisBench (embedded_url)"
+        }
+      ],
+      "left_id": "huggingface:model:91d8784804eb136c7e73af04",
+      "right_id": "huggingface:model:93804237970bf3cca14afa99"
+    }
+  ],
+  "related_items": {
+    "arxiv:paper:2608.05964": [
+      "github:repository:1326644356",
+      "github:repository:1327685861"
+    ],
+    "arxiv:paper:2608.06205": [
+      "github:repository:1326245051",
+      "github:repository:1326659968",
+      "github:repository:1327163199"
+    ],
+    "github:repository:1326098078": [
+      "github:repository:1327341301"
+    ],
+    "github:repository:1326245051": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1326644356": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1326659968": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1327163199": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1327341301": [
+      "github:repository:1326098078"
+    ],
+    "github:repository:1327484875": [
+      "github:repository:1327506890"
+    ],
+    "github:repository:1327506890": [
+      "github:repository:1327484875"
+    ],
+    "github:repository:1327685861": [
+      "arxiv:paper:2608.05964"
+    ],
+    "huggingface:model:91d8784804eb136c7e73af04": [
+      "huggingface:model:93804237970bf3cca14afa99"
+    ],
+    "huggingface:model:93804237970bf3cca14afa99": [
+      "huggingface:model:91d8784804eb136c7e73af04"
+    ]
+  },
+  "version": 1
+}
