@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `LNK-001` through `LNK-006`  
-**Related decisions:** `D-007`, `D-125`, `D-126`, `D-127`, `D-128`
+**Related decisions:** `D-007`, `D-125`, `D-126`, `D-127`, `D-128`, `D-141`
 
 ## Purpose
 
@@ -62,7 +62,9 @@ on the normalized item.
 ## Exact identifiers
 
 The linker extracts strong identifiers from source identity, item URLs, and an
-allowlist of metadata fields.
+allowlist of metadata fields. Configured metadata fields may contain either one
+URL/string or a list of URLs/strings, which allows collectors such as CVF and
+Hugging Face to expose code/project links without changing the common schema.
 
 Supported identifiers include:
 
@@ -78,6 +80,21 @@ from their `source_id`, so they link deterministically to the corresponding
 repository record when present.
 
 Shared exact identifiers create direct links with confidence `1.0`.
+
+## Source-declared relationships
+
+A collector may emit a direct `related_items` relationship when the source itself
+provides the relationship. Phase 7 uses this for a derived project-page record
+that explicitly points back to the CVF paper page from which the link was
+extracted.
+
+The linker preserves those relationships as `explicit_relation` evidence with
+confidence `1.0`. Materialization unions source-declared relationships with
+derived relationships rather than replacing them.
+
+Source-declared relationships are still conservative: the collector must have
+observed the relationship directly in upstream content; it must not manufacture
+a fuzzy relation and label it explicit.
 
 ## Paper title matching
 
@@ -154,6 +171,7 @@ complete sidecar intact.
 
 - [x] URLs and supported source identifiers are normalized deterministically.
 - [x] Exact identifiers link GitHub repository activity and cross-source records.
+- [x] Source-declared project relationships and list-valued external URLs are preserved.
 - [x] Normalized-title matching requires supporting author evidence.
 - [x] Repository-name evidence requires a distinctive name and configured topic support.
 - [x] Direct relationships can be materialized as `related_items` without mutating JSONL history.

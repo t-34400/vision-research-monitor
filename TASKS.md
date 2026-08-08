@@ -94,11 +94,11 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 
 ## Phase 7 — Source Expansion
 
-- [ ] `SRC-001` Evaluate CVF collector.
-- [ ] `SRC-002` Evaluate Hugging Face collector.
-- [ ] `SRC-003` Define project-page extraction strategy.
-- [ ] `SRC-004` Add official research-blog sources.
-- [ ] `SRC-005` Add selected researcher sources if signal quality justifies it.
+- [x] `SRC-001` Evaluate CVF collector.
+- [x] `SRC-002` Evaluate Hugging Face collector.
+- [x] `SRC-003` Define project-page extraction strategy.
+- [x] `SRC-004` Add official research-blog sources.
+- [x] `SRC-005` Add selected researcher sources if signal quality justifies it. Deferred by `D-144` after evaluation.
 
 ## Phase 8 — Long-Term Analysis
 

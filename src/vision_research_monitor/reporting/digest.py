@@ -108,6 +108,8 @@ class DailyDigestBuilder:
             ("Accepted Papers", "accepted_papers"),
             ("New Papers", "new_papers"),
             ("New Repositories", "new_repositories"),
+            ("Models & Demos", "models_and_demos"),
+            ("Research Announcements", "research_announcements"),
             ("Project Updates", "project_updates"),
             ("Other", "other"),
         ):
@@ -132,6 +134,8 @@ class DailyDigestBuilder:
             "accepted_papers": [],
             "new_papers": [],
             "new_repositories": [],
+            "models_and_demos": [],
+            "research_announcements": [],
             "project_updates": [],
             "other": [],
         }
@@ -145,6 +149,10 @@ class DailyDigestBuilder:
                 sections["new_papers"].append(candidate)
             elif item.kind == "repository":
                 sections["new_repositories"].append(candidate)
+            elif item.kind in {"model", "project"}:
+                sections["models_and_demos"].append(candidate)
+            elif item.kind == "article":
+                sections["research_announcements"].append(candidate)
             elif item.kind in {"release", "tag", "commit", "event"}:
                 sections["project_updates"].append(candidate)
             else:
@@ -168,6 +176,16 @@ class DailyDigestBuilder:
         summary = compact_summary(item.summary, int(self.config["report"]["summary_max_characters"]))
         if summary:
             lines.append(f"  - {summary}")
+
+        resource_links = []
+        project_urls = item.metadata.get("project_urls")
+        code_urls = item.metadata.get("code_urls")
+        if isinstance(project_urls, list) and project_urls:
+            resource_links.append(f"[Project]({project_urls[0]})")
+        if isinstance(code_urls, list) and code_urls:
+            resource_links.append(f"[Code]({code_urls[0]})")
+        if resource_links:
+            lines.append(f"  - {' · '.join(resource_links)}")
 
         related = links.related_items.get(item.id, [])
         if related:

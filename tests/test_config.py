@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from vision_research_monitor.config import load_academic, load_github_discovery, load_linking, load_reporting, load_taxonomy, load_venues, load_watchlist
+from vision_research_monitor.config import load_academic, load_github_discovery, load_linking, load_reporting, load_sources, load_taxonomy, load_venues, load_watchlist
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,6 +55,15 @@ def test_project_configuration_is_valid() -> None:
         ROOT / "config/schemas/linking.schema.json",
     )
     assert linking["matching"]["fuzzy_title"]["minimum_similarity"] == 0.94
+
+    sources = load_sources(
+        ROOT / "config/sources.yaml",
+        ROOT / "config/schemas/sources.schema.json",
+        {venue["id"] for venue in venues["venues"]},
+    )
+    assert len(sources["cvf"]["editions"]) == 3
+    assert len(sources["huggingface"]["queries"]) == 20
+    assert len(sources["research_blogs"]["feeds"]) == 3
 
     reporting = load_reporting(
         ROOT / "config/reporting.yaml",

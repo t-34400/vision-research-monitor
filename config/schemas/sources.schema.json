@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/sources.schema.json",
+  "title": "Source expansion configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "window", "matching", "cvf", "huggingface", "research_blogs"],
+  "properties": {
+    "version": {"type": "integer", "const": 1},
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["initial_lookback_hours", "overlap_minutes", "max_catchup_hours"],
+      "properties": {
+        "initial_lookback_hours": {"type": "integer", "minimum": 1},
+        "overlap_minutes": {"type": "integer", "minimum": 0},
+        "max_catchup_hours": {"type": "integer", "minimum": 1}
+      }
+    },
+    "matching": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_relevance_score", "title_weight", "abstract_weight", "keyword_weight"],
+      "properties": {
+        "minimum_relevance_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "title_weight": {"type": "number", "minimum": 0, "maximum": 1},
+        "abstract_weight": {"type": "number", "minimum": 0, "maximum": 1},
+        "keyword_weight": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "cvf": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "base_url", "request_interval_seconds", "user_agent", "editions"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "base_url": {"type": "string", "format": "uri"},
+        "request_interval_seconds": {"type": "number", "minimum": 0},
+        "user_agent": {"type": "string", "minLength": 1},
+        "editions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "venue", "year", "index_paths", "minimum_index_papers"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+              "venue": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+              "year": {"type": "integer", "minimum": 2000, "maximum": 2200},
+              "index_paths": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "minimum_index_papers": {"type": "integer", "minimum": 1},
+              "enabled": {"type": "boolean"}
+            }
+          }
+        }
+      }
+    },
+    "huggingface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "base_url", "request_interval_seconds", "page_size", "max_pages_per_query", "max_model_cards_per_run", "user_agent", "queries"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "base_url": {"type": "string", "format": "uri"},
+        "request_interval_seconds": {"type": "number", "minimum": 0},
+        "page_size": {"type": "integer", "minimum": 1, "maximum": 1000},
+        "max_pages_per_query": {"type": "integer", "minimum": 1},
+        "max_model_cards_per_run": {"type": "integer", "minimum": 0},
+        "user_agent": {"type": "string", "minLength": 1},
+        "queries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "text"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+              "text": {"type": "string", "minLength": 1},
+              "enabled": {"type": "boolean"}
+            }
+          }
+        }
+      }
+    },
+    "research_blogs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "feeds"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "feeds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "name", "organization", "url", "priority"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+              "name": {"type": "string", "minLength": 1},
+              "organization": {"type": "string", "minLength": 1},
+              "url": {"type": "string", "format": "uri"},
+              "priority": {"type": "number", "minimum": 0, "maximum": 1},
+              "enabled": {"type": "boolean"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -131,6 +131,37 @@ def load_academic(
     return data
 
 
+
+def load_sources(
+    path: Path,
+    schema_path: Path,
+    venue_ids: set[str],
+) -> dict[str, Any]:
+    data = _load_yaml(path)
+    _validate_schema(data, schema_path)
+
+    if data["window"]["initial_lookback_hours"] > data["window"]["max_catchup_hours"]:
+        raise ConfigError("Source initial lookback cannot exceed maximum catch-up window")
+
+    edition_ids = [edition["id"] for edition in data["cvf"]["editions"]]
+    if len(edition_ids) != len(set(edition_ids)):
+        raise ConfigError("CVF edition IDs must be unique")
+    unknown_venues = sorted({edition["venue"] for edition in data["cvf"]["editions"]} - venue_ids)
+    if unknown_venues:
+        raise ConfigError(f"Unknown CVF venues: {', '.join(unknown_venues)}")
+
+    query_ids = [query["id"] for query in data["huggingface"]["queries"]]
+    if len(query_ids) != len(set(query_ids)):
+        raise ConfigError("Hugging Face query IDs must be unique")
+
+    feed_ids = [feed["id"] for feed in data["research_blogs"]["feeds"]]
+    feed_urls = [feed["url"].casefold() for feed in data["research_blogs"]["feeds"]]
+    if len(feed_ids) != len(set(feed_ids)):
+        raise ConfigError("Research blog feed IDs must be unique")
+    if len(feed_urls) != len(set(feed_urls)):
+        raise ConfigError("Research blog feed URLs must be unique")
+    return data
+
 def load_linking(path: Path, schema_path: Path) -> dict[str, Any]:
     data = _load_yaml(path)
     _validate_schema(data, schema_path)

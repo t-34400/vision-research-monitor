@@ -61,6 +61,7 @@ class EntityLinker:
         item_list = sorted(items, key=lambda item: item.id)
         by_id = {item.id: item for item in item_list}
         edges: dict[tuple[str, str], LinkEdge] = {}
+        self._link_explicit_relations(item_list, by_id, edges)
         self._link_exact_identifiers(item_list, edges)
         self._link_titles(item_list, edges)
         self._link_repositories_to_papers(item_list, edges)
@@ -68,6 +69,22 @@ class EntityLinker:
         related = build_related_items(ordered_edges)
         entities = build_entities(by_id, ordered_edges)
         return EntityLinkResult(generated_at, ordered_edges, entities, related)
+
+    def _link_explicit_relations(
+        self,
+        items: list[NormalizedItem],
+        by_id: dict[str, NormalizedItem],
+        edges: dict[tuple[str, str], LinkEdge],
+    ) -> None:
+        for item in items:
+            for related_id in item.related_items:
+                if related_id in by_id and related_id != item.id:
+                    add_edge(
+                        edges,
+                        item.id,
+                        related_id,
+                        LinkEvidence("explicit_relation", "source-declared", 1.0),
+                    )
 
     def _link_exact_identifiers(self, items: list[NormalizedItem], edges: dict[tuple[str, str], LinkEdge]) -> None:
         index: dict[str, list[tuple[str, str]]] = defaultdict(list)
@@ -249,6 +266,6 @@ def build_entities(items: dict[str, NormalizedItem], edges: Iterable[LinkEdge]) 
 def materialize_related_items(items: Iterable[NormalizedItem], result: EntityLinkResult) -> list[NormalizedItem]:
     materialized: list[NormalizedItem] = []
     for item in items:
-        related = result.related_items.get(item.id, [])
+        related = sorted(set(item.related_items) | set(result.related_items.get(item.id, [])))
         materialized.append(replace(item, related_items=related))
     return materialized

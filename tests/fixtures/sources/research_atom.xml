@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Example ML Research</title>
+  <entry>
+    <id>atom-gaussian</id>
+    <title>Fast Gaussian Splatting for Novel View Synthesis</title>
+    <link rel="alternate" href="https://research.example.org/gaussian" />
+    <published>2026-08-08T03:00:00Z</published>
+    <updated>2026-08-08T03:30:00Z</updated>
+    <author><name>Alice Example</name></author>
+    <category term="Computer Vision" />
+    <summary>3D Gaussian splatting for novel-view synthesis.</summary>
+  </entry>
+</feed>

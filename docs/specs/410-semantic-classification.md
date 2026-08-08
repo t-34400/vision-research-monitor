@@ -60,7 +60,12 @@ Candidate generation remains source-specific:
   venue/year discovery;
 - arXiv candidates must first be inside configured academic categories and the
   bounded collection window;
-- OpenReview candidates must first belong to a configured conference edition.
+- OpenReview candidates must first belong to a configured conference edition;
+- CVF candidates must first appear in a configured proceedings inventory;
+- Hugging Face candidates must first come from configured model-search queries
+  and a bounded modification window;
+- official-feed candidates must first appear in a configured RSS/Atom feed and
+  a bounded publication window.
 
 The existing lexical classifier runs first.
 

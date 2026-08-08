@@ -15,8 +15,9 @@ Known targets ───────> GitHub Watch ───────┐
                                            │
 GitHub search ───────> GitHub Discover ────┼─> Normalize
                                            │      │
-arXiv/OpenReview ────> Academic ───────────┘      v
-                                              Persist
+arXiv/OpenReview ────> Academic ───────────┤      v
+                                           │   Persist
+CVF/HF/official feeds -> Expanded Sources ─┘
                                                  │
                                                  v
                                          Link / Deduplicate
@@ -75,6 +76,11 @@ before candidate filtering.
 ### Academic
 
 Paper/conference sources that may reveal work before code is published.
+
+### Expanded sources
+
+High-value publication, model-hub, and official-feed sources that reuse the
+collector, normalization, classification, linking, and reporting contracts.
 
 ## Non-goals for early phases
 

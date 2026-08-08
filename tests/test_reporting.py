@@ -152,3 +152,49 @@ def test_daily_digest_uses_fixed_jst_window_and_deduplicates_linked_papers() -> 
     assert "## Priority Watch" in result.markdown
     assert "## Accepted Papers" in result.markdown
     assert "[UPDATED]" in result.markdown
+
+
+def test_source_expansion_items_get_sections_and_hidden_sidecars_stay_out() -> None:
+    reporting, taxonomy, venues, linking = load_inputs()
+    model = make_item(
+        "huggingface:model:1",
+        source="huggingface",
+        source_id="example/model@2026-08-08T05:00:00Z",
+        kind="model",
+        title="example/metric-depth",
+        url="https://huggingface.co/example/metric-depth",
+        discovered_at="2026-08-08T05:10:00Z",
+        published_at="2026-08-08T04:00:00Z",
+        updated_at="2026-08-08T05:00:00Z",
+        metadata={"action": "discovered"},
+    )
+    article = make_item(
+        "research_blog:article:1",
+        source="research_blog",
+        source_id="google-research:1",
+        kind="article",
+        title="New metric depth research",
+        url="https://research.example.org/depth",
+        discovered_at="2026-08-08T05:20:00Z",
+        published_at="2026-08-08T05:00:00Z",
+        priority={"source": 0.7},
+        metadata={"action": "published"},
+    )
+    project = make_item(
+        "cvf:project:1",
+        source="cvf",
+        source_id="paper:project:1",
+        kind="project",
+        title="Project page",
+        url="https://example.org/project",
+        discovered_at="2026-08-08T05:30:00Z",
+        metadata={"action": "discovered", "reportable": False},
+    )
+    items = [model, article, project]
+    links = EntityLinker(linking).link(items, generated_at="2026-08-08T06:00:00Z")
+
+    result = DailyDigestBuilder(reporting, taxonomy, venues).build(items, links, report_date=date(2026, 8, 9))
+
+    assert "## Models & Demos" in result.markdown
+    assert "## Research Announcements" in result.markdown
+    assert "Project page" not in result.markdown

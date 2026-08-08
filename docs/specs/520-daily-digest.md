@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `RPT-007` through `RPT-010`  
-**Related decisions:** `D-102`, `D-130`, `D-132`, `D-133`
+**Related decisions:** `D-102`, `D-130`, `D-132`, `D-133`, `D-142`
 
 ## Purpose
 
@@ -86,11 +86,18 @@ The initial Markdown sections are:
 2. Accepted Papers
 3. New Papers
 4. New Repositories
-5. Project Updates
-6. Other
+5. Models & Demos
+6. Research Announcements
+7. Project Updates
+8. Other
 
 High-priority watched items appear in `Priority Watch` before normal section
 classification and are not limited by normal ranking thresholds.
+
+Hugging Face model records and reportable project/demo records use `Models &
+Demos`. Official research-blog articles use `Research Announcements`. CVF project
+sidecars marked `reportable: false` do not render separately; the paper entry
+shows the first explicit Project and Code links when present.
 
 Other sections use configurable per-section limits. Omitted counts are rendered
 explicitly rather than silently disappearing.

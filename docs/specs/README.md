@@ -19,6 +19,7 @@ their rationale belong in `../decisions/DECISIONS.md`.
 - `100-github-watch.md` — known-target GitHub monitoring behavior.
 - `110-github-discovery.md` — bounded discovery of unknown GitHub repositories.
 - `200-academic-discovery.md` — arXiv and OpenReview paper discovery.
+- `220-source-expansion.md` — CVF, Hugging Face, project-link, and official-feed collection.
 - `300-entity-linking.md` — conservative cross-source deduplication and entity links.
 - `510-persistence-retention.md` — canonical storage and retention policy.
 - `610-scheduling.md` — workflow cadence and timezone policy.
@@ -31,7 +32,7 @@ Use a stable numeric prefix so related specs remain ordered:
 ```text
 000-099  system/core
 100-199  GitHub
-200-299  academic sources
+200-299  paper and expanded source collectors
 300-399  linking/deduplication
 400-499  classification/ranking
 500-599  reporting/persistence

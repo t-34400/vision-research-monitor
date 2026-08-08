@@ -136,6 +136,8 @@ def metadata_strings(item: NormalizedItem, allowed_keys: set[str]) -> list[str]:
         value = item.metadata.get(key)
         if isinstance(value, str) and value.strip():
             values.append(value)
+        elif isinstance(value, list):
+            values.extend(str(entry).strip() for entry in value if isinstance(entry, str) and entry.strip())
     return values
 
 

@@ -60,6 +60,8 @@ class ResearchRanker:
         return RankedItem(item, signals, total, watched_override, change_label(item))
 
     def included(self, ranked: RankedItem) -> bool:
+        if ranked.item.metadata.get("reportable") is False:
+            return False
         return ranked.watched_override or ranked.total >= float(self.config["minimum_total_score"])
 
     def _priority(self, item: NormalizedItem) -> float:
@@ -102,6 +104,9 @@ class ResearchRanker:
 
 
 def effective_event_time(item: NormalizedItem) -> datetime | None:
+    action = item.metadata.get("action")
+    if action == "updated":
+        return parse_iso8601(item.updated_at) or parse_iso8601(item.discovered_at)
     if item.kind == "paper":
         return parse_iso8601(item.published_at) or parse_iso8601(item.discovered_at)
     if item.kind == "repository":
@@ -126,7 +131,7 @@ def change_label(item: NormalizedItem) -> str:
         return "ACCEPTED"
     if item.kind == "release" or action == "released":
         return "RELEASED"
-    if item.kind in {"repository", "paper"} or action in {"created", "discovered"}:
+    if item.kind in {"repository", "paper"} or action in {"created", "discovered", "published"}:
         return "NEW"
     return "UPDATED"
 

@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-007`  
-**Related decisions:** `D-002`, `D-006`, `D-007`, `D-125`, `D-136`
+**Related decisions:** `D-002`, `D-006`, `D-007`, `D-125`, `D-136`, `D-138`
 
 ## Purpose
 
@@ -29,7 +29,7 @@ metadata
 id: string
 source: string
 source_id: string
-kind: repository | release | tag | commit | paper | project | event
+kind: repository | release | tag | commit | paper | model | project | article | event
 
 title: string
 url: string

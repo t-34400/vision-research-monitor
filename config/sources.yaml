@@ -1,0 +1,106 @@
+version: 1
+
+window:
+  initial_lookback_hours: 72
+  overlap_minutes: 180
+  max_catchup_hours: 168
+
+matching:
+  minimum_relevance_score: 0.30
+  title_weight: 0.60
+  abstract_weight: 0.30
+  keyword_weight: 0.35
+
+cvf:
+  enabled: true
+  base_url: https://openaccess.thecvf.com
+  request_interval_seconds: 0.30
+  user_agent: vision-research-monitor/0.1
+  editions:
+    - id: cvpr-2026
+      venue: cvpr
+      year: 2026
+      index_paths:
+        - /CVPR2026?day=all
+      minimum_index_papers: 100
+    - id: wacv-2026
+      venue: wacv
+      year: 2026
+      index_paths:
+        - /WACV2026?day=all
+      minimum_index_papers: 100
+    - id: iccv-2025
+      venue: iccv
+      year: 2025
+      index_paths:
+        - /ICCV2025?day=all
+      minimum_index_papers: 100
+
+huggingface:
+  enabled: true
+  base_url: https://huggingface.co
+  request_interval_seconds: 0.75
+  page_size: 100
+  max_pages_per_query: 20
+  max_model_cards_per_run: 80
+  user_agent: vision-research-monitor/0.1
+  queries:
+    - id: image-classification
+      text: image classification
+    - id: object-detection
+      text: object detection
+    - id: segmentation
+      text: segmentation
+    - id: vision-language
+      text: vision language
+    - id: video-understanding
+      text: video understanding
+    - id: image-restoration
+      text: image restoration
+    - id: super-resolution
+      text: super resolution
+    - id: feature-matching
+      text: feature matching
+    - id: depth-estimation
+      text: depth estimation
+    - id: three-d-reconstruction
+      text: 3d reconstruction
+    - id: gaussian-splatting
+      text: gaussian splatting
+    - id: nerf
+      text: nerf
+    - id: point-cloud
+      text: point cloud
+    - id: human-pose
+      text: human pose
+    - id: robotics-perception
+      text: robotics perception
+    - id: slam
+      text: slam
+    - id: model-compression
+      text: vision quantization
+    - id: test-time-adaptation
+      text: test time adaptation
+    - id: synthetic-data
+      text: synthetic data vision
+    - id: virtual-reality
+      text: virtual reality vision
+
+research_blogs:
+  enabled: true
+  feeds:
+    - id: google-research
+      name: Google Research
+      organization: Google Research
+      url: https://research.google/blog/rss/
+      priority: 0.70
+    - id: microsoft-research
+      name: Microsoft Research Blog
+      organization: Microsoft Research
+      url: https://www.microsoft.com/en-us/research/blog/feed/
+      priority: 0.70
+    - id: apple-machine-learning
+      name: Apple Machine Learning Research
+      organization: Apple Machine Learning Research
+      url: https://machinelearning.apple.com/rss.xml
+      priority: 0.70

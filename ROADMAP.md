@@ -183,7 +183,7 @@ matching without becoming a collection dependency.
 
 ## Phase 7 — Source Expansion
 
-**Status:** active
+**Status:** complete
 
 ### Goal
 
@@ -202,11 +202,15 @@ Add high-value sources without changing the core pipeline.
 At least one new source can be added through the collector contract with no core
 pipeline redesign.
 
+**Completed:** CVF Open Access, Hugging Face model repositories, and stable
+official research feeds all reuse the common collector and downstream contracts.
+Explicit project/code links also feed the existing entity linker.
+
 ---
 
 ## Phase 8 — Long-Term Analysis
 
-**Status:** planned
+**Status:** active
 
 ### Goal
 

@@ -2,13 +2,14 @@
 
 ## Accepted
 
-### D-001 — Separate Watch, Discover, and Academic collection paths
+### D-001 — Separate collection paths by source semantics
 
 **Status:** Accepted
 
-Known-target monitoring, broad GitHub discovery, and academic-source collection
-have different recall/precision requirements and checkpoint semantics. They are
-separate collectors and workflows.
+Known-target monitoring, broad GitHub discovery, academic-source collection,
+and later expanded sources have different recall/precision requirements and
+checkpoint semantics. They remain separate collectors and workflows while
+normalizing into the same downstream pipeline.
 
 ### D-002 — Use one normalized item model across sources
 
@@ -88,6 +89,9 @@ Initial `Asia/Tokyo` schedules are:
 - GitHub Watch: 00:17, 06:17, 12:17, 18:17;
 - arXiv: 01:37, 07:37, 13:37, 19:37;
 - OpenReview: 01:43, 07:43, 13:43, 19:43;
+- Hugging Face: 02:29, 08:29, 14:29, 20:29;
+- CVF Open Access: 03:23;
+- official research blogs: 03:31, 09:31, 15:31, 21:31;
 - GitHub Discovery: 04:47, 16:47;
 - Daily Digest: 08:11, using an 08:00 local reporting boundary.
 
@@ -383,10 +387,11 @@ an auditable semantic-similarity baseline before introducing learned embeddings.
 
 Semantic classification never broadens source crawling or GitHub Search. GitHub
 repositories must first come from configured search/venue discovery, arXiv papers
-must come from configured categories and bounded windows, and OpenReview papers
-must come from configured editions. Lexical classification runs first; semantic
-scoring can recover low-lexical candidates or conservatively enrich labels on an
-already accepted lexical candidate.
+must come from configured categories and bounded windows, OpenReview papers must
+come from configured editions, and expanded-source candidates must first come
+from their configured CVF inventories, Hub queries, or official feeds. Lexical
+classification runs first; semantic scoring can recover low-lexical candidates or
+conservatively enrich labels on an already accepted lexical candidate.
 
 ### D-136 — Persist classifier evidence without changing the common item schema
 
@@ -408,10 +413,93 @@ that already have a bounded semantic topic shortlist and whose semantic score is
 inside a configured ambiguity range. Collection must still succeed with no LLM
 provider configured.
 
+### D-138 — Reuse the common pipeline for expanded-source item kinds
+
+**Status:** Accepted
+
+Phase 7 adds `model` and `article` item kinds and uses the existing `project` kind
+without introducing source-specific downstream models. CVF, Hugging Face, and
+official-feed records still use the same normalization, classification, linking,
+ranking, persistence, and reporting stages.
+
+### D-139 — Treat CVF proceedings pages as guarded inventories
+
+**Status:** Accepted
+
+Configured CVF Open Access proceedings pages are polled as inventories because
+they do not provide the same bounded timestamp API as arXiv/OpenReview. The first
+successful run baselines existing paper IDs without emitting historical papers.
+Later unseen IDs are fetched and classified. An edition-specific minimum paper
+count and a requirement that previously observed paper IDs remain present prevent
+a partial page or upstream HTML change from replacing a complete inventory.
+
+### D-140 — Discover Hugging Face model repositories by bounded modification time
+
+**Status:** Accepted
+
+The Phase 7 Hugging Face scope is public model repositories. Configured Hub
+searches are sorted by descending `lastModified` and paged until the bounded
+collection window is crossed. Candidate repositories are deduplicated across
+queries by repository ID and unchanged `repo_id@lastModified` revisions are not
+re-emitted. A bounded number of model cards can enrich low-lexical candidates.
+Spaces and datasets remain out of scope for this phase. Hub requests are paced at
+0.75 seconds initially and retain bounded 429 retry handling because anonymous
+rate limits can be lower and vary over time.
+
+### D-141 — Preserve source-declared project and code relationships explicitly
+
+**Status:** Accepted
+
+When a source page explicitly provides project/code URLs, collectors preserve
+those URLs in allowlisted metadata. A CVF project-page sidecar can additionally
+declare its parent paper through `related_items`; the linker records that
+source-declared edge as exact `explicit_relation` evidence rather than attempting
+to rediscover it fuzzily. List-valued URL metadata participates in exact linking.
+
+### D-142 — Give expanded sources dedicated low-noise reporting behavior
+
+**Status:** Accepted
+
+CVF papers reuse paper sections, Hugging Face models use `Models & Demos`, and
+official research posts use `Research Announcements`. Expanded-source default
+priorities remain modest so source prestige alone does not establish importance.
+Relationship-only project sidecars carry `metadata.reportable = false`; they
+can enrich linking and parent-paper links but never render as duplicate headlines.
+
+### D-143 — Monitor only stable official research feeds initially
+
+**Status:** Accepted
+
+Phase 7 starts with official RSS/Atom feeds from Google Research, Microsoft
+Research, and Apple Machine Learning Research. Feed publication alone is not a
+topic match: title, summary/content, and categories go through the same lexical
+and semantic relevance pipeline. Official sites without a stable configured
+feed are not scraped generically.
+
+### D-144 — Defer a generic individual-researcher crawler
+
+**Status:** Accepted
+
+No broad personal-site crawler is introduced in Phase 7. Researcher pages have
+inconsistent update semantics and no curated high-value researcher list has been
+specified. A researcher source should be added later only when it has a stable
+machine-readable feed/API or is explicitly promoted to a high-value watch target.
+
+### D-145 — Stagger expanded-source workflows away from the pre-digest cluster
+
+**Status:** Accepted
+
+New source workflows share the repository-write concurrency group with existing
+collectors, but their schedules are intentionally spread across otherwise quiet
+periods. Hugging Face runs every six hours at `:29`, CVF daily at 03:23 JST, and
+research feeds every six hours at `:31` on alternating hours. This reduces the
+chance of multiple pending writers around the 07:37/07:43 academic collection
+and 08:11 digest sequence.
+
 ## Future decisions
 
 The following choices are intentionally deferred until their roadmap phases:
 
 - whether a hosted embedding/LLM provider provides enough measured value to add beyond the provider-neutral Phase 6 contract;
-- external storage or dashboard migration triggers (Phase 7/8).
+- external storage or dashboard migration triggers (Phase 8).
 

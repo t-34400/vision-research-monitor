@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>Example Research</title>
+<item>
+<title>Metric monocular depth from a single RGB image</title>
+<link>https://research.example.org/metric-depth</link>
+<guid>research-example-metric-depth</guid>
+<pubDate>Sat, 08 Aug 2026 05:00:00 +0000</pubDate>
+<dc:creator>Research Team</dc:creator>
+<category>Computer Vision</category>
+<description><![CDATA[We present metric depth estimation from one camera image.]]></description>
+</item>
+<item>
+<title>New compiler optimization for databases</title>
+<link>https://research.example.org/database</link>
+<guid>research-example-database</guid>
+<pubDate>Sat, 08 Aug 2026 04:00:00 +0000</pubDate>
+<description><![CDATA[A database systems article.]]></description>
+</item>
+</channel>
+</rss>

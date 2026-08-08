@@ -15,6 +15,9 @@ ranking:
     github: 0.10
     arxiv: 0.20
     openreview: 0.25
+    cvf: 0.30
+    huggingface: 0.15
+    research_blog: 0.20
   venue_priority:
     core: 0.70
     secondary: 0.40
@@ -28,6 +31,9 @@ ranking:
     tag: 0.65
     commit: 0.45
     event: 0.55
+    model: 0.85
+    project: 0.50
+    article: 0.70
     actions:
       created: 1.00
       discovered: 1.00
@@ -36,6 +42,8 @@ ranking:
       metadata_updated: 0.55
       default_branch_advanced: 0.45
       tagged: 0.65
+      published: 0.75
+      updated: 0.55
       missing_from_account: 0.35
 
 report:
@@ -46,5 +54,7 @@ report:
     accepted_papers: 40
     new_papers: 60
     new_repositories: 40
+    models_and_demos: 40
+    research_announcements: 40
     project_updates: 60
     other: 30

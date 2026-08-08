@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `RPT-001` through `RPT-006`  
-**Related decisions:** `D-005`, `D-006`, `D-129`, `D-130`, `D-131`
+**Related decisions:** `D-005`, `D-006`, `D-129`, `D-130`, `D-131`, `D-142`
 
 ## Purpose
 
@@ -47,7 +47,10 @@ Explicit item source priority wins when it is stronger than the default source
 or venue priority. Initial source defaults are deliberately small so an item is
 not considered important merely because of its API source.
 
-Core venues contribute `0.70`; secondary venues contribute `0.40`.
+Core venues contribute `0.70`; secondary venues contribute `0.40`. Initial
+expanded-source defaults are deliberately modest: CVF `0.30`, Hugging Face
+`0.15`, and official research blogs `0.20`. A configured feed may provide a
+stronger explicit source priority.
 
 ## Watched-source override
 
@@ -79,7 +82,12 @@ one.
 
 A source action can override the generic item-kind value. New repositories,
 releases, first discoveries, and creation events receive the strongest novelty;
-routine metadata and branch-head changes receive lower values.
+routine metadata and branch-head changes receive lower values. Phase 7 adds
+model, project, and article kinds plus `published` and `updated` actions.
+
+Items with `metadata.reportable = false` are excluded before threshold handling.
+This is used for relationship sidecars such as CVF-discovered project pages that
+should enrich a parent paper without appearing as a duplicate digest entry.
 
 ## Popularity
 

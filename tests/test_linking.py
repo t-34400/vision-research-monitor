@@ -27,6 +27,7 @@ def item(
     authors: list[str] | None = None,
     topics: list[str] | None = None,
     metadata: dict | None = None,
+    related_items: list[str] | None = None,
 ) -> NormalizedItem:
     return NormalizedItem(
         id=item_id,
@@ -39,6 +40,7 @@ def item(
         authors=authors or [],
         topics=topics or [],
         metadata=metadata or {},
+        related_items=related_items or [],
     )
 
 
@@ -281,3 +283,39 @@ def test_materialize_related_items_keeps_collected_items_immutable() -> None:
 
     assert repository.related_items == []
     assert materialized[0].related_items == [release.id]
+
+
+def test_explicit_project_relation_and_metadata_url_list_are_linked() -> None:
+    paper = item(
+        "cvf:paper:paper-1",
+        source="cvf",
+        source_id="paper-1",
+        kind="paper",
+        title="Pose-Free Gaussian Splatting",
+        url="https://openaccess.thecvf.com/content/test.html",
+        metadata={"code_urls": ["https://github.com/example/pose-free-gs"]},
+    )
+    repository = item(
+        "github:repository:999",
+        source="github",
+        source_id="999",
+        kind="repository",
+        title="example/pose-free-gs",
+        url="https://github.com/example/pose-free-gs",
+    )
+    project = item(
+        "cvf:project:abc",
+        source="cvf",
+        source_id="paper-1:project:abc",
+        kind="project",
+        title="Project page — Pose-Free Gaussian Splatting",
+        url="https://example.org/project",
+        related_items=[paper.id],
+    )
+
+    result = EntityLinker(load_config()).link([paper, repository, project], generated_at="2026-08-08T00:00:00Z")
+
+    assert edge_between(result, paper.id, repository.id) is not None
+    explicit = edge_between(result, paper.id, project.id)
+    assert explicit is not None
+    assert any(evidence.kind == "explicit_relation" for evidence in explicit.evidence)
