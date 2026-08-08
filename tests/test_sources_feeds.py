@@ -54,6 +54,54 @@ def test_atom_parser_preserves_word_boundaries_across_inline_elements() -> None:
     assert atom[0].summary == "Similar to language models, those features matter."
 
 
+def test_atom_parser_preserves_boundaries_after_sentence_punctuation() -> None:
+    atom = parse_feed(
+        """<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <id>punctuation-boundaries</id>
+    <title>Understanding <em>Multimodal</em><strong>LLMs</strong>: A Study</title>
+    <link rel="alternate" href="https://research.example.org/punctuation" />
+    <published>2026-08-08T03:00:00Z</published>
+    <summary>Continuous models (LM),<em>as they unlock</em> benefits. Task domains.<strong>The same</strong> infrastructure applies.</summary>
+  </entry>
+</feed>
+"""
+    )
+
+    assert atom[0].title == "Understanding Multimodal LLMs: A Study"
+    assert atom[0].summary == (
+        "Continuous models (LM), as they unlock benefits. "
+        "Task domains. The same infrastructure applies."
+    )
+
+
+def test_rss_html_content_preserves_markup_word_boundaries() -> None:
+    rss = parse_feed(
+        """<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <item>
+      <title>Feed boundary regression</title>
+      <link>https://research.example.org/feed-boundary</link>
+      <guid>feed-boundary</guid>
+      <pubDate>Sat, 08 Aug 2026 05:00:00 +0000</pubDate>
+      <content:encoded><![CDATA[
+        <p>Sharing<strong>weights</strong> helps. Prior work has<em>shown</em> this.</p>
+        <p>Language modelling (LM),<span>as used here</span>, scales.</p>
+      ]]></content:encoded>
+    </item>
+  </channel>
+</rss>
+"""
+    )
+
+    assert rss[0].summary == (
+        "Sharing weights helps. Prior work has shown this. "
+        "Language modelling (LM), as used here, scales."
+    )
+
+
 def test_research_feed_collector_filters_irrelevant_posts() -> None:
     config, taxonomy = load_inputs()
     feed = (FIXTURES / "research_feed.xml").read_text()

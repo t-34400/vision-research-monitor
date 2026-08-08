@@ -107,8 +107,11 @@ The initial feed set contains stable official RSS/Atom feeds for:
 The collector parses RSS 2.0 and Atom locally, applies the same bounded source
 window as Hugging Face, and classifies title, summary/content, and categories.
 Inline XML/HTML element boundaries are normalized so adjacent text nodes do not
-collapse words in titles or summaries. Relevant records normalize to
-`source=research_blog`, `kind=article`.
+collapse words in titles or summaries, including boundaries after sentence
+punctuation such as `.</span>The` or `,</a>as`. Punctuation attachment is
+preserved so the normalization does not introduce spaces before commas, periods,
+or closing brackets. Relevant records normalize to `source=research_blog`,
+`kind=article`.
 
 A feed configuration can assign explicit source priority, but publication by a
 large organization alone is not sufficient for topic relevance.

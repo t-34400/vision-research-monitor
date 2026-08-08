@@ -302,11 +302,27 @@ def join_text_fragments(parts: list[str]) -> str:
     for part in parts:
         if not part:
             continue
-        if joined and not joined[-1].isspace() and not part[0].isspace():
-            if joined[-1].isalnum() and part[0].isalnum():
-                joined += " "
+        if joined and needs_fragment_separator(joined, part):
+            joined += " "
         joined += part
     return clean_text(joined)
+
+
+def needs_fragment_separator(left: str, right: str) -> bool:
+    if left[-1].isspace() or right[0].isspace():
+        return False
+
+    no_space_before = frozenset(",.;:!?%)]}\u00bb\u201d\u2019")
+    no_space_after = frozenset("([{\u00ab\u201c\u2018")
+    joiners = frozenset("-'\u2010\u2011\u2012\u2013\u2014/\\")
+
+    if right[0] in no_space_before:
+        return False
+    if left[-1] in no_space_after:
+        return False
+    if left[-1] in joiners or right[0] in joiners:
+        return False
+    return True
 
 
 def local_name(tag: str) -> str:

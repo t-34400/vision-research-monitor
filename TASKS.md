@@ -129,6 +129,7 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `STB-008` Separate GitHub topic relevance from research value and suppress low-value discovery repositories in the digest.
 - [x] `STB-009` Distinguish newly created repositories from first-time discovery of existing repositories in digest labels.
 - [x] `STB-010` Preserve word boundaries when parsing inline RSS/Atom markup.
+- [x] `STB-011` Preserve feed text boundaries across punctuation-adjacent inline markup.
 
 ## Task conventions
 
