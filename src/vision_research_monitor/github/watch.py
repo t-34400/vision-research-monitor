@@ -286,7 +286,6 @@ class GitHubWatchCollector:
         since: datetime,
         popularity: dict[str, int],
     ) -> None:
-        repo_id = str(repo["id"])
         path = f"/repos/{repo['full_name']}/releases"
         seen_list = [str(value) for value in details.get("seen_release_ids", [])]
         seen = set(seen_list)

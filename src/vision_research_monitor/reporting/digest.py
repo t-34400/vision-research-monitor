@@ -95,7 +95,7 @@ class DailyDigestBuilder:
         title = self.config["report"]["title"]
         lines = [f"# {title} — {report_date.isoformat()}", ""]
         lines.append(
-            f"Window: {start.astimezone(self.timezone):%Y-%m-%d %H:%M} – "
+            f"Window: {start.astimezone(self.timezone):%Y-%m-%d %H:%M} - "
             f"{end.astimezone(self.timezone):%Y-%m-%d %H:%M} {self.config['timezone']}"
         )
         lines.append("")

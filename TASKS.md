@@ -113,7 +113,7 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `DEV-001` Standardize Python version and development dependencies for uv.
 - [x] `DEV-002` Configure Ruff, mypy, and pytest in `pyproject.toml`.
 - [x] `DEV-003` Document the local uv setup and validation workflow.
-- [ ] `DEV-004` Generate and commit `uv.lock` in a network-enabled local environment.
+- [x] `DEV-004` Generate and commit `uv.lock` in a network-enabled local environment.
 - [ ] `DEV-005` Run the full local Ruff, mypy, and pytest validation sequence.
 - [ ] `DEV-006` Migrate GitHub Actions dependency setup to the validated uv lockfile.
 
