@@ -88,7 +88,7 @@ Initial `Asia/Tokyo` schedules are:
 
 - GitHub Watch: 00:17, 06:17, 12:17, 18:17;
 - arXiv: 01:37, 07:37, 13:37, 19:37;
-- OpenReview: 01:43, 07:43, 13:43, 19:43;
+- OpenReview: unscheduled; manual/local only per D-156;
 - Hugging Face: 02:29, 08:29, 14:29, 20:29;
 - CVF Open Access: 03:23;
 - official research blogs: 03:31, 09:31, 15:31, 21:31;
@@ -367,9 +367,9 @@ storage.
 **Status:** Accepted
 
 A digest date ends at 08:00 `Asia/Tokyo` and covers the preceding 24 hours by
-`discovered_at`. The scheduled builder runs at 08:11 so the 07:37 arXiv and
-07:43 OpenReview collection slots can be included. Entity links, per-day ranking
-JSON, and Markdown are derived from canonical normalized items.
+`discovered_at`. The scheduled builder runs at 08:11 after the 07:37 arXiv slot.
+Any manually collected OpenReview records before the boundary are included normally.
+Entity links, per-day ranking JSON, and Markdown are derived from canonical normalized items.
 
 ### D-134 — Use a local semantic-profile TF-IDF model as the Phase 6 baseline
 
@@ -493,8 +493,8 @@ New source workflows share the repository-write concurrency group with existing
 collectors, but their schedules are intentionally spread across otherwise quiet
 periods. Hugging Face runs every six hours at `:29`, CVF daily at 03:23 JST, and
 research feeds every six hours at `:31` on alternating hours. This reduces the
-chance of multiple pending writers around the 07:37/07:43 academic collection
-and 08:11 digest sequence.
+chance of multiple pending writers around the 07:37 academic collection and
+08:11 digest sequence.
 
 ### D-146 — Align longitudinal buckets with the daily digest boundary
 

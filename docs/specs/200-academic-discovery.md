@@ -100,8 +100,10 @@ session, request identity, and retry handling for 429/5xx responses.
 Public collection runs as a guest by default. `OPENREVIEW_TOKEN` may be supplied
 for bearer-token authentication. `OPENREVIEW_USERNAME` and
 `OPENREVIEW_PASSWORD` are also supported as a pair when authenticated access is
-needed. Credentials are optional for public notes and are never stored in
-project configuration.
+needed. Credentials are never stored in project configuration. Live smoke testing
+with the official client still encountered OpenReview `ChallengeRequiredError`
+responses for unattended API access, so the collector is retained for manual/local
+use but is not scheduled in GitHub Actions.
 
 ### Bootstrap and incremental discovery
 
@@ -167,10 +169,10 @@ all configured targets for that source succeeded.
 
 - arXiv: `collect-arxiv.yml` at `01:37`, `07:37`, `13:37`, and `19:37`
   `Asia/Tokyo`;
-- OpenReview: `collect-openreview.yml` six minutes later at `01:43`, `07:43`,
-  `13:43`, and `19:43`;
-- both share the repository-write concurrency group;
-- only `data/items` and the source-specific state file are staged;
+- OpenReview has no GitHub Actions workflow while unattended requests require
+  challenge verification; use the local/manual CLI when explicitly needed;
+- arXiv uses the repository-write concurrency group;
+- only `data/items` and the arXiv state file are staged by the academic workflow;
 - `.chatgpt-workspace-manifest.json` is explicitly checked and never staged.
 
 ## Acceptance criteria
@@ -183,4 +185,4 @@ all configured targets for that source succeeded.
 - [x] source checkpoints are independent and bounded;
 - [x] fixture tests cover parsing, relevance, bootstrap, modification-ordered
   incremental collection, status transitions, official-client paging, and stale-checkpoint behavior;
-- [x] scheduled source workflows are present.
+- [x] arXiv scheduled collection is present and OpenReview automation is explicitly deferred.
