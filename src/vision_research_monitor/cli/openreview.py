@@ -5,8 +5,10 @@ import json
 import os
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Any
 
-from vision_research_monitor.academic.http import AcademicHttpClient
+import openreview
+
 from vision_research_monitor.academic.openreview import OpenReviewCollector
 from vision_research_monitor.classification.semantic import SemanticClassificationPipeline
 from vision_research_monitor.config import load_academic, load_semantic, load_taxonomy, load_venues
@@ -14,6 +16,20 @@ from vision_research_monitor.models import parse_iso8601, to_iso8601
 from vision_research_monitor.storage import JsonlItemStore, JsonStateStore
 
 ROOT = Path(__file__).resolve().parents[3]
+
+
+def create_openreview_client(config: dict[str, Any]) -> Any:
+    token = os.environ.get("OPENREVIEW_TOKEN")
+    username = os.environ.get("OPENREVIEW_USERNAME")
+    password = os.environ.get("OPENREVIEW_PASSWORD")
+    if not token and bool(username) != bool(password):
+        raise RuntimeError("OPENREVIEW_USERNAME and OPENREVIEW_PASSWORD must be provided together")
+    return openreview.api.OpenReviewClient(
+        baseurl=config["openreview"]["base_url"],
+        token=token,
+        username=None if token else username,
+        password=None if token else password,
+    )
 
 
 def main() -> int:
@@ -50,17 +66,13 @@ def main() -> int:
     state_store = JsonStateStore(ROOT / "data/state/openreview.json")
     state = state_store.load()
 
-    with AcademicHttpClient(
-        config["openreview"]["base_url"],
-        user_agent=config["openreview"]["user_agent"],
-        token=os.environ.get("OPENREVIEW_TOKEN"),
-    ) as client:
-        result = OpenReviewCollector(client, state, config, taxonomy, classifier).collect(
-            run_at,
-            window_start=start,
-            window_end=end,
-            explicit_backfill=explicit,
-        )
+    client = create_openreview_client(config)
+    result = OpenReviewCollector(client, state, config, taxonomy, classifier).collect(
+        run_at,
+        window_start=start,
+        window_end=end,
+        explicit_backfill=explicit,
+    )
 
     written = JsonlItemStore(ROOT / "data/items").append(result.items)
     if result.failed_targets == 0 and not explicit:

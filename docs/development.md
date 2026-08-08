@@ -119,6 +119,8 @@ uv run --locked python -m vision_research_monitor.cli.openreview \
 ```
 
 GitHub Discovery prints each search target to stderr and finishes with per-query
-raw/accepted counts. OpenReview public-note collection should work as guest
-access; `OPENREVIEW_TOKEN` is optional and should be set only if guest access is
-insufficient for a configured venue.
+raw/accepted counts. OpenReview uses the official `openreview-py` API v2 client.
+Public-note collection should work as guest access. `OPENREVIEW_TOKEN` is
+optional; alternatively,
+`OPENREVIEW_USERNAME` and `OPENREVIEW_PASSWORD` may be supplied together when
+authenticated access is required.

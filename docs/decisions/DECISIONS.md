@@ -566,7 +566,7 @@ current install path until that lockfile is generated and validated locally.
 
 ### D-153 — Match OpenReview official-client request identity for guest API access
 
-**Status:** Accepted
+**Status:** Superseded by D-155
 
 OpenReview API v2 collection keeps the existing bounded HTTP/pagination logic,
 but sends an OpenReview-compatible `User-Agent` matching the official
@@ -586,6 +586,19 @@ README-wide search is reserved for venue/year discovery. Query evidence is weak,
 ML/data terms require explicit vision context unless an unrestricted query also
 surfaced the repository. Per-query raw and accepted counts are emitted to make
 future threshold tuning measurable.
+
+### D-155 — Use the official OpenReview API v2 Python client
+
+**Status:** Accepted
+
+OpenReview collection uses `openreview-py` and `openreview.api.OpenReviewClient`
+for API v2 reads. A second live smoke test showed that imitating the official
+User-Agent with the generic HTTP client still returned HTTP 403 for every
+configured venue. The collector keeps its bounded paging, modification-ordered
+scan, checkpoint, and status-transition logic, but delegates transport, request
+identity, authentication, and 429/5xx retry behavior to the official client.
+Guest access is the default; bearer-token or username/password authentication
+remains optional.
 
 ## Future decisions
 

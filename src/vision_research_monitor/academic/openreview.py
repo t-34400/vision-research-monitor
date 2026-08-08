@@ -18,14 +18,14 @@ from .common import (
     initialize_result,
     normalize_window,
 )
-from .http import AcademicHttpClient
 from .matching import AcademicLexicalMatcher
+from .openreview_client import OpenReviewNotesClient, note_to_mapping
 
 
 class OpenReviewCollector:
     def __init__(
         self,
-        client: AcademicHttpClient,
+        client: OpenReviewNotesClient,
         state: dict[str, Any],
         config: dict[str, Any],
         taxonomy: dict[str, Any],
@@ -195,24 +195,20 @@ class OpenReviewCollector:
         collected: list[dict[str, Any]] = []
 
         for _ in range(max_pages):
-            params: dict[str, Any] = {
-                "content.venueid": edition["venue_id"],
-                "limit": page_size,
-                "offset": offset,
-                "sort": "tcdate:asc" if bootstrap else "tmdate:desc",
-            }
             self._pace()
-            response = self.client.get_json("/notes", params=params)
-            payload = response.data
-            notes = payload.get("notes", []) if isinstance(payload, dict) else []
-            if not isinstance(notes, list):
+            note_objects = self.client.get_notes(
+                content={"venueid": edition["venue_id"]},
+                limit=page_size,
+                offset=offset,
+                sort="tcdate:asc" if bootstrap else "tmdate:desc",
+            )
+            if not isinstance(note_objects, list):
                 raise AcademicCoverageError(
                     f"OpenReview returned invalid notes payload for {edition['venue_id']}"
                 )
+            notes = [note_to_mapping(note) for note in note_objects]
 
             for note in notes:
-                if not isinstance(note, dict):
-                    continue
                 if bootstrap:
                     collected.append(note)
                     continue
