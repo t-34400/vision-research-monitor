@@ -5,12 +5,16 @@ import hashlib
 import re
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from html.parser import HTMLParser
 from typing import Any
 
 from ..academic.matching import AcademicLexicalMatcher
-from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
+from ..classification.semantic import (
+    ClassificationResult,
+    SemanticClassificationPipeline,
+    rejected_lexical,
+)
 from ..http import HttpClient
 from ..linking.normalize import extract_urls
 from ..models import NormalizedItem, to_iso8601
@@ -60,7 +64,7 @@ class ResearchFeedCollector:
         window_start: datetime | None = None,
         window_end: datetime | None = None,
     ) -> SourceRunResult:
-        run_at = run_at.astimezone(timezone.utc)
+        run_at = run_at.astimezone(UTC)
         if window_start is None or window_end is None:
             window_start, window_end = self.collection_window(run_at)
         window_start, window_end = normalize_window(window_start, window_end)
@@ -80,7 +84,9 @@ class ResearchFeedCollector:
                     event_time = entry.published_at or entry.updated_at
                     if event_time is None or not window_start <= event_time <= window_end:
                         continue
-                    match = self.matcher.match(entry.title, entry.summary, keywords=entry.categories)
+                    match = self.matcher.match(
+                        entry.title, entry.summary, keywords=entry.categories
+                    )
                     classification = self._classify(entry.title, entry.summary, match, threshold)
                     if not classification.accepted:
                         continue
@@ -91,7 +97,9 @@ class ResearchFeedCollector:
         result.items.sort(key=lambda item: (item.published_at or "", item.source_id))
         return result
 
-    def _classify(self, title: str, text: str, match: Any, threshold: float) -> ClassificationResult:
+    def _classify(
+        self, title: str, text: str, match: Any, threshold: float
+    ) -> ClassificationResult:
         if self.classifier is None:
             if match.score < threshold:
                 return rejected_lexical(match.score, match.topics, match.matched_terms)
@@ -123,7 +131,7 @@ def normalize_feed_entry(
     classification: ClassificationResult,
     run_at: datetime,
 ) -> NormalizedItem:
-    digest = hashlib.sha256(f"{feed['id']}\n{entry.identity}".encode("utf-8")).hexdigest()[:24]
+    digest = hashlib.sha256(f"{feed['id']}\n{entry.identity}".encode()).hexdigest()[:24]
     return NormalizedItem(
         id=f"research_blog:article:{digest}",
         source="research_blog",
@@ -174,8 +182,14 @@ def parse_rss(root: ET.Element) -> list[FeedEntry]:
         description = child_text(item, "description")
         content = first_child_text_by_local(item, "encoded")
         summary = html_to_text(content or description)
-        published = parse_feed_datetime(child_text(item, "pubDate") or first_child_text_by_local(item, "date"))
-        categories = [clean_text(node.text or "") for node in item.findall("category") if clean_text(node.text or "")]
+        published = parse_feed_datetime(
+            child_text(item, "pubDate") or first_child_text_by_local(item, "date")
+        )
+        categories = [
+            clean_text(node.text or "")
+            for node in item.findall("category")
+            if clean_text(node.text or "")
+        ]
         author = first_child_text_by_local(item, "creator") or child_text(item, "author")
         if title and link and guid:
             entries.append(
@@ -206,7 +220,9 @@ def parse_atom(root: ET.Element) -> list[FeedEntry]:
             if rel == "alternate" and node.attrib.get("href"):
                 link = node.attrib["href"]
                 break
-        summary_html = first_child_text_by_local(entry, "content") or first_child_text_by_local(entry, "summary")
+        summary_html = first_child_text_by_local(entry, "content") or first_child_text_by_local(
+            entry, "summary"
+        )
         published = parse_feed_datetime(first_child_text_by_local(entry, "published"))
         updated = parse_feed_datetime(first_child_text_by_local(entry, "updated"))
         authors = []
@@ -247,8 +263,8 @@ def parse_feed_datetime(value: str | None) -> datetime | None:
         except ValueError:
             return None
     if parsed.tzinfo is None:
-        parsed = parsed.replace(tzinfo=timezone.utc)
-    return parsed.astimezone(timezone.utc)
+        parsed = parsed.replace(tzinfo=UTC)
+    return parsed.astimezone(UTC)
 
 
 class _TextExtractor(HTMLParser):

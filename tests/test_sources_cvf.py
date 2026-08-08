@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
@@ -20,7 +20,9 @@ def load_inputs() -> tuple[dict, dict]:
 
 
 def test_cvf_parsers_preserve_paper_and_external_links() -> None:
-    index = parse_cvf_index((FIXTURES / "cvf_index.html").read_text(), "https://openaccess.thecvf.com")
+    index = parse_cvf_index(
+        (FIXTURES / "cvf_index.html").read_text(), "https://openaccess.thecvf.com"
+    )
     assert len(index) == 2
     assert index[1].authors == ["Alice Example", "Bob Example"]
     assert index[1].source_id.endswith("Example_Pose-Free_Gaussian_Splatting_CVPR_2026_paper.html")
@@ -68,7 +70,7 @@ def test_cvf_collector_baselines_then_emits_new_relevant_paper_and_project() -> 
             taxonomy,
             sleeper=lambda _: None,
             monotonic=lambda: 0.0,
-        ).collect(datetime(2026, 8, 8, tzinfo=timezone.utc))
+        ).collect(datetime(2026, 8, 8, tzinfo=UTC))
 
     assert result.failed_targets == 0
     paper = next(item for item in result.items if item.kind == "paper")
@@ -85,13 +87,21 @@ def test_project_sidecar_identity_preserves_parent_relation() -> None:
     from vision_research_monitor.sources.project_pages import project_item_from_url
 
     first = NormalizedItem(
-        id="cvf:paper:first", source="cvf", source_id="first", kind="paper",
-        title="First", url="https://openaccess.thecvf.com/first",
+        id="cvf:paper:first",
+        source="cvf",
+        source_id="first",
+        kind="paper",
+        title="First",
+        url="https://openaccess.thecvf.com/first",
         discovered_at="2026-08-08T00:00:00Z",
     )
     second = NormalizedItem(
-        id="cvf:paper:second", source="cvf", source_id="second", kind="paper",
-        title="Second", url="https://openaccess.thecvf.com/second",
+        id="cvf:paper:second",
+        source="cvf",
+        source_id="second",
+        kind="paper",
+        title="Second",
+        url="https://openaccess.thecvf.com/second",
         discovered_at="2026-08-08T00:00:00Z",
     )
 
@@ -129,7 +139,7 @@ def test_cvf_collector_rejects_inventory_that_loses_known_papers() -> None:
 
     with HttpClient(config["cvf"]["base_url"], transport=httpx.MockTransport(handler)) as client:
         result = CVFCollector(client, state, config, taxonomy, sleeper=lambda _: None).collect(
-            datetime(2026, 8, 8, tzinfo=timezone.utc)
+            datetime(2026, 8, 8, tzinfo=UTC)
         )
 
     assert result.failed_targets == 1

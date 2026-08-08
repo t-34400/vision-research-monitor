@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -9,8 +9,10 @@ import httpx
 import yaml
 
 from vision_research_monitor.github.client import GitHubClient
-from vision_research_monitor.github.discovery import DiscoveryCoverageError, GitHubDiscoveryCollector
-
+from vision_research_monitor.github.discovery import (
+    DiscoveryCoverageError,
+    GitHubDiscoveryCollector,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -22,7 +24,9 @@ def load_fixture_config() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any
     return config, taxonomy, venues
 
 
-def repository(repo_id: int = 101, description: str = "Feed-forward 3D reconstruction with Gaussian splatting") -> dict[str, Any]:
+def repository(
+    repo_id: int = 101, description: str = "Feed-forward 3D reconstruction with Gaussian splatting"
+) -> dict[str, Any]:
     return {
         "id": repo_id,
         "name": "fast-3d",
@@ -50,7 +54,11 @@ def test_topic_discovery_aggregates_created_and_pushed_hits() -> None:
         {
             "id": "neural_rendering",
             "queries": [
-                {"id": "gaussian_splatting", "text": '"gaussian splatting"', "topics": ["gaussian_splatting"]}
+                {
+                    "id": "gaussian_splatting",
+                    "text": '"gaussian splatting"',
+                    "topics": ["gaussian_splatting"],
+                }
             ],
         }
     ]
@@ -59,10 +67,12 @@ def test_topic_discovery_aggregates_created_and_pushed_hits() -> None:
 
     def handler(request: httpx.Request) -> httpx.Response:
         requests.append(request)
-        return httpx.Response(200, json={"total_count": 1, "incomplete_results": False, "items": [repository()]})
+        return httpx.Response(
+            200, json={"total_count": 1, "incomplete_results": False, "items": [repository()]}
+        )
 
     state = {"version": 1, "http_cache": {}}
-    run_at = datetime(2026, 8, 8, 2, tzinfo=timezone.utc)
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
     with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
         result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
             run_at,
@@ -91,7 +101,12 @@ def test_dense_search_window_is_split_before_pagination_limit() -> None:
         {
             "id": "depth",
             "queries": [
-                {"id": "metric_depth", "text": '"metric depth"', "topics": ["metric_depth"], "modes": ["created"]}
+                {
+                    "id": "metric_depth",
+                    "text": '"metric depth"',
+                    "topics": ["metric_depth"],
+                    "modes": ["created"],
+                }
             ],
         }
     ]
@@ -103,13 +118,22 @@ def test_dense_search_window_is_split_before_pagination_limit() -> None:
         query = request.url.params["q"]
         if "2026-08-08T00:00:00+00:00..2026-08-08T02:00:00+00:00" in query:
             original_range_calls += 1
-            return httpx.Response(200, json={"total_count": 101, "incomplete_results": False, "items": []})
+            return httpx.Response(
+                200, json={"total_count": 101, "incomplete_results": False, "items": []}
+            )
         repo_id = 201 if "T01:00:00+00:00" in query.split("..", 1)[1] else 202
-        return httpx.Response(200, json={"total_count": 1, "incomplete_results": False, "items": [repository(repo_id, "metric depth estimation")]})
+        return httpx.Response(
+            200,
+            json={
+                "total_count": 1,
+                "incomplete_results": False,
+                "items": [repository(repo_id, "metric depth estimation")],
+            },
+        )
 
     state = {"version": 1, "http_cache": {}}
-    start = datetime(2026, 8, 8, 0, tzinfo=timezone.utc)
-    end = datetime(2026, 8, 8, 2, tzinfo=timezone.utc)
+    start = datetime(2026, 8, 8, 0, tzinfo=UTC)
+    end = datetime(2026, 8, 8, 2, tzinfo=UTC)
     with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
         result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
             end,
@@ -138,11 +162,15 @@ def test_venue_only_candidate_uses_readme_for_topic_gate() -> None:
 
     def handler(request: httpx.Request) -> httpx.Response:
         if request.url.path.endswith("/readme"):
-            return httpx.Response(200, text="CVPR 2026 project for monocular depth estimation from a single image")
-        return httpx.Response(200, json={"total_count": 1, "incomplete_results": False, "items": [candidate]})
+            return httpx.Response(
+                200, text="CVPR 2026 project for monocular depth estimation from a single image"
+            )
+        return httpx.Response(
+            200, json={"total_count": 1, "incomplete_results": False, "items": [candidate]}
+        )
 
     state = {"version": 1, "http_cache": {}}
-    run_at = datetime(2026, 8, 8, 2, tzinfo=timezone.utc)
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
     with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
         result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
             run_at,
@@ -162,8 +190,12 @@ def test_stale_checkpoint_requires_explicit_backfill() -> None:
         "http_cache": {},
         "last_successful_at": "2026-08-01T00:00:00Z",
     }
-    run_at = datetime(2026, 8, 8, 0, tzinfo=timezone.utc)
-    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(lambda request: httpx.Response(500))) as client:
+    run_at = datetime(2026, 8, 8, 0, tzinfo=UTC)
+    with GitHubClient(
+        None,
+        state["http_cache"],
+        transport=httpx.MockTransport(lambda request: httpx.Response(500)),
+    ) as client:
         collector = GitHubDiscoveryCollector(client, state, config, taxonomy, venues)
         try:
             collector.collection_window(run_at)

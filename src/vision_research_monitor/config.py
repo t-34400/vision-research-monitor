@@ -21,7 +21,9 @@ def _load_yaml(path: Path) -> dict[str, Any]:
 
 def _validate_schema(data: dict[str, Any], schema_path: Path) -> None:
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
-    errors = sorted(Draft202012Validator(schema).iter_errors(data), key=lambda error: list(error.path))
+    errors = sorted(
+        Draft202012Validator(schema).iter_errors(data), key=lambda error: list(error.path)
+    )
     if errors:
         details = "; ".join(error.message for error in errors[:5])
         raise ConfigError(f"Schema validation failed for {schema_path.name}: {details}")
@@ -92,7 +94,9 @@ def load_github_discovery(
             query_ids.append(query["id"])
             unknown = sorted(set(query["topics"]) - topic_ids)
             if unknown:
-                raise ConfigError(f"Unknown discovery topics for {query['id']}: {', '.join(unknown)}")
+                raise ConfigError(
+                    f"Unknown discovery topics for {query['id']}: {', '.join(unknown)}"
+                )
             covered_topics.update(query["topics"])
 
     if len(query_ids) != len(set(query_ids)):
@@ -131,7 +135,6 @@ def load_academic(
     return data
 
 
-
 def load_sources(
     path: Path,
     schema_path: Path,
@@ -161,6 +164,7 @@ def load_sources(
     if len(feed_urls) != len(set(feed_urls)):
         raise ConfigError("Research blog feed URLs must be unique")
     return data
+
 
 def load_linking(path: Path, schema_path: Path) -> dict[str, Any]:
     data = _load_yaml(path)
@@ -199,11 +203,14 @@ def load_semantic(path: Path, schema_path: Path, topic_ids: set[str]) -> dict[st
 
     classification = data["classification"]
     if classification["acceptance_similarity"] < classification["minimum_topic_similarity"]:
-        raise ConfigError("Semantic acceptance similarity cannot be below topic selection threshold")
+        raise ConfigError(
+            "Semantic acceptance similarity cannot be below topic selection threshold"
+        )
     llm = data["llm"]
     if llm["minimum_semantic_score"] > llm["maximum_semantic_score"]:
         raise ConfigError("Semantic LLM minimum score cannot exceed maximum score")
     return data
+
 
 def load_reporting(path: Path, schema_path: Path, venue_priorities: set[str]) -> dict[str, Any]:
     data = _load_yaml(path)
@@ -231,8 +238,12 @@ def load_analytics(path: Path, schema_path: Path) -> dict[str, Any]:
         int(data["recurring_entities"]["lookback_days"]),
     )
     if int(data["history_days"]) < largest_required:
-        raise ConfigError("Analytics history_days must cover two trend/growth windows and the recurring lookback")
-    if int(data["recurring_entities"]["minimum_active_days"]) > int(data["recurring_entities"]["lookback_days"]):
+        raise ConfigError(
+            "Analytics history_days must cover two trend/growth windows and the recurring lookback"
+        )
+    if int(data["recurring_entities"]["minimum_active_days"]) > int(
+        data["recurring_entities"]["lookback_days"]
+    ):
         raise ConfigError("Recurring minimum active days cannot exceed lookback days")
     if int(data["archive"]["default_search_limit"]) > int(data["archive"]["maximum_search_limit"]):
         raise ConfigError("Archive default search limit cannot exceed maximum search limit")

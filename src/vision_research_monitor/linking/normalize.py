@@ -7,7 +7,9 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from ..models import NormalizedItem
 
-ARXIV_ID_RE = re.compile(r"(?i)(?:arxiv:\s*|arxiv\.org/(?:abs|pdf)/)([a-z.-]+/\d{7}|\d{4}\.\d{4,5})(?:v\d+)?")
+ARXIV_ID_RE = re.compile(
+    r"(?i)(?:arxiv:\s*|arxiv\.org/(?:abs|pdf)/)([a-z.-]+/\d{7}|\d{4}\.\d{4,5})(?:v\d+)?"
+)
 DOI_RE = re.compile(r"(?i)\b(10\.\d{4,9}/[-._;()/:a-z0-9]+)")
 OPENREVIEW_RE = re.compile(r"(?i)openreview\.net/(?:forum|pdf)\?id=([^&#\s]+)")
 URL_RE = re.compile(r"https?://[^\s<>\"']+")
@@ -61,12 +63,17 @@ def canonicalize_url(
     host = parsed.hostname.casefold()
     if host.startswith("www."):
         host = host[4:]
-    if parsed.port and not ((parsed.scheme == "http" and parsed.port == 80) or (parsed.scheme == "https" and parsed.port == 443)):
+    if parsed.port and not (
+        (parsed.scheme == "http" and parsed.port == 80)
+        or (parsed.scheme == "https" and parsed.port == 443)
+    ):
         host = f"{host}:{parsed.port}"
 
     path = re.sub(r"/{2,}", "/", parsed.path or "/")
     if host == "arxiv.org":
-        match = re.match(r"/(?:abs|pdf)/([a-zA-Z.-]+/\d{7}|\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?/?$", path)
+        match = re.match(
+            r"/(?:abs|pdf)/([a-zA-Z.-]+/\d{7}|\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?/?$", path
+        )
         if match:
             return f"https://arxiv.org/abs/{match.group(1)}"
     if host == "openreview.net" and path in {"/forum", "/pdf"}:
@@ -137,7 +144,9 @@ def metadata_strings(item: NormalizedItem, allowed_keys: set[str]) -> list[str]:
         if isinstance(value, str) and value.strip():
             values.append(value)
         elif isinstance(value, list):
-            values.extend(str(entry).strip() for entry in value if isinstance(entry, str) and entry.strip())
+            values.extend(
+                str(entry).strip() for entry in value if isinstance(entry, str) and entry.strip()
+            )
     return values
 
 
@@ -179,7 +188,11 @@ def exact_identifiers(item: NormalizedItem, config: dict) -> dict[str, str]:
                 identifier = extractor(url)
                 if identifier:
                     identifiers[identifier] = label
-        for extractor, label in ((arxiv_identifier, "arxiv"), (openreview_identifier, "openreview"), (doi_identifier, "doi")):
+        for extractor, label in (
+            (arxiv_identifier, "arxiv"),
+            (openreview_identifier, "openreview"),
+            (doi_identifier, "doi"),
+        ):
             identifier = extractor(text)
             if identifier:
                 identifiers[identifier] = label

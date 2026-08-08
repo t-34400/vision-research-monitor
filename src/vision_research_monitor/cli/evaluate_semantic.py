@@ -9,19 +9,22 @@ import yaml
 from ..classification.evaluation import evaluate
 from ..config import load_academic, load_semantic, load_taxonomy, load_venues
 
-
 ROOT = Path(__file__).resolve().parents[3]
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Evaluate semantic classification against the lexical baseline")
+    parser = argparse.ArgumentParser(
+        description="Evaluate semantic classification against the lexical baseline"
+    )
     parser.add_argument("--cases", type=Path, default=ROOT / "evaluation/semantic_cases.yaml")
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    taxonomy = load_taxonomy(ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json")
+    taxonomy = load_taxonomy(
+        ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json"
+    )
     venues = load_venues(ROOT / "config/venues.yaml", ROOT / "config/schemas/venues.schema.json")
     academic = load_academic(
         ROOT / "config/academic.yaml",

@@ -3,15 +3,26 @@ from __future__ import annotations
 import hashlib
 import re
 import time
-from datetime import datetime, timezone
-from typing import Any, Callable
+from collections.abc import Callable
+from datetime import UTC, datetime
+from typing import Any
 
 from ..academic.matching import AcademicLexicalMatcher
-from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
+from ..classification.semantic import (
+    ClassificationResult,
+    SemanticClassificationPipeline,
+    rejected_lexical,
+)
 from ..http import HttpClient
 from ..linking.normalize import extract_urls
 from ..models import NormalizedItem, parse_iso8601, to_iso8601
-from .common import SourceCoverageError, SourceRunResult, collection_window, initialize_result, normalize_window
+from .common import (
+    SourceCoverageError,
+    SourceRunResult,
+    collection_window,
+    initialize_result,
+    normalize_window,
+)
 
 _LINK_NEXT_RE = re.compile(r'<([^>]+)>;\s*rel="next"')
 
@@ -54,7 +65,7 @@ class HuggingFaceCollector:
         window_start: datetime | None = None,
         window_end: datetime | None = None,
     ) -> SourceRunResult:
-        run_at = run_at.astimezone(timezone.utc)
+        run_at = run_at.astimezone(UTC)
         if window_start is None or window_end is None:
             window_start, window_end = self.collection_window(run_at)
         window_start, window_end = normalize_window(window_start, window_end)
@@ -83,9 +94,16 @@ class HuggingFaceCollector:
             model = candidates[model_id]
             last_modified = model_last_modified(model)
             if last_modified is None:
-                result.add_warning(f"huggingface:{model_id}", "model result has no parseable lastModified timestamp")
+                result.add_warning(
+                    f"huggingface:{model_id}",
+                    "model result has no parseable lastModified timestamp",
+                )
                 continue
-            previous = repositories.get(model_id, {}) if isinstance(repositories.get(model_id), dict) else {}
+            previous = (
+                repositories.get(model_id, {})
+                if isinstance(repositories.get(model_id), dict)
+                else {}
+            )
             previous_modified = previous.get("last_modified")
             if previous_modified == to_iso8601(last_modified):
                 continue
@@ -93,7 +111,9 @@ class HuggingFaceCollector:
             text, tags = model_text(model)
             match = self.matcher.match(model_id, text, keywords=tags)
             model_card = ""
-            if match.score < threshold and self._model_card_fetches < int(self.config["huggingface"]["max_model_cards_per_run"]):
+            if match.score < threshold and self._model_card_fetches < int(
+                self.config["huggingface"]["max_model_cards_per_run"]
+            ):
                 self._model_card_fetches += 1
                 try:
                     model_card = self._fetch_model_card(model_id)
@@ -162,7 +182,7 @@ class HuggingFaceCollector:
                 if start <= modified <= end:
                     found.append(model)
 
-            if not payload or oldest is not None and oldest < start:
+            if not payload or (oldest is not None and oldest < start):
                 return found
             path = next_link(response.headers.get("link"))
             if path is None:
@@ -180,7 +200,9 @@ class HuggingFaceCollector:
         )
         return response.data
 
-    def _classify(self, title: str, text: str, match: Any, threshold: float) -> ClassificationResult:
+    def _classify(
+        self, title: str, text: str, match: Any, threshold: float
+    ) -> ClassificationResult:
         if self.classifier is None:
             if match.score < threshold:
                 return rejected_lexical(match.score, match.topics, match.matched_terms)
@@ -297,7 +319,9 @@ def model_summary(model_card: str, card_data: dict[str, Any]) -> str | None:
         return compact_text(description, 1000)
     if not model_card:
         return None
-    without_frontmatter = re.sub(r"\A---\s*\n.*?\n---\s*\n", "", model_card, count=1, flags=re.DOTALL)
+    without_frontmatter = re.sub(
+        r"\A---\s*\n.*?\n---\s*\n", "", model_card, count=1, flags=re.DOTALL
+    )
     lines = []
     for line in without_frontmatter.splitlines():
         stripped = line.strip()

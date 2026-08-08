@@ -1,5 +1,4 @@
-import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
@@ -8,7 +7,6 @@ import yaml
 from vision_research_monitor.academic.arxiv import ArxivCollector, parse_arxiv_feed
 from vision_research_monitor.academic.common import AcademicCoverageError
 from vision_research_monitor.academic.http import AcademicHttpClient
-
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "tests/fixtures/academic"
@@ -56,7 +54,7 @@ def test_arxiv_collector_filters_and_normalizes_relevant_papers() -> None:
             sleeper=lambda _: None,
             monotonic=lambda: 0.0,
         )
-        result = collector.collect(datetime(2026, 8, 8, tzinfo=timezone.utc))
+        result = collector.collect(datetime(2026, 8, 8, tzinfo=UTC))
 
     assert result.failed_targets == 0
     assert len(result.items) == 1
@@ -72,10 +70,12 @@ def test_arxiv_collector_filters_and_normalizes_relevant_papers() -> None:
 def test_arxiv_stale_checkpoint_requires_explicit_backfill() -> None:
     config, taxonomy, venues = load_inputs()
     state = {"academic": {"arxiv": {"last_successful_at": "2026-08-01T00:00:00Z"}}}
-    with AcademicHttpClient(config["arxiv"]["base_url"], transport=httpx.MockTransport(lambda _: httpx.Response(500))) as client:
+    with AcademicHttpClient(
+        config["arxiv"]["base_url"], transport=httpx.MockTransport(lambda _: httpx.Response(500))
+    ) as client:
         collector = ArxivCollector(client, state, config, taxonomy, venues)
         try:
-            collector.collection_window(datetime(2026, 8, 8, tzinfo=timezone.utc))
+            collector.collection_window(datetime(2026, 8, 8, tzinfo=UTC))
         except AcademicCoverageError as exc:
             assert "maximum automatic catch-up" in str(exc)
         else:

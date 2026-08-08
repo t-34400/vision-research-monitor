@@ -1,9 +1,9 @@
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
-from datetime import date, datetime, time, timedelta, timezone
-from pathlib import Path
-from typing import Any, Iterable
+from datetime import UTC, date, datetime, time, timedelta
+from typing import Any
 from zoneinfo import ZoneInfo
 
 from ..linking.linker import EntityLinkResult
@@ -50,7 +50,9 @@ class DailyDigestBuilder:
         *,
         report_date: date,
     ) -> DigestResult:
-        start, end = report_window(report_date, self.timezone, int(self.config["day_boundary_hour"]))
+        start, end = report_window(
+            report_date, self.timezone, int(self.config["day_boundary_hour"])
+        )
         selected = [item for item in items if is_in_window(item.discovered_at, start, end)]
         ranked = [self.ranker.rank(item, reference_time=end) for item in selected]
         ranked = [item for item in ranked if self.ranker.included(item)]
@@ -117,7 +119,11 @@ class DailyDigestBuilder:
             if not entries:
                 continue
             lines.extend([f"## {heading}", ""])
-            limit = None if key == "priority_watch" else int(self.config["report"]["section_limits"].get(key, 0))
+            limit = (
+                None
+                if key == "priority_watch"
+                else int(self.config["report"]["section_limits"].get(key, 0))
+            )
             visible = entries if not limit else entries[:limit]
             for ranked_item in visible:
                 rendered_ids.add(ranked_item.item.id)
@@ -168,12 +174,16 @@ class DailyDigestBuilder:
             venue = item.venue.upper() if len(item.venue) <= 6 else item.venue
             details.append(f"{venue} {year}" if year else venue)
         if item.topics:
-            details.append(", ".join(self.topic_labels.get(topic, topic) for topic in item.topics[:5]))
+            details.append(
+                ", ".join(self.topic_labels.get(topic, topic) for topic in item.topics[:5])
+            )
         if self.config["report"]["include_score"]:
             details.append(f"score {ranked.total:.2f}")
         lines.append(f"  - {' · '.join(details)}")
 
-        summary = compact_summary(item.summary, int(self.config["report"]["summary_max_characters"]))
+        summary = compact_summary(
+            item.summary, int(self.config["report"]["summary_max_characters"])
+        )
         if summary:
             lines.append(f"  - {summary}")
 
@@ -194,10 +204,12 @@ class DailyDigestBuilder:
         return lines
 
 
-def report_window(report_date: date, timezone_info: ZoneInfo, boundary_hour: int) -> tuple[datetime, datetime]:
+def report_window(
+    report_date: date, timezone_info: ZoneInfo, boundary_hour: int
+) -> tuple[datetime, datetime]:
     local_end = datetime.combine(report_date, time(boundary_hour), tzinfo=timezone_info)
     local_start = local_end - timedelta(days=1)
-    return local_start.astimezone(timezone.utc), local_end.astimezone(timezone.utc)
+    return local_start.astimezone(UTC), local_end.astimezone(UTC)
 
 
 def is_in_window(value: str, start: datetime, end: datetime) -> bool:
@@ -225,4 +237,4 @@ def escape_markdown(value: str) -> str:
 
 
 def iso_utc(value: datetime) -> str:
-    return value.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+    return value.astimezone(UTC).isoformat().replace("+00:00", "Z")

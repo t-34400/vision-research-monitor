@@ -1,4 +1,4 @@
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 import yaml
@@ -7,7 +7,6 @@ from vision_research_monitor.linking.linker import EntityLinker
 from vision_research_monitor.models import NormalizedItem
 from vision_research_monitor.reporting.digest import DailyDigestBuilder, report_window
 from vision_research_monitor.reporting.ranking import ResearchRanker, change_label
-
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -51,7 +50,7 @@ def test_ranking_keeps_signals_separate_and_watch_override() -> None:
         metadata={"action": "metadata_updated", "stars_delta": 0},
     )
 
-    ranked = ranker.rank(item, reference_time=datetime(2026, 8, 8, 23, tzinfo=timezone.utc))
+    ranked = ranker.rank(item, reference_time=datetime(2026, 8, 8, 23, tzinfo=UTC))
 
     assert ranked.signals.priority == 1.0
     assert ranked.signals.relevance == 0.0
@@ -63,12 +62,17 @@ def test_popularity_delta_is_log_scaled() -> None:
     reporting, _, venues, _ = load_inputs()
     venue_priorities = {venue["id"]: venue["priority"] for venue in venues["venues"]}
     ranker = ResearchRanker(reporting, venue_priorities)
-    low = ranker.rank(make_item("github:repository:1", metadata={"action": "discovered", "stars_delta": 1}), reference_time=datetime(2026, 8, 8, 23, tzinfo=timezone.utc))
-    high = ranker.rank(make_item("github:repository:2", metadata={"action": "discovered", "stars_delta": 100}), reference_time=datetime(2026, 8, 8, 23, tzinfo=timezone.utc))
+    low = ranker.rank(
+        make_item("github:repository:1", metadata={"action": "discovered", "stars_delta": 1}),
+        reference_time=datetime(2026, 8, 8, 23, tzinfo=UTC),
+    )
+    high = ranker.rank(
+        make_item("github:repository:2", metadata={"action": "discovered", "stars_delta": 100}),
+        reference_time=datetime(2026, 8, 8, 23, tzinfo=UTC),
+    )
 
     assert 0 < low.signals.popularity < high.signals.popularity
     assert high.signals.popularity == 1.0
-
 
 
 def test_repository_freshness_uses_activity_time() -> None:
@@ -81,7 +85,7 @@ def test_repository_freshness_uses_activity_time() -> None:
         updated_at="2026-08-08T22:00:00Z",
     )
 
-    ranked = ranker.rank(item, reference_time=datetime(2026, 8, 8, 23, tzinfo=timezone.utc))
+    ranked = ranker.rank(item, reference_time=datetime(2026, 8, 8, 23, tzinfo=UTC))
 
     assert ranked.signals.freshness > 0.98
 
@@ -143,9 +147,13 @@ def test_daily_digest_uses_fixed_jst_window_and_deduplicates_linked_papers() -> 
     items = [arxiv, openreview, watched]
     links = EntityLinker(linking).link(items, generated_at="2026-08-07T23:20:00Z")
 
-    result = DailyDigestBuilder(reporting, taxonomy, venues).build(items, links, report_date=date(2026, 8, 9))
+    result = DailyDigestBuilder(reporting, taxonomy, venues).build(
+        items, links, report_date=date(2026, 8, 9)
+    )
 
-    start, end = report_window(date(2026, 8, 9), DailyDigestBuilder(reporting, taxonomy, venues).timezone, 8)
+    start, end = report_window(
+        date(2026, 8, 9), DailyDigestBuilder(reporting, taxonomy, venues).timezone, 8
+    )
     assert start.isoformat() == "2026-08-07T23:00:00+00:00"
     assert end.isoformat() == "2026-08-08T23:00:00+00:00"
     assert result.markdown.count("Sparse View Gaussian Reconstruction") == 1
@@ -193,7 +201,9 @@ def test_source_expansion_items_get_sections_and_hidden_sidecars_stay_out() -> N
     items = [model, article, project]
     links = EntityLinker(linking).link(items, generated_at="2026-08-08T06:00:00Z")
 
-    result = DailyDigestBuilder(reporting, taxonomy, venues).build(items, links, report_date=date(2026, 8, 9))
+    result = DailyDigestBuilder(reporting, taxonomy, venues).build(
+        items, links, report_date=date(2026, 8, 9)
+    )
 
     assert "## Models & Demos" in result.markdown
     assert "## Research Announcements" in result.markdown

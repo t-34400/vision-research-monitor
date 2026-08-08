@@ -3,13 +3,24 @@ from __future__ import annotations
 import re
 import time
 import xml.etree.ElementTree as ET
+from collections.abc import Callable
 from dataclasses import dataclass
-from datetime import datetime, timezone
-from typing import Any, Callable
+from datetime import UTC, datetime
+from typing import Any
 
-from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
+from ..classification.semantic import (
+    ClassificationResult,
+    SemanticClassificationPipeline,
+    rejected_lexical,
+)
 from ..models import NormalizedItem, to_iso8601
-from .common import AcademicCoverageError, AcademicRunResult, collection_window, initialize_result, normalize_window
+from .common import (
+    AcademicCoverageError,
+    AcademicRunResult,
+    collection_window,
+    initialize_result,
+    normalize_window,
+)
 from .http import AcademicHttpClient
 from .matching import AcademicLexicalMatcher, contains_normalized, normalize_text
 
@@ -74,7 +85,7 @@ class ArxivCollector:
         window_start: datetime | None = None,
         window_end: datetime | None = None,
     ) -> AcademicRunResult:
-        run_at = run_at.astimezone(timezone.utc)
+        run_at = run_at.astimezone(UTC)
         if window_start is None or window_end is None:
             window_start, window_end = self.collection_window(run_at)
         window_start, window_end = normalize_window(window_start, window_end)
@@ -147,7 +158,9 @@ class ArxivCollector:
                 self.sleeper(wait)
         self._last_request_at = self.monotonic()
 
-    def _classify(self, title: str, abstract: str, match: Any, threshold: float) -> ClassificationResult:
+    def _classify(
+        self, title: str, abstract: str, match: Any, threshold: float
+    ) -> ClassificationResult:
         if self.classifier is None:
             if match.score >= threshold:
                 return self.classifier_result_from_lexical(match)
@@ -226,7 +239,11 @@ def parse_arxiv_feed(xml: str) -> tuple[list[ArxivPaper], int]:
         source_id = re.sub(r"v\d+$", "", versioned_id)
         links = entry.findall(f"{{{ATOM}}}link")
         url = next(
-            (link.attrib.get("href", "") for link in links if link.attrib.get("rel") == "alternate"),
+            (
+                link.attrib.get("href", "")
+                for link in links
+                if link.attrib.get("rel") == "alternate"
+            ),
             f"https://arxiv.org/abs/{source_id}",
         )
         pdf_url = next(
@@ -237,7 +254,11 @@ def parse_arxiv_feed(xml: str) -> tuple[list[ArxivPaper], int]:
             ),
             None,
         )
-        categories = [node.attrib["term"] for node in entry.findall(f"{{{ATOM}}}category") if node.attrib.get("term")]
+        categories = [
+            node.attrib["term"]
+            for node in entry.findall(f"{{{ATOM}}}category")
+            if node.attrib.get("term")
+        ]
         primary = entry.find(f"{{{ARXIV}}}primary_category")
         papers.append(
             ArxivPaper(
@@ -267,14 +288,18 @@ def parse_arxiv_feed(xml: str) -> tuple[list[ArxivPaper], int]:
 def merge_papers(existing: ArxivPaper, incoming: ArxivPaper) -> ArxivPaper:
     categories = list(dict.fromkeys(existing.categories + incoming.categories))
     existing.categories = categories
-    if incoming.updated_at and (not existing.updated_at or incoming.updated_at > existing.updated_at):
+    if incoming.updated_at and (
+        not existing.updated_at or incoming.updated_at > existing.updated_at
+    ):
         existing.versioned_id = incoming.versioned_id
         existing.updated_at = incoming.updated_at
     return existing
 
 
 def infer_venue(paper: ArxivPaper, venues: dict[str, Any]) -> str | None:
-    haystack = normalize_text(" ".join(value for value in [paper.comment, paper.journal_ref] if value))
+    haystack = normalize_text(
+        " ".join(value for value in [paper.comment, paper.journal_ref] if value)
+    )
     if not haystack:
         return None
     for venue in venues["venues"]:
@@ -286,7 +311,7 @@ def infer_venue(paper: ArxivPaper, venues: dict[str, Any]) -> str | None:
 
 
 def format_arxiv_date(value: datetime) -> str:
-    return value.astimezone(timezone.utc).strftime("%Y%m%d%H%M")
+    return value.astimezone(UTC).strftime("%Y%m%d%H%M")
 
 
 def normalize_atom_time(value: str | None) -> str | None:

@@ -2,12 +2,18 @@ from __future__ import annotations
 
 import hashlib
 from collections import Counter, defaultdict, deque
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass, field, replace
 from difflib import SequenceMatcher
-from typing import Iterable
 
 from ..models import NormalizedItem
-from .normalize import author_overlap, exact_identifiers, normalize_text, repository_name, title_tokens
+from .normalize import (
+    author_overlap,
+    exact_identifiers,
+    normalize_text,
+    repository_name,
+    title_tokens,
+)
 
 
 @dataclass(slots=True, frozen=True)
@@ -86,7 +92,9 @@ class EntityLinker:
                         LinkEvidence("explicit_relation", "source-declared", 1.0),
                     )
 
-    def _link_exact_identifiers(self, items: list[NormalizedItem], edges: dict[tuple[str, str], LinkEdge]) -> None:
+    def _link_exact_identifiers(
+        self, items: list[NormalizedItem], edges: dict[tuple[str, str], LinkEdge]
+    ) -> None:
         index: dict[str, list[tuple[str, str]]] = defaultdict(list)
         for item in items:
             for identifier, origin in exact_identifiers(item, self.config).items():
@@ -99,15 +107,21 @@ class EntityLinker:
                 continue
             for left_index, left_id in enumerate(item_ids):
                 for right_id in item_ids[left_index + 1 :]:
-                    origins = sorted({origin for item_id, origin in unique if item_id in {left_id, right_id}})
+                    origins = sorted(
+                        {origin for item_id, origin in unique if item_id in {left_id, right_id}}
+                    )
                     add_edge(
                         edges,
                         left_id,
                         right_id,
-                        LinkEvidence("exact_identifier", f"{identifier} ({','.join(origins)})", 1.0),
+                        LinkEvidence(
+                            "exact_identifier", f"{identifier} ({','.join(origins)})", 1.0
+                        ),
                     )
 
-    def _link_titles(self, items: list[NormalizedItem], edges: dict[tuple[str, str], LinkEdge]) -> None:
+    def _link_titles(
+        self, items: list[NormalizedItem], edges: dict[tuple[str, str], LinkEdge]
+    ) -> None:
         papers = [item for item in items if item.kind == "paper"]
         papers_by_id = {item.id: item for item in papers}
         exact_config = self.config["matching"]["exact_title"]
@@ -130,7 +144,9 @@ class EntityLinker:
                     overlap = author_overlap(left.authors, right.authors)
                     if overlap >= exact_config["minimum_author_overlap"]:
                         add_edge(edges, *pair, LinkEvidence("normalized_title", title, 0.98))
-                        add_edge(edges, *pair, LinkEvidence("author_overlap", f"{overlap:.3f}", overlap))
+                        add_edge(
+                            edges, *pair, LinkEvidence("author_overlap", f"{overlap:.3f}", overlap)
+                        )
 
         token_index: dict[str, set[str]] = defaultdict(set)
         token_sets: dict[str, set[str]] = {}
@@ -155,7 +171,9 @@ class EntityLinker:
                 continue
             left = papers_by_id[pair[0]]
             right = papers_by_id[pair[1]]
-            similarity = SequenceMatcher(None, normalized_titles[left.id], normalized_titles[right.id]).ratio()
+            similarity = SequenceMatcher(
+                None, normalized_titles[left.id], normalized_titles[right.id]
+            ).ratio()
             if similarity < fuzzy_config["minimum_similarity"]:
                 continue
             overlap = author_overlap(left.authors, right.authors)
@@ -164,9 +182,13 @@ class EntityLinker:
             add_edge(edges, *pair, LinkEvidence("fuzzy_title", f"{similarity:.3f}", similarity))
             add_edge(edges, *pair, LinkEvidence("author_overlap", f"{overlap:.3f}", overlap))
 
-    def _link_repositories_to_papers(self, items: list[NormalizedItem], edges: dict[tuple[str, str], LinkEdge]) -> None:
+    def _link_repositories_to_papers(
+        self, items: list[NormalizedItem], edges: dict[tuple[str, str], LinkEdge]
+    ) -> None:
         repository_config = self.config["matching"]["repository_title"]
-        generic_names = {normalize_text(value).replace(" ", "") for value in repository_config["generic_names"]}
+        generic_names = {
+            normalize_text(value).replace(" ", "") for value in repository_config["generic_names"]
+        }
         papers = [item for item in items if item.kind == "paper"]
         repositories = [item for item in items if item.kind == "repository"]
         paper_by_id = {item.id: item for item in papers}
@@ -181,7 +203,10 @@ class EntityLinker:
                 continue
             normalized_name = normalize_text(raw_name)
             compact_name = normalized_name.replace(" ", "")
-            if len(compact_name) < repository_config["minimum_name_characters"] or compact_name in generic_names:
+            if (
+                len(compact_name) < repository_config["minimum_name_characters"]
+                or compact_name in generic_names
+            ):
                 continue
             name_tokens = normalized_name.split()
             if not name_tokens:
@@ -200,7 +225,11 @@ class EntityLinker:
                 paper_tokens = set(paper_title.split())
                 phrase_match = normalized_name in paper_title
                 compact_token_match = compact_name in paper_tokens
-                if not (phrase_match or compact_token_match or all(token in paper_tokens for token in name_tokens)):
+                if not (
+                    phrase_match
+                    or compact_token_match
+                    or all(token in paper_tokens for token in name_tokens)
+                ):
                     continue
                 topic_overlap = sorted(set(repository.topics) & set(paper.topics))
                 if repository_config["require_topic_overlap"] and not topic_overlap:
@@ -208,14 +237,18 @@ class EntityLinker:
                 pair = edge_key(repository.id, paper.id)
                 add_edge(edges, *pair, LinkEvidence("repository_name", normalized_name, 0.84))
                 if topic_overlap:
-                    add_edge(edges, *pair, LinkEvidence("topic_overlap", ",".join(topic_overlap), 0.8))
+                    add_edge(
+                        edges, *pair, LinkEvidence("topic_overlap", ",".join(topic_overlap), 0.8)
+                    )
 
 
 def edge_key(left_id: str, right_id: str) -> tuple[str, str]:
     return (left_id, right_id) if left_id < right_id else (right_id, left_id)
 
 
-def add_edge(edges: dict[tuple[str, str], LinkEdge], left_id: str, right_id: str, evidence: LinkEvidence) -> None:
+def add_edge(
+    edges: dict[tuple[str, str], LinkEdge], left_id: str, right_id: str, evidence: LinkEvidence
+) -> None:
     if left_id == right_id:
         return
     key = edge_key(left_id, right_id)
@@ -234,7 +267,9 @@ def build_related_items(edges: Iterable[LinkEdge]) -> dict[str, list[str]]:
     return {item_id: sorted(neighbors) for item_id, neighbors in related.items()}
 
 
-def build_entities(items: dict[str, NormalizedItem], edges: Iterable[LinkEdge]) -> dict[str, list[str]]:
+def build_entities(
+    items: dict[str, NormalizedItem], edges: Iterable[LinkEdge]
+) -> dict[str, list[str]]:
     adjacency: dict[str, set[str]] = defaultdict(set)
     for edge in edges:
         adjacency[edge.left_id].add(edge.right_id)
@@ -263,7 +298,9 @@ def build_entities(items: dict[str, NormalizedItem], edges: Iterable[LinkEdge]) 
     return entities
 
 
-def materialize_related_items(items: Iterable[NormalizedItem], result: EntityLinkResult) -> list[NormalizedItem]:
+def materialize_related_items(
+    items: Iterable[NormalizedItem], result: EntityLinkResult
+) -> list[NormalizedItem]:
     materialized: list[NormalizedItem] = []
     for item in items:
         related = sorted(set(item.related_items) | set(result.related_items.get(item.id, [])))

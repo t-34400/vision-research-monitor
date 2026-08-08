@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 import time
+from collections.abc import Callable, Mapping
 from dataclasses import dataclass
-from typing import Any, Callable, Mapping
+from typing import Any
 from urllib.parse import urlencode
 
 import httpx
-
 
 API_VERSION = "2026-03-10"
 
@@ -115,7 +115,9 @@ class GitHubClient:
         for attempt in range(self.max_retries + 1):
             response = self._client.get(path, params=params, headers=request_headers)
             if response.status_code == 304:
-                return ApiResult(None, 304, response.headers, cache_key=cache_key, not_modified=True)
+                return ApiResult(
+                    None, 304, response.headers, cache_key=cache_key, not_modified=True
+                )
             if response.status_code == 404:
                 raise GitHubNotFoundError(f"GitHub resource not found: {response.request.url}")
             if self._should_retry_rate_limit(response):
@@ -127,8 +129,12 @@ class GitHubClient:
             try:
                 response.raise_for_status()
             except httpx.HTTPStatusError as exc:
-                raise GitHubApiError(f"GitHub API request failed ({response.status_code}): {response.request.url}") from exc
-            return ApiResult(response.json(), response.status_code, response.headers, cache_key=cache_key)
+                raise GitHubApiError(
+                    f"GitHub API request failed ({response.status_code}): {response.request.url}"
+                ) from exc
+            return ApiResult(
+                response.json(), response.status_code, response.headers, cache_key=cache_key
+            )
         raise AssertionError("retry loop exhausted unexpectedly")
 
     def get_text(
@@ -182,15 +188,21 @@ class GitHubClient:
     def _should_retry_rate_limit(self, response: httpx.Response) -> bool:
         if response.status_code != 403:
             return False
-        if response.headers.get("x-ratelimit-remaining") == "0" or response.headers.get("retry-after"):
+        if response.headers.get("x-ratelimit-remaining") == "0" or response.headers.get(
+            "retry-after"
+        ):
             return True
         message = response.text.lower()
         return "secondary rate limit" in message or "abuse detection" in message
 
-    def _retry_or_raise(self, response: httpx.Response, attempt: int, *, rate_limited: bool) -> None:
+    def _retry_or_raise(
+        self, response: httpx.Response, attempt: int, *, rate_limited: bool
+    ) -> None:
         if attempt >= self.max_retries:
             error = GitHubRateLimitError if rate_limited else GitHubApiError
-            raise error(f"GitHub API retry limit exceeded ({response.status_code}): {response.request.url}")
+            raise error(
+                f"GitHub API retry limit exceeded ({response.status_code}): {response.request.url}"
+            )
         delay = self._retry_delay(response, attempt, rate_limited=rate_limited)
         if delay > self.max_retry_wait:
             raise GitHubRateLimitError(

@@ -1,12 +1,11 @@
 import copy
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 from vision_research_monitor.github.client import ApiResult
 from vision_research_monitor.github.watch import GitHubWatchCollector, repository_popularity
-
 
 FIXTURES = Path(__file__).parent / "fixtures/github"
 
@@ -22,10 +21,14 @@ class FakeGitHubClient:
         self.tags: list[dict[str, Any]] = []
         self.commit: dict[str, Any] | None = None
 
-    def get_paginated(self, path: str, *, params: dict[str, Any], max_pages: int = 100) -> list[dict[str, Any]]:
+    def get_paginated(
+        self, path: str, *, params: dict[str, Any], max_pages: int = 100
+    ) -> list[dict[str, Any]]:
         return [copy.deepcopy(self.repository)]
 
-    def get_json(self, path: str, *, params: dict[str, Any] | None = None, conditional: bool = False) -> ApiResult:
+    def get_json(
+        self, path: str, *, params: dict[str, Any] | None = None, conditional: bool = False
+    ) -> ApiResult:
         if path.endswith("/releases"):
             return ApiResult(copy.deepcopy(self.releases), 200, {})
         if path.endswith("/tags"):
@@ -64,7 +67,7 @@ def test_first_account_run_establishes_baseline_without_historical_items() -> No
     state = empty_state()
     collector = GitHubWatchCollector(client, state, watchlist())
 
-    result = collector.collect(datetime(2026, 8, 8, 0, 0, tzinfo=timezone.utc))
+    result = collector.collect(datetime(2026, 8, 8, 0, 0, tzinfo=UTC))
 
     assert result.items == []
     assert state["accounts"]["organization:example"]["repository_ids"] == ["101"]
@@ -76,7 +79,7 @@ def test_changed_account_repository_emits_metadata_release_and_head_activity() -
     client = FakeGitHubClient(repository)
     state = empty_state()
     collector = GitHubWatchCollector(client, state, watchlist())
-    collector.collect(datetime(2026, 8, 8, 0, 0, tzinfo=timezone.utc))
+    collector.collect(datetime(2026, 8, 8, 0, 0, tzinfo=UTC))
 
     repository["description"] = "Updated Gaussian splatting project"
     repository["updated_at"] = "2026-08-08T01:15:00Z"
@@ -85,7 +88,7 @@ def test_changed_account_repository_emits_metadata_release_and_head_activity() -
     client.tags = [fixture("tag.json")]
     client.commit = fixture("commit.json")
 
-    result = collector.collect(datetime(2026, 8, 8, 2, 0, tzinfo=timezone.utc))
+    result = collector.collect(datetime(2026, 8, 8, 2, 0, tzinfo=UTC))
     kinds = [item.kind for item in result.items]
 
     assert kinds.count("event") == 1
@@ -99,18 +102,18 @@ def test_subsequent_tag_is_emitted_after_tag_baseline_exists() -> None:
     client = FakeGitHubClient(repository)
     state = empty_state()
     collector = GitHubWatchCollector(client, state, watchlist())
-    collector.collect(datetime(2026, 8, 8, 0, 0, tzinfo=timezone.utc))
+    collector.collect(datetime(2026, 8, 8, 0, 0, tzinfo=UTC))
 
     repository["updated_at"] = "2026-08-08T01:00:00Z"
     client.tags = [fixture("tag.json")]
     client.commit = fixture("commit.json")
-    collector.collect(datetime(2026, 8, 8, 2, 0, tzinfo=timezone.utc))
+    collector.collect(datetime(2026, 8, 8, 2, 0, tzinfo=UTC))
 
     new_tag = fixture("tag.json")
     new_tag["name"] = "v1.2.0"
     repository["updated_at"] = "2026-08-08T03:00:00Z"
     client.tags = [new_tag, fixture("tag.json")]
-    result = collector.collect(datetime(2026, 8, 8, 4, 0, tzinfo=timezone.utc))
+    result = collector.collect(datetime(2026, 8, 8, 4, 0, tzinfo=UTC))
 
     assert [item.kind for item in result.items].count("tag") == 1
     assert any(item.metadata.get("tag_name") == "v1.2.0" for item in result.items)

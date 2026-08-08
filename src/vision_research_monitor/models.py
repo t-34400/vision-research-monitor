@@ -1,22 +1,22 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 
 def utc_now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 def to_iso8601(value: datetime) -> str:
-    return value.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+    return value.astimezone(UTC).isoformat().replace("+00:00", "Z")
 
 
 def parse_iso8601(value: str | None) -> datetime | None:
     if value is None:
         return None
-    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(UTC)
 
 
 @dataclass(slots=True)
@@ -45,11 +45,26 @@ class NormalizedItem:
         return asdict(self)
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> "NormalizedItem":
+    def from_dict(cls, data: dict[str, Any]) -> NormalizedItem:
         fields = {
-            "id", "source", "source_id", "kind", "title", "url", "discovered_at",
-            "published_at", "updated_at", "summary", "authors", "organization",
-            "venue", "topics", "matched_terms", "priority", "scores",
-            "related_items", "metadata",
+            "id",
+            "source",
+            "source_id",
+            "kind",
+            "title",
+            "url",
+            "discovered_at",
+            "published_at",
+            "updated_at",
+            "summary",
+            "authors",
+            "organization",
+            "venue",
+            "topics",
+            "matched_terms",
+            "priority",
+            "scores",
+            "related_items",
+            "metadata",
         }
         return cls(**{key: value for key, value in data.items() if key in fields})

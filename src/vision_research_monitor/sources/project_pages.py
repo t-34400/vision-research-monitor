@@ -45,7 +45,9 @@ def extract_research_links(records: list[LinkRecord], *, base_url: str) -> Extra
         if not raw or raw.startswith(("mailto:", "javascript:", "#")):
             continue
         absolute = urljoin(base_url, raw)
-        canonical = canonicalize_url(absolute, tracking_query_prefixes=("utm_",), tracking_query_keys=("ref", "source"))
+        canonical = canonicalize_url(
+            absolute, tracking_query_prefixes=("utm_",), tracking_query_keys=("ref", "source")
+        )
         if canonical is None:
             continue
         host = (urlsplit(canonical).hostname or "").casefold()
@@ -66,7 +68,7 @@ def extract_research_links(records: list[LinkRecord], *, base_url: str) -> Extra
 
 
 def project_item_from_url(parent: NormalizedItem, url: str) -> NormalizedItem:
-    digest = hashlib.sha256(f"{parent.id}\n{url}".encode("utf-8")).hexdigest()[:20]
+    digest = hashlib.sha256(f"{parent.id}\n{url}".encode()).hexdigest()[:20]
     source_id = f"{parent.source_id}:project:{digest}"
     return NormalizedItem(
         id=f"{parent.source}:project:{digest}",

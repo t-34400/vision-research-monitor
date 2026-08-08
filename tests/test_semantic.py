@@ -7,15 +7,19 @@ import yaml
 
 from vision_research_monitor.academic.matching import AcademicLexicalMatcher
 from vision_research_monitor.classification.evaluation import evaluate
-from vision_research_monitor.classification.semantic import LLMClassification, SemanticClassificationPipeline
+from vision_research_monitor.classification.semantic import (
+    LLMClassification,
+    SemanticClassificationPipeline,
+)
 from vision_research_monitor.config import load_academic, load_semantic, load_taxonomy, load_venues
-
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def load_configs() -> tuple[dict, dict, dict]:
-    taxonomy = load_taxonomy(ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json")
+    taxonomy = load_taxonomy(
+        ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json"
+    )
     venues = load_venues(ROOT / "config/venues.yaml", ROOT / "config/schemas/venues.schema.json")
     academic = load_academic(
         ROOT / "config/academic.yaml",
@@ -76,19 +80,25 @@ def test_semantic_profile_enriches_accepted_lexical_topics() -> None:
 def test_llm_contract_runs_only_after_low_lexical_candidate_reduction() -> None:
     taxonomy, academic, semantic = load_configs()
     semantic = deepcopy(semantic)
-    semantic["llm"].update({
-        "enabled": True,
-        "minimum_semantic_score": 0.0,
-        "maximum_semantic_score": 1.0,
-    })
+    semantic["llm"].update(
+        {
+            "enabled": True,
+            "minimum_semantic_score": 0.0,
+            "maximum_semantic_score": 1.0,
+        }
+    )
 
     class FakeLLM:
         def __init__(self) -> None:
             self.calls: list[list[str]] = []
 
-        def classify(self, *, title: str, text: str, candidate_topics: list[str]) -> LLMClassification:
+        def classify(
+            self, *, title: str, text: str, candidate_topics: list[str]
+        ) -> LLMClassification:
             self.calls.append(candidate_topics)
-            return LLMClassification(True, candidate_topics[:1], 0.88, "fixture decision", "fixture-llm-v1")
+            return LLMClassification(
+                True, candidate_topics[:1], 0.88, "fixture decision", "fixture-llm-v1"
+            )
 
     fake = FakeLLM()
     pipeline = SemanticClassificationPipeline(taxonomy, semantic, llm_classifier=fake)
@@ -135,14 +145,18 @@ def test_reviewed_evaluation_improves_over_lexical_baseline() -> None:
 def test_llm_failure_falls_back_to_semantic_result() -> None:
     taxonomy, academic, semantic = load_configs()
     semantic = deepcopy(semantic)
-    semantic["llm"].update({
-        "enabled": True,
-        "minimum_semantic_score": 0.0,
-        "maximum_semantic_score": 1.0,
-    })
+    semantic["llm"].update(
+        {
+            "enabled": True,
+            "minimum_semantic_score": 0.0,
+            "maximum_semantic_score": 1.0,
+        }
+    )
 
     class BrokenLLM:
-        def classify(self, *, title: str, text: str, candidate_topics: list[str]) -> LLMClassification:
+        def classify(
+            self, *, title: str, text: str, candidate_topics: list[str]
+        ) -> LLMClassification:
             raise RuntimeError("provider unavailable")
 
     pipeline = SemanticClassificationPipeline(taxonomy, semantic, llm_classifier=BrokenLLM())

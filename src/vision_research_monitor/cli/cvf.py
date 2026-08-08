@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from vision_research_monitor.classification.semantic import SemanticClassificationPipeline
@@ -10,7 +10,7 @@ from vision_research_monitor.config import load_semantic, load_sources, load_tax
 from vision_research_monitor.http import HttpClient
 from vision_research_monitor.models import parse_iso8601
 from vision_research_monitor.sources.cvf import CVFCollector
-from vision_research_monitor.storage import JsonStateStore, JsonlItemStore
+from vision_research_monitor.storage import JsonlItemStore, JsonStateStore
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -20,11 +20,13 @@ def main() -> int:
     parser.add_argument("--run-at")
     args = parser.parse_args()
 
-    run_at = parse_iso8601(args.run_at) if args.run_at else datetime.now(timezone.utc)
+    run_at = parse_iso8601(args.run_at) if args.run_at else datetime.now(UTC)
     if run_at is None:
         parser.error("--run-at must be an ISO 8601 timestamp")
 
-    taxonomy = load_taxonomy(ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json")
+    taxonomy = load_taxonomy(
+        ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json"
+    )
     venues = load_venues(ROOT / "config/venues.yaml", ROOT / "config/schemas/venues.schema.json")
     topic_ids = {topic["id"] for topic in taxonomy["topics"]}
     config = load_sources(
@@ -54,7 +56,15 @@ def main() -> int:
     if result.failed_targets == 0:
         state_store.save(state)
 
-    print(json.dumps({"found": len(result.items), "written": written, "failed_targets": result.failed_targets}))
+    print(
+        json.dumps(
+            {
+                "found": len(result.items),
+                "written": written,
+                "failed_targets": result.failed_targets,
+            }
+        )
+    )
     for diagnostic in result.diagnostics:
         print(json.dumps(diagnostic), flush=True)
     return 1 if result.failed_targets else 0

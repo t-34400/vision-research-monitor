@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import email.utils
 import time
+from collections.abc import Callable, Mapping
 from dataclasses import dataclass
-from datetime import datetime, timezone
-from typing import Any, Callable, Mapping
+from datetime import UTC, datetime
+from typing import Any
 
 import httpx
 
@@ -71,7 +72,9 @@ class HttpClient:
         accept: str = "text/html, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.5",
     ) -> HttpResult:
         response = self._get(path, params=params, headers={"Accept": accept})
-        return HttpResult(data=response.text, status_code=response.status_code, headers=response.headers)
+        return HttpResult(
+            data=response.text, status_code=response.status_code, headers=response.headers
+        )
 
     def _get(
         self,
@@ -124,6 +127,6 @@ class HttpClient:
                     pass
                 else:
                     if parsed.tzinfo is None:
-                        parsed = parsed.replace(tzinfo=timezone.utc)
-                    return max(0.0, (parsed - datetime.now(timezone.utc)).total_seconds())
+                        parsed = parsed.replace(tzinfo=UTC)
+                    return max(0.0, (parsed - datetime.now(UTC)).total_seconds())
         return min(2**attempt, 30.0)

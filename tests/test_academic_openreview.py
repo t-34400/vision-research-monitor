@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
@@ -7,7 +7,6 @@ import yaml
 
 from vision_research_monitor.academic.http import AcademicHttpClient
 from vision_research_monitor.academic.openreview import OpenReviewCollector, normalize_status
-
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "tests/fixtures/academic"
@@ -43,7 +42,7 @@ def test_openreview_bootstrap_filters_and_normalizes_notes() -> None:
             sleeper=lambda _: None,
             monotonic=lambda: 0.0,
         )
-        result = collector.collect(datetime(2026, 8, 8, tzinfo=timezone.utc))
+        result = collector.collect(datetime(2026, 8, 8, tzinfo=UTC))
 
     assert result.failed_targets == 0
     assert len(result.items) == 1
@@ -87,17 +86,23 @@ def test_openreview_incremental_collection_uses_modification_order() -> None:
             sleeper=lambda _: None,
             monotonic=lambda: 0.0,
         )
-        collector.collect(datetime(2026, 8, 8, tzinfo=timezone.utc))
+        collector.collect(datetime(2026, 8, 8, tzinfo=UTC))
 
     assert requests[0].url.params["sort"] == "tmdate:desc"
     assert "mintcdate" not in requests[0].url.params
 
 
 def test_openreview_status_normalization() -> None:
-    assert normalize_status({"content": {"venue": {"value": "Withdrawn Submission"}}}) == "withdrawn"
+    assert (
+        normalize_status({"content": {"venue": {"value": "Withdrawn Submission"}}}) == "withdrawn"
+    )
     assert normalize_status({"content": {"venue": {"value": "Rejected"}}}) == "rejected"
-    assert normalize_status({"pdate": 1, "content": {"venue": {"value": "CVPR 2026"}}}) == "accepted"
-    assert normalize_status({"content": {"venue": {"value": "CVPR 2026 Submission"}}}) == "submitted"
+    assert (
+        normalize_status({"pdate": 1, "content": {"venue": {"value": "CVPR 2026"}}}) == "accepted"
+    )
+    assert (
+        normalize_status({"content": {"venue": {"value": "CVPR 2026 Submission"}}}) == "submitted"
+    )
 
 
 def test_openreview_emits_status_transition_for_modified_note() -> None:
@@ -138,11 +143,16 @@ def test_openreview_emits_status_transition_for_modified_note() -> None:
             taxonomy,
             sleeper=lambda _: None,
             monotonic=lambda: 0.0,
-        ).collect(datetime(2026, 8, 8, tzinfo=timezone.utc))
+        ).collect(datetime(2026, 8, 8, tzinfo=UTC))
 
     transition = next(item for item in result.items if item.kind == "event")
     assert transition.metadata["action"] == "status_changed"
     assert transition.metadata["previous_status"] == "submitted"
     assert transition.metadata["status"] == "accepted"
     assert transition.metadata["paper_id"] == "note-gaussian"
-    assert state["academic"]["openreview"]["editions"]["thecvf.com/CVPR/2026/Conference"]["notes"]["note-gaussian"]["status"] == "accepted"
+    assert (
+        state["academic"]["openreview"]["editions"]["thecvf.com/CVPR/2026/Conference"]["notes"][
+            "note-gaussian"
+        ]["status"]
+        == "accepted"
+    )

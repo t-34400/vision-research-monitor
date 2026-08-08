@@ -3,12 +3,17 @@ from __future__ import annotations
 import math
 import re
 import time
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
-from typing import Any, Callable
+from datetime import UTC, datetime, timedelta
+from typing import Any
 from zoneinfo import ZoneInfo
 
-from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
+from ..classification.semantic import (
+    ClassificationResult,
+    SemanticClassificationPipeline,
+    rejected_lexical,
+)
 from ..models import NormalizedItem, parse_iso8601, to_iso8601
 from .client import GitHubApiError, GitHubClient, GitHubNotFoundError
 
@@ -85,7 +90,11 @@ class LexicalScorer:
             best_term: str | None = None
             for original, alias in aliases:
                 for field_name, field_value in fields.items():
-                    if alias and contains_normalized(field_value, alias) and field_weights[field_name] > best:
+                    if (
+                        alias
+                        and contains_normalized(field_value, alias)
+                        and field_weights[field_name] > best
+                    ):
                         best = field_weights[field_name]
                         best_term = original
             if best:
@@ -100,9 +109,13 @@ class LexicalScorer:
         score = ordered_scores[0]
         if len(ordered_scores) > 1:
             score += min(0.20, sum(ordered_scores[1:]) * 0.10)
-        if query_topics and any(topic_id in topic_scores and topic_scores[topic_id] > 0.35 for topic_id in query_topics):
+        if query_topics and any(
+            topic_id in topic_scores and topic_scores[topic_id] > 0.35 for topic_id in query_topics
+        ):
             score += 0.10
-        return LexicalMatch(min(1.0, round(score, 4)), sorted(topic_scores), sorted(matched_terms, key=str.casefold))
+        return LexicalMatch(
+            min(1.0, round(score, 4)), sorted(topic_scores), sorted(matched_terms, key=str.casefold)
+        )
 
 
 class GitHubDiscoveryCollector:
@@ -131,7 +144,7 @@ class GitHubDiscoveryCollector:
         self._readme_enrichments = 0
 
     def collection_window(self, run_at: datetime) -> tuple[datetime, datetime]:
-        run_at = run_at.astimezone(timezone.utc)
+        run_at = run_at.astimezone(UTC)
         window = self.config["window"]
         previous = parse_iso8601(self.state.get("last_successful_at"))
         if previous is None:
@@ -152,16 +165,18 @@ class GitHubDiscoveryCollector:
         window_start: datetime | None = None,
         window_end: datetime | None = None,
     ) -> DiscoveryRunResult:
-        run_at = run_at.astimezone(timezone.utc)
+        run_at = run_at.astimezone(UTC)
         if window_start is None or window_end is None:
             window_start, window_end = self.collection_window(run_at)
         else:
-            window_start = window_start.astimezone(timezone.utc)
-            window_end = window_end.astimezone(timezone.utc)
+            window_start = window_start.astimezone(UTC)
+            window_end = window_end.astimezone(UTC)
         if window_start >= window_end:
             raise ValueError("GitHub discovery window start must be before its end")
 
-        result = DiscoveryRunResult(window_start=to_iso8601(window_start), window_end=to_iso8601(window_end))
+        result = DiscoveryRunResult(
+            window_start=to_iso8601(window_start), window_end=to_iso8601(window_end)
+        )
         candidates: dict[str, Candidate] = {}
 
         for family in self.config["query_families"]:
@@ -170,12 +185,16 @@ class GitHubDiscoveryCollector:
                 for mode in modes:
                     target = f"topic:{family['id']}:{query['id']}:{mode}"
                     try:
-                        repositories = self._search_query(query["text"], mode, window_start, window_end)
+                        repositories = self._search_query(
+                            query["text"], mode, window_start, window_end
+                        )
                     except Exception as exc:
                         result.add_error(target, exc)
                         continue
                     for repository in repositories:
-                        candidate = candidates.setdefault(str(repository["id"]), Candidate(repository=repository))
+                        candidate = candidates.setdefault(
+                            str(repository["id"]), Candidate(repository=repository)
+                        )
                         candidate.repository = prefer_repository(candidate.repository, repository)
                         candidate.query_topics.update(query["topics"])
                         candidate.query_terms.add(unquote_query_term(query["text"]))
@@ -214,12 +233,16 @@ class GitHubDiscoveryCollector:
                 for mode in venue_config["modes"]:
                     target = f"venue:{venue['id']}:{year}:{mode}"
                     try:
-                        repositories = self._search_query(query, mode, window_start, window_end, add_locations=False)
+                        repositories = self._search_query(
+                            query, mode, window_start, window_end, add_locations=False
+                        )
                     except Exception as exc:
                         result.add_error(target, exc)
                         continue
                     for repository in repositories:
-                        candidate = candidates.setdefault(str(repository["id"]), Candidate(repository=repository))
+                        candidate = candidates.setdefault(
+                            str(repository["id"]), Candidate(repository=repository)
+                        )
                         candidate.repository = prefer_repository(candidate.repository, repository)
                         candidate.venue_hits.add((venue["id"], year, alias))
                         candidate.modes.add(mode)
@@ -264,7 +287,11 @@ class GitHubDiscoveryCollector:
         if incomplete or total_count > capacity:
             minimum = timedelta(minutes=self.config["window"]["minimum_split_minutes"])
             if end - start <= minimum:
-                reason = "incomplete search results" if incomplete else f"{total_count} results exceed slice capacity {capacity}"
+                reason = (
+                    "incomplete search results"
+                    if incomplete
+                    else f"{total_count} results exceed slice capacity {capacity}"
+                )
                 raise DiscoveryCoverageError(f"Cannot safely collect {q}: {reason}")
             midpoint = start + (end - start) / 2
             left = self._search_slice(prefix, mode, start, midpoint)
@@ -277,7 +304,9 @@ class GitHubDiscoveryCollector:
             data = self._search_page(q, page, per_page)
             _, page_incomplete, page_items = parse_search_response(data, q)
             if page_incomplete:
-                raise DiscoveryCoverageError(f"GitHub returned incomplete results for {q} page {page}")
+                raise DiscoveryCoverageError(
+                    f"GitHub returned incomplete results for {q} page {page}"
+                )
             repositories.extend(page_items)
         return dedupe_repositories(repositories)
 
@@ -338,7 +367,10 @@ class GitHubDiscoveryCollector:
             if not classification.accepted:
                 continue
             items.append(self._repository_item(candidate, classification, run_at))
-        return sorted(items, key=lambda item: (-float(item.scores.get("relevance") or 0), item.title.casefold()))
+        return sorted(
+            items,
+            key=lambda item: (-float(item.scores.get("relevance") or 0), item.title.casefold()),
+        )
 
     def _classify_candidate(
         self,
@@ -384,7 +416,10 @@ class GitHubDiscoveryCollector:
     def _readme_for_candidate(self, candidate: Candidate, result: DiscoveryRunResult) -> str | None:
         limit = self.config["search"]["max_readme_enrichments_per_run"]
         if self._readme_enrichments >= limit:
-            result.add_warning("venue-readme", f"README enrichment cap of {limit} reached; remaining venue-only candidates were skipped")
+            result.add_warning(
+                "venue-readme",
+                f"README enrichment cap of {limit} reached; remaining venue-only candidates were skipped",
+            )
             return None
         self._readme_enrichments += 1
         full_name = candidate.repository.get("full_name")
@@ -400,7 +435,9 @@ class GitHubDiscoveryCollector:
         return response.data if isinstance(response.data, str) else None
 
     @staticmethod
-    def _repository_item(candidate: Candidate, classification: ClassificationResult, run_at: datetime) -> NormalizedItem:
+    def _repository_item(
+        candidate: Candidate, classification: ClassificationResult, run_at: datetime
+    ) -> NormalizedItem:
         repo = candidate.repository
         repo_id = str(repo["id"])
         venue_hits = [
@@ -442,16 +479,22 @@ class GitHubDiscoveryCollector:
         )
 
 
-def parse_search_response(data: dict[str, Any], query: str) -> tuple[int, bool, list[dict[str, Any]]]:
+def parse_search_response(
+    data: dict[str, Any], query: str
+) -> tuple[int, bool, list[dict[str, Any]]]:
     total_count = data.get("total_count")
     items = data.get("items")
     if not isinstance(total_count, int) or not isinstance(items, list):
         raise GitHubApiError(f"Invalid GitHub repository search response for {query}")
-    return total_count, bool(data.get("incomplete_results")), [item for item in items if isinstance(item, dict)]
+    return (
+        total_count,
+        bool(data.get("incomplete_results")),
+        [item for item in items if isinstance(item, dict)],
+    )
 
 
 def search_time(value: datetime) -> str:
-    return value.astimezone(timezone.utc).isoformat(timespec="seconds")
+    return value.astimezone(UTC).isoformat(timespec="seconds")
 
 
 def normalize_text(value: str) -> str:

@@ -56,7 +56,9 @@ class ResearchRanker:
         weighted = sum(float(weights[name]) * getattr(signals, name) for name in weights)
         total = round(weighted / weight_sum, 4)
         source_priority = item.priority.get("source")
-        watched_override = isinstance(source_priority, (int, float)) and float(source_priority) >= 1.0
+        watched_override = (
+            isinstance(source_priority, (int, float)) and float(source_priority) >= 1.0
+        )
         return RankedItem(item, signals, total, watched_override, change_label(item))
 
     def included(self, ranked: RankedItem) -> bool:
@@ -69,7 +71,9 @@ class ResearchRanker:
         explicit_value = float(explicit) if isinstance(explicit, (int, float)) else 0.0
         source_default = float(self.config["source_priority_defaults"].get(item.source, 0.0))
         venue_level = self.venue_priorities.get(item.venue or "")
-        venue_value = float(self.config["venue_priority"].get(venue_level, 0.0)) if venue_level else 0.0
+        venue_value = (
+            float(self.config["venue_priority"].get(venue_level, 0.0)) if venue_level else 0.0
+        )
         return clamp(max(explicit_value, source_default, venue_value))
 
     def _relevance(self, item: NormalizedItem) -> float:

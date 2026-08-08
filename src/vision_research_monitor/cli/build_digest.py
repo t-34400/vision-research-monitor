@@ -12,7 +12,6 @@ from ..models import NormalizedItem
 from ..reporting.digest import DailyDigestBuilder
 from ..storage import JsonDocumentStore, JsonlItemStore, TextDocumentStore
 
-
 ROOT = Path(__file__).resolve().parents[3]
 
 
@@ -24,21 +23,27 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    taxonomy = load_taxonomy(ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json")
+    taxonomy = load_taxonomy(
+        ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json"
+    )
     venues = load_venues(ROOT / "config/venues.yaml", ROOT / "config/schemas/venues.schema.json")
     reporting = load_reporting(
         ROOT / "config/reporting.yaml",
         ROOT / "config/schemas/reporting.schema.json",
         {venue["priority"] for venue in venues["venues"]},
     )
-    linking = load_linking(ROOT / "config/linking.yaml", ROOT / "config/schemas/linking.schema.json")
+    linking = load_linking(
+        ROOT / "config/linking.yaml", ROOT / "config/schemas/linking.schema.json"
+    )
     report_date = parse_report_date(args.report_date, reporting["timezone"])
 
     items = JsonlItemStore(ROOT / "data/items").load_items()
     link_result = EntityLinker(linking).link(items, generated_at=deterministic_link_time(items))
     JsonDocumentStore(ROOT / "data/entities/links.json").save(link_result.to_dict())
 
-    digest = DailyDigestBuilder(reporting, taxonomy, venues).build(items, link_result, report_date=report_date)
+    digest = DailyDigestBuilder(reporting, taxonomy, venues).build(
+        items, link_result, report_date=report_date
+    )
     date_text = report_date.isoformat()
     JsonDocumentStore(ROOT / f"data/ranking/{date_text}.json").save(digest.ranking_document())
     TextDocumentStore(ROOT / f"reports/daily/{date_text}.md").save(digest.markdown)

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 
 from vision_research_monitor.analytics.archive import build_archive_index, search_archive
 from vision_research_monitor.analytics.trends import LongTermAnalyzer, activity_date
@@ -77,8 +77,8 @@ def test_activity_date_uses_same_0800_jst_boundary_as_digest() -> None:
     from zoneinfo import ZoneInfo
 
     tz = ZoneInfo("Asia/Tokyo")
-    before = datetime(2026, 8, 7, 22, 59, tzinfo=timezone.utc)
-    boundary = datetime(2026, 8, 7, 23, 0, tzinfo=timezone.utc)
+    before = datetime(2026, 8, 7, 22, 59, tzinfo=UTC)
+    boundary = datetime(2026, 8, 7, 23, 0, tzinfo=UTC)
 
     assert activity_date(before, tz, 8) == date(2026, 8, 8)
     assert activity_date(boundary, tz, 8) == date(2026, 8, 9)
@@ -87,7 +87,12 @@ def test_activity_date_uses_same_0800_jst_boundary_as_digest() -> None:
 def test_daily_counts_dedupe_linked_papers_and_preserve_raw_item_volume() -> None:
     items = [
         make_item("arxiv:1", discovered_at="2026-08-08T01:00:00Z", topics=["depth"]),
-        make_item("openreview:1", source="openreview", discovered_at="2026-08-08T02:00:00Z", topics=["depth"]),
+        make_item(
+            "openreview:1",
+            source="openreview",
+            discovered_at="2026-08-08T02:00:00Z",
+            topics=["depth"],
+        ),
         make_item(
             "github:repository:7",
             source="github",
@@ -159,7 +164,12 @@ def test_topic_momentum_compares_unique_entity_share_between_windows() -> None:
 def test_growth_counts_first_seen_linked_entities_once() -> None:
     items = [
         make_item("arxiv:new", discovered_at="2026-08-05T01:00:00Z", topics=["depth"]),
-        make_item("openreview:new", source="openreview", discovered_at="2026-08-06T01:00:00Z", topics=["depth"]),
+        make_item(
+            "openreview:new",
+            source="openreview",
+            discovered_at="2026-08-06T01:00:00Z",
+            topics=["depth"],
+        ),
         make_item("arxiv:old", discovered_at="2026-07-29T01:00:00Z", topics=["depth"]),
         make_item(
             "github:repository:new",
@@ -258,16 +268,19 @@ def test_archive_search_supports_text_and_structured_filters() -> None:
         [visible, hidden],
         empty_links(),
         generated_for_date="2026-08-09",
-        cutoff=datetime(2026, 8, 8, 23, tzinfo=timezone.utc),
+        cutoff=datetime(2026, 8, 8, 23, tzinfo=UTC),
         maximum_summary_characters=100,
     )
 
-    results = search_archive(index, query="metric depth", topics={"depth"}, kinds={"paper"}, limit=10)
+    results = search_archive(
+        index, query="metric depth", topics={"depth"}, kinds={"paper"}, limit=10
+    )
     assert [record.id for record in results] == ["paper:visible"]
     assert search_archive(index, query="project", limit=10) == []
-    assert [record.id for record in search_archive(index, query="project", include_hidden=True, limit=10)] == [
-        "project:hidden"
-    ]
+    assert [
+        record.id
+        for record in search_archive(index, query="project", include_hidden=True, limit=10)
+    ] == ["project:hidden"]
 
 
 def test_hidden_relationship_records_do_not_inflate_trend_activity() -> None:

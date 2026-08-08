@@ -14,19 +14,22 @@ from ..models import parse_iso8601
 from ..reporting.digest import report_window
 from ..storage import JsonDocumentStore, JsonlItemStore, TextDocumentStore
 
-
 ROOT = Path(__file__).resolve().parents[3]
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Build long-term research analytics and archive index")
+    parser = argparse.ArgumentParser(
+        description="Build long-term research analytics and archive index"
+    )
     parser.add_argument("--date", dest="report_date", help="Analysis period end date in YYYY-MM-DD")
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    taxonomy = load_taxonomy(ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json")
+    taxonomy = load_taxonomy(
+        ROOT / "config/taxonomy.yaml", ROOT / "config/schemas/taxonomy.schema.json"
+    )
     venues = load_venues(ROOT / "config/venues.yaml", ROOT / "config/schemas/venues.schema.json")
     reporting = load_reporting(
         ROOT / "config/reporting.yaml",
@@ -37,11 +40,15 @@ def main(argv: list[str] | None = None) -> int:
         ROOT / "config/analytics.yaml",
         ROOT / "config/schemas/analytics.schema.json",
     )
-    linking = load_linking(ROOT / "config/linking.yaml", ROOT / "config/schemas/linking.schema.json")
+    linking = load_linking(
+        ROOT / "config/linking.yaml", ROOT / "config/schemas/linking.schema.json"
+    )
     report_date = parse_report_date(args.report_date, reporting["timezone"])
 
     all_items = JsonlItemStore(ROOT / "data/items").load_items()
-    _, cutoff = report_window(report_date, ZoneInfo(reporting["timezone"]), int(reporting["day_boundary_hour"]))
+    _, cutoff = report_window(
+        report_date, ZoneInfo(reporting["timezone"]), int(reporting["day_boundary_hour"])
+    )
     items = [
         item
         for item in all_items
@@ -54,7 +61,9 @@ def main(argv: list[str] | None = None) -> int:
 
     date_text = report_date.isoformat()
     JsonDocumentStore(ROOT / f"data/analytics/{date_text}.json").save(snapshot.to_dict())
-    TextDocumentStore(ROOT / f"reports/trends/{date_text}.md").save(analyzer.render_markdown(snapshot, topic_labels))
+    TextDocumentStore(ROOT / f"reports/trends/{date_text}.md").save(
+        analyzer.render_markdown(snapshot, topic_labels)
+    )
 
     archive = build_archive_index(
         items,

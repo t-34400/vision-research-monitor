@@ -53,16 +53,22 @@ def test_canonicalize_url_normalizes_paper_urls_and_tracking_parameters() -> Non
     config = load_config()
     url_config = config["url"]
 
-    assert canonicalize_url(
-        "http://arxiv.org/pdf/2608.01234v2.pdf?utm_source=test#page=2",
-        tracking_query_prefixes=url_config["tracking_query_prefixes"],
-        tracking_query_keys=url_config["tracking_query_keys"],
-    ) == "https://arxiv.org/abs/2608.01234"
-    assert canonicalize_url(
-        "https://example.org/project/?b=2&utm_medium=x&a=1#demo",
-        tracking_query_prefixes=url_config["tracking_query_prefixes"],
-        tracking_query_keys=url_config["tracking_query_keys"],
-    ) == "https://example.org/project?a=1&b=2"
+    assert (
+        canonicalize_url(
+            "http://arxiv.org/pdf/2608.01234v2.pdf?utm_source=test#page=2",
+            tracking_query_prefixes=url_config["tracking_query_prefixes"],
+            tracking_query_keys=url_config["tracking_query_keys"],
+        )
+        == "https://arxiv.org/abs/2608.01234"
+    )
+    assert (
+        canonicalize_url(
+            "https://example.org/project/?b=2&utm_medium=x&a=1#demo",
+            tracking_query_prefixes=url_config["tracking_query_prefixes"],
+            tracking_query_keys=url_config["tracking_query_keys"],
+        )
+        == "https://example.org/project?a=1&b=2"
+    )
 
 
 def test_exact_external_identifier_links_repository_and_paper() -> None:
@@ -87,7 +93,9 @@ def test_exact_external_identifier_links_repository_and_paper() -> None:
         topics=["feed_forward_3d_reconstruction"],
     )
 
-    result = EntityLinker(load_config()).link([repository, paper], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [repository, paper], generated_at="2026-08-08T00:00:00Z"
+    )
 
     edge = edge_between(result, repository.id, paper.id)
     assert edge is not None
@@ -114,7 +122,9 @@ def test_github_repository_events_link_by_stable_repository_id() -> None:
         url="https://github.com/research/fast-3d/releases/tag/v1.0",
     )
 
-    result = EntityLinker(load_config()).link([repository, release], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [repository, release], generated_at="2026-08-08T00:00:00Z"
+    )
 
     edge = edge_between(result, repository.id, release.id)
     assert edge is not None
@@ -141,7 +151,9 @@ def test_normalized_title_requires_author_support() -> None:
         authors=["Alice Smith", "Bob Lee", "Carol Kim"],
     )
 
-    result = EntityLinker(load_config()).link([arxiv, openreview], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [arxiv, openreview], generated_at="2026-08-08T00:00:00Z"
+    )
 
     edge = edge_between(result, arxiv.id, openreview.id)
     assert edge is not None
@@ -168,7 +180,9 @@ def test_fuzzy_title_links_only_with_author_support() -> None:
         authors=["Alice Smith", "Bob Lee"],
     )
 
-    result = EntityLinker(load_config()).link([arxiv, openreview], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [arxiv, openreview], generated_at="2026-08-08T00:00:00Z"
+    )
 
     edge = edge_between(result, arxiv.id, openreview.id)
     assert edge is not None
@@ -227,7 +241,9 @@ def test_repository_name_is_only_supporting_evidence_with_topic_overlap() -> Non
     unrelated.url = "https://arxiv.org/abs/2608.00004"
     unrelated.topics = ["image_restoration"]
 
-    result = EntityLinker(load_config()).link([repository, paper, unrelated], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [repository, paper, unrelated], generated_at="2026-08-08T00:00:00Z"
+    )
 
     edge = edge_between(result, repository.id, paper.id)
     assert edge is not None
@@ -255,7 +271,9 @@ def test_generic_repository_name_does_not_create_false_link() -> None:
         topics=["nerf"],
     )
 
-    result = EntityLinker(load_config()).link([repository, paper], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [repository, paper], generated_at="2026-08-08T00:00:00Z"
+    )
 
     assert not result.edges
 
@@ -277,7 +295,9 @@ def test_materialize_related_items_keeps_collected_items_immutable() -> None:
         title="research/model-x v1",
         url="https://github.com/research/model-x/releases/tag/v1",
     )
-    result = EntityLinker(load_config()).link([repository, release], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [repository, release], generated_at="2026-08-08T00:00:00Z"
+    )
 
     materialized = materialize_related_items([repository, release], result)
 
@@ -313,7 +333,9 @@ def test_explicit_project_relation_and_metadata_url_list_are_linked() -> None:
         related_items=[paper.id],
     )
 
-    result = EntityLinker(load_config()).link([paper, repository, project], generated_at="2026-08-08T00:00:00Z")
+    result = EntityLinker(load_config()).link(
+        [paper, repository, project], generated_at="2026-08-08T00:00:00Z"
+    )
 
     assert edge_between(result, paper.id, repository.id) is not None
     explicit = edge_between(result, paper.id, project.id)

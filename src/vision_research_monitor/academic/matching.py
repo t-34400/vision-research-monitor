@@ -26,7 +26,9 @@ class AcademicLexicalMatcher:
                     aliases.append((alias, normalized))
             self._aliases[topic["id"]] = aliases
 
-    def match(self, title: str, abstract: str, *, keywords: list[str] | None = None) -> AcademicMatch:
+    def match(
+        self, title: str, abstract: str, *, keywords: list[str] | None = None
+    ) -> AcademicMatch:
         fields = {
             "title": normalize_text(title),
             "abstract": normalize_text(abstract),

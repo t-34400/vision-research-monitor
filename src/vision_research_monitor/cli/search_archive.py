@@ -2,14 +2,13 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ..analytics.archive import archive_index_from_dict, search_archive
 from ..config import load_analytics
 from ..models import parse_iso8601
 from ..storage import JsonDocumentStore
-
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -28,7 +27,9 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    config = load_analytics(ROOT / "config/analytics.yaml", ROOT / "config/schemas/analytics.schema.json")
+    config = load_analytics(
+        ROOT / "config/analytics.yaml", ROOT / "config/schemas/analytics.schema.json"
+    )
     path = ROOT / "data/archive/index.json"
     data = JsonDocumentStore(path).load()
     if not data:
@@ -52,7 +53,11 @@ def main(argv: list[str] | None = None) -> int:
         include_hidden=args.include_hidden,
         limit=limit,
     )
-    print(json.dumps({"count": len(records), "records": [record.to_dict() for record in records]}, indent=2))
+    print(
+        json.dumps(
+            {"count": len(records), "records": [record.to_dict() for record in records]}, indent=2
+        )
+    )
     return 0
 
 
@@ -61,7 +66,7 @@ def parse_since(value: str | None):
         return None
     if len(value) == 10:
         try:
-            return datetime.fromisoformat(value).replace(tzinfo=timezone.utc)
+            return datetime.fromisoformat(value).replace(tzinfo=UTC)
         except ValueError as exc:
             raise SystemExit("--since must use YYYY-MM-DD or an ISO 8601 UTC timestamp") from exc
     parsed = parse_iso8601(value)

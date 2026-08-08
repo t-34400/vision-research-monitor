@@ -1,12 +1,23 @@
 from __future__ import annotations
 
 import time
-from datetime import datetime, timezone
-from typing import Any, Callable
+from collections.abc import Callable
+from datetime import UTC, datetime
+from typing import Any
 
-from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
+from ..classification.semantic import (
+    ClassificationResult,
+    SemanticClassificationPipeline,
+    rejected_lexical,
+)
 from ..models import NormalizedItem, to_iso8601
-from .common import AcademicCoverageError, AcademicRunResult, collection_window, initialize_result, normalize_window
+from .common import (
+    AcademicCoverageError,
+    AcademicRunResult,
+    collection_window,
+    initialize_result,
+    normalize_window,
+)
 from .http import AcademicHttpClient
 from .matching import AcademicLexicalMatcher
 
@@ -49,7 +60,7 @@ class OpenReviewCollector:
         window_end: datetime | None = None,
         explicit_backfill: bool = False,
     ) -> AcademicRunResult:
-        run_at = run_at.astimezone(timezone.utc)
+        run_at = run_at.astimezone(UTC)
         if window_start is None or window_end is None:
             window_start, window_end = self.collection_window(run_at)
         window_start, window_end = normalize_window(window_start, window_end)
@@ -70,7 +81,9 @@ class OpenReviewCollector:
                 and not explicit_backfill
             )
             try:
-                notes = self._collect_edition(edition, window_start, window_end, bootstrap=bootstrap)
+                notes = self._collect_edition(
+                    edition, window_start, window_end, bootstrap=bootstrap
+                )
             except Exception as exc:
                 result.add_error(f"openreview:{venue_id}", exc)
                 continue
@@ -193,7 +206,9 @@ class OpenReviewCollector:
             payload = response.data
             notes = payload.get("notes", []) if isinstance(payload, dict) else []
             if not isinstance(notes, list):
-                raise AcademicCoverageError(f"OpenReview returned invalid notes payload for {edition['venue_id']}")
+                raise AcademicCoverageError(
+                    f"OpenReview returned invalid notes payload for {edition['venue_id']}"
+                )
 
             for note in notes:
                 if not isinstance(note, dict):
@@ -210,7 +225,11 @@ class OpenReviewCollector:
                 return collected
             if not bootstrap and notes:
                 oldest_activity = min(
-                    (value for note in notes if isinstance(note, dict) and (value := note_activity_ms(note)) is not None),
+                    (
+                        value
+                        for note in notes
+                        if isinstance(note, dict) and (value := note_activity_ms(note)) is not None
+                    ),
                     default=None,
                 )
                 if oldest_activity is not None and oldest_activity < start_ms:
@@ -394,4 +413,4 @@ def integer_value(value: Any) -> int | None:
 def milliseconds_to_iso(value: int | None) -> str | None:
     if value is None:
         return None
-    return to_iso8601(datetime.fromtimestamp(value / 1000, tz=timezone.utc))
+    return to_iso8601(datetime.fromtimestamp(value / 1000, tz=UTC))

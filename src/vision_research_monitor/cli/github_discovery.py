@@ -4,7 +4,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ..classification.semantic import SemanticClassificationPipeline
@@ -18,13 +18,21 @@ from ..storage import JsonlItemStore, JsonStateStore
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Discover relevant GitHub repositories")
     parser.add_argument("--taxonomy", type=Path, default=Path("config/taxonomy.yaml"))
-    parser.add_argument("--taxonomy-schema", type=Path, default=Path("config/schemas/taxonomy.schema.json"))
+    parser.add_argument(
+        "--taxonomy-schema", type=Path, default=Path("config/schemas/taxonomy.schema.json")
+    )
     parser.add_argument("--venues", type=Path, default=Path("config/venues.yaml"))
-    parser.add_argument("--venues-schema", type=Path, default=Path("config/schemas/venues.schema.json"))
+    parser.add_argument(
+        "--venues-schema", type=Path, default=Path("config/schemas/venues.schema.json")
+    )
     parser.add_argument("--config", type=Path, default=Path("config/github_discovery.yaml"))
-    parser.add_argument("--config-schema", type=Path, default=Path("config/schemas/github-discovery.schema.json"))
+    parser.add_argument(
+        "--config-schema", type=Path, default=Path("config/schemas/github-discovery.schema.json")
+    )
     parser.add_argument("--semantic", type=Path, default=Path("config/semantic.yaml"))
-    parser.add_argument("--semantic-schema", type=Path, default=Path("config/schemas/semantic.schema.json"))
+    parser.add_argument(
+        "--semantic-schema", type=Path, default=Path("config/schemas/semantic.schema.json")
+    )
     parser.add_argument("--state", type=Path, default=Path("data/state/github_discovery.json"))
     parser.add_argument("--items", type=Path, default=Path("data/items"))
     parser.add_argument("--from", dest="from_time")
@@ -54,7 +62,7 @@ def main(argv: list[str] | None = None) -> int:
     state = state_store.load()
     item_store = JsonlItemStore(args.items)
     token = os.environ.get("GH_DISCOVERY_TOKEN") or os.environ.get("GITHUB_TOKEN")
-    run_at = datetime.now(timezone.utc)
+    run_at = datetime.now(UTC)
 
     with GitHubClient(token, state["http_cache"]) as client:
         collector = GitHubDiscoveryCollector(client, state, config, taxonomy, venues, classifier)

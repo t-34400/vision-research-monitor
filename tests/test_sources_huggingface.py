@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
@@ -57,9 +57,9 @@ def test_huggingface_collector_emits_recent_relevant_model() -> None:
             sleeper=lambda _: None,
             monotonic=lambda: 0.0,
         ).collect(
-            datetime(2026, 8, 8, 8, tzinfo=timezone.utc),
-            window_start=datetime(2026, 8, 8, 0, tzinfo=timezone.utc),
-            window_end=datetime(2026, 8, 8, 8, tzinfo=timezone.utc),
+            datetime(2026, 8, 8, 8, tzinfo=UTC),
+            window_start=datetime(2026, 8, 8, 0, tzinfo=UTC),
+            window_end=datetime(2026, 8, 8, 8, tzinfo=UTC),
         )
 
     assert result.failed_targets == 0
@@ -68,17 +68,24 @@ def test_huggingface_collector_emits_recent_relevant_model() -> None:
     assert item.kind == "model"
     assert item.metadata["action"] == "discovered"
     assert {"monocular_depth", "metric_depth"}.issubset(item.topics)
-    assert state["sources"]["huggingface"]["repositories"]["example/metric-depth-model"]["last_modified"] == "2026-08-08T05:00:00Z"
+    assert (
+        state["sources"]["huggingface"]["repositories"]["example/metric-depth-model"][
+            "last_modified"
+        ]
+        == "2026-08-08T05:00:00Z"
+    )
 
 
 def test_huggingface_overlap_does_not_reemit_same_revision() -> None:
     config, taxonomy = load_inputs()
-    payload = [{
-        "id": "example/metric-depth-model",
-        "lastModified": "2026-08-08T05:00:00Z",
-        "createdAt": "2026-08-08T02:00:00Z",
-        "tags": ["metric depth"],
-    }]
+    payload = [
+        {
+            "id": "example/metric-depth-model",
+            "lastModified": "2026-08-08T05:00:00Z",
+            "createdAt": "2026-08-08T02:00:00Z",
+            "tags": ["metric depth"],
+        }
+    ]
     state = {
         "sources": {
             "huggingface": {
@@ -104,9 +111,9 @@ def test_huggingface_overlap_does_not_reemit_same_revision() -> None:
             sleeper=lambda _: None,
             monotonic=lambda: 0.0,
         ).collect(
-            datetime(2026, 8, 8, 8, tzinfo=timezone.utc),
-            window_start=datetime(2026, 8, 8, 0, tzinfo=timezone.utc),
-            window_end=datetime(2026, 8, 8, 8, tzinfo=timezone.utc),
+            datetime(2026, 8, 8, 8, tzinfo=UTC),
+            window_start=datetime(2026, 8, 8, 0, tzinfo=UTC),
+            window_end=datetime(2026, 8, 8, 8, tzinfo=UTC),
         )
     assert result.items == []
 

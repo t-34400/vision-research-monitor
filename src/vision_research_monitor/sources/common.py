@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from typing import Any
 
 from ..models import NormalizedItem, parse_iso8601, to_iso8601
@@ -34,7 +34,7 @@ def collection_window(
     *,
     source_name: str,
 ) -> tuple[datetime, datetime]:
-    run_at = run_at.astimezone(timezone.utc)
+    run_at = run_at.astimezone(UTC)
     previous = parse_iso8601(checkpoint)
     if previous is None:
         return run_at - timedelta(hours=int(config["initial_lookback_hours"])), run_at
@@ -50,14 +50,16 @@ def collection_window(
 
 
 def normalize_window(start: datetime, end: datetime) -> tuple[datetime, datetime]:
-    start = start.astimezone(timezone.utc)
-    end = end.astimezone(timezone.utc)
+    start = start.astimezone(UTC)
+    end = end.astimezone(UTC)
     if start >= end:
         raise ValueError("Source collection window start must be before its end")
     return start, end
 
 
-def initialize_result(start: datetime | None = None, end: datetime | None = None) -> SourceRunResult:
+def initialize_result(
+    start: datetime | None = None, end: datetime | None = None
+) -> SourceRunResult:
     return SourceRunResult(
         window_start=to_iso8601(start) if start is not None else None,
         window_end=to_iso8601(end) if end is not None else None,

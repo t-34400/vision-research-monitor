@@ -1,7 +1,16 @@
 from pathlib import Path
 
-from vision_research_monitor.config import load_academic, load_analytics, load_github_discovery, load_linking, load_reporting, load_sources, load_taxonomy, load_venues, load_watchlist
-
+from vision_research_monitor.config import (
+    load_academic,
+    load_analytics,
+    load_github_discovery,
+    load_linking,
+    load_reporting,
+    load_sources,
+    load_taxonomy,
+    load_venues,
+    load_watchlist,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 

@@ -60,7 +60,10 @@ class TopicProfileTfidf:
             fragments = [topic["label"], *topic["aliases"], *hints_by_topic[topic["id"]]]
             self._topic_documents[topic["id"]] = " ".join(fragments)
 
-        feature_sets = {topic_id: set(self._raw_features(text)) for topic_id, text in self._topic_documents.items()}
+        feature_sets = {
+            topic_id: set(self._raw_features(text))
+            for topic_id, text in self._topic_documents.items()
+        }
         document_count = len(feature_sets)
         document_frequency: Counter[str] = Counter()
         for features in feature_sets.values():
@@ -70,8 +73,7 @@ class TopicProfileTfidf:
             for feature, frequency in document_frequency.items()
         }
         self._topic_vectors = {
-            topic_id: self._vectorize(text)
-            for topic_id, text in self._topic_documents.items()
+            topic_id: self._vectorize(text) for topic_id, text in self._topic_documents.items()
         }
 
     @property
@@ -88,12 +90,18 @@ class TopicProfileTfidf:
         scores = {}
         for topic_id, topic_vector in self._topic_vectors.items():
             required = self._required_any.get(topic_id, [])
-            if required and not any(anchor_matches(normalized_candidate, candidate_tokens, anchor) for anchor in required):
+            if required and not any(
+                anchor_matches(normalized_candidate, candidate_tokens, anchor)
+                for anchor in required
+            ):
                 scores[topic_id] = 0.0
                 continue
             groups = self._required_groups.get(topic_id, [])
             if groups and not all(
-                any(anchor_matches(normalized_candidate, candidate_tokens, anchor) for anchor in group)
+                any(
+                    anchor_matches(normalized_candidate, candidate_tokens, anchor)
+                    for anchor in group
+                )
                 for group in groups
             ):
                 scores[topic_id] = 0.0
@@ -130,7 +138,9 @@ class TopicProfileTfidf:
             idf = self._idf.get(feature)
             if idf is None:
                 continue
-            type_weight = float(self.model["char_weight"] if feature.startswith("c:") else self.model["word_weight"])
+            type_weight = float(
+                self.model["char_weight"] if feature.startswith("c:") else self.model["word_weight"]
+            )
             weighted[feature] = (1.0 + math.log(count)) * idf * type_weight
         norm = math.sqrt(sum(value * value for value in weighted.values()))
         if norm == 0:
@@ -145,7 +155,7 @@ class TopicProfileTfidf:
         word_max = int(self.model["word_ngram_max"])
         for size in range(word_min, word_max + 1):
             for index in range(0, len(words) - size + 1):
-                features.append("w:" + " ".join(words[index:index + size]))
+                features.append("w:" + " ".join(words[index : index + size]))
 
         char_min = int(self.model["char_ngram_min"])
         char_max = int(self.model["char_ngram_max"])
@@ -153,7 +163,7 @@ class TopicProfileTfidf:
             padded = f" {word} "
             for size in range(char_min, char_max + 1):
                 for index in range(0, len(padded) - size + 1):
-                    features.append("c:" + padded[index:index + size])
+                    features.append("c:" + padded[index : index + size])
         return features
 
 
@@ -189,14 +199,18 @@ class SemanticClassificationPipeline:
             }
             if self.config.get("enabled", True):
                 semantic = self.semantic.match(title, text)
-                if semantic.best_score >= float(self.config["classification"]["enrichment_similarity"]):
+                if semantic.best_score >= float(
+                    self.config["classification"]["enrichment_similarity"]
+                ):
                     topics.update(semantic.topics)
-                    evidence.update({
-                        "method": "lexical+semantic_profile",
-                        "semantic_model": self.semantic.model_id,
-                        "semantic_similarity": round(semantic.best_score, 6),
-                        "semantic_topic_scores": semantic.topic_scores,
-                    })
+                    evidence.update(
+                        {
+                            "method": "lexical+semantic_profile",
+                            "semantic_model": self.semantic.model_id,
+                            "semantic_similarity": round(semantic.best_score, 6),
+                            "semantic_topic_scores": semantic.topic_scores,
+                        }
+                    )
             return ClassificationResult(
                 accepted=True,
                 relevance=round(float(lexical_score), 4),
@@ -230,14 +244,18 @@ class SemanticClassificationPipeline:
             allowed_topics = set(semantic.topics[:maximum])
             selected_topics = sorted(set(llm.topics) & allowed_topics)
             accepted = llm.relevant and bool(selected_topics)
-            evidence.update({
-                "method": "llm",
-                "llm_model": llm.model_id,
-                "llm_reason": llm.reason,
-            })
+            evidence.update(
+                {
+                    "method": "llm",
+                    "llm_model": llm.model_id,
+                    "llm_reason": llm.reason,
+                }
+            )
             return ClassificationResult(
                 accepted=accepted,
-                relevance=round(max(0.0, min(1.0, llm.relevance)), 4) if accepted else round(float(lexical_score), 4),
+                relevance=round(max(0.0, min(1.0, llm.relevance)), 4)
+                if accepted
+                else round(float(lexical_score), 4),
                 topics=selected_topics if accepted else [],
                 matched_terms=sorted(set(matched_terms), key=str.casefold),
                 evidence=evidence,
@@ -259,7 +277,11 @@ class SemanticClassificationPipeline:
         semantic: SemanticMatch,
     ) -> LLMClassification | None:
         llm_config = self.config["llm"]
-        if not llm_config.get("enabled", False) or self.llm_classifier is None or not semantic.topics:
+        if (
+            not llm_config.get("enabled", False)
+            or self.llm_classifier is None
+            or not semantic.topics
+        ):
             return None
         if not (
             float(llm_config["minimum_semantic_score"])
@@ -268,7 +290,9 @@ class SemanticClassificationPipeline:
         ):
             return None
         candidate_topics = semantic.topics[: int(llm_config["maximum_candidate_topics"])]
-        return self.llm_classifier.classify(title=title, text=text, candidate_topics=candidate_topics)
+        return self.llm_classifier.classify(
+            title=title, text=text, candidate_topics=candidate_topics
+        )
 
 
 def rejected_lexical(

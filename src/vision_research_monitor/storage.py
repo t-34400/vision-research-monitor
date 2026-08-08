@@ -3,8 +3,9 @@ from __future__ import annotations
 import json
 import os
 from collections import defaultdict
+from collections.abc import Iterable, Iterator
 from pathlib import Path
-from typing import Any, Iterable, Iterator
+from typing import Any
 
 from .models import NormalizedItem, parse_iso8601
 
@@ -46,7 +47,9 @@ class JsonlItemStore:
             return set()
         known: set[str] = set()
         for path in self.root.rglob("*.jsonl"):
-            for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+            for line_number, line in enumerate(
+                path.read_text(encoding="utf-8").splitlines(), start=1
+            ):
                 if not line.strip():
                     continue
                 try:
@@ -62,7 +65,9 @@ class JsonlItemStore:
         if not self.root.exists():
             return
         for path in sorted(self.root.rglob("*.jsonl")):
-            for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+            for line_number, line in enumerate(
+                path.read_text(encoding="utf-8").splitlines(), start=1
+            ):
                 if not line.strip():
                     continue
                 try:
@@ -84,7 +89,12 @@ class JsonlItemStore:
             discovered = parse_iso8601(item.discovered_at)
             if discovered is None:
                 raise ValueError(f"Missing discovered_at for {item.id}")
-            path = self.root / f"{discovered.year:04d}" / f"{discovered.month:02d}" / f"{discovered.day:02d}.jsonl"
+            path = (
+                self.root
+                / f"{discovered.year:04d}"
+                / f"{discovered.month:02d}"
+                / f"{discovered.day:02d}.jsonl"
+            )
             grouped[path].append(item.to_dict())
             self._known_ids.add(item.id)
 
@@ -92,7 +102,9 @@ class JsonlItemStore:
         for path, records in grouped.items():
             path.parent.mkdir(parents=True, exist_ok=True)
             existing = path.read_text(encoding="utf-8") if path.exists() else ""
-            payload = existing + "".join(json.dumps(record, sort_keys=True) + "\n" for record in records)
+            payload = existing + "".join(
+                json.dumps(record, sort_keys=True) + "\n" for record in records
+            )
             temporary = path.with_suffix(path.suffix + ".tmp")
             temporary.write_text(payload, encoding="utf-8")
             os.replace(temporary, path)

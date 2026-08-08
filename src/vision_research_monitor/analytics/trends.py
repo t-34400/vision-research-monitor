@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import math
 from collections import Counter, defaultdict
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass
 from datetime import date, datetime, timedelta
-from typing import Any, Iterable
+from typing import Any
 from zoneinfo import ZoneInfo
 
 from ..linking.linker import EntityLinkResult
@@ -144,22 +145,30 @@ class LongTermAnalyzer:
 
     def render_markdown(self, snapshot: TrendSnapshot, topic_labels: dict[str, str]) -> str:
         lines = [f"# Vision Research Trends — {snapshot.report_date.isoformat()}", ""]
-        lines.append(f"As of {snapshot.window_end.astimezone(self.timezone):%Y-%m-%d %H:%M} {self.timezone.key}")
+        lines.append(
+            f"As of {snapshot.window_end.astimezone(self.timezone):%Y-%m-%d %H:%M} {self.timezone.key}"
+        )
         lines.append("")
 
         for window in sorted(snapshot.topic_momentum):
-            entries = [entry for entry in snapshot.topic_momentum[window] if entry.momentum_score > 0]
+            entries = [
+                entry for entry in snapshot.topic_momentum[window] if entry.momentum_score > 0
+            ]
             lines.extend([f"## Accelerating Topics — {window} days", ""])
             if not entries:
                 lines.extend(["No topic met the minimum activity threshold.", ""])
                 continue
-            lines.extend([
-                "| Topic | Current | Previous | Growth | Momentum |",
-                "| --- | ---: | ---: | ---: | ---: |",
-            ])
+            lines.extend(
+                [
+                    "| Topic | Current | Previous | Growth | Momentum |",
+                    "| --- | ---: | ---: | ---: | ---: |",
+                ]
+            )
             for entry in entries:
                 label = topic_labels.get(entry.topic, entry.topic)
-                growth = format_growth(entry.count_growth_percent, entry.current_entities, entry.previous_entities)
+                growth = format_growth(
+                    entry.count_growth_percent, entry.current_entities, entry.previous_entities
+                )
                 lines.append(
                     f"| {label} | {entry.current_entities} | {entry.previous_entities} | "
                     f"{growth} | {entry.momentum_score:+.2f} |"
@@ -168,9 +177,14 @@ class LongTermAnalyzer:
 
         growth_window = int(self.config["growth"]["primary_window_days"])
         lines.extend([f"## New Research Entities — {growth_window} days", ""])
-        for label, metric in (("Repositories", snapshot.repository_growth), ("Papers", snapshot.paper_growth)):
+        for label, metric in (
+            ("Repositories", snapshot.repository_growth),
+            ("Papers", snapshot.paper_growth),
+        ):
             growth = format_growth(metric.growth_percent, metric.current, metric.previous)
-            lines.append(f"- **{label}:** {metric.current} current vs {metric.previous} previous ({growth})")
+            lines.append(
+                f"- **{label}:** {metric.current} current vs {metric.previous} previous ({growth})"
+            )
         lines.append("")
 
         lines.extend(["## Recurring Entities", ""])
@@ -186,10 +200,12 @@ class LongTermAnalyzer:
         lines.append("")
 
         lines.extend(["## Recent Daily Volume", ""])
-        lines.extend([
-            "| Date | Items | Entities | New repos | New papers |",
-            "| --- | ---: | ---: | ---: | ---: |",
-        ])
+        lines.extend(
+            [
+                "| Date | Items | Entities | New repos | New papers |",
+                "| --- | ---: | ---: | ---: | ---: |",
+            ]
+        )
         for bucket in snapshot.daily[-14:]:
             lines.append(
                 f"| {bucket['date']} | {bucket['items']} | {bucket['entities']} | "
@@ -291,7 +307,9 @@ class LongTermAnalyzer:
                 continue
             previous_count = sum(topic in topics for topics in previous.values())
             current_share = (current_count + smoothing) / (current_total + smoothing * topic_count)
-            previous_share = (previous_count + smoothing) / (previous_total + smoothing * topic_count)
+            previous_share = (previous_count + smoothing) / (
+                previous_total + smoothing * topic_count
+            )
             entries.append(
                 TopicMomentum(
                     topic=topic,
@@ -304,7 +322,9 @@ class LongTermAnalyzer:
                     momentum_score=round(math.log2(current_share / previous_share), 4),
                 )
             )
-        entries.sort(key=lambda entry: (-entry.momentum_score, -entry.current_entities, entry.topic))
+        entries.sort(
+            key=lambda entry: (-entry.momentum_score, -entry.current_entities, entry.topic)
+        )
         limit = int(self.config["momentum"]["top_topics_per_window"])
         return entries[:limit]
 
@@ -331,7 +351,9 @@ class LongTermAnalyzer:
             for (item_kind, _), timestamp in first_seen.items()
             if item_kind == kind
         )
-        return GrowthMetric(current, previous, current - previous, growth_percent(current, previous))
+        return GrowthMetric(
+            current, previous, current - previous, growth_percent(current, previous)
+        )
 
     def _recurring_entities(
         self,
@@ -374,7 +396,9 @@ class LongTermAnalyzer:
                     last_seen=last_seen,
                 )
             )
-        recurring.sort(key=lambda entity: (-entity.active_days, -entity.item_count, entity.entity_id))
+        recurring.sort(
+            key=lambda entity: (-entity.active_days, -entity.item_count, entity.entity_id)
+        )
         return recurring[: int(config["limit"])]
 
 

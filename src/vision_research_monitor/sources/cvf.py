@@ -1,14 +1,19 @@
 from __future__ import annotations
 
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from html.parser import HTMLParser
-from typing import Any, Callable
+from typing import Any
 from urllib.parse import urljoin, urlsplit
 
 from ..academic.matching import AcademicLexicalMatcher
-from ..classification.semantic import ClassificationResult, SemanticClassificationPipeline, rejected_lexical
+from ..classification.semantic import (
+    ClassificationResult,
+    SemanticClassificationPipeline,
+    rejected_lexical,
+)
 from ..http import HttpClient
 from ..models import NormalizedItem, to_iso8601
 from .common import SourceRunResult, initialize_result
@@ -56,9 +61,11 @@ class CVFCollector:
         self._last_request_at: float | None = None
 
     def collect(self, run_at: datetime) -> SourceRunResult:
-        run_at = run_at.astimezone(timezone.utc)
+        run_at = run_at.astimezone(UTC)
         result = initialize_result()
-        cvf_state = self.state.setdefault("sources", {}).setdefault("cvf", {}).setdefault("editions", {})
+        cvf_state = (
+            self.state.setdefault("sources", {}).setdefault("cvf", {}).setdefault("editions", {})
+        )
 
         for edition in self.config["cvf"]["editions"]:
             if not edition.get("enabled", True):
@@ -158,7 +165,9 @@ class CVFCollector:
             },
         )
 
-    def _classify(self, title: str, abstract: str, match: Any, threshold: float) -> ClassificationResult:
+    def _classify(
+        self, title: str, abstract: str, match: Any, threshold: float
+    ) -> ClassificationResult:
         if self.classifier is None:
             if match.score < threshold:
                 return rejected_lexical(match.score, match.topics, match.matched_terms)
@@ -302,12 +311,22 @@ class _CVFDetailParser(HTMLParser):
         authors = self._author_anchor_text or split_authors(author_text)
         abstract = clean_text(" ".join(self._text["abstract"]))
         absolute_links = [
-            LinkRecord(urljoin(base_url, link.href), link.text, link.context)
-            for link in self.links
+            LinkRecord(urljoin(base_url, link.href), link.text, link.context) for link in self.links
         ]
-        pdf = first_link(absolute_links, lambda link: link.text.casefold() == "pdf" or "/papers/" in link.href and link.href.endswith(".pdf"))
-        supplemental = first_link(absolute_links, lambda link: "supp" in link.text.casefold() or "/supplemental/" in link.href)
-        bibtex = first_link(absolute_links, lambda link: "bib" in link.text.casefold() or "/bibtex/" in link.href)
+        pdf = first_link(
+            absolute_links,
+            lambda link: (
+                link.text.casefold() == "pdf"
+                or ("/papers/" in link.href and link.href.endswith(".pdf"))
+            ),
+        )
+        supplemental = first_link(
+            absolute_links,
+            lambda link: "supp" in link.text.casefold() or "/supplemental/" in link.href,
+        )
+        bibtex = first_link(
+            absolute_links, lambda link: "bib" in link.text.casefold() or "/bibtex/" in link.href
+        )
         return CVFPaperDetail(title, authors, abstract, absolute_links, pdf, supplemental, bibtex)
 
 

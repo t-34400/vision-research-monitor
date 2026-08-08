@@ -4,7 +4,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ..config import load_taxonomy, load_watchlist
@@ -14,11 +14,17 @@ from ..storage import JsonlItemStore, JsonStateStore
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Collect changes from configured GitHub watch targets")
+    parser = argparse.ArgumentParser(
+        description="Collect changes from configured GitHub watch targets"
+    )
     parser.add_argument("--taxonomy", type=Path, default=Path("config/taxonomy.yaml"))
-    parser.add_argument("--taxonomy-schema", type=Path, default=Path("config/schemas/taxonomy.schema.json"))
+    parser.add_argument(
+        "--taxonomy-schema", type=Path, default=Path("config/schemas/taxonomy.schema.json")
+    )
     parser.add_argument("--watchlist", type=Path, default=Path("config/github_watchlist.yaml"))
-    parser.add_argument("--watchlist-schema", type=Path, default=Path("config/schemas/watchlist.schema.json"))
+    parser.add_argument(
+        "--watchlist-schema", type=Path, default=Path("config/schemas/watchlist.schema.json")
+    )
     parser.add_argument("--state", type=Path, default=Path("data/state/github_watch.json"))
     parser.add_argument("--items", type=Path, default=Path("data/items"))
     return parser
@@ -34,7 +40,7 @@ def main(argv: list[str] | None = None) -> int:
     state = state_store.load()
     item_store = JsonlItemStore(args.items)
     token = os.environ.get("GH_WATCH_TOKEN") or os.environ.get("GITHUB_TOKEN")
-    run_at = datetime.now(timezone.utc)
+    run_at = datetime.now(UTC)
 
     with GitHubClient(token, state["http_cache"]) as client:
         collector = GitHubWatchCollector(client, state, watchlist)
