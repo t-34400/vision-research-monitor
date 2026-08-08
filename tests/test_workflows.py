@@ -4,6 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = ROOT / ".github/workflows"
+COMMIT_SCRIPT = ROOT / ".github/scripts/commit-runtime-changes.sh"
 ACTIVE_WORKFLOWS = {
     "build-digest.yml",
     "collect-arxiv.yml",
@@ -25,7 +26,7 @@ def test_only_active_workflows_are_scheduled() -> None:
     assert not (WORKFLOWS / "collect-openreview.yml").exists()
 
 
-def test_workflows_use_locked_uv_runtime_and_default_branch() -> None:
+def test_workflows_use_locked_uv_runtime_and_queued_default_branch_writes() -> None:
     for name in ACTIVE_WORKFLOWS:
         text = workflow_text(name)
         assert "actions/setup-python" not in text
@@ -38,26 +39,35 @@ def test_workflows_use_locked_uv_runtime_and_default_branch() -> None:
         assert "ref: ${{ github.event.repository.default_branch }}" in text
         assert "CANONICAL_BRANCH: ${{ github.event.repository.default_branch }}" in text
         assert "group: research-monitor-writes" in text
+        assert "queue: max" in text
+        assert "cancel-in-progress: false" in text
         assert "contents: write" in text
 
 
-def test_workflow_commits_are_allowlisted_and_protect_manifest() -> None:
+def test_workflow_commits_use_shared_allowlisted_helper_and_protect_manifest() -> None:
+    helper = COMMIT_SCRIPT.read_text()
+    assert 'git add -- "$path"' in helper
+    assert "git add ." not in helper
+    assert "git add -A" not in helper
+    assert 'git pull --rebase origin "$CANONICAL_BRANCH"' in helper
+    assert 'git push origin "HEAD:$CANONICAL_BRANCH"' in helper
+
     for name in ACTIVE_WORKFLOWS:
         text = workflow_text(name)
+        assert ".github/scripts/commit-runtime-changes.sh" in text
         assert "git add ." not in text
         assert "git add -A" not in text
-        assert "git add --" in text
-        assert 'git pull --rebase origin "$CANONICAL_BRANCH"' in text
-        assert 'git push origin "HEAD:$CANONICAL_BRANCH"' in text
         assert "git diff --quiet -- .chatgpt-workspace-manifest.json" in text
-        add_lines = [
-            line.strip() for line in text.splitlines() if line.strip().startswith("git add --")
+        commit_lines = [
+            line.strip()
+            for line in text.splitlines()
+            if ".github/scripts/commit-runtime-changes.sh" in line
         ]
-        assert add_lines
-        assert all(".chatgpt-workspace-manifest.json" not in line for line in add_lines)
+        assert commit_lines
+        assert all(".chatgpt-workspace-manifest.json" not in line for line in commit_lines)
 
 
-def test_collectors_stage_only_their_state_file() -> None:
+def test_collectors_pass_only_their_state_file_and_items_to_commit_helper() -> None:
     expected = {
         "collect-arxiv.yml": "data/state/arxiv.json",
         "collect-cvf.yml": "data/state/cvf.json",
@@ -67,9 +77,9 @@ def test_collectors_stage_only_their_state_file() -> None:
         "collect-research-blogs.yml": "data/state/research_blogs.json",
     }
     for name, state_path in expected.items():
-        add_line = next(
+        commit_line = next(
             line.strip()
             for line in workflow_text(name).splitlines()
-            if line.strip().startswith("git add --")
+            if ".github/scripts/commit-runtime-changes.sh" in line
         )
-        assert add_line == f"git add -- data/items {state_path}"
+        assert commit_line.endswith(f"data/items {state_path}")

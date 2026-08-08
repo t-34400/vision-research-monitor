@@ -10,6 +10,7 @@ permissions:
 
 concurrency:
   group: research-monitor-writes
+  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -55,15 +56,7 @@ jobs:
       - name: Commit collected state and items
         shell: bash
         run: |
-          if [[ -z "$(git status --porcelain -- data/items data/state/research_blogs.json)" ]]; then
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/items data/state/research_blogs.json
-          git commit -m "Update official research blog data"
-          git pull --rebase origin "$CANONICAL_BRANCH"
-          git push origin "HEAD:$CANONICAL_BRANCH"
+          .github/scripts/commit-runtime-changes.sh 'Update official research blog data' data/items data/state/research_blogs.json
 
       - name: Propagate collector failure
         if: steps.collect.outputs.status != '0'

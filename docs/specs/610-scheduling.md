@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-016`  
-**Related decisions:** `D-103`, `D-108`, `D-145`, `D-151`, `D-159`
+**Related decisions:** `D-103`, `D-108`, `D-145`, `D-151`, `D-159`, `D-160`
 
 ## Purpose
 
@@ -43,8 +43,8 @@ Scheduled and manually dispatched workflows:
 - install uv `0.12.3` and Python `3.13`, matching the locally validated toolchain;
 - run `uv sync --locked --no-dev` before application commands;
 - execute application commands with `uv run --locked --no-sync` so the lockfile cannot be silently changed and the already-synchronized environment is reused;
-- serialize all canonical writers with the shared `research-monitor-writes` concurrency group;
-- stage only the allowlisted data/state/report paths owned by that workflow;
+- serialize all canonical writers with the shared `research-monitor-writes` concurrency group and `queue: max`, so bursts of manual or scheduled runs wait instead of replacing pending runs;
+- stage only the allowlisted data/state/report paths owned by that workflow, skipping absent empty-output paths while still committing collector state;
 - rebase the resulting commit onto the current default branch immediately before push, handling unrelated repository changes without staging them.
 
 OpenReview remains excluded from scheduled Actions per `D-156`.

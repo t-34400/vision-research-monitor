@@ -649,6 +649,18 @@ runtime paths, and rebase immediately before push. This makes the Action environ
 match the locally validated lockfile and avoids queued workflow runs writing from an
 older trigger SHA. OpenReview remains outside scheduled automation per D-156.
 
+### D-160 — Queue canonical writers and stage only materialized runtime paths
+
+**Status:** Accepted
+
+Canonical writer workflows share the `research-monitor-writes` concurrency group
+with `queue: max`, allowing multiple scheduled or manually dispatched runs to wait
+without replacing an existing pending run. Runtime commits use a shared allowlisted
+helper that stages a requested path only when it contains materialized files or
+tracked entries. This lets zero-result collectors commit checkpoint/state changes
+without failing when `data/items` has not been created, while retaining narrow
+staging and manifest protection.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational
