@@ -3,7 +3,7 @@
   "$id": "https://example.invalid/vision-research-monitor/github-discovery.schema.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["version", "window", "search", "query_families", "venue_search"],
+  "required": ["version", "window", "search", "research_quality", "query_families", "venue_search"],
   "properties": {
     "version": {"const": 1},
     "window": {
@@ -48,6 +48,48 @@
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "research_quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseline_score", "research_candidate_score", "minimum_venue_only_score",
+        "semantic_only_acceptance_similarity", "research_term_bonus", "publication_link_bonus",
+        "venue_bonus", "homepage_bonus", "stars_50_bonus", "stars_250_bonus",
+        "stars_1000_bonus", "collection_cap", "tutorial_cap", "collection_terms",
+        "tutorial_terms", "research_terms", "publication_hosts"
+      ],
+      "properties": {
+        "baseline_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "research_candidate_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "minimum_venue_only_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "semantic_only_acceptance_similarity": {"type": "number", "minimum": 0, "maximum": 1},
+        "research_term_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "publication_link_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "venue_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "homepage_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "stars_50_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "stars_250_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "stars_1000_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "collection_cap": {"type": "number", "minimum": 0, "maximum": 1},
+        "tutorial_cap": {"type": "number", "minimum": 0, "maximum": 1},
+        "collection_terms": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "tutorial_terms": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "research_terms": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "publication_hosts": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
           "items": {"type": "string", "minLength": 1}
         }
       }

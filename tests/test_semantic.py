@@ -177,3 +177,23 @@ def test_llm_failure_falls_back_to_semantic_result() -> None:
     assert result.topics == ["structure_from_motion"]
     assert result.evidence["method"] == "semantic_profile"
     assert result.evidence["llm_error"] == "RuntimeError"
+
+
+def test_semantic_enrichment_requires_each_added_topic_to_clear_threshold() -> None:
+    taxonomy, _, semantic = load_configs()
+    pipeline = SemanticClassificationPipeline(taxonomy, semantic)
+
+    result = pipeline.classify(
+        title="saurav80325-create/leafsense-ai",
+        text=(
+            "AI-powered plant disease detection system built with TensorFlow, Flask, MobileNetV2, "
+            "and CNN for real-time leaf image classification."
+        ),
+        lexical_score=0.43,
+        lexical_topics=["image_classification"],
+        matched_terms=["image classification"],
+        lexical_threshold=0.40,
+    )
+
+    assert result.topics == ["image_classification"]
+    assert result.evidence["semantic_topic_scores"] == {"image_classification": 0.263181}

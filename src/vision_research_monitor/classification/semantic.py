@@ -200,16 +200,22 @@ class SemanticClassificationPipeline:
             }
             if self.config.get("enabled", True):
                 semantic = self.semantic.match(title, text)
-                if semantic.best_score >= float(
+                enrichment_similarity = float(
                     self.config["classification"]["enrichment_similarity"]
-                ):
-                    topics.update(semantic.topics)
+                )
+                enriched_scores = {
+                    topic_id: score
+                    for topic_id, score in semantic.topic_scores.items()
+                    if score >= enrichment_similarity
+                }
+                if enriched_scores:
+                    topics.update(enriched_scores)
                     evidence.update(
                         {
                             "method": "lexical+semantic_profile",
                             "semantic_model": self.semantic.model_id,
                             "semantic_similarity": round(semantic.best_score, 6),
-                            "semantic_topic_scores": semantic.topic_scores,
+                            "semantic_topic_scores": enriched_scores,
                         }
                     )
             return ClassificationResult(

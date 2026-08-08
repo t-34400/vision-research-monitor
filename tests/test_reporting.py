@@ -208,3 +208,61 @@ def test_source_expansion_items_get_sections_and_hidden_sidecars_stay_out() -> N
     assert "## Models & Demos" in result.markdown
     assert "## Research Announcements" in result.markdown
     assert "Project page" not in result.markdown
+
+
+def test_digest_filters_low_research_discovery_but_watch_override_still_wins() -> None:
+    reporting, taxonomy, venues, linking = load_inputs()
+    low_research = make_item(
+        "github:repository:low-research",
+        title="example/low-research",
+        url="https://github.com/example/low-research",
+        scores={"relevance": 0.8, "research_relevance": 0.15},
+        metadata={
+            "action": "discovered",
+            "discovery_modes": ["created"],
+            "stars_delta": 0,
+        },
+    )
+    watched = make_item(
+        "github:repository:watched",
+        scores={"relevance": 0.1, "research_relevance": 0.0},
+        priority={"source": 1.0},
+        metadata={
+            "action": "discovered",
+            "discovery_modes": ["created"],
+            "stars_delta": 0,
+        },
+        title="example/watched-repository",
+        url="https://github.com/example/watched-repository",
+    )
+    items = [low_research, watched]
+    links = EntityLinker(linking).link(items, generated_at="2026-08-08T06:00:00Z")
+
+    result = DailyDigestBuilder(reporting, taxonomy, venues).build(
+        items, links, report_date=date(2026, 8, 9)
+    )
+
+    assert "low-research" not in result.markdown
+    assert "example/watched-repository" in result.markdown
+    watched_ranked = next(entry for entry in result.ranked if entry.item.id == watched.id)
+    assert watched_ranked.signals.research == 0.0
+
+
+def test_legacy_discovery_without_research_score_fails_closed() -> None:
+    reporting, _, venues, _ = load_inputs()
+    venue_priorities = {venue["id"]: venue["priority"] for venue in venues["venues"]}
+    ranker = ResearchRanker(reporting, venue_priorities)
+    item = make_item(
+        "github:repository:legacy",
+        scores={"relevance": 0.9},
+        metadata={
+            "action": "discovered",
+            "discovery_modes": ["created"],
+            "stars_delta": 0,
+        },
+    )
+
+    ranked = ranker.rank(item, reference_time=datetime(2026, 8, 8, 23, tzinfo=UTC))
+
+    assert ranked.signals.research == 0.0
+    assert ranker.included(ranked) is False

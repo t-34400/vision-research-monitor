@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `GHD-001` through `GHD-010`  
-**Related decisions:** `D-001`, `D-003`, `D-004`, `D-115`, `D-116`, `D-117`, `D-118`, `D-119`, `D-134`, `D-135`
+**Related decisions:** `D-001`, `D-003`, `D-004`, `D-115`, `D-116`, `D-117`, `D-118`, `D-119`, `D-134`, `D-135`, `D-154`, `D-158`
 
 ## Purpose
 
@@ -120,20 +120,40 @@ general LLM/software repositories out of the vision archive without weakening
 more specific computer-vision queries.
 
 Venue candidates have no topic-query baseline and must independently match at
-least one taxonomy topic.
+least one taxonomy topic. A venue string alone is not enough: venue-only
+candidates must also clear the configured repository research-quality threshold.
+This prevents README collections that merely mention many conference names from
+being treated as conference project repositories.
 
 From Phase 6 onward, a candidate that does not pass the configured lexical
 threshold may be evaluated by the local semantic-profile classifier. This does
 not broaden GitHub Search itself: semantic classification runs only after the
 repository has already been surfaced by a configured topic query or venue/year
 search. Accepted lexical candidates may also receive conservative semantic
-multi-label enrichment.
+multi-label enrichment. Each semantic topic added to an already accepted lexical
+candidate must independently clear the semantic enrichment threshold; a strong
+best topic no longer pulls weaker neighboring topics into the item. GitHub
+Discovery also applies a stricter semantic-only acceptance threshold than the
+shared classifier baseline because repository search is intentionally broad.
 
-The normalized item stores final relevance under `scores.relevance` and records
-classification method/model evidence in `metadata.classification`. The CLI also
-reports unique raw candidates, rejected candidates, context-gated rejections,
-raw search hits by query, and accepted candidates by query. Topic and venue
-search targets are written to stderr as they start so a long run is observable.
+Repository topic relevance and repository research value are separate. Every
+accepted topic-query repository receives `scores.research_relevance` from
+configuration-driven evidence such as explicit research/implementation wording,
+publication links, venue evidence, a project homepage, and supporting popularity.
+Absolute stars are only supporting evidence and cannot make a generic repository
+research-relevant by themselves. Awesome/curated lists and tutorial-style
+repositories are identified from repository metadata and capped below the normal
+research-candidate score. Low research-value topic candidates are still retained
+in the archive; the reporting stage decides whether they belong in the digest.
+
+The normalized item stores topical relevance under `scores.relevance`, research
+value under `scores.research_relevance`, classification evidence in
+`metadata.classification`, and research-quality category/signals in
+`metadata.research_quality`. The CLI also reports unique raw candidates, rejected
+candidates, context-gated rejections, raw search hits by query, accepted
+candidates by query, and assessed repository counts by research-quality category.
+Topic and venue search targets are written to stderr as they start so a long run
+is observable.
 
 ## Normalized output
 
@@ -159,7 +179,8 @@ Discovery-specific metadata includes:
 - repository homepage;
 - stars and forks;
 - primary language;
-- fork/archive flags.
+- fork/archive flags;
+- repository research-quality category and evidence signals.
 
 ## Failure behavior
 
@@ -169,7 +190,9 @@ persisted. Retrying the window is safe because normalized repository IDs are
 stable and the item store is idempotent.
 
 README failures are warnings rather than collection failures. A venue-only
-candidate without enough topical evidence is skipped.
+candidate without enough topical or research-quality evidence is skipped.
+Topic-query candidates with low research value remain stored but are filtered at
+reporting time unless a watch override applies.
 
 ## Acceptance criteria
 
@@ -180,4 +203,7 @@ candidate without enough topical evidence is skipped.
 - [x] Scheduled checkpoints advance only after a fully successful search run.
 - [x] Candidates receive deterministic lexical relevance scores and multi-label topics.
 - [x] Discovered repositories normalize to the shared item model.
+- [x] Topic relevance and repository research value are stored separately.
+- [x] Venue-only candidates require research-value corroboration beyond a conference mention.
+- [x] Awesome/list and tutorial repositories are retained as candidates but capped below digest eligibility.
 - [x] Fixture-based tests cover aggregation, splitting, README enrichment, stale checkpoints, and broad-query context gating.

@@ -16,6 +16,7 @@ from ..classification.semantic import (
 )
 from ..models import NormalizedItem, parse_iso8601, to_iso8601
 from .client import GitHubApiError, GitHubClient, GitHubNotFoundError
+from .research_quality import RepositoryResearchAssessment, assess_repository_research_quality
 
 
 class DiscoveryCoverageError(GitHubApiError):
@@ -34,6 +35,7 @@ class DiscoveryRunResult:
     rejected_for_context: int = 0
     search_hits_by_query: dict[str, int] = field(default_factory=dict)
     accepted_by_query: dict[str, int] = field(default_factory=dict)
+    research_quality_by_category: dict[str, int] = field(default_factory=dict)
 
     def add_error(self, target: str, exc: Exception) -> None:
         self.failed_queries += 1
@@ -401,13 +403,39 @@ class GitHubDiscoveryCollector:
             classification = self._classify_candidate(candidate, lexical, threshold, readme)
             if not classification.accepted:
                 continue
+            if self._semantic_only_below_discovery_threshold(classification):
+                continue
+            research = assess_repository_research_quality(
+                candidate.repository,
+                venue_hits=candidate.venue_hits,
+                config=self.config["research_quality"],
+                readme=readme,
+            )
+            result.research_quality_by_category[research.category] = (
+                result.research_quality_by_category.get(research.category, 0) + 1
+            )
+            if is_venue_only and research.score < float(
+                self.config["research_quality"]["minimum_venue_only_score"]
+            ):
+                continue
             for query_id in candidate.query_ids:
                 result.accepted_by_query[query_id] = result.accepted_by_query.get(query_id, 0) + 1
-            items.append(self._repository_item(candidate, classification, run_at))
+            items.append(self._repository_item(candidate, classification, research, run_at))
         return sorted(
             items,
             key=lambda item: (-float(item.scores.get("relevance") or 0), item.title.casefold()),
         )
+
+    def _semantic_only_below_discovery_threshold(
+        self, classification: ClassificationResult
+    ) -> bool:
+        if classification.evidence.get("method") != "semantic_profile":
+            return False
+        similarity = classification.evidence.get("semantic_similarity")
+        if not isinstance(similarity, (int, float)):
+            return True
+        threshold = float(self.config["research_quality"]["semantic_only_acceptance_similarity"])
+        return float(similarity) < threshold
 
     def _requires_missing_vision_context(self, candidate: Candidate) -> bool:
         if not candidate.requires_vision_context or candidate.has_unrestricted_query:
@@ -493,7 +521,10 @@ class GitHubDiscoveryCollector:
 
     @staticmethod
     def _repository_item(
-        candidate: Candidate, classification: ClassificationResult, run_at: datetime
+        candidate: Candidate,
+        classification: ClassificationResult,
+        research: RepositoryResearchAssessment,
+        run_at: datetime,
     ) -> NormalizedItem:
         repo = candidate.repository
         repo_id = str(repo["id"])
@@ -516,7 +547,10 @@ class GitHubDiscoveryCollector:
             topics=classification.topics,
             matched_terms=classification.matched_terms,
             priority={"source": 0.0},
-            scores={"relevance": classification.relevance},
+            scores={
+                "relevance": classification.relevance,
+                "research_relevance": research.score,
+            },
             metadata={
                 "action": "discovered",
                 "discovery_modes": sorted(candidate.modes),
@@ -532,6 +566,10 @@ class GitHubDiscoveryCollector:
                 "fork": bool(repo.get("fork")),
                 "archived": bool(repo.get("archived")),
                 "classification": classification.evidence,
+                "research_quality": {
+                    "category": research.category,
+                    "signals": research.signals,
+                },
             },
         )
 

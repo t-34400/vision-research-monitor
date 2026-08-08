@@ -5,6 +5,7 @@ day_boundary_hour: 8
 
 ranking:
   minimum_total_score: 0.35
+  minimum_github_repository_research_score: 0.40
   weights:
     priority: 0.30
     relevance: 0.30

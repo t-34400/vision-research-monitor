@@ -106,6 +106,15 @@ def load_github_discovery(
     if uncovered:
         raise ConfigError(f"Taxonomy topics missing discovery queries: {', '.join(uncovered)}")
 
+    quality = data["research_quality"]
+    candidate_score = float(quality["research_candidate_score"])
+    if float(quality["collection_cap"]) >= candidate_score:
+        raise ConfigError(
+            "GitHub discovery collection cap must stay below research candidate score"
+        )
+    if float(quality["tutorial_cap"]) >= candidate_score:
+        raise ConfigError("GitHub discovery tutorial cap must stay below research candidate score")
+
     configured_venues = set(data["venue_search"].get("venue_ids", []))
     unknown_venues = sorted(configured_venues - venue_ids)
     if unknown_venues:

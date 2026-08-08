@@ -12,6 +12,7 @@ from ..models import NormalizedItem, parse_iso8601
 class RankingSignals:
     priority: float
     relevance: float
+    research: float
     freshness: float
     novelty: float
     popularity: float
@@ -47,6 +48,7 @@ class ResearchRanker:
         signals = RankingSignals(
             priority=self._priority(item),
             relevance=self._relevance(item),
+            research=self._research(item),
             freshness=self._freshness(item, reference_time),
             novelty=self._novelty(item),
             popularity=self._popularity(item),
@@ -64,7 +66,13 @@ class ResearchRanker:
     def included(self, ranked: RankedItem) -> bool:
         if ranked.item.metadata.get("reportable") is False:
             return False
-        return ranked.watched_override or ranked.total >= float(self.config["minimum_total_score"])
+        if ranked.watched_override:
+            return True
+        if self._is_discovered_github_repository(ranked.item):
+            minimum_research = float(self.config["minimum_github_repository_research_score"])
+            if ranked.signals.research < minimum_research:
+                return False
+        return ranked.total >= float(self.config["minimum_total_score"])
 
     def _priority(self, item: NormalizedItem) -> float:
         explicit = item.priority.get("source")
@@ -81,6 +89,22 @@ class ResearchRanker:
         if isinstance(relevance, (int, float)):
             return clamp(float(relevance))
         return float(self.config["relevance_fallback_with_topics"]) if item.topics else 0.0
+
+    def _research(self, item: NormalizedItem) -> float:
+        value = item.scores.get("research_relevance")
+        if isinstance(value, (int, float)):
+            return clamp(float(value))
+        if self._is_discovered_github_repository(item):
+            return 0.0
+        return 1.0
+
+    @staticmethod
+    def _is_discovered_github_repository(item: NormalizedItem) -> bool:
+        return (
+            item.source == "github"
+            and item.kind == "repository"
+            and isinstance(item.metadata.get("discovery_modes"), list)
+        )
 
     def _freshness(self, item: NormalizedItem, reference_time: datetime) -> float:
         timestamp = effective_event_time(item)

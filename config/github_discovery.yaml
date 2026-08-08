@@ -49,6 +49,58 @@ search:
   - augmented reality
   - mixed reality
   - virtual reality
+research_quality:
+  baseline_score: 0.15
+  research_candidate_score: 0.40
+  minimum_venue_only_score: 0.40
+  semantic_only_acceptance_similarity: 0.28
+  research_term_bonus: 0.30
+  publication_link_bonus: 0.50
+  venue_bonus: 0.15
+  homepage_bonus: 0.05
+  stars_50_bonus: 0.10
+  stars_250_bonus: 0.05
+  stars_1000_bonus: 0.05
+  collection_cap: 0.15
+  tutorial_cap: 0.25
+  collection_terms:
+  - awesome
+  - curated list
+  - paper list
+  - papers list
+  - resource list
+  - reading list
+  tutorial_terms:
+  - tutorial
+  - introduction
+  - beginner
+  - coursework
+  - assignment
+  - student project
+  - hands-on introduction
+  research_terms:
+  - official implementation
+  - official code
+  - code for our paper
+  - code for the paper
+  - paper implementation
+  - implementation of
+  - research code
+  - benchmark
+  - dataset
+  - framework
+  - library
+  - pretrained weights
+  - pretrained model
+  - checkpoint
+  - arxiv
+  - openreview
+  publication_hosts:
+  - arxiv.org
+  - openreview.net
+  - doi.org
+  - openaccess.thecvf.com
+  - paperswithcode.com
 query_families:
 - id: recognition_segmentation
   queries:

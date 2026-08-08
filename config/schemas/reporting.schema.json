@@ -30,6 +30,7 @@
       "additionalProperties": false,
       "required": [
         "minimum_total_score",
+        "minimum_github_repository_research_score",
         "weights",
         "source_priority_defaults",
         "venue_priority",
@@ -40,6 +41,11 @@
       ],
       "properties": {
         "minimum_total_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "minimum_github_repository_research_score": {
           "type": "number",
           "minimum": 0,
           "maximum": 1

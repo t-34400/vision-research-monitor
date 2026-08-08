@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `RPT-001` through `RPT-006`  
-**Related decisions:** `D-005`, `D-006`, `D-129`, `D-130`, `D-131`, `D-142`
+**Related decisions:** `D-005`, `D-006`, `D-129`, `D-130`, `D-131`, `D-142`, `D-158`
 
 ## Purpose
 
@@ -17,17 +17,22 @@ Ranking configuration lives in `config/reporting.yaml` and is validated by
 
 ## Signals
 
-Each candidate receives five independent values in the closed range `[0, 1]`:
+Each candidate receives six independent values in the closed range `[0, 1]`:
 
 - `priority`: explicit watch priority, source default, or venue priority;
-- `relevance`: collector relevance score, with a configured fallback for items
-  that already have taxonomy topics;
+- `relevance`: collector topical relevance score, with a configured fallback
+  for items that already have taxonomy topics;
+- `research`: repository research-value evidence when supplied by GitHub
+  Discovery, otherwise an unrestrictive fallback for sources not using this gate;
 - `freshness`: exponential decay from the item's effective event time;
 - `novelty`: configured by item kind and more specific source action;
 - `popularity`: log-scaled positive GitHub star delta when available.
 
 The derived ranking sidecar stores every signal as well as the weighted total.
-The total is recomputable from configuration and is not canonical source data.
+The `research` signal is currently an inclusion gate for GitHub Discovery
+repositories rather than an additional weighted term, so introducing it does not
+silently retune cross-source ordering. The total remains recomputable from
+configuration and is not canonical source data.
 
 ## Initial weights
 
@@ -65,6 +70,20 @@ least one taxonomy topic receives the configured deterministic fallback (`0.55`
 initially); unclassified items receive zero.
 
 Semantic relevance remains a Phase 6 enhancement.
+
+## Research value
+
+GitHub Discovery writes `scores.research_relevance` independently from topical
+relevance. A discovered GitHub repository must meet
+`minimum_github_repository_research_score` before the normal total-score threshold
+can include it in the digest. This gate suppresses generic tutorials, demo apps,
+and curated/awesome lists while preserving them in collected data for later
+inspection and trend experiments.
+
+Legacy GitHub Discovery records that predate `research_relevance` fail closed at
+this gate instead of receiving an optimistic fallback. Explicit watch priority
+still overrides the gate, so known watched repositories are never hidden merely
+because discovery-oriented research evidence is missing.
 
 ## Freshness
 

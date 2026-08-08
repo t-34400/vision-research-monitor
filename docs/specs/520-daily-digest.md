@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `RPT-007` through `RPT-010`  
-**Related decisions:** `D-102`, `D-130`, `D-132`, `D-133`, `D-142`
+**Related decisions:** `D-102`, `D-130`, `D-132`, `D-133`, `D-142`, `D-156`, `D-158`
 
 ## Purpose
 
@@ -31,8 +31,10 @@ reports/daily/2026-08-08.md
   covers 2026-08-07 08:00 JST <= discovered_at < 2026-08-08 08:00 JST
 ```
 
-The scheduled builder runs at 08:11 JST, after the 07:37 arXiv and 07:43
-OpenReview runs. Manual `--date YYYY-MM-DD` builds the same deterministic window.
+The scheduled builder runs at 08:11 JST after the active morning collectors.
+OpenReview is currently manual-only while unattended API access requires
+challenge verification. Manual `--date YYYY-MM-DD` builds the same deterministic
+window.
 
 ## Derived outputs
 
@@ -92,7 +94,10 @@ The initial Markdown sections are:
 8. Other
 
 High-priority watched items appear in `Priority Watch` before normal section
-classification and are not limited by normal ranking thresholds.
+classification and are not limited by normal ranking or GitHub Discovery
+research-quality thresholds. Low-research GitHub Discovery repositories remain
+persisted but do not enter `New Repositories` unless they clear the configured
+research-value gate.
 
 Hugging Face model records and reportable project/demo records use `Models &
 Demos`. Official research-blog articles use `Research Announcements`. CVF project

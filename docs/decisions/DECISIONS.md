@@ -621,6 +621,21 @@ that isolated root, normally `.local/smoke`. Explicit command-specific paths
 remain higher-precedence debugging overrides. Configuration stays anchored to
 the repository rather than the runtime root.
 
+### D-158 — Separate GitHub topic relevance from repository research value
+
+**Status:** Accepted
+
+GitHub Discovery keeps broad topic-relevant repositories in normalized storage,
+but computes a separate `research_relevance` score for report selection. Research
+value uses configuration-driven publication/research signals, venue evidence,
+project-homepage evidence, and supporting popularity; absolute popularity alone
+cannot satisfy the research threshold. Curated/awesome lists and tutorial-style
+repositories are capped below the research-candidate threshold. Venue/year README
+hits require both topical and research-value corroboration, and semantic-only
+GitHub acceptance uses a stricter threshold than the shared semantic baseline.
+Daily Digest gates discovered GitHub repositories on this research score while
+explicit watch priority still bypasses the gate.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational
@@ -629,3 +644,4 @@ need justifies them:
 - whether a hosted embedding/LLM provider adds enough measured value beyond the provider-neutral Phase 6 contract;
 - when repository-tracked canonical history is large enough to justify external storage;
 - whether interactive archive usage justifies a hosted dashboard beyond the Phase 8 search index/CLI.
+

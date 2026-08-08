@@ -97,6 +97,7 @@ def main(argv: list[str] | None = None) -> int:
         "failed_queries": result.failed_queries,
         "search_hits_by_query": result.search_hits_by_query,
         "accepted_by_query": result.accepted_by_query,
+        "research_quality_by_category": result.research_quality_by_category,
         "checkpoint_advanced": result.failed_queries == 0 and not explicit_window,
         "diagnostics": result.diagnostics,
     }

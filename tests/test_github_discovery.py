@@ -258,3 +258,104 @@ def test_broad_query_requires_explicit_vision_context() -> None:
     assert [item.id for item in result.items] == ["github:repository:402"]
     assert result.search_hits_by_query == {"quantization": 2}
     assert result.accepted_by_query == {"quantization": 1}
+    assert sum(result.research_quality_by_category.values()) == 1
+
+
+def test_venue_hit_alone_does_not_make_repository_reportable_research() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["query_families"] = []
+    config["venue_search"] = {
+        "enabled": True,
+        "priorities": ["core"],
+        "venue_ids": ["cvpr"],
+        "year_offsets": [0],
+        "modes": ["created"],
+    }
+    candidate = repository(501, None)
+    candidate["full_name"] = "example/AI_Robotics_paper"
+    candidate["name"] = "AI_Robotics_paper"
+    candidate["topics"] = []
+    candidate["stargazers_count"] = 0
+    candidate["homepage"] = None
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200,
+                text=(
+                    "CVPR 2026 ICRA 2026 robotics perception object detection "
+                    "and vision-language models"
+                ),
+            )
+        return httpx.Response(
+            200,
+            json={"total_count": 1, "incomplete_results": False, "items": [candidate]},
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert result.items == []
+
+
+def test_github_discovery_uses_stricter_semantic_only_acceptance() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    semantic = yaml.safe_load((ROOT / "config/semantic.yaml").read_text(encoding="utf-8"))
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["search"]["minimum_topic_relevance_score"] = 0.95
+    config["research_quality"]["semantic_only_acceptance_similarity"] = 1.0
+    config["query_families"] = [
+        {
+            "id": "recognition_segmentation",
+            "queries": [
+                {
+                    "id": "object_detection",
+                    "text": '"object detection"',
+                    "topics": ["object_detection"],
+                    "modes": ["created"],
+                }
+            ],
+        }
+    ]
+    config["venue_search"]["enabled"] = False
+    candidate = repository(502, "Localize visual objects with bounding boxes in images")
+    candidate["name"] = "visual-localization"
+    candidate["full_name"] = "research/visual-localization"
+    candidate["topics"] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            200,
+            json={"total_count": 1, "incomplete_results": False, "items": [candidate]},
+        )
+
+    from vision_research_monitor.classification.semantic import SemanticClassificationPipeline
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    classifier = SemanticClassificationPipeline(taxonomy, semantic)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(
+            client,
+            state,
+            config,
+            taxonomy,
+            venues,
+            classifier=classifier,
+        ).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert result.raw_candidates == 1
+    assert result.items == []
