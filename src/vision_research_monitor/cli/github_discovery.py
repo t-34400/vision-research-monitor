@@ -9,11 +9,12 @@ from pathlib import Path
 
 from ..classification.semantic import SemanticClassificationPipeline
 from ..config import load_github_discovery, load_semantic, load_taxonomy, load_venues
+from ..github.auto_watch import normalize_registry, update_auto_watch_registry
 from ..github.client import GitHubClient
 from ..github.discovery import GitHubDiscoveryCollector
 from ..models import parse_iso8601, to_iso8601
 from ..runtime import RuntimePaths
-from ..storage import JsonlItemStore, JsonStateStore
+from ..storage import JsonDocumentStore, JsonlItemStore, JsonStateStore
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -37,6 +38,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--work-root", type=Path)
     parser.add_argument("--state", type=Path)
     parser.add_argument("--items", type=Path)
+    parser.add_argument("--auto-watch-registry", type=Path)
     parser.add_argument("--from", dest="from_time")
     parser.add_argument("--to", dest="to_time")
     return parser
@@ -63,6 +65,10 @@ def main(argv: list[str] | None = None) -> int:
 
     state_store = JsonStateStore(args.state or paths.state / "github_discovery.json")
     state = state_store.load()
+    registry_store = JsonDocumentStore(
+        args.auto_watch_registry or paths.state / "github_auto_watch.json"
+    )
+    registry = normalize_registry(registry_store.load())
     item_store = JsonlItemStore(args.items or paths.items)
     token = os.environ.get("GH_DISCOVERY_TOKEN") or os.environ.get("GITHUB_TOKEN")
     run_at = datetime.now(UTC)
@@ -82,9 +88,22 @@ def main(argv: list[str] | None = None) -> int:
         result = collector.collect(run_at, window_start=window_start, window_end=window_end)
 
     written = item_store.append(result.items)
+    if explicit_window:
+        auto_watch = {
+            "eligible": 0,
+            "promoted": 0,
+            "tracked": len(registry["repositories"]),
+            "updated": False,
+        }
+    else:
+        auto_watch = update_auto_watch_registry(
+            registry, result.items, config["auto_watch"], run_at
+        )
+        auto_watch["updated"] = True
     if result.failed_queries == 0 and not explicit_window:
         state["last_successful_at"] = to_iso8601(run_at)
     state_store.save(state)
+    registry_store.save(registry)
 
     summary = {
         "window_start": result.window_start,
@@ -98,6 +117,7 @@ def main(argv: list[str] | None = None) -> int:
         "search_hits_by_query": result.search_hits_by_query,
         "accepted_by_query": result.accepted_by_query,
         "research_quality_by_category": result.research_quality_by_category,
+        "auto_watch": auto_watch,
         "checkpoint_advanced": result.failed_queries == 0 and not explicit_window,
         "diagnostics": result.diagnostics,
     }

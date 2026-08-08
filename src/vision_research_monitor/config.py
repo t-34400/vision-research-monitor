@@ -115,6 +115,18 @@ def load_github_discovery(
     if float(quality["tutorial_cap"]) >= candidate_score:
         raise ConfigError("GitHub discovery tutorial cap must stay below research candidate score")
 
+    auto_watch = data["auto_watch"]
+    if float(auto_watch["strong_research_minimum_score"]) < float(
+        auto_watch["research_minimum_score"]
+    ):
+        raise ConfigError(
+            "GitHub auto-watch strong research score must be at least the normal research score"
+        )
+    if int(auto_watch["strong_research_minimum_stars"]) > int(auto_watch["research_minimum_stars"]):
+        raise ConfigError(
+            "GitHub auto-watch strong research star threshold must not exceed the normal threshold"
+        )
+
     configured_venues = set(data["venue_search"].get("venue_ids", []))
     unknown_venues = sorted(configured_venues - venue_ids)
     if unknown_venues:

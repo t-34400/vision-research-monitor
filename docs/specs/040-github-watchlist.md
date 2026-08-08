@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `FND-011`, `FND-012`  
-**Related decisions:** `D-003`, `D-005`, `D-104`, `D-109`
+**Related decisions:** `D-003`, `D-005`, `D-104`, `D-109`, `D-162`
 
 ## Purpose
 
@@ -15,6 +15,11 @@ without relying on broad GitHub search.
 - schema: `config/schemas/watchlist.schema.json`
 
 ## Account model
+
+`account_discovery` configures bounded direct scans of known accounts:
+
+- `overlap_minutes`: safety overlap before the previous account checkpoint;
+- `max_pages_per_run`: hard pagination bound for repositories sorted by newest creation time.
 
 Each watched account contains:
 
@@ -29,8 +34,10 @@ Each watched account contains:
 because a ranking score is low. It does not mean every commit from that account
 must be presented as news.
 
-`topic_filter_required` is used for broad organizations that publish substantial
-work outside this project's research scope.
+`topic_filter_required` remains source metadata for broad organizations that
+publish substantial work outside this project's research scope. Account scans
+only emit newly created repositories; update-level monitoring is handled by
+explicit and auto-promoted repository targets.
 
 ## Repository model
 

@@ -3,10 +3,11 @@ from __future__ import annotations
 import hashlib
 import json
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from typing import Any
 
 from ..models import NormalizedItem, parse_iso8601, to_iso8601
+from .auto_watch import registry_repository_configs
 from .client import ApiResult, GitHubApiError, GitHubClient, GitHubNotFoundError
 
 MEANINGFUL_REPOSITORY_FIELDS = (
@@ -35,13 +36,19 @@ class WatchRunResult:
 
 class GitHubWatchCollector:
     def __init__(
-        self, client: GitHubClient, state: dict[str, Any], watchlist: dict[str, Any]
+        self,
+        client: GitHubClient,
+        state: dict[str, Any],
+        watchlist: dict[str, Any],
+        auto_watch_registry: dict[str, Any] | None = None,
     ) -> None:
         self.client = client
         self.state = state
         self.watchlist = watchlist
         self.state.setdefault("accounts", {})
         self.state.setdefault("repositories", {})
+        self.repository_targets = self._repository_targets(auto_watch_registry or {})
+        self._prune_legacy_repository_state()
 
     def collect(self, run_at: datetime) -> WatchRunResult:
         run_at = run_at.astimezone(UTC)
@@ -56,7 +63,7 @@ class GitHubWatchCollector:
             except Exception as exc:
                 result.add_error(target, exc)
 
-        for configured in self.watchlist["repositories"]:
+        for configured in self.repository_targets:
             if not configured.get("enabled", True):
                 continue
             target = f"repository:{configured['repo']}"
@@ -75,87 +82,44 @@ class GitHubWatchCollector:
         account_type = account["type"]
         key = f"{account_type}:{login.lower()}"
         previous = self.state["accounts"].get(key)
-        repositories = self._list_account_repositories(login, account_type)
-        current_ids = {str(repo["id"]) for repo in repositories if "id" in repo}
-
         if previous is None:
-            for repo in repositories:
-                self._ensure_repository_state(repo, run_at)
+            self._list_recent_account_repositories(login, account_type, since=None)
             self.state["accounts"][key] = {
                 "login": login,
                 "type": account_type,
-                "repository_ids": sorted(current_ids),
                 "initialized_at": to_iso8601(run_at),
                 "last_checked_at": to_iso8601(run_at),
             }
             return
 
-        previous_ids = set(previous.get("repository_ids", []))
         previous_checked = parse_iso8601(previous.get("last_checked_at")) or run_at
+        overlap = timedelta(minutes=int(self.watchlist["account_discovery"]["overlap_minutes"]))
+        repositories = self._list_recent_account_repositories(
+            login,
+            account_type,
+            since=previous_checked - overlap,
+        )
         for repo in repositories:
-            repo_id = str(repo["id"])
-            repo_state = self.state["repositories"].get(repo_id)
-            if repo_state is None:
-                repo_state = self._ensure_repository_state(repo, run_at)
-                popularity = repository_popularity(repo, None)
-                result.items.append(
-                    self._repository_created_item(repo, account, run_at, popularity)
-                )
-                self._collect_repository_details(
-                    repo,
-                    repo_state,
-                    account,
-                    run_at,
-                    result,
-                    initial_since=previous_checked,
-                    popularity=popularity,
-                )
-                continue
-
-            old_snapshot = repo_state["snapshot"]
-            new_snapshot = repository_snapshot(repo)
-            popularity = repository_popularity(repo, old_snapshot)
-            changed = meaningful_changes(old_snapshot, new_snapshot)
-            activity_changed = old_snapshot.get("updated_at") != new_snapshot.get(
-                "updated_at"
-            ) or old_snapshot.get("pushed_at") != new_snapshot.get("pushed_at")
-            repo_state["snapshot"] = new_snapshot
-            repo_state["last_seen_at"] = to_iso8601(run_at)
-            if changed:
-                result.items.append(
-                    self._repository_updated_item(repo, account, changed, run_at, popularity)
-                )
-            if activity_changed:
-                self._collect_repository_details(
-                    repo,
-                    repo_state,
-                    account,
-                    run_at,
-                    result,
-                    initial_since=parse_iso8601(repo_state.get("first_observed_at"))
-                    or previous_checked,
-                    popularity=popularity,
-                )
-
-        for missing_id in sorted(previous_ids - current_ids):
-            repo_state = self.state["repositories"].get(missing_id)
-            if repo_state is None:
+            created_at = parse_iso8601(repo.get("created_at"))
+            if created_at is None or created_at <= previous_checked:
                 continue
             result.items.append(
-                self._repository_missing_item(
-                    repo_state["snapshot"],
+                self._repository_created_item(
+                    repo,
                     account,
-                    previous.get("last_checked_at", to_iso8601(previous_checked)),
                     run_at,
+                    repository_popularity(repo, None),
                 )
             )
 
         previous.update(
             {
-                "repository_ids": sorted(current_ids),
+                "login": login,
+                "type": account_type,
                 "last_checked_at": to_iso8601(run_at),
             }
         )
+        previous.pop("repository_ids", None)
 
     def _collect_direct_repository(
         self,
@@ -422,16 +386,75 @@ class GitHubWatchCollector:
         details["commit_checked_at"] = to_iso8601(run_at)
         self.client.commit_cache(api_result)
 
-    def _list_account_repositories(self, login: str, account_type: str) -> list[dict[str, Any]]:
+    def _list_recent_account_repositories(
+        self,
+        login: str,
+        account_type: str,
+        *,
+        since: datetime | None,
+    ) -> list[dict[str, Any]]:
         if account_type == "organization":
-            return self.client.get_paginated(
-                f"/orgs/{login}/repos",
-                params={"type": "public", "sort": "full_name", "direction": "asc", "per_page": 100},
-            )
-        return self.client.get_paginated(
-            f"/users/{login}/repos",
-            params={"type": "owner", "sort": "full_name", "direction": "asc", "per_page": 100},
+            path = f"/orgs/{login}/repos"
+            base_params = {"type": "public"}
+        else:
+            path = f"/users/{login}/repos"
+            base_params = {"type": "owner"}
+
+        max_pages = int(self.watchlist["account_discovery"]["max_pages_per_run"])
+        repositories: list[dict[str, Any]] = []
+        for page in range(1, max_pages + 1):
+            params = {
+                **base_params,
+                "sort": "created",
+                "direction": "desc",
+                "per_page": 100,
+                "page": page,
+            }
+            response = self.client.get_json(path, params=params)
+            records = require_list(response, path)
+            if since is None:
+                return records
+
+            reached_cutoff = False
+            for repo in records:
+                created_at = parse_iso8601(repo.get("created_at"))
+                if created_at is not None and created_at <= since:
+                    reached_cutoff = True
+                    continue
+                repositories.append(repo)
+            if reached_cutoff or len(records) < 100:
+                return repositories
+
+        raise GitHubApiError(
+            f"Recent repository scan exceeded {max_pages} pages for {account_type}:{login}"
         )
+
+    def _repository_targets(self, auto_watch_registry: dict[str, Any]) -> list[dict[str, Any]]:
+        merged: dict[str, dict[str, Any]] = {}
+        for configured in registry_repository_configs(auto_watch_registry):
+            merged[configured["repo"].casefold()] = configured
+        for configured in self.watchlist["repositories"]:
+            merged[configured["repo"].casefold()] = configured
+        return list(merged.values())
+
+    def _prune_legacy_repository_state(self) -> None:
+        allowed = {target["repo"].casefold() for target in self.repository_targets}
+        allowed_ids = {
+            str(target["repo_id"]) for target in self.repository_targets if target.get("repo_id")
+        }
+        if not allowed:
+            self.state["repositories"] = {}
+            return
+        retained: dict[str, Any] = {}
+        for repo_id, repo_state in self.state["repositories"].items():
+            snapshot = repo_state.get("snapshot") or {}
+            names = {
+                str(snapshot.get("full_name") or "").casefold(),
+                *(str(name).casefold() for name in repo_state.get("configured_names", [])),
+            }
+            if str(repo_id) in allowed_ids or names & allowed:
+                retained[repo_id] = repo_state
+        self.state["repositories"] = retained
 
     def _ensure_repository_state(self, repo: dict[str, Any], run_at: datetime) -> dict[str, Any]:
         repo_id = str(repo["id"])

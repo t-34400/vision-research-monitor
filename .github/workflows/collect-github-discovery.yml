@@ -59,7 +59,7 @@ jobs:
       - name: Commit collected state and items
         shell: bash
         run: |
-          .github/scripts/commit-runtime-changes.sh 'Update GitHub discovery data' data/items data/state/github_discovery.json
+          .github/scripts/commit-runtime-changes.sh 'Update GitHub discovery data' data/items data/state/github_discovery.json data/state/github_auto_watch.json
 
       - name: Propagate collector failure
         if: steps.collect.outputs.status != '0'

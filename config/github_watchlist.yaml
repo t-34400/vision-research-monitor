@@ -1,5 +1,9 @@
 version: 1
 
+account_discovery:
+  overlap_minutes: 120
+  max_pages_per_run: 5
+
 accounts:
   - login: google-research
     type: organization

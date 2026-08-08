@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "required": [
     "version",
+    "account_discovery",
     "accounts",
     "repositories"
   ],
@@ -13,6 +14,23 @@
     "version": {
       "type": "integer",
       "const": 1
+    },
+    "account_discovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overlap_minutes", "max_pages_per_run"],
+      "properties": {
+        "overlap_minutes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 720
+        },
+        "max_pages_per_run": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        }
+      }
     },
     "accounts": {
       "type": "array",

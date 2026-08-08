@@ -671,6 +671,24 @@ overlap if collectors take longer than their nominal five-minute spacing. This
 keeps the operational cadence simple while preserving the existing 08:00 report
 boundary.
 
+### D-162 — Replace broad GitHub account inventories with bounded tool update watch
+
+**Status:** Accepted
+
+Known GitHub organizations and users remain direct Watch targets, but account
+collection scans repositories in descending creation-time order only far enough
+to cross the previous checkpoint plus overlap. The system no longer persists
+full account repository inventories or attempts account-wide rename, transfer,
+missing-repository, or metadata-change tracking.
+
+GitHub Discovery continues daily `created` and `pushed` searches for recall and
+maintains a bounded auto-watch registry for established or strongly
+research-grounded tools. GitHub Watch performs release, tag, default-branch, and
+repository metadata checks only for explicit repository targets and at most 100
+auto-promoted repositories. This keeps tool-update visibility while bounding
+API usage and canonical state size. Legacy repository snapshots are pruned when
+they are not represented by either detail-watch source.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational

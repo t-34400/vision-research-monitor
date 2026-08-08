@@ -101,6 +101,14 @@ research_quality:
   - doi.org
   - openaccess.thecvf.com
   - paperswithcode.com
+auto_watch:
+  enabled: true
+  max_repositories: 100
+  established_minimum_stars: 1000
+  research_minimum_score: 0.40
+  research_minimum_stars: 100
+  strong_research_minimum_score: 0.65
+  strong_research_minimum_stars: 25
 query_families:
 - id: recognition_segmentation
   queries:

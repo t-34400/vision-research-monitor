@@ -132,6 +132,7 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `STB-011` Preserve feed text boundaries across punctuation-adjacent inline markup.
 - [x] `STB-012` Migrate scheduled Actions to locked uv execution and canonical default-branch writes.
 - [x] `STB-013` Queue canonical writer workflows and make commits tolerate empty collector outputs.
+- [x] `STB-014` Replace broad GitHub account inventories with bounded auto-promoted tool update watch.
 
 ## Task conventions
 

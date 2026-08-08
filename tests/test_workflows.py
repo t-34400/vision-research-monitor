@@ -99,4 +99,9 @@ def test_collectors_pass_only_their_state_file_and_items_to_commit_helper() -> N
             for line in workflow_text(name).splitlines()
             if ".github/scripts/commit-runtime-changes.sh" in line
         )
-        assert commit_line.endswith(f"data/items {state_path}")
+        if name == "collect-github-discovery.yml":
+            assert commit_line.endswith(
+                f"data/items {state_path} data/state/github_auto_watch.json"
+            )
+        else:
+            assert commit_line.endswith(f"data/items {state_path}")

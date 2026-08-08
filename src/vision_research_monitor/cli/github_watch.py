@@ -8,10 +8,11 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from ..config import load_taxonomy, load_watchlist
+from ..github.auto_watch import normalize_registry
 from ..github.client import GitHubClient
 from ..github.watch import GitHubWatchCollector
 from ..runtime import RuntimePaths
-from ..storage import JsonlItemStore, JsonStateStore
+from ..storage import JsonDocumentStore, JsonlItemStore, JsonStateStore
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -29,6 +30,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--work-root", type=Path)
     parser.add_argument("--state", type=Path)
     parser.add_argument("--items", type=Path)
+    parser.add_argument("--auto-watch-registry", type=Path)
     return parser
 
 
@@ -41,12 +43,16 @@ def main(argv: list[str] | None = None) -> int:
 
     state_store = JsonStateStore(args.state or paths.state / "github_watch.json")
     state = state_store.load()
+    registry_store = JsonDocumentStore(
+        args.auto_watch_registry or paths.state / "github_auto_watch.json"
+    )
+    registry = normalize_registry(registry_store.load())
     item_store = JsonlItemStore(args.items or paths.items)
     token = os.environ.get("GH_WATCH_TOKEN") or os.environ.get("GITHUB_TOKEN")
     run_at = datetime.now(UTC)
 
     with GitHubClient(token, state["http_cache"]) as client:
-        collector = GitHubWatchCollector(client, state, watchlist)
+        collector = GitHubWatchCollector(client, state, watchlist, registry)
         result = collector.collect(run_at)
 
     written = item_store.append(result.items)

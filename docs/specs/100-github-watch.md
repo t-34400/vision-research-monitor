@@ -25,34 +25,40 @@ A dedicated token is optional for public data but is recommended when the
 built-in workflow token is insufficient for the target set or desired rate
 budget.
 
-## Account inventory
+## Account discovery
 
-For each configured organization or user, the collector enumerates public owned
-repositories using 100 records per page and compares GitHub repository IDs with
-the previous inventory.
+Configured organizations and users are still queried directly through the
+GitHub repository-list endpoints, but the collector no longer persists a full
+repository inventory for every account. Repository lists are requested in
+descending creation-time order and pagination stops once the previous account
+checkpoint plus configured overlap has been crossed.
 
-The inventory detects:
+The first run establishes only a timestamp baseline. Later runs emit repositories
+whose `created_at` is newer than the previous successful account checkpoint.
+The overlap exists for coverage safety and does not change the event boundary.
 
-- newly observed repositories;
-- stable-ID repository renames through snapshot comparison;
-- meaningful repository metadata changes;
-- repositories no longer listed under the watched account.
-
-A missing repository is reported as `missing_from_account`, not asserted to be
-deleted, because transfer and visibility changes can produce the same symptom.
+This preserves direct monitoring of known accounts while avoiding a large mutable
+snapshot for broad organizations such as Microsoft. Rename, transfer, deletion,
+and metadata-change detection are intentionally not inferred from account-wide
+inventory after this change; repositories that need update-level monitoring are
+handled by explicit or auto-promoted repository detail watch.
 
 ## Repository detail collection
 
 Detailed release/tag/default-branch checks run for:
 
 - explicitly configured repositories on every watch run;
-- account repositories whose GitHub snapshot indicates activity or metadata
-  change;
-- newly observed account repositories.
+- bounded auto-promoted repositories selected by GitHub Discovery.
 
-This avoids multiplying detail API calls across every repository in broad
-organizations while still using direct account inventory for known-target
-monitoring.
+Auto-promoted repositories use normal source priority. Explicit watch targets
+retain their configured priority and override an auto-promoted entry with the
+same repository name.
+
+The auto-watch registry is stored at `data/state/github_auto_watch.json` and is
+owned by GitHub Discovery. GitHub Watch reads the registry but does not modify it.
+Repository detail state that is no longer present in either the explicit
+watchlist or auto-watch registry is pruned on the next Watch run. This also
+migrates the former account-inventory state without a separate migration job.
 
 ### Releases
 
@@ -96,7 +102,7 @@ metadata events. Popularity counters are not metadata-change events.
 
 ## Bootstrap behavior
 
-The first successful account inventory establishes a baseline and emits no
+The first successful account check establishes a timestamp baseline and emits no
 historical repository events.
 
 Explicit repository detail checks also seed existing releases, tags, and branch
@@ -149,8 +155,9 @@ staged.
 ## Acceptance criteria
 
 - organization and user repositories are enumerated with pagination;
-- new repositories and meaningful metadata changes are detected;
+- account repository creation is detected without persisting full inventories;
 - releases, tags, and default-branch head activity are tracked;
+- auto-promoted discovery repositories can receive the same detail tracking as explicit targets;
 - initial runs do not flood historical data;
 - transient API failures are retried within bounded limits;
 - ETag-based conditional requests are supported;

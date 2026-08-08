@@ -24,7 +24,9 @@ The configuration owns:
 - one or more search queries grouped into topic query families;
 - optional per-query `created` / `pushed` modes;
 - venue/year README discovery;
-- the README-enrichment cap used for venue-only candidates.
+- the README-enrichment cap used for venue-only candidates;
+- bounded auto-watch promotion thresholds for repositories whose future tool
+  updates merit release/tag/default-branch monitoring.
 
 Every taxonomy topic must be referenced by at least one configured topic query.
 Unknown topic or venue IDs are rejected during configuration loading.
@@ -182,6 +184,27 @@ Discovery-specific metadata includes:
 - fork/archive flags;
 - repository research-quality category and evidence signals.
 
+## Auto-watch promotion
+
+GitHub Discovery maintains `data/state/github_auto_watch.json` as a bounded
+registry of topic-relevant repositories worth monitoring for future tool
+updates. Promotion is deliberately stricter than archival inclusion: a
+repository must be accepted by Discovery, must not be a fork, archived,
+tutorial, or collection result, and must satisfy at least one configured
+research/popularity threshold.
+
+The initial policy promotes established repositories with at least 1000 stars,
+research-relevant repositories with score at least 0.40 and at least 100 stars,
+or strongly research-grounded repositories with score at least 0.65 and at
+least 25 stars. The registry retains at most 100 repositories, preferring
+established, strongly research-grounded, and more popular candidates when it
+must evict entries.
+
+Promotion does not affect whether the repository itself is archived or shown in
+the current digest. It only controls future detailed release/tag/default-branch
+monitoring by GitHub Watch. Explicit `--from`/`--to` backfills do not modify the
+live auto-watch registry.
+
 ## Failure behavior
 
 A failed topic or venue query is reported as a structured diagnostic and prevents
@@ -204,6 +227,7 @@ reporting time unless a watch override applies.
 - [x] Candidates receive deterministic lexical relevance scores and multi-label topics.
 - [x] Discovered repositories normalize to the shared item model.
 - [x] Topic relevance and repository research value are stored separately.
+- [x] High-value discovered tools are promoted into a bounded update-watch registry.
 - [x] Venue-only candidates require research-value corroboration beyond a conference mention.
 - [x] Awesome/list and tutorial repositories are retained as candidates but capped below digest eligibility.
 - [x] Fixture-based tests cover aggregation, splitting, README enrichment, stale checkpoints, and broad-query context gating.
