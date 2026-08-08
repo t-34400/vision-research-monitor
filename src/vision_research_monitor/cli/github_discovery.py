@@ -65,7 +65,17 @@ def main(argv: list[str] | None = None) -> int:
     run_at = datetime.now(UTC)
 
     with GitHubClient(token, state["http_cache"]) as client:
-        collector = GitHubDiscoveryCollector(client, state, config, taxonomy, venues, classifier)
+        collector = GitHubDiscoveryCollector(
+            client,
+            state,
+            config,
+            taxonomy,
+            venues,
+            classifier,
+            progress=lambda target: print(
+                f"[github-discovery] {target}", file=sys.stderr, flush=True
+            ),
+        )
         result = collector.collect(run_at, window_start=window_start, window_end=window_end)
 
     written = item_store.append(result.items)
@@ -76,9 +86,14 @@ def main(argv: list[str] | None = None) -> int:
     summary = {
         "window_start": result.window_start,
         "window_end": result.window_end,
+        "raw_candidates": result.raw_candidates,
         "collected": len(result.items),
+        "rejected": result.rejected_candidates,
+        "rejected_for_context": result.rejected_for_context,
         "written": written,
         "failed_queries": result.failed_queries,
+        "search_hits_by_query": result.search_hits_by_query,
+        "accepted_by_query": result.accepted_by_query,
         "checkpoint_advanced": result.failed_queries == 0 and not explicit_window,
         "diagnostics": result.diagnostics,
     }

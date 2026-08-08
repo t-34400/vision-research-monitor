@@ -45,13 +45,14 @@
     "openreview": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["enabled", "base_url", "page_size", "max_pages_per_edition", "request_interval_seconds", "bootstrap_full_scan", "editions"],
+      "required": ["enabled", "base_url", "page_size", "max_pages_per_edition", "request_interval_seconds", "user_agent", "bootstrap_full_scan", "editions"],
       "properties": {
         "enabled": {"type": "boolean"},
         "base_url": {"type": "string", "format": "uri"},
         "page_size": {"type": "integer", "minimum": 1, "maximum": 1000},
         "max_pages_per_edition": {"type": "integer", "minimum": 1},
         "request_interval_seconds": {"type": "number", "minimum": 0},
+        "user_agent": {"type": "string", "minLength": 1},
         "bootstrap_full_scan": {"type": "boolean"},
         "editions": {
           "type": "array",

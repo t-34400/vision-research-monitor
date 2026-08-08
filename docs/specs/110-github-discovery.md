@@ -19,7 +19,8 @@ The configuration owns:
 
 - collection-window and catch-up limits;
 - GitHub Search pagination and pacing;
-- lexical relevance thresholds;
+- lexical relevance thresholds and query-evidence weight;
+- explicit vision-context terms for broad ML/data queries;
 - one or more search queries grouped into topic query families;
 - optional per-query `created` / `pushed` modes;
 - venue/year README discovery;
@@ -32,19 +33,22 @@ Unknown topic or venue IDs are rejected during configuration loading.
 
 ### Topic discovery
 
-Each configured query is executed against repository name, description, topics,
-and README content using two independent modes unless a query overrides them:
+Each configured topic query is executed against repository name, description,
+and GitHub topics using two independent modes unless a query overrides them:
 
 - `created` finds repositories created during the bounded collection window;
 - `pushed` finds existing repositories pushed during the bounded collection
   window.
 
-`pushed` queries apply a minimum-star qualifier. Newly created repositories do
-not require stars because they are covered independently by `created` queries.
+`pushed` queries apply a minimum-star qualifier of 50 in the initial operating
+configuration. Newly created repositories do not require stars because they are
+covered independently by `created` queries.
 
-Public, non-archived repositories are the initial discovery scope. Forks remain
-excluded by GitHub repository-search defaults unless the configuration is later
-changed deliberately.
+Public, non-archived repositories are the initial search scope; fork results are
+explicitly filtered before candidate aggregation.
+README text is intentionally excluded from ordinary topic search because live
+smoke testing showed that broad README matches produced excessive candidate
+volume. README search remains available for the dedicated venue/year path.
 
 ### Venue/year discovery
 
@@ -106,10 +110,17 @@ Evidence is drawn from:
 - GitHub topics;
 - README text when venue-only enrichment is required.
 
-Topic-query evidence gives a candidate a baseline relevance score. Direct
-metadata matches can raise that score and add additional taxonomy topics. Venue
-candidates have no topic-query baseline and must independently match at least one
-taxonomy topic.
+Topic-query evidence is weak (`0.10`) and cannot satisfy the normal topic
+threshold by itself. A repository needs corroborating name, description, topic,
+or later semantic evidence. Broad terms such as quantization, model compression,
+self-supervised learning, synthetic data, and foundation-model adaptation also
+require an explicit vision-context term in repository metadata unless the same
+repository was independently surfaced by an unrestricted topic query. This keeps
+general LLM/software repositories out of the vision archive without weakening
+more specific computer-vision queries.
+
+Venue candidates have no topic-query baseline and must independently match at
+least one taxonomy topic.
 
 From Phase 6 onward, a candidate that does not pass the configured lexical
 threshold may be evaluated by the local semantic-profile classifier. This does
@@ -119,7 +130,10 @@ search. Accepted lexical candidates may also receive conservative semantic
 multi-label enrichment.
 
 The normalized item stores final relevance under `scores.relevance` and records
-classification method/model evidence in `metadata.classification`.
+classification method/model evidence in `metadata.classification`. The CLI also
+reports unique raw candidates, rejected candidates, context-gated rejections,
+raw search hits by query, and accepted candidates by query. Topic and venue
+search targets are written to stderr as they start so a long run is observable.
 
 ## Normalized output
 
@@ -166,4 +180,4 @@ candidate without enough topical evidence is skipped.
 - [x] Scheduled checkpoints advance only after a fully successful search run.
 - [x] Candidates receive deterministic lexical relevance scores and multi-label topics.
 - [x] Discovered repositories normalize to the shared item model.
-- [x] Fixture-based tests cover aggregation, splitting, README enrichment, and stale checkpoints.
+- [x] Fixture-based tests cover aggregation, splitting, README enrichment, stale checkpoints, and broad-query context gating.

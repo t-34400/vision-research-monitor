@@ -31,6 +31,7 @@ def test_openreview_bootstrap_filters_and_normalizes_notes() -> None:
     state: dict = {}
     with AcademicHttpClient(
         config["openreview"]["base_url"],
+        user_agent=config["openreview"]["user_agent"],
         transport=httpx.MockTransport(handler),
         sleeper=lambda _: None,
     ) as client:
@@ -52,6 +53,7 @@ def test_openreview_bootstrap_filters_and_normalizes_notes() -> None:
     assert item.metadata["status"] == "accepted"
     assert "pose_free_3d_reconstruction" in item.topics
     assert "mintcdate" not in requests[0].url.params
+    assert requests[0].headers["user-agent"] == config["openreview"]["user_agent"]
     edition_state = state["academic"]["openreview"]["editions"]["thecvf.com/CVPR/2026/Conference"]
     assert edition_state["bootstrapped"] is True
 

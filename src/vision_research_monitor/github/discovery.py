@@ -29,6 +29,11 @@ class DiscoveryRunResult:
     failed_queries: int = 0
     window_start: str | None = None
     window_end: str | None = None
+    raw_candidates: int = 0
+    rejected_candidates: int = 0
+    rejected_for_context: int = 0
+    search_hits_by_query: dict[str, int] = field(default_factory=dict)
+    accepted_by_query: dict[str, int] = field(default_factory=dict)
 
     def add_error(self, target: str, exc: Exception) -> None:
         self.failed_queries += 1
@@ -47,6 +52,8 @@ class Candidate:
     families: set[str] = field(default_factory=set)
     modes: set[str] = field(default_factory=set)
     venue_hits: set[tuple[str, int, str]] = field(default_factory=set)
+    requires_vision_context: bool = False
+    has_unrestricted_query: bool = False
 
 
 @dataclass(slots=True)
@@ -57,7 +64,8 @@ class LexicalMatch:
 
 
 class LexicalScorer:
-    def __init__(self, taxonomy: dict[str, Any]) -> None:
+    def __init__(self, taxonomy: dict[str, Any], *, query_evidence_score: float) -> None:
+        self.query_evidence_score = query_evidence_score
         self._aliases: dict[str, list[tuple[str, str]]] = {}
         for topic in taxonomy["topics"]:
             aliases: list[tuple[str, str]] = []
@@ -81,8 +89,10 @@ class LexicalScorer:
             "topics": normalize_text(" ".join(repository.get("topics") or [])),
             "readme": normalize_text((readme or "")[:200_000]),
         }
-        field_weights = {"name": 0.35, "description": 0.25, "topics": 0.30, "readme": 0.20}
-        topic_scores: dict[str, float] = {topic_id: 0.35 for topic_id in query_topics}
+        field_weights = {"name": 0.40, "description": 0.30, "topics": 0.35, "readme": 0.20}
+        topic_scores: dict[str, float] = {
+            topic_id: self.query_evidence_score for topic_id in query_topics
+        }
         matched_terms = set(query_terms)
 
         for topic_id, aliases in self._aliases.items():
@@ -110,9 +120,10 @@ class LexicalScorer:
         if len(ordered_scores) > 1:
             score += min(0.20, sum(ordered_scores[1:]) * 0.10)
         if query_topics and any(
-            topic_id in topic_scores and topic_scores[topic_id] > 0.35 for topic_id in query_topics
+            topic_id in topic_scores and topic_scores[topic_id] > self.query_evidence_score
+            for topic_id in query_topics
         ):
-            score += 0.10
+            score += self.query_evidence_score
         return LexicalMatch(
             min(1.0, round(score, 4)), sorted(topic_scores), sorted(matched_terms, key=str.casefold)
         )
@@ -130,18 +141,25 @@ class GitHubDiscoveryCollector:
         *,
         sleeper: Callable[[float], None] = time.sleep,
         monotonic: Callable[[], float] = time.monotonic,
+        progress: Callable[[str], None] | None = None,
     ) -> None:
         self.client = client
         self.state = state
         self.config = config
         self.taxonomy = taxonomy
         self.venues = venues
-        self.scorer = LexicalScorer(taxonomy)
+        self.scorer = LexicalScorer(
+            taxonomy, query_evidence_score=float(config["search"]["query_evidence_score"])
+        )
         self.classifier = classifier
         self.sleeper = sleeper
         self.monotonic = monotonic
         self._last_search_request_at: float | None = None
         self._readme_enrichments = 0
+        self.progress = progress or (lambda _: None)
+        self._vision_context_terms = [
+            normalize_text(value) for value in config["search"]["vision_context_terms"]
+        ]
 
     def collection_window(self, run_at: datetime) -> tuple[datetime, datetime]:
         run_at = run_at.astimezone(UTC)
@@ -184,6 +202,7 @@ class GitHubDiscoveryCollector:
                 modes = query.get("modes", ["created", "pushed"])
                 for mode in modes:
                     target = f"topic:{family['id']}:{query['id']}:{mode}"
+                    self.progress(target)
                     try:
                         repositories = self._search_query(
                             query["text"], mode, window_start, window_end
@@ -191,6 +210,9 @@ class GitHubDiscoveryCollector:
                     except Exception as exc:
                         result.add_error(target, exc)
                         continue
+                    result.search_hits_by_query[query["id"]] = result.search_hits_by_query.get(
+                        query["id"], 0
+                    ) + len(repositories)
                     for repository in repositories:
                         candidate = candidates.setdefault(
                             str(repository["id"]), Candidate(repository=repository)
@@ -201,9 +223,15 @@ class GitHubDiscoveryCollector:
                         candidate.query_ids.add(query["id"])
                         candidate.families.add(family["id"])
                         candidate.modes.add(mode)
+                        if query.get("requires_vision_context", False):
+                            candidate.requires_vision_context = True
+                        else:
+                            candidate.has_unrestricted_query = True
 
         self._collect_venue_candidates(candidates, window_start, window_end, run_at, result)
+        result.raw_candidates = len(candidates)
         result.items = self._normalize_candidates(candidates, run_at, result)
+        result.rejected_candidates = result.raw_candidates - len(result.items)
         return result
 
     def _collect_venue_candidates(
@@ -232,6 +260,7 @@ class GitHubDiscoveryCollector:
                 query = f'"{alias} {year}" in:readme'
                 for mode in venue_config["modes"]:
                     target = f"venue:{venue['id']}:{year}:{mode}"
+                    self.progress(target)
                     try:
                         repositories = self._search_query(
                             query, mode, window_start, window_end, add_locations=False
@@ -267,7 +296,10 @@ class GitHubDiscoveryCollector:
         if mode == "pushed" and common["pushed_minimum_stars"]:
             qualifiers.append(f"stars:>={common['pushed_minimum_stars']}")
         prefix = " ".join([base_query, *qualifiers])
-        return self._search_slice(prefix, mode, start, end)
+        repositories = self._search_slice(prefix, mode, start, end)
+        if common["exclude_forks"]:
+            repositories = [repository for repository in repositories if not repository.get("fork")]
+        return repositories
 
     def _search_slice(
         self,
@@ -342,6 +374,9 @@ class GitHubDiscoveryCollector:
         items: list[NormalizedItem] = []
         for candidate in candidates.values():
             readme: str | None = None
+            if self._requires_missing_vision_context(candidate):
+                result.rejected_for_context += 1
+                continue
             lexical = self.scorer.score(
                 candidate.repository,
                 query_topics=candidate.query_topics,
@@ -366,10 +401,29 @@ class GitHubDiscoveryCollector:
             classification = self._classify_candidate(candidate, lexical, threshold, readme)
             if not classification.accepted:
                 continue
+            for query_id in candidate.query_ids:
+                result.accepted_by_query[query_id] = result.accepted_by_query.get(query_id, 0) + 1
             items.append(self._repository_item(candidate, classification, run_at))
         return sorted(
             items,
             key=lambda item: (-float(item.scores.get("relevance") or 0), item.title.casefold()),
+        )
+
+    def _requires_missing_vision_context(self, candidate: Candidate) -> bool:
+        if not candidate.requires_vision_context or candidate.has_unrestricted_query:
+            return False
+        repository = candidate.repository
+        text = normalize_text(
+            " ".join(
+                [
+                    str(repository.get("full_name") or repository.get("name") or ""),
+                    str(repository.get("description") or ""),
+                    " ".join(repository.get("topics") or []),
+                ]
+            )
+        )
+        return not any(
+            term and contains_normalized(text, term) for term in self._vision_context_terms
         )
 
     def _classify_candidate(
@@ -418,7 +472,10 @@ class GitHubDiscoveryCollector:
         if self._readme_enrichments >= limit:
             result.add_warning(
                 "venue-readme",
-                f"README enrichment cap of {limit} reached; remaining venue-only candidates were skipped",
+                (
+                    f"README enrichment cap of {limit} reached; "
+                    "remaining venue-only candidates were skipped"
+                ),
             )
             return None
         self._readme_enrichments += 1

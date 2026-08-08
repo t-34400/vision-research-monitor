@@ -95,3 +95,30 @@ After these pass, run the live-source smoke tests described for each collector
 before pushing the repository to GitHub. Scheduled GitHub Actions should be the
 final environment validation, not the first place where local code quality
 failures are discovered.
+
+## Live smoke tests
+
+Use fresh local state paths when re-testing GitHub Discovery so results from a
+previous noisy run cannot hide behavior changes through item deduplication:
+
+```bash
+export GITHUB_TOKEN="$(gh auth token)"
+TO="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+FROM_2H="$(date -u -d '2 hours ago' +%Y-%m-%dT%H:%M:%SZ)"
+FROM_24H="$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)"
+
+uv run --locked python -m vision_research_monitor.cli.github_discovery \
+  --from "$FROM_2H" \
+  --to "$TO" \
+  --state .local/smoke-v2/github_discovery.json \
+  --items .local/smoke-v2/items
+
+uv run --locked python -m vision_research_monitor.cli.openreview \
+  --from "$FROM_24H" \
+  --to "$TO"
+```
+
+GitHub Discovery prints each search target to stderr and finishes with per-query
+raw/accepted counts. OpenReview public-note collection should work as guest
+access; `OPENREVIEW_TOKEN` is optional and should be set only if guest access is
+insufficient for a configured venue.

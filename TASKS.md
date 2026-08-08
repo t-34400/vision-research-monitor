@@ -114,8 +114,14 @@ Task IDs are stable. Completed tasks should remain in this file for history.
 - [x] `DEV-002` Configure Ruff, mypy, and pytest in `pyproject.toml`.
 - [x] `DEV-003` Document the local uv setup and validation workflow.
 - [x] `DEV-004` Generate and commit `uv.lock` in a network-enabled local environment.
-- [ ] `DEV-005` Run the full local Ruff, mypy, and pytest validation sequence.
+- [x] `DEV-005` Run the full local Ruff, mypy, and pytest validation sequence.
 - [ ] `DEV-006` Migrate GitHub Actions dependency setup to the validated uv lockfile.
+
+## Post-roadmap stabilization
+
+- [x] `STB-001` Fix OpenReview guest API request identity after live HTTP 403 failures.
+- [x] `STB-002` Reduce GitHub Discovery noise using metadata-only topic search and vision-context gates.
+- [x] `STB-003` Add GitHub Discovery progress and per-query acceptance diagnostics.
 
 ## Task conventions
 

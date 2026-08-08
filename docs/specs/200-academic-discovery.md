@@ -91,6 +91,13 @@ OpenReview venue ID
 
 Phase 3 does not infer edition IDs from venue names at runtime.
 
+The OpenReview HTTP client uses the same `User-Agent` shape as the official
+`openreview-py` API v2 client and sends `Accept: application/json`. This matters
+for public guest access because live smoke testing showed the generic project
+User-Agent being redirected to OpenReview's challenge endpoint and returning
+HTTP 403. `OPENREVIEW_TOKEN` remains optional and is sent as a Bearer token when
+configured; public notes do not require a token when guest access succeeds.
+
 ### Bootstrap and incremental discovery
 
 For an edition without a bootstrap marker, the collector scans all public notes
@@ -170,5 +177,5 @@ all configured targets for that source succeeded.
 - [x] current OpenReview status is normalized;
 - [x] source checkpoints are independent and bounded;
 - [x] fixture tests cover parsing, relevance, bootstrap, modification-ordered
-  incremental collection, status transitions, and stale-checkpoint behavior;
+  incremental collection, status transitions, request identity, and stale-checkpoint behavior;
 - [x] scheduled source workflows are present.

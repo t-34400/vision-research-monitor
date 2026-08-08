@@ -10,15 +10,45 @@ search:
   request_interval_seconds: 2.1
   public_only: true
   exclude_archived: true
+  exclude_forks: true
   locations:
   - name
   - description
   - topics
-  - readme
-  minimum_topic_relevance_score: 0.35
+  query_evidence_score: 0.10
+  minimum_topic_relevance_score: 0.40
   minimum_venue_relevance_score: 0.2
-  pushed_minimum_stars: 10
+  pushed_minimum_stars: 50
   max_readme_enrichments_per_run: 100
+  vision_context_terms:
+  - vision
+  - visual
+  - image
+  - video
+  - camera
+  - 3d
+  - point cloud
+  - rendering
+  - reconstruction
+  - depth
+  - detection
+  - segmentation
+  - pose
+  - tracking
+  - slam
+  - robot
+  - robotics
+  - embodied
+  - avatar
+  - human
+  - face
+  - hand
+  - body
+  - nerf
+  - gaussian splatting
+  - augmented reality
+  - mixed reality
+  - virtual reality
 query_families:
 - id: recognition_segmentation
   queries:
@@ -234,6 +264,7 @@ query_families:
     text: '"knowledge distillation"'
     topics:
     - knowledge_distillation
+    requires_vision_context: true
   - id: efficient_vision_models
     text: '"efficient vision model"'
     topics:
@@ -242,36 +273,44 @@ query_families:
     text: '"model compression"'
     topics:
     - model_compression
+    requires_vision_context: true
   - id: quantization
     text: '"quantization"'
     topics:
     - quantization
+    requires_vision_context: true
   - id: pruning
     text: '"model pruning"'
     topics:
     - pruning
+    requires_vision_context: true
 - id: adaptation_data
   queries:
   - id: test_time_adaptation
     text: '"test-time adaptation"'
     topics:
     - test_time_adaptation
+    requires_vision_context: true
   - id: self_supervised_learning
     text: '"self-supervised learning"'
     topics:
     - self_supervised_learning
+    requires_vision_context: true
   - id: synthetic_data
     text: '"synthetic data"'
     topics:
     - synthetic_data
+    requires_vision_context: true
   - id: pseudo_ground_truth
     text: '"pseudo ground truth"'
     topics:
     - pseudo_ground_truth
+    requires_vision_context: true
   - id: foundation_model_adaptation
     text: '"foundation model adaptation"'
     topics:
     - foundation_model_adaptation
+    requires_vision_context: true
 - id: xr
   queries:
   - id: vr_mr_xr

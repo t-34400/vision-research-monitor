@@ -89,7 +89,7 @@ def test_topic_discovery_aggregates_created_and_pushed_hits() -> None:
     assert item.scores["relevance"] >= 0.35
     queries = [request.url.params["q"] for request in requests]
     assert any("created:" in query for query in queries)
-    assert any("pushed:" in query and "stars:>=10" in query for query in queries)
+    assert any("pushed:" in query and "stars:>=50" in query for query in queries)
 
 
 def test_dense_search_window_is_split_before_pagination_limit() -> None:
@@ -203,3 +203,58 @@ def test_stale_checkpoint_requires_explicit_backfill() -> None:
             assert "maximum automatic catch-up" in str(exc)
         else:
             raise AssertionError("expected stale checkpoint to require backfill")
+
+
+def test_broad_query_requires_explicit_vision_context() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["query_families"] = [
+        {
+            "id": "efficiency_compression",
+            "queries": [
+                {
+                    "id": "quantization",
+                    "text": '"quantization"',
+                    "topics": ["quantization"],
+                    "modes": ["created"],
+                    "requires_vision_context": True,
+                }
+            ],
+        }
+    ]
+    config["venue_search"]["enabled"] = False
+    llm_repo = repository(401, "Quantization toolkit for large language models")
+    llm_repo["name"] = "llm-quant"
+    llm_repo["full_name"] = "research/llm-quant"
+    llm_repo["topics"] = ["quantization", "llm"]
+    vision_repo = repository(402, "Quantization for efficient vision models")
+    vision_repo["name"] = "vision-quant"
+    vision_repo["full_name"] = "research/vision-quant"
+    vision_repo["topics"] = ["quantization", "computer-vision"]
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            200,
+            json={
+                "total_count": 2,
+                "incomplete_results": False,
+                "items": [llm_repo, vision_repo],
+            },
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert result.raw_candidates == 2
+    assert result.rejected_for_context == 1
+    assert result.rejected_candidates == 1
+    assert [item.id for item in result.items] == ["github:repository:402"]
+    assert result.search_hits_by_query == {"quantization": 2}
+    assert result.accepted_by_query == {"quantization": 1}

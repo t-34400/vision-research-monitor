@@ -52,6 +52,7 @@ def main() -> int:
 
     with AcademicHttpClient(
         config["openreview"]["base_url"],
+        user_agent=config["openreview"]["user_agent"],
         token=os.environ.get("OPENREVIEW_TOKEN"),
     ) as client:
         result = OpenReviewCollector(client, state, config, taxonomy, classifier).collect(

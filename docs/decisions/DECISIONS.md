@@ -564,6 +564,29 @@ environment; subsequent validation uses `--locked` so local and CI dependency
 resolution cannot drift silently. Existing GitHub Actions may continue using the
 current install path until that lockfile is generated and validated locally.
 
+### D-153 — Match OpenReview official-client request identity for guest API access
+
+**Status:** Accepted
+
+OpenReview API v2 collection keeps the existing bounded HTTP/pagination logic,
+but sends an OpenReview-compatible `User-Agent` matching the official
+`openreview-py` client format. Live guest requests using the generic project
+User-Agent returned HTTP 403 through the challenge endpoint, while OpenReview's
+official client identifies itself explicitly. `OPENREVIEW_TOKEN` remains an
+optional Bearer token rather than a required credential for public notes.
+
+### D-154 — Require metadata corroboration for broad GitHub discovery queries
+
+**Status:** Accepted
+
+A GitHub Search hit is candidate-generation evidence, not sufficient relevance
+evidence. Normal topic searches use repository name, description, and topics;
+README-wide search is reserved for venue/year discovery. Query evidence is weak,
+`pushed` discovery requires at least 50 stars, forks are excluded, and generic
+ML/data terms require explicit vision context unless an unrestricted query also
+surfaced the repository. Per-query raw and accepted counts are emitted to make
+future threshold tuning measurable.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational
