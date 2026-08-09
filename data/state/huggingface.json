@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-08T23:47:11.566111Z",
+      "last_successful_at": "2026-08-09T23:48:47.993044Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -21,6 +21,10 @@
         "Intel/object-detection": {
           "last_modified": "2026-08-05T22:01:29Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "JerryX/cmr-annotator-lax-sax-cine-segmentation": {
+          "last_modified": "2026-08-09T16:39:55Z",
+          "last_seen_at": "2026-08-09T23:48:47.993044Z"
         },
         "Sathyag007/speaker-segmentation-fine-tuned-callhome-jpn": {
           "last_modified": "2026-08-05T12:20:00Z",
@@ -41,6 +45,10 @@
         "aneforge/vit-image-classification": {
           "last_modified": "2026-08-05T20:09:49Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "anonimkaq4/manga-page-element-segmentation": {
+          "last_modified": "2026-08-09T21:25:53Z",
+          "last_seen_at": "2026-08-09T23:48:47.993044Z"
         },
         "classicmaster/mastiskhnet-brain-tumor-segmentation": {
           "last_modified": "2026-08-07T14:07:24Z",
