@@ -4,6 +4,334 @@
   "records": [
     {
       "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327769332",
+      "id": "github:repository:1327769332",
+      "kind": "repository",
+      "organization": "eugeneeeee1123",
+      "published_at": "2026-08-08T13:17:02Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Windows DOCX to PDF converter with bilingual UI, batch merge, and high-fidelity image restoration.",
+      "title": "eugeneeeee1123/docxpdf-windows",
+      "topics": [
+        "image_restoration"
+      ],
+      "updated_at": "2026-08-08T13:17:11Z",
+      "url": "https://github.com/eugeneeeee1123/docxpdf-windows",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "entity:5220e0523af85986",
+      "id": "github:repository:1327762884",
+      "kind": "repository",
+      "organization": "Coriappropriative733",
+      "published_at": "2026-08-08T13:11:03Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Compress 2D and 3D medical images into latents or discrete token grids with interchangeable quantization heads for flexible tokenizer design in generation research.",
+      "title": "Coriappropriative733/coriappropriative733.github.io",
+      "topics": [
+        "quantization"
+      ],
+      "updated_at": "2026-08-08T13:11:18Z",
+      "url": "https://github.com/Coriappropriative733/coriappropriative733.github.io",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327762119",
+      "id": "github:repository:1327762119",
+      "kind": "repository",
+      "organization": "Dhanalakshmij",
+      "published_at": "2026-08-08T13:10:27Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "Dhanalakshmij/YOLO-Object-Detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T13:11:09Z",
+      "url": "https://github.com/Dhanalakshmij/YOLO-Object-Detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "entity:5220e0523af85986",
+      "id": "github:repository:1327759806",
+      "kind": "repository",
+      "organization": "Coriappropriative733",
+      "published_at": "2026-08-08T13:08:20Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Compress 2D/3D medical images into latents or discrete tokens with interchangeable quantizers (VQ, LFQ, FSQ, VAE, AE) for flexible generative modeling.",
+      "title": "Coriappropriative733/medtokenizers",
+      "topics": [
+        "model_compression",
+        "quantization",
+        "visual_representation_learning"
+      ],
+      "updated_at": "2026-08-08T13:10:36Z",
+      "url": "https://github.com/Coriappropriative733/medtokenizers",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327756228",
+      "id": "github:repository:1327756228",
+      "kind": "repository",
+      "organization": "raka-cpu",
+      "published_at": "2026-08-08T13:04:25Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-based image classification system for recognizing different types of vehicles using pretrained YOLO11n-cls. The project applies transfer learning, image augmentation, and GPU-accelerated training to build an efficient vehicle classification model.",
+      "title": "raka-cpu/Vehicle-Classification-Using-YOLO11",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T13:04:51Z",
+      "url": "https://github.com/raka-cpu/Vehicle-Classification-Using-YOLO11",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327753538",
+      "id": "github:repository:1327753538",
+      "kind": "repository",
+      "organization": "DilshanKularathna",
+      "published_at": "2026-08-08T13:00:45Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Human-Aware Multi-Robot Perception for Adaptive Warehouse Operations",
+      "title": "DilshanKularathna/Final-Year-Project",
+      "topics": [
+        "robotics_perception"
+      ],
+      "updated_at": "2026-08-08T13:12:48Z",
+      "url": "https://github.com/DilshanKularathna/Final-Year-Project",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327753072",
+      "id": "github:repository:1327753072",
+      "kind": "repository",
+      "organization": "yxtan5022-maker",
+      "published_at": "2026-08-08T13:00:14Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u628a MiniMax H3 \u8dd1\u5728\u65e0\u72ec\u663e\u7b14\u8bb0\u672c\u4e0a\uff1aCore Ultra 5 125H + Intel Arc \u6838\u663e + 24GB \u5185\u5b58\u3002XPU / INT4 \u91cf\u5316 / CPU\u5378\u8f7d \u5168\u8def\u5f84\u7814\u7a76",
+      "title": "yxtan5022-maker/minimax-h3-arc15",
+      "topics": [
+        "quantization"
+      ],
+      "updated_at": "2026-08-08T13:04:54Z",
+      "url": "https://github.com/yxtan5022-maker/minimax-h3-arc15",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327750687",
+      "id": "github:repository:1327750687",
+      "kind": "repository",
+      "organization": "tanveeraleeza2-a11y",
+      "published_at": "2026-08-08T12:56:52Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-powered image classification and object detection system using YOLO and FastAPI.",
+      "title": "tanveeraleeza2-a11y/Image-Classification-Backend",
+      "topics": [
+        "image_classification",
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T13:02:25Z",
+      "url": "https://github.com/tanveeraleeza2-a11y/Image-Classification-Backend",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327748028",
+      "id": "github:repository:1327748028",
+      "kind": "repository",
+      "organization": "srp1207",
+      "published_at": "2026-08-08T12:53:27Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Official implementation of UPPG and GSFI for physics prior-guided underwater monocular depth estimation.",
+      "title": "srp1207/UPPG-UMDE",
+      "topics": [
+        "monocular_depth"
+      ],
+      "updated_at": "2026-08-08T13:06:56Z",
+      "url": "https://github.com/srp1207/UPPG-UMDE",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327748008",
+      "id": "github:repository:1327748008",
+      "kind": "repository",
+      "organization": "Tejasr88670",
+      "published_at": "2026-08-08T12:53:25Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "Tejasr88670/object-detection-yolo",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T13:17:21Z",
+      "url": "https://github.com/Tejasr88670/object-detection-yolo",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327747599",
+      "id": "github:repository:1327747599",
+      "kind": "repository",
+      "organization": "raka-cpu",
+      "published_at": "2026-08-08T12:52:51Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Object detection untuk mendeteksi kerusakan jalan berupa lubang (pothole) menggunakan pretrained YOLOv8s. Model dilatih pada dataset pothole dengan pendekatan transfer learning untuk mendeteksi dan menentukan lokasi kerusakan jalan pada citra.",
+      "title": "raka-cpu/Pothole-Detection-Using-YOLOv8",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T12:53:36Z",
+      "url": "https://github.com/raka-cpu/Pothole-Detection-Using-YOLOv8",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327744499",
+      "id": "github:repository:1327744499",
+      "kind": "repository",
+      "organization": "raka-cpu",
+      "published_at": "2026-08-08T12:48:33Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Object detection untuk mendeteksi penggunaan masker pada wajah menggunakan pretrained YOLO11m. Model dilatih untuk mengenali tiga kelas: face with mask, face without mask, dan incorrectly worn mask, dengan preprocessing anotasi XML/JSON dan penyeimbangan data untuk meningkatkan performa deteksi.",
+      "title": "raka-cpu/Medical-Mask-Detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T12:49:03Z",
+      "url": "https://github.com/raka-cpu/Medical-Mask-Detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327740942",
+      "id": "github:repository:1327740942",
+      "kind": "repository",
+      "organization": "ANKARAHAMSA",
+      "published_at": "2026-08-08T12:43:56Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u26a1 Next-gen AI security suite featuring 60 FPS ArcFace face recognition, YOLOv8 object detection, ByteTrack tracking, loitering analysis, restricted zone monitoring & real-time Telegram alerts.",
+      "title": "ANKARAHAMSA/Now-you-see-me",
+      "topics": [
+        "object_detection",
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T13:15:46Z",
+      "url": "https://github.com/ANKARAHAMSA/Now-you-see-me",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327729167",
+      "id": "github:repository:1327729167",
+      "kind": "repository",
+      "organization": "yugp6488-commits",
+      "published_at": "2026-08-08T12:30:22Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "The CNN model for image classification ..",
+      "title": "yugp6488-commits/CNN_ARCHITECTURE-",
+      "topics": [
+        "efficient_vision_models",
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T12:57:59Z",
+      "url": "https://github.com/yugp6488-commits/CNN_ARCHITECTURE-",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "entity:31e48f1bdc53935d",
+      "id": "github:repository:1327728398",
+      "kind": "repository",
+      "organization": "SepehrMaghool",
+      "published_at": "2026-08-08T12:29:40Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "SepehrMaghool/image_classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T12:29:41Z",
+      "url": "https://github.com/SepehrMaghool/image_classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327721276",
+      "id": "github:repository:1327721276",
+      "kind": "repository",
+      "organization": "haesol97",
+      "published_at": "2026-08-08T12:22:20Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "English translation of Landmark-Image-Classification. Original repo: https://github.com/haesol97/Landmark-Image-Classification",
+      "title": "haesol97/Landmark-Image-Classification-en",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T12:27:12Z",
+      "url": "https://github.com/haesol97/Landmark-Image-Classification-en",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T13:19:49.174985Z",
+      "entity_id": "github:repository:1327717163",
+      "id": "github:repository:1327717163",
+      "kind": "repository",
+      "organization": "chandrachurdhar08-ship-it",
+      "published_at": "2026-08-08T12:18:03Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Shoplifting Detection System AI-powered real-time shoplifting detection using YOLOv8 and pose estimation. The system monitors CCTV/webcam footage, detects people and objects, tracks wrist movements, analyzes hand-object interactions with pockets and bags, identifies suspicious behavior, and provides visual and email a\u2026",
+      "title": "chandrachurdhar08-ship-it/VisionSheild_AI",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T12:26:07Z",
+      "url": "https://github.com/chandrachurdhar08-ship-it/VisionSheild_AI",
+      "venue": null
+    },
+    {
+      "authors": [],
       "discovered_at": "2026-08-08T12:17:46.156591Z",
       "entity_id": "github:repository:1327716770",
       "id": "github:repository:1327716770",
@@ -1871,7 +2199,7 @@
         "Haohuan Fu"
       ],
       "discovered_at": "2026-08-08T12:16:13.267168Z",
-      "entity_id": "entity:a890473b88ea4611",
+      "entity_id": "entity:31e48f1bdc53935d",
       "id": "arxiv:paper:2608.05964",
       "kind": "paper",
       "organization": null,
@@ -3324,7 +3652,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "entity:a890473b88ea4611",
+      "entity_id": "entity:31e48f1bdc53935d",
       "id": "github:repository:1327685861",
       "kind": "repository",
       "organization": "Nanthana2311",
@@ -7984,7 +8312,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "entity:a890473b88ea4611",
+      "entity_id": "entity:31e48f1bdc53935d",
       "id": "github:repository:1326644356",
       "kind": "repository",
       "organization": "itsabhinav19",

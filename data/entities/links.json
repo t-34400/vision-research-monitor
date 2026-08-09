@@ -8,11 +8,36 @@
       ]
     },
     {
-      "id": "entity:a890473b88ea4611",
+      "id": "entity:30626e84caba63ff",
       "items": [
-        "arxiv:paper:2608.05964",
-        "github:repository:1326644356",
-        "github:repository:1327685861"
+        "github:repository:1326976589",
+        "github:repository:1327806018"
+      ]
+    },
+    {
+      "id": "entity:5220e0523af85986",
+      "items": [
+        "github:repository:1327759806",
+        "github:repository:1327762884"
+      ]
+    },
+    {
+      "id": "entity:7fe13d185bbd1b88",
+      "items": [
+        "arxiv:paper:2608.06205",
+        "github:repository:1326245051",
+        "github:repository:1326659968",
+        "github:repository:1327163199",
+        "github:repository:1327895284"
+      ]
+    },
+    {
+      "id": "entity:950fb17220abdf96",
+      "items": [
+        "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+        "github:release:167694194:release:360119879",
+        "github:repository:167694194",
+        "github:tag:167694194:tag:v0.18.0-beta3"
       ]
     },
     {
@@ -23,23 +48,32 @@
       ]
     },
     {
-      "id": "entity:ce574598106c0f72",
-      "items": [
-        "arxiv:paper:2608.06205",
-        "github:repository:1326245051",
-        "github:repository:1326659968",
-        "github:repository:1327163199"
-      ]
-    },
-    {
       "id": "entity:d638861fb84a2b6e",
       "items": [
         "github:repository:1326098078",
         "github:repository:1327341301"
       ]
+    },
+    {
+      "id": "entity:daef422d1c6307a6",
+      "items": [
+        "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
+        "github:repository:422584085"
+      ]
+    },
+    {
+      "id": "entity:feb0aeef4d6e8153",
+      "items": [
+        "arxiv:paper:2608.05964",
+        "github:repository:1326644356",
+        "github:repository:1327685861",
+        "github:repository:1327728398",
+        "github:repository:1327796223",
+        "github:repository:1328008247"
+      ]
     }
   ],
-  "generated_at": "2026-08-08T12:17:46.156591Z",
+  "generated_at": "2026-08-08T23:54:19.915276Z",
   "links": [
     {
       "confidence": 0.84,
@@ -74,6 +108,57 @@
       ],
       "left_id": "arxiv:paper:2608.05964",
       "right_id": "github:repository:1327685861"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1327728398"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1327796223"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1328008247"
     },
     {
       "confidence": 0.84,
@@ -127,6 +212,115 @@
       "right_id": "github:repository:1327163199"
     },
     {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1327895284"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:167694194 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:blakeblackshear/frigate (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "right_id": "github:release:167694194:release:360119879"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:167694194 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:blakeblackshear/frigate (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "right_id": "github:repository:167694194"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:167694194 (source_id)"
+        }
+      ],
+      "left_id": "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "right_id": "github:tag:167694194:tag:v0.18.0-beta3"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:422584085 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:yyyanbj/arxiv-daily (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
+      "right_id": "github:repository:422584085"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:167694194 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:blakeblackshear/frigate (github_repository)"
+        }
+      ],
+      "left_id": "github:release:167694194:release:360119879",
+      "right_id": "github:repository:167694194"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:167694194 (source_id)"
+        }
+      ],
+      "left_id": "github:release:167694194:release:360119879",
+      "right_id": "github:tag:167694194:tag:v0.18.0-beta3"
+    },
+    {
       "confidence": 1.0,
       "evidence": [
         {
@@ -137,6 +331,35 @@
       ],
       "left_id": "github:repository:1326098078",
       "right_id": "github:repository:1327341301"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:nithin1-re/object-detection (github_repository)"
+        }
+      ],
+      "left_id": "github:repository:1326245051",
+      "right_id": "github:repository:1327895284"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:basanthussein13/farmer-eye-ai (github_repository)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/BasantHussein13/Farmer-Eye-AI (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1326976589",
+      "right_id": "github:repository:1327806018"
     },
     {
       "confidence": 1.0,
@@ -161,6 +384,35 @@
         {
           "kind": "exact_identifier",
           "score": 1.0,
+          "value": "github:coriappropriative733/medtokenizers (github_repository)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/Coriappropriative733/medtokenizers (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1327759806",
+      "right_id": "github:repository:1327762884"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:167694194 (source_id)"
+        }
+      ],
+      "left_id": "github:repository:167694194",
+      "right_id": "github:tag:167694194:tag:v0.18.0-beta3"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
           "value": "github:turhancan97/visbench (github_repository)"
         },
         {
@@ -176,24 +428,45 @@
   "related_items": {
     "arxiv:paper:2608.05964": [
       "github:repository:1326644356",
-      "github:repository:1327685861"
+      "github:repository:1327685861",
+      "github:repository:1327728398",
+      "github:repository:1327796223",
+      "github:repository:1328008247"
     ],
     "arxiv:paper:2608.06205": [
       "github:repository:1326245051",
       "github:repository:1326659968",
-      "github:repository:1327163199"
+      "github:repository:1327163199",
+      "github:repository:1327895284"
+    ],
+    "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43": [
+      "github:release:167694194:release:360119879",
+      "github:repository:167694194",
+      "github:tag:167694194:tag:v0.18.0-beta3"
+    ],
+    "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34": [
+      "github:repository:422584085"
+    ],
+    "github:release:167694194:release:360119879": [
+      "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "github:repository:167694194",
+      "github:tag:167694194:tag:v0.18.0-beta3"
     ],
     "github:repository:1326098078": [
       "github:repository:1327341301"
     ],
     "github:repository:1326245051": [
-      "arxiv:paper:2608.06205"
+      "arxiv:paper:2608.06205",
+      "github:repository:1327895284"
     ],
     "github:repository:1326644356": [
       "arxiv:paper:2608.05964"
     ],
     "github:repository:1326659968": [
       "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1326976589": [
+      "github:repository:1327806018"
     ],
     "github:repository:1327163199": [
       "arxiv:paper:2608.06205"
@@ -209,6 +482,41 @@
     ],
     "github:repository:1327685861": [
       "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1327728398": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1327759806": [
+      "github:repository:1327762884"
+    ],
+    "github:repository:1327762884": [
+      "github:repository:1327759806"
+    ],
+    "github:repository:1327796223": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1327806018": [
+      "github:repository:1326976589"
+    ],
+    "github:repository:1327895284": [
+      "arxiv:paper:2608.06205",
+      "github:repository:1326245051"
+    ],
+    "github:repository:1328008247": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:167694194": [
+      "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "github:release:167694194:release:360119879",
+      "github:tag:167694194:tag:v0.18.0-beta3"
+    ],
+    "github:repository:422584085": [
+      "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34"
+    ],
+    "github:tag:167694194:tag:v0.18.0-beta3": [
+      "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "github:release:167694194:release:360119879",
+      "github:repository:167694194"
     ],
     "huggingface:model:91d8784804eb136c7e73af04": [
       "huggingface:model:93804237970bf3cca14afa99"
