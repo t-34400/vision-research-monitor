@@ -8,6 +8,14 @@
       ]
     },
     {
+      "id": "entity:0e4443a598834c8b",
+      "items": [
+        "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
+        "github:commit:422584085:commit:c3ad60b40136062083c86fa603e1159a0e2d09b7",
+        "github:repository:422584085"
+      ]
+    },
+    {
       "id": "entity:30626e84caba63ff",
       "items": [
         "github:repository:1326976589",
@@ -22,13 +30,27 @@
       ]
     },
     {
-      "id": "entity:7fe13d185bbd1b88",
+      "id": "entity:591b07c1c03c73db",
+      "items": [
+        "github:repository:1326721676",
+        "github:repository:1328635513"
+      ]
+    },
+    {
+      "id": "entity:7e18f76f1b25d2ee",
       "items": [
         "arxiv:paper:2608.06205",
         "github:repository:1326245051",
         "github:repository:1326659968",
         "github:repository:1327163199",
-        "github:repository:1327895284"
+        "github:repository:1327895284",
+        "github:repository:1328396711",
+        "github:repository:1328592536",
+        "github:repository:1328619647",
+        "github:repository:1328633903",
+        "github:repository:1328698974",
+        "github:repository:1328822373",
+        "github:repository:1328910217"
       ]
     },
     {
@@ -48,6 +70,13 @@
       ]
     },
     {
+      "id": "entity:c120e810eeb931ee",
+      "items": [
+        "arxiv:paper:2608.05948",
+        "github:repository:1328552018"
+      ]
+    },
+    {
       "id": "entity:d638861fb84a2b6e",
       "items": [
         "github:repository:1326098078",
@@ -55,26 +84,74 @@
       ]
     },
     {
-      "id": "entity:daef422d1c6307a6",
-      "items": [
-        "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
-        "github:repository:422584085"
-      ]
-    },
-    {
-      "id": "entity:feb0aeef4d6e8153",
+      "id": "entity:d6744b2b05eae2ba",
       "items": [
         "arxiv:paper:2608.05964",
         "github:repository:1326644356",
         "github:repository:1327685861",
         "github:repository:1327728398",
         "github:repository:1327796223",
-        "github:repository:1328008247"
+        "github:repository:1328008247",
+        "github:repository:1328571294",
+        "github:repository:1328639713",
+        "github:repository:1328646301",
+        "github:repository:1328855036"
+      ]
+    },
+    {
+      "id": "entity:daf9186a86e252f2",
+      "items": [
+        "github:commit:628172384:commit:e1e95f14590c5ad596495e9d57b9d8c18d545fe9",
+        "github:repository:628172384"
+      ]
+    },
+    {
+      "id": "entity:e706226b1b00ec85",
+      "items": [
+        "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520",
+        "github:release:535360445:release:367536285",
+        "github:repository:535360445",
+        "github:tag:535360445:tag:v8.4.117"
+      ]
+    },
+    {
+      "id": "entity:efb23a5b8600567c",
+      "items": [
+        "github:repository:1328686411",
+        "github:repository:1328702153",
+        "github:repository:1328707161",
+        "github:repository:1328727740",
+        "github:repository:1328734682",
+        "github:repository:1328737063",
+        "github:repository:1328761526",
+        "github:repository:1328762117",
+        "github:repository:1328772827",
+        "github:repository:1328776591",
+        "github:repository:1328784913",
+        "github:repository:1328788645",
+        "huggingface:model:c56468349e0ce6e14b748e11"
       ]
     }
   ],
-  "generated_at": "2026-08-08T23:54:19.915276Z",
+  "generated_at": "2026-08-09T23:57:39.970527Z",
   "links": [
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "world models"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "synthetic_data"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05948",
+      "right_id": "github:repository:1328552018"
+    },
     {
       "confidence": 0.84,
       "evidence": [
@@ -166,6 +243,74 @@
         {
           "kind": "repository_name",
           "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1328571294"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1328639713"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1328646301"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "image classification"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "image_classification"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.05964",
+      "right_id": "github:repository:1328855036"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
           "value": "object detection"
         },
         {
@@ -229,6 +374,125 @@
       "right_id": "github:repository:1327895284"
     },
     {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1328396711"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1328592536"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1328619647"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1328633903"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1328698974"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1328822373"
+    },
+    {
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "kind": "repository_name",
+          "score": 0.84,
+          "value": "object detection"
+        },
+        {
+          "kind": "topic_overlap",
+          "score": 0.8,
+          "value": "object_detection"
+        }
+      ],
+      "left_id": "arxiv:paper:2608.06205",
+      "right_id": "github:repository:1328910217"
+    },
+    {
       "confidence": 1.0,
       "evidence": [
         {
@@ -289,7 +553,104 @@
         }
       ],
       "left_id": "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
+      "right_id": "github:commit:422584085:commit:c3ad60b40136062083c86fa603e1159a0e2d09b7"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:422584085 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:yyyanbj/arxiv-daily (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
       "right_id": "github:repository:422584085"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:422584085 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:yyyanbj/arxiv-daily (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:422584085:commit:c3ad60b40136062083c86fa603e1159a0e2d09b7",
+      "right_id": "github:repository:422584085"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:535360445 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:ultralytics/ultralytics (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520",
+      "right_id": "github:release:535360445:release:367536285"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:535360445 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:ultralytics/ultralytics (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520",
+      "right_id": "github:repository:535360445"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:535360445 (source_id)"
+        }
+      ],
+      "left_id": "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520",
+      "right_id": "github:tag:535360445:tag:v8.4.117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:628172384 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:johe123qwe/github-trending (github_repository)"
+        }
+      ],
+      "left_id": "github:commit:628172384:commit:e1e95f14590c5ad596495e9d57b9d8c18d545fe9",
+      "right_id": "github:repository:628172384"
     },
     {
       "confidence": 1.0,
@@ -326,6 +687,35 @@
         {
           "kind": "exact_identifier",
           "score": 1.0,
+          "value": "github-repository-id:535360445 (source_id)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:ultralytics/ultralytics (github_repository)"
+        }
+      ],
+      "left_id": "github:release:535360445:release:367536285",
+      "right_id": "github:repository:535360445"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:535360445 (source_id)"
+        }
+      ],
+      "left_id": "github:release:535360445:release:367536285",
+      "right_id": "github:tag:535360445:tag:v8.4.117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
           "value": "url:https://recapo.ai/ (embedded_url)"
         }
       ],
@@ -343,6 +733,23 @@
       ],
       "left_id": "github:repository:1326245051",
       "right_id": "github:repository:1327895284"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github:shivani102005/ai-powered-assisstive-navigation-system (github_repository)"
+        },
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/Shivani102005/AI-powered-assisstive-navigation-system (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1326721676",
+      "right_id": "github:repository:1328635513"
     },
     {
       "confidence": 1.0,
@@ -401,11 +808,959 @@
         {
           "kind": "exact_identifier",
           "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328702153"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328707161"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328727740"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328734682"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328737063"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328761526"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328762117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328686411",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328707161"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328727740"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328734682"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328737063"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328761526"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328762117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328702153",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328727740"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328734682"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328737063"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328761526"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328762117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328707161",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328734682"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328737063"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328761526"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328762117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328727740",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "github:repository:1328737063"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "github:repository:1328761526"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "github:repository:1328762117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328734682",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328737063",
+      "right_id": "github:repository:1328761526"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328737063",
+      "right_id": "github:repository:1328762117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328737063",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328737063",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328737063",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328737063",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328737063",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328761526",
+      "right_id": "github:repository:1328762117"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328761526",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328761526",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328761526",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328761526",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328761526",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328762117",
+      "right_id": "github:repository:1328772827"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328762117",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328762117",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328762117",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328762117",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328772827",
+      "right_id": "github:repository:1328776591"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328772827",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328772827",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328772827",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328776591",
+      "right_id": "github:repository:1328784913"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328776591",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328776591",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328784913",
+      "right_id": "github:repository:1328788645"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328784913",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "url:https://github.com/ (embedded_url)"
+        }
+      ],
+      "left_id": "github:repository:1328788645",
+      "right_id": "huggingface:model:c56468349e0ce6e14b748e11"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
           "value": "github-repository-id:167694194 (source_id)"
         }
       ],
       "left_id": "github:repository:167694194",
       "right_id": "github:tag:167694194:tag:v0.18.0-beta3"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "exact_identifier",
+          "score": 1.0,
+          "value": "github-repository-id:535360445 (source_id)"
+        }
+      ],
+      "left_id": "github:repository:535360445",
+      "right_id": "github:tag:535360445:tag:v8.4.117"
     },
     {
       "confidence": 1.0,
@@ -426,18 +1781,32 @@
     }
   ],
   "related_items": {
+    "arxiv:paper:2608.05948": [
+      "github:repository:1328552018"
+    ],
     "arxiv:paper:2608.05964": [
       "github:repository:1326644356",
       "github:repository:1327685861",
       "github:repository:1327728398",
       "github:repository:1327796223",
-      "github:repository:1328008247"
+      "github:repository:1328008247",
+      "github:repository:1328571294",
+      "github:repository:1328639713",
+      "github:repository:1328646301",
+      "github:repository:1328855036"
     ],
     "arxiv:paper:2608.06205": [
       "github:repository:1326245051",
       "github:repository:1326659968",
       "github:repository:1327163199",
-      "github:repository:1327895284"
+      "github:repository:1327895284",
+      "github:repository:1328396711",
+      "github:repository:1328592536",
+      "github:repository:1328619647",
+      "github:repository:1328633903",
+      "github:repository:1328698974",
+      "github:repository:1328822373",
+      "github:repository:1328910217"
     ],
     "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43": [
       "github:release:167694194:release:360119879",
@@ -445,12 +1814,30 @@
       "github:tag:167694194:tag:v0.18.0-beta3"
     ],
     "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34": [
+      "github:commit:422584085:commit:c3ad60b40136062083c86fa603e1159a0e2d09b7",
       "github:repository:422584085"
+    ],
+    "github:commit:422584085:commit:c3ad60b40136062083c86fa603e1159a0e2d09b7": [
+      "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
+      "github:repository:422584085"
+    ],
+    "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520": [
+      "github:release:535360445:release:367536285",
+      "github:repository:535360445",
+      "github:tag:535360445:tag:v8.4.117"
+    ],
+    "github:commit:628172384:commit:e1e95f14590c5ad596495e9d57b9d8c18d545fe9": [
+      "github:repository:628172384"
     ],
     "github:release:167694194:release:360119879": [
       "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
       "github:repository:167694194",
       "github:tag:167694194:tag:v0.18.0-beta3"
+    ],
+    "github:release:535360445:release:367536285": [
+      "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520",
+      "github:repository:535360445",
+      "github:tag:535360445:tag:v8.4.117"
     ],
     "github:repository:1326098078": [
       "github:repository:1327341301"
@@ -464,6 +1851,9 @@
     ],
     "github:repository:1326659968": [
       "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1326721676": [
+      "github:repository:1328635513"
     ],
     "github:repository:1326976589": [
       "github:repository:1327806018"
@@ -505,24 +1895,259 @@
     "github:repository:1328008247": [
       "arxiv:paper:2608.05964"
     ],
+    "github:repository:1328396711": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1328552018": [
+      "arxiv:paper:2608.05948"
+    ],
+    "github:repository:1328571294": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1328592536": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1328619647": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1328633903": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1328635513": [
+      "github:repository:1326721676"
+    ],
+    "github:repository:1328639713": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1328646301": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1328686411": [
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328698974": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1328702153": [
+      "github:repository:1328686411",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328707161": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328727740": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328734682": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328737063": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328761526": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328762117": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328772827": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328776591": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328784913",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328784913": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328788645",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328788645": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "huggingface:model:c56468349e0ce6e14b748e11"
+    ],
+    "github:repository:1328822373": [
+      "arxiv:paper:2608.06205"
+    ],
+    "github:repository:1328855036": [
+      "arxiv:paper:2608.05964"
+    ],
+    "github:repository:1328910217": [
+      "arxiv:paper:2608.06205"
+    ],
     "github:repository:167694194": [
       "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
       "github:release:167694194:release:360119879",
       "github:tag:167694194:tag:v0.18.0-beta3"
     ],
     "github:repository:422584085": [
-      "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34"
+      "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
+      "github:commit:422584085:commit:c3ad60b40136062083c86fa603e1159a0e2d09b7"
+    ],
+    "github:repository:535360445": [
+      "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520",
+      "github:release:535360445:release:367536285",
+      "github:tag:535360445:tag:v8.4.117"
+    ],
+    "github:repository:628172384": [
+      "github:commit:628172384:commit:e1e95f14590c5ad596495e9d57b9d8c18d545fe9"
     ],
     "github:tag:167694194:tag:v0.18.0-beta3": [
       "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
       "github:release:167694194:release:360119879",
       "github:repository:167694194"
     ],
+    "github:tag:535360445:tag:v8.4.117": [
+      "github:commit:535360445:commit:461196cf09175b64c9b9bd8babebf081c0540520",
+      "github:release:535360445:release:367536285",
+      "github:repository:535360445"
+    ],
     "huggingface:model:91d8784804eb136c7e73af04": [
       "huggingface:model:93804237970bf3cca14afa99"
     ],
     "huggingface:model:93804237970bf3cca14afa99": [
       "huggingface:model:91d8784804eb136c7e73af04"
+    ],
+    "huggingface:model:c56468349e0ce6e14b748e11": [
+      "github:repository:1328686411",
+      "github:repository:1328702153",
+      "github:repository:1328707161",
+      "github:repository:1328727740",
+      "github:repository:1328734682",
+      "github:repository:1328737063",
+      "github:repository:1328761526",
+      "github:repository:1328762117",
+      "github:repository:1328772827",
+      "github:repository:1328776591",
+      "github:repository:1328784913",
+      "github:repository:1328788645"
     ]
   },
   "version": 1

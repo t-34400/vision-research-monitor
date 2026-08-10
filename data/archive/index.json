@@ -1,7 +1,2666 @@
 {
-  "cutoff": "2026-08-08T23:00:00Z",
-  "generated_for_date": "2026-08-09",
+  "cutoff": "2026-08-09T23:00:00Z",
+  "generated_for_date": "2026-08-10",
   "records": [
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:944414751",
+      "id": "github:repository:944414751",
+      "kind": "repository",
+      "organization": "MCPBlender",
+      "published_at": "2025-03-07T09:58:58Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\ud83c\udfa8 Control Blender 3D with Claude AI \u2014 prompt-driven 3D modeling, materials & scene generation via MCP",
+      "title": "MCPBlender/blender-mcp",
+      "topics": [
+        "scene_generation"
+      ],
+      "updated_at": "2026-08-08T22:04:21Z",
+      "url": "https://github.com/MCPBlender/blender-mcp",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:900320441",
+      "id": "github:repository:900320441",
+      "kind": "repository",
+      "organization": "datawhalechina",
+      "published_at": "2024-12-08T13:33:40Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u4ec5\u9700Python\u57fa\u7840\uff0c\u4ece0\u6784\u5efa\u81ea\u5df1\u7684\u5177\u8eab\u667a\u80fd\u673a\u5668\u4eba\uff1b\u4ece0\u9010\u6b65\u6784\u5efaVLA/OpenVLA/SmolVLA/Pi0\uff0c \u6df1\u5165\u7406\u89e3\u5177\u8eab\u667a\u80fd",
+      "title": "datawhalechina/every-embodied",
+      "topics": [
+        "embodied_vision",
+        "text_to_3d",
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T17:24:59Z",
+      "url": "https://github.com/datawhalechina/every-embodied",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:867103451",
+      "id": "github:repository:867103451",
+      "kind": "repository",
+      "organization": "MIT-SPARK",
+      "published_at": "2024-10-03T13:08:12Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "ROS interface to closed and open-set semantic segmentation models",
+      "title": "MIT-SPARK/semantic_inference",
+      "topics": [
+        "panoptic_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T13:51:47Z",
+      "url": "https://github.com/MIT-SPARK/semantic_inference",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:758424504",
+      "id": "github:repository:758424504",
+      "kind": "repository",
+      "organization": "alireza787b",
+      "published_at": "2024-02-16T09:43:16Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Computer vision, object tracking, and target following for PX4 drones using OpenCV, YOLO, MAVSDK, MAVLink, and a real-time web dashboard",
+      "title": "alireza787b/PixEagle",
+      "topics": [
+        "object_detection",
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T22:37:15Z",
+      "url": "https://github.com/alireza787b/PixEagle",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:562333889",
+      "id": "github:repository:562333889",
+      "kind": "repository",
+      "organization": "the-database",
+      "published_at": "2022-11-06T02:12:50Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Real-time anime upscaling to 4K in mpv with lightweight super-resolution models",
+      "title": "the-database/mpv-AnimeJaNai",
+      "topics": [
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T20:34:24Z",
+      "url": "https://github.com/the-database/mpv-AnimeJaNai",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:54376220",
+      "id": "github:repository:54376220",
+      "kind": "repository",
+      "organization": "AtsushiSakai",
+      "published_at": "2016-03-21T09:34:43Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Python sample codes and textbook for robotics algorithms.",
+      "title": "AtsushiSakai/PythonRobotics",
+      "topics": [
+        "robotics_mapping",
+        "robotics_perception",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T18:46:43Z",
+      "url": "https://github.com/AtsushiSakai/PythonRobotics",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:235070415",
+      "id": "github:repository:235070415",
+      "kind": "repository",
+      "organization": "AaronFeng753",
+      "published_at": "2020-01-20T10:01:28Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Video, Image and GIF upscale/enlarge(Super-Resolution) and Video frame interpolation. Achieved with Waifu2x, Real-ESRGAN, Real-CUGAN, RTX Video Super Resolution VSR, SRMD, RealSR, Anime4K, RIFE, IFRNet, CAIN, DAIN, and ACNet.",
+      "title": "AaronFeng753/Waifu2x-Extension-GUI",
+      "topics": [
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T23:40:53Z",
+      "url": "https://github.com/AaronFeng753/Waifu2x-Extension-GUI",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:190707935",
+      "id": "github:repository:190707935",
+      "kind": "repository",
+      "organization": "MOLAorg",
+      "published_at": "2019-06-07T07:57:39Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Multi primitive-to-primitive (MP2P) ICP algorithms in C++",
+      "title": "MOLAorg/mp2p_icp",
+      "topics": [
+        "point_cloud_reconstruction",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T21:03:34Z",
+      "url": "https://github.com/MOLAorg/mp2p_icp",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328258184",
+      "id": "github:repository:1328258184",
+      "kind": "repository",
+      "organization": "jinst255",
+      "published_at": "2026-08-08T23:36:34Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A Monocular Depth Estimation Video Converter (also capable of doing images)",
+      "title": "jinst255/mdevc",
+      "topics": [
+        "monocular_depth"
+      ],
+      "updated_at": "2026-08-08T23:44:30Z",
+      "url": "https://github.com/jinst255/mdevc",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328237740",
+      "id": "github:repository:1328237740",
+      "kind": "repository",
+      "organization": "Medicalscientistkachina500",
+      "published_at": "2026-08-08T22:59:05Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Automate Restaurant Tycoon 3 gameplay with precise auto-targeting and visual object tracking to streamline floor management and customer service.",
+      "title": "Medicalscientistkachina500/medicalscientistkachina500.github.io",
+      "topics": [
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T23:00:19Z",
+      "url": "https://github.com/Medicalscientistkachina500/medicalscientistkachina500.github.io",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328233810",
+      "id": "github:repository:1328233810",
+      "kind": "repository",
+      "organization": "MissouriMRR",
+      "published_at": "2026-08-08T22:52:31Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Node to run object detection models and an instance of NodeODM",
+      "title": "MissouriMRR/inference_node",
+      "topics": [
+        "instance_segmentation",
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T22:52:32Z",
+      "url": "https://github.com/MissouriMRR/inference_node",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328233451",
+      "id": "github:repository:1328233451",
+      "kind": "repository",
+      "organization": "vimalsingh135",
+      "published_at": "2026-08-08T22:51:57Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "vimalsingh135/Super-Resolution-GAN",
+      "topics": [
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T22:52:42Z",
+      "url": "https://github.com/vimalsingh135/Super-Resolution-GAN",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328228286",
+      "id": "github:repository:1328228286",
+      "kind": "repository",
+      "organization": "vimalsingh135",
+      "published_at": "2026-08-08T22:44:08Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "vimalsingh135/Autonomous-Drone-Object-Detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T22:46:24Z",
+      "url": "https://github.com/vimalsingh135/Autonomous-Drone-Object-Detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328214259",
+      "id": "github:repository:1328214259",
+      "kind": "repository",
+      "organization": "JulianSalaz",
+      "published_at": "2026-08-08T22:20:52Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Image classification model using the CIFAR10 dataset",
+      "title": "JulianSalaz/ImageClassification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T23:11:18Z",
+      "url": "https://github.com/JulianSalaz/ImageClassification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328207590",
+      "id": "github:repository:1328207590",
+      "kind": "repository",
+      "organization": "hemantsinghrathore",
+      "published_at": "2026-08-08T22:10:24Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Interactive YOLOv8 object detection application with Streamlit, analytics, session history, and downloadable results.",
+      "title": "hemantsinghrathore/VisionAI-Assistant",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T23:36:37Z",
+      "url": "https://github.com/hemantsinghrathore/VisionAI-Assistant",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328176037",
+      "id": "github:repository:1328176037",
+      "kind": "repository",
+      "organization": "OguzCennet",
+      "published_at": "2026-08-08T21:21:33Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Turning a Vision--Language Model into a Robot Policy",
+      "title": "OguzCennet/smolvlm2-libero-vla",
+      "topics": [
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T21:25:26Z",
+      "url": "https://github.com/OguzCennet/smolvlm2-libero-vla",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328173889",
+      "id": "github:repository:1328173889",
+      "kind": "repository",
+      "organization": "Aryansingh0783",
+      "published_at": "2026-08-08T21:18:21Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Local AI video restoration for Windows. Denoise and upscale noisy footage on your own NVIDIA GPU - no uploads, no accounts, no cloud.",
+      "title": "Aryansingh0783/restoreforge-ai",
+      "topics": [
+        "image_restoration",
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T21:56:35Z",
+      "url": "https://github.com/Aryansingh0783/restoreforge-ai",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328169521",
+      "id": "github:repository:1328169521",
+      "kind": "repository",
+      "organization": "gurshh-rain",
+      "published_at": "2026-08-08T21:11:54Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "gurshh-rain/autonomous-maze-navigation-slam-nav2",
+      "topics": [
+        "robotics_perception",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T22:39:05Z",
+      "url": "https://github.com/gurshh-rain/autonomous-maze-navigation-slam-nav2",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328168750",
+      "id": "github:repository:1328168750",
+      "kind": "repository",
+      "organization": "Z-H1",
+      "published_at": "2026-08-08T21:10:46Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "The official HYPERSIGHT App which uses image classification to detect whether an image is real or AI-generated.",
+      "title": "Z-H1/HYPERSIGHT",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T21:22:17Z",
+      "url": "https://github.com/Z-H1/HYPERSIGHT",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328167104",
+      "id": "github:repository:1328167104",
+      "kind": "repository",
+      "organization": "KDWijesinghe",
+      "published_at": "2026-08-08T21:08:13Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A deep learning-based image classification project using MobileNetV2 and transfer learning to identify visual patterns associated with Down syndrome. The model achieved 90% test accuracy after fine-tuning and includes an interactive Gradio interface",
+      "title": "KDWijesinghe/Down-Syndrome-Image-Classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T21:19:15Z",
+      "url": "https://github.com/KDWijesinghe/Down-Syndrome-Image-Classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328157268",
+      "id": "github:repository:1328157268",
+      "kind": "repository",
+      "organization": "MichaelFowler1",
+      "published_at": "2026-08-08T20:52:49Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A quadrotor that explores an unknown city from its onboard camera alone, builds a map as it flies, and takes plain-English orders - including flying to something it can only see. PyBullet physics, real cascaded flight controller, local LLM.",
+      "title": "MichaelFowler1/autonomous-drone-sim",
+      "topics": [
+        "robotics_mapping",
+        "robotics_perception",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T22:00:26Z",
+      "url": "https://github.com/MichaelFowler1/autonomous-drone-sim",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328155322",
+      "id": "github:repository:1328155322",
+      "kind": "repository",
+      "organization": "zaheenanika",
+      "published_at": "2026-08-08T20:50:13Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "1. FIR lowpass filter design with magnitude response visualization. 2.Sine wave quantization across 2\u20135 bits, calculating RMS error, SQNR, and mean squared error (MSE). 3. Grayscale intensity reduction using grayslice and MSE evaluation 4.Image manipulation in the frequency domain using 2D FFT, custom mask filtering,\u2026",
+      "title": "zaheenanika/Some-Codes-MATLAB",
+      "topics": [
+        "quantization"
+      ],
+      "updated_at": "2026-08-08T22:28:47Z",
+      "url": "https://github.com/zaheenanika/Some-Codes-MATLAB",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328152787",
+      "id": "github:repository:1328152787",
+      "kind": "repository",
+      "organization": "faiha25",
+      "published_at": "2026-08-08T20:46:48Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Arabic Sign Language image classification using CNNs and ResNet18 transfer learning.",
+      "title": "faiha25/arabic-sign-language-classifier",
+      "topics": [
+        "image_classification",
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T20:48:51Z",
+      "url": "https://github.com/faiha25/arabic-sign-language-classifier",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328150864",
+      "id": "github:repository:1328150864",
+      "kind": "repository",
+      "organization": "YahyaAlsharif",
+      "published_at": "2026-08-08T20:44:18Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "3rd place / 24 teams, KAUST Academy Summer School 2026 Challenge 2. ConvNeXt-UNet + distance-watershed instance segmentation of neuronal cells.",
+      "title": "YahyaAlsharif/kaust-cell-instance-segmentation",
+      "topics": [
+        "instance_segmentation",
+        "panoptic_segmentation"
+      ],
+      "updated_at": "2026-08-08T21:13:45Z",
+      "url": "https://github.com/YahyaAlsharif/kaust-cell-instance-segmentation",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328149811",
+      "id": "github:repository:1328149811",
+      "kind": "repository",
+      "organization": "zaheenanika",
+      "published_at": "2026-08-08T20:42:56Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "1. Time domain to frequency domain using fft function. 2. Convert an image from frequency domain to time domain using ifft function. 3. Quantization levels of fourier transformed image by using the fft function. 4. Mean squared error of different intensity level of fourier transformed image and plot the mse error vs q\u2026",
+      "title": "zaheenanika/Assignment-6-MATLAB",
+      "topics": [
+        "quantization"
+      ],
+      "updated_at": "2026-08-08T20:44:17Z",
+      "url": "https://github.com/zaheenanika/Assignment-6-MATLAB",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328149039",
+      "id": "github:repository:1328149039",
+      "kind": "repository",
+      "organization": "strapsai",
+      "published_at": "2026-08-08T20:42:00Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "DROID-SLAM mirror for CHIRON reid mapping (E5 streaming odometry) \u2014 pinned upstream + packaging for workspace install",
+      "title": "strapsai/DROID-SLAM",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T23:41:57Z",
+      "url": "https://github.com/strapsai/DROID-SLAM",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328143077",
+      "id": "github:repository:1328143077",
+      "kind": "repository",
+      "organization": "SRKRZ23",
+      "published_at": "2026-08-08T20:33:24Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Upload any flat image, move your head, watch it become 3D. Monocular depth to gaussian splats with off-axis projection driven by webcam head tracking. Runs entirely in the browser.",
+      "title": "SRKRZ23/popout",
+      "topics": [
+        "gaussian_splatting",
+        "monocular_depth"
+      ],
+      "updated_at": "2026-08-08T20:45:29Z",
+      "url": "https://github.com/SRKRZ23/popout",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328142205",
+      "id": "github:repository:1328142205",
+      "kind": "repository",
+      "organization": "naveen-kumar68",
+      "published_at": "2026-08-08T20:32:04Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Lightweight YOLOv11-based underwater marine debris detection system with C3TR transformer blocks and C2FPSA feature fusion for robust small-object detection in low-visibility underwater environments. Achieved **46.72% mAP@50** and **51.10% F1-score** on the SeaClear dataset with real-time inference for ROV deployment.",
+      "title": "naveen-kumar68/Deep-Learning-Based-Underwater-Marine-Debris-Detection-Using-YOLOv11",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T20:44:17Z",
+      "url": "https://github.com/naveen-kumar68/Deep-Learning-Based-Underwater-Marine-Debris-Detection-Using-YOLOv11",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328138517",
+      "id": "github:repository:1328138517",
+      "kind": "repository",
+      "organization": "tahaLazar",
+      "published_at": "2026-08-08T20:26:30Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Deep Learning project for CIFAR-10 image classification using a Convolutional Neural Network with TensorFlow and Keras.",
+      "title": "tahaLazar/cifar10-cnn-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T20:30:07Z",
+      "url": "https://github.com/tahaLazar/cifar10-cnn-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328106327",
+      "id": "github:repository:1328106327",
+      "kind": "repository",
+      "organization": "smarikasinghb",
+      "published_at": "2026-08-08T19:41:48Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Real-time object detection and tracking using YOLO11 and ByteTrack \u2014 built for the CodeAlpha AI Internship (Task 4)",
+      "title": "smarikasinghb/CodeAlpha_ObjectDetection",
+      "topics": [
+        "object_detection",
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T20:05:22Z",
+      "url": "https://github.com/smarikasinghb/CodeAlpha_ObjectDetection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328102931",
+      "id": "github:repository:1328102931",
+      "kind": "repository",
+      "organization": "JohnSstuff",
+      "published_at": "2026-08-08T19:37:30Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "JohnSstuff/Document-Parser-with-implementation-of-AI-image-restoration",
+      "topics": [
+        "image_restoration"
+      ],
+      "updated_at": "2026-08-08T19:43:26Z",
+      "url": "https://github.com/JohnSstuff/Document-Parser-with-implementation-of-AI-image-restoration",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328102058",
+      "id": "github:repository:1328102058",
+      "kind": "repository",
+      "organization": "itsmygithubacct",
+      "published_at": "2026-08-08T19:36:24Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Frame-difference motion detection in C11: frames in, boxes out. The cheap gate in front of object detection.",
+      "title": "itsmygithubacct/kilix-motion-detect",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T20:57:48Z",
+      "url": "https://github.com/itsmygithubacct/kilix-motion-detect",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328098896",
+      "id": "github:repository:1328098896",
+      "kind": "repository",
+      "organization": "ileanasaintpaul",
+      "published_at": "2026-08-08T19:32:16Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Privacy-first smart camera that runs on-device object detection \u2014 no video ever leaves the device.",
+      "title": "ileanasaintpaul/ghost-cam",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T19:32:17Z",
+      "url": "https://github.com/ileanasaintpaul/ghost-cam",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328097927",
+      "id": "github:repository:1328097927",
+      "kind": "repository",
+      "organization": "kanishka745",
+      "published_at": "2026-08-08T19:30:56Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "kanishka745/Cats_vs_Dogs_Image_Classification_using_CNN",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T19:34:22Z",
+      "url": "https://github.com/kanishka745/Cats_vs_Dogs_Image_Classification_using_CNN",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328091185",
+      "id": "github:repository:1328091185",
+      "kind": "repository",
+      "organization": "pablo-figueroa-uniandes",
+      "published_at": "2026-08-08T19:21:36Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Tkinter + PyTorch GUI comparing classic interpolation vs. pretrained EDSR super-resolution",
+      "title": "pablo-figueroa-uniandes/pytorch-upsampling-gui",
+      "topics": [
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T21:49:37Z",
+      "url": "https://github.com/pablo-figueroa-uniandes/pytorch-upsampling-gui",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328090651",
+      "id": "github:repository:1328090651",
+      "kind": "repository",
+      "organization": "AuroraEon",
+      "published_at": "2026-08-08T19:20:51Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "AuroraEon/RSLG-SLAM",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T19:22:07Z",
+      "url": "https://github.com/AuroraEon/RSLG-SLAM",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328080723",
+      "id": "github:repository:1328080723",
+      "kind": "repository",
+      "organization": "gunchugh",
+      "published_at": "2026-08-08T19:08:42Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-powered computer vision web application for image detection, video detection, and multi-object tracking using YOLO11 and ByteTrack.",
+      "title": "gunchugh/GenAI-Smart-Vision-Assistant-1",
+      "topics": [
+        "object_detection",
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T19:21:48Z",
+      "url": "https://github.com/gunchugh/GenAI-Smart-Vision-Assistant-1",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328063998",
+      "id": "github:repository:1328063998",
+      "kind": "repository",
+      "organization": "TrevorKap",
+      "published_at": "2026-08-08T18:46:41Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Tactical GEOINT Analyzer \u2014 satellite object detection web app for overhead target segmentation (aircraft & maritime vessels) with GIS vector export.",
+      "title": "TrevorKap/geoint-target-detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T18:46:50Z",
+      "url": "https://github.com/TrevorKap/geoint-target-detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328057161",
+      "id": "github:repository:1328057161",
+      "kind": "repository",
+      "organization": "karnamsoujanya330-web",
+      "published_at": "2026-08-08T18:38:01Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Real-time object detection using Python and OpenCV, with visualized bounding boxes and confidence scores.",
+      "title": "karnamsoujanya330-web/object-detection-opencv",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T18:38:06Z",
+      "url": "https://github.com/karnamsoujanya330-web/object-detection-opencv",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328056353",
+      "id": "github:repository:1328056353",
+      "kind": "repository",
+      "organization": "Yonghao-Lee",
+      "published_at": "2026-08-08T18:37:01Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Reflection-aware object removal in 3D Gaussian Splatting via render-edit-refit: delete an object together with its shadow, mirror reflection and colour bleed",
+      "title": "Yonghao-Lee/light-footprint-removal",
+      "topics": [
+        "gaussian_splatting"
+      ],
+      "updated_at": "2026-08-08T19:24:36Z",
+      "url": "https://github.com/Yonghao-Lee/light-footprint-removal",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328055477",
+      "id": "github:repository:1328055477",
+      "kind": "repository",
+      "organization": "kosh202",
+      "published_at": "2026-08-08T18:36:00Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A Discord bot powered by image classification that recognizes bees and ants from uploaded images.",
+      "title": "kosh202/bee-ant-bot",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T18:36:08Z",
+      "url": "https://github.com/kosh202/bee-ant-bot",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328052683",
+      "id": "github:repository:1328052683",
+      "kind": "repository",
+      "organization": "Renadabush",
+      "published_at": "2026-08-08T18:32:39Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Java concurrency project: a custom microservice framework (threads + message bus, events & broadcasts) powering a simulated sensor-fusion SLAM pipeline \u2014 camera, LiDAR, and pose data merged into a live landmark map for a robot vacuum.",
+      "title": "Renadabush/gurionrock-vacuum-slam",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T18:40:51Z",
+      "url": "https://github.com/Renadabush/gurionrock-vacuum-slam",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328046723",
+      "id": "github:repository:1328046723",
+      "kind": "repository",
+      "organization": "ankur1927gmail",
+      "published_at": "2026-08-08T18:25:33Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Binary image classification (Cats vs Dogs) for a pet adoption platform",
+      "title": "ankur1927gmail/Cats-and-Dogs-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T18:25:38Z",
+      "url": "https://github.com/ankur1927gmail/Cats-and-Dogs-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328045730",
+      "id": "github:repository:1328045730",
+      "kind": "repository",
+      "organization": "epichon1",
+      "published_at": "2026-08-08T18:24:18Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "epichon1/SLAM-Robot",
+      "topics": [
+        "robotics_mapping",
+        "robotics_perception",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T18:43:35Z",
+      "url": "https://github.com/epichon1/SLAM-Robot",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328041239",
+      "id": "github:repository:1328041239",
+      "kind": "repository",
+      "organization": "hemanthm1234",
+      "published_at": "2026-08-08T18:18:39Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "hemanthm1234/4D-Surface-Reconstruction",
+      "topics": [
+        "face_reconstruction",
+        "surface_reconstruction"
+      ],
+      "updated_at": "2026-08-08T18:24:37Z",
+      "url": "https://github.com/hemanthm1234/4D-Surface-Reconstruction",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328039666",
+      "id": "github:repository:1328039666",
+      "kind": "repository",
+      "organization": "VTongTV",
+      "published_at": "2026-08-08T18:16:38Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "PyTorch implementation of Fully Convolutional Networks for Semantic Segmentation (Long et al. 2015) from scratch",
+      "title": "VTongTV/FCN-from-scratch",
+      "topics": [
+        "panoptic_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T18:29:37Z",
+      "url": "https://github.com/VTongTV/FCN-from-scratch",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328038088",
+      "id": "github:repository:1328038088",
+      "kind": "repository",
+      "organization": "thenaivekid",
+      "published_at": "2026-08-08T18:14:44Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "This is the code for iARCS: Iterative Agentic RL for Controllable 3D Scene Generation.",
+      "title": "thenaivekid/iARCS",
+      "topics": [
+        "scene_generation"
+      ],
+      "updated_at": "2026-08-08T18:39:46Z",
+      "url": "https://github.com/thenaivekid/iARCS",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328036886",
+      "id": "github:repository:1328036886",
+      "kind": "repository",
+      "organization": "sanikachoudhari2-stack",
+      "published_at": "2026-08-08T18:13:16Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Cat and Dog Image Classification using SVM",
+      "title": "sanikachoudhari2-stack/SCT_ML_3",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T18:14:14Z",
+      "url": "https://github.com/sanikachoudhari2-stack/SCT_ML_3",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328030470",
+      "id": "github:repository:1328030470",
+      "kind": "repository",
+      "organization": "pundeananya31-blip",
+      "published_at": "2026-08-08T18:05:50Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "codeorbit internship task 3",
+      "title": "pundeananya31-blip/code-orbit-Image-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T18:06:28Z",
+      "url": "https://github.com/pundeananya31-blip/code-orbit-Image-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328029123",
+      "id": "github:repository:1328029123",
+      "kind": "repository",
+      "organization": "malradhi",
+      "published_at": "2026-08-08T18:04:16Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Masked self-supervised learning for label-efficient speech decoding from intracranial EEG using Transformer-based neural-to-acoustic reconstruction.",
+      "title": "malradhi/Masked-iEEG-SSL",
+      "topics": [
+        "self_supervised_learning"
+      ],
+      "updated_at": "2026-08-08T18:04:16Z",
+      "url": "https://github.com/malradhi/Masked-iEEG-SSL",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328026588",
+      "id": "github:repository:1328026588",
+      "kind": "repository",
+      "organization": "andrey-esipov",
+      "published_at": "2026-08-08T18:01:13Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "The 2026 Grand Slam draws as one object. 762 matches, every score reconciled against the official draw sheets.",
+      "title": "andrey-esipov/the-draw",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T18:24:30Z",
+      "url": "https://github.com/andrey-esipov/the-draw",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328018745",
+      "id": "github:repository:1328018745",
+      "kind": "repository",
+      "organization": "deva8121",
+      "published_at": "2026-08-08T17:51:41Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "a Convolutional Neural Network (CNN)-based image classification system using Python, TensorFlow, and Keras to automatically categorize WhatsApp images.",
+      "title": "deva8121/IntelliSort-Smart-Image-Classification-for-WhatsApp-",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T17:51:42Z",
+      "url": "https://github.com/deva8121/IntelliSort-Smart-Image-Classification-for-WhatsApp-",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328017821",
+      "id": "github:repository:1328017821",
+      "kind": "repository",
+      "organization": "tharusha0010",
+      "published_at": "2026-08-08T17:50:34Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "An end-to-end Computer Vision system for tennis match analytics featuring object detection, trajectory mapping, court keypoint estimation, and 2D court tracking.",
+      "title": "tharusha0010/Tennis-Match-Analyzer-CV",
+      "topics": [
+        "feature_matching",
+        "object_detection",
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T18:39:06Z",
+      "url": "https://github.com/tharusha0010/Tennis-Match-Analyzer-CV",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328013106",
+      "id": "github:repository:1328013106",
+      "kind": "repository",
+      "organization": "hemanth4140-hub",
+      "published_at": "2026-08-08T17:44:17Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Real-time object detection and tracking using YOLOv8 and SORT.",
+      "title": "hemanth4140-hub/CodeAlpha_ObjectDetectionTracking",
+      "topics": [
+        "object_detection",
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T17:44:34Z",
+      "url": "https://github.com/hemanth4140-hub/CodeAlpha_ObjectDetectionTracking",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "entity:feb0aeef4d6e8153",
+      "id": "github:repository:1328008247",
+      "kind": "repository",
+      "organization": "CloneTerial",
+      "published_at": "2026-08-08T17:38:25Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "CloneTerial/image-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T17:38:26Z",
+      "url": "https://github.com/CloneTerial/image-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328004015",
+      "id": "github:repository:1328004015",
+      "kind": "repository",
+      "organization": "wjohn564",
+      "published_at": "2026-08-08T17:33:24Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Comparative evaluation of lightweight object detection methods for Cartesian coordinate estimation and robotic vacuum grasping using a Dobot Magician Lite.",
+      "title": "wjohn564/dobot-thesis",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T17:43:36Z",
+      "url": "https://github.com/wjohn564/dobot-thesis",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1328003061",
+      "id": "github:repository:1328003061",
+      "kind": "repository",
+      "organization": "Saikot313",
+      "published_at": "2026-08-08T17:32:12Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A tool-using LLM agent that combines computer vision (OCR + object detection) with an LLM that decides, on its own, which tool to call and when - receipts get parsed, verified, and fact-checked; product photos get identified.",
+      "title": "Saikot313/Vision-Agent---Multi-Modal-Receipt-Product-Analyzer",
+      "topics": [
+        "embodied_vision",
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T19:30:16Z",
+      "url": "https://github.com/Saikot313/Vision-Agent---Multi-Modal-Receipt-Product-Analyzer",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327995026",
+      "id": "github:repository:1327995026",
+      "kind": "repository",
+      "organization": "Sindhu-Yesilanka",
+      "published_at": "2026-08-08T17:22:55Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-based restoration of degraded semiconductor inspection images using deep learning for noise removal and super-resolution reconstruction.",
+      "title": "Sindhu-Yesilanka/KLA-Semiconductor-Image-Restoration",
+      "topics": [
+        "image_restoration",
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T17:23:00Z",
+      "url": "https://github.com/Sindhu-Yesilanka/KLA-Semiconductor-Image-Restoration",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327992341",
+      "id": "github:repository:1327992341",
+      "kind": "repository",
+      "organization": "Twinbox-dev",
+      "published_at": "2026-08-08T17:19:57Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A collection of computer vision experiments and tools built with OpenCV and Python, including panoramic image stitching (SIFT + homography), real-time moir\u00e9 fringe tracking for precision displacement measurement, camera calibration, focal length estimation, and spherical/cylindrical projection.",
+      "title": "Twinbox-dev/vision-algorithms-lab",
+      "topics": [
+        "camera_calibration"
+      ],
+      "updated_at": "2026-08-08T17:30:43Z",
+      "url": "https://github.com/Twinbox-dev/vision-algorithms-lab",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327990083",
+      "id": "github:repository:1327990083",
+      "kind": "repository",
+      "organization": "roua-elifa",
+      "published_at": "2026-08-08T17:17:30Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Vehicle image classification with transfer learning (MobileNetV2)",
+      "title": "roua-elifa/vehicle-classifier",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T17:29:18Z",
+      "url": "https://github.com/roua-elifa/vehicle-classifier",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327988800",
+      "id": "github:repository:1327988800",
+      "kind": "repository",
+      "organization": "ben-krueger28",
+      "published_at": "2026-08-08T17:16:05Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A client-side desktop aim script and tracking utility for compatible PC games in 2026. Features customizable targeting support, crosshair positioning adjustments, and smooth object tracking without modifying game files.",
+      "title": "ben-krueger28/xios-aimbot-script-utility",
+      "topics": [
+        "object_tracking"
+      ],
+      "updated_at": "2026-08-08T21:55:00Z",
+      "url": "https://github.com/ben-krueger28/xios-aimbot-script-utility",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327985032",
+      "id": "github:repository:1327985032",
+      "kind": "repository",
+      "organization": "zezhatalent",
+      "published_at": "2026-08-08T17:11:46Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Final Year Project - SLAM-AR-Indoor-Navigation",
+      "title": "zezhatalent/SLAM-AR-Indoor-Navigation",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T17:11:46Z",
+      "url": "https://github.com/zezhatalent/SLAM-AR-Indoor-Navigation",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327982614",
+      "id": "github:repository:1327982614",
+      "kind": "repository",
+      "organization": "erityperwizz",
+      "published_at": "2026-08-08T17:09:00Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Marketing analytics engine and interactive dashboard for a fictional specialty-drink brand - SQL, funnel analysis, attribution modeling, A/B testing and RFM + k-means segmentation on synthetic data.",
+      "title": "erityperwizz/the-purple-cup",
+      "topics": [
+        "synthetic_data"
+      ],
+      "updated_at": "2026-08-08T17:38:41Z",
+      "url": "https://github.com/erityperwizz/the-purple-cup",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327978986",
+      "id": "github:repository:1327978986",
+      "kind": "repository",
+      "organization": "DamianGIT-4",
+      "published_at": "2026-08-08T17:04:47Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Freetime Broker \u2014 a capstone prototype that reviews inbound containers and recommends free-time actions under human review. Synthetic data throughout; the agent runs with the visitor's own API key.",
+      "title": "DamianGIT-4/freetime-broker",
+      "topics": [
+        "synthetic_data"
+      ],
+      "updated_at": "2026-08-08T17:12:53Z",
+      "url": "https://github.com/DamianGIT-4/freetime-broker",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327976216",
+      "id": "github:repository:1327976216",
+      "kind": "repository",
+      "organization": "TVSujith",
+      "published_at": "2026-08-08T17:01:40Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-powered smart surveillance system using YOLOv8 and OpenCV for real-time object detection, object counting, alert generation, screenshot capture, detection logging, and email notifications.",
+      "title": "TVSujith/AI_Smart_Survilience_System",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T17:20:04Z",
+      "url": "https://github.com/TVSujith/AI_Smart_Survilience_System",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327969712",
+      "id": "github:repository:1327969712",
+      "kind": "repository",
+      "organization": "ismail7574",
+      "published_at": "2026-08-08T16:54:18Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "image to 3d form",
+      "title": "ismail7574/imgto3d",
+      "topics": [
+        "image_to_3d"
+      ],
+      "updated_at": "2026-08-08T16:54:23Z",
+      "url": "https://github.com/ismail7574/imgto3d",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327962296",
+      "id": "github:repository:1327962296",
+      "kind": "repository",
+      "organization": "hahuy2004",
+      "published_at": "2026-08-08T16:46:05Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "hahuy2004/AVIGATE-TVR",
+      "topics": [
+        "video_understanding",
+        "visual_representation_learning"
+      ],
+      "updated_at": "2026-08-08T17:12:12Z",
+      "url": "https://github.com/hahuy2004/AVIGATE-TVR",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327961670",
+      "id": "github:repository:1327961670",
+      "kind": "repository",
+      "organization": "Charan7769",
+      "published_at": "2026-08-08T16:45:28Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Real-Time Object Detection System using YOLOv8, OpenCV, and Streamlit for detecting 80 COCO object classes in images, videos, and live webcam feeds. Features interactive detection, confidence/IoU controls, real-time FPS monitoring, and deployment-ready architecture for Hugging Face Spaces.",
+      "title": "Charan7769/Yolo-detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T16:57:32Z",
+      "url": "https://github.com/Charan7769/Yolo-detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327959354",
+      "id": "github:repository:1327959354",
+      "kind": "repository",
+      "organization": "karmotothgopal48-stack",
+      "published_at": "2026-08-08T16:42:28Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI Video Assistant using RAG for intelligent video understanding and question answering.",
+      "title": "karmotothgopal48-stack/AI-Video-Assistant-with-RAG-",
+      "topics": [
+        "video_understanding"
+      ],
+      "updated_at": "2026-08-08T17:17:19Z",
+      "url": "https://github.com/karmotothgopal48-stack/AI-Video-Assistant-with-RAG-",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327954945",
+      "id": "github:repository:1327954945",
+      "kind": "repository",
+      "organization": "autejwani",
+      "published_at": "2026-08-08T16:37:07Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "autejwani/Visual_SLAM",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T17:42:58Z",
+      "url": "https://github.com/autejwani/Visual_SLAM",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327954310",
+      "id": "github:repository:1327954310",
+      "kind": "repository",
+      "organization": "kbaijin",
+      "published_at": "2026-08-08T16:36:24Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "kbaijin/kbaijin",
+      "topics": [
+        "foundation_model_adaptation",
+        "object_detection",
+        "vision_foundation_models",
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T17:04:03Z",
+      "url": "https://github.com/kbaijin/kbaijin",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327952366",
+      "id": "github:repository:1327952366",
+      "kind": "repository",
+      "organization": "eneabio",
+      "published_at": "2026-08-08T16:34:03Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Support page for **Object Tracker**, the privacy-first iOS app for recognizing, organizing, and maintaining personal objects with local storage for photos, documents, relationships, and maintenance details.",
+      "title": "eneabio/object_tracker_support",
+      "topics": [
+        "object_tracking",
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T17:00:50Z",
+      "url": "https://github.com/eneabio/object_tracker_support",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327948356",
+      "id": "github:repository:1327948356",
+      "kind": "repository",
+      "organization": "Seonghoon-ban",
+      "published_at": "2026-08-08T16:29:03Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Hold a key, describe an object out loud, get a generated 3D model placed in your Unity scene. Speech to text-to-3D prompt to Hyper3D Rodin, through a single Genpresso API key.",
+      "title": "Seonghoon-ban/meshpresso-voice-to-3d",
+      "topics": [
+        "text_to_3d"
+      ],
+      "updated_at": "2026-08-08T16:33:50Z",
+      "url": "https://github.com/Seonghoon-ban/meshpresso-voice-to-3d",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327947434",
+      "id": "github:repository:1327947434",
+      "kind": "repository",
+      "organization": "harshit5007",
+      "published_at": "2026-08-08T16:27:51Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "IoT and AI-enabled smart waste segregation system using ESP32-CAM, CNN-based image classification, MQTT, and automated servo control.",
+      "title": "harshit5007/FutureCan",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T16:38:23Z",
+      "url": "https://github.com/harshit5007/FutureCan",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327947271",
+      "id": "github:repository:1327947271",
+      "kind": "repository",
+      "organization": "Lakshya231psit",
+      "published_at": "2026-08-08T16:27:40Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "An advanced attendance management tool used to mark attendance via facial biometric system using CNN for recognition and combining it with the Monocular Depth Estimation algorithm like MiDas and liveness check.",
+      "title": "Lakshya231psit/FaceMark---Attendance-Management-System",
+      "topics": [
+        "monocular_depth"
+      ],
+      "updated_at": "2026-08-08T16:35:23Z",
+      "url": "https://github.com/Lakshya231psit/FaceMark---Attendance-Management-System",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327945868",
+      "id": "github:repository:1327945868",
+      "kind": "repository",
+      "organization": "tanmayshresht",
+      "published_at": "2026-08-08T16:25:54Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A final-year research project featuring a multi-modal AI framework for early disease detection, combining natural language processing on symptoms with medical image classification.",
+      "title": "tanmayshresht/medai-project",
+      "topics": [
+        "image_classification",
+        "object_detection",
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T16:25:55Z",
+      "url": "https://github.com/tanmayshresht/medai-project",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327940653",
+      "id": "github:repository:1327940653",
+      "kind": "repository",
+      "organization": "denizresitoglu855-debug",
+      "published_at": "2026-08-08T16:19:45Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "blah blahh my dc bot",
+      "title": "denizresitoglu855-debug/Discord-Image-Classification-Bot",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T16:31:16Z",
+      "url": "https://github.com/denizresitoglu855-debug/Discord-Image-Classification-Bot",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327932842",
+      "id": "github:repository:1327932842",
+      "kind": "repository",
+      "organization": "singampallinookaratnam0-stack",
+      "published_at": "2026-08-08T16:11:00Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "CNN based image classification project",
+      "title": "singampallinookaratnam0-stack/CNN-IMAGE-CLASSIFIER",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T16:23:40Z",
+      "url": "https://github.com/singampallinookaratnam0-stack/CNN-IMAGE-CLASSIFIER",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327930759",
+      "id": "github:repository:1327930759",
+      "kind": "repository",
+      "organization": "xwr502504811-commits",
+      "published_at": "2026-08-08T16:08:48Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A Plugin Framework for Context Enhancement and Spatial Refinement in Lightweight Semantic Segmentation",
+      "title": "xwr502504811-commits/LiteRefine",
+      "topics": [
+        "panoptic_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T16:08:49Z",
+      "url": "https://github.com/xwr502504811-commits/LiteRefine",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327923424",
+      "id": "github:repository:1327923424",
+      "kind": "repository",
+      "organization": "dhineshkarthick16",
+      "published_at": "2026-08-08T16:01:15Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-based restoration and super-resolution for degraded semiconductor inspection images.",
+      "title": "dhineshkarthick16/ReVISTA_AI",
+      "topics": [
+        "image_restoration",
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T16:08:02Z",
+      "url": "https://github.com/dhineshkarthick16/ReVISTA_AI",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327922273",
+      "id": "github:repository:1327922273",
+      "kind": "repository",
+      "organization": "niketandoes",
+      "published_at": "2026-08-08T16:00:01Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "niketandoes/ai-image-restoration",
+      "topics": [
+        "image_restoration"
+      ],
+      "updated_at": "2026-08-08T16:00:06Z",
+      "url": "https://github.com/niketandoes/ai-image-restoration",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327912658",
+      "id": "github:repository:1327912658",
+      "kind": "repository",
+      "organization": "kaseris",
+      "published_at": "2026-08-08T15:49:51Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Page stream segmentation using vision-language models",
+      "title": "kaseris/turbopss",
+      "topics": [
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T15:53:14Z",
+      "url": "https://github.com/kaseris/turbopss",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327907941",
+      "id": "github:repository:1327907941",
+      "kind": "repository",
+      "organization": "Logeshsk-Ind",
+      "published_at": "2026-08-08T15:44:46Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-powered semiconductor image restoration and verification that removes degradation while preserving critical structures and defects for reliable inspection.",
+      "title": "Logeshsk-Ind/SIV_AI",
+      "topics": [
+        "image_restoration"
+      ],
+      "updated_at": "2026-08-08T16:05:37Z",
+      "url": "https://github.com/Logeshsk-Ind/SIV_AI",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "entity:7fe13d185bbd1b88",
+      "id": "github:repository:1327895284",
+      "kind": "repository",
+      "organization": "NITHIN1-RE",
+      "published_at": "2026-08-08T15:30:52Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "NITHIN1-RE/Object-Detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T15:31:41Z",
+      "url": "https://github.com/NITHIN1-RE/Object-Detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327892327",
+      "id": "github:repository:1327892327",
+      "kind": "repository",
+      "organization": "Ning-D",
+      "published_at": "2026-08-08T15:27:25Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "BadmintonQA (BTE-VQA): Badminton Tactical Evidence VQA benchmark",
+      "title": "Ning-D/BadmintonQA",
+      "topics": [
+        "video_understanding",
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T16:26:17Z",
+      "url": "https://github.com/Ning-D/BadmintonQA",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327888762",
+      "id": "github:repository:1327888762",
+      "kind": "repository",
+      "organization": "Victoria-xin1009",
+      "published_at": "2026-08-08T15:22:49Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "SuppreSensing: Expert-Guided Feature Recalibration and Discrepancy Augmentation for Multimodal Object Detection",
+      "title": "Victoria-xin1009/SuppreSensing",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T15:22:49Z",
+      "url": "https://github.com/Victoria-xin1009/SuppreSensing",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327881828",
+      "id": "github:repository:1327881828",
+      "kind": "repository",
+      "organization": "HeyManan",
+      "published_at": "2026-08-08T15:14:09Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "HeyManan/Context-Aware-Emotion-Recognition-with-Vision-Language-Models",
+      "topics": [
+        "vision_language_models"
+      ],
+      "updated_at": "2026-08-08T15:37:46Z",
+      "url": "https://github.com/HeyManan/Context-Aware-Emotion-Recognition-with-Vision-Language-Models",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327880226",
+      "id": "github:repository:1327880226",
+      "kind": "repository",
+      "organization": "sumitstat07",
+      "published_at": "2026-08-08T15:12:05Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "CNN built with PyTorch to classify CIFAR-10 images across 10 categories",
+      "title": "sumitstat07/cnn-image-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T15:12:05Z",
+      "url": "https://github.com/sumitstat07/cnn-image-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327871187",
+      "id": "github:repository:1327871187",
+      "kind": "repository",
+      "organization": "greywolffles",
+      "published_at": "2026-08-08T15:02:26Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "greywolffles/Mahjong-Tile-Image-Classification-Data",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T15:02:30Z",
+      "url": "https://github.com/greywolffles/Mahjong-Tile-Image-Classification-Data",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327868974",
+      "id": "github:repository:1327868974",
+      "kind": "repository",
+      "organization": "nguyenhuuthuong04041999",
+      "published_at": "2026-08-08T15:00:31Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "nguyenhuuthuong04041999/v_slam_poe",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T15:07:07Z",
+      "url": "https://github.com/nguyenhuuthuong04041999/v_slam_poe",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327858912",
+      "id": "github:repository:1327858912",
+      "kind": "repository",
+      "organization": "pranavauti2007-create",
+      "published_at": "2026-08-08T14:50:52Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "third task for codeorbit internship",
+      "title": "pranavauti2007-create/codeorbit-image-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T14:51:30Z",
+      "url": "https://github.com/pranavauti2007-create/codeorbit-image-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327858770",
+      "id": "github:repository:1327858770",
+      "kind": "repository",
+      "organization": "ponna-manish-reddy",
+      "published_at": "2026-08-08T14:50:42Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "ponna-manish-reddy/CodeAlpha_ObjectDetectionTracking",
+      "topics": [
+        "object_tracking",
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T14:54:20Z",
+      "url": "https://github.com/ponna-manish-reddy/CodeAlpha_ObjectDetectionTracking",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327858702",
+      "id": "github:repository:1327858702",
+      "kind": "repository",
+      "organization": "Abdullah1dev",
+      "published_at": "2026-08-08T14:50:39Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "Abdullah1dev/Object-Detection-in-Computer-Vision",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T17:06:21Z",
+      "url": "https://github.com/Abdullah1dev/Object-Detection-in-Computer-Vision",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327858087",
+      "id": "github:repository:1327858087",
+      "kind": "repository",
+      "organization": "superVo1d",
+      "published_at": "2026-08-08T14:50:02Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "superVo1d/cv-minecraft-object-detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T15:21:35Z",
+      "url": "https://github.com/superVo1d/cv-minecraft-object-detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327855779",
+      "id": "github:repository:1327855779",
+      "kind": "repository",
+      "organization": "TSILAB",
+      "published_at": "2026-08-08T14:47:49Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "A distributed simulation-based test platform incorporating multi-user virtual reality for intelligent eHMI evaluation.",
+      "title": "TSILAB/TransCAVE-E",
+      "topics": [
+        "vr_mr_xr"
+      ],
+      "updated_at": "2026-08-08T15:17:03Z",
+      "url": "https://github.com/TSILAB/TransCAVE-E",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327854478",
+      "id": "github:repository:1327854478",
+      "kind": "repository",
+      "organization": "yashrajan-ai",
+      "published_at": "2026-08-08T14:46:32Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Cat vs Dog image classification using CNN and Streamlit",
+      "title": "yashrajan-ai/cat-vs-dog-classifier",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T16:34:49Z",
+      "url": "https://github.com/yashrajan-ai/cat-vs-dog-classifier",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327847026",
+      "id": "github:repository:1327847026",
+      "kind": "repository",
+      "organization": "Bassant-Adel1",
+      "published_at": "2026-08-08T14:39:08Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-powered waste image classification using CNN, EfficientNetV2B0, ResNet50, and Transfer Learning.",
+      "title": "Bassant-Adel1/AI-Waste-Classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T14:39:13Z",
+      "url": "https://github.com/Bassant-Adel1/AI-Waste-Classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327844099",
+      "id": "github:repository:1327844099",
+      "kind": "repository",
+      "organization": "Lanc3",
+      "published_at": "2026-08-08T14:36:17Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Local multi-backend image-to-3D generation for MCP clients",
+      "title": "Lanc3/Cognito-3D-MCP",
+      "topics": [
+        "image_to_3d"
+      ],
+      "updated_at": "2026-08-08T14:48:27Z",
+      "url": "https://github.com/Lanc3/Cognito-3D-MCP",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327843113",
+      "id": "github:repository:1327843113",
+      "kind": "repository",
+      "organization": "Sanu-16",
+      "published_at": "2026-08-08T14:35:16Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "Sanu-16/YOLOv8-Small-Object-Detection-Benchmark-",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T14:38:16Z",
+      "url": "https://github.com/Sanu-16/YOLOv8-Small-Object-Detection-Benchmark-",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327839400",
+      "id": "github:repository:1327839400",
+      "kind": "repository",
+      "organization": "kip23theo",
+      "published_at": "2026-08-08T14:31:45Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Developed a real-time object detection system using YOLOv4 and OpenCV to detect and classify objects in video streams using pretrained deep learning models.",
+      "title": "kip23theo/Real-Time-Object-Detection-using-YOLOv4-OpenCV",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T14:36:29Z",
+      "url": "https://github.com/kip23theo/Real-Time-Object-Detection-using-YOLOv4-OpenCV",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327838108",
+      "id": "github:repository:1327838108",
+      "kind": "repository",
+      "organization": "kalmp",
+      "published_at": "2026-08-08T14:30:33Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Official implementation of IConE (ECCV 2026)",
+      "title": "kalmp/IConE",
+      "topics": [
+        "self_supervised_learning",
+        "visual_representation_learning"
+      ],
+      "updated_at": "2026-08-08T15:03:55Z",
+      "url": "https://github.com/kalmp/IConE",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327835099",
+      "id": "github:repository:1327835099",
+      "kind": "repository",
+      "organization": "rajanshxrma",
+      "published_at": "2026-08-08T14:27:37Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Monocular depth estimation (MiDaS) evaluated against real KITTI LiDAR ground truth, MPS on Apple Silicon",
+      "title": "rajanshxrma/depthlane",
+      "topics": [
+        "monocular_depth"
+      ],
+      "updated_at": "2026-08-08T14:29:25Z",
+      "url": "https://github.com/rajanshxrma/depthlane",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327827165",
+      "id": "github:repository:1327827165",
+      "kind": "repository",
+      "organization": "liewyishen",
+      "published_at": "2026-08-08T14:19:07Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-powered recycling rewards platform \u2014 Gemini image classification, points & redemption system, admin verification. React 19 + Express 5 + MySQL.",
+      "title": "liewyishen/ecoreward-hub",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T15:06:29Z",
+      "url": "https://github.com/liewyishen/ecoreward-hub",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327826103",
+      "id": "github:repository:1327826103",
+      "kind": "repository",
+      "organization": "LAKSHMANANSASIDHARAN",
+      "published_at": "2026-08-08T14:18:01Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Developed a real-time driver drowsiness detection system using a YOLO-based object detection model and OpenCV. The system detects facial/eye features and monitors prolonged eye closure to identify signs of drowsiness and trigger an alert",
+      "title": "LAKSHMANANSASIDHARAN/Drowsiness_detection_project_YOLO",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T14:22:09Z",
+      "url": "https://github.com/LAKSHMANANSASIDHARAN/Drowsiness_detection_project_YOLO",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327825428",
+      "id": "github:repository:1327825428",
+      "kind": "repository",
+      "organization": "stark9000",
+      "published_at": "2026-08-08T14:17:04Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Batch image compressor for JPEG, PNG, and WebP \u2014 built with Java 8 Swing. Pure-Java PNG quantization + Floyd-Steinberg dithering, WebP via libwebp (webp4j).",
+      "title": "stark9000/swing-image-compressor",
+      "topics": [
+        "model_compression",
+        "quantization"
+      ],
+      "updated_at": "2026-08-08T14:28:32Z",
+      "url": "https://github.com/stark9000/swing-image-compressor",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327824615",
+      "id": "github:repository:1327824615",
+      "kind": "repository",
+      "organization": "Herotf",
+      "published_at": "2026-08-08T14:15:58Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Instagram Video Understanding & Performance Prediction System - Live Vercel App & PDF Architecture Spec",
+      "title": "Herotf/instapredict-ai",
+      "topics": [
+        "video_understanding"
+      ],
+      "updated_at": "2026-08-08T14:16:21Z",
+      "url": "https://github.com/Herotf/instapredict-ai",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327824486",
+      "id": "github:repository:1327824486",
+      "kind": "repository",
+      "organization": "lavanyaarathi",
+      "published_at": "2026-08-08T14:15:49Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "lavanyaarathi/Underwater_Object_Detection",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T14:21:27Z",
+      "url": "https://github.com/lavanyaarathi/Underwater_Object_Detection",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327822638",
+      "id": "github:repository:1327822638",
+      "kind": "repository",
+      "organization": "asifalimca",
+      "published_at": "2026-08-08T14:13:25Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Cat and Dog Image Classification using CNN, TensorFlow and Keras",
+      "title": "asifalimca/cat-dog-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T14:24:15Z",
+      "url": "https://github.com/asifalimca/cat-dog-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327819401",
+      "id": "github:repository:1327819401",
+      "kind": "repository",
+      "organization": "PranjalAmrute82006",
+      "published_at": "2026-08-08T14:09:28Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "CIFAR-10 image classification using pretrained MobileNetV2, transfer learning, and data augmentation.",
+      "title": "PranjalAmrute82006/CIFAR10-MobileNetV2-Image-Classification-_Project",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T14:14:21Z",
+      "url": "https://github.com/PranjalAmrute82006/CIFAR10-MobileNetV2-Image-Classification-_Project",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327818504",
+      "id": "github:repository:1327818504",
+      "kind": "repository",
+      "organization": "Nischita17",
+      "published_at": "2026-08-08T14:08:23Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "An Embedded C-based Smart Distance Alarm using Arduino Uno, HC-SR04 ultrasonic sensor, 16\u00d72 LCD, and buzzer for real-time distance monitoring and object detection. Simulated using Wokwi.",
+      "title": "Nischita17/Smart-Distance-Alarm",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T14:22:26Z",
+      "url": "https://github.com/Nischita17/Smart-Distance-Alarm",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327816302",
+      "id": "github:repository:1327816302",
+      "kind": "repository",
+      "organization": "Moskowdigama",
+      "published_at": "2026-08-08T14:05:18Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "Moskowdigama/aerial-object-detection-visdrone.",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T14:47:54Z",
+      "url": "https://github.com/Moskowdigama/aerial-object-detection-visdrone.",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327816218",
+      "id": "github:repository:1327816218",
+      "kind": "repository",
+      "organization": "MasterPula",
+      "published_at": "2026-08-08T14:05:11Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "ROS 2 Humble project for SLAM mapping and autonomous navigation with Nav2, AMCL, MPPI, and Stage.",
+      "title": "MasterPula/ros2-mapping-navigation",
+      "topics": [
+        "robotics_mapping",
+        "robotics_perception",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T14:06:04Z",
+      "url": "https://github.com/MasterPula/ros2-mapping-navigation",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327811158",
+      "id": "github:repository:1327811158",
+      "kind": "repository",
+      "organization": "moritzstammel",
+      "published_at": "2026-08-08T13:58:15Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Counterfactual Stress Testing for Image Classification Models (BRIDGE Workshop, MICCAI 2026)",
+      "title": "moritzstammel/counterfactual-stress-testing",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T14:39:15Z",
+      "url": "https://github.com/moritzstammel/counterfactual-stress-testing",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327809296",
+      "id": "github:repository:1327809296",
+      "kind": "repository",
+      "organization": "Meghanakolipaka2",
+      "published_at": "2026-08-08T13:55:53Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Full-stack AI image classification system using Flask REST API and pretrained MobileNetV2 to classify images into ImageNet categories with confidence scores.",
+      "title": "Meghanakolipaka2/ai-image-classification-system",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T14:06:00Z",
+      "url": "https://github.com/Meghanakolipaka2/ai-image-classification-system",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "entity:30626e84caba63ff",
+      "id": "github:repository:1327806018",
+      "kind": "repository",
+      "organization": "BasantHussein13",
+      "published_at": "2026-08-08T13:52:13Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "AI-powered Strawberry Disease Detection using YOLO11n-seg, Instance Segmentation and Grad-CAM",
+      "title": "BasantHussein13/Farmer-Eye-AI",
+      "topics": [
+        "instance_segmentation",
+        "object_detection",
+        "panoptic_segmentation"
+      ],
+      "updated_at": "2026-08-08T15:28:25Z",
+      "url": "https://github.com/BasantHussein13/Farmer-Eye-AI",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327805832",
+      "id": "github:repository:1327805832",
+      "kind": "repository",
+      "organization": "PriyamParikh",
+      "published_at": "2026-08-08T13:52:00Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "ALL-IN-ONE-AI is a beginner-friendly 5-in-1 Python AI/ML trainer for STEM education, integrating image classification, YOLO object detection, personalised pose recognition, audio classification, and CSV/Excel machine learning with evaluation, explainability, and real-time testing.",
+      "title": "PriyamParikh/ALL-IN-ONE-AI-TRAINER",
+      "topics": [
+        "image_classification",
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T13:55:33Z",
+      "url": "https://github.com/PriyamParikh/ALL-IN-ONE-AI-TRAINER",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327805067",
+      "id": "github:repository:1327805067",
+      "kind": "repository",
+      "organization": "IvanChumakov",
+      "published_at": "2026-08-08T13:51:14Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "IvanChumakov/slam",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": "2026-08-08T16:12:49Z",
+      "url": "https://github.com/IvanChumakov/slam",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327801972",
+      "id": "github:repository:1327801972",
+      "kind": "repository",
+      "organization": "767172261",
+      "published_at": "2026-08-08T13:48:21Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u57fa\u4e8eUNet\u7684\u707e\u540e\u9ad8\u5206\u8fa8\u7387\u65e0\u4eba\u673a\u56fe\u50cf\u8bed\u4e49\u5206\u5272\uff1a\u6c34\u4f53\u3001\u5efa\u7b51\u635f\u6bc1\u4e0e\u590d\u6742\u573a\u666f\u7cbe\u51c6\u8bc6\u522b\u5b9e\u6218 \u6d2a\u6c34\u3001\u98d3\u98ce\u7b49\u707e\u540e\u6551\u63f4\u65e0\u4eba\u673a\u56fe\u50cf\u8bed\u4e49\u5206\u5272\u6570\u636e\u96c6 \u65e0\u4eba\u673a\u6d2a\u6c34\u7b49\u707e\u5bb3\u6570\u636e\u96c6\u7684\u8bad\u7ec3\u53ca\u5e94\u7528",
+      "title": "767172261/Semantic-segmentation-of-postdisaster-highresolution-UAV-images-based-on-UNet-Practical-practice-of-",
+      "topics": [
+        "panoptic_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T13:48:41Z",
+      "url": "https://github.com/767172261/Semantic-segmentation-of-postdisaster-highresolution-UAV-images-based-on-UNet-Practical-practice-of-",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327801789",
+      "id": "github:repository:1327801789",
+      "kind": "repository",
+      "organization": "767172261",
+      "published_at": "2026-08-08T13:48:10Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u57fa\u4e8eUNet\u7684\u707e\u540e\u9ad8\u5206\u8fa8\u7387\u65e0\u4eba\u673a\u56fe\u50cf\u8bed\u4e49\u5206\u5272\uff1a\u6c34\u4f53\u3001\u5efa\u7b51\u635f\u6bc1\u4e0e\u590d\u6742\u573a\u666f\u7cbe\u51c6\u8bc6\u522b\u5b9e\u6218 \u6d2a\u6c34\u3001\u98d3\u98ce\u7b49\u707e\u540e\u6551\u63f4\u65e0\u4eba\u673a\u56fe\u50cf\u8bed\u4e49\u5206\u5272\u6570\u636e\u96c6 \u65e0\u4eba\u673a\u6d2a\u6c34\u7b49\u707e\u5bb3\u6570\u636e\u96c6\u7684\u8bad\u7ec3\u53ca\u5e94\u7528 (1)",
+      "title": "767172261/Semantic-segmentation-of-postdisaster-highresolution-UAV-images-based-on-UNet-actual-practice-of-acc",
+      "topics": [
+        "panoptic_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T13:48:39Z",
+      "url": "https://github.com/767172261/Semantic-segmentation-of-postdisaster-highresolution-UAV-images-based-on-UNet-actual-practice-of-acc",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327801100",
+      "id": "github:repository:1327801100",
+      "kind": "repository",
+      "organization": "767172261",
+      "published_at": "2026-08-08T13:47:31Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u57fa\u4e8eU-Net\u7684CT\u810a\u67f1\u8bed\u4e49\u5206\u5272\uff1a\u4eceCT\u810a\u67f1\u8bed\u4e49\u5206\u5272\u6570\u636e\u96c6\u51c6\u5907\u5230GUI\u5e94\u7528",
+      "title": "767172261/CT-spine-semantic-segmentation-based-on-UNet-from-CT-spine-semantic-segmentation-data-set-preparatio",
+      "topics": [
+        "panoptic_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T13:47:53Z",
+      "url": "https://github.com/767172261/CT-spine-semantic-segmentation-based-on-UNet-from-CT-spine-semantic-segmentation-data-set-preparatio",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327800890",
+      "id": "github:repository:1327800890",
+      "kind": "repository",
+      "organization": "767172261",
+      "published_at": "2026-08-08T13:47:18Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u57fa\u4e8eTransU-Net\u7684\u9065\u611f\u56fe\u50cf\u8bed\u4e49\u5206\u5272\u4e0e\u5206\u7c7b\uff0c\u9065\u611f\u5efa\u7b51\u7269\u57ce\u5e02\u8bed\u4e49\u5206\u5272\u6570\u636e\u96c6\uff0c\u57fa\u4e8ePytorch\u6846\u67b6\uff0c\u9488\u5bf9\u4e0d\u540c\u57ce\u5e02\u5efa\u7b51\u7269\u7cbe\u51c6\u63d0\u53d6",
+      "title": "767172261/Semantic-segmentation-and-classification-of-remote-sensing-images-based-on-TransUNet-remote-sensing-",
+      "topics": [
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T13:47:26Z",
+      "url": "https://github.com/767172261/Semantic-segmentation-and-classification-of-remote-sensing-images-based-on-TransUNet-remote-sensing-",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "entity:feb0aeef4d6e8153",
+      "id": "github:repository:1327796223",
+      "kind": "repository",
+      "organization": "SepehrMaghool",
+      "published_at": "2026-08-08T13:42:40Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "SepehrMaghool/image-classification",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T13:56:00Z",
+      "url": "https://github.com/SepehrMaghool/image-classification",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327794530",
+      "id": "github:repository:1327794530",
+      "kind": "repository",
+      "organization": "767172261",
+      "published_at": "2026-08-08T13:41:10Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u57fa\u4e8eTransU-Net\u7684\u9065\u611f\u56fe\u50cf\u8bed\u4e49\u5206\u5272\u4e0e\u5206\u7c7b \u5982\u4f55\u8fd0\u884c+\u8bad\u7ec3\uff1f",
+      "title": "767172261/How-to-run-and-train-semantic-segmentation-and-classification-of-remote-sensing-images-based-on-Tran",
+      "topics": [
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T13:41:23Z",
+      "url": "https://github.com/767172261/How-to-run-and-train-semantic-segmentation-and-classification-of-remote-sensing-images-based-on-Tran",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327793414",
+      "id": "github:repository:1327793414",
+      "kind": "repository",
+      "organization": "767172261",
+      "published_at": "2026-08-08T13:40:09Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "\u57fa\u4e8ePyTorch\u6846\u67b6\u7684\u5b9e\u4f8b\u5206\u5272\u6a21\u578bMask R-CNN \u65e0\u4eba\u673a\u822a\u62cd\u6865\u6881\u5de1\u68c0\u6570\u636e\u96c6 \u65e0\u4eba\u673a\u6865\u6881\u7f3a\u9677\u68c0\u6d4b\u5206\u5272\u6570\u636e\u96c6 \u65e0\u4eba\u673a\u822a\u62cd\u6865\u6881\u75c5\u5bb3\u5206\u5272\u6570\u636e\u96c6",
+      "title": "767172261/Instance-segmentation-model-based-on-PyTorch-framework-Mask-RCNN-UAV-aerial-photography-bridge-inspe",
+      "topics": [
+        "instance_segmentation"
+      ],
+      "updated_at": "2026-08-08T13:40:20Z",
+      "url": "https://github.com/767172261/Instance-segmentation-model-based-on-PyTorch-framework-Mask-RCNN-UAV-aerial-photography-bridge-inspe",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327790667",
+      "id": "github:repository:1327790667",
+      "kind": "repository",
+      "organization": "darshanramanna262005-lab",
+      "published_at": "2026-08-08T13:37:29Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "An autonomous mobile robot designed to assist with indoor delivery and mobility accessibility in hospitals, universities, and care facilities. Built with a custom mechanical chassis, ROS2/Nav2 navigation stack, LiDAR-based SLAM, and voice + mobile app interfaces.",
+      "title": "darshanramanna262005-lab/Design-and-Development-of-an-Autonomous-Delivery-Robot-for-Enhancing-Community-Services-",
+      "topics": [
+        "robotics_perception",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T13:54:50Z",
+      "url": "https://github.com/darshanramanna262005-lab/Design-and-Development-of-an-Autonomous-Delivery-Robot-for-Enhancing-Community-Services-",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327783157",
+      "id": "github:repository:1327783157",
+      "kind": "repository",
+      "organization": "775878805Osamaha",
+      "published_at": "2026-08-08T13:30:32Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "OMEX AI Gallery - Offline AI-powered Android gallery with smart indexing, object detection, face recognition, duplicate detection and image super-resolution.",
+      "title": "775878805Osamaha/omex-ai-gallery1",
+      "topics": [
+        "object_detection",
+        "super_resolution"
+      ],
+      "updated_at": "2026-08-08T17:59:26Z",
+      "url": "https://github.com/775878805Osamaha/omex-ai-gallery1",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327775107",
+      "id": "github:repository:1327775107",
+      "kind": "repository",
+      "organization": "bjjeevanreddy943-beep",
+      "published_at": "2026-08-08T13:22:37Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Image classification using Convolutional Neural Network",
+      "title": "bjjeevanreddy943-beep/mage-classification-Cnn",
+      "topics": [
+        "image_classification"
+      ],
+      "updated_at": "2026-08-08T13:30:01Z",
+      "url": "https://github.com/bjjeevanreddy943-beep/mage-classification-Cnn",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327773034",
+      "id": "github:repository:1327773034",
+      "kind": "repository",
+      "organization": "divyamjain015",
+      "published_at": "2026-08-08T13:20:28Z",
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "divyamjain015/Video-Understanding-Performance-Prediction-System",
+      "topics": [
+        "video_understanding"
+      ],
+      "updated_at": "2026-08-08T18:11:41Z",
+      "url": "https://github.com/divyamjain015/Video-Understanding-Performance-Prediction-System",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1327680988",
+      "id": "github:repository:1327680988",
+      "kind": "repository",
+      "organization": "shehryar11w",
+      "published_at": "2026-08-08T11:36:38Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Hands-on deep learning projects \u2014 from manually-built autograd engines, NNs, RNNs, and embeddings up through CNNs, transfer learning, ViT, Seq2Seq, and object detection/segmentation. Each project lives in its own repo, linked here as a submodule.",
+      "title": "shehryar11w/Deep-Learning-and-LLMs",
+      "topics": [
+        "object_detection",
+        "visual_representation_learning"
+      ],
+      "updated_at": "2026-08-08T15:39:27Z",
+      "url": "https://github.com/shehryar11w/Deep-Learning-and-LLMs",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1290410846",
+      "id": "github:repository:1290410846",
+      "kind": "repository",
+      "organization": "oxbshw",
+      "published_at": "2026-07-05T23:25:30Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Video understanding and self-verification for AI agents. Turn videos, streams, and agent screen recordings into searchable, timestamped evidence\u2014then use THE LOOP to inspect, fix, and verify the work. MCP, CLI, REST, local-first.",
+      "title": "oxbshw/watch-skill",
+      "topics": [
+        "video_understanding"
+      ],
+      "updated_at": "2026-08-08T20:25:14Z",
+      "url": "https://github.com/oxbshw/watch-skill",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:54:19.915276Z",
+      "entity_id": "github:repository:1087763122",
+      "id": "github:repository:1087763122",
+      "kind": "repository",
+      "organization": "url-kaist",
+      "published_at": "2025-11-01T15:41:45Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Multi-Mapcher: Loop closure detection-free heterogeneous LiDAR multi-session SLAM leveraging outlier-robust registration for autonomous vehicles (T-IV)",
+      "title": "url-kaist/multi-mapcher",
+      "topics": [
+        "multi_view_depth",
+        "object_detection",
+        "slam"
+      ],
+      "updated_at": "2026-08-08T23:34:07Z",
+      "url": "https://github.com/url-kaist/multi-mapcher",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:47:11.566111Z",
+      "entity_id": "huggingface:model:6718043b40aa5671c3d57ef2",
+      "id": "huggingface:model:6718043b40aa5671c3d57ef2",
+      "kind": "model",
+      "organization": "salma33",
+      "published_at": "2026-08-03T15:24:33Z",
+      "reportable": true,
+      "source": "huggingface",
+      "summary": null,
+      "title": "salma33/brain-lesion-segmentation",
+      "topics": [
+        "panoptic_segmentation",
+        "instance_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T15:56:34Z",
+      "url": "https://huggingface.co/salma33/brain-lesion-segmentation",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:47:11.566111Z",
+      "entity_id": "huggingface:model:5458a6932d952208275dccd7",
+      "id": "huggingface:model:5458a6932d952208275dccd7",
+      "kind": "model",
+      "organization": "Tanishjain9",
+      "published_at": "2026-08-08T18:30:31Z",
+      "reportable": true,
+      "source": "huggingface",
+      "summary": "Lightweight **Fast-SCNN** model for indoor floor segmentation.",
+      "title": "Tanishjain9/fast-scnn-floor-segmentation",
+      "topics": [
+        "object_detection",
+        "panoptic_segmentation",
+        "semantic_segmentation"
+      ],
+      "updated_at": "2026-08-08T18:36:00Z",
+      "url": "https://huggingface.co/Tanishjain9/fast-scnn-floor-segmentation",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:36:38.138853Z",
+      "entity_id": "entity:950fb17220abdf96",
+      "id": "github:tag:167694194:tag:v0.18.0-beta3",
+      "kind": "tag",
+      "organization": "blakeblackshear",
+      "published_at": null,
+      "reportable": true,
+      "source": "github",
+      "summary": null,
+      "title": "blakeblackshear/frigate tagged v0.18.0-beta3",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": null,
+      "url": "https://api.github.com/repos/blakeblackshear/frigate/zipball/refs/tags/v0.18.0-beta3",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:36:38.138853Z",
+      "entity_id": "entity:950fb17220abdf96",
+      "id": "github:release:167694194:release:360119879",
+      "kind": "release",
+      "organization": "blakeblackshear",
+      "published_at": "2026-08-08T16:21:50Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "## Images - [ghcr.io/blakeblackshear/frigate:0.18.0-beta3](https://github.com/blakeblackshear/frigate/pkgs/container/frigate/1111617792?tag=0.18.0-beta3) - [ghcr.io/blakeblackshear/frigate:0.18.0-beta3-standard-arm64](https://github.com/blakeblackshear/frigate/pkgs/container/frigate/1111612430?tag=0.18.0-beta3-standar\u2026",
+      "title": "blakeblackshear/frigate 0.18.0 Beta 3",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": "2026-08-08T16:45:07Z",
+      "url": "https://github.com/blakeblackshear/frigate/releases/tag/v0.18.0-beta3",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:36:38.138853Z",
+      "entity_id": "entity:daef422d1c6307a6",
+      "id": "github:commit:422584085:commit:aea8327c4ff3a9a67351d5cb4a47643012631f34",
+      "kind": "commit",
+      "organization": "yyyanbj",
+      "published_at": "2026-08-08T13:33:48Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "Automated deployment @ 2026-08-08 21:33:48 Asia/Shanghai",
+      "title": "yyyanbj/arxiv-daily default branch advanced",
+      "topics": [
+        "slam"
+      ],
+      "updated_at": null,
+      "url": "https://github.com/yyyanbj/arxiv-daily/commit/aea8327c4ff3a9a67351d5cb4a47643012631f34",
+      "venue": null
+    },
+    {
+      "authors": [],
+      "discovered_at": "2026-08-08T23:36:38.138853Z",
+      "entity_id": "entity:950fb17220abdf96",
+      "id": "github:commit:167694194:commit:2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "kind": "commit",
+      "organization": "blakeblackshear",
+      "published_at": "2026-08-08T17:12:13Z",
+      "reportable": true,
+      "source": "github",
+      "summary": "add faq to notifications docs (#23939)",
+      "title": "blakeblackshear/frigate default branch advanced",
+      "topics": [
+        "object_detection"
+      ],
+      "updated_at": null,
+      "url": "https://github.com/blakeblackshear/frigate/commit/2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
+      "venue": null
+    },
     {
       "authors": [],
       "discovered_at": "2026-08-08T13:19:49.174985Z",
@@ -276,7 +2935,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T13:19:49.174985Z",
-      "entity_id": "entity:31e48f1bdc53935d",
+      "entity_id": "entity:feb0aeef4d6e8153",
       "id": "github:repository:1327728398",
       "kind": "repository",
       "organization": "SepehrMaghool",
@@ -1327,7 +3986,7 @@
         "Hamidreza Amindavar"
       ],
       "discovered_at": "2026-08-08T12:16:13.267168Z",
-      "entity_id": "entity:ce574598106c0f72",
+      "entity_id": "entity:7fe13d185bbd1b88",
       "id": "arxiv:paper:2608.06205",
       "kind": "paper",
       "organization": null,
@@ -2199,7 +4858,7 @@
         "Haohuan Fu"
       ],
       "discovered_at": "2026-08-08T12:16:13.267168Z",
-      "entity_id": "entity:31e48f1bdc53935d",
+      "entity_id": "entity:feb0aeef4d6e8153",
       "id": "arxiv:paper:2608.05964",
       "kind": "paper",
       "organization": null,
@@ -3299,7 +5958,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "github:repository:422584085",
+      "entity_id": "entity:daef422d1c6307a6",
       "id": "github:repository:422584085",
       "kind": "repository",
       "organization": "yyyanbj",
@@ -3494,7 +6153,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "github:repository:167694194",
+      "entity_id": "entity:950fb17220abdf96",
       "id": "github:repository:167694194",
       "kind": "repository",
       "organization": "blakeblackshear",
@@ -3652,7 +6311,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "entity:31e48f1bdc53935d",
+      "entity_id": "entity:feb0aeef4d6e8153",
       "id": "github:repository:1327685861",
       "kind": "repository",
       "organization": "Nanthana2311",
@@ -6387,7 +9046,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "entity:ce574598106c0f72",
+      "entity_id": "entity:7fe13d185bbd1b88",
       "id": "github:repository:1327163199",
       "kind": "repository",
       "organization": "puku04",
@@ -7101,7 +9760,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "github:repository:1326976589",
+      "entity_id": "entity:30626e84caba63ff",
       "id": "github:repository:1326976589",
       "kind": "repository",
       "organization": "BasantHussein13",
@@ -8235,7 +10894,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "entity:ce574598106c0f72",
+      "entity_id": "entity:7fe13d185bbd1b88",
       "id": "github:repository:1326659968",
       "kind": "repository",
       "organization": "divishamb123",
@@ -8312,7 +10971,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "entity:31e48f1bdc53935d",
+      "entity_id": "entity:feb0aeef4d6e8153",
       "id": "github:repository:1326644356",
       "kind": "repository",
       "organization": "itsabhinav19",
@@ -10015,7 +12674,7 @@
     {
       "authors": [],
       "discovered_at": "2026-08-08T11:56:02.034194Z",
-      "entity_id": "entity:ce574598106c0f72",
+      "entity_id": "entity:7fe13d185bbd1b88",
       "id": "github:repository:1326245051",
       "kind": "repository",
       "organization": "NITHIN1-RE",
