@@ -2,107 +2,152 @@
   "accounts": {
     "organization:facebookresearch": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-09T23:39:19.909075Z",
+      "last_checked_at": "2026-08-10T23:42:55.050291Z",
       "login": "facebookresearch",
       "type": "organization"
     },
     "organization:google-deepmind": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-09T23:39:19.909075Z",
+      "last_checked_at": "2026-08-10T23:42:55.050291Z",
       "login": "google-deepmind",
       "type": "organization"
     },
     "organization:google-research": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-09T23:39:19.909075Z",
+      "last_checked_at": "2026-08-10T23:42:55.050291Z",
       "login": "google-research",
       "type": "organization"
     },
     "organization:microsoft": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-09T23:39:19.909075Z",
+      "last_checked_at": "2026-08-10T23:42:55.050291Z",
       "login": "microsoft",
       "type": "organization"
     },
     "organization:nerfstudio-project": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-09T23:39:19.909075Z",
+      "last_checked_at": "2026-08-10T23:42:55.050291Z",
       "login": "nerfstudio-project",
       "type": "organization"
     },
     "organization:nv-tlabs": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-09T23:39:19.909075Z",
+      "last_checked_at": "2026-08-10T23:42:55.050291Z",
       "login": "nv-tlabs",
       "type": "organization"
     },
     "organization:nvlabs": {
       "initialized_at": "2026-08-08T12:13:31.593378Z",
-      "last_checked_at": "2026-08-09T23:39:19.909075Z",
+      "last_checked_at": "2026-08-10T23:42:55.050291Z",
       "login": "NVlabs",
       "type": "organization"
     }
   },
   "http_cache": {
     "/repos/AaronFeng753/Waifu2x-Extension-GUI": {
-      "etag": "W/\"46374ce22563f3d9eca43a35782c2ba200362622fd92bf95ee13172e9c9febde\"",
-      "last_modified": "Sun, 09 Aug 2026 20:25:38 GMT"
+      "etag": "W/\"388f6b9c016b46a0742a51996571a5ea1eb855b0e1ec24e758b24248e0215182\"",
+      "last_modified": "Mon, 10 Aug 2026 13:07:02 GMT"
     },
     "/repos/AaronFeng753/Waifu2x-Extension-GUI/commits/master": {
-      "etag": "W/\"5d6b4bd4538451e6c02e26d83f3f6d7132d6b20944c4a38af80ad3114fc6dd80\"",
+      "etag": "W/\"078b84dc7549e5c00ef6b2671429c07cb1794301183082ca3a88af7964200e38\"",
       "last_modified": "Sat, 08 Aug 2026 14:50:38 GMT"
     },
     "/repos/AaronFeng753/Waifu2x-Extension-GUI/releases?page=1&per_page=100": {
-      "etag": "W/\"0f0a6114780bb5298b7ac7b3b3d489f9837824ed22fa393d2b2352f4270687a1\""
+      "etag": "W/\"2a949c9fc2d58a8015dd8af2c534400aea2bdf0502faeda42f5e026fb8de1f46\""
     },
     "/repos/AaronFeng753/Waifu2x-Extension-GUI/tags?page=1&per_page=100": {
-      "etag": "W/\"ac196d978504a7364046d9ee863b9710f0159d2fe7ecc3c5e89fa6e5e706775c\"",
-      "last_modified": "Sun, 09 Aug 2026 20:25:38 GMT"
+      "etag": "W/\"e07f3407dc12f96abe1de73e53c0664096ee73d78db82c0efc08f427fd641018\"",
+      "last_modified": "Mon, 10 Aug 2026 13:07:02 GMT"
+    },
+    "/repos/Allenxinn/AgentVLN": {
+      "etag": "W/\"5bf4088e9573033c22d4495b1bee0e2171f0ca753e79e72ab173a9a92292864b\"",
+      "last_modified": "Mon, 10 Aug 2026 06:53:03 GMT"
+    },
+    "/repos/Allenxinn/AgentVLN/commits/main": {
+      "etag": "W/\"a818977fc59d2d40817e6f26baaa0f361c0e2768b6d75727d14558a154f78a72\"",
+      "last_modified": "Sun, 09 Aug 2026 14:49:34 GMT"
+    },
+    "/repos/Allenxinn/AgentVLN/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/Allenxinn/AgentVLN/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 06:53:03 GMT"
     },
     "/repos/ArgoHA/D-FINE-seg": {
-      "etag": "W/\"25f916f06e4c4edde567959cd2106b413bcf283031f30185d31238fe1c997f59\"",
+      "etag": "W/\"1ae532487aed31f0e94f568434d0ecb0ecb49460646ada8dc3aa07cf13402fc8\"",
       "last_modified": "Sat, 08 Aug 2026 10:22:35 GMT"
     },
     "/repos/ArgoHA/D-FINE-seg/commits/main": {
-      "etag": "W/\"7a3662ab175d3f23d605d99a1c74d90992e3a5288d4c50fc9a7b014aa73caf94\"",
+      "etag": "W/\"aa81ad2a447a12ad5e4d0b2a3fa52a2628ef80533ee9ba31287a67e0be9e17e2\"",
       "last_modified": "Sat, 08 Aug 2026 10:22:25 GMT"
     },
     "/repos/ArgoHA/D-FINE-seg/releases?page=1&per_page=100": {
-      "etag": "W/\"24cf96aad8d7029aa3cacdcbf173f4124ac861236c9aa5ff9842f00e2fb5ca59\""
+      "etag": "W/\"5ed00b1c4e5d7f09f0b962d89302f6cd8a7373a0d67a390d8133833832014930\""
     },
     "/repos/ArgoHA/D-FINE-seg/tags?page=1&per_page=100": {
-      "etag": "W/\"bb2d020a00221f62f1c554cbd95d2b35a8603ebc37ff033f78c1dc27e9b32054\"",
+      "etag": "W/\"8f261c86ad9b5cbc291b9997d13cc6a0a31d03610c314653c97ac793f96cfdbb\"",
       "last_modified": "Sat, 08 Aug 2026 10:22:35 GMT"
     },
     "/repos/AtsushiSakai/PythonRobotics": {
-      "etag": "W/\"2431a75bb54bb5bc2e9c5d015c389d03989eaebf2c8d77ae5a8d7aa8cb58a86d\"",
-      "last_modified": "Sun, 09 Aug 2026 23:15:07 GMT"
+      "etag": "W/\"4c58060d388a709ea641b92df97937f43402908ff4f57c90c53b8aac3ff63b59\"",
+      "last_modified": "Mon, 10 Aug 2026 16:09:37 GMT"
     },
     "/repos/AtsushiSakai/PythonRobotics/commits/master": {
-      "etag": "W/\"20af57ef0bf5760d5fc6d2a8af435275edf2745a6e410a271763f38336a51d9a\"",
+      "etag": "W/\"f7774d9a4b9dce3edcd9db2594201282b21ce2e1d7051e25f0181f7e8680f782\"",
       "last_modified": "Sat, 08 Aug 2026 18:46:38 GMT"
     },
     "/repos/AtsushiSakai/PythonRobotics/releases?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\""
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
     },
     "/repos/AtsushiSakai/PythonRobotics/tags?page=1&per_page=100": {
-      "etag": "W/\"988e8b4f6bf26f66dccad3b59af85ca45aeba8e90e70b32b25e126639ea796af\"",
-      "last_modified": "Sun, 09 Aug 2026 23:15:07 GMT"
+      "etag": "W/\"d75ee2e5ac8a14bb6704f069a85bf357501df000e604e75386fce1b86ca633f9\"",
+      "last_modified": "Mon, 10 Aug 2026 16:09:37 GMT"
     },
     "/repos/Blaizzy/mlx-vlm": {
-      "etag": "W/\"2aa69f1a0b977e9d8078b9399ddabae1cd6fd3513654db401d540ae4e9c9c4ea\"",
-      "last_modified": "Sun, 09 Aug 2026 18:48:36 GMT"
+      "etag": "W/\"17716a5900f9f8d694bb81f5cb94c5c825806b1bd1d66ded4f4db53757225c3e\"",
+      "last_modified": "Mon, 10 Aug 2026 22:46:37 GMT"
     },
     "/repos/Blaizzy/mlx-vlm/commits/main": {
-      "etag": "W/\"7f94859317e59a668d8f3aba7101bda3b7541a8944d903ba8010dda5f7ffc09c\"",
-      "last_modified": "Sun, 09 Aug 2026 01:55:22 GMT"
+      "etag": "W/\"4e3e47d6cf320f276c5490cf855130aed18c939d3b84423c8dbf75ca581c60da\"",
+      "last_modified": "Mon, 10 Aug 2026 20:54:45 GMT"
     },
     "/repos/Blaizzy/mlx-vlm/releases?page=1&per_page=100": {
-      "etag": "W/\"0c9af5cd9ef646a234045c9f143f32ddcc46c5f865c4c1fda5cf860d6d98f936\""
+      "etag": "W/\"0f7ffa53a19069167a88ff55d63da68bff9ee646daaccbf34f1254d61fe4138c\""
     },
     "/repos/Blaizzy/mlx-vlm/tags?page=1&per_page=100": {
-      "etag": "W/\"631b802c385e8a0b680a2b4ba2488f6feeb9a4ba891361b6cd17b9ca58c1a5ee\"",
-      "last_modified": "Sun, 09 Aug 2026 18:48:36 GMT"
+      "etag": "W/\"9f189213df3c3278110abc1fdfbee035740cb1416528d396f5a6f7de6d94cefb\"",
+      "last_modified": "Mon, 10 Aug 2026 22:46:37 GMT"
+    },
+    "/repos/Ed1sonChen/DailyArxiv": {
+      "etag": "W/\"64e77af802f82e098c4f9d6a462b1f1658aa4170c85cae632105f7d4f7f593d2\"",
+      "last_modified": "Mon, 10 Aug 2026 17:26:21 GMT"
+    },
+    "/repos/Ed1sonChen/DailyArxiv/commits/main": {
+      "etag": "W/\"53e78cd0e71197f6c012301fc14955cb5109b07e8b744feed0b01e90684402ed\"",
+      "last_modified": "Mon, 10 Aug 2026 17:23:39 GMT"
+    },
+    "/repos/Ed1sonChen/DailyArxiv/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/Ed1sonChen/DailyArxiv/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 17:26:21 GMT"
+    },
+    "/repos/EyeTrackVR/EyeTrackVR": {
+      "etag": "W/\"9ef075444f40366cec4f1ab77641ad14f77ba111adb812f7bd96b8ae51e5ba12\"",
+      "last_modified": "Sun, 09 Aug 2026 20:54:30 GMT"
+    },
+    "/repos/EyeTrackVR/EyeTrackVR/commits/main": {
+      "etag": "W/\"d5cd6388b4745574abd682957950a89f627a6058442aad04d53fce6ffd969730\"",
+      "last_modified": "Sun, 24 May 2026 21:22:14 GMT"
+    },
+    "/repos/EyeTrackVR/EyeTrackVR/releases?page=1&per_page=100": {
+      "etag": "W/\"0531f01b2c52a5696e3bc4af3fe8b4720661300e8ee2b7563a1b418524ae0d8c\""
+    },
+    "/repos/EyeTrackVR/EyeTrackVR/tags?page=1&per_page=100": {
+      "etag": "W/\"dfb5f56b665732a0b53439837c68f0febacee488f099d14fb99a398d7179cd40\"",
+      "last_modified": "Sun, 09 Aug 2026 20:54:30 GMT"
     },
     "/repos/MCPBlender/blender-mcp": {
       "etag": "W/\"fab01756ac18a9c51d9eb03fed89a497e35a04e43d91781ea4a4fd30d2b705e7\"",
@@ -119,273 +164,603 @@
       "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\"",
       "last_modified": "Sun, 09 Aug 2026 22:42:28 GMT"
     },
+    "/repos/MOLAorg/mola": {
+      "etag": "W/\"38dd130b4b23a27430d3893c3444c61892d7568f2d6605f5ae48e9bdc51a5d51\"",
+      "last_modified": "Mon, 10 Aug 2026 22:02:21 GMT"
+    },
+    "/repos/MOLAorg/mola/commits/develop": {
+      "etag": "W/\"bcb878e8be927e2e599f31168dc234d75a75f820902ac85a59d05eae8dded116\"",
+      "last_modified": "Mon, 10 Aug 2026 22:01:20 GMT"
+    },
+    "/repos/MOLAorg/mola/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/MOLAorg/mola/tags?page=1&per_page=100": {
+      "etag": "W/\"00e3f7955e529c12ee1607f6b8828eca5298703fcd01ecf59fda12d260bc44ee\"",
+      "last_modified": "Mon, 10 Aug 2026 22:02:21 GMT"
+    },
+    "/repos/MapsHD/HDMapping": {
+      "etag": "W/\"e71e78f10b8a9992ae7ad027789f1a755969dc54ee3d0279993f4275f62cfd85\"",
+      "last_modified": "Mon, 10 Aug 2026 19:20:59 GMT"
+    },
+    "/repos/MapsHD/HDMapping/commits/main": {
+      "etag": "W/\"ae9df846740390cd4dd506fbc04938c12e9b67d067f15fc734d167e0aaf048d0\"",
+      "last_modified": "Mon, 10 Aug 2026 19:20:48 GMT"
+    },
+    "/repos/MapsHD/HDMapping/releases?page=1&per_page=100": {
+      "etag": "W/\"e99810a79b99e4c03752c28f863dda9d9b4d7d00cd5d2e5db911ae0bc87ca63b\""
+    },
+    "/repos/MapsHD/HDMapping/tags?page=1&per_page=100": {
+      "etag": "W/\"60070b5b725cdc047d071fb9cbb1ebcceb1e7d82335c67d4bdd12c4d354c8f87\"",
+      "last_modified": "Mon, 10 Aug 2026 19:20:59 GMT"
+    },
     "/repos/MrNeRF/LichtFeld-Studio": {
-      "etag": "W/\"7c4331de0fe09951f5a5354357e5e840d54b945f639526d8e02bf80518a4fddc\"",
-      "last_modified": "Sun, 09 Aug 2026 22:33:17 GMT"
+      "etag": "W/\"7b08422091f6855e1cf00e5a802dc27e538e21dca9ac12f99786d0c832d79fc7\"",
+      "last_modified": "Mon, 10 Aug 2026 21:43:06 GMT"
     },
     "/repos/MrNeRF/LichtFeld-Studio/commits/master": {
-      "etag": "W/\"92bb71e55b5498a773d0a1d6be1a54c102dca1889ac320b4f6d006915aaafc2d\"",
-      "last_modified": "Sun, 09 Aug 2026 21:37:45 GMT"
+      "etag": "W/\"80db6c975a74f912a7fbd672853c4d5131c32736b209ef652e4c368fe6d958ed\"",
+      "last_modified": "Mon, 10 Aug 2026 12:01:59 GMT"
     },
     "/repos/MrNeRF/LichtFeld-Studio/releases?page=1&per_page=100": {
-      "etag": "W/\"6bffa0ccaf0d7fca1907d269196eeaf28d9d2989c75d6de0bd3cadc4e3cdfc90\""
+      "etag": "W/\"03a6850a664cafa63f6c54bda01b7afb57f7fe4196a7a89077dcaa8c6ca7fbe2\""
     },
     "/repos/MrNeRF/LichtFeld-Studio/tags?page=1&per_page=100": {
-      "etag": "W/\"73887ab60995ca9b7e16797d9d9ffdad1dd6044c800afe3b4837a9767b58f7c6\"",
-      "last_modified": "Sun, 09 Aug 2026 22:33:17 GMT"
+      "etag": "W/\"d5041d164fce078cdec30af94991ae77f7472ffc38a349c6eb2d9139595a127c\"",
+      "last_modified": "Mon, 10 Aug 2026 21:43:06 GMT"
+    },
+    "/repos/NVIDIA-AI-Blueprints/video-search-and-summarization": {
+      "etag": "W/\"7d2fe22d98726faacebea10a94e0c028ff3d9821d20624015aefe1ca66cc62e8\"",
+      "last_modified": "Sun, 09 Aug 2026 05:11:07 GMT"
+    },
+    "/repos/NVIDIA-AI-Blueprints/video-search-and-summarization/commits/main": {
+      "etag": "W/\"096de4b469e16c329cda2f1afc86a7d1c6789d8457a0646fd1e405edd5a1a7e8\"",
+      "last_modified": "Fri, 07 Aug 2026 00:18:24 GMT"
+    },
+    "/repos/NVIDIA-AI-Blueprints/video-search-and-summarization/releases?page=1&per_page=100": {
+      "etag": "W/\"80cdf6c5af02f2d7b83898f2b69faf8a9866ffd3bae3b61c8c8d6279300be8e3\""
+    },
+    "/repos/NVIDIA-AI-Blueprints/video-search-and-summarization/tags?page=1&per_page=100": {
+      "etag": "W/\"0cba5d47c427365f9668255ccde7376e58d8fdb4bc7b3ac58359f8b06947888a\"",
+      "last_modified": "Sun, 09 Aug 2026 05:11:07 GMT"
     },
     "/repos/NVlabs/Sana": {
-      "etag": "W/\"d2fcdf05ae8da8dee3fbf6b8e4e17ac206b97615938cd658d995546ba42409bb\"",
-      "last_modified": "Sun, 09 Aug 2026 14:18:33 GMT"
+      "etag": "W/\"8420142d0f88911f263ccf97823a264201c7cc4737ea6ec06af5101fc2e21457\"",
+      "last_modified": "Mon, 10 Aug 2026 21:58:09 GMT"
     },
     "/repos/NVlabs/Sana/commits/main": {
-      "etag": "W/\"fb368a432ec874e5f626ed08e08f5d17c95b0f4e4adf87c1be21ff67e15216bc\"",
+      "etag": "W/\"2cb728e46e8a6a248e4fafb1290e0047e65937e2eb3148e9d9781342272b0530\"",
       "last_modified": "Sun, 09 Aug 2026 07:44:37 GMT"
     },
     "/repos/NVlabs/Sana/releases?page=1&per_page=100": {
-      "etag": "W/\"df38ef3ba3d19f4ae2d6872ffc5bb70067b96661d246df7cf6f254c70315ed80\""
+      "etag": "W/\"de2e545ef32ad5d49348ec5715ddcc5441cb2298100cc8169cffe8bff3f54279\""
     },
     "/repos/NVlabs/Sana/tags?page=1&per_page=100": {
-      "etag": "W/\"f24cd2a48f3c80f014618f1b03eb108d526a3b77f902c7c7ef04a062a6f6c6d1\"",
-      "last_modified": "Sun, 09 Aug 2026 14:18:33 GMT"
+      "etag": "W/\"8b83890e09ba3352030487b6603c71026003faab3b5cb6c7cedca0a1b6b3cd8a\"",
+      "last_modified": "Mon, 10 Aug 2026 21:58:09 GMT"
     },
     "/repos/NVlabs/instant-ngp": {
-      "etag": "W/\"4eb5495b19b5e362df7e7746dbdbea7bf7233810e7a5cb570f7aa8ff9b0b0858\"",
-      "last_modified": "Sun, 09 Aug 2026 21:03:34 GMT"
+      "etag": "W/\"d4c3861ea600fea089253be1ce0f083fe7ba2604590cfee543058d79795f0752\"",
+      "last_modified": "Mon, 10 Aug 2026 20:55:25 GMT"
     },
     "/repos/NVlabs/instant-ngp/commits/master": {
-      "etag": "W/\"6ea0e001c191baadd8558f06c81bf7053df88d8bdc4954106a96928c776c2562\"",
+      "etag": "W/\"513a795b13fc728e27a307b770955db38da9b07a409bbe1aa3900927c33a9666\"",
       "last_modified": "Mon, 02 Feb 2026 12:01:38 GMT"
     },
     "/repos/NVlabs/instant-ngp/releases?page=1&per_page=100": {
-      "etag": "W/\"d54d271ea2686b5f36c3821d16e15c46f0d67753225d011778f46056f4877ca8\""
+      "etag": "W/\"04ad434ef487419d7e593e473c41ad083641ec08e503a32621113465ffb6bd36\""
     },
     "/repos/NVlabs/instant-ngp/tags?page=1&per_page=100": {
-      "etag": "W/\"02d7aca5774a00267c308879ebd82b1285a51e3d838a893bf74bbfaf29b434d7\"",
-      "last_modified": "Sun, 09 Aug 2026 21:03:34 GMT"
+      "etag": "W/\"1a4c19069c3cdc111bd320e7b6f21cd9bbe748b23bf7579ce57567bd5fe84fed\"",
+      "last_modified": "Mon, 10 Aug 2026 20:55:25 GMT"
+    },
+    "/repos/Pan-Chera/Multi-Agent-CAD": {
+      "etag": "W/\"0e3551c03978e05187fa0ea92820c3ebd0999b3d7f53b51549d75f0f2d25075a\"",
+      "last_modified": "Mon, 10 Aug 2026 23:24:22 GMT"
+    },
+    "/repos/Pan-Chera/Multi-Agent-CAD/commits/main": {
+      "etag": "W/\"8d01042c02ea08199fa4c414193fc26ff8201714140b49b6f07f54f783bfcdb5\"",
+      "last_modified": "Mon, 10 Aug 2026 11:07:58 GMT"
+    },
+    "/repos/Pan-Chera/Multi-Agent-CAD/releases?page=1&per_page=100": {
+      "etag": "W/\"0608dad74eecc83bf2d0ca798aa6bd06d01574ffeb79ac91879eee949952b1d9\""
+    },
+    "/repos/Pan-Chera/Multi-Agent-CAD/tags?page=1&per_page=100": {
+      "etag": "W/\"b027cc95e35f3941ecb29e6e272e28a23da061f8865949f28eeef0899d678b97\"",
+      "last_modified": "Mon, 10 Aug 2026 23:24:22 GMT"
+    },
+    "/repos/SPA-junghokim/SafeDrive": {
+      "etag": "W/\"3a0b036785c7fcfdab99e5ab1ef62effb1ca0e87a902b66f28ad3ca5ff7139fc\"",
+      "last_modified": "Mon, 10 Aug 2026 05:40:26 GMT"
+    },
+    "/repos/SPA-junghokim/SafeDrive/commits/main": {
+      "etag": "W/\"fde9595fef5b2ccf35d055040364edc0d1129cac87ebd4700eef18a5e3e4c27f\"",
+      "last_modified": "Sun, 09 Aug 2026 20:31:08 GMT"
+    },
+    "/repos/SPA-junghokim/SafeDrive/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/SPA-junghokim/SafeDrive/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 05:40:26 GMT"
+    },
+    "/repos/Scottcjn/ram-coffers": {
+      "etag": "W/\"d151009c3e548a960e659cbfd830beb18a54207ecc6d034c145feb322af7c988\"",
+      "last_modified": "Mon, 10 Aug 2026 17:59:16 GMT"
+    },
+    "/repos/Scottcjn/ram-coffers/commits/main": {
+      "etag": "W/\"193b1b25e163a4cc1ed1118c07265e92fb04fcbcc6e484b6dfedaa72b18628ab\"",
+      "last_modified": "Mon, 10 Aug 2026 17:58:17 GMT"
+    },
+    "/repos/Scottcjn/ram-coffers/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/Scottcjn/ram-coffers/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 17:59:16 GMT"
     },
     "/repos/Tencent/YOLO-Master": {
-      "etag": "W/\"fe60b6771cbbb335ff74fe1631a0a49887858e29ca2dc21126ac58d61c6ad362\"",
-      "last_modified": "Sat, 08 Aug 2026 15:18:53 GMT"
+      "etag": "W/\"6999b63c704966c85ae627887d6c516f8f3e2e667879fb6e5f2f59edf21468e8\"",
+      "last_modified": "Mon, 10 Aug 2026 19:32:46 GMT"
     },
     "/repos/Tencent/YOLO-Master/commits/main": {
-      "etag": "W/\"3ce32e36a744d388f7206445c06848f1ca71bccd9461fdb3116cdcd9ed550a91\"",
-      "last_modified": "Sat, 08 Aug 2026 03:39:14 GMT"
+      "etag": "W/\"cae7f6e16f5007f85820368b990dce07d72f8ea25ecefe730ea2ef16fb533bbc\"",
+      "last_modified": "Mon, 10 Aug 2026 08:26:20 GMT"
     },
     "/repos/Tencent/YOLO-Master/releases?page=1&per_page=100": {
-      "etag": "W/\"837a634bf1aa1eafe6f9130da9bd8764ba6c3db915e9007b68ba0ae9b44ebb29\""
+      "etag": "W/\"03cbd0b573a4d78f1cdfd5bf1e290359e19d87b55896dd040fa28eddc1610955\""
     },
     "/repos/Tencent/YOLO-Master/tags?page=1&per_page=100": {
-      "etag": "W/\"5fbc131c248f0ec8640582ef6bfb47be40fcbcea54fa2a7c125fe4e1121e8d7c\"",
-      "last_modified": "Sat, 08 Aug 2026 15:18:53 GMT"
+      "etag": "W/\"bd3a320b8f781e40eb06ab4b77ab202613c65157ecd31f596cbb18ea072fac13\"",
+      "last_modified": "Mon, 10 Aug 2026 19:32:46 GMT"
+    },
+    "/repos/VisionVerse/RemoteSensing-Restoration-Survey": {
+      "etag": "W/\"080b79d1825032445bd2f79fed3b766288cb375cb1617e681424eb85e01d8d7f\"",
+      "last_modified": "Sun, 09 Aug 2026 14:01:55 GMT"
+    },
+    "/repos/VisionVerse/RemoteSensing-Restoration-Survey/commits/main": {
+      "etag": "W/\"afca23b154324bfeaad656295d66ec6cd18e053acbf6339dc970e1e5aa2f7255\"",
+      "last_modified": "Sun, 09 Aug 2026 14:01:12 GMT"
+    },
+    "/repos/VisionVerse/RemoteSensing-Restoration-Survey/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/VisionVerse/RemoteSensing-Restoration-Survey/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Sun, 09 Aug 2026 14:01:55 GMT"
+    },
+    "/repos/XDimLab/GIFStream": {
+      "etag": "W/\"410ada0bf44c210ccaec10d384c012b4932e1497b2fcdc2d4fd4d8e33436cf4c\"",
+      "last_modified": "Sun, 09 Aug 2026 14:27:22 GMT"
+    },
+    "/repos/XDimLab/GIFStream/commits/main": {
+      "etag": "W/\"8c0a9457c69dbc85394a442a499f0a41e244fc12cff19caae7e48a135fdf14ae\"",
+      "last_modified": "Sun, 09 Aug 2026 14:26:26 GMT"
+    },
+    "/repos/XDimLab/GIFStream/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/XDimLab/GIFStream/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Sun, 09 Aug 2026 14:27:22 GMT"
+    },
+    "/repos/bjornbytes/lovr": {
+      "etag": "W/\"855b9a3e25ab8e4e0602852e823b3b7d626e862607af9f06acbf4dfc57e61c08\"",
+      "last_modified": "Mon, 10 Aug 2026 14:06:24 GMT"
+    },
+    "/repos/bjornbytes/lovr/commits/dev": {
+      "etag": "W/\"f139d6914710bea9f98f99e362ee641b5d3d33799b08c8e9077b3a205faa6140\"",
+      "last_modified": "Sun, 09 Aug 2026 22:38:01 GMT"
+    },
+    "/repos/bjornbytes/lovr/releases?page=1&per_page=100": {
+      "etag": "W/\"40af9ee2bb06035e476fed95360bd18dc028bdc9638f95ae16d07b5a58a892a8\""
+    },
+    "/repos/bjornbytes/lovr/tags?page=1&per_page=100": {
+      "etag": "W/\"976d12cbfba6024d41cf7453319067f3a798ca69aabf6a98114920c91328956e\"",
+      "last_modified": "Mon, 10 Aug 2026 14:06:24 GMT"
     },
     "/repos/blakeblackshear/frigate": {
-      "etag": "W/\"b9f621bac66b3da35060e341570e6983ec6a45f4e47a703c8fea1e516e6b4aef\"",
-      "last_modified": "Sun, 09 Aug 2026 23:18:27 GMT"
+      "etag": "W/\"87feb8f879cce7df865f325d377a0a5106d8440b455dbfe8786669d767a7dea8\"",
+      "last_modified": "Mon, 10 Aug 2026 23:11:42 GMT"
     },
     "/repos/blakeblackshear/frigate/commits/dev": {
-      "etag": "W/\"864aa9ebad26129e5915a1da4bb47775740de6cdfdd9208ff8d8aad05228b9d6\"",
-      "last_modified": "Sat, 08 Aug 2026 17:12:13 GMT"
+      "etag": "W/\"da9db264ceac858dfcfc3d7327ad56fe5f969459837fcd41e8741db4be67b853\"",
+      "last_modified": "Mon, 10 Aug 2026 21:54:41 GMT"
     },
     "/repos/blakeblackshear/frigate/releases?page=1&per_page=100": {
-      "etag": "W/\"f009182d6a96a05da690ada09d866f6a8f3ab58d68fd981cb86525e7d6259d54\""
+      "etag": "W/\"2706d567c4cfcb3aed001f4af1432d580463820be18b942a750cc0b5fe340c1e\""
     },
     "/repos/blakeblackshear/frigate/tags?page=1&per_page=100": {
-      "etag": "W/\"1d2c29c46090461d350e6d45a689e9394e3b810ec5860a7214624813de709b2a\"",
-      "last_modified": "Sun, 09 Aug 2026 23:18:27 GMT"
+      "etag": "W/\"e8ab0a0090d4d7ea26a764e069d2134264996fdb1ded30f27752a7cecaa14504\"",
+      "last_modified": "Mon, 10 Aug 2026 23:11:42 GMT"
     },
     "/repos/colmap/colmap": {
-      "etag": "W/\"a20986193e35cd13c698acf86d80e2353cd4b4119d22f5743cf90c04168f742f\"",
-      "last_modified": "Sun, 09 Aug 2026 07:32:07 GMT"
+      "etag": "W/\"7a568dd16cb99c032d68886cf5e89b2047f78aadbc62bd8b79504d098049bfed\"",
+      "last_modified": "Mon, 10 Aug 2026 22:55:09 GMT"
     },
     "/repos/colmap/colmap/commits/main": {
-      "etag": "W/\"e4d187e02ffddd1a07f4537aa039fe9fa7d3cd2543ee665265ea9d0d4ee3f70a\"",
-      "last_modified": "Sat, 08 Aug 2026 18:28:58 GMT"
+      "etag": "W/\"d7b19f42913371b76ee13763285e3a4abd620c4d6d9ed9c5c2410168247d2c23\"",
+      "last_modified": "Mon, 10 Aug 2026 09:51:56 GMT"
     },
     "/repos/colmap/colmap/releases?page=1&per_page=100": {
-      "etag": "W/\"cd260fe87cc0346d6a7ac1337169978040ec2a7a962cc0c1ec16475081bdc3e8\""
+      "etag": "W/\"62be23edafeafb790897dd9ae66e58e8532b72380560bb808cd1109c9d1fcccb\""
     },
     "/repos/colmap/colmap/tags?page=1&per_page=100": {
-      "etag": "W/\"de0cf046dc2568ea0996f01705bb76e3d0cd9116cc68b59cac09354025f6ce53\"",
-      "last_modified": "Sun, 09 Aug 2026 07:32:07 GMT"
+      "etag": "W/\"1ec13f345a070d9917633ff080bca45876d75cc0b71e5d798e5a47a79c32fb50\"",
+      "last_modified": "Mon, 10 Aug 2026 22:55:09 GMT"
+    },
+    "/repos/cshw2021/Learned-Image-Video-Compression": {
+      "etag": "W/\"f42d92269af47ab3e11f10bcf47d9aaaac2dfbfce5dd080f915efd0406825d2e\"",
+      "last_modified": "Sun, 09 Aug 2026 02:10:40 GMT"
+    },
+    "/repos/cshw2021/Learned-Image-Video-Compression/commits/main": {
+      "etag": "W/\"1d7281854975b4dae8cf539150d88fae1541b20f7caae478947aa3fce98846b9\"",
+      "last_modified": "Sun, 09 Aug 2026 02:10:36 GMT"
+    },
+    "/repos/cshw2021/Learned-Image-Video-Compression/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/cshw2021/Learned-Image-Video-Compression/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Sun, 09 Aug 2026 02:10:40 GMT"
     },
     "/repos/datawhalechina/every-embodied": {
-      "etag": "W/\"a15accafb93e0401d90cf758f623a7111b2c564ee304071a01a450843421b214\"",
-      "last_modified": "Sun, 09 Aug 2026 18:22:24 GMT"
+      "etag": "W/\"31cdf4d14757496c4e2fddf74129217598b670d54d86ee089b02e7191d3a3ff7\"",
+      "last_modified": "Mon, 10 Aug 2026 16:36:04 GMT"
     },
     "/repos/datawhalechina/every-embodied/commits/main": {
-      "etag": "W/\"8e6a95a62eb9445145a2ba63e975e9eef52ae9179793466764c8b8c222fa33f3\"",
+      "etag": "W/\"640f897e15315d88194da33ca456716b3aeacb1fd0764a1dc8cc0dd0b871ac38\"",
       "last_modified": "Wed, 05 Aug 2026 12:24:27 GMT"
     },
     "/repos/datawhalechina/every-embodied/releases?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\""
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
     },
     "/repos/datawhalechina/every-embodied/tags?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\"",
-      "last_modified": "Sun, 09 Aug 2026 18:22:24 GMT"
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 16:36:04 GMT"
+    },
+    "/repos/deepinv/deepinv": {
+      "etag": "W/\"6baea9bf6aa579ae62e194b1c1a03500200754640e8d8e45374b9cc29b5437f9\"",
+      "last_modified": "Mon, 10 Aug 2026 17:37:05 GMT"
+    },
+    "/repos/deepinv/deepinv/commits/main": {
+      "etag": "W/\"aa27b37dc9d01d493149a2b185a7b81709f03ea84633b4ff13d03b9ec0f4defb\"",
+      "last_modified": "Sun, 09 Aug 2026 08:08:37 GMT"
+    },
+    "/repos/deepinv/deepinv/releases?page=1&per_page=100": {
+      "etag": "W/\"876bf7f85ca3968fe3a8395102ed981426cb1e1fe609c971c12e35309be477fa\""
+    },
+    "/repos/deepinv/deepinv/tags?page=1&per_page=100": {
+      "etag": "W/\"98892a2c1bc5d38cd4bbb7513008b0aa032567e6e40e3d74c06e7ee51a9a8764\"",
+      "last_modified": "Mon, 10 Aug 2026 17:37:05 GMT"
+    },
+    "/repos/img2threejs/img2threejs": {
+      "etag": "W/\"077a5ed7b9361f62168fbd4f4d0484439d0e08b0ed5edd083e12c1cd1fd6a5b1\"",
+      "last_modified": "Mon, 10 Aug 2026 23:40:15 GMT"
+    },
+    "/repos/img2threejs/img2threejs/commits/main": {
+      "etag": "W/\"dd9020c42df9169f4b91d7b0db0d466768fdfd69084c54e7aa91ee867e1bf2fb\"",
+      "last_modified": "Thu, 06 Aug 2026 05:23:34 GMT"
+    },
+    "/repos/img2threejs/img2threejs/releases?page=1&per_page=100": {
+      "etag": "W/\"69c24a3d65d6fa85d76f51efea10ea8a1321ac30929c99a601a0e6ea3ec2d61f\""
+    },
+    "/repos/img2threejs/img2threejs/tags?page=1&per_page=100": {
+      "etag": "W/\"993e277fa04bc90c09cd3881b57c90a9b728e22dd1daea13b23fa6f574c6931e\"",
+      "last_modified": "Mon, 10 Aug 2026 23:40:15 GMT"
     },
     "/repos/introlab/rtabmap": {
-      "etag": "W/\"87260cfef9ea00bbe85c1c0c801004cbc265ac05f462adba72a5d103fb468491\"",
-      "last_modified": "Sun, 09 Aug 2026 21:25:51 GMT"
+      "etag": "W/\"0add69611577eea216cbe865bbd56a02a37ab180947e4c98f2dafe87f8c6bf95\"",
+      "last_modified": "Mon, 10 Aug 2026 17:04:55 GMT"
     },
     "/repos/introlab/rtabmap/commits/master": {
-      "etag": "W/\"221104319b3993567638f4ec839d3da307ac0fc9fd787760883897175b2b542b\"",
-      "last_modified": "Sun, 09 Aug 2026 06:47:48 GMT"
+      "etag": "W/\"8f0af53438832c5c8497bd5be956186a9a6eae6bdf199a3519f9d80ddcedc3b2\"",
+      "last_modified": "Mon, 10 Aug 2026 00:36:27 GMT"
     },
     "/repos/introlab/rtabmap/releases?page=1&per_page=100": {
-      "etag": "W/\"2ca4bf9b8dcb1468a29e9535b859da5814080a22e6e82b368e28dfa657bc4ebf\""
+      "etag": "W/\"a0ea28c054e989184eaa6a638eac4b85fdb02970f8e6b1e18bd8753738473cca\""
     },
     "/repos/introlab/rtabmap/tags?page=1&per_page=100": {
-      "etag": "W/\"5dccb835c47d66911b76d521078ad4644278e3d7b6e37a6a556c072dc8cb8fde\"",
-      "last_modified": "Sun, 09 Aug 2026 21:25:51 GMT"
+      "etag": "W/\"8d619e0ca86ccf4287a782df2542381a8121bf15964568381b8d16558c63ba74\"",
+      "last_modified": "Mon, 10 Aug 2026 17:04:55 GMT"
     },
     "/repos/johe123qwe/github-trending": {
-      "etag": "W/\"26504edc4dfdfb6906ab4ea09b920635641edd3ecfc76993739966b9c8c2f822\"",
-      "last_modified": "Sun, 09 Aug 2026 12:56:58 GMT"
+      "etag": "W/\"f4cfbb1b729eecab5ad6e761f4c9e722f512551daf9d728f3e055df9864ae6a6\"",
+      "last_modified": "Mon, 10 Aug 2026 14:08:56 GMT"
     },
     "/repos/johe123qwe/github-trending/commits/main": {
-      "etag": "W/\"4b871bf0e88d973eadef30084f5edb5a9080f02e9c4ec6902b025ba3aeadb3ff\"",
-      "last_modified": "Sun, 09 Aug 2026 12:56:51 GMT"
+      "etag": "W/\"62f9e8ecf75d1bf1b38d768ea45ec0262073b9636d862013ec6e2b05feb3e974\"",
+      "last_modified": "Mon, 10 Aug 2026 13:15:14 GMT"
     },
     "/repos/johe123qwe/github-trending/releases?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\""
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
     },
     "/repos/johe123qwe/github-trending/tags?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\"",
-      "last_modified": "Sun, 09 Aug 2026 12:56:58 GMT"
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 14:08:56 GMT"
     },
     "/repos/luohongk/Embodied-AI-Daily": {
-      "etag": "W/\"1977825d6d93e841cdcdb3a343fb5534021fa92ef5644ad34b53b06d127282fa\"",
-      "last_modified": "Sun, 09 Aug 2026 17:06:41 GMT"
+      "etag": "W/\"8a86bc1c6596f797ea23997903503f4a1dec193584e2e9390a7082155096d9d9\"",
+      "last_modified": "Mon, 10 Aug 2026 00:37:31 GMT"
     },
     "/repos/luohongk/Embodied-AI-Daily/commits/main": {
-      "etag": "W/\"94d4644677dbb742717e01b79c71b0f5a7b7f24d1e4a7443197784d10898ceb3\"",
+      "etag": "W/\"b1e504843ce2025aa99a27db4d1b3d7a815f08aa0a3fc9075c3fb92799131fee\"",
       "last_modified": "Sun, 09 Aug 2026 17:06:34 GMT"
     },
     "/repos/luohongk/Embodied-AI-Daily/releases?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\""
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
     },
     "/repos/luohongk/Embodied-AI-Daily/tags?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\"",
-      "last_modified": "Sun, 09 Aug 2026 17:06:41 GMT"
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 00:37:31 GMT"
+    },
+    "/repos/makerspet/oomwoo": {
+      "etag": "W/\"786e9f7e6e4a73ec5e9b77c3c7459dc32dc476c77040bd113e504b8b931616ce\"",
+      "last_modified": "Mon, 10 Aug 2026 23:02:40 GMT"
+    },
+    "/repos/makerspet/oomwoo/commits/main": {
+      "etag": "W/\"df15960771d40c852f84df7941addef5604d58535cf356f07f59ef18f207555c\"",
+      "last_modified": "Mon, 10 Aug 2026 13:06:17 GMT"
+    },
+    "/repos/makerspet/oomwoo/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/makerspet/oomwoo/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 23:02:40 GMT"
+    },
+    "/repos/mikel-brostrom/boxmot": {
+      "etag": "W/\"443625769049adc4fc60b1d43d4f71d99e831c34c901d937f2eb6f3d7afbf939\"",
+      "last_modified": "Mon, 10 Aug 2026 17:43:11 GMT"
+    },
+    "/repos/mikel-brostrom/boxmot/commits/master": {
+      "etag": "W/\"5c5a05403840b653208d224962bc91de6b7af1acca6f1fd2d2c2c04e10c97eb2\"",
+      "last_modified": "Mon, 13 Jul 2026 12:56:45 GMT"
+    },
+    "/repos/mikel-brostrom/boxmot/releases?page=1&per_page=100": {
+      "etag": "W/\"7bd4b37dfe08f56cf5ff736fce112193ab180a36edc2b2fde5b81e6730c75aca\""
+    },
+    "/repos/mikel-brostrom/boxmot/tags?page=1&per_page=100": {
+      "etag": "W/\"b964acb51e41e6def68d817767df6519423c05c88d5930d2574fab63334be0be\"",
+      "last_modified": "Mon, 10 Aug 2026 17:43:11 GMT"
     },
     "/repos/nerfstudio-project/gsplat": {
-      "etag": "W/\"bf41ced488c0e6a89de0d852b34851f6d164aea49d80a42e1f3e6fe580b357fa\"",
-      "last_modified": "Sun, 09 Aug 2026 20:54:42 GMT"
+      "etag": "W/\"ebe7799769e87069c995bc3108d9b47c28c5a8603bb340684d1efd624ef1db6c\"",
+      "last_modified": "Mon, 10 Aug 2026 22:47:36 GMT"
     },
     "/repos/nerfstudio-project/gsplat/commits/main": {
-      "etag": "W/\"eea36afa382900cb58fff276c763437285e956ee09a62cdd8a8a0e3266eca3df\"",
+      "etag": "W/\"650037ba4bed658c294f79641618efdbfe0e0cf89d7c101f6ac8b5a62f7a54a1\"",
       "last_modified": "Fri, 24 Jul 2026 11:53:54 GMT"
     },
     "/repos/nerfstudio-project/gsplat/releases?page=1&per_page=100": {
-      "etag": "W/\"888f13db4a500b54f531e73ff129a412196b1c5429026a577c79fd4e3a095ab0\""
+      "etag": "W/\"d1016ee741e5122c8c10871627a8f1212d7179808f1e2d13cf3ba022ea098877\""
     },
     "/repos/nerfstudio-project/gsplat/tags?page=1&per_page=100": {
-      "etag": "W/\"94ed55d19e68d6e633187d0d220c0a5e33cff925a092e32750877417c58ddc21\"",
-      "last_modified": "Sun, 09 Aug 2026 20:54:42 GMT"
+      "etag": "W/\"349e36fb1e690d9d890974c4a04744752df90343ec285427af84078bd40b96b2\"",
+      "last_modified": "Mon, 10 Aug 2026 22:47:36 GMT"
     },
     "/repos/nerfstudio-project/nerfstudio": {
-      "etag": "W/\"77a1f761655ca14c49e72fdab346978953de1f6359954972de80ef130869bb25\"",
-      "last_modified": "Sun, 09 Aug 2026 22:41:57 GMT"
+      "etag": "W/\"0c22272781022b63cda7cbe23a44752d2780f2bd3b2cd4f5365c0fd4f5622922\"",
+      "last_modified": "Mon, 10 Aug 2026 21:05:37 GMT"
     },
     "/repos/nerfstudio-project/nerfstudio/commits/main": {
-      "etag": "W/\"610077185a2346b5f62ece8d122d20bed72374306b22fcace773bd574724db51\"",
+      "etag": "W/\"a1cc1111e9bfd99628a75ca89ef59389dc1efbf7559fa280766ae488a64f4fa0\"",
       "last_modified": "Tue, 29 Jul 2025 02:28:48 GMT"
     },
     "/repos/nerfstudio-project/nerfstudio/releases?page=1&per_page=100": {
-      "etag": "W/\"5e0654a265104519ec60c219afcffe8a643e9ad89b925b318f727c7f10ce28d2\""
+      "etag": "W/\"c26d5aa86e766f08e9785553c1528554a5efd247f515a627dfe685ff9b58a1a5\""
     },
     "/repos/nerfstudio-project/nerfstudio/tags?page=1&per_page=100": {
-      "etag": "W/\"d0ae804026cc34861e3c98a1d3aa06459c6afb13af8acc0b99bbd9936b73465d\"",
-      "last_modified": "Sun, 09 Aug 2026 22:41:57 GMT"
+      "etag": "W/\"9dca3e01f2ecd3aed50a5cfb9b52b33952882e866ec5dbf770388e238de7977d\"",
+      "last_modified": "Mon, 10 Aug 2026 21:05:37 GMT"
+    },
+    "/repos/open-edge-platform/geti": {
+      "etag": "W/\"fed829b756f790ff2913a204f623acaba5ec268e35fc7d941e714ca1619c5c5f\"",
+      "last_modified": "Mon, 10 Aug 2026 17:16:54 GMT"
+    },
+    "/repos/open-edge-platform/geti/commits/develop": {
+      "etag": "W/\"2e64053d8388cdda6b8ea4989b67c1019413ba21a7b86513a90b2d636508edc2\"",
+      "last_modified": "Mon, 10 Aug 2026 16:46:53 GMT"
+    },
+    "/repos/open-edge-platform/geti/releases?page=1&per_page=100": {
+      "etag": "W/\"f8a880675321c597d228bd7c725e30d08648ef49e17918c0a45801cf8c9c2bfa\""
+    },
+    "/repos/open-edge-platform/geti/tags?page=1&per_page=100": {
+      "etag": "W/\"ca9da5ab8a6702ea0cfd642ea3d60464d5285f7a53e5ab4bf7ad3c5526ca797a\"",
+      "last_modified": "Mon, 10 Aug 2026 17:16:54 GMT"
+    },
+    "/repos/pierotofy/OpenSplat": {
+      "etag": "W/\"1d647652b174bf37e4349da0e09ee40cf097c6ce4d22266774a8e606a21bf5ca\"",
+      "last_modified": "Mon, 10 Aug 2026 18:04:50 GMT"
+    },
+    "/repos/pierotofy/OpenSplat/commits/main": {
+      "etag": "W/\"a5114b2017dc61ef091523534c294b279aae575b420f0b92fb4a21edc9bdb138\"",
+      "last_modified": "Mon, 10 Aug 2026 18:03:42 GMT"
+    },
+    "/repos/pierotofy/OpenSplat/releases?page=1&per_page=100": {
+      "etag": "W/\"93d28bba162c84ddeb4cde2da79214defe8b664835f0fe9403453ff473c9d685\""
+    },
+    "/repos/pierotofy/OpenSplat/tags?page=1&per_page=100": {
+      "etag": "W/\"f067f588e1aa72e991d29eff6e0591721d7a1af0a57baed659554e2949e25d90\"",
+      "last_modified": "Mon, 10 Aug 2026 18:04:50 GMT"
+    },
+    "/repos/pypose/pypose": {
+      "etag": "W/\"30642edbab155acf3b60df5ed75e3d4fdc3ad3249a4b4ec0865ba7cfe5e94f81\"",
+      "last_modified": "Sun, 09 Aug 2026 23:36:51 GMT"
+    },
+    "/repos/pypose/pypose/commits/main": {
+      "etag": "W/\"60f8cb3896cfe8bacdc3d1a3c2967b8afa46a2a1af17f103df80b73e575eddd8\"",
+      "last_modified": "Sun, 09 Aug 2026 23:36:47 GMT"
+    },
+    "/repos/pypose/pypose/releases?page=1&per_page=100": {
+      "etag": "W/\"714c75fb6d49eeb5bdb6e4692b7ba5197e7ea6be0ac1234c4e917dd11d062d92\""
+    },
+    "/repos/pypose/pypose/tags?page=1&per_page=100": {
+      "etag": "W/\"ef477fc46de4d0a364cae64394e17c1e467016d8c27c7e7cf4c56240171f8fb9\"",
+      "last_modified": "Sun, 09 Aug 2026 23:36:51 GMT"
+    },
+    "/repos/qubvel-org/segmentation_models.pytorch": {
+      "etag": "W/\"8de5fd3c421180fc0e01f1598e6000dbe72187f1fc4c034402797bab4f6bc01b\"",
+      "last_modified": "Mon, 10 Aug 2026 14:39:52 GMT"
+    },
+    "/repos/qubvel-org/segmentation_models.pytorch/commits/main": {
+      "etag": "W/\"1145737c9da8d975bdf5993ffdd2cf02a3732eec399479f4c43d6f05c072ea2a\"",
+      "last_modified": "Mon, 10 Aug 2026 07:43:09 GMT"
+    },
+    "/repos/qubvel-org/segmentation_models.pytorch/releases?page=1&per_page=100": {
+      "etag": "W/\"872ea5fe114cc556bf1bc5150decb611ae74f550d03416c70c26a8cbe71f7c77\""
+    },
+    "/repos/qubvel-org/segmentation_models.pytorch/tags?page=1&per_page=100": {
+      "etag": "W/\"01a6f72be890ddbf40cd5a3d456eb75fbb672a441e4051f82015b3173e8f8828\"",
+      "last_modified": "Mon, 10 Aug 2026 14:39:52 GMT"
     },
     "/repos/roboflow/rf-detr": {
-      "etag": "W/\"f2cdcb2586de72b0f16d9b186376371d7101602313e1fd8f9c827b46d552cffb\"",
-      "last_modified": "Sun, 09 Aug 2026 23:22:28 GMT"
+      "etag": "W/\"fa149058993bf9033f1465e5fcb421130c75a8da7fcb3c6ab34909b91f8842a3\"",
+      "last_modified": "Mon, 10 Aug 2026 23:25:57 GMT"
     },
     "/repos/roboflow/rf-detr/commits/develop": {
-      "etag": "W/\"91c2c29a0552cffc9df746f85c7d9d6ffc0ca6ccea12b79454aa83c1674a3641\"",
-      "last_modified": "Fri, 07 Aug 2026 22:11:26 GMT"
+      "etag": "W/\"439f348aa236f561f5943b67ac09220f3f2e48011ec236df9e63f550c99e6664\"",
+      "last_modified": "Mon, 10 Aug 2026 23:25:30 GMT"
     },
     "/repos/roboflow/rf-detr/releases?page=1&per_page=100": {
-      "etag": "W/\"244f7a668bf1679459f9d73bc795545dc1ecbe2e8fbf98238eda881dfd167884\""
+      "etag": "W/\"a2802a94e4a0dc8840a08ccac9e6befb63d1daf7628630c7244fbfd16883cb70\""
     },
     "/repos/roboflow/rf-detr/tags?page=1&per_page=100": {
-      "etag": "W/\"07994603d8547be077b7f78004573f2f7efd6831e7bfe51831d7fd4fd2e38aaf\"",
-      "last_modified": "Sun, 09 Aug 2026 23:22:28 GMT"
+      "etag": "W/\"8ef09fdf224f32e26535b779862659635ce5c2c6c02aef05bd99ba8a443c2ecb\"",
+      "last_modified": "Mon, 10 Aug 2026 23:25:57 GMT"
     },
     "/repos/roboflow/trackers": {
-      "etag": "W/\"e7527b7cea56def1fb0245e100f2a1f9283cab2530c7cde8a25e057d8eb903d0\"",
-      "last_modified": "Sun, 09 Aug 2026 06:13:41 GMT"
+      "etag": "W/\"3508b8f6f15696cc279860470cc342019af2b15581a909793d53debe32045c41\"",
+      "last_modified": "Mon, 10 Aug 2026 23:10:56 GMT"
     },
     "/repos/roboflow/trackers/commits/develop": {
-      "etag": "W/\"031e865c190c4d94b2fecabdb4712fb29ae74baed9700cda28657c0555742480\"",
-      "last_modified": "Sat, 08 Aug 2026 22:26:57 GMT"
+      "etag": "W/\"c35d100db77e6067db6d0e7f3a37498925b70ed328a3af9a659e377a857a5386\"",
+      "last_modified": "Mon, 10 Aug 2026 23:10:50 GMT"
     },
     "/repos/roboflow/trackers/releases?page=1&per_page=100": {
-      "etag": "W/\"6cdb9ce9a73c6ac6a7840323555ebe8e731843df0217dc1272446544fef28347\""
+      "etag": "W/\"c6ad80a4da46a61d580b4353a8c599f875892428e44ed2d7f89fd65ce46552ba\""
     },
     "/repos/roboflow/trackers/tags?page=1&per_page=100": {
-      "etag": "W/\"55c5c15de90a1040367637d6c6f3542ef847a1eb25394dc24dfe84744bc1d7dc\"",
-      "last_modified": "Sun, 09 Aug 2026 06:13:41 GMT"
+      "etag": "W/\"78208604a21fabc717d0332c169cef6dfc109f621dd8fcc310297b386a84ef14\"",
+      "last_modified": "Mon, 10 Aug 2026 23:10:56 GMT"
+    },
+    "/repos/tangwen-qian/DailyArXiv": {
+      "etag": "W/\"4e740d8a7a1b96c929efe56a908603769a31b8a5069661691ed9fec244ed8a04\"",
+      "last_modified": "Mon, 10 Aug 2026 17:27:16 GMT"
+    },
+    "/repos/tangwen-qian/DailyArXiv/commits/main": {
+      "etag": "W/\"4c2538a7cfcb114499c09f8d9a2f1fdc33511d42a1ff86fd57899f1e8d138614\"",
+      "last_modified": "Mon, 10 Aug 2026 17:26:54 GMT"
+    },
+    "/repos/tangwen-qian/DailyArXiv/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/tangwen-qian/DailyArXiv/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 17:27:16 GMT"
     },
     "/repos/ultralytics/ultralytics": {
-      "etag": "W/\"d705b246d1326aa1c680bf998f0d243cd88a3a19d3251c97dfba7b12750a4351\"",
-      "last_modified": "Sun, 09 Aug 2026 21:02:35 GMT"
+      "etag": "W/\"1acd3c6b530e67e805a18605d3673267bd40bb226e4c89c1a963b0dd6c8edccb\"",
+      "last_modified": "Mon, 10 Aug 2026 23:35:46 GMT"
     },
     "/repos/ultralytics/ultralytics/commits/main": {
-      "etag": "W/\"67b865288dc738bf5c75cf39bf30acd94eef5f116a6a3921778a40764292b062\"",
-      "last_modified": "Sun, 09 Aug 2026 18:23:31 GMT"
+      "etag": "W/\"3d6f253491cda74985623396af6d35baf08c35533c6a92fd8a3e8d3a724ee062\"",
+      "last_modified": "Mon, 10 Aug 2026 23:35:28 GMT"
     },
     "/repos/ultralytics/ultralytics/releases?page=1&per_page=100": {
-      "etag": "W/\"34e2a15734076cb231a83756d7195118df6060ace42b9c55ebc1c78472315a5c\""
+      "etag": "W/\"0c7a006a11506edb339598ad4856ffd0ae6fa3eef7964ea3c8dc90e8f04182e5\""
     },
     "/repos/ultralytics/ultralytics/tags?page=1&per_page=100": {
-      "etag": "W/\"c2b4bfc85fd92c822147b5f284d81dd299f863db3f3b99a4c8457600bad31d5e\"",
-      "last_modified": "Sun, 09 Aug 2026 21:02:35 GMT"
+      "etag": "W/\"3fe1114a52704d354391a3cc8f258ed44eb55458a6cd12dca1fed27e4e3e7caa\"",
+      "last_modified": "Mon, 10 Aug 2026 23:35:46 GMT"
+    },
+    "/repos/wangqiannudt/nerf-arxiv-daily": {
+      "etag": "W/\"cb93609fa6ee0664f0c4e334011608a53907b6471e672a7cecb13f02f02cf8b8\"",
+      "last_modified": "Mon, 10 Aug 2026 01:16:09 GMT"
+    },
+    "/repos/wangqiannudt/nerf-arxiv-daily/commits/main": {
+      "etag": "W/\"e994e4423cf9d59063bb53e2436d06bf6406a77fd235706579926fca1063ee6f\"",
+      "last_modified": "Mon, 10 Aug 2026 01:16:01 GMT"
+    },
+    "/repos/wangqiannudt/nerf-arxiv-daily/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/wangqiannudt/nerf-arxiv-daily/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 01:16:09 GMT"
     },
     "/repos/yuhaozhang7/NGD-SLAM": {
-      "etag": "W/\"827e43104f883265ccf42839824692fd7c2d194dd2f68026e151479763f8fbba\"",
+      "etag": "W/\"b019573c7619b5e5a9154baf748f6d264fab74816bb49fbf7060aa08af69e6c1\"",
       "last_modified": "Sat, 08 Aug 2026 13:14:22 GMT"
     },
     "/repos/yuhaozhang7/NGD-SLAM/commits/main": {
-      "etag": "W/\"cc643093e24e41772c56666255514dacbd438130d412bd193d69de76edf1be49\"",
+      "etag": "W/\"95a25799c9e97ea1f8e43e468cf87862945a058dbd659c643ee90405ce968e6d\"",
       "last_modified": "Sat, 08 Aug 2026 13:14:11 GMT"
     },
     "/repos/yuhaozhang7/NGD-SLAM/releases?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\""
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
     },
     "/repos/yuhaozhang7/NGD-SLAM/tags?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\"",
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
       "last_modified": "Sat, 08 Aug 2026 13:14:22 GMT"
     },
     "/repos/yyyanbj/arxiv-daily": {
-      "etag": "W/\"ca43781e40cd7b91ea8cf19058adbcfdb224602c626b75ee9643c38956c2abd5\"",
-      "last_modified": "Sun, 09 Aug 2026 13:37:57 GMT"
+      "etag": "W/\"ea7f2b01e5d3f7b1b184c5e7b5742376f3ea6d2fa73778eba345a241819ae36d\"",
+      "last_modified": "Mon, 10 Aug 2026 13:06:16 GMT"
     },
     "/repos/yyyanbj/arxiv-daily/commits/main": {
-      "etag": "W/\"42180af10018a29a51d3f3d5d3e1d70493df541de14bb2533c9b93700c5a161f\"",
-      "last_modified": "Sun, 09 Aug 2026 13:37:45 GMT"
+      "etag": "W/\"f0873e3adee9cb8d5ab026d471f94a7f5c74944277649d330558bd3c591308e4\"",
+      "last_modified": "Mon, 10 Aug 2026 13:04:33 GMT"
     },
     "/repos/yyyanbj/arxiv-daily/releases?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\""
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
     },
     "/repos/yyyanbj/arxiv-daily/tags?page=1&per_page=100": {
-      "etag": "\"538931ceb409b700d3172b4e576461a115c076a4ce012466d15838924bc96901\"",
-      "last_modified": "Sun, 09 Aug 2026 13:37:57 GMT"
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 13:06:16 GMT"
+    },
+    "/repos/zezhishao/DailyArXiv": {
+      "etag": "W/\"0d3d9f85102439aedefc895fbdbe88997beb081b05e81ae00f3533106016bc85\"",
+      "last_modified": "Mon, 10 Aug 2026 17:31:18 GMT"
+    },
+    "/repos/zezhishao/DailyArXiv/commits/master": {
+      "etag": "W/\"9c22fd0db836de0b8c07620db86882ffe56139c90a7c89b45a6ad5017ef6f7a2\"",
+      "last_modified": "Mon, 10 Aug 2026 17:27:48 GMT"
+    },
+    "/repos/zezhishao/DailyArXiv/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/zezhishao/DailyArXiv/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 17:31:18 GMT"
+    },
+    "/repos/zju3dv/habitat-gs": {
+      "etag": "W/\"a0cc7d9adf969d39d57c87747e48c274088bf969e65ba926edb75d8c2ccc0bd6\"",
+      "last_modified": "Mon, 10 Aug 2026 10:30:44 GMT"
+    },
+    "/repos/zju3dv/habitat-gs/commits/main": {
+      "etag": "W/\"fb6f37b06a748d1ccfc405438c782852c1553b8d08b3a596c766247b3fb8fcca\"",
+      "last_modified": "Sun, 09 Aug 2026 19:57:19 GMT"
+    },
+    "/repos/zju3dv/habitat-gs/releases?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\""
+    },
+    "/repos/zju3dv/habitat-gs/tags?page=1&per_page=100": {
+      "etag": "\"947bf534db002484ad9b38d764815cbd6b6e1fbdd13ff0e22a0b53f47d7e8dd3\"",
+      "last_modified": "Mon, 10 Aug 2026 10:30:44 GMT"
     }
   },
-  "last_run_completed_at": "2026-08-09T23:39:19.909075Z",
+  "last_run_completed_at": "2026-08-10T23:42:55.050291Z",
   "repositories": {
     "1123023877": {
       "configured_names": [
         "Tencent/YOLO-Master"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "f0dc3e92243e060c27b894e402f2bc25dc0ff9b6",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "9aeb6e579128cdf3f1b1c0c610ac34b1fa206ffb",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "367206603",
@@ -399,11 +774,11 @@
           "YOLO-Master-v26.08",
           "YOLO-Master-v26.02"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2025-12-26T03:38:21Z",
@@ -418,8 +793,8 @@
         "id": 1123023877,
         "name": "YOLO-Master",
         "owner_login": "Tencent",
-        "pushed_at": "2026-08-08T13:56:36Z",
-        "stars": 615,
+        "pushed_at": "2026-08-10T08:26:20Z",
+        "stars": 625,
         "topics": [
           "classification",
           "detection",
@@ -427,7 +802,695 @@
           "segmentation",
           "yolo"
         ],
-        "updated_at": "2026-08-08T15:18:53Z",
+        "updated_at": "2026-08-10T19:32:46Z",
+        "visibility": "public"
+      }
+    },
+    "1137729039": {
+      "configured_names": [
+        "Scottcjn/ram-coffers"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "8ba45a6e96f0a1c696abd39c05f13e63cac05e9f",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2026-01-19T18:53:11Z",
+        "default_branch": "main",
+        "description": "NUMA-distributed weight banking for LLM inference on IBM POWER8. 147 t/s (8.8x stock). Part of the Proof of Physical AI stack.",
+        "disabled": false,
+        "fork": false,
+        "forks": 48,
+        "full_name": "Scottcjn/ram-coffers",
+        "homepage": "https://rustchain.org",
+        "html_url": "https://github.com/Scottcjn/ram-coffers",
+        "id": 1137729039,
+        "name": "ram-coffers",
+        "owner_login": "Scottcjn",
+        "pushed_at": "2026-08-10T17:58:17Z",
+        "stars": 156,
+        "topics": [
+          "ai-inference",
+          "depin",
+          "hebbian",
+          "llama-cpp",
+          "llm",
+          "llm-inference",
+          "numa",
+          "power8",
+          "powerpc",
+          "ppc64le",
+          "proof-of-physical-ai",
+          "transformer",
+          "vec-perm"
+        ],
+        "updated_at": "2026-08-10T17:59:16Z",
+        "visibility": "public"
+      }
+    },
+    "1165920994": {
+      "configured_names": [
+        "SPA-junghokim/SafeDrive"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "00710ec6be3c55ed00aaa350efc27ba591a40840",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2026-02-24T17:29:05Z",
+        "default_branch": "main",
+        "description": "[CVPR 2026 Highlight] SafeDrive: Fine-Grained Safety Reasoning for End-to-End Driving in a Sparse World",
+        "disabled": false,
+        "fork": false,
+        "forks": 0,
+        "full_name": "SPA-junghokim/SafeDrive",
+        "homepage": "https://arxiv.org/abs/2602.18887",
+        "html_url": "https://github.com/SPA-junghokim/SafeDrive",
+        "id": 1165920994,
+        "name": "SafeDrive",
+        "owner_login": "SPA-junghokim",
+        "pushed_at": "2026-08-09T20:31:11Z",
+        "stars": 51,
+        "topics": [],
+        "updated_at": "2026-08-10T05:40:26Z",
+        "visibility": "public"
+      }
+    },
+    "1183158552": {
+      "configured_names": [
+        "Allenxinn/AgentVLN"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "78afddce726a865598cf91ebb805bbddd012be92",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2026-03-16T10:30:19Z",
+        "default_branch": "main",
+        "description": null,
+        "disabled": false,
+        "fork": false,
+        "forks": 4,
+        "full_name": "Allenxinn/AgentVLN",
+        "homepage": null,
+        "html_url": "https://github.com/Allenxinn/AgentVLN",
+        "id": 1183158552,
+        "name": "AgentVLN",
+        "owner_login": "Allenxinn",
+        "pushed_at": "2026-08-09T14:49:37Z",
+        "stars": 188,
+        "topics": [],
+        "updated_at": "2026-08-10T06:53:03Z",
+        "visibility": "public"
+      }
+    },
+    "1210395640": {
+      "configured_names": [
+        "zju3dv/habitat-gs"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "a33ae7e692e5d039ee9031e1bc75c486f97a4eab",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2026-04-14T11:26:38Z",
+        "default_branch": "main",
+        "description": "[ECCV 2026] Habitat-GS: A High-Fidelity Navigation Simulator with Dynamic Gaussian Splatting",
+        "disabled": false,
+        "fork": false,
+        "forks": 12,
+        "full_name": "zju3dv/habitat-gs",
+        "homepage": "https://zju3dv.github.io/habitat-gs/",
+        "html_url": "https://github.com/zju3dv/habitat-gs",
+        "id": 1210395640,
+        "name": "habitat-gs",
+        "owner_login": "zju3dv",
+        "pushed_at": "2026-08-09T19:57:21Z",
+        "stars": 269,
+        "topics": [
+          "computer-vision",
+          "eccv2026",
+          "embodied-ai",
+          "embodied-navigation",
+          "gaussian-avatar",
+          "gaussian-splatting",
+          "navigation",
+          "robotics",
+          "simulator",
+          "vln",
+          "vln-ce"
+        ],
+        "updated_at": "2026-08-10T10:30:44Z",
+        "visibility": "public"
+      }
+    },
+    "1264722786": {
+      "configured_names": [
+        "makerspet/oomwoo"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "3f11291c4a34159c60e26f48df2ff5228365c6ec",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2026-06-10T06:03:33Z",
+        "default_branch": "main",
+        "description": "Open-source vacuum robot cleaner",
+        "disabled": false,
+        "fork": false,
+        "forks": 398,
+        "full_name": "makerspet/oomwoo",
+        "homepage": "",
+        "html_url": "https://github.com/makerspet/oomwoo",
+        "id": 1264722786,
+        "name": "oomwoo",
+        "owner_login": "makerspet",
+        "pushed_at": "2026-08-10T13:06:17Z",
+        "stars": 8407,
+        "topics": [
+          "3d-printing",
+          "arduino",
+          "diy-electronics",
+          "diy-project",
+          "esp32",
+          "esp32-arduino",
+          "home-assistant",
+          "lidar",
+          "lidar-slam",
+          "raspberry-pi",
+          "ros2",
+          "slam",
+          "vacuum-cleaner",
+          "vacuum-robot"
+        ],
+        "updated_at": "2026-08-10T23:02:40Z",
+        "visibility": "public"
+      }
+    },
+    "1301140808": {
+      "configured_names": [
+        "img2threejs/img2threejs"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "d6673386f89673a58736f8d398dd16ece67874f5",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "366178567",
+          "360020336",
+          "358495507",
+          "357403576"
+        ],
+        "seen_tags": [
+          "v1.5-beta.0",
+          "v1.5-beta",
+          "v1.4.3",
+          "v1.4.0",
+          "v1.3",
+          "v1.0"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2026-07-15T02:58:39Z",
+        "default_branch": "main",
+        "description": "Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.",
+        "disabled": false,
+        "fork": false,
+        "forks": 798,
+        "full_name": "img2threejs/img2threejs",
+        "homepage": "https://img2threejs.github.io/img2threejs-showcase/",
+        "html_url": "https://github.com/img2threejs/img2threejs",
+        "id": 1301140808,
+        "name": "img2threejs",
+        "owner_login": "img2threejs",
+        "pushed_at": "2026-08-10T08:31:14Z",
+        "stars": 10561,
+        "topics": [
+          "3d",
+          "ai-agents",
+          "claude-code",
+          "computer-graphics",
+          "generative",
+          "image-to-3d",
+          "procedural-generation",
+          "threejs",
+          "typescript",
+          "webgl"
+        ],
+        "updated_at": "2026-08-10T23:40:15Z",
+        "visibility": "public"
+      }
+    },
+    "1317515426": {
+      "configured_names": [
+        "Pan-Chera/Multi-Agent-CAD"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "c8951141fd38876753ce0fc81f02b80ae19150c1",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "364753283"
+        ],
+        "seen_tags": [
+          "ui-demo-v1"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2026-07-30T17:19:26Z",
+        "default_branch": "main",
+        "description": "MAC (Multi-Agent CAD): A decoupled multi-agent framework for text-to-CAD generation via constrained test-time compute",
+        "disabled": false,
+        "fork": false,
+        "forks": 60,
+        "full_name": "Pan-Chera/Multi-Agent-CAD",
+        "homepage": null,
+        "html_url": "https://github.com/Pan-Chera/Multi-Agent-CAD",
+        "id": 1317515426,
+        "name": "Multi-Agent-CAD",
+        "owner_login": "Pan-Chera",
+        "pushed_at": "2026-08-10T11:08:08Z",
+        "stars": 684,
+        "topics": [
+          "3d-modeling",
+          "3d-printing",
+          "agent-pipeline",
+          "aider",
+          "build123d",
+          "cad",
+          "generative-design",
+          "langgraph",
+          "llm",
+          "llm-agent",
+          "mechanical-engineering",
+          "multi-agent",
+          "opencascade",
+          "qwen",
+          "step",
+          "step-file",
+          "text-to-3d",
+          "text-to-cad"
+        ],
+        "updated_at": "2026-08-10T23:24:22Z",
+        "visibility": "public"
+      }
+    },
+    "154843614": {
+      "configured_names": [
+        "open-edge-platform/geti"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "95046db489968c9324f3c98f551a5e642efa85f6",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "340926442",
+          "254000371",
+          "240580523",
+          "231095568",
+          "229741954",
+          "219474734",
+          "218011936",
+          "214511675",
+          "213965753",
+          "205717371",
+          "201989385",
+          "190915107",
+          "189419730",
+          "185895547",
+          "184377745",
+          "182823744",
+          "181868040",
+          "181610153",
+          "181394058",
+          "180408619",
+          "180376683",
+          "179964389",
+          "179735151",
+          "179539957",
+          "178363382",
+          "176512981",
+          "176025706",
+          "174869069",
+          "174233612",
+          "171584295",
+          "171226900",
+          "167038316",
+          "166450179",
+          "165132777",
+          "160025836",
+          "159163259",
+          "157909992",
+          "157021297",
+          "149889653",
+          "147831560",
+          "143286371",
+          "135076236",
+          "134849987",
+          "126360437",
+          "124805042",
+          "124749470",
+          "124562427",
+          "122156278",
+          "121624132",
+          "120370197",
+          "120206253",
+          "117938751",
+          "114768956",
+          "113595433",
+          "113064453",
+          "112932605",
+          "111791853",
+          "111736624",
+          "111583399",
+          "111418858",
+          "105852353",
+          "105848323",
+          "104359953",
+          "104128634",
+          "100274643",
+          "98052625",
+          "97426605",
+          "97107671",
+          "95932372",
+          "93577493",
+          "90670627",
+          "86506306",
+          "83098423",
+          "83098729",
+          "66451188",
+          "59002622",
+          "56092906"
+        ],
+        "seen_tags": [
+          "v1.0.1",
+          "v1.0.0",
+          "v0.5.0",
+          "v0.5.0-rc2",
+          "v0.5.0-rc1",
+          "v0.4.0-geti1.1.0",
+          "v0.3.1-geti1.0.0",
+          "v0.3.0-sc1.2",
+          "v0.2.0",
+          "v0.2.0-sc1.1",
+          "v0.1.1",
+          "v0.1.0",
+          "nightly-2026.08.04",
+          "nightly-2026.06.19",
+          "nightly-2026.06.17",
+          "lib/v0.1.3",
+          "lib/v0.1.2",
+          "fruits_and_vegetables_dataset",
+          "app/v3.1.0rc4",
+          "app/v3.1.0rc3",
+          "app/v3.1.0rc2",
+          "app/v3.1.0rc1",
+          "app/v3.1.0rc0",
+          "app/v3.0.0",
+          "app/v3.0.0rc5",
+          "app/v3.0.0rc4",
+          "app/v3.0.0rc3",
+          "app/v3.0.0rc2",
+          "app/v3.0.0rc1",
+          "app/v3.0.0rc0",
+          "2.6.0",
+          "2.5.0",
+          "2.4.6",
+          "2.4.5",
+          "2.4.4",
+          "2.4.3",
+          "2.4.2",
+          "2.4.1",
+          "2.4.0",
+          "2.3.0",
+          "2.2.2",
+          "2.2.1",
+          "2.2.0",
+          "2.2.0rc14",
+          "2.2.0rc13",
+          "2.2.0rc12",
+          "2.2.0rc11",
+          "2.2.0rc10",
+          "2.2.0rc9",
+          "2.2.0rc8",
+          "2.2.0rc7",
+          "2.2.0rc6",
+          "2.2.0rc5",
+          "2.2.0rc4",
+          "2.2.0rc3",
+          "2.2.0rc2",
+          "2.2.0rc1",
+          "2.2.0rc0",
+          "2.2.0.dev55",
+          "2.2.0.dev11",
+          "2.2.0.dev10",
+          "2.2.0.dev9",
+          "2.2.0.dev8",
+          "2.2.0.dev7",
+          "2.2.0.dev6",
+          "2.2.0.dev5",
+          "2.1.0",
+          "2.0.0",
+          "1.6.6",
+          "1.6.5",
+          "1.6.4",
+          "1.6.3",
+          "1.6.3rc0",
+          "1.6.2",
+          "1.6.1",
+          "1.6.1rc7",
+          "1.6.1rc6",
+          "1.6.1rc5",
+          "1.6.1rc4",
+          "1.6.1rc3",
+          "1.6.1rc2",
+          "1.6.1rc1",
+          "1.6.0",
+          "1.6.0rc0",
+          "1.5.2",
+          "1.5.0",
+          "1.5.0rc1",
+          "1.4.5",
+          "1.4.4",
+          "1.4.4rc1",
+          "1.4.3",
+          "1.4.3rc1",
+          "1.4.2",
+          "1.4.2rc5",
+          "1.4.2rc4",
+          "1.4.2rc3",
+          "1.4.2rc2",
+          "1.4.2rc1",
+          "1.4.1",
+          "1.4.0"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2018-10-26T14:02:29Z",
+        "default_branch": "develop",
+        "description": "Build computer vision models in a fraction of the time and with less data.",
+        "disabled": false,
+        "fork": false,
+        "forks": 473,
+        "full_name": "open-edge-platform/geti",
+        "homepage": "https://docs.geti.intel.com",
+        "html_url": "https://github.com/open-edge-platform/geti",
+        "id": 154843614,
+        "name": "geti",
+        "owner_login": "open-edge-platform",
+        "pushed_at": "2026-08-10T19:48:19Z",
+        "stars": 1282,
+        "topics": [
+          "automl",
+          "computer-vision",
+          "deep-learning",
+          "geti",
+          "image-classification",
+          "image-segmentation",
+          "incremental-learning",
+          "machine-learning",
+          "neural-networks-compression",
+          "object-detection",
+          "openvino",
+          "pytorch",
+          "quantization",
+          "self-supervised-learning",
+          "semi-supervised-learning",
+          "transfer-learning"
+        ],
+        "updated_at": "2026-08-10T17:16:54Z",
+        "visibility": "public"
+      }
+    },
+    "156289428": {
+      "configured_names": [
+        "MOLAorg/mola"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "37de8dbeb730f4e754c1c85b0688e24a1928f473",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [
+          "v1_rss2019_kitti",
+          "3.1.1",
+          "3.1.0",
+          "3.0.0",
+          "2.9.0",
+          "2.8.0",
+          "2.7.0",
+          "2.6.1",
+          "2.6.0",
+          "2.5.0",
+          "2.4.0",
+          "2.3.0",
+          "2.2.1",
+          "2.2.0",
+          "2.1.0",
+          "2.0.0",
+          "1.9.1",
+          "1.9.0",
+          "1.8.1",
+          "1.8.0",
+          "1.7.0",
+          "1.6.4",
+          "1.6.3",
+          "1.6.2",
+          "1.6.1",
+          "1.6.0",
+          "1.5.1",
+          "1.5.0",
+          "1.4.1",
+          "1.4.0",
+          "1.3.0",
+          "1.2.1",
+          "1.2.0",
+          "1.1.3",
+          "1.1.2",
+          "1.1.1",
+          "1.1.0",
+          "1.0.8",
+          "1.0.7",
+          "1.0.6",
+          "1.0.5",
+          "1.0.4",
+          "1.0.3",
+          "1.0.2",
+          "1.0.1",
+          "1.0.0",
+          "0.2.2",
+          "0.2.1",
+          "0.2.0"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2018-11-05T22:04:03Z",
+        "default_branch": "develop",
+        "description": "A Modular Optimization framework for Localization and mApping (MOLA)",
+        "disabled": false,
+        "fork": false,
+        "forks": 145,
+        "full_name": "MOLAorg/mola",
+        "homepage": "https://docs.mola-slam.org/latest/",
+        "html_url": "https://github.com/MOLAorg/mola",
+        "id": 156289428,
+        "name": "mola",
+        "owner_login": "MOLAorg",
+        "pushed_at": "2026-08-10T22:24:47Z",
+        "stars": 988,
+        "topics": [
+          "computer-vision",
+          "cxx",
+          "cxx17",
+          "datasets",
+          "graph-slam",
+          "lidar",
+          "lidar-point-cloud",
+          "localization",
+          "mobile-robots",
+          "slam",
+          "toolkit",
+          "visual-slam"
+        ],
+        "updated_at": "2026-08-10T22:02:21Z",
         "visibility": "public"
       }
     },
@@ -436,10 +1499,10 @@
         "blakeblackshear/frigate"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "2599795ab0fb2c27f3dd7f9ff6f4a9eb857c4c43",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "0735a8ac756076d87963c64b7594ad8c9806c5bf",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "360119879",
@@ -627,11 +1690,11 @@
           "v0.9.0",
           "v0.9.0-rc6"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2019-01-26T13:52:38Z",
@@ -639,15 +1702,15 @@
         "description": "NVR with realtime local object detection for IP cameras",
         "disabled": false,
         "fork": false,
-        "forks": 3470,
+        "forks": 3475,
         "full_name": "blakeblackshear/frigate",
         "homepage": "https://frigate.video",
         "html_url": "https://github.com/blakeblackshear/frigate",
         "id": 167694194,
         "name": "frigate",
         "owner_login": "blakeblackshear",
-        "pushed_at": "2026-08-08T17:12:16Z",
-        "stars": 34947,
+        "pushed_at": "2026-08-10T21:54:44Z",
+        "stars": 34985,
         "topics": [
           "ai",
           "camera",
@@ -662,7 +1725,99 @@
           "rtsp",
           "tensorflow"
         ],
-        "updated_at": "2026-08-09T23:18:27Z",
+        "updated_at": "2026-08-10T23:11:42Z",
+        "visibility": "public"
+      }
+    },
+    "173333035": {
+      "configured_names": [
+        "qubvel-org/segmentation_models.pytorch"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "1f887330cd1f7a450fde20619fe176f13ce5f6ff",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "213057431",
+          "193726330",
+          "171667941",
+          "105003555",
+          "88205255",
+          "84438727",
+          "73149738",
+          "53627345",
+          "45701120",
+          "35201702",
+          "31906950",
+          "31843092",
+          "22075475",
+          "20328546",
+          "20101039"
+        ],
+        "seen_tags": [
+          "v0.5.0",
+          "v0.4.0",
+          "v0.3.4",
+          "v0.3.3",
+          "v0.3.2",
+          "v0.3.1",
+          "v0.3.0",
+          "v0.2.1",
+          "v0.2.0",
+          "v0.1.3",
+          "v0.1.2",
+          "v0.1.1",
+          "v0.0.3",
+          "v0.0.2",
+          "v0.0.1",
+          "V0.1.0"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2019-03-01T16:21:21Z",
+        "default_branch": "main",
+        "description": "Semantic segmentation models with 500+ pretrained convolutional and transformer-based backbones.",
+        "disabled": false,
+        "fork": false,
+        "forks": 1839,
+        "full_name": "qubvel-org/segmentation_models.pytorch",
+        "homepage": "https://smp.readthedocs.io/",
+        "html_url": "https://github.com/qubvel-org/segmentation_models.pytorch",
+        "id": 173333035,
+        "name": "segmentation_models.pytorch",
+        "owner_login": "qubvel-org",
+        "pushed_at": "2026-08-10T07:43:17Z",
+        "stars": 11688,
+        "topics": [
+          "computer-vision",
+          "deeplab-v3-plus",
+          "deeplabv3",
+          "dpt",
+          "fpn",
+          "image-processing",
+          "image-segmentation",
+          "imagenet",
+          "models",
+          "pretrained-weights",
+          "pspnet",
+          "pytorch",
+          "segformer",
+          "segmentation",
+          "segmentation-models",
+          "semantic-segmentation",
+          "transformers",
+          "unet",
+          "unet-pytorch",
+          "unetplusplus"
+        ],
+        "updated_at": "2026-08-10T14:39:52Z",
         "visibility": "public"
       }
     },
@@ -671,10 +1826,10 @@
         "introlab/rtabmap"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "338e142e58711a5c9abda5fdc663e54e98681345",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "df52523a0cf341b0fa3a01ae34f4c6960c3c708c",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "346588178",
@@ -816,11 +1971,11 @@
           "0.19.7",
           "0.19.3"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2014-08-11T18:38:14Z",
@@ -828,15 +1983,15 @@
         "description": "RTAB-Map library and standalone application",
         "disabled": false,
         "fork": false,
-        "forks": 951,
+        "forks": 950,
         "full_name": "introlab/rtabmap",
         "homepage": "https://introlab.github.io/rtabmap",
         "html_url": "https://github.com/introlab/rtabmap",
         "id": 22850110,
         "name": "rtabmap",
         "owner_login": "introlab",
-        "pushed_at": "2026-08-09T07:13:22Z",
-        "stars": 3939,
+        "pushed_at": "2026-08-10T00:39:25Z",
+        "stars": 3944,
         "topics": [
           "android",
           "ios",
@@ -849,7 +2004,7 @@
           "scanning",
           "slam"
         ],
-        "updated_at": "2026-08-09T21:25:51Z",
+        "updated_at": "2026-08-10T17:04:55Z",
         "visibility": "public"
       }
     },
@@ -858,10 +2013,10 @@
         "colmap/colmap"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "5d968cf38aa2574fd284b0dc86c3d58d124940b3",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "3ae7d87e6640ee2f5373c312bed22cd89fa660df",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "359707819",
@@ -945,11 +2100,11 @@
           "1.1",
           "1.0"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2014-08-16T00:55:31Z",
@@ -957,15 +2112,15 @@
         "description": "COLMAP - Structure-from-Motion and Multi-View Stereo",
         "disabled": false,
         "fork": false,
-        "forks": 2109,
+        "forks": 2110,
         "full_name": "colmap/colmap",
         "homepage": "https://colmap.github.io/",
         "html_url": "https://github.com/colmap/colmap",
         "id": 23007417,
         "name": "colmap",
         "owner_login": "colmap",
-        "pushed_at": "2026-08-08T18:28:59Z",
-        "stars": 12425,
+        "pushed_at": "2026-08-10T13:40:39Z",
+        "stars": 12437,
         "topics": [
           "computer-vision",
           "geometry",
@@ -973,7 +2128,7 @@
           "reconstruction",
           "structure-from-motion"
         ],
-        "updated_at": "2026-08-09T07:32:07Z",
+        "updated_at": "2026-08-10T22:55:09Z",
         "visibility": "public"
       }
     },
@@ -982,10 +2137,10 @@
         "AaronFeng753/Waifu2x-Extension-GUI"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "fa208d05bc4bbeb272a8ad6e2752931f1cbe0e01",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "363719249",
@@ -1191,11 +2346,11 @@
           "v3.98.01",
           "v3.97.32-beta"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2020-01-20T10:01:28Z",
@@ -1211,7 +2366,7 @@
         "name": "Waifu2x-Extension-GUI",
         "owner_login": "AaronFeng753",
         "pushed_at": "2026-08-08T14:50:38Z",
-        "stars": 16868,
+        "stars": 16869,
         "topics": [
           "anime",
           "anime4k",
@@ -1234,7 +2389,265 @@
           "waifu2x",
           "waifu2x-ncnn-vulkan"
         ],
-        "updated_at": "2026-08-09T20:25:38Z",
+        "updated_at": "2026-08-10T13:07:02Z",
+        "visibility": "public"
+      }
+    },
+    "275118967": {
+      "configured_names": [
+        "mikel-brostrom/boxmot"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "b23bf5f453d57c3fa3243e6648af6ea6738575b4",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "352112302",
+          "333875835",
+          "332015099",
+          "320424809",
+          "309029662",
+          "303371736",
+          "281989409",
+          "280477138",
+          "278046260",
+          "274387457",
+          "274193752",
+          "272810427",
+          "272675115",
+          "272594629",
+          "272582745",
+          "272471876",
+          "272067500",
+          "271613750",
+          "261301159",
+          "254630071",
+          "253757770",
+          "253756531",
+          "253752345",
+          "252549925",
+          "252531001",
+          "250800929",
+          "234693895",
+          "234628358",
+          "234587863",
+          "234282172",
+          "230410165",
+          "229703346",
+          "229501740",
+          "229211552",
+          "228166160",
+          "228145429",
+          "228031109",
+          "228024033",
+          "225339876",
+          "224944538",
+          "224868602",
+          "224129254",
+          "224071363",
+          "223312552",
+          "223306429",
+          "223114934",
+          "222908582",
+          "220851335",
+          "220815774",
+          "220372074",
+          "219189931",
+          "212062760",
+          "210462714",
+          "210447622",
+          "209699558",
+          "207406651",
+          "205502105",
+          "205029003",
+          "200574333",
+          "197774313",
+          "196828467",
+          "186818360",
+          "180898427",
+          "180888331",
+          "177747310",
+          "177604168",
+          "177118571",
+          "176582344",
+          "175775960",
+          "175176108",
+          "173963487",
+          "173729080",
+          "173574456",
+          "173151497",
+          "171515423",
+          "168766223",
+          "168396885",
+          "166591260",
+          "160349920",
+          "155392165",
+          "154901324",
+          "154612937",
+          "150163046",
+          "149570153",
+          "147885879",
+          "147663210",
+          "147575305",
+          "147461529",
+          "145883236",
+          "145319844",
+          "145202353",
+          "145145308",
+          "144514975",
+          "137334597",
+          "136896172",
+          "136807329",
+          "136690111",
+          "133953729",
+          "129168966",
+          "129103349"
+        ],
+        "seen_tags": [
+          "v22.0.0",
+          "v21.0.0",
+          "v20.0.0",
+          "v19.0.0",
+          "v18.0.0",
+          "v17.0.0",
+          "v16.0.11",
+          "v16.0.10",
+          "v16.0.9",
+          "v16.0.8",
+          "v16.0.7",
+          "v16.0.6",
+          "v16.0.5",
+          "v16.0.4",
+          "v16.0.3",
+          "v16.0.2",
+          "v16.0.1",
+          "v16.0.0",
+          "v15.1.0",
+          "v15.0.10",
+          "v15.0.9",
+          "v15.0.8",
+          "v15.0.7",
+          "v15.0.6",
+          "v15.0.5",
+          "v15.0.4",
+          "v15.0.3",
+          "v15.0.2",
+          "v15.0.1",
+          "v15.0.0",
+          "v14.0.0",
+          "v13.0.17",
+          "v13.0.16",
+          "v13.0.15",
+          "v13.0.14",
+          "v13.0.13",
+          "v13.0.12",
+          "v13.0.11",
+          "v13.0.10",
+          "v13.0.9",
+          "v13.0.8",
+          "v13.0.7",
+          "v13.0.6",
+          "v13.0.5",
+          "v13.0.4",
+          "v13.0.3",
+          "v13.0.2",
+          "v13.0.1",
+          "v13.0.0",
+          "v12.0.10",
+          "v12.0.9",
+          "v12.0.8",
+          "v12.0.7",
+          "v12.0.6",
+          "v12.0.5",
+          "v12.0.4",
+          "v12.0.3",
+          "v12.0.2",
+          "v12.0.1",
+          "v12.0.0",
+          "v11.0.9",
+          "v11.0.8",
+          "v11.0.7",
+          "v11.0.6",
+          "v11.0.5",
+          "v11.0.4",
+          "v11.0.3",
+          "v11.0.2",
+          "v11.0.1",
+          "v11.0.0",
+          "v.10.1",
+          "v10.0.84",
+          "v10.0.83",
+          "v10.0.82",
+          "v10.0.81",
+          "v10.0.80",
+          "v10.0.79",
+          "v10.0.78",
+          "v10.0.77",
+          "v10.0.76",
+          "v10.0.75",
+          "v10.0.74",
+          "v10.0.73",
+          "v10.0.72",
+          "v10.0.69",
+          "v10.0.68",
+          "v10.0.67",
+          "v10.0.66",
+          "v10.0.65",
+          "v10.0.64",
+          "v10.0.63",
+          "v10.0.62",
+          "v10.0.60",
+          "v10.0.59",
+          "v10.0.58",
+          "v10.0.57",
+          "v10.0.56",
+          "v10.0.55",
+          "v{10.0.54}",
+          "v10.0.52"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2020-06-26T09:26:23Z",
+        "default_branch": "master",
+        "description": "BoxMOT: Pluggable Python and C++ SOTA multi-object tracking modules with support for axis-aligned and oriented bounding boxes",
+        "disabled": false,
+        "fork": false,
+        "forks": 1915,
+        "full_name": "mikel-brostrom/boxmot",
+        "homepage": "https://mikel-brostrom.github.io/boxmot/",
+        "html_url": "https://github.com/mikel-brostrom/boxmot",
+        "id": 275118967,
+        "name": "boxmot",
+        "owner_login": "mikel-brostrom",
+        "pushed_at": "2026-08-09T09:09:51Z",
+        "stars": 8270,
+        "topics": [
+          "boosttrack",
+          "botsort",
+          "bytetrack",
+          "deep-learning",
+          "deepocsort",
+          "machine-learning",
+          "mot",
+          "mots",
+          "multi-object-tracking",
+          "multi-object-tracking-segmentation",
+          "ocsort",
+          "oriented-bounding-box-tracking",
+          "segmentation",
+          "strongsort",
+          "tensorrt",
+          "tracking-by-detection",
+          "yolo"
+        ],
+        "updated_at": "2026-08-10T17:43:11Z",
         "visibility": "public"
       }
     },
@@ -1243,18 +2656,18 @@
         "yyyanbj/arxiv-daily"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "c3ad60b40136062083c86fa603e1159a0e2d09b7",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "36efcedf497320d12f92d4c352a2b882e82d47ab",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2021-10-29T13:23:18Z",
@@ -1269,7 +2682,7 @@
         "id": 422584085,
         "name": "arxiv-daily",
         "owner_login": "yyyanbj",
-        "pushed_at": "2026-08-09T13:41:11Z",
+        "pushed_at": "2026-08-10T13:08:13Z",
         "stars": 178,
         "topics": [
           "arxiv",
@@ -1283,7 +2696,284 @@
           "robotics",
           "slam"
         ],
-        "updated_at": "2026-08-09T13:37:57Z",
+        "updated_at": "2026-08-10T13:06:16Z",
+        "visibility": "public"
+      }
+    },
+    "427079067": {
+      "configured_names": [
+        "pypose/pypose"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "46786b0e554f5c5b43111ef2ac1b0aef06080763",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "308099393",
+          "306643373",
+          "272037593",
+          "271967554",
+          "209098274",
+          "196840877",
+          "194258919",
+          "192639291",
+          "188357336",
+          "157441395",
+          "136956041",
+          "135127042",
+          "128397710",
+          "125044086",
+          "124187351",
+          "120461139",
+          "118653495",
+          "115797747",
+          "113695269",
+          "109042009",
+          "106622964",
+          "101914711",
+          "99045449",
+          "97880383",
+          "96728074",
+          "94561455",
+          "94522536",
+          "91219904",
+          "88521433",
+          "86845002"
+        ],
+        "seen_tags": [
+          "v0.9.5",
+          "v0.9.0",
+          "v0.7.5",
+          "v0.7.4",
+          "v0.7.3",
+          "v0.7.2",
+          "v0.7.1",
+          "v0.7.0",
+          "v0.6.9",
+          "v0.6.8",
+          "v0.6.7",
+          "v0.6.6",
+          "v0.6.5",
+          "v0.6.4",
+          "v0.6.3",
+          "v0.6.2",
+          "v0.6.1",
+          "v0.6.0",
+          "v0.5.0",
+          "v0.5.0-beta",
+          "v0.4.4",
+          "v0.4.3",
+          "v0.4.2",
+          "v0.4.1",
+          "v0.4.0",
+          "v0.3.6",
+          "v0.3.5",
+          "v0.3.1",
+          "v0.3.0",
+          "v0.2.2"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2021-11-11T17:02:08Z",
+        "default_branch": "main",
+        "description": "A library for differentiable robotics on manifolds.",
+        "disabled": false,
+        "fork": false,
+        "forks": 129,
+        "full_name": "pypose/pypose",
+        "homepage": "https://pypose.org",
+        "html_url": "https://github.com/pypose/pypose",
+        "id": 427079067,
+        "name": "pypose",
+        "owner_login": "pypose",
+        "pushed_at": "2026-08-09T23:36:49Z",
+        "stars": 1593,
+        "topics": [
+          "autonomous-robots",
+          "computer-graphics",
+          "control",
+          "deep-learning",
+          "geometric-deep-learning",
+          "kalman-filter",
+          "learning",
+          "lie-group",
+          "optimization",
+          "physics",
+          "planning",
+          "pose-estimation",
+          "pose-graph-optimization",
+          "python",
+          "pytorch",
+          "robotics",
+          "slam"
+        ],
+        "updated_at": "2026-08-09T23:36:51Z",
+        "visibility": "public"
+      }
+    },
+    "442286037": {
+      "configured_names": [
+        "EyeTrackVR/EyeTrackVR"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "5cf105d2f79a9eb356d1bcd107f5b16e76340466",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "355171758",
+          "352889909",
+          "339246636",
+          "332286552",
+          "332053738",
+          "329109899",
+          "328588980",
+          "278103557",
+          "313786977",
+          "277643369",
+          "276500362",
+          "276534826",
+          "228880297",
+          "228564397",
+          "228203391",
+          "226923531",
+          "210194477",
+          "183233655",
+          "167919568",
+          "143505768",
+          "131415991",
+          "131415502",
+          "131061086",
+          "130236974",
+          "130235317",
+          "124177703",
+          "123882753",
+          "123563800",
+          "123228556",
+          "123020481",
+          "122767462",
+          "122619203",
+          "122349624",
+          "122331737",
+          "122326651",
+          "118633093",
+          "95770566",
+          "94572608",
+          "82740670",
+          "82314069",
+          "82137453",
+          "78800531",
+          "77606469",
+          "76949214",
+          "76842878",
+          "75710135",
+          "74389862",
+          "74028095",
+          "72180479",
+          "71833459",
+          "71594861",
+          "69690396",
+          "69012253",
+          "68681766",
+          "57158737"
+        ],
+        "seen_tags": [
+          "v2.0-BETA-14",
+          "v2.0-BETA-13",
+          "v1.0.0-HSF-and-new-algos-feature-branch.17",
+          "v1.0.0-HSF-and-new-algos-feature-branch.16",
+          "v1.0.0-HSF-and-new-algos-feature-branch.15",
+          "v1.0.0-HSF-and-new-algos-feature-branch.14",
+          "v1.0.0-HSF-and-new-algos-feature-branch.13",
+          "v1.0.0-HSF-and-new-algos-feature-branch.12",
+          "v1.0.0-HSF-and-new-algos-feature-branch.11",
+          "v1.0.0-HSF-and-new-algos-feature-branch.10",
+          "v1.0.0-HSF-and-new-algos-feature-branch.9",
+          "v1.0.0-HSF-and-new-algos-feature-branch.8",
+          "v1.0.0-HSF-and-new-algos-feature-branch.7",
+          "v1.0.0-HSF-and-new-algos-feature-branch.6",
+          "v1.0.0-HSF-and-new-algos-feature-branch.5",
+          "v1.0.0-HSF-and-new-algos-feature-branch.4",
+          "v1.0.0-HSF-and-new-algos-feature-branch.3",
+          "v1.0.0-HSF-and-new-algos-feature-branch.2",
+          "v1.0.0-HSF-and-new-algos-feature-branch.1",
+          "RANSACApp-0.0.6",
+          "RANSACApp-0.0.5",
+          "RANSACApp-0.0.4",
+          "EyeTrackApp-0.3.0-BETA-8",
+          "EyeTrackApp-0.3.0-BETA-7",
+          "EyeTrackApp-0.3.0-BETA-6",
+          "EyeTrackApp-0.3.0-BETA-5.1",
+          "EyeTrackApp-0.3.0-BETA-5",
+          "EyeTrackApp-0.3.0-BETA-4",
+          "EyeTrackApp-0.3.0-BETA-3",
+          "EyeTrackApp-0.3.0-BETA-1",
+          "EyeTrackApp-0.2.5.6",
+          "EyeTrackApp-0.2.5.3",
+          "EyeTrackApp-0.2.5.1",
+          "EyeTrackApp-0.2.5",
+          "EyeTrackApp-0.2.4",
+          "EyeTrackApp-0.2.3",
+          "EyeTrackApp-0.2.2",
+          "EyeTrackApp-0.2.1",
+          "EyeTrackApp-0.2.0",
+          "EyeTrackApp-0.1.8.1",
+          "EyeTrackApp-0.1.8",
+          "EyeTrackApp-0.1.7.2",
+          "EyeTrackApp-0.1.7.1",
+          "EyeTrackApp-0.1.7",
+          "EyeTrackApp-0.1.6",
+          "EyeTrackApp-0.1.5",
+          "EyeTrackApp-0.1.4",
+          "EyeTrackApp-0.1.3",
+          "EyeTrackApp-0.1.2",
+          "EyeTrackApp-0.1.1",
+          "EyeTrackApp-0.1.0",
+          "EyeTrackApp-0.0.9",
+          "EyeTrackApp-0.0.8",
+          "EyeTrackApp-0.0.7",
+          "Alpha"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2021-12-27T22:18:04Z",
+        "default_branch": "main",
+        "description": "Free and Affordable, Virtual Reality Eye Tracking Platform.",
+        "disabled": false,
+        "fork": false,
+        "forks": 90,
+        "full_name": "EyeTrackVR/EyeTrackVR",
+        "homepage": "https://docs.eyetrackvr.dev",
+        "html_url": "https://github.com/EyeTrackVR/EyeTrackVR",
+        "id": 442286037,
+        "name": "EyeTrackVR",
+        "owner_login": "EyeTrackVR",
+        "pushed_at": "2026-08-09T06:08:26Z",
+        "stars": 1125,
+        "topics": [
+          "chilloutvr",
+          "eye-tracking",
+          "eyetracker",
+          "eyetracking",
+          "neosvr",
+          "virtual-reality",
+          "vr",
+          "vrchat"
+        ],
+        "updated_at": "2026-08-09T20:54:30Z",
         "visibility": "public"
       }
     },
@@ -1292,10 +2982,10 @@
         "NVlabs/instant-ngp"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "abe236ee00cf90cfca6e36e65c00435d5b21f50a",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "88230914",
@@ -1305,11 +2995,11 @@
           "v2.0",
           "continuous"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T12:13:31.593378Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2022-01-05T17:11:30Z",
@@ -1317,7 +3007,7 @@
         "description": "Instant neural graphics primitives: lightning fast NeRF and more",
         "disabled": false,
         "fork": false,
-        "forks": 2064,
+        "forks": 2062,
         "full_name": "NVlabs/instant-ngp",
         "homepage": "https://nvlabs.github.io/instant-ngp",
         "html_url": "https://github.com/NVlabs/instant-ngp",
@@ -1340,7 +3030,7 @@
           "realtime",
           "signed-distance-functions"
         ],
-        "updated_at": "2026-08-09T21:03:34Z",
+        "updated_at": "2026-08-10T20:55:25Z",
         "visibility": "public"
       }
     },
@@ -1349,10 +3039,10 @@
         "nerfstudio-project/nerfstudio"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "50e0e3c70c775e89333256213363badbf074f29d",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "184762158",
@@ -1438,11 +3128,11 @@
           "v0.1.0",
           "SIGGRAPH-2023"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T12:13:31.593378Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2022-05-31T18:17:37Z",
@@ -1450,7 +3140,7 @@
         "description": "A collaboration friendly studio for NeRFs",
         "disabled": false,
         "fork": false,
-        "forks": 1659,
+        "forks": 1661,
         "full_name": "nerfstudio-project/nerfstudio",
         "homepage": "https://docs.nerf.studio",
         "html_url": "https://github.com/nerfstudio-project/nerfstudio",
@@ -1458,7 +3148,7 @@
         "name": "nerfstudio",
         "owner_login": "nerfstudio-project",
         "pushed_at": "2025-07-29T02:30:55Z",
-        "stars": 11888,
+        "stars": 11892,
         "topics": [
           "3d",
           "3d-graphics",
@@ -1471,7 +3161,7 @@
           "photogrammetry",
           "pytorch"
         ],
-        "updated_at": "2026-08-09T22:41:57Z",
+        "updated_at": "2026-08-10T21:05:37Z",
         "visibility": "public"
       }
     },
@@ -1480,10 +3170,10 @@
         "ultralytics/ultralytics"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "461196cf09175b64c9b9bd8babebf081c0540520",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "cfa0e6835e220b71f856d4e23fc4513ed9a6a572",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "367536285",
@@ -1691,11 +3381,11 @@
           "v8.4.18",
           "v8.4.17"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2022-09-11T16:39:45Z",
@@ -1703,15 +3393,15 @@
         "description": "Ultralytics YOLO26, YOLO11, YOLOv8 \u2014 object detection, instance segmentation, semantic segmentation, image classification, pose estimation, object tracking",
         "disabled": false,
         "fork": false,
-        "forks": 11547,
+        "forks": 11554,
         "full_name": "ultralytics/ultralytics",
         "homepage": "https://platform.ultralytics.com",
         "html_url": "https://github.com/ultralytics/ultralytics",
         "id": 535360445,
         "name": "ultralytics",
         "owner_login": "ultralytics",
-        "pushed_at": "2026-08-09T21:32:54Z",
-        "stars": 60411,
+        "pushed_at": "2026-08-10T23:38:30Z",
+        "stars": 60485,
         "topics": [
           "computer-vision",
           "deep-learning",
@@ -1734,7 +3424,247 @@
           "yolo26",
           "yolov8"
         ],
-        "updated_at": "2026-08-09T21:02:35Z",
+        "updated_at": "2026-08-10T23:35:46Z",
+        "visibility": "public"
+      }
+    },
+    "537589426": {
+      "configured_names": [
+        "MapsHD/HDMapping"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "ba2dfce4ae754257bbadd762d902de4811a56689",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "364963946",
+          "350539998",
+          "345781606",
+          "296809526",
+          "291671170",
+          "286527103",
+          "284204529",
+          "281654201",
+          "272949047",
+          "271850731",
+          "268887284",
+          "268136662",
+          "266498394",
+          "262774865",
+          "260958031",
+          "257309795",
+          "253858677",
+          "242047395",
+          "237182188",
+          "233659921",
+          "231976326",
+          "230306166",
+          "227097204",
+          "226432003",
+          "225366095",
+          "223897664",
+          "219330628",
+          "213363034",
+          "212063213",
+          "206047654",
+          "201829508",
+          "196765063",
+          "195773325",
+          "193319986",
+          "193202798",
+          "192609647",
+          "192019612",
+          "189583632",
+          "187341837",
+          "185812146",
+          "184718000",
+          "180863439",
+          "179688542",
+          "177439285",
+          "175135001",
+          "173981665",
+          "172848356",
+          "171030293",
+          "170915398",
+          "170328753",
+          "168616428",
+          "168319989",
+          "166977833",
+          "166292066",
+          "164672480",
+          "164103545",
+          "164064958",
+          "163841781",
+          "160699762",
+          "159729761",
+          "158685903",
+          "157687270",
+          "157511684",
+          "156362809",
+          "155001062",
+          "154705038",
+          "153992436",
+          "153570372",
+          "152842684",
+          "149131548",
+          "146895032",
+          "138827314",
+          "135901185",
+          "135340111",
+          "134155196",
+          "129059863",
+          "128033910",
+          "127977613",
+          "125122825",
+          "123066008",
+          "122308275",
+          "120849621",
+          "119731420",
+          "118805283",
+          "113253839",
+          "112681335",
+          "112206527",
+          "111489136",
+          "110282118",
+          "107861861",
+          "107118128",
+          "105040881",
+          "104404318",
+          "103718920",
+          "103657701",
+          "103377397",
+          "97757005",
+          "95612278",
+          "88185282",
+          "77427294"
+        ],
+        "seen_tags": [
+          "v0.103",
+          "v0.102",
+          "v0.101",
+          "v0.100",
+          "v0.99",
+          "v0.98",
+          "v0.97",
+          "v0.96",
+          "v0.95",
+          "v0.94",
+          "v0.93",
+          "v0.92",
+          "v0.91",
+          "v0.90",
+          "v0.89",
+          "v0.88",
+          "v0.87",
+          "v0.86",
+          "v0.85",
+          "v0.84",
+          "v0.83",
+          "v0.82",
+          "v0.81",
+          "v0.80",
+          "v0.79",
+          "v0.78",
+          "v0.77",
+          "v0.76",
+          "v0.75",
+          "v0.74",
+          "v0.73",
+          "v0.72",
+          "v0.71",
+          "v0.70",
+          "v0.69",
+          "v0.68",
+          "v0.67",
+          "v0.66",
+          "v0.65",
+          "v0.64",
+          "v0.63",
+          "v0.62",
+          "v0.61",
+          "v0.60",
+          "v0.59",
+          "v0.58",
+          "v0.57",
+          "v0.56",
+          "v0.55",
+          "v0.54",
+          "v0.53",
+          "v0.52",
+          "v0.51",
+          "v0.50",
+          "v0.48",
+          "v0.47",
+          "v0.46",
+          "v0.45",
+          "v0.44",
+          "v0.43",
+          "v0.42",
+          "v0.41",
+          "v0.40",
+          "v0.39",
+          "v0.38",
+          "v0.37",
+          "v0.36",
+          "v0.35",
+          "v0.34",
+          "v0.33",
+          "v0.32",
+          "v0.31",
+          "v0.30",
+          "v0.29",
+          "v0.28",
+          "v0.27",
+          "v0.26",
+          "v0.25",
+          "v0.24",
+          "v0.22",
+          "v0.21",
+          "v0.20",
+          "v0.19",
+          "v0.18",
+          "v0.17",
+          "v0.16",
+          "v0.15",
+          "v0.14",
+          "v0.13",
+          "v0.12",
+          "v0.11",
+          "v0.10",
+          "v0.9",
+          "v0.8",
+          "v0.7",
+          "v0.6",
+          "v0.5",
+          "v0.3",
+          "v0.1",
+          "0.23"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2022-09-16T19:13:09Z",
+        "default_branch": "main",
+        "description": null,
+        "disabled": false,
+        "fork": false,
+        "forks": 68,
+        "full_name": "MapsHD/HDMapping",
+        "homepage": null,
+        "html_url": "https://github.com/MapsHD/HDMapping",
+        "id": 537589426,
+        "name": "HDMapping",
+        "owner_login": "MapsHD",
+        "pushed_at": "2026-08-10T23:05:45Z",
+        "stars": 422,
+        "topics": [],
+        "updated_at": "2026-08-10T19:20:59Z",
         "visibility": "public"
       }
     },
@@ -1743,20 +3673,20 @@
         "AtsushiSakai/PythonRobotics"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "1fe4fb980f6a12fe21c3c33d2b4da97a52c9154d",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [
           "v1.0"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2016-03-21T09:34:43Z",
@@ -1764,15 +3694,15 @@
         "description": "Python sample codes and textbook for robotics algorithms.",
         "disabled": false,
         "fork": false,
-        "forks": 7377,
+        "forks": 7378,
         "full_name": "AtsushiSakai/PythonRobotics",
         "homepage": "https://atsushisakai.github.io/PythonRobotics/",
         "html_url": "https://github.com/AtsushiSakai/PythonRobotics",
         "id": 54376220,
         "name": "PythonRobotics",
         "owner_login": "AtsushiSakai",
-        "pushed_at": "2026-08-08T18:47:45Z",
-        "stars": 30271,
+        "pushed_at": "2026-08-10T20:02:58Z",
+        "stars": 30278,
         "topics": [
           "algorithm",
           "animation",
@@ -1791,7 +3721,192 @@
           "robotics",
           "slam"
         ],
-        "updated_at": "2026-08-09T23:15:07Z",
+        "updated_at": "2026-08-10T16:09:37Z",
+        "visibility": "public"
+      }
+    },
+    "599950865": {
+      "configured_names": [
+        "deepinv/deepinv"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "522bba93c6f3b55c805f10958bf6aa1c966ac9bc",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "335413500",
+          "295584017",
+          "270376130",
+          "260943101",
+          "253143843",
+          "245473895",
+          "237970826",
+          "229801894",
+          "223431751",
+          "212029754",
+          "190367500",
+          "173256872",
+          "152420575",
+          "143388190",
+          "133364075",
+          "110708038"
+        ],
+        "seen_tags": [
+          "v0.4.1",
+          "v0.4.0",
+          "v0.3.7",
+          "v0.3.6",
+          "v0.3.5",
+          "v0.3.4",
+          "v0.3.3",
+          "v0.3.2",
+          "v0.3.2.dev",
+          "v0.3.1",
+          "v0.3.0",
+          "v0.2.3",
+          "v.0.2.2",
+          "v.0.2.1",
+          "v.0.2.0",
+          "v.0.1.1",
+          "v.0.1.0",
+          "v0.0.1"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2023-02-10T08:40:58Z",
+        "default_branch": "main",
+        "description": "DeepInverse: a PyTorch library for solving imaging inverse problems using deep learning",
+        "disabled": false,
+        "fork": false,
+        "forks": 192,
+        "full_name": "deepinv/deepinv",
+        "homepage": "http://deepinv.org/",
+        "html_url": "https://github.com/deepinv/deepinv",
+        "id": 599950865,
+        "name": "deepinv",
+        "owner_login": "deepinv",
+        "pushed_at": "2026-08-09T11:15:50Z",
+        "stars": 789,
+        "topics": [
+          "computational-imaging",
+          "deblurring",
+          "deep-learning",
+          "denoising",
+          "diffusion-models",
+          "image-reconstruction",
+          "medical-imaging",
+          "microscopy",
+          "mri",
+          "plug-and-play-priors",
+          "pytorch",
+          "self-supervised",
+          "super-resolution",
+          "tomography",
+          "unrolled-algorithms"
+        ],
+        "updated_at": "2026-08-10T17:37:05Z",
+        "visibility": "public"
+      }
+    },
+    "62519414": {
+      "configured_names": [
+        "bjornbytes/lovr"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "3da29627b66e04270a9fa47267b0e7d905faeff4",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "335669005",
+          "125682202",
+          "146114236",
+          "91831612",
+          "63781192",
+          "33046053",
+          "20724327",
+          "19353038",
+          "15078315",
+          "12358631",
+          "10235267",
+          "9075300",
+          "8658971",
+          "7375891",
+          "6822648",
+          "6675740",
+          "6302735",
+          "5959345",
+          "5487697",
+          "5165194",
+          "5093944",
+          "5093948"
+        ],
+        "seen_tags": [
+          "v0.19.0",
+          "v0.18.0",
+          "v0.17.1",
+          "v0.17.0",
+          "v0.16.0",
+          "v0.15.0",
+          "v0.14.0",
+          "v0.13.0",
+          "v0.12.0",
+          "v0.11.0",
+          "v0.10.0",
+          "v0.9.1",
+          "v0.9.0",
+          "v0.8.0",
+          "v0.7.1",
+          "v0.7.0",
+          "v0.6.0",
+          "v0.5.0",
+          "v0.4.0",
+          "v0.3.0",
+          "v0.2.0",
+          "v0.1.0"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2016-07-03T23:36:45Z",
+        "default_branch": "dev",
+        "description": "Lua Virtual Reality Framework",
+        "disabled": false,
+        "fork": false,
+        "forks": 166,
+        "full_name": "bjornbytes/lovr",
+        "homepage": "https://lovr.org",
+        "html_url": "https://github.com/bjornbytes/lovr",
+        "id": 62519414,
+        "name": "lovr",
+        "owner_login": "bjornbytes",
+        "pushed_at": "2026-08-10T20:47:26Z",
+        "stars": 2580,
+        "topics": [
+          "game-engine",
+          "gamedev",
+          "lovr",
+          "lua",
+          "oculus",
+          "oculus-quest",
+          "openvr",
+          "openxr",
+          "virtual-reality",
+          "vr"
+        ],
+        "updated_at": "2026-08-10T14:06:24Z",
         "visibility": "public"
       }
     },
@@ -1800,18 +3915,18 @@
         "johe123qwe/github-trending"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "e1e95f14590c5ad596495e9d57b9d8c18d545fe9",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "ce77c114ee699e08ccc91b8a9cc396bf3b47c296",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2023-04-15T05:54:54Z",
@@ -1826,10 +3941,10 @@
         "id": 628172384,
         "name": "github-trending",
         "owner_login": "johe123qwe",
-        "pushed_at": "2026-08-09T12:56:52Z",
-        "stars": 59,
+        "pushed_at": "2026-08-10T13:15:16Z",
+        "stars": 60,
         "topics": [],
-        "updated_at": "2026-08-09T12:56:58Z",
+        "updated_at": "2026-08-10T14:08:56Z",
         "visibility": "public"
       }
     },
@@ -1838,10 +3953,10 @@
         "MrNeRF/LichtFeld-Studio"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "6646f39fa8e76f901da48c06530a59474e754797",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "9752b6bb09f06cbc5f2563eadd44698b72d06d08",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "349167798",
@@ -1871,11 +3986,11 @@
           "nightly",
           "model-moge2-v1"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2023-07-30T19:55:48Z",
@@ -1890,8 +4005,8 @@
         "id": 672651553,
         "name": "LichtFeld-Studio",
         "owner_login": "MrNeRF",
-        "pushed_at": "2026-08-09T21:37:46Z",
-        "stars": 3502,
+        "pushed_at": "2026-08-10T21:21:39Z",
+        "stars": 3509,
         "topics": [
           "computer-graphics",
           "computer-vision",
@@ -1899,7 +4014,7 @@
           "gaussian-splatting",
           "optimization"
         ],
-        "updated_at": "2026-08-09T22:33:17Z",
+        "updated_at": "2026-08-10T21:43:06Z",
         "visibility": "public"
       }
     },
@@ -1908,10 +4023,10 @@
         "nerfstudio-project/gsplat"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "2b902ff1891fc7f73f0f9b8c8bfc932cef2b198c",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "230087820",
@@ -1966,11 +4081,11 @@
           "v0.1.1",
           "v0.1.0"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T12:13:31.593378Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2023-08-25T22:48:24Z",
@@ -1978,7 +4093,7 @@
         "description": "CUDA accelerated rasterization of gaussian splatting",
         "disabled": false,
         "fork": false,
-        "forks": 934,
+        "forks": 935,
         "full_name": "nerfstudio-project/gsplat",
         "homepage": "https://docs.gsplat.studio/",
         "html_url": "https://github.com/nerfstudio-project/gsplat",
@@ -1986,11 +4101,230 @@
         "name": "gsplat",
         "owner_login": "nerfstudio-project",
         "pushed_at": "2026-07-24T11:55:32Z",
-        "stars": 5508,
+        "stars": 5514,
         "topics": [
           "gaussian-splatting"
         ],
-        "updated_at": "2026-08-09T20:54:42Z",
+        "updated_at": "2026-08-10T22:47:36Z",
+        "visibility": "public"
+      }
+    },
+    "688248662": {
+      "configured_names": [
+        "wangqiannudt/nerf-arxiv-daily"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "4d5f68a60e92a8e0fbb8cf5ff383c055dbc7f87e",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2023-09-07T00:53:41Z",
+        "default_branch": "main",
+        "description": "daily update NeRF releated paper on arxiv",
+        "disabled": false,
+        "fork": false,
+        "forks": 6,
+        "full_name": "wangqiannudt/nerf-arxiv-daily",
+        "homepage": "",
+        "html_url": "https://github.com/wangqiannudt/nerf-arxiv-daily",
+        "id": 688248662,
+        "name": "nerf-arxiv-daily",
+        "owner_login": "wangqiannudt",
+        "pushed_at": "2026-08-10T01:16:03Z",
+        "stars": 210,
+        "topics": [
+          "cv",
+          "nerf"
+        ],
+        "updated_at": "2026-08-10T01:16:09Z",
+        "visibility": "public"
+      }
+    },
+    "746960224": {
+      "configured_names": [
+        "cshw2021/Learned-Image-Video-Compression"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "40ee2fb1e00a94ca36be06ef8127d54cca85e179",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2024-01-23T01:24:47Z",
+        "default_branch": "main",
+        "description": "A collection of papers related to data compression",
+        "disabled": false,
+        "fork": false,
+        "forks": 13,
+        "full_name": "cshw2021/Learned-Image-Video-Compression",
+        "homepage": "",
+        "html_url": "https://github.com/cshw2021/Learned-Image-Video-Compression",
+        "id": 746960224,
+        "name": "Learned-Image-Video-Compression",
+        "owner_login": "cshw2021",
+        "pushed_at": "2026-08-09T02:10:37Z",
+        "stars": 189,
+        "topics": [],
+        "updated_at": "2026-08-09T02:10:40Z",
+        "visibility": "public"
+      }
+    },
+    "747402960": {
+      "configured_names": [
+        "pierotofy/OpenSplat"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "b6e935d66451ab992415f266afaa8c043a89cd2a",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "171459797",
+          "152526736",
+          "148758865",
+          "147988560",
+          "147614495",
+          "146948077",
+          "146179846",
+          "142708926",
+          "142470316"
+        ],
+        "seen_tags": [
+          "v1.1.4",
+          "v1.1.3",
+          "v1.1.2",
+          "v1.1.1",
+          "v1.1.0",
+          "v1.0.3",
+          "v1.0.2",
+          "v1.0.1",
+          "v1.0.0"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2024-01-23T21:21:07Z",
+        "default_branch": "main",
+        "description": "Production-grade 3D gaussian splatting with CPU/GPU support for Windows, Mac and Linux \ud83d\ude80",
+        "disabled": false,
+        "fork": false,
+        "forks": 215,
+        "full_name": "pierotofy/OpenSplat",
+        "homepage": "https://splat.uav4geo.com",
+        "html_url": "https://github.com/pierotofy/OpenSplat",
+        "id": 747402960,
+        "name": "OpenSplat",
+        "owner_login": "pierotofy",
+        "pushed_at": "2026-08-10T18:03:47Z",
+        "stars": 2133,
+        "topics": [
+          "3d",
+          "gaussian",
+          "radiance-field",
+          "splats",
+          "splatting"
+        ],
+        "updated_at": "2026-08-10T18:04:50Z",
+        "visibility": "public"
+      }
+    },
+    "772615734": {
+      "configured_names": [
+        "zezhishao/DailyArXiv"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "6fefc13d672326c7c394843dbb1dc73185171af7",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2024-03-15T14:45:16Z",
+        "default_branch": "master",
+        "description": "Daily ArXiv Papers.",
+        "disabled": false,
+        "fork": false,
+        "forks": 101,
+        "full_name": "zezhishao/DailyArXiv",
+        "homepage": "",
+        "html_url": "https://github.com/zezhishao/DailyArXiv",
+        "id": 772615734,
+        "name": "DailyArXiv",
+        "owner_login": "zezhishao",
+        "pushed_at": "2026-08-10T17:27:50Z",
+        "stars": 446,
+        "topics": [],
+        "updated_at": "2026-08-10T17:31:18Z",
+        "visibility": "public"
+      }
+    },
+    "783672596": {
+      "configured_names": [
+        "tangwen-qian/DailyArXiv"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "3adfa75818c72dcf1d64bffcf5d87230c0a4c420",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2024-04-08T10:54:08Z",
+        "default_branch": "main",
+        "description": null,
+        "disabled": false,
+        "fork": false,
+        "forks": 10,
+        "full_name": "tangwen-qian/DailyArXiv",
+        "homepage": null,
+        "html_url": "https://github.com/tangwen-qian/DailyArXiv",
+        "id": 783672596,
+        "name": "DailyArXiv",
+        "owner_login": "tangwen-qian",
+        "pushed_at": "2026-08-10T17:26:55Z",
+        "stars": 60,
+        "topics": [],
+        "updated_at": "2026-08-10T17:27:16Z",
         "visibility": "public"
       }
     },
@@ -1999,12 +4333,13 @@
         "Blaizzy/mlx-vlm"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "ffd7aeff0bd213c31534a969e0003d49451eef39",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "321514d633342f079f97fc7b80aa787249217116",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
+          "368193503",
           "364970982",
           "364452053",
           "360662282",
@@ -2081,6 +4416,7 @@
           "152310105"
         ],
         "seen_tags": [
+          "v0.6.12",
           "v0.6.10",
           "v0.6.9",
           "v0.6.8",
@@ -2156,11 +4492,11 @@
           "v0.0.2",
           "v0.0.1"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2024-04-16T15:10:12Z",
@@ -2168,15 +4504,15 @@
         "description": "MLX-VLM is a package for inference and fine-tuning of Vision Language Models (VLMs) on your Mac using MLX.",
         "disabled": false,
         "fork": false,
-        "forks": 706,
+        "forks": 711,
         "full_name": "Blaizzy/mlx-vlm",
         "homepage": "",
         "html_url": "https://github.com/Blaizzy/mlx-vlm",
         "id": 787462297,
         "name": "mlx-vlm",
         "owner_login": "Blaizzy",
-        "pushed_at": "2026-08-09T01:55:23Z",
-        "stars": 5309,
+        "pushed_at": "2026-08-10T20:57:47Z",
+        "stars": 5318,
         "topics": [
           "apple-silicon",
           "florence2",
@@ -2192,7 +4528,7 @@
           "vision-language-model",
           "vision-transformer"
         ],
-        "updated_at": "2026-08-09T18:48:36Z",
+        "updated_at": "2026-08-10T22:46:37Z",
         "visibility": "public"
       }
     },
@@ -2201,18 +4537,18 @@
         "yuhaozhang7/NGD-SLAM"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "a93a14c4019efc7a209be5fbf9fefa46f5d1d90f",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2024-05-09T23:18:52Z",
@@ -2239,10 +4575,10 @@
         "NVlabs/Sana"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "639fdbc74de10890ffb50c02ce04c76cc070a2c2",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "336399486",
@@ -2254,11 +4590,11 @@
           "v1.5.0",
           "v1.0.0"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2024-10-11T20:19:45Z",
@@ -2266,15 +4602,15 @@
         "description": "SANA: Efficient High-Resolution Image Synthesis with Linear Diffusion Transformer",
         "disabled": false,
         "fork": false,
-        "forks": 697,
+        "forks": 698,
         "full_name": "NVlabs/Sana",
         "homepage": "https://nvlabs.github.io/Sana/docs/",
         "html_url": "https://github.com/NVlabs/Sana",
         "id": 871368615,
         "name": "Sana",
         "owner_login": "NVlabs",
-        "pushed_at": "2026-08-09T21:24:14Z",
-        "stars": 8725,
+        "pushed_at": "2026-08-10T17:10:39Z",
+        "stars": 8735,
         "topics": [
           "diffusion",
           "dit",
@@ -2291,7 +4627,171 @@
           "video-generation",
           "world-models"
         ],
-        "updated_at": "2026-08-09T14:18:33Z",
+        "updated_at": "2026-08-10T21:58:09Z",
+        "visibility": "public"
+      }
+    },
+    "876545970": {
+      "configured_names": [
+        "NVIDIA-AI-Blueprints/video-search-and-summarization"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "3d85909362967078d877aa38a206968df270d3f9",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [
+          "358665395",
+          "340170782",
+          "298260768",
+          "280778224",
+          "249545926",
+          "229926808",
+          "213726735",
+          "206004055"
+        ],
+        "seen_tags": [
+          "v3.2.1",
+          "v3.2.0",
+          "v3.1.0",
+          "v2.4.1",
+          "v2.4.0",
+          "v2.3.1",
+          "v2.3.0",
+          "v1.0",
+          "nightly-20260810",
+          "nightly-20260809",
+          "nightly-20260808",
+          "nightly-20260807",
+          "nightly-20260806",
+          "nightly-20260805",
+          "nightly-20260805-2",
+          "nightly-20260805-1",
+          "nightly-20260804",
+          "nightly-20260803",
+          "nightly-20260802",
+          "nightly-20260801",
+          "nightly-20260731",
+          "nightly-20260730",
+          "nightly-20260725",
+          "nightly-20260724",
+          "nightly-6e4cada",
+          "dev-26.08.1",
+          "dev-26.07.4",
+          "dev-26.07.3",
+          "dev-26.07.2",
+          "dev-26.07.1",
+          "dev-26.06.4",
+          "dev-26.06.3",
+          "dev-26.06.3-1",
+          "dev-26.06.2",
+          "dev-26.06.2-2",
+          "dev-26.06.2-1",
+          "dev-26.06.1",
+          "dev-26.06.1-3",
+          "dev-26.06.1-2",
+          "dev-26.06.1-1",
+          "dev-26.05.4",
+          "dev-26.05.4-3",
+          "dev-26.05.4-2",
+          "dev-26.05.4-1",
+          "dev-26.05.3",
+          "dev-26.05.3-6",
+          "dev-26.05.3-5",
+          "dev-26.05.3-4",
+          "dev-26.05.3-3",
+          "dev-26.05.3-2",
+          "dev-26.05.3-1",
+          "dev-26.05.2",
+          "dev-26.05.1",
+          "dev-26.05.1-1"
+        ],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2024-10-22T06:43:05Z",
+        "default_branch": "main",
+        "description": "NVIDIA AI Blueprint for video search and summarization (VSS) is a GPU-accelerated reference architecture for building video analytics agents with real-time verified alerts, visual Q&A, and automated reporting. The VSS Blueprint uses vision language models (VLMs) such as NVIDIA Cosmos, LLMs such as NVIDIA Nemotron, RAG, and NVIDIA NIMs.",
+        "disabled": false,
+        "fork": false,
+        "forks": 371,
+        "full_name": "NVIDIA-AI-Blueprints/video-search-and-summarization",
+        "homepage": "https://build.nvidia.com/nvidia/video-search-and-summarization",
+        "html_url": "https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization",
+        "id": 876545970,
+        "name": "video-search-and-summarization",
+        "owner_login": "NVIDIA-AI-Blueprints",
+        "pushed_at": "2026-08-10T23:33:54Z",
+        "stars": 1789,
+        "topics": [
+          "computer-vision",
+          "generative-ai",
+          "long-video-understanding",
+          "model-context-protocol",
+          "multimodal-ai",
+          "natural-language-search",
+          "nvidia-nim",
+          "rag",
+          "real-time-video-analytics",
+          "retrieval-augmented-generation",
+          "skills",
+          "video-agent",
+          "video-analytics",
+          "video-rag",
+          "video-search",
+          "video-summarization",
+          "video-understanding",
+          "vision-agent",
+          "vision-language-model",
+          "vlm"
+        ],
+        "updated_at": "2026-08-09T05:11:07Z",
+        "visibility": "public"
+      }
+    },
+    "888199882": {
+      "configured_names": [
+        "VisionVerse/RemoteSensing-Restoration-Survey"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "9cfe90a471471129e8464e328c3d5c302a1299b2",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2024-11-14T01:33:49Z",
+        "default_branch": "main",
+        "description": "[ISPRS 2026] Remote Sensing Image Dehazing: A Systematic Review of Progress, Challenges, and Prospects",
+        "disabled": false,
+        "fork": false,
+        "forks": 1,
+        "full_name": "VisionVerse/RemoteSensing-Restoration-Survey",
+        "homepage": "",
+        "html_url": "https://github.com/VisionVerse/RemoteSensing-Restoration-Survey",
+        "id": 888199882,
+        "name": "RemoteSensing-Restoration-Survey",
+        "owner_login": "VisionVerse",
+        "pushed_at": "2026-08-09T14:01:13Z",
+        "stars": 231,
+        "topics": [
+          "dehazing",
+          "remote-sensing"
+        ],
+        "updated_at": "2026-08-09T14:01:55Z",
         "visibility": "public"
       }
     },
@@ -2300,18 +4800,18 @@
         "datawhalechina/every-embodied"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "9a391eb9579f1b43f91c58ecf3fed2a8238e5ca6",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2024-12-08T13:33:40Z",
@@ -2319,7 +4819,7 @@
         "description": "\u4ec5\u9700Python\u57fa\u7840\uff0c\u4ece0\u6784\u5efa\u81ea\u5df1\u7684\u5177\u8eab\u667a\u80fd\u673a\u5668\u4eba\uff1b\u4ece0\u9010\u6b65\u6784\u5efaVLA/OpenVLA/SmolVLA/Pi0\uff0c \u6df1\u5165\u7406\u89e3\u5177\u8eab\u667a\u80fd",
         "disabled": false,
         "fork": false,
-        "forks": 312,
+        "forks": 314,
         "full_name": "datawhalechina/every-embodied",
         "homepage": "",
         "html_url": "https://github.com/datawhalechina/every-embodied",
@@ -2327,7 +4827,7 @@
         "name": "every-embodied",
         "owner_login": "datawhalechina",
         "pushed_at": "2026-08-08T15:04:37Z",
-        "stars": 3059,
+        "stars": 3077,
         "topics": [
           "embodied-agent",
           "embodied-ai",
@@ -2336,7 +4836,7 @@
           "smolvla",
           "vision-language-action-model"
         ],
-        "updated_at": "2026-08-09T18:22:24Z",
+        "updated_at": "2026-08-10T16:36:04Z",
         "visibility": "public"
       }
     },
@@ -2345,10 +4845,10 @@
         "ArgoHA/D-FINE-seg"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "8346f3e8b697cf1e79c27094e84de053046961fc",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "357957762",
@@ -2358,11 +4858,11 @@
           "v0.2.0",
           "v0.1.0"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-08T13:26:35.435158Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2025-01-21T18:57:00Z",
@@ -2397,18 +4897,18 @@
         "luohongk/Embodied-AI-Daily"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
         "default_branch_head": "32508540b3f5e70ebc7601fbb8e55404d5563df5",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [],
         "seen_tags": [],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2025-01-24T09:31:39Z",
@@ -2423,8 +4923,8 @@
         "id": 921614730,
         "name": "Embodied-AI-Daily",
         "owner_login": "luohongk",
-        "pushed_at": "2026-08-09T17:06:48Z",
-        "stars": 407,
+        "pushed_at": "2026-08-10T00:43:35Z",
+        "stars": 408,
         "topics": [
           "deep-learning",
           "gaussian-splatting",
@@ -2434,7 +4934,45 @@
           "vla",
           "vln"
         ],
-        "updated_at": "2026-08-09T17:06:41Z",
+        "updated_at": "2026-08-10T00:37:31Z",
+        "visibility": "public"
+      }
+    },
+    "926730754": {
+      "configured_names": [
+        "Ed1sonChen/DailyArxiv"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "914871eb0841f560278f6f86cfe1b3ac49fb3514",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2025-02-03T19:04:29Z",
+        "default_branch": "main",
+        "description": null,
+        "disabled": false,
+        "fork": false,
+        "forks": 5,
+        "full_name": "Ed1sonChen/DailyArxiv",
+        "homepage": null,
+        "html_url": "https://github.com/Ed1sonChen/DailyArxiv",
+        "id": 926730754,
+        "name": "DailyArxiv",
+        "owner_login": "Ed1sonChen",
+        "pushed_at": "2026-08-10T17:23:42Z",
+        "stars": 76,
+        "topics": [],
+        "updated_at": "2026-08-10T17:26:21Z",
         "visibility": "public"
       }
     },
@@ -2492,10 +5030,10 @@
         "roboflow/rf-detr"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "c107a748bbf369ad455cd41d85b9c91a5a0ecbad",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "b4b2feb40a9914c3acb3dc47b97cd995b58d4957",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "364862625",
@@ -2570,11 +5108,11 @@
           "1.1.0",
           "1.1.0rc0"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2025-03-19T20:43:00Z",
@@ -2582,15 +5120,15 @@
         "description": "RF-DETR is a real-time object detection and segmentation model architecture developed by Roboflow, SOTA on COCO, designed for fine-tuning. [ICLR 2026] ",
         "disabled": false,
         "fork": false,
-        "forks": 1125,
+        "forks": 1128,
         "full_name": "roboflow/rf-detr",
         "homepage": "https://rfdetr.roboflow.com",
         "html_url": "https://github.com/roboflow/rf-detr",
         "id": 951534260,
         "name": "rf-detr",
         "owner_login": "roboflow",
-        "pushed_at": "2026-08-08T22:07:32Z",
-        "stars": 8908,
+        "pushed_at": "2026-08-10T23:26:43Z",
+        "stars": 8919,
         "topics": [
           "computer-vision",
           "detr",
@@ -2600,7 +5138,7 @@
           "rf-detr",
           "sota"
         ],
-        "updated_at": "2026-08-09T23:22:28Z",
+        "updated_at": "2026-08-10T23:25:57Z",
         "visibility": "public"
       }
     },
@@ -2609,10 +5147,10 @@
         "roboflow/trackers"
       ],
       "details": {
-        "commit_checked_at": "2026-08-09T23:39:19.909075Z",
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
         "commit_initialized": true,
-        "default_branch_head": "5eaf1af4684a3eb930f1db6c211e2a3fd863c771",
-        "release_checked_at": "2026-08-09T23:39:19.909075Z",
+        "default_branch_head": "fea100cfa512de88f76f5bd8938821469fc7ce09",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
         "release_initialized": true,
         "seen_release_ids": [
           "366040466",
@@ -2644,11 +5182,11 @@
           "2.0.0rc1",
           "2.0.0rc0"
         ],
-        "tag_checked_at": "2026-08-09T23:39:19.909075Z",
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
         "tag_initialized": true
       },
       "first_observed_at": "2026-08-09T23:39:19.909075Z",
-      "last_seen_at": "2026-08-09T23:39:19.909075Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
       "snapshot": {
         "archived": false,
         "created_at": "2025-04-14T16:12:26Z",
@@ -2663,8 +5201,8 @@
         "id": 966243985,
         "name": "trackers",
         "owner_login": "roboflow",
-        "pushed_at": "2026-08-08T22:27:36Z",
-        "stars": 3576,
+        "pushed_at": "2026-08-10T23:11:41Z",
+        "stars": 3579,
         "topics": [
           "bot-sort",
           "bytetrack",
@@ -2677,7 +5215,45 @@
           "sportsmot",
           "trackeval"
         ],
-        "updated_at": "2026-08-09T06:13:41Z",
+        "updated_at": "2026-08-10T23:10:56Z",
+        "visibility": "public"
+      }
+    },
+    "982090684": {
+      "configured_names": [
+        "XDimLab/GIFStream"
+      ],
+      "details": {
+        "commit_checked_at": "2026-08-10T23:42:55.050291Z",
+        "commit_initialized": true,
+        "default_branch_head": "d381810343c6384f2bf22f462771f97b2363c4df",
+        "release_checked_at": "2026-08-10T23:42:55.050291Z",
+        "release_initialized": true,
+        "seen_release_ids": [],
+        "seen_tags": [],
+        "tag_checked_at": "2026-08-10T23:42:55.050291Z",
+        "tag_initialized": true
+      },
+      "first_observed_at": "2026-08-10T23:42:55.050291Z",
+      "last_seen_at": "2026-08-10T23:42:55.050291Z",
+      "snapshot": {
+        "archived": false,
+        "created_at": "2025-05-12T11:08:30Z",
+        "default_branch": "main",
+        "description": null,
+        "disabled": false,
+        "fork": false,
+        "forks": 8,
+        "full_name": "XDimLab/GIFStream",
+        "homepage": null,
+        "html_url": "https://github.com/XDimLab/GIFStream",
+        "id": 982090684,
+        "name": "GIFStream",
+        "owner_login": "XDimLab",
+        "pushed_at": "2026-08-09T14:26:27Z",
+        "stars": 85,
+        "topics": [],
+        "updated_at": "2026-08-09T14:27:22Z",
         "visibility": "public"
       }
     }
