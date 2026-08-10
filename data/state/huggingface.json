@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-09T23:48:47.993044Z",
+      "last_successful_at": "2026-08-10T23:52:16.644650Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -65,6 +65,10 @@
         "kkkamur07/segmentation-blla": {
           "last_modified": "2026-08-06T00:15:25Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "litert-community/Cloth-Segmentation-U2Net-LiteRT": {
+          "last_modified": "2026-08-10T15:12:59Z",
+          "last_seen_at": "2026-08-10T23:52:16.644650Z"
         },
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
