@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-10T23:52:16.644650Z",
+      "last_successful_at": "2026-08-12T00:01:56.517702Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -23,8 +23,12 @@
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
         },
         "JerryX/cmr-annotator-lax-sax-cine-segmentation": {
-          "last_modified": "2026-08-09T16:39:55Z",
-          "last_seen_at": "2026-08-09T23:48:47.993044Z"
+          "last_modified": "2026-08-11T02:28:14Z",
+          "last_seen_at": "2026-08-12T00:01:56.517702Z"
+        },
+        "Nerferens/Fan": {
+          "last_modified": "2026-08-11T19:36:43Z",
+          "last_seen_at": "2026-08-12T00:01:56.517702Z"
         },
         "Sathyag007/speaker-segmentation-fine-tuned-callhome-jpn": {
           "last_modified": "2026-08-05T12:20:00Z",
@@ -41,6 +45,10 @@
         "Tanishjain9/fast-scnn-floor-segmentation": {
           "last_modified": "2026-08-08T18:36:00Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
+        },
+        "abdollah111/brain-tumor-segmentation": {
+          "last_modified": "2026-08-11T09:30:21Z",
+          "last_seen_at": "2026-08-12T00:01:56.517702Z"
         },
         "aneforge/vit-image-classification": {
           "last_modified": "2026-08-05T20:09:49Z",
@@ -70,9 +78,17 @@
           "last_modified": "2026-08-10T15:12:59Z",
           "last_seen_at": "2026-08-10T23:52:16.644650Z"
         },
+        "miguelozaalon/speaker-segmentation-atc": {
+          "last_modified": "2026-08-11T12:26:46Z",
+          "last_seen_at": "2026-08-12T00:01:56.517702Z"
+        },
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "reproducible-ai/nerf-pytorch-lego": {
+          "last_modified": "2026-08-11T17:52:57Z",
+          "last_seen_at": "2026-08-12T00:01:56.517702Z"
         },
         "salma33/brain-lesion-segmentation": {
           "last_modified": "2026-08-08T15:56:34Z",
@@ -93,6 +109,10 @@
         "turhancan97/visbench-semantic_segmentation-dinov2_vits14": {
           "last_modified": "2026-08-07T16:24:46Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "yeetmq/retrieval-augmented-segmentation": {
+          "last_modified": "2026-08-11T14:28:01Z",
+          "last_seen_at": "2026-08-12T00:01:56.517702Z"
         }
       }
     }
