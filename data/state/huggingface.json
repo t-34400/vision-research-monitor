@@ -4,15 +4,15 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-14T00:00:58.321044Z",
+      "last_successful_at": "2026-08-14T23:39:50.102348Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
         },
         "Catniti/catrex-lite-image-segmentation": {
-          "last_modified": "2026-08-06T10:09:44Z",
-          "last_seen_at": "2026-08-08T12:16:32.445138Z"
+          "last_modified": "2026-08-14T19:21:01Z",
+          "last_seen_at": "2026-08-14T23:39:50.102348Z"
         },
         "CienciaCiudades/rfdetr-urban-segmentation": {
           "last_modified": "2026-08-07T19:57:01Z",
@@ -29,6 +29,10 @@
         "JerryX/cmr-annotator-lax-sax-cine-segmentation": {
           "last_modified": "2026-08-11T02:28:14Z",
           "last_seen_at": "2026-08-12T00:01:56.517702Z"
+        },
+        "Navadeep018/brain-mri-tumor-segmentation": {
+          "last_modified": "2026-08-14T15:48:37Z",
+          "last_seen_at": "2026-08-14T23:39:50.102348Z"
         },
         "Nerferens/Fan": {
           "last_modified": "2026-08-11T19:36:43Z",
@@ -57,6 +61,10 @@
         "Tanishjain9/fast-scnn-floor-segmentation": {
           "last_modified": "2026-08-08T18:36:00Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
+        },
+        "Tohirju/sl-amber2": {
+          "last_modified": "2026-08-14T12:49:04Z",
+          "last_seen_at": "2026-08-14T23:39:50.102348Z"
         },
         "abdollah111/brain-tumor-segmentation": {
           "last_modified": "2026-08-11T09:30:21Z",
