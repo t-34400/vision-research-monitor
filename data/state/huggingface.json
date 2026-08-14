@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-13T00:00:46.425847Z",
+      "last_successful_at": "2026-08-14T00:00:58.321044Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -78,6 +78,18 @@
           "last_modified": "2026-08-06T20:28:43Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
         },
+        "fedeceri/cochlea-hair-cell-binary-segmentation-unet2d": {
+          "last_modified": "2026-08-13T12:55:40Z",
+          "last_seen_at": "2026-08-14T00:00:58.321044Z"
+        },
+        "hetwaterschapshuis/vivianite-segmentation": {
+          "last_modified": "2026-08-13T10:12:23Z",
+          "last_seen_at": "2026-08-14T00:00:58.321044Z"
+        },
+        "howtomix/pyannote-segmentation-3.0": {
+          "last_modified": "2026-08-13T05:22:26Z",
+          "last_seen_at": "2026-08-14T00:00:58.321044Z"
+        },
         "iliekmudkipz6/object-detection-assistant-model": {
           "last_modified": "2026-08-06T18:04:21Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
@@ -89,6 +101,10 @@
         "litert-community/Cloth-Segmentation-U2Net-LiteRT": {
           "last_modified": "2026-08-10T15:12:59Z",
           "last_seen_at": "2026-08-10T23:52:16.644650Z"
+        },
+        "mednasserallah/manga109-segmentation-bubble-onnx": {
+          "last_modified": "2026-08-13T04:42:33Z",
+          "last_seen_at": "2026-08-14T00:00:58.321044Z"
         },
         "miguelozaalon/speaker-segmentation-atc": {
           "last_modified": "2026-08-11T12:26:46Z",
