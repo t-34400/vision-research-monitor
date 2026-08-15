@@ -4,15 +4,15 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-14T23:39:50.102348Z",
+      "last_successful_at": "2026-08-15T23:36:30.730423Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
         },
         "Catniti/catrex-lite-image-segmentation": {
-          "last_modified": "2026-08-14T19:21:01Z",
-          "last_seen_at": "2026-08-14T23:39:50.102348Z"
+          "last_modified": "2026-08-15T10:03:12Z",
+          "last_seen_at": "2026-08-15T23:36:30.730423Z"
         },
         "CienciaCiudades/rfdetr-urban-segmentation": {
           "last_modified": "2026-08-07T19:57:01Z",
@@ -55,8 +55,8 @@
           "last_seen_at": "2026-08-13T00:00:46.425847Z"
         },
         "TGAshwinYT/glof-sar-unet-segmentation": {
-          "last_modified": "2026-08-05T18:07:19Z",
-          "last_seen_at": "2026-08-08T12:16:32.445138Z"
+          "last_modified": "2026-08-15T10:13:00Z",
+          "last_seen_at": "2026-08-15T23:36:30.730423Z"
         },
         "Tanishjain9/fast-scnn-floor-segmentation": {
           "last_modified": "2026-08-08T18:36:00Z",
@@ -118,6 +118,10 @@
           "last_modified": "2026-08-11T12:26:46Z",
           "last_seen_at": "2026-08-12T00:01:56.517702Z"
         },
+        "mlboydaisuke/pyannote-segmentation-3.0-CoreML": {
+          "last_modified": "2026-08-15T05:15:59Z",
+          "last_seen_at": "2026-08-15T23:36:30.730423Z"
+        },
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
@@ -177,6 +181,10 @@
         "yeetmq/retrieval-augmented-segmentation": {
           "last_modified": "2026-08-11T14:28:01Z",
           "last_seen_at": "2026-08-12T00:01:56.517702Z"
+        },
+        "zwc2003/tmp-slam-model": {
+          "last_modified": "2026-08-15T07:43:54Z",
+          "last_seen_at": "2026-08-15T23:36:30.730423Z"
         }
       }
     }
