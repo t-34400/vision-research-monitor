@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-15T23:36:30.730423Z",
+      "last_successful_at": "2026-08-16T23:35:44.273541Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -41,6 +41,10 @@
         "NeuronCState/manga109-segmentation-bubble-onnx": {
           "last_modified": "2026-08-12T09:21:19Z",
           "last_seen_at": "2026-08-13T00:00:46.425847Z"
+        },
+        "OSAS-AI-Lab/RF-DETR-2XLarge-brain-tumor-segmentation": {
+          "last_modified": "2026-08-16T10:44:57Z",
+          "last_seen_at": "2026-08-16T23:35:44.273541Z"
         },
         "Sathyag007/speaker-segmentation-fine-tuned-callhome-jpn": {
           "last_modified": "2026-08-05T12:20:00Z",
@@ -87,8 +91,8 @@
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
         },
         "fedeceri/cochlea-hair-cell-binary-segmentation-unet2d": {
-          "last_modified": "2026-08-13T12:55:40Z",
-          "last_seen_at": "2026-08-14T00:00:58.321044Z"
+          "last_modified": "2026-08-16T11:00:28Z",
+          "last_seen_at": "2026-08-16T23:35:44.273541Z"
         },
         "hetwaterschapshuis/vivianite-segmentation": {
           "last_modified": "2026-08-13T10:12:23Z",
