@@ -4,11 +4,15 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-17T23:39:51.375533Z",
+      "last_successful_at": "2026-08-18T23:40:12.441598Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "Ai-Adam-Six-Sigma/melanoma-segmentation": {
+          "last_modified": "2026-08-18T22:00:30Z",
+          "last_seen_at": "2026-08-18T23:40:12.441598Z"
         },
         "Catniti/catrex-lite-image-segmentation": {
           "last_modified": "2026-08-15T10:03:12Z",
@@ -107,8 +111,16 @@
           "last_seen_at": "2026-08-17T23:39:51.375533Z"
         },
         "fedeceri/cochlea-hair-cell-binary-segmentation-unet2d": {
-          "last_modified": "2026-08-16T11:00:28Z",
-          "last_seen_at": "2026-08-16T23:35:44.273541Z"
+          "last_modified": "2026-08-18T10:33:23Z",
+          "last_seen_at": "2026-08-18T23:40:12.441598Z"
+        },
+        "fedeceri/cochlea-hair-cell-synapses-binary-segmentation-unet2d": {
+          "last_modified": "2026-08-18T12:12:25Z",
+          "last_seen_at": "2026-08-18T23:40:12.441598Z"
+        },
+        "fedeceri/cochlea-synapses-segmentation-unet2d": {
+          "last_modified": "2026-08-18T09:13:42Z",
+          "last_seen_at": "2026-08-18T23:40:12.441598Z"
         },
         "hetwaterschapshuis/vivianite-segmentation": {
           "last_modified": "2026-08-13T10:12:23Z",
@@ -155,8 +167,8 @@
           "last_seen_at": "2026-08-13T00:00:46.425847Z"
         },
         "nxp/Ultralytics-YOLOv8-segmentation-Ara240": {
-          "last_modified": "2026-08-17T12:04:16Z",
-          "last_seen_at": "2026-08-17T23:39:51.375533Z"
+          "last_modified": "2026-08-18T17:17:13Z",
+          "last_seen_at": "2026-08-18T23:40:12.441598Z"
         },
         "qualcomm/MediaPipe-Selfie-Segmentation": {
           "last_modified": "2026-08-12T21:25:09Z",
@@ -191,8 +203,8 @@
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
         },
         "tea98/sam3-for-insects-segmentation": {
-          "last_modified": "2026-08-17T12:56:15Z",
-          "last_seen_at": "2026-08-17T23:39:51.375533Z"
+          "last_modified": "2026-08-18T10:59:16Z",
+          "last_seen_at": "2026-08-18T23:40:12.441598Z"
         },
         "turhancan97/visbench-generic_segmentation-dinov2_vitb14": {
           "last_modified": "2026-08-07T16:40:27Z",
