@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-18T23:40:12.441598Z",
+      "last_successful_at": "2026-08-19T23:40:31.224144Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -142,6 +142,10 @@
           "last_modified": "2026-08-10T15:12:59Z",
           "last_seen_at": "2026-08-10T23:52:16.644650Z"
         },
+        "markdanielarndt/Zebrafish_Segmentation": {
+          "last_modified": "2026-08-19T09:37:47Z",
+          "last_seen_at": "2026-08-19T23:40:31.224144Z"
+        },
         "mednasserallah/manga109-segmentation-bubble-onnx": {
           "last_modified": "2026-08-13T04:42:33Z",
           "last_seen_at": "2026-08-14T00:00:58.321044Z"
@@ -169,6 +173,10 @@
         "nxp/Ultralytics-YOLOv8-segmentation-Ara240": {
           "last_modified": "2026-08-18T17:17:13Z",
           "last_seen_at": "2026-08-18T23:40:12.441598Z"
+        },
+        "promes-mantra/receipt-segmentation": {
+          "last_modified": "2026-08-19T09:24:13Z",
+          "last_seen_at": "2026-08-19T23:40:31.224144Z"
         },
         "qualcomm/MediaPipe-Selfie-Segmentation": {
           "last_modified": "2026-08-12T21:25:09Z",
@@ -201,6 +209,22 @@
         "salma33/brain-lesion-segmentation": {
           "last_modified": "2026-08-08T15:56:34Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
+        },
+        "sherjahongir/field-segmentation": {
+          "last_modified": "2026-08-19T14:18:46Z",
+          "last_seen_at": "2026-08-19T23:40:31.224144Z"
+        },
+        "sherjahongir/field-segmentation-2": {
+          "last_modified": "2026-08-19T14:55:45Z",
+          "last_seen_at": "2026-08-19T23:40:31.224144Z"
+        },
+        "sherjahongir/football-object-detection": {
+          "last_modified": "2026-08-19T14:06:46Z",
+          "last_seen_at": "2026-08-19T23:40:31.224144Z"
+        },
+        "software-mansion/react-native-executorch-selfie-segmentation": {
+          "last_modified": "2026-08-19T20:58:14Z",
+          "last_seen_at": "2026-08-19T23:40:31.224144Z"
         },
         "tea98/sam3-for-insects-segmentation": {
           "last_modified": "2026-08-18T10:59:16Z",
