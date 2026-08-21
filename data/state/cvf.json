@@ -7,7 +7,7 @@
       "editions": {
         "cvpr-2026": {
           "bootstrapped": true,
-          "last_seen_at": "2026-08-20T23:44:17.438223Z",
+          "last_seen_at": "2026-08-21T23:43:25.523861Z",
           "paper_ids": [
             "content/CVPR2026/html/Abdal_Visual_Personalization_Turing_Test_CVPR_2026_paper.html",
             "content/CVPR2026/html/Abdelfattah_OSMO_Open-vocabulary_Self-eMOtion_Tracking_CVPR_2026_paper.html",
@@ -4081,7 +4081,7 @@
         },
         "iccv-2025": {
           "bootstrapped": true,
-          "last_seen_at": "2026-08-20T23:44:17.438223Z",
+          "last_seen_at": "2026-08-21T23:43:25.523861Z",
           "paper_ids": [
             "content/ICCV2025/html/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.html",
             "content/ICCV2025/html/Abdullah_Punching_Bag_vs._Punching_Person_Motion_Transferability_in_Videos_ICCV_2025_paper.html",
@@ -6788,7 +6788,7 @@
         },
         "wacv-2026": {
           "bootstrapped": true,
-          "last_seen_at": "2026-08-20T23:44:17.438223Z",
+          "last_seen_at": "2026-08-21T23:43:25.523861Z",
           "paper_ids": [
             "content/WACV2026/html/Adaloglou_ClusterMine_Robust_Label-Free_Visual_Out-Of-Distribution_Detection_via_Concept_Mining_from_WACV_2026_paper.html",
             "content/WACV2026/html/Adeli_GAITGen_Disentangled_Motion-Pathology_Impaired_Gait_Generative_Model_--_Bringing_Motion_WACV_2026_paper.html",
