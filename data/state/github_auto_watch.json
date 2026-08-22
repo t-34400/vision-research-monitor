@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-08-21T23:47:55.068622Z",
+  "last_updated_at": "2026-08-22T23:44:26.087685Z",
   "repositories": {
     "1000014156": {
       "first_promoted_at": "2026-08-18T23:46:15.396556Z",
@@ -270,10 +270,31 @@
       ],
       "url": "https://github.com/CLendering/SubspaceAD"
     },
+    "1168887575": {
+      "first_promoted_at": "2026-08-22T23:44:26.087685Z",
+      "full_name": "physical-superintelligence-lab/Psi0",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "1168887575",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 2798,
+      "topics": [
+        "foundation_model_adaptation",
+        "synthetic_data",
+        "vision_language_models"
+      ],
+      "url": "https://github.com/physical-superintelligence-lab/Psi0"
+    },
     "1183158552": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "Allenxinn/AgentVLN",
-      "last_observed_at": "2026-08-17T23:46:09.669552Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "research_tool",
@@ -282,7 +303,7 @@
       "repo_id": "1183158552",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 193,
+      "stars": 197,
       "topics": [
         "embodied_vision",
         "vision_language_models"
@@ -331,7 +352,7 @@
     "1193744559": {
       "first_promoted_at": "2026-08-18T23:46:15.396556Z",
       "full_name": "sorryhyun/anima_lora",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "research_tool",
@@ -385,27 +406,10 @@
       ],
       "url": "https://github.com/zsh523/RecGen3D"
     },
-    "1211098123": {
-      "first_promoted_at": "2026-08-17T23:46:09.669552Z",
-      "full_name": "chrisyrniu/humanoid-touch-dream",
-      "last_observed_at": "2026-08-17T23:46:09.669552Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "strong_research"
-      ],
-      "repo_id": "1211098123",
-      "research_category": "research",
-      "research_relevance": 1.0,
-      "stars": 75,
-      "topics": [
-        "knowledge_distillation"
-      ],
-      "url": "https://github.com/chrisyrniu/humanoid-touch-dream"
-    },
     "1229061486": {
       "first_promoted_at": "2026-08-12T00:06:45.191668Z",
       "full_name": "katopz/katgpt-rs",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "strong_research"
@@ -440,7 +444,7 @@
     "1301140808": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "img2threejs/img2threejs",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -449,7 +453,7 @@
       "repo_id": "1301140808",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 12588,
+      "stars": 12855,
       "topics": [
         "image_to_3d"
       ],
@@ -542,7 +546,7 @@
     "154843614": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "open-edge-platform/geti",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -551,7 +555,7 @@
       "repo_id": "154843614",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 1315,
+      "stars": 1316,
       "topics": [
         "image_classification",
         "object_detection",
@@ -563,7 +567,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -572,7 +576,7 @@
       "repo_id": "167694194",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 35274,
+      "stars": 35300,
       "topics": [
         "object_detection"
       ],
@@ -627,7 +631,7 @@
     "202088108": {
       "first_promoted_at": "2026-08-17T23:46:09.669552Z",
       "full_name": "nagadomi/nunif",
-      "last_observed_at": "2026-08-20T23:49:27.938033Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -635,7 +639,7 @@
       "repo_id": "202088108",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 3404,
+      "stars": 3409,
       "topics": [
         "super_resolution",
         "vr_mr_xr"
@@ -841,7 +845,7 @@
     "26531519": {
       "first_promoted_at": "2026-08-17T23:46:09.669552Z",
       "full_name": "mapillary/OpenSfM",
-      "last_observed_at": "2026-08-18T23:46:15.396556Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -878,7 +882,7 @@
     "291498455": {
       "first_promoted_at": "2026-08-10T23:59:47.708090Z",
       "full_name": "roflcoopter/viseron",
-      "last_observed_at": "2026-08-20T23:49:27.938033Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -886,7 +890,7 @@
       "repo_id": "291498455",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 3386,
+      "stars": 3389,
       "topics": [
         "object_detection",
         "open_vocabulary_recognition",
@@ -1054,7 +1058,7 @@
     "423775360": {
       "first_promoted_at": "2026-08-10T23:59:47.708090Z",
       "full_name": "open-edge-platform/anomalib",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1064,7 +1068,7 @@
       "repo_id": "423775360",
       "research_category": "research",
       "research_relevance": 0.85,
-      "stars": 6072,
+      "stars": 6074,
       "topics": [
         "model_compression",
         "object_detection",
@@ -1156,7 +1160,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1165,7 +1169,7 @@
       "repo_id": "535360445",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 60843,
+      "stars": 60864,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1330,7 +1334,7 @@
     "672651553": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "MrNeRF/LichtFeld-Studio",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1339,7 +1343,7 @@
       "repo_id": "672651553",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 3561,
+      "stars": 3564,
       "topics": [
         "gaussian_splatting"
       ],
@@ -1508,7 +1512,7 @@
     "787462297": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "Blaizzy/mlx-vlm",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1518,7 +1522,7 @@
       "repo_id": "787462297",
       "research_category": "research",
       "research_relevance": 0.65,
-      "stars": 5388,
+      "stars": 5392,
       "topics": [
         "vision_language_models"
       ],
@@ -1527,7 +1531,7 @@
     "871368615": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "NVlabs/Sana",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1537,7 +1541,7 @@
       "repo_id": "871368615",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 8795,
+      "stars": 8802,
       "topics": [
         "efficient_vision_models",
         "quantization",
@@ -1548,7 +1552,7 @@
     "876545970": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "NVIDIA-AI-Blueprints/video-search-and-summarization",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1557,7 +1561,7 @@
       "repo_id": "876545970",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 1818,
+      "stars": 1819,
       "topics": [
         "video_understanding",
         "vision_language_models"
@@ -1646,7 +1650,7 @@
     "920212664": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ArgoHA/D-FINE-seg",
-      "last_observed_at": "2026-08-16T23:43:21.617531Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "research_tool",
@@ -1655,7 +1659,7 @@
       "repo_id": "920212664",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 194,
+      "stars": 196,
       "topics": [
         "instance_segmentation",
         "object_detection",
@@ -1795,7 +1799,7 @@
     "951534260": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/rf-detr",
-      "last_observed_at": "2026-08-21T23:47:55.068622Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1804,7 +1808,7 @@
       "repo_id": "951534260",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 9031,
+      "stars": 9034,
       "topics": [
         "instance_segmentation",
         "object_detection"
@@ -1908,7 +1912,7 @@
     "966243985": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/trackers",
-      "last_observed_at": "2026-08-20T23:49:27.938033Z",
+      "last_observed_at": "2026-08-22T23:44:26.087685Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1917,7 +1921,7 @@
       "repo_id": "966243985",
       "research_category": "research",
       "research_relevance": 0.4,
-      "stars": 3692,
+      "stars": 3702,
       "topics": [
         "object_detection",
         "object_tracking"
