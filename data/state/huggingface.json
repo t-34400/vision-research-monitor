@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-23T23:37:28.246327Z",
+      "last_successful_at": "2026-08-24T23:39:45.305287Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -258,6 +258,10 @@
           "last_modified": "2026-08-07T14:07:24Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
         },
+        "config-h/Wearable-IMU-Activity-Segmentation-Pipeline": {
+          "last_modified": "2026-08-24T16:05:26Z",
+          "last_seen_at": "2026-08-24T23:39:45.305287Z"
+        },
         "deepakmukherjee/paper_021393628_robotics_vision_language": {
           "last_modified": "2026-08-23T08:43:26Z",
           "last_seen_at": "2026-08-23T23:37:28.246327Z"
@@ -309,6 +313,10 @@
         "huydoanlame/object-detection-model": {
           "last_modified": "2026-08-23T08:07:34Z",
           "last_seen_at": "2026-08-23T23:37:28.246327Z"
+        },
+        "iamokish/manga-text-segmentation-safetensors": {
+          "last_modified": "2026-08-24T10:59:19Z",
+          "last_seen_at": "2026-08-24T23:39:45.305287Z"
         },
         "igor3357/post-discharge-channel-segmentation": {
           "last_modified": "2026-08-20T20:50:19Z",
@@ -363,8 +371,8 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "litert-community/Cloth-Segmentation-U2Net-LiteRT": {
-          "last_modified": "2026-08-10T15:12:59Z",
-          "last_seen_at": "2026-08-10T23:52:16.644650Z"
+          "last_modified": "2026-08-24T02:47:13Z",
+          "last_seen_at": "2026-08-24T23:39:45.305287Z"
         },
         "markdanielarndt/Zebrafish_Segmentation": {
           "last_modified": "2026-08-21T07:19:27Z",
