@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-24T23:39:45.305287Z",
+      "last_successful_at": "2026-08-25T23:40:47.806863Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -21,6 +21,10 @@
         "Alinealmeidagin/paper_022405165_robotics_vision_language": {
           "last_modified": "2026-08-22T02:56:03Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "Asher-1/2DGS-SLAM-GGML": {
+          "last_modified": "2026-08-25T09:47:30Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "Bboykoroman/paper_023167298_video_understanding": {
           "last_modified": "2026-08-22T03:04:14Z",
@@ -370,6 +374,10 @@
           "last_modified": "2026-08-21T19:03:45Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "lblod/decide-marked-segmentation": {
+          "last_modified": "2026-08-25T06:57:21Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
+        },
         "litert-community/Cloth-Segmentation-U2Net-LiteRT": {
           "last_modified": "2026-08-24T02:47:13Z",
           "last_seen_at": "2026-08-24T23:39:45.305287Z"
@@ -443,28 +451,28 @@
           "last_seen_at": "2026-08-19T23:40:31.224144Z"
         },
         "qualcomm/MediaPipe-Selfie-Segmentation": {
-          "last_modified": "2026-08-12T21:25:09Z",
-          "last_seen_at": "2026-08-13T00:00:46.425847Z"
+          "last_modified": "2026-08-25T04:13:24Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "qualcomm/Unet-Segmentation": {
-          "last_modified": "2026-08-12T21:18:11Z",
-          "last_seen_at": "2026-08-13T00:00:46.425847Z"
+          "last_modified": "2026-08-25T04:17:35Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "qualcomm/YOLO26-Segmentation": {
-          "last_modified": "2026-08-12T21:31:45Z",
-          "last_seen_at": "2026-08-13T00:00:46.425847Z"
+          "last_modified": "2026-08-25T04:22:52Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "qualcomm/YOLOE-Segmentation": {
-          "last_modified": "2026-08-12T21:18:36Z",
-          "last_seen_at": "2026-08-13T00:00:46.425847Z"
+          "last_modified": "2026-08-25T04:16:02Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "qualcomm/YOLOv11-Segmentation": {
-          "last_modified": "2026-08-12T21:24:22Z",
-          "last_seen_at": "2026-08-13T00:00:46.425847Z"
+          "last_modified": "2026-08-25T04:21:17Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "qualcomm/YOLOv8-Segmentation": {
-          "last_modified": "2026-08-12T21:18:38Z",
-          "last_seen_at": "2026-08-13T00:00:46.425847Z"
+          "last_modified": "2026-08-25T04:18:06Z",
+          "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "reproducible-ai/nerf-pytorch-lego": {
           "last_modified": "2026-08-11T17:52:57Z",
