@@ -71,6 +71,10 @@ def test_project_configuration_is_valid() -> None:
         {venue["id"] for venue in venues["venues"]},
     )
     assert len(sources["cvf"]["editions"]) == 3
+    assert sources["cvf"]["inventory_loss_guard"] == {
+        "maximum_fraction": 0.05,
+        "minimum_tolerance": 5,
+    }
     assert len(sources["huggingface"]["queries"]) == 20
     assert len(sources["research_blogs"]["feeds"]) == 3
 

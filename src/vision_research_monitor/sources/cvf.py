@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -78,15 +79,20 @@ class CVFCollector:
                         f"CVF edition {edition['id']} yielded {len(papers)} papers; expected at least {minimum}"
                     )
                 edition_state = cvf_state.setdefault(edition["id"], {})
-                previous = set(edition_state.get("paper_ids", []))
+                known = set(edition_state.get("paper_ids", []))
+                previous_active = set(edition_state.get("active_paper_ids", known))
                 current = set(papers)
                 bootstrapped = bool(edition_state.get("bootstrapped"))
-                missing = sorted(previous - current) if bootstrapped else []
+                missing = sorted(previous_active - current) if bootstrapped else []
                 if missing:
-                    raise ValueError(
-                        f"CVF edition {edition['id']} lost {len(missing)} previously observed paper IDs"
+                    self._guard_inventory_loss(edition, previous_active, current, missing)
+                    result.add_warning(
+                        f"cvf:{edition['id']}",
+                        f"CVF edition {edition['id']} removed {len(missing)} previously active "
+                        f"paper IDs: previous_active={len(previous_active)}, current={len(current)}, "
+                        f"missing_ids={missing}",
                     )
-                new_ids = sorted(current - previous) if bootstrapped else []
+                new_ids = sorted(current - known) if bootstrapped else []
 
                 for source_id in new_ids:
                     paper = papers[source_id]
@@ -98,7 +104,8 @@ class CVFCollector:
                     for project_url in item.metadata.get("project_urls", []):
                         result.items.append(project_item_from_url(item, project_url))
 
-                edition_state["paper_ids"] = sorted(current)
+                edition_state["paper_ids"] = sorted(known | current)
+                edition_state["active_paper_ids"] = sorted(current)
                 edition_state["bootstrapped"] = True
                 edition_state["last_seen_at"] = to_iso8601(run_at)
             except Exception as exc:
@@ -106,6 +113,30 @@ class CVFCollector:
 
         result.items.sort(key=lambda item: (item.kind, item.source_id))
         return result
+
+    def _guard_inventory_loss(
+        self,
+        edition: dict[str, Any],
+        previous_active: set[str],
+        current: set[str],
+        missing: list[str],
+    ) -> None:
+        guard = self.config["cvf"]["inventory_loss_guard"]
+        fraction_limit = float(guard["maximum_fraction"])
+        minimum_tolerance = int(guard["minimum_tolerance"])
+        allowed_missing = max(
+            minimum_tolerance,
+            math.ceil(len(previous_active) * fraction_limit),
+        )
+        if len(missing) <= allowed_missing:
+            return
+
+        raise ValueError(
+            f"CVF edition {edition['id']} inventory loss exceeded guard: "
+            f"previous_active={len(previous_active)}, current={len(current)}, "
+            f"missing={len(missing)}, allowed_missing={allowed_missing}, "
+            f"missing_ids={missing}"
+        )
 
     def _collect_index(self, edition: dict[str, Any]) -> dict[str, CVFIndexPaper]:
         papers: dict[str, CVFIndexPaper] = {}

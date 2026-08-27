@@ -16,6 +16,9 @@ cvf:
   base_url: https://openaccess.thecvf.com
   request_interval_seconds: 0.30
   user_agent: vision-research-monitor/0.1
+  inventory_loss_guard:
+    maximum_fraction: 0.05
+    minimum_tolerance: 5
   editions:
     - id: cvpr-2026
       venue: cvpr

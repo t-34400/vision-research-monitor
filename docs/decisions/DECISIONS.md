@@ -434,6 +434,9 @@ Later unseen IDs are fetched and classified. An edition-specific minimum paper
 count and a requirement that previously observed paper IDs remain present prevent
 a partial page or upstream HTML change from replacing a complete inventory.
 
+The strict monotonic-presence requirement was refined by D-163 after CVF removed
+published entries from both its proceedings index and detail URLs.
+
 ### D-140 — Discover Hugging Face model repositories by bounded modification time
 
 **Status:** Accepted
@@ -689,6 +692,20 @@ auto-promoted repositories. This keeps tool-update visibility while bounding
 API usage and canonical state size. Legacy repository snapshots are pruned when
 they are not represented by either detail-watch source.
 
+### D-163 — Separate historical and active CVF inventories
+
+**Status:** Accepted
+
+CVF edition state preserves `paper_ids` as a monotonic historical identity set
+and records the latest successful source snapshot separately in
+`active_paper_ids`. A bounded loss from the active inventory is treated as
+source-side churn: the collector emits a warning, keeps historical IDs, and
+updates the active snapshot. A reappearing historical ID is not emitted as a new
+paper. The bounded-loss allowance is configuration-driven as the greater of a
+fraction of the previous active inventory and a minimum count tolerance; losses
+above that guard still fail before state changes. This retains protection against
+partial proceedings pages while accommodating verified upstream removals.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational
@@ -697,4 +714,3 @@ need justifies them:
 - whether a hosted embedding/LLM provider adds enough measured value beyond the provider-neutral Phase 6 contract;
 - when repository-tracked canonical history is large enough to justify external storage;
 - whether interactive archive usage justifies a hosted dashboard beyond the Phase 8 search index/CLI.
-

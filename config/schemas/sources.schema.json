@@ -31,12 +31,21 @@
     "cvf": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["enabled", "base_url", "request_interval_seconds", "user_agent", "editions"],
+      "required": ["enabled", "base_url", "request_interval_seconds", "user_agent", "inventory_loss_guard", "editions"],
       "properties": {
         "enabled": {"type": "boolean"},
         "base_url": {"type": "string", "format": "uri"},
         "request_interval_seconds": {"type": "number", "minimum": 0},
         "user_agent": {"type": "string", "minLength": 1},
+        "inventory_loss_guard": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["maximum_fraction", "minimum_tolerance"],
+          "properties": {
+            "maximum_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+            "minimum_tolerance": {"type": "integer", "minimum": 0}
+          }
+        },
         "editions": {
           "type": "array",
           "minItems": 1,

@@ -37,8 +37,8 @@ For each edition the collector:
 
 1. downloads every configured index page;
 2. parses paper detail URLs and source IDs;
-3. rejects an unexpectedly small index or an inventory that loses a previously
-   observed paper ID before changing state;
+3. rejects an unexpectedly small index and compares the current inventory with
+   the previous active inventory;
 4. uses the first successful run as a baseline inventory without emitting old
    proceedings as new research;
 5. on later runs, fetches only newly observed paper detail pages;
@@ -46,9 +46,19 @@ For each edition the collector:
    pipeline;
 7. emits relevant papers using `source=cvf`, `kind=paper`.
 
-The minimum-index and monotonic-inventory guards intentionally turn a likely
-upstream HTML-layout change or partial response into a failed target instead of
-replacing a complete inventory with a truncated one.
+CVF state keeps `paper_ids` as the monotonic historical set of every source ID
+ever observed and `active_paper_ids` as the latest successful index snapshot.
+A paper that disappears and later reappears therefore does not become a new
+discovery again.
+
+The minimum-index guard still rejects clearly incomplete proceedings pages.
+Bounded removals from the previous active inventory are accepted as upstream
+source churn, recorded as warnings, and reflected only in `active_paper_ids`.
+The configured inventory-loss guard fails the edition before changing state when
+the number removed exceeds the greater of the configured fractional allowance
+and minimum count tolerance. This preserves protection against partial pages or
+HTML-layout failures without assuming that CVF inventories are permanently
+monotonic.
 
 ### Project and code extraction
 
@@ -139,8 +149,9 @@ data/state/huggingface.json
 data/state/research_blogs.json
 ```
 
-CVF persists edition inventories. Hugging Face persists last-seen repository
-revisions plus a source checkpoint. Research blogs persist a source checkpoint.
+CVF persists historical and active edition inventories. Hugging Face persists
+last-seen repository revisions plus a source checkpoint. Research blogs persist
+a source checkpoint.
 
 Normalized item IDs are deterministic. Replaying overlapping windows is safe
 because the JSONL store deduplicates already persisted item IDs.

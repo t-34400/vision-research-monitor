@@ -79,7 +79,13 @@ def test_cvf_collector_baselines_then_emits_new_relevant_paper_and_project() -> 
     assert paper.metadata["code_urls"] == ["https://github.com/example/pose-free-gs"]
     assert paper.metadata["project_urls"] == ["https://example.org/pose-free-gs"]
     assert project.related_items == [paper.id]
-    assert state["sources"]["cvf"]["editions"]["cvpr-2026"]["bootstrapped"] is True
+    edition_state = state["sources"]["cvf"]["editions"]["cvpr-2026"]
+    assert edition_state["bootstrapped"] is True
+    assert edition_state["paper_ids"] == [
+        "content/CVPR2026/html/Example_Pose-Free_Gaussian_Splatting_CVPR_2026_paper.html",
+        old_id,
+    ]
+    assert edition_state["active_paper_ids"] == edition_state["paper_ids"]
 
 
 def test_project_sidecar_identity_preserves_parent_relation() -> None:
@@ -113,19 +119,102 @@ def test_project_sidecar_identity_preserves_parent_relation() -> None:
     assert second_project.related_items == [second.id]
 
 
-def test_cvf_collector_rejects_inventory_that_loses_known_papers() -> None:
+def test_cvf_collector_allows_small_inventory_loss_and_preserves_history() -> None:
     config, taxonomy = load_inputs()
     config["cvf"]["editions"] = [dict(config["cvf"]["editions"][0], minimum_index_papers=1)]
+    old_id = "content/CVPR2026/html/Old_Unrelated_Paper_CVPR_2026_paper.html"
+    vanished_id = "content/CVPR2026/html/Vanished_Paper_CVPR_2026_paper.html"
+    new_id = "content/CVPR2026/html/Example_Pose-Free_Gaussian_Splatting_CVPR_2026_paper.html"
     state = {
         "sources": {
             "cvf": {
                 "editions": {
                     "cvpr-2026": {
                         "bootstrapped": True,
-                        "paper_ids": [
-                            "content/CVPR2026/html/Old_Unrelated_Paper_CVPR_2026_paper.html",
-                            "content/CVPR2026/html/Vanished_Paper_CVPR_2026_paper.html",
-                        ],
+                        "paper_ids": [old_id, vanished_id],
+                        "active_paper_ids": [old_id, vanished_id],
+                    }
+                }
+            }
+        }
+    }
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("Example_Pose-Free_Gaussian_Splatting_CVPR_2026_paper.html"):
+            return httpx.Response(200, text=(FIXTURES / "cvf_detail.html").read_text())
+        if request.url.path == "/CVPR2026":
+            return httpx.Response(200, text=(FIXTURES / "cvf_index.html").read_text())
+        raise AssertionError(f"unexpected request {request.url}")
+
+    with HttpClient(config["cvf"]["base_url"], transport=httpx.MockTransport(handler)) as client:
+        result = CVFCollector(client, state, config, taxonomy, sleeper=lambda _: None).collect(
+            datetime(2026, 8, 8, tzinfo=UTC)
+        )
+
+    assert result.failed_targets == 0
+    assert any(diagnostic["level"] == "warning" for diagnostic in result.diagnostics)
+    assert any(item.source_id == new_id for item in result.items)
+    edition_state = state["sources"]["cvf"]["editions"]["cvpr-2026"]
+    assert edition_state["paper_ids"] == sorted([old_id, vanished_id, new_id])
+    assert edition_state["active_paper_ids"] == sorted([old_id, new_id])
+
+
+def test_cvf_collector_does_not_reemit_reappearing_historical_paper() -> None:
+    config, taxonomy = load_inputs()
+    old_id = "content/CVPR2026/html/Old_Unrelated_Paper_CVPR_2026_paper.html"
+    reappearing_id = (
+        "content/CVPR2026/html/Example_Pose-Free_Gaussian_Splatting_CVPR_2026_paper.html"
+    )
+    state = {
+        "sources": {
+            "cvf": {
+                "editions": {
+                    "cvpr-2026": {
+                        "bootstrapped": True,
+                        "paper_ids": [old_id, reappearing_id],
+                        "active_paper_ids": [old_id],
+                    }
+                }
+            }
+        }
+    }
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/CVPR2026":
+            return httpx.Response(200, text=(FIXTURES / "cvf_index.html").read_text())
+        raise AssertionError(f"unexpected request {request.url}")
+
+    with HttpClient(config["cvf"]["base_url"], transport=httpx.MockTransport(handler)) as client:
+        result = CVFCollector(client, state, config, taxonomy, sleeper=lambda _: None).collect(
+            datetime(2026, 8, 8, tzinfo=UTC)
+        )
+
+    assert result.failed_targets == 0
+    assert result.items == []
+    assert result.diagnostics == []
+    assert state["sources"]["cvf"]["editions"]["cvpr-2026"]["active_paper_ids"] == sorted(
+        [old_id, reappearing_id]
+    )
+
+
+def test_cvf_collector_rejects_inventory_loss_above_guard_without_changing_state() -> None:
+    config, taxonomy = load_inputs()
+    current_ids = [
+        "content/CVPR2026/html/Old_Unrelated_Paper_CVPR_2026_paper.html",
+        "content/CVPR2026/html/Example_Pose-Free_Gaussian_Splatting_CVPR_2026_paper.html",
+    ]
+    vanished_ids = [
+        f"content/CVPR2026/html/Vanished_{index}_CVPR_2026_paper.html" for index in range(6)
+    ]
+    previous_ids = sorted(current_ids + vanished_ids)
+    state = {
+        "sources": {
+            "cvf": {
+                "editions": {
+                    "cvpr-2026": {
+                        "bootstrapped": True,
+                        "paper_ids": previous_ids,
+                        "active_paper_ids": previous_ids,
                     }
                 }
             }
@@ -144,7 +233,10 @@ def test_cvf_collector_rejects_inventory_that_loses_known_papers() -> None:
 
     assert result.failed_targets == 1
     assert result.items == []
-    assert state["sources"]["cvf"]["editions"]["cvpr-2026"]["paper_ids"] == [
-        "content/CVPR2026/html/Old_Unrelated_Paper_CVPR_2026_paper.html",
-        "content/CVPR2026/html/Vanished_Paper_CVPR_2026_paper.html",
-    ]
+    diagnostic = result.diagnostics[0]
+    assert diagnostic["level"] == "error"
+    assert "missing=6" in diagnostic["message"]
+    assert "allowed_missing=5" in diagnostic["message"]
+    edition_state = state["sources"]["cvf"]["editions"]["cvpr-2026"]
+    assert edition_state["paper_ids"] == previous_ids
+    assert edition_state["active_paper_ids"] == previous_ids
