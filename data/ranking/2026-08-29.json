@@ -1,0 +1,2934 @@
+{
+  "items": [
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26856",
+      "signals": {
+        "freshness": 0.6962,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.8623,
+        "research": 1.0
+      },
+      "total": 0.7531,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26716",
+      "signals": {
+        "freshness": 0.6816,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.8103,
+        "research": 1.0
+      },
+      "total": 0.7353,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26645",
+      "signals": {
+        "freshness": 0.6737,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.6508,
+        "research": 1.0
+      },
+      "total": 0.6863,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26848",
+      "signals": {
+        "freshness": 0.6954,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.6384,
+        "research": 1.0
+      },
+      "total": 0.6858,
+      "watched_override": false
+    },
+    {
+      "change_label": "RELEASED",
+      "item_id": "github:release:535360445:release:378007975",
+      "signals": {
+        "freshness": 0.7535,
+        "novelty": 1.0,
+        "popularity": 0.7296,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6645,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26866",
+      "signals": {
+        "freshness": 0.697,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.9998,
+        "research": 1.0
+      },
+      "total": 0.6445,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26531",
+      "signals": {
+        "freshness": 0.6494,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.6374,
+      "watched_override": false
+    },
+    {
+      "change_label": "RELEASED",
+      "item_id": "github:release:291498455:release:377639308",
+      "signals": {
+        "freshness": 0.6845,
+        "novelty": 1.0,
+        "popularity": 0.3882,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6371,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27085",
+      "signals": {
+        "freshness": 0.722,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.4583,
+        "research": 1.0
+      },
+      "total": 0.6358,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f482b9b093a6b104bfbe9a02",
+      "signals": {
+        "freshness": 0.854,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8105,
+        "research": 1.0
+      },
+      "total": 0.6162,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26872",
+      "signals": {
+        "freshness": 0.6975,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.9003,
+        "research": 1.0
+      },
+      "total": 0.6147,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:535360445:tag:v8.4.131",
+      "signals": {
+        "freshness": 0.8561,
+        "novelty": 0.65,
+        "popularity": 0.7296,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6099,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:8b5407edd6d6e1b09e87c2bb",
+      "signals": {
+        "freshness": 0.8326,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8001,
+        "research": 1.0
+      },
+      "total": 0.6099,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9f78dc54aca1f2de16c506ae",
+      "signals": {
+        "freshness": 0.7534,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8216,
+        "research": 1.0
+      },
+      "total": 0.6045,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:7d3466a647db8d4f974fbaae",
+      "signals": {
+        "freshness": 0.7702,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8109,
+        "research": 1.0
+      },
+      "total": 0.6038,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:event:1264722786:metadata:2026-08-28T06:36:25Z:f6b5a093849349a2",
+      "signals": {
+        "freshness": 0.854,
+        "novelty": 0.55,
+        "popularity": 1.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6031,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b7f611ecb3129276cb0c9c6e",
+      "signals": {
+        "freshness": 0.827,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7735,
+        "research": 1.0
+      },
+      "total": 0.6011,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c86baecaf079e9e968e2b30d",
+      "signals": {
+        "freshness": 0.783,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.795,
+        "research": 1.0
+      },
+      "total": 0.6009,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:60781f6f56e1929359db2462",
+      "signals": {
+        "freshness": 0.7285,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8112,
+        "research": 1.0
+      },
+      "total": 0.5976,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:8b831753c53d8e83afd41c54",
+      "signals": {
+        "freshness": 0.7951,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7739,
+        "research": 1.0
+      },
+      "total": 0.5964,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:5bea55a2e6b4778ee274845e",
+      "signals": {
+        "freshness": 0.7693,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7814,
+        "research": 1.0
+      },
+      "total": 0.5948,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27407",
+      "signals": {
+        "freshness": 0.7535,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.593,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:fc76de1235f1c7129cfc591e",
+      "signals": {
+        "freshness": 0.7376,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7911,
+        "research": 1.0
+      },
+      "total": 0.593,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:291498455:tag:v3.6.1",
+      "signals": {
+        "freshness": 0.8561,
+        "novelty": 0.65,
+        "popularity": 0.3882,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5928,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:729127c44d4decb1d7c56b33",
+      "signals": {
+        "freshness": 0.7328,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7882,
+        "research": 1.0
+      },
+      "total": 0.5914,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:dc9da896d0395047636c630f",
+      "signals": {
+        "freshness": 0.7758,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7659,
+        "research": 1.0
+      },
+      "total": 0.5911,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:876545970:tag:dev-26.08.4",
+      "signals": {
+        "freshness": 0.8561,
+        "novelty": 0.65,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5908,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:876545970:tag:nightly-20260818-1",
+      "signals": {
+        "freshness": 0.8561,
+        "novelty": 0.65,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5908,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:876545970:tag:nightly-20260827",
+      "signals": {
+        "freshness": 0.8561,
+        "novelty": 0.65,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5908,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:876545970:tag:nightly-helm-bypass-20260820",
+      "signals": {
+        "freshness": 0.8561,
+        "novelty": 0.65,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5908,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26720",
+      "signals": {
+        "freshness": 0.6818,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.8225,
+        "research": 1.0
+      },
+      "total": 0.589,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:296dc10208c4519e1360e14d",
+      "signals": {
+        "freshness": 0.7337,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7734,
+        "research": 1.0
+      },
+      "total": 0.5871,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26722",
+      "signals": {
+        "freshness": 0.6819,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.8097,
+        "research": 1.0
+      },
+      "total": 0.5852,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:6443cd6c8e79465adb542846",
+      "signals": {
+        "freshness": 0.6691,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7977,
+        "research": 1.0
+      },
+      "total": 0.5847,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:48e2acf0544143d8d61c718b",
+      "signals": {
+        "freshness": 0.7106,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7733,
+        "research": 1.0
+      },
+      "total": 0.5836,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27121",
+      "signals": {
+        "freshness": 0.7248,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7821,
+        "research": 1.0
+      },
+      "total": 0.5834,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:8dafb70ad269363865149231",
+      "signals": {
+        "freshness": 0.6671,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7937,
+        "research": 1.0
+      },
+      "total": 0.5832,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c2f4188a0b762712e968111a",
+      "signals": {
+        "freshness": 0.6908,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7766,
+        "research": 1.0
+      },
+      "total": 0.5816,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26684",
+      "signals": {
+        "freshness": 0.6783,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7967,
+        "research": 1.0
+      },
+      "total": 0.5808,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0a266475f0f5dacef0047535",
+      "signals": {
+        "freshness": 0.6674,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7855,
+        "research": 1.0
+      },
+      "total": 0.5808,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26789",
+      "signals": {
+        "freshness": 0.6891,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7904,
+        "research": 1.0
+      },
+      "total": 0.5805,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27079",
+      "signals": {
+        "freshness": 0.7214,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7645,
+        "research": 1.0
+      },
+      "total": 0.5776,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0bfc4de4b8b18589642876a0",
+      "signals": {
+        "freshness": 0.67,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.773,
+        "research": 1.0
+      },
+      "total": 0.5774,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1231229190",
+      "signals": {
+        "freshness": 0.8263,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.7431,
+        "research": 0.7
+      },
+      "total": 0.5769,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26580",
+      "signals": {
+        "freshness": 0.6596,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7923,
+        "research": 1.0
+      },
+      "total": 0.5766,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26571",
+      "signals": {
+        "freshness": 0.6573,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.779,
+        "research": 1.0
+      },
+      "total": 0.5723,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26829",
+      "signals": {
+        "freshness": 0.6942,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7483,
+        "research": 1.0
+      },
+      "total": 0.5686,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26947",
+      "signals": {
+        "freshness": 0.7059,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7386,
+        "research": 1.0
+      },
+      "total": 0.5675,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26993",
+      "signals": {
+        "freshness": 0.7118,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7345,
+        "research": 1.0
+      },
+      "total": 0.5671,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26517",
+      "signals": {
+        "freshness": 0.6467,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7545,
+        "research": 1.0
+      },
+      "total": 0.5634,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26812",
+      "signals": {
+        "freshness": 0.6925,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7225,
+        "research": 1.0
+      },
+      "total": 0.5606,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:1264722786:commit:64bd8e8aa4ccee6909d1aad4f12db30bb4e1c122",
+      "signals": {
+        "freshness": 0.6968,
+        "novelty": 0.45,
+        "popularity": 1.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5595,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26806",
+      "signals": {
+        "freshness": 0.692,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.7189,
+        "research": 1.0
+      },
+      "total": 0.5595,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27088",
+      "signals": {
+        "freshness": 0.7222,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6989,
+        "research": 1.0
+      },
+      "total": 0.558,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27186",
+      "signals": {
+        "freshness": 0.7316,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6898,
+        "research": 1.0
+      },
+      "total": 0.5567,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:535360445:commit:c9ecb4218b81b0e2745145ab5edc2d9cb65c4124",
+      "signals": {
+        "freshness": 0.7533,
+        "novelty": 0.45,
+        "popularity": 0.7296,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5545,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27417",
+      "signals": {
+        "freshness": 0.7545,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6686,
+        "research": 1.0
+      },
+      "total": 0.5538,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26868",
+      "signals": {
+        "freshness": 0.6971,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.696,
+        "research": 1.0
+      },
+      "total": 0.5534,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:d8a0c9786dfb488f30d90685",
+      "signals": {
+        "freshness": 0.8453,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5518,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27181",
+      "signals": {
+        "freshness": 0.7311,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.672,
+        "research": 1.0
+      },
+      "total": 0.5513,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c452b34e4ac7912cdd44095d",
+      "signals": {
+        "freshness": 0.8386,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5508,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:787462297:commit:8adff01e837b3e0f2304fc1f1e49f1c5c89d4c32",
+      "signals": {
+        "freshness": 0.7987,
+        "novelty": 0.45,
+        "popularity": 0.5196,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5508,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:fab7248f6e28fdfbca4c427e",
+      "signals": {
+        "freshness": 0.834,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5501,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:03cfc85bd8ecdb8b1a97653d",
+      "signals": {
+        "freshness": 0.8295,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5494,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27190",
+      "signals": {
+        "freshness": 0.7318,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6617,
+        "research": 1.0
+      },
+      "total": 0.5483,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:672651553:commit:395c7f31edc3790fbe013f2bd9bed9f9af1e45e7",
+      "signals": {
+        "freshness": 0.7565,
+        "novelty": 0.45,
+        "popularity": 0.5868,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5478,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27456",
+      "signals": {
+        "freshness": 0.7563,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.647,
+        "research": 1.0
+      },
+      "total": 0.5475,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26888",
+      "signals": {
+        "freshness": 0.6987,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6739,
+        "research": 1.0
+      },
+      "total": 0.547,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27033",
+      "signals": {
+        "freshness": 0.7164,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6603,
+        "research": 1.0
+      },
+      "total": 0.5455,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:871368615:commit:6c3aeea94945692a902df8db25327eba040b5d91",
+      "signals": {
+        "freshness": 0.6938,
+        "novelty": 0.45,
+        "popularity": 0.7296,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5455,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:23007417:commit:2f7596dd165cd7f743fe8ec395fd53f2a22f3170",
+      "signals": {
+        "freshness": 0.7411,
+        "novelty": 0.45,
+        "popularity": 0.5558,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.544,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26820",
+      "signals": {
+        "freshness": 0.6932,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6661,
+        "research": 1.0
+      },
+      "total": 0.5438,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27367",
+      "signals": {
+        "freshness": 0.7497,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6322,
+        "research": 1.0
+      },
+      "total": 0.5421,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27051",
+      "signals": {
+        "freshness": 0.7182,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.648,
+        "research": 1.0
+      },
+      "total": 0.5421,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9e99c7cfa6aa359880fc8356",
+      "signals": {
+        "freshness": 0.7725,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5409,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:feb6d6d2808bf3a14ab459b9",
+      "signals": {
+        "freshness": 0.7721,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5408,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26971",
+      "signals": {
+        "freshness": 0.7089,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.647,
+        "research": 1.0
+      },
+      "total": 0.5404,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:fef275d37dd26bdcd13d4b65",
+      "signals": {
+        "freshness": 0.767,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5401,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27150",
+      "signals": {
+        "freshness": 0.7281,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6359,
+        "research": 1.0
+      },
+      "total": 0.54,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27395",
+      "signals": {
+        "freshness": 0.7523,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6222,
+        "research": 1.0
+      },
+      "total": 0.5395,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27290",
+      "signals": {
+        "freshness": 0.7418,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.624,
+        "research": 1.0
+      },
+      "total": 0.5385,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26771",
+      "signals": {
+        "freshness": 0.6872,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.648,
+        "research": 1.0
+      },
+      "total": 0.5375,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:22850110:commit:d4940634f9356379c8757fa8e98b665e4951b109",
+      "signals": {
+        "freshness": 0.7415,
+        "novelty": 0.45,
+        "popularity": 0.3882,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5356,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26632",
+      "signals": {
+        "freshness": 0.6718,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6482,
+        "research": 1.0
+      },
+      "total": 0.5352,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26809",
+      "signals": {
+        "freshness": 0.6923,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6298,
+        "research": 1.0
+      },
+      "total": 0.5328,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:340575109:commit:6291963a749737781be58993c6756bed1d954674",
+      "signals": {
+        "freshness": 0.8499,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5325,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27221",
+      "signals": {
+        "freshness": 0.7355,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6069,
+        "research": 1.0
+      },
+      "total": 0.5324,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27282",
+      "signals": {
+        "freshness": 0.7413,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5312,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27206",
+      "signals": {
+        "freshness": 0.7339,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5301,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27198",
+      "signals": {
+        "freshness": 0.7327,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5299,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26724",
+      "signals": {
+        "freshness": 0.6821,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.624,
+        "research": 1.0
+      },
+      "total": 0.5295,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:182579212:commit:1f92001cfa87f97316152f30465ff515554b241c",
+      "signals": {
+        "freshness": 0.8279,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5292,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26686",
+      "signals": {
+        "freshness": 0.6787,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.624,
+        "research": 1.0
+      },
+      "total": 0.529,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:275118967:commit:7ed71b2cd1d4c3635d8837bd5bdf3e880e56ca0a",
+      "signals": {
+        "freshness": 0.7464,
+        "novelty": 0.45,
+        "popularity": 0.238,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5289,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:423775360:commit:6e04b71405449b78be9928855b7b52fdb3702040",
+      "signals": {
+        "freshness": 0.7061,
+        "novelty": 0.45,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5283,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:444900243:commit:658293082085486f564ca2c7244a778d6db8278f",
+      "signals": {
+        "freshness": 0.7674,
+        "novelty": 0.45,
+        "popularity": 0.1502,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5276,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27278",
+      "signals": {
+        "freshness": 0.7412,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5881,
+        "research": 1.0
+      },
+      "total": 0.5276,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27169",
+      "signals": {
+        "freshness": 0.7304,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5922,
+        "research": 1.0
+      },
+      "total": 0.5272,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26951",
+      "signals": {
+        "freshness": 0.7063,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5259,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26948",
+      "signals": {
+        "freshness": 0.7059,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5259,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:707265118:commit:404c18f7c4d18883425ee0e83191c42b08e08c8c",
+      "signals": {
+        "freshness": 0.7038,
+        "novelty": 0.45,
+        "popularity": 0.3004,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5256,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27199",
+      "signals": {
+        "freshness": 0.7327,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5773,
+        "research": 1.0
+      },
+      "total": 0.5231,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26752",
+      "signals": {
+        "freshness": 0.6858,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5229,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:429813020:commit:7a884f05b050c996bc50127ee6d6c4f714f95da8",
+      "signals": {
+        "freshness": 0.6996,
+        "novelty": 0.45,
+        "popularity": 0.238,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5218,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:154843614:commit:e6adc6ddb717b9ff44b11ca66d692662514da4b5",
+      "signals": {
+        "freshness": 0.7273,
+        "novelty": 0.45,
+        "popularity": 0.1502,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5216,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26665",
+      "signals": {
+        "freshness": 0.676,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5214,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26648",
+      "signals": {
+        "freshness": 0.6738,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5211,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26647",
+      "signals": {
+        "freshness": 0.6737,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5211,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26624",
+      "signals": {
+        "freshness": 0.6703,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5205,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27406",
+      "signals": {
+        "freshness": 0.7534,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5578,
+        "research": 1.0
+      },
+      "total": 0.5203,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27240",
+      "signals": {
+        "freshness": 0.7375,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5643,
+        "research": 1.0
+      },
+      "total": 0.5199,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27162",
+      "signals": {
+        "freshness": 0.7296,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5629,
+        "research": 1.0
+      },
+      "total": 0.5183,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:35825593:commit:0aebb63a7dc72f2831615b441fdf2f474d7a0ea0",
+      "signals": {
+        "freshness": 0.7035,
+        "novelty": 0.45,
+        "popularity": 0.1502,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.518,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26548",
+      "signals": {
+        "freshness": 0.6526,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5179,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27365",
+      "signals": {
+        "freshness": 0.7496,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5439,
+        "research": 1.0
+      },
+      "total": 0.5156,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:497780232:commit:4d63581386b0f86b7cdaddf916880f9837d78348",
+      "signals": {
+        "freshness": 0.734,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5151,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:263687600:commit:967622f2b46e991b1028c21f7b59d24dc6d163a5",
+      "signals": {
+        "freshness": 0.7335,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.515,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26956",
+      "signals": {
+        "freshness": 0.7067,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5613,
+        "research": 1.0
+      },
+      "total": 0.5144,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26902",
+      "signals": {
+        "freshness": 0.7009,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5617,
+        "research": 1.0
+      },
+      "total": 0.5136,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26932",
+      "signals": {
+        "freshness": 0.7042,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5593,
+        "research": 1.0
+      },
+      "total": 0.5134,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26583",
+      "signals": {
+        "freshness": 0.66,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5796,
+        "research": 1.0
+      },
+      "total": 0.5129,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26671",
+      "signals": {
+        "freshness": 0.6766,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5682,
+        "research": 1.0
+      },
+      "total": 0.512,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27328",
+      "signals": {
+        "freshness": 0.7451,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5314,
+        "research": 1.0
+      },
+      "total": 0.5112,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27225",
+      "signals": {
+        "freshness": 0.7359,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5326,
+        "research": 1.0
+      },
+      "total": 0.5102,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:62519414:commit:abaa8ce8e39e91aaea9c590582d4beabfb272e80",
+      "signals": {
+        "freshness": 0.6751,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5063,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26960",
+      "signals": {
+        "freshness": 0.7072,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5324,
+        "research": 1.0
+      },
+      "total": 0.5058,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26622",
+      "signals": {
+        "freshness": 0.6695,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5408,
+        "research": 1.0
+      },
+      "total": 0.5027,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26739",
+      "signals": {
+        "freshness": 0.6837,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5315,
+        "research": 1.0
+      },
+      "total": 0.502,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26713",
+      "signals": {
+        "freshness": 0.6811,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5322,
+        "research": 1.0
+      },
+      "total": 0.5018,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26800",
+      "signals": {
+        "freshness": 0.6913,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5248,
+        "research": 1.0
+      },
+      "total": 0.5011,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26794",
+      "signals": {
+        "freshness": 0.6898,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5253,
+        "research": 1.0
+      },
+      "total": 0.5011,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348654299",
+      "signals": {
+        "freshness": 0.8003,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.5,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26545",
+      "signals": {
+        "freshness": 0.6522,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5295,
+        "research": 1.0
+      },
+      "total": 0.4967,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348844616",
+      "signals": {
+        "freshness": 0.7711,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4957,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27280",
+      "signals": {
+        "freshness": 0.7412,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4818,
+        "research": 1.0
+      },
+      "total": 0.4957,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26939",
+      "signals": {
+        "freshness": 0.7049,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4986,
+        "research": 1.0
+      },
+      "total": 0.4953,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26766",
+      "signals": {
+        "freshness": 0.6867,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.5055,
+        "research": 1.0
+      },
+      "total": 0.4947,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348352004",
+      "signals": {
+        "freshness": 0.7042,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.53,
+        "research": 0.45
+      },
+      "total": 0.4946,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26821",
+      "signals": {
+        "freshness": 0.6937,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4987,
+        "research": 1.0
+      },
+      "total": 0.4937,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27345",
+      "signals": {
+        "freshness": 0.7475,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4682,
+        "research": 1.0
+      },
+      "total": 0.4926,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26883",
+      "signals": {
+        "freshness": 0.6982,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4921,
+        "research": 1.0
+      },
+      "total": 0.4924,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348706511",
+      "signals": {
+        "freshness": 0.7476,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4921,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26714",
+      "signals": {
+        "freshness": 0.6811,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4995,
+        "research": 1.0
+      },
+      "total": 0.492,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26859",
+      "signals": {
+        "freshness": 0.6966,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.49,
+        "research": 1.0
+      },
+      "total": 0.4915,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348621317",
+      "signals": {
+        "freshness": 0.7423,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4913,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348661926",
+      "signals": {
+        "freshness": 0.7418,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4913,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26998",
+      "signals": {
+        "freshness": 0.7121,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4803,
+        "research": 1.0
+      },
+      "total": 0.4909,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348561219",
+      "signals": {
+        "freshness": 0.7305,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4896,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348482363",
+      "signals": {
+        "freshness": 0.7214,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4882,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26673",
+      "signals": {
+        "freshness": 0.6768,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4864,
+        "research": 1.0
+      },
+      "total": 0.4874,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348397325",
+      "signals": {
+        "freshness": 0.709,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4864,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26965",
+      "signals": {
+        "freshness": 0.7076,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4669,
+        "research": 1.0
+      },
+      "total": 0.4862,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27271",
+      "signals": {
+        "freshness": 0.7408,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.449,
+        "research": 1.0
+      },
+      "total": 0.4858,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27123",
+      "signals": {
+        "freshness": 0.7252,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4568,
+        "research": 1.0
+      },
+      "total": 0.4858,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27095",
+      "signals": {
+        "freshness": 0.7224,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4537,
+        "research": 1.0
+      },
+      "total": 0.4845,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27168",
+      "signals": {
+        "freshness": 0.7304,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4493,
+        "research": 1.0
+      },
+      "total": 0.4844,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348168498",
+      "signals": {
+        "freshness": 0.693,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4839,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348148118",
+      "signals": {
+        "freshness": 0.6774,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4816,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348148726",
+      "signals": {
+        "freshness": 0.6771,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.45
+      },
+      "total": 0.4816,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1349231808",
+      "signals": {
+        "freshness": 0.8565,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4785,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27039",
+      "signals": {
+        "freshness": 0.7169,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4343,
+        "research": 1.0
+      },
+      "total": 0.4778,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1349242846",
+      "signals": {
+        "freshness": 0.8485,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4773,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348239259",
+      "signals": {
+        "freshness": 0.8474,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4771,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27034",
+      "signals": {
+        "freshness": 0.7165,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4314,
+        "research": 1.0
+      },
+      "total": 0.4769,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1349155134",
+      "signals": {
+        "freshness": 0.8453,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4768,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1349140345",
+      "signals": {
+        "freshness": 0.8238,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4736,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26658",
+      "signals": {
+        "freshness": 0.6752,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4345,
+        "research": 1.0
+      },
+      "total": 0.4716,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26921",
+      "signals": {
+        "freshness": 0.7022,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4154,
+        "research": 1.0
+      },
+      "total": 0.47,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26644",
+      "signals": {
+        "freshness": 0.6731,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.4296,
+        "research": 1.0
+      },
+      "total": 0.4698,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348946605",
+      "signals": {
+        "freshness": 0.7825,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4674,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348067727",
+      "signals": {
+        "freshness": 0.7801,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.0,
+        "research": 1.0
+      },
+      "total": 0.467,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348921266",
+      "signals": {
+        "freshness": 0.7771,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4666,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348851173",
+      "signals": {
+        "freshness": 0.7679,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4652,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348769154",
+      "signals": {
+        "freshness": 0.7556,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4633,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348492299",
+      "signals": {
+        "freshness": 0.7249,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4587,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348516642",
+      "signals": {
+        "freshness": 0.7243,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4586,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1029714975",
+      "signals": {
+        "freshness": 0.8172,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.35,
+        "research": 0.4
+      },
+      "total": 0.4576,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348259382",
+      "signals": {
+        "freshness": 0.7136,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.457,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348399153",
+      "signals": {
+        "freshness": 0.7095,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4564,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27301",
+      "signals": {
+        "freshness": 0.7426,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.348,
+        "research": 1.0
+      },
+      "total": 0.4558,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348197637",
+      "signals": {
+        "freshness": 0.6846,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4527,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:ac7c5356e5c94f7e7df0597e",
+      "signals": {
+        "freshness": 0.6672,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.4501,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1027626833",
+      "signals": {
+        "freshness": 0.8564,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.3,
+        "research": 0.4
+      },
+      "total": 0.4485,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27073",
+      "signals": {
+        "freshness": 0.7207,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.324,
+        "research": 1.0
+      },
+      "total": 0.4453,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27384",
+      "signals": {
+        "freshness": 0.7515,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4427,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27371",
+      "signals": {
+        "freshness": 0.7502,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4425,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27226",
+      "signals": {
+        "freshness": 0.736,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4404,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27178",
+      "signals": {
+        "freshness": 0.7311,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4397,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27154",
+      "signals": {
+        "freshness": 0.7285,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4393,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26656",
+      "signals": {
+        "freshness": 0.6751,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.324,
+        "research": 1.0
+      },
+      "total": 0.4385,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27065",
+      "signals": {
+        "freshness": 0.7199,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.438,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.27044",
+      "signals": {
+        "freshness": 0.7176,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4376,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1349165693",
+      "signals": {
+        "freshness": 0.8572,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.26,
+        "research": 0.6
+      },
+      "total": 0.4366,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26589",
+      "signals": {
+        "freshness": 0.6612,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.324,
+        "research": 1.0
+      },
+      "total": 0.4364,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26861",
+      "signals": {
+        "freshness": 0.6967,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4345,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26833",
+      "signals": {
+        "freshness": 0.6943,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4341,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26788",
+      "signals": {
+        "freshness": 0.689,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4334,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26737",
+      "signals": {
+        "freshness": 0.6836,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4325,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "arxiv:paper:2608.26669",
+      "signals": {
+        "freshness": 0.6765,
+        "novelty": 0.9,
+        "popularity": 0.0,
+        "priority": 0.2,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4315,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348628808",
+      "signals": {
+        "freshness": 0.7434,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.28,
+        "research": 0.6
+      },
+      "total": 0.4255,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348561599",
+      "signals": {
+        "freshness": 0.7374,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.28,
+        "research": 1.0
+      },
+      "total": 0.4246,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1349156730",
+      "signals": {
+        "freshness": 0.8297,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.22,
+        "research": 1.0
+      },
+      "total": 0.4205,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348974423",
+      "signals": {
+        "freshness": 0.8221,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.2,
+        "research": 0.6
+      },
+      "total": 0.4133,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348868013",
+      "signals": {
+        "freshness": 0.7672,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.22,
+        "research": 0.6
+      },
+      "total": 0.4111,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348332807",
+      "signals": {
+        "freshness": 0.7878,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.2,
+        "research": 0.6
+      },
+      "total": 0.4082,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348553600",
+      "signals": {
+        "freshness": 0.7298,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.22,
+        "research": 1.0
+      },
+      "total": 0.4055,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1128344051",
+      "signals": {
+        "freshness": 0.7557,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.2,
+        "research": 1.0
+      },
+      "total": 0.4034,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348521842",
+      "signals": {
+        "freshness": 0.7524,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.2,
+        "research": 1.0
+      },
+      "total": 0.4029,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1348124975",
+      "signals": {
+        "freshness": 0.6743,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.22,
+        "research": 0.6
+      },
+      "total": 0.3971,
+      "watched_override": false
+    }
+  ],
+  "report_date": "2026-08-29",
+  "version": 1,
+  "window_end": "2026-08-28T23:00:00Z",
+  "window_start": "2026-08-27T23:00:00Z"
+}
