@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-08-31T01:23:23.502843Z",
+      "last_successful_at": "2026-09-01T01:50:37.132983Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -33,6 +33,10 @@
         "Bboykoroman/paper_023167298_video_understanding": {
           "last_modified": "2026-08-22T03:04:14Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "CCHENZIQI/homework-video-understanding": {
+          "last_modified": "2026-08-31T10:13:44Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
         "Catniti/catrex-lite-image-segmentation": {
           "last_modified": "2026-08-15T10:03:12Z",
@@ -159,8 +163,8 @@
           "last_seen_at": "2026-08-23T23:37:28.246327Z"
         },
         "Maren-go/cross-dataset-visual-offroad-segmentation": {
-          "last_modified": "2026-08-28T20:06:49Z",
-          "last_seen_at": "2026-08-29T04:10:50.501043Z"
+          "last_modified": "2026-08-31T17:55:53Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
         "Moleys/manga-speech-bubble-segmentation-libreyolo": {
           "last_modified": "2026-08-29T18:20:05Z",
@@ -257,6 +261,10 @@
         "Tohirju/sl-amber2": {
           "last_modified": "2026-08-14T12:49:04Z",
           "last_seen_at": "2026-08-14T23:39:50.102348Z"
+        },
+        "TrickyTech32/Breast-Cancer-Segmentation-Model": {
+          "last_modified": "2026-08-31T12:03:38Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
         "YMmim/object-detection-scratch": {
           "last_modified": "2026-08-23T06:31:16Z",
@@ -457,6 +465,14 @@
         "dmsuzuki/paper_023084365_video_understanding": {
           "last_modified": "2026-08-21T15:49:17Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "einarolafsson/toxoplasma-plaque-segmentation-cpsam": {
+          "last_modified": "2026-08-31T20:29:41Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
+        },
+        "einarolafsson/toxoplasma-pv-segmentation-cpsam": {
+          "last_modified": "2026-08-31T20:29:17Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
         "eljohnsonfield/paper_022621347_video_understanding": {
           "last_modified": "2026-08-21T21:39:37Z",
@@ -659,8 +675,8 @@
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
         "litert-community/Cloth-Segmentation-U2Net-LiteRT": {
-          "last_modified": "2026-08-24T02:47:13Z",
-          "last_seen_at": "2026-08-24T23:39:45.305287Z"
+          "last_modified": "2026-09-01T01:44:36Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
         "logeshsenthil13/Yolo26_Semantic_Segmentation": {
           "last_modified": "2026-08-28T05:33:29Z",
@@ -675,8 +691,8 @@
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
         },
         "markdanielarndt/Zebrafish_Segmentation": {
-          "last_modified": "2026-08-21T07:19:27Z",
-          "last_seen_at": "2026-08-21T23:41:57.870437Z"
+          "last_modified": "2026-08-31T07:59:35Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
         "marti-nasms/intern-video-understanding94-2024": {
           "last_modified": "2026-08-28T08:01:57Z",
@@ -763,8 +779,8 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "peoplecombine-schoolai/image-segmentation": {
-          "last_modified": "2026-08-20T03:16:04Z",
-          "last_seen_at": "2026-08-20T23:42:37.686967Z"
+          "last_modified": "2026-08-31T02:55:29Z",
+          "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
         "promes-mantra/receipt-segmentation": {
           "last_modified": "2026-08-19T09:24:13Z",
