@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-01T01:50:37.132983Z",
+      "last_successful_at": "2026-09-02T01:03:06.012175Z",
       "repositories": {
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
@@ -481,6 +481,10 @@
         "emilysmithge/robotics-vision-language": {
           "last_modified": "2026-08-27T19:45:18Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "emmanueluc322/DSAT-Skin-Lesion-Segmentation": {
+          "last_modified": "2026-09-01T18:54:51Z",
+          "last_seen_at": "2026-09-02T01:03:06.012175Z"
         },
         "emmawilsonbeck/paper_023042418_video_understanding": {
           "last_modified": "2026-08-22T05:11:58Z",
