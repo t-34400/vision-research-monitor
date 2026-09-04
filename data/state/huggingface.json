@@ -4,11 +4,19 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-03T01:08:26.045621Z",
+      "last_successful_at": "2026-09-04T01:01:04.578232Z",
       "repositories": {
+        "27Kushal/PIXEL-Srishti-Segmentation": {
+          "last_modified": "2026-09-03T20:21:49Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
+        },
         "Abhatta7/building-footprint-segmentation": {
           "last_modified": "2026-08-07T06:55:49Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "Abhisingh-18/kannada-english-slam-asr": {
+          "last_modified": "2026-09-03T10:37:23Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
         },
         "Adityadas5350/review-robotics-vision-language33": {
           "last_modified": "2026-08-26T07:39:02Z",
@@ -21,6 +29,10 @@
         "Albernard/reading-robotics-vision-language": {
           "last_modified": "2026-09-02T19:08:22Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
+        },
+        "Albrown76/nlp-vision-language-pretraining-2023": {
+          "last_modified": "2026-09-03T21:03:53Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
         },
         "Aleksanderszyma/paper_022036027_robotics_vision_language": {
           "last_modified": "2026-08-22T04:03:41Z",
@@ -277,6 +289,10 @@
         "TrickyTech32/Breast-Cancer-Segmentation-Model": {
           "last_modified": "2026-08-31T12:03:38Z",
           "last_seen_at": "2026-09-01T01:50:37.132983Z"
+        },
+        "WasiqSaleem/Fine-Tuned-Depth-Estimation-for-ROS-2": {
+          "last_modified": "2026-09-03T09:32:49Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
         },
         "YMmim/object-detection-scratch": {
           "last_modified": "2026-08-23T06:31:16Z",
@@ -654,6 +670,10 @@
           "last_modified": "2026-08-27T00:38:35Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
         },
+        "joshuacqth/vision-language-pretraining-reading": {
+          "last_modified": "2026-09-03T23:04:46Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
+        },
         "joshuaogunleye/survey-vision-language-pretraining": {
           "last_modified": "2026-08-28T16:24:04Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
@@ -766,6 +786,10 @@
           "last_modified": "2026-08-21T19:20:07Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "mrsubtle/pyannote-segmentation-3.0": {
+          "last_modified": "2026-09-03T06:19:24Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
+        },
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
@@ -811,8 +835,8 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "peoplecombine-schoolai/image-segmentation": {
-          "last_modified": "2026-08-31T02:55:29Z",
-          "last_seen_at": "2026-09-01T01:50:37.132983Z"
+          "last_modified": "2026-09-03T09:06:42Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
         },
         "promes-mantra/receipt-segmentation": {
           "last_modified": "2026-08-19T09:24:13Z",
@@ -882,6 +906,10 @@
           "last_modified": "2026-08-21T16:02:18Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "sachinsssna/video-understanding-int8-2024": {
+          "last_modified": "2026-09-03T22:25:35Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
+        },
         "salma33/brain-lesion-segmentation": {
           "last_modified": "2026-08-08T15:56:34Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
@@ -915,12 +943,12 @@
           "last_seen_at": "2026-08-19T23:40:31.224144Z"
         },
         "software-mansion/react-native-executorch-rfdetr-nano-segmentation": {
-          "last_modified": "2026-08-21T10:07:48Z",
-          "last_seen_at": "2026-08-21T23:41:57.870437Z"
+          "last_modified": "2026-09-03T14:50:30Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
         },
         "software-mansion/react-native-executorch-selfie-segmentation": {
-          "last_modified": "2026-08-21T14:12:10Z",
-          "last_seen_at": "2026-08-21T23:41:57.870437Z"
+          "last_modified": "2026-09-03T14:50:42Z",
+          "last_seen_at": "2026-09-04T01:01:04.578232Z"
         },
         "srilubis/paper_021725602_robotics_vision_language": {
           "last_modified": "2026-08-22T05:37:29Z",
