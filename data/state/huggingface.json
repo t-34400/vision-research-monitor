@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-04T01:01:04.578232Z",
+      "last_successful_at": "2026-09-05T01:00:22.694220Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -90,6 +90,10 @@
           "last_modified": "2026-08-28T03:35:09Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
+        "ERCDiDip/charter-diplomatic-segmentation": {
+          "last_modified": "2026-09-04T08:51:57Z",
+          "last_seen_at": "2026-09-05T01:00:22.694220Z"
+        },
         "EricFujita/video-understanding66": {
           "last_modified": "2026-08-26T07:40:35Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -107,8 +111,12 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "Gertrude01/3Class-Gel-Segmentation-Expanded-Aug-2026": {
-          "last_modified": "2026-08-23T14:28:31Z",
-          "last_seen_at": "2026-08-23T23:37:28.246327Z"
+          "last_modified": "2026-09-04T08:20:36Z",
+          "last_seen_at": "2026-09-05T01:00:22.694220Z"
+        },
+        "Gertrude01/3Class-Gel-Segmentation-Mar-2026": {
+          "last_modified": "2026-09-04T08:21:26Z",
+          "last_seen_at": "2026-09-05T01:00:22.694220Z"
         },
         "HarshDefy/paper_021511188_robotics_vision_language": {
           "last_modified": "2026-08-21T16:38:43Z",
@@ -278,6 +286,10 @@
           "last_modified": "2026-08-20T15:11:12Z",
           "last_seen_at": "2026-08-20T23:42:37.686967Z"
         },
+        "THEDEVELOPERBOSS/Image_classification": {
+          "last_modified": "2026-09-04T18:51:19Z",
+          "last_seen_at": "2026-09-05T01:00:22.694220Z"
+        },
         "Tanishjain9/fast-scnn-floor-segmentation": {
           "last_modified": "2026-08-08T18:36:00Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
@@ -293,6 +305,10 @@
         "WasiqSaleem/Fine-Tuned-Depth-Estimation-for-ROS-2": {
           "last_modified": "2026-09-03T09:32:49Z",
           "last_seen_at": "2026-09-04T01:01:04.578232Z"
+        },
+        "WasiqSaleem/low-cost-autonomous-slam-nav2": {
+          "last_modified": "2026-09-04T23:33:37Z",
+          "last_seen_at": "2026-09-05T01:00:22.694220Z"
         },
         "YMmim/object-detection-scratch": {
           "last_modified": "2026-08-23T06:31:16Z",
@@ -830,9 +846,17 @@
           "last_modified": "2026-08-21T14:06:03Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "onemira/pyannote-segmentation-3.0-onnx": {
+          "last_modified": "2026-09-04T12:42:15Z",
+          "last_seen_at": "2026-09-05T01:00:22.694220Z"
+        },
         "oozkanemre88/paper_022210137_robotics_vision_language": {
           "last_modified": "2026-08-21T19:23:48Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "pavelmikhailov/hw2-robotics-vision-language": {
+          "last_modified": "2026-09-04T10:32:31Z",
+          "last_seen_at": "2026-09-05T01:00:22.694220Z"
         },
         "peoplecombine-schoolai/image-segmentation": {
           "last_modified": "2026-09-03T09:06:42Z",
