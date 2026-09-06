@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-05T01:00:22.694220Z",
+      "last_successful_at": "2026-09-06T01:01:35.099658Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -49,6 +49,10 @@
         "Bboykoroman/paper_023167298_video_understanding": {
           "last_modified": "2026-08-22T03:04:14Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "Brijeshsharma/nppe3-4x-super-resolution-denoise": {
+          "last_modified": "2026-09-05T18:24:03Z",
+          "last_seen_at": "2026-09-06T01:01:35.099658Z"
         },
         "CCHENZIQI/homework-video-understanding": {
           "last_modified": "2026-08-31T10:13:44Z",
@@ -346,6 +350,10 @@
           "last_modified": "2026-08-20T05:47:01Z",
           "last_seen_at": "2026-08-20T23:42:37.686967Z"
         },
+        "acd23/cad-3d-reconstruction": {
+          "last_modified": "2026-09-05T23:03:33Z",
+          "last_seen_at": "2026-09-06T01:01:35.099658Z"
+        },
         "adammartinezpi/paper_004105272_vision_language_pretraining": {
           "last_modified": "2026-08-21T18:06:30Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
@@ -518,6 +526,10 @@
           "last_modified": "2026-08-21T15:49:17Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "duongallen/vision-language-pretraining-exp": {
+          "last_modified": "2026-09-05T22:00:16Z",
+          "last_seen_at": "2026-09-06T01:01:35.099658Z"
+        },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam": {
           "last_modified": "2026-08-31T20:29:41Z",
           "last_seen_at": "2026-09-01T01:50:37.132983Z"
@@ -669,6 +681,10 @@
         "jiahaowuna/paper_023480734_video_understanding": {
           "last_modified": "2026-08-21T18:07:08Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "jieuncjc/video-understanding-tutorial": {
+          "last_modified": "2026-09-05T22:15:53Z",
+          "last_seen_at": "2026-09-06T01:01:35.099658Z"
         },
         "jmichalskipog/paper_021445162_robotics_vision_language": {
           "last_modified": "2026-08-23T09:36:38Z",
