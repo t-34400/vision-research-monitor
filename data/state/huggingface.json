@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-06T01:01:35.099658Z",
+      "last_successful_at": "2026-09-07T01:03:33.070326Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -194,6 +194,14 @@
           "last_modified": "2026-08-31T17:55:53Z",
           "last_seen_at": "2026-09-01T01:50:37.132983Z"
         },
+        "MelenL/Custom_Inception_Style_CNN_for_Satellite_Image_Classification": {
+          "last_modified": "2026-09-06T21:12:05Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
+        "MelenL/EfficientNetB0_Ensemble_for_Satellite_Image_Classification": {
+          "last_modified": "2026-09-06T17:09:21Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
         "Moleys/manga-speech-bubble-segmentation-libreyolo": {
           "last_modified": "2026-08-29T18:20:05Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
@@ -351,8 +359,8 @@
           "last_seen_at": "2026-08-20T23:42:37.686967Z"
         },
         "acd23/cad-3d-reconstruction": {
-          "last_modified": "2026-09-05T23:03:33Z",
-          "last_seen_at": "2026-09-06T01:01:35.099658Z"
+          "last_modified": "2026-09-06T04:36:20Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
         },
         "adammartinezpi/paper_004105272_vision_language_pretraining": {
           "last_modified": "2026-08-21T18:06:30Z",
@@ -477,6 +485,10 @@
         "chengwij37/paper_023191774_video_understanding": {
           "last_modified": "2026-08-21T19:48:33Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "chrisga13/Models-Object-Detection-and-OCR-System-for-Engineering-Drawings": {
+          "last_modified": "2026-09-06T11:15:00Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
         },
         "christianschmi/review-vision-language-pretraining": {
           "last_modified": "2026-08-26T07:53:04Z",
@@ -618,6 +630,10 @@
           "last_modified": "2026-08-26T12:39:44Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
         },
+        "harsha532/low-light-super-resolution": {
+          "last_modified": "2026-09-06T06:40:22Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
         "hetwaterschapshuis/vivianite-segmentation": {
           "last_modified": "2026-08-13T10:12:23Z",
           "last_seen_at": "2026-08-14T00:00:58.321044Z"
@@ -653,6 +669,10 @@
         "iliekmudkipz6/object-detection-assistant-model": {
           "last_modified": "2026-08-06T18:04:21Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "itznoor998/SwinIR-4x-SuperResolution": {
+          "last_modified": "2026-09-06T18:09:22Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
         },
         "ivankuznetsovdud/review-vision-language-pretraining": {
           "last_modified": "2026-08-27T04:59:46Z",
@@ -953,6 +973,10 @@
         "salma33/brain-lesion-segmentation": {
           "last_modified": "2026-08-08T15:56:34Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
+        },
+        "sanjeevkiitm/dlp-26t2-super-resolution": {
+          "last_modified": "2026-09-06T14:01:36Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
         },
         "sealewis/vision-language-pretraining": {
           "last_modified": "2026-08-28T18:01:27Z",
@@ -1601,6 +1625,10 @@
         "vasi-lyev/study-video-understanding-2023": {
           "last_modified": "2026-08-26T09:55:02Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
+        },
+        "venkatvaradarajan/rcan-super-resolution": {
+          "last_modified": "2026-09-07T00:46:49Z",
+          "last_seen_at": "2026-09-07T01:03:33.070326Z"
         },
         "walk-er88/paper_021859239_robotics_vision_language": {
           "last_modified": "2026-08-22T06:37:51Z",
