@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-09T01:16:11.190836Z",
+      "last_successful_at": "2026-09-10T01:07:45.246899Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -71,8 +71,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-09-09T00:22:14Z",
-          "last_seen_at": "2026-09-09T01:16:11.190836Z"
+          "last_modified": "2026-09-10T00:13:27Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "CienciaCiudades/rfdetr-urban-segmentation": {
           "last_modified": "2026-09-02T15:53:08Z",
@@ -258,6 +258,10 @@
           "last_modified": "2026-08-21T17:35:34Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "Reza2kn/rf-detr-segmentation-NVFP4": {
+          "last_modified": "2026-09-09T22:59:13Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
+        },
         "Rfraser007/Skin_Cancer-Image_Classification": {
           "last_modified": "2026-09-02T14:22:20Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
@@ -377,6 +381,10 @@
         "ahmedalghamdi/vision-language-pretraining-prototype": {
           "last_modified": "2026-08-27T05:15:25Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "ahmedalghamdi/vision-language-pretraining-review-2024": {
+          "last_modified": "2026-09-09T11:40:16Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "aijadugar/ViT-ADE20K-Segmentation": {
           "last_modified": "2026-08-17T09:51:50Z",
@@ -586,6 +594,10 @@
           "last_modified": "2026-09-05T22:00:16Z",
           "last_seen_at": "2026-09-06T01:01:35.099658Z"
         },
+        "ehsanroohi/Task-Preserving-Shock-Vortex-Segmentation": {
+          "last_modified": "2026-09-09T22:34:55Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
+        },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam": {
           "last_modified": "2026-08-31T20:29:41Z",
           "last_seen_at": "2026-09-01T01:50:37.132983Z"
@@ -681,6 +693,10 @@
         "harsha532/low-light-super-resolution": {
           "last_modified": "2026-09-06T06:40:22Z",
           "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
+        "hernandezadrian/vision-language-pretraining-small": {
+          "last_modified": "2026-09-09T17:57:01Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "hetwaterschapshuis/vivianite-segmentation": {
           "last_modified": "2026-08-13T10:12:23Z",
@@ -967,28 +983,28 @@
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
         "qualcomm/MediaPipe-Selfie-Segmentation": {
-          "last_modified": "2026-08-25T04:13:24Z",
-          "last_seen_at": "2026-08-25T23:40:47.806863Z"
+          "last_modified": "2026-09-10T00:58:25Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "qualcomm/Unet-Segmentation": {
-          "last_modified": "2026-08-25T04:17:35Z",
-          "last_seen_at": "2026-08-25T23:40:47.806863Z"
+          "last_modified": "2026-09-10T00:55:18Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "qualcomm/YOLO26-Segmentation": {
           "last_modified": "2026-08-25T04:22:52Z",
           "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
         "qualcomm/YOLOE-Segmentation": {
-          "last_modified": "2026-08-25T04:16:02Z",
-          "last_seen_at": "2026-08-25T23:40:47.806863Z"
+          "last_modified": "2026-09-10T00:52:49Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "qualcomm/YOLOv11-Segmentation": {
-          "last_modified": "2026-08-25T04:21:17Z",
-          "last_seen_at": "2026-08-25T23:40:47.806863Z"
+          "last_modified": "2026-09-10T01:03:28Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "qualcomm/YOLOv8-Segmentation": {
-          "last_modified": "2026-08-25T04:18:06Z",
-          "last_seen_at": "2026-08-25T23:40:47.806863Z"
+          "last_modified": "2026-09-10T01:06:24Z",
+          "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
         "rahulsharmaiah/robotics-vision-language-colab": {
           "last_modified": "2026-08-26T10:42:53Z",
