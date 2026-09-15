@@ -24,7 +24,7 @@
         "per_page", "max_pages_per_slice", "request_interval_seconds", "public_only",
         "exclude_archived", "exclude_forks", "locations", "query_evidence_score", "minimum_topic_relevance_score",
         "minimum_venue_relevance_score", "pushed_minimum_stars",
-        "max_readme_enrichments_per_run", "vision_context_terms"
+        "max_readme_enrichments_per_run", "max_readme_characters", "enrich_topic_candidates_with_readme", "vision_context_terms"
       ],
       "properties": {
         "per_page": {"type": "integer", "minimum": 1, "maximum": 100},
@@ -44,6 +44,8 @@
         "minimum_venue_relevance_score": {"type": "number", "minimum": 0, "maximum": 1},
         "pushed_minimum_stars": {"type": "integer", "minimum": 0},
         "max_readme_enrichments_per_run": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "max_readme_characters": {"type": "integer", "minimum": 1000, "maximum": 200000},
+        "enrich_topic_candidates_with_readme": {"type": "boolean"},
         "vision_context_terms": {
           "type": "array",
           "minItems": 1,
@@ -60,7 +62,7 @@
         "semantic_only_acceptance_similarity", "research_term_bonus", "publication_link_bonus",
         "venue_bonus", "homepage_bonus", "stars_50_bonus", "stars_250_bonus",
         "stars_1000_bonus", "collection_cap", "tutorial_cap", "collection_terms",
-        "tutorial_terms", "research_terms", "publication_hosts"
+        "tutorial_terms", "research_terms", "readme_research_terms", "publication_hosts"
       ],
       "properties": {
         "baseline_score": {"type": "number", "minimum": 0, "maximum": 1},
@@ -85,6 +87,10 @@
           "items": {"type": "string", "minLength": 1}
         },
         "research_terms": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "readme_research_terms": {
           "type": "array", "minItems": 1, "uniqueItems": true,
           "items": {"type": "string", "minLength": 1}
         },

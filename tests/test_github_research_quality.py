@@ -38,6 +38,7 @@ def test_research_quality_keeps_research_framework_and_suppresses_generic_app() 
         generic_app,
         venue_hits=set(),
         config=config,
+        readme="A Python library and framework for running the application.",
     )
 
     assert research.category == "research"

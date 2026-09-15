@@ -1,0 +1,50 @@
+version: 1
+repositories:
+- full_name: microsoft/MoGe
+  description: "[CVPR'25 Oral] MoGe: Unlocking Accurate Monocular Geometry Estimation for Open-Domain Images with Optimal Training Supervision"
+  topics: [3d-reconstruction, 3d-vision, monocular-depth-estimation, monocular-geometry-estimation]
+  expected_query: monocular_geometry
+- full_name: facebookresearch/vggt
+  description: "[CVPR 2025 Best Paper Award] VGGT: Visual Geometry Grounded Transformer"
+  topics: []
+  expected_query: visual_geometry
+- full_name: NVlabs/FoundationStereo
+  description: "[CVPR 2025 Best Paper Nomination] FoundationStereo: Zero-Shot Stereo Matching"
+  topics: []
+  expected_query: stereo_matching
+- full_name: naver/multi-hmr
+  description: Pytorch demo code and models for Multi-HMR
+  topics: [3d-pose, 3d-reconstruction, human-mesh-recovery, multi-person-3d-mesh-recovery, multi-person-pose-estimation, single-shot, smpl-x]
+  expected_query: human_mesh_recovery
+- full_name: openvla/openvla
+  description: "OpenVLA: An open-source vision-language-action model for robotic manipulation."
+  topics: []
+  expected_query: vision_language_action
+- full_name: BridgeVLA/BridgeVLA
+  description: Official implementation of BridgeVLA and BridgeVLA++
+  topics: [3d-manipulation, embodied-ai, robotics, vision-language-action, vision-language-pretraining]
+  expected_query: vision_language_action
+- full_name: facebookresearch/co-tracker
+  description: CoTracker is a model for tracking any point (pixel) on a video.
+  topics: [optical-flow, point-tracking, track-anything]
+  expected_query: point_tracking
+- full_name: NVlabs/FoundationPose
+  description: "[CVPR 2024 Highlight] FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects"
+  topics: []
+  expected_query: six_d_pose_estimation
+- full_name: FudanCVL/SAM2Matting
+  description: "[ECCV 2026] SAM2Matting: Generalized Image and Video Matting"
+  topics: [image-matting, tracking-segmentation-matting-unified, video-matting]
+  expected_query: image_matting
+- full_name: google-deepmind/tips
+  description: "TIPSv2 (CVPR'26) and TIPS (ICLR'25)"
+  topics: [image-text, spatial-understanding, vision-encoder]
+  expected_query: spatial_understanding
+- full_name: ByteDance-Seed/TraceAnything
+  description: "[ICLR 2026] Trace Anything: Representing Any Video in 4D via Trajectory Fields"
+  topics: [3d-reconstruction, 4d-reconstruction, computer-vision]
+  expected_query: four_d_reconstruction
+- full_name: yyfz/Pi3
+  description: "[ICLR 2026] pi^3: Permutation-Equivariant Visual Geometry Learning"
+  topics: []
+  expected_query: visual_geometry

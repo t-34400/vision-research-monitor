@@ -40,7 +40,11 @@ topics:
   - id: semantic_segmentation
     label: Semantic Segmentation
     group: recognition_segmentation
-    aliases: [semantic segmentation]
+    aliases: [semantic segmentation, human parsing]
+  - id: image_matting
+    label: Image Matting
+    group: recognition_segmentation
+    aliases: [image matting, alpha matting, portrait matting, human matting]
   - id: instance_segmentation
     label: Instance Segmentation
     group: recognition_segmentation
@@ -56,7 +60,7 @@ topics:
   - id: vision_foundation_models
     label: Vision Foundation Models
     group: foundation_representation
-    aliases: [vision foundation model, visual foundation model, foundation vision model]
+    aliases: [vision foundation model, visual foundation model, foundation vision model, 3d foundation model, geometry foundation model, foundation model]
   - id: visual_representation_learning
     label: Visual Representation Learning
     group: foundation_representation
@@ -64,7 +68,19 @@ topics:
   - id: feature_matching
     label: Feature Matching
     group: matching_video_restoration
-    aliases: [feature matching, image matching, local feature matching]
+    aliases: [feature matching, image matching, local feature matching, dense matching, dense image matching]
+  - id: optical_flow
+    label: Optical Flow
+    group: matching_video_restoration
+    aliases: [optical flow]
+  - id: scene_flow
+    label: Scene Flow
+    group: matching_video_restoration
+    aliases: [scene flow, 3d scene flow]
+  - id: point_tracking
+    label: Point Tracking
+    group: matching_video_restoration
+    aliases: [point tracking, point trajectories]
   - id: object_tracking
     label: Object Tracking
     group: matching_video_restoration
@@ -76,7 +92,7 @@ topics:
   - id: image_restoration
     label: Image Restoration
     group: matching_video_restoration
-    aliases: [image restoration, image denoising, deblurring, image deblurring]
+    aliases: [image restoration, image denoising, deblurring, image deblurring, image inpainting, inpainting]
   - id: super_resolution
     label: Super-Resolution
     group: matching_video_restoration
@@ -93,6 +109,14 @@ topics:
     label: Multi-View Stereo
     group: geometry_calibration
     aliases: [multi-view stereo, multi view stereo, MVS]
+  - id: visual_geometry
+    label: Visual Geometry
+    group: geometry_calibration
+    aliases: [visual geometry, geometry estimation, monocular geometry, 3d geometry estimation, pointmap, point map, point cloud registration, surface normal estimation]
+  - id: object_pose_estimation
+    label: Object Pose Estimation
+    group: geometry_calibration
+    aliases: [object pose estimation, 6d pose estimation, 6d object pose]
   - id: camera_pose_estimation
     label: Camera Pose Estimation
     group: geometry_calibration
@@ -100,7 +124,11 @@ topics:
   - id: camera_calibration
     label: Camera Calibration
     group: geometry_calibration
-    aliases: [camera calibration, intrinsic calibration, extrinsic calibration]
+    aliases: [camera calibration, intrinsic calibration, extrinsic calibration, camera extrinsics]
+  - id: depth_estimation
+    label: Depth Estimation
+    group: depth
+    aliases: [depth estimation, depth prediction]
   - id: monocular_depth
     label: Monocular Depth
     group: depth
@@ -117,10 +145,14 @@ topics:
     label: Multi-View Depth
     group: depth
     aliases: [multi-view depth, multi view depth, multi-view depth estimation]
+  - id: three_d_reconstruction
+    label: 3D Reconstruction
+    group: reconstruction_3d
+    aliases: [3d reconstruction, dense 3d reconstruction]
   - id: feed_forward_3d_reconstruction
     label: Feed-Forward 3D Reconstruction
     group: reconstruction_3d
-    aliases: [feed-forward 3d reconstruction, feed forward 3d reconstruction, feed-forward reconstruction]
+    aliases: [feed-forward 3d reconstruction, feed forward 3d reconstruction, feedforward 3d reconstruction, feed-forward reconstruction]
   - id: pose_free_3d_reconstruction
     label: Pose-Free 3D Reconstruction
     group: reconstruction_3d
@@ -145,6 +177,10 @@ topics:
     label: Mesh Reconstruction
     group: reconstruction_3d
     aliases: [mesh reconstruction, 3d mesh reconstruction]
+  - id: neural_rendering
+    label: Neural Rendering
+    group: neural_rendering
+    aliases: [neural rendering]
   - id: nerf
     label: NeRF
     group: neural_rendering
@@ -161,6 +197,10 @@ topics:
     label: Dynamic and 4D Reconstruction
     group: neural_rendering
     aliases: [dynamic reconstruction, 4d reconstruction, dynamic scene reconstruction, 4DGS]
+  - id: three_d_generation
+    label: 3D Generation
+    group: generative_3d
+    aliases: [3d generation, generative 3d]
   - id: image_to_3d
     label: Image-to-3D
     group: generative_3d
@@ -173,6 +213,18 @@ topics:
     label: Scene Generation
     group: generative_3d
     aliases: [scene generation, 3d scene generation, generative 3d scene]
+  - id: vision_language_action
+    label: Vision-Language-Action
+    group: robotics_embodied
+    aliases: [vision-language-action, vision language action, VLA]
+  - id: robot_learning
+    label: Robot Learning and Manipulation
+    group: robotics_embodied
+    aliases: [robot learning, robot policy, robot manipulation, visuomotor policy, imitation learning]
+  - id: spatial_intelligence
+    label: Spatial Intelligence
+    group: robotics_embodied
+    aliases: [spatial understanding, spatial intelligence, 3d scene understanding, spatial reasoning, world model]
   - id: slam
     label: SLAM
     group: robotics_embodied
@@ -188,11 +240,15 @@ topics:
   - id: embodied_vision
     label: Embodied Vision
     group: robotics_embodied
-    aliases: [embodied vision, embodied perception, embodied visual perception]
+    aliases: [embodied vision, embodied perception, embodied visual perception, embodied ai, embodied agent]
+  - id: human_motion_generation
+    label: Human Motion Generation
+    group: humans_avatars
+    aliases: [human motion, human motion generation, motion generation, motion synthesis, human motion synthesis]
   - id: human_pose_estimation
     label: Human Pose Estimation
     group: humans_avatars
-    aliases: [human pose estimation, 3d human pose, 2d human pose]
+    aliases: [human pose estimation, 3d human pose, 2d human pose, motion capture]
   - id: human_mesh_reconstruction
     label: Human Mesh Reconstruction
     group: humans_avatars
@@ -200,7 +256,7 @@ topics:
   - id: avatar
     label: Avatar
     group: humans_avatars
-    aliases: [avatar reconstruction, human avatar, neural avatar, 3d avatar]
+    aliases: [avatar reconstruction, human avatar, neural avatar, 3d avatar, avatar generation, gaussian avatar]
   - id: clothed_human_reconstruction
     label: Clothed Human Reconstruction
     group: humans_avatars
@@ -208,7 +264,7 @@ topics:
   - id: hand_reconstruction
     label: Hand Reconstruction
     group: humans_avatars
-    aliases: [hand reconstruction, 3d hand reconstruction, hand mesh reconstruction]
+    aliases: [hand reconstruction, 3d hand reconstruction, hand mesh reconstruction, hand pose estimation]
   - id: face_reconstruction
     label: Face Reconstruction
     group: humans_avatars

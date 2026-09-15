@@ -36,6 +36,8 @@ class DiscoveryRunResult:
     search_hits_by_query: dict[str, int] = field(default_factory=dict)
     accepted_by_query: dict[str, int] = field(default_factory=dict)
     research_quality_by_category: dict[str, int] = field(default_factory=dict)
+    readme_enrichment_requests: int = 0
+    readme_enrichment_successes: int = 0
 
     def add_error(self, target: str, exc: Exception) -> None:
         self.failed_queries += 1
@@ -158,6 +160,8 @@ class GitHubDiscoveryCollector:
         self.monotonic = monotonic
         self._last_search_request_at: float | None = None
         self._readme_enrichments = 0
+        self._readme_cache: dict[str, str | None] = {}
+        self._readme_cap_warned = False
         self.progress = progress or (lambda _: None)
         self._vision_context_terms = [
             normalize_text(value) for value in config["search"]["vision_context_terms"]
@@ -377,8 +381,11 @@ class GitHubDiscoveryCollector:
         for candidate in candidates.values():
             readme: str | None = None
             if self._requires_missing_vision_context(candidate):
-                result.rejected_for_context += 1
-                continue
+                readme = self._readme_for_candidate(candidate, result)
+                if self._requires_missing_vision_context(candidate, readme=readme):
+                    result.rejected_for_context += 1
+                    continue
+
             lexical = self.scorer.score(
                 candidate.repository,
                 query_topics=candidate.query_topics,
@@ -386,7 +393,8 @@ class GitHubDiscoveryCollector:
             )
             is_venue_only = not candidate.query_topics and bool(candidate.venue_hits)
             if is_venue_only and not lexical.topics:
-                readme = self._readme_for_candidate(candidate, result)
+                if readme is None:
+                    readme = self._readme_for_candidate(candidate, result)
                 if readme is not None:
                     lexical = self.scorer.score(
                         candidate.repository,
@@ -405,6 +413,13 @@ class GitHubDiscoveryCollector:
                 continue
             if self._semantic_only_below_discovery_threshold(classification):
                 continue
+
+            if (
+                readme is None
+                and not is_venue_only
+                and search["enrich_topic_candidates_with_readme"]
+            ):
+                readme = self._readme_for_candidate(candidate, result)
             research = assess_repository_research_quality(
                 candidate.repository,
                 venue_hits=candidate.venue_hits,
@@ -437,7 +452,9 @@ class GitHubDiscoveryCollector:
         threshold = float(self.config["research_quality"]["semantic_only_acceptance_similarity"])
         return float(similarity) < threshold
 
-    def _requires_missing_vision_context(self, candidate: Candidate) -> bool:
+    def _requires_missing_vision_context(
+        self, candidate: Candidate, *, readme: str | None = None
+    ) -> bool:
         if not candidate.requires_vision_context or candidate.has_unrestricted_query:
             return False
         repository = candidate.repository
@@ -447,6 +464,7 @@ class GitHubDiscoveryCollector:
                     str(repository.get("full_name") or repository.get("name") or ""),
                     str(repository.get("description") or ""),
                     " ".join(repository.get("topics") or []),
+                    readme or "",
                 ]
             )
         )
@@ -496,28 +514,46 @@ class GitHubDiscoveryCollector:
         )
 
     def _readme_for_candidate(self, candidate: Candidate, result: DiscoveryRunResult) -> str | None:
-        limit = self.config["search"]["max_readme_enrichments_per_run"]
-        if self._readme_enrichments >= limit:
-            result.add_warning(
-                "venue-readme",
-                (
-                    f"README enrichment cap of {limit} reached; "
-                    "remaining venue-only candidates were skipped"
-                ),
-            )
-            return None
-        self._readme_enrichments += 1
         full_name = candidate.repository.get("full_name")
         if not full_name:
             return None
+        cache_key = str(full_name)
+        if cache_key in self._readme_cache:
+            return self._readme_cache[cache_key]
+
+        limit = int(self.config["search"]["max_readme_enrichments_per_run"])
+        if self._readme_enrichments >= limit:
+            if not self._readme_cap_warned:
+                result.add_warning(
+                    "readme-enrichment",
+                    (
+                        f"README enrichment cap of {limit} reached; "
+                        "remaining candidates continue without README evidence"
+                    ),
+                )
+                self._readme_cap_warned = True
+            return None
+
+        self._readme_enrichments += 1
+        result.readme_enrichment_requests += 1
         try:
             response = self.client.get_text(f"/repos/{full_name}/readme")
         except GitHubNotFoundError:
+            self._readme_cache[cache_key] = None
             return None
         except GitHubApiError as exc:
             result.add_warning(f"readme:{full_name}", str(exc))
+            self._readme_cache[cache_key] = None
             return None
-        return response.data if isinstance(response.data, str) else None
+
+        if not isinstance(response.data, str):
+            self._readme_cache[cache_key] = None
+            return None
+        max_characters = int(self.config["search"]["max_readme_characters"])
+        readme = response.data[:max_characters]
+        self._readme_cache[cache_key] = readme
+        result.readme_enrichment_successes += 1
+        return readme
 
     @staticmethod
     def _repository_item(

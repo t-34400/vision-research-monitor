@@ -27,7 +27,7 @@ def test_project_configuration_is_valid() -> None:
         topics,
     )
 
-    assert len(topics) == 58
+    assert len(topics) == 72
     venues = load_venues(
         ROOT / "config/venues.yaml",
         ROOT / "config/schemas/venues.schema.json",

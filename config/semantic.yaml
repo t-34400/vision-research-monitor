@@ -36,6 +36,15 @@ profiles:
   - assign a class to every pixel
   - pixel-wise scene parsing
   - dense per-pixel classification
+- topic: image_matting
+  hints:
+  - estimate foreground alpha transparency from images
+  - separate foreground with soft alpha mattes
+  - image and portrait matting
+  required_any:
+  - matt*
+  - alpha
+  - foreground
 - topic: instance_segmentation
   hints:
   - separate object instances with masks
@@ -73,6 +82,37 @@ profiles:
   - establish correspondences between images
   - match local keypoints across views
   - image pair correspondence
+- topic: optical_flow
+  hints:
+  - estimate dense pixel motion between video frames
+  - predict per-pixel displacement across images
+  - two-frame motion correspondence
+  required_any:
+  - flow
+  - motion
+  - correspondence
+- topic: scene_flow
+  hints:
+  - estimate three-dimensional motion of scene points
+  - recover dynamic 3d flow across time
+  - point-wise 3d motion estimation
+  required_groups:
+  - - 3d
+    - depth
+    - point
+    - scene
+  - - flow
+    - motion
+    - velocity
+- topic: point_tracking
+  hints:
+  - track arbitrary image points through video
+  - estimate long-term point trajectories
+  - follow dense or sparse point correspondences over time
+  required_any:
+  - point
+  - track*
+  - traject*
 - topic: object_tracking
   hints:
   - maintain object identities through video
@@ -119,6 +159,30 @@ profiles:
   - recover dense geometry from multiple calibrated views
   - dense multi-view reconstruction
   - depth fusion from many images
+- topic: visual_geometry
+  hints:
+  - infer scene geometry and camera properties from images
+  - predict point maps depth normals or geometric structure
+  - general-purpose visual geometry estimation
+  required_any:
+  - geometry
+  - camera
+  - image
+  - 3d
+  - depth
+  - pointmap
+- topic: object_pose_estimation
+  hints:
+  - estimate six degree of freedom object pose
+  - recover object rotation and translation from images
+  - 6d pose of rigid objects
+  required_groups:
+  - - object
+    - instance
+  - - pose
+    - rotation
+    - translation
+    - 6d
 - topic: camera_pose_estimation
   hints:
   - estimate six degree of freedom camera pose
@@ -129,6 +193,15 @@ profiles:
   - estimate camera intrinsics and extrinsics
   - recover focal length or lens distortion
   - calibrate imaging geometry
+- topic: depth_estimation
+  hints:
+  - estimate per-pixel scene depth from visual input
+  - predict distance or range maps from images
+  - general depth prediction
+  required_any:
+  - depth
+  - disparity
+  - range
 - topic: monocular_depth
   hints:
   - estimate depth from a single rgb image
@@ -149,6 +222,17 @@ profiles:
   - estimate depth from several camera views
   - multi-camera depth prediction
   - aggregate views for depth
+- topic: three_d_reconstruction
+  hints:
+  - recover three-dimensional scene or object geometry from observations
+  - general 3d reconstruction from images video or points
+  - dense geometric reconstruction
+  required_any:
+  - 3d
+  - geometry
+  - reconstruction
+  - mesh
+  - point
 - topic: feed_forward_3d_reconstruction
   hints:
   - reconstruct 3d in one network forward pass
@@ -184,6 +268,17 @@ profiles:
   - recover triangle meshes from images or points
   - predict vertices and faces
   - explicit mesh geometry reconstruction
+- topic: neural_rendering
+  hints:
+  - learn scene representations for differentiable image synthesis
+  - neural scene rendering from camera viewpoints
+  - learned rendering and inverse graphics
+  required_any:
+  - render*
+  - view
+  - radiance
+  - nerf
+  - gaussian
 - topic: nerf
   hints:
   - represent scenes with neural radiance fields
@@ -210,6 +305,20 @@ profiles:
   - reconstruct time-varying 3d scenes
   - dynamic geometry across time
   - four-dimensional scene representation
+- topic: three_d_generation
+  hints:
+  - generate 3d objects assets or scenes with learned models
+  - synthesize three-dimensional content
+  - generative modeling of 3d geometry
+  required_groups:
+  - - 3d
+    - mesh
+    - geometry
+    - asset
+    - scene
+  - - generat*
+    - synthesi*
+    - diffusion
 - topic: image_to_3d
   hints:
   - generate a 3d asset from one or more images
@@ -252,6 +361,40 @@ profiles:
   - spatial
   - room
   - environment
+- topic: vision_language_action
+  hints:
+  - map visual and language observations to robot actions
+  - vision-language-action model for embodied control
+  - multimodal robot policy conditioned on images and instructions
+  required_groups:
+  - - vision
+    - visual
+    - image
+    - multimodal
+  - - action
+    - robot
+    - policy
+    - manipulation
+- topic: robot_learning
+  hints:
+  - learn robot manipulation or control policies from data
+  - visuomotor policy learning for robotic tasks
+  - imitation or representation learning for robot actions
+  required_any:
+  - robot
+  - manipulation
+  - policy
+  - visuomotor
+- topic: spatial_intelligence
+  hints:
+  - reason about spatial relations geometry and 3d scenes
+  - spatial understanding for embodied or multimodal models
+  - 3d scene understanding and spatial reasoning
+  required_any:
+  - spatial
+  - 3d
+  - scene
+  - geometry
 - topic: slam
   hints:
   - simultaneously localize a moving sensor and build a map
@@ -272,6 +415,20 @@ profiles:
   - visual perception for an acting agent
   - vision grounded in navigation and interaction
   - embodied agent scene understanding
+- topic: human_motion_generation
+  hints:
+  - generate or synthesize human body motion sequences
+  - model human motion trajectories and animation
+  - text-conditioned or learned human motion generation
+  required_groups:
+  - - human
+    - body
+    - person
+    - skeleton
+  - - motion
+    - animation
+    - pose
+    - traject*
 - topic: human_pose_estimation
   hints:
   - estimate human body joints and keypoints

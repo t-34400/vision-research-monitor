@@ -28,13 +28,16 @@ def assess_repository_research_quality(
             ]
         )
     )
-    evidence_text = normalize_text(" ".join([identity_text, readme or ""]))
+    readme_text = normalize_text(readme or "")
     homepage = str(repository.get("homepage") or "").strip()
     link_text = " ".join([homepage, str(repository.get("description") or ""), readme or ""])
 
     collection_terms = [normalize_text(value) for value in config["collection_terms"]]
     tutorial_terms = [normalize_text(value) for value in config["tutorial_terms"]]
     research_terms = [normalize_text(value) for value in config["research_terms"]]
+    readme_research_terms = [
+        normalize_text(value) for value in config["readme_research_terms"]
+    ]
     publication_hosts = [str(value).casefold() for value in config["publication_hosts"]]
 
     is_collection = any(
@@ -45,7 +48,13 @@ def assess_repository_research_quality(
     score = float(config["baseline_score"])
     signals: list[str] = ["baseline"]
 
-    if any(term and contains_normalized(evidence_text, term) for term in research_terms):
+    metadata_research_term = any(
+        term and contains_normalized(identity_text, term) for term in research_terms
+    )
+    readme_research_term = any(
+        term and contains_normalized(readme_text, term) for term in readme_research_terms
+    )
+    if metadata_research_term or readme_research_term:
         score += float(config["research_term_bonus"])
         signals.append("research_term")
 

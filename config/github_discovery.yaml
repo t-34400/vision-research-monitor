@@ -19,7 +19,9 @@ search:
   minimum_topic_relevance_score: 0.40
   minimum_venue_relevance_score: 0.2
   pushed_minimum_stars: 50
-  max_readme_enrichments_per_run: 100
+  max_readme_enrichments_per_run: 300
+  max_readme_characters: 50000
+  enrich_topic_candidates_with_readme: true
   vision_context_terms:
   - vision
   - visual
@@ -77,6 +79,9 @@ research_quality:
   - coursework
   - assignment
   - student project
+  - course project
+  - class project
+  - homework
   - hands-on introduction
   research_terms:
   - official implementation
@@ -93,8 +98,38 @@ research_quality:
   - pretrained weights
   - pretrained model
   - checkpoint
+  - project page
+  - bibtex
+  - model weights
+  - training code
+  - evaluation code
+  - inference code
+  - official repository
+  - paper code
   - arxiv
   - openreview
+  readme_research_terms:
+  - official implementation
+  - official code
+  - official repository
+  - code for our paper
+  - code for the paper
+  - paper implementation
+  - research code
+  - benchmark
+  - dataset
+  - pretrained weights
+  - pretrained model
+  - checkpoint
+  - model weights
+  - training code
+  - evaluation code
+  - inference code
+  - project page
+  - bibtex
+  - arxiv
+  - openreview
+  - paper code
   publication_hosts:
   - arxiv.org
   - openreview.net
@@ -116,6 +151,10 @@ query_families:
     text: '"image classification"'
     topics:
     - image_classification
+  - id: image_matting
+    text: '"image matting"'
+    topics:
+    - image_matting
   - id: object_detection
     text: '"object detection"'
     topics:
@@ -150,12 +189,50 @@ query_families:
     text: '"vision-language model"'
     topics:
     - vision_language_models
+  - id: foundation_model
+    text: '"foundation model"'
+    topics:
+    - vision_foundation_models
+    requires_vision_context: true
+  - id: three_d_foundation_model
+    text: '"3d foundation model"'
+    topics:
+    - vision_foundation_models
+  - id: geometry_foundation_model
+    text: '"geometry foundation model"'
+    topics:
+    - vision_foundation_models
+    - visual_geometry
 - id: matching_video_restoration
   queries:
   - id: feature_matching
     text: '"feature matching"'
     topics:
     - feature_matching
+  - id: image_matching
+    text: '"image matching"'
+    topics:
+    - feature_matching
+  - id: dense_matching
+    text: '"dense matching"'
+    topics:
+    - feature_matching
+  - id: point_tracking
+    text: '"point tracking"'
+    topics:
+    - point_tracking
+  - id: optical_flow
+    text: '"optical flow"'
+    topics:
+    - optical_flow
+  - id: scene_flow
+    text: '"scene flow"'
+    topics:
+    - scene_flow
+  - id: image_inpainting
+    text: '"image inpainting"'
+    topics:
+    - image_restoration
   - id: object_tracking
     text: '"object tracking"'
     topics:
@@ -182,6 +259,36 @@ query_families:
     text: '"multi-view stereo"'
     topics:
     - multi_view_stereo
+  - id: visual_geometry
+    text: '"visual geometry"'
+    topics:
+    - visual_geometry
+  - id: geometry_estimation
+    text: '"geometry estimation"'
+    topics:
+    - visual_geometry
+    requires_vision_context: true
+  - id: monocular_geometry
+    text: '"monocular geometry"'
+    topics:
+    - visual_geometry
+    - monocular_depth
+  - id: object_pose_estimation
+    text: '"object pose estimation"'
+    topics:
+    - object_pose_estimation
+  - id: six_d_pose_estimation
+    text: '"6d pose estimation"'
+    topics:
+    - object_pose_estimation
+  - id: extrinsic_calibration
+    text: '"extrinsic calibration"'
+    topics:
+    - camera_calibration
+  - id: point_cloud_registration
+    text: '"point cloud registration"'
+    topics:
+    - visual_geometry
   - id: camera_pose_estimation
     text: '"camera pose estimation"'
     topics:
@@ -192,6 +299,19 @@ query_families:
     - camera_calibration
 - id: depth
   queries:
+  - id: depth_estimation
+    text: '"depth estimation"'
+    topics:
+    - depth_estimation
+  - id: stereo_matching
+    text: '"stereo matching"'
+    topics:
+    - stereo_depth
+  - id: surface_normal_estimation
+    text: '"surface normal estimation"'
+    topics:
+    - visual_geometry
+    - depth_estimation
   - id: monocular_depth
     text: '"monocular depth"'
     topics:
@@ -210,6 +330,22 @@ query_families:
     - multi_view_depth
 - id: reconstruction_3d
   queries:
+  - id: three_d_reconstruction
+    text: '"3d reconstruction"'
+    topics:
+    - three_d_reconstruction
+  - id: feedforward_3d_reconstruction
+    text: '"feedforward 3d reconstruction"'
+    topics:
+    - feed_forward_3d_reconstruction
+  - id: feed_forward_spaced_3d_reconstruction
+    text: '"feed forward 3d reconstruction"'
+    topics:
+    - feed_forward_3d_reconstruction
+  - id: dense_3d_reconstruction
+    text: '"dense 3d reconstruction"'
+    topics:
+    - three_d_reconstruction
   - id: feed_forward_3d_reconstruction
     text: '"feed-forward 3d reconstruction"'
     topics:
@@ -240,6 +376,23 @@ query_families:
     - mesh_reconstruction
 - id: neural_rendering
   queries:
+  - id: neural_rendering_general
+    text: '"neural rendering"'
+    topics:
+    - neural_rendering
+  - id: four_d_reconstruction
+    text: '"4d reconstruction"'
+    topics:
+    - dynamic_4d_reconstruction
+  - id: three_dgs
+    text: '"3dgs"'
+    topics:
+    - gaussian_splatting
+  - id: gaussian_avatar
+    text: '"gaussian avatar"'
+    topics:
+    - gaussian_splatting
+    - avatar
   - id: nerf
     text: '"NeRF"'
     topics:
@@ -258,6 +411,10 @@ query_families:
     - dynamic_4d_reconstruction
 - id: generative_3d
   queries:
+  - id: three_d_generation
+    text: '"3d generation"'
+    topics:
+    - three_d_generation
   - id: image_to_3d
     text: '"image-to-3d"'
     topics:
@@ -272,6 +429,57 @@ query_families:
     - scene_generation
 - id: robotics_embodied
   queries:
+  - id: vision_language_action
+    text: '"vision-language-action"'
+    topics:
+    - vision_language_action
+  - id: robot_manipulation
+    text: '"robot manipulation"'
+    topics:
+    - robot_learning
+  - id: robot_learning
+    text: '"robot learning"'
+    topics:
+    - robot_learning
+  - id: robot_policy
+    text: '"robot policy"'
+    topics:
+    - robot_learning
+  - id: visuomotor_policy
+    text: '"visuomotor policy"'
+    topics:
+    - robot_learning
+  - id: embodied_ai
+    text: '"embodied ai"'
+    topics:
+    - embodied_vision
+  - id: embodied_agent
+    text: '"embodied agent"'
+    topics:
+    - embodied_vision
+  - id: spatial_understanding
+    text: '"spatial understanding"'
+    topics:
+    - spatial_intelligence
+  - id: spatial_intelligence
+    text: '"spatial intelligence"'
+    topics:
+    - spatial_intelligence
+  - id: three_d_scene_understanding
+    text: '"3d scene understanding"'
+    topics:
+    - spatial_intelligence
+  - id: world_model
+    text: '"world model"'
+    topics:
+    - spatial_intelligence
+    - robot_learning
+    requires_vision_context: true
+  - id: imitation_learning
+    text: '"imitation learning"'
+    topics:
+    - robot_learning
+    requires_vision_context: true
   - id: slam
     text: '"SLAM"'
     topics:
@@ -290,6 +498,45 @@ query_families:
     - embodied_vision
 - id: humans_avatars
   queries:
+  - id: human_motion
+    text: '"human motion"'
+    topics:
+    - human_motion_generation
+  - id: human_motion_generation
+    text: '"human motion generation"'
+    topics:
+    - human_motion_generation
+  - id: motion_generation
+    text: '"motion generation"'
+    topics:
+    - human_motion_generation
+    requires_vision_context: true
+  - id: human_mesh_recovery
+    text: '"human mesh recovery"'
+    topics:
+    - human_mesh_reconstruction
+  - id: hand_pose_estimation
+    text: '"hand pose estimation"'
+    topics:
+    - human_pose_estimation
+    - hand_reconstruction
+  - id: human_parsing
+    text: '"human parsing"'
+    topics:
+    - semantic_segmentation
+  - id: human_matting
+    text: '"human matting"'
+    topics:
+    - image_matting
+  - id: avatar_generation
+    text: '"avatar generation"'
+    topics:
+    - avatar
+  - id: motion_capture
+    text: '"motion capture"'
+    topics:
+    - human_pose_estimation
+    requires_vision_context: true
   - id: human_pose_estimation
     text: '"human pose estimation"'
     topics:

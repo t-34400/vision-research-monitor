@@ -196,4 +196,4 @@ def test_semantic_enrichment_requires_each_added_topic_to_clear_threshold() -> N
     )
 
     assert result.topics == ["image_classification"]
-    assert result.evidence["semantic_topic_scores"] == {"image_classification": 0.263181}
+    assert result.evidence["semantic_topic_scores"] == {"image_classification": 0.243292}

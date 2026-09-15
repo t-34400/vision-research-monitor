@@ -117,6 +117,8 @@ def main(argv: list[str] | None = None) -> int:
         "search_hits_by_query": result.search_hits_by_query,
         "accepted_by_query": result.accepted_by_query,
         "research_quality_by_category": result.research_quality_by_category,
+        "readme_enrichment_requests": result.readme_enrichment_requests,
+        "readme_enrichment_successes": result.readme_enrichment_successes,
         "auto_watch": auto_watch,
         "checkpoint_advanced": result.failed_queries == 0 and not explicit_window,
         "diagnostics": result.diagnostics,

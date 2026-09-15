@@ -24,7 +24,7 @@ The configuration owns:
 - one or more search queries grouped into topic query families;
 - optional per-query `created` / `pushed` modes;
 - venue/year README discovery;
-- the README-enrichment cap used for venue-only candidates;
+- bounded README enrichment for research-value evidence and broad-query context recovery;
 - bounded auto-watch promotion thresholds for repositories whose future tool
   updates merit release/tag/default-branch monitoring.
 
@@ -48,9 +48,11 @@ covered independently by `created` queries.
 
 Public, non-archived repositories are the initial search scope; fork results are
 explicitly filtered before candidate aggregation.
-README text is intentionally excluded from ordinary topic search because live
+README text is intentionally excluded from ordinary GitHub Search because live
 smoke testing showed that broad README matches produced excessive candidate
-volume. README search remains available for the dedicated venue/year path.
+volume. Topic queries are instead expanded with curated task vocabulary, while
+bounded README enrichment runs only after a repository has entered the candidate
+set. README search remains available for the dedicated venue/year path.
 
 ### Venue/year discovery
 
@@ -97,8 +99,12 @@ GitHub repository search has a dedicated rate-limit resource. Search requests
 are issued serially with a configured minimum interval. Normal GitHub REST retry
 and rate-limit handling remains active as a second line of defense.
 
-README enrichment uses the normal REST API resource, is attempted only when
-needed for venue-only topical gating, and has a per-run cap.
+README enrichment uses the normal REST API resource and has a per-run cap. It is
+used for venue-only topical gating, to recover explicit vision context for broad
+queries whose repository metadata is ambiguous, and to assess research value for
+accepted topic-query candidates. README content is truncated to a configured
+maximum before deterministic scoring. Repeated needs for the same repository
+within one run reuse an in-memory result.
 
 ## Relevance classification
 
@@ -110,16 +116,17 @@ Evidence is drawn from:
 - repository name/full name;
 - repository description;
 - GitHub topics;
-- README text when venue-only enrichment is required.
+- README text when venue-only topical gating or broad-query context recovery is required.
 
 Topic-query evidence is weak (`0.10`) and cannot satisfy the normal topic
 threshold by itself. A repository needs corroborating name, description, topic,
-or later semantic evidence. Broad terms such as quantization, model compression,
-self-supervised learning, synthetic data, and foundation-model adaptation also
-require an explicit vision-context term in repository metadata unless the same
-repository was independently surfaced by an unrestricted topic query. This keeps
-general LLM/software repositories out of the vision archive without weakening
-more specific computer-vision queries.
+or later semantic evidence. Broad terms such as quantization, model compression, self-supervised learning,
+synthetic data, foundation models, world models, motion generation, and imitation
+learning require explicit vision context unless the same repository was
+independently surfaced by an unrestricted topic query. Metadata is checked first;
+if it is inconclusive, one bounded README enrichment may establish the missing
+context. This keeps general LLM/software repositories out of the vision archive
+without weakening more specific computer-vision queries.
 
 Venue candidates have no topic-query baseline and must independently match at
 least one taxonomy topic. A venue string alone is not enough: venue-only
@@ -141,7 +148,10 @@ shared classifier baseline because repository search is intentionally broad.
 Repository topic relevance and repository research value are separate. Every
 accepted topic-query repository receives `scores.research_relevance` from
 configuration-driven evidence such as explicit research/implementation wording,
-publication links, venue evidence, a project homepage, and supporting popularity.
+publication links, venue evidence, a project homepage, supporting popularity, and
+bounded README evidence when available. README term evidence uses a stricter list
+than repository metadata, so generic words such as `framework` or `library` do
+not become sufficient research evidence merely because they occur in long docs.
 Absolute stars are only supporting evidence and cannot make a generic repository
 research-relevant by themselves. Awesome/curated lists and tutorial-style
 repositories are identified from repository metadata and capped below the normal
@@ -214,8 +224,10 @@ stable and the item store is idempotent.
 
 README failures are warnings rather than collection failures. A venue-only
 candidate without enough topical or research-quality evidence is skipped.
-Topic-query candidates with low research value remain stored but are filtered at
-reporting time unless a watch override applies.
+Topic-query candidates continue with metadata-only research scoring when README
+enrichment is unavailable or the per-run cap is reached. Low research-value topic
+candidates remain stored but are filtered at reporting time unless a watch
+override applies.
 
 ## Acceptance criteria
 
@@ -230,4 +242,7 @@ reporting time unless a watch override applies.
 - [x] High-value discovered tools are promoted into a bounded update-watch registry.
 - [x] Venue-only candidates require research-value corroboration beyond a conference mention.
 - [x] Awesome/list and tutorial repositories are retained as candidates but capped below digest eligibility.
+- [x] Accepted topic-query repositories receive bounded README research-evidence enrichment.
+- [x] Broad query candidates may use bounded README text to establish missing vision context.
+- [x] A curated starred-repository positive set guards key query-vocabulary coverage.
 - [x] Fixture-based tests cover aggregation, splitting, README enrichment, stale checkpoints, and broad-query context gating.

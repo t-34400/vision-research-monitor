@@ -706,6 +706,27 @@ fraction of the previous active inventory and a minimum count tolerance; losses
 above that guard still fail before state changes. This retains protection against
 partial proceedings pages while accommodating verified upstream removals.
 
+### D-164 — Expand GitHub discovery vocabulary and enrich accepted candidates from README
+
+**Status:** Accepted
+
+GitHub Discovery uses a curated, configuration-driven query vocabulary derived
+from repositories that were manually judged worth following, including newer
+terms for visual geometry, dense motion/tracking, VLA/robot learning, spatial
+intelligence, human motion, and generic 3D reconstruction/generation. Broad terms
+remain context-gated so query expansion does not turn Discovery into generic ML
+search.
+
+README content is not added to broad GitHub Search. Instead, once a repository is
+a candidate, Discovery may fetch a bounded and truncated README through the normal
+REST resource. README evidence can recover missing vision context for broad
+queries, gate venue-only candidates, and improve the separate
+`research_relevance` score used by Daily Digest. Topic-query repositories are not
+dropped solely for low research value; they remain archived and the existing
+reporting threshold controls digest precision. README failures and enrichment-cap
+exhaustion degrade to metadata-only scoring rather than failing unrelated search
+coverage.
+
 ## Future decisions
 
 The following choices remain intentionally deferred until measured operational

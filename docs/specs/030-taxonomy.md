@@ -35,6 +35,15 @@ Each topic contains:
 - optional `description`;
 - optional `enabled` flag.
 
+## Current coverage extensions
+
+The active taxonomy includes explicit topics for visual geometry, generic depth
+and 3D reconstruction, optical/scene flow, point tracking, image matting, object
+pose estimation, neural rendering, generic 3D generation, vision-language-action,
+robot learning/manipulation, spatial intelligence, and human motion generation.
+These identifiers keep recently common research terminology from being forced
+into older neighboring task labels.
+
 ## Identifier stability
 
 Topic IDs are persistent data identifiers. Renaming a display label or changing

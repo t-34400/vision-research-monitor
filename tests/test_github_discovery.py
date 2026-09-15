@@ -67,6 +67,10 @@ def test_topic_discovery_aggregates_created_and_pushed_hits() -> None:
 
     def handler(request: httpx.Request) -> httpx.Response:
         requests.append(request)
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200, text="Official implementation https://arxiv.org/abs/2601.00001"
+            )
         return httpx.Response(
             200, json={"total_count": 1, "incomplete_results": False, "items": [repository()]}
         )
@@ -88,7 +92,7 @@ def test_topic_discovery_aggregates_created_and_pushed_hits() -> None:
     assert item.metadata["discovery_modes"] == ["created", "pushed"]
     assert item.metadata["action"] == "created"
     assert item.scores["relevance"] >= 0.35
-    queries = [request.url.params["q"] for request in requests]
+    queries = [request.url.params["q"] for request in requests if "q" in request.url.params]
     assert any("created:" in query for query in queries)
     assert any("pushed:" in query and "stars:>=50" in query for query in queries)
 
@@ -115,6 +119,10 @@ def test_pushed_only_repository_is_marked_as_discovered() -> None:
     existing["created_at"] = "2024-01-01T00:00:00Z"
 
     def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200, text="Official implementation https://arxiv.org/abs/2601.00002"
+            )
         return httpx.Response(
             200, json={"total_count": 1, "incomplete_results": False, "items": [existing]}
         )
@@ -156,6 +164,10 @@ def test_dense_search_window_is_split_before_pagination_limit() -> None:
 
     def handler(request: httpx.Request) -> httpx.Response:
         nonlocal original_range_calls
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200, text="Official implementation https://arxiv.org/abs/2601.00003"
+            )
         query = request.url.params["q"]
         if "2026-08-08T00:00:00+00:00..2026-08-08T02:00:00+00:00" in query:
             original_range_calls += 1
@@ -275,6 +287,8 @@ def test_broad_query_requires_explicit_vision_context() -> None:
     vision_repo["topics"] = ["quantization", "computer-vision"]
 
     def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(200, text="Package documentation")
         return httpx.Response(
             200,
             json={
@@ -400,3 +414,192 @@ def test_github_discovery_uses_stricter_semantic_only_acceptance() -> None:
 
     assert result.raw_candidates == 1
     assert result.items == []
+
+
+
+def test_broad_query_can_use_readme_for_vision_context() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["query_families"] = [
+        {
+            "id": "foundation_representation",
+            "queries": [
+                {
+                    "id": "foundation_model",
+                    "text": '"foundation model"',
+                    "topics": ["vision_foundation_models"],
+                    "modes": ["created"],
+                    "requires_vision_context": True,
+                }
+            ],
+        }
+    ]
+    config["venue_search"]["enabled"] = False
+    candidate = repository(601, "Official foundation model implementation")
+    candidate["name"] = "foundation-model"
+    candidate["full_name"] = "research/foundation-model"
+    candidate["topics"] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200,
+                text=(
+                    "Foundation model for 3D vision and camera geometry. "
+                    "https://arxiv.org/abs/2601.00601"
+                ),
+            )
+        return httpx.Response(
+            200,
+            json={"total_count": 1, "incomplete_results": False, "items": [candidate]},
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert result.rejected_for_context == 0
+    assert len(result.items) == 1
+    assert "vision_foundation_models" in result.items[0].topics
+    assert result.readme_enrichment_requests == 1
+    assert result.readme_enrichment_successes == 1
+
+
+def test_topic_candidate_uses_readme_for_research_quality() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["query_families"] = [
+        {
+            "id": "geometry_calibration",
+            "queries": [
+                {
+                    "id": "visual_geometry",
+                    "text": '"visual geometry"',
+                    "topics": ["visual_geometry"],
+                    "modes": ["created"],
+                }
+            ],
+        }
+    ]
+    config["venue_search"]["enabled"] = False
+    candidate = repository(602, "Visual geometry estimation for open-domain images")
+    candidate["topics"] = []
+    candidate["stargazers_count"] = 0
+    candidate["homepage"] = None
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200,
+                text=(
+                    "Official implementation of our paper. Project page and model weights. "
+                    "https://arxiv.org/abs/2601.00602"
+                ),
+            )
+        return httpx.Response(
+            200,
+            json={"total_count": 1, "incomplete_results": False, "items": [candidate]},
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert len(result.items) == 1
+    item = result.items[0]
+    assert (
+        item.scores["research_relevance"]
+        >= config["research_quality"]["research_candidate_score"]
+    )
+    assert "publication_link" in item.metadata["research_quality"]["signals"]
+    assert result.readme_enrichment_requests == 1
+    assert result.readme_enrichment_successes == 1
+
+
+def test_readme_enrichment_cap_warns_once() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["search"]["max_readme_enrichments_per_run"] = 1
+    config["query_families"] = [
+        {
+            "id": "geometry_calibration",
+            "queries": [
+                {
+                    "id": "visual_geometry",
+                    "text": '"visual geometry"',
+                    "topics": ["visual_geometry"],
+                    "modes": ["created"],
+                }
+            ],
+        }
+    ]
+    config["venue_search"]["enabled"] = False
+    first = repository(603, "Visual geometry for images")
+    second = repository(604, "Visual geometry for cameras")
+    first["full_name"] = "research/first"
+    second["full_name"] = "research/second"
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200, text="Official paper implementation https://arxiv.org/abs/2601.00603"
+            )
+        return httpx.Response(
+            200,
+            json={"total_count": 2, "incomplete_results": False, "items": [first, second]},
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert len(result.items) == 2
+    assert result.readme_enrichment_requests == 1
+    warnings = [entry for entry in result.diagnostics if entry["target"] == "readme-enrichment"]
+    assert len(warnings) == 1
+
+
+def test_starred_positive_regression_repositories_have_direct_query_coverage() -> None:
+    config, _, _ = load_fixture_config()
+    payload = yaml.safe_load(
+        (ROOT / "evaluation/github_discovery_positive_repos.yaml").read_text(encoding="utf-8")
+    )
+    queries = {
+        query["id"]: query
+        for family in config["query_families"]
+        for query in family["queries"]
+    }
+
+    from vision_research_monitor.github.discovery import contains_normalized, normalize_text
+
+    for repository_case in payload["repositories"]:
+        query = queries[repository_case["expected_query"]]
+        repository_text = normalize_text(
+            " ".join(
+                [
+                    repository_case["full_name"],
+                    repository_case["description"],
+                    " ".join(repository_case["topics"]),
+                ]
+            )
+        )
+        query_text = normalize_text(query["text"].strip('"'))
+        assert contains_normalized(repository_text, query_text), repository_case["full_name"]
