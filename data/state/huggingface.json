@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-14T01:09:51.095376Z",
+      "last_successful_at": "2026-09-15T01:31:06.796851Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -62,6 +62,10 @@
           "last_modified": "2026-08-22T03:04:14Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
+        "BiernyVR/vr-guardian-segmentation": {
+          "last_modified": "2026-09-14T10:13:59Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "Brijeshsharma/nppe3-4x-super-resolution-denoise": {
           "last_modified": "2026-09-05T18:24:03Z",
           "last_seen_at": "2026-09-06T01:01:35.099658Z"
@@ -83,12 +87,20 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-09-14T01:00:54Z",
-          "last_seen_at": "2026-09-14T01:09:51.095376Z"
+          "last_modified": "2026-09-15T01:00:27Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
+        "Chunyutsai6/video-understanding-v3": {
+          "last_modified": "2026-09-14T19:28:25Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "CienciaCiudades/rfdetr-urban-segmentation": {
           "last_modified": "2026-09-02T15:53:08Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
+        },
+        "Daffasari/notes-video-understanding": {
+          "last_modified": "2026-09-14T21:56:35Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "DanielParkerora/study-robotics-vision-language23": {
           "last_modified": "2026-08-27T23:11:31Z",
@@ -157,6 +169,10 @@
         "Intel/object-detection": {
           "last_modified": "2026-09-10T21:58:20Z",
           "last_seen_at": "2026-09-11T01:09:15.052640Z"
+        },
+        "Iusokolov/reading-vision-language-pretraining": {
+          "last_modified": "2026-09-15T00:18:49Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "JamesTrfn/paper_022630687_video_understanding": {
           "last_modified": "2026-08-22T06:15:58Z",
@@ -255,8 +271,8 @@
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "Muemmel/solar-pv-segmentation-brandenburg": {
-          "last_modified": "2026-09-11T22:29:41Z",
-          "last_seen_at": "2026-09-12T01:10:02.109017Z"
+          "last_modified": "2026-09-14T20:52:53Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "Navadeep018/brain-mri-tumor-segmentation": {
           "last_modified": "2026-08-14T15:48:37Z",
@@ -306,9 +322,13 @@
           "last_modified": "2026-08-21T17:35:34Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "RahulVpzo/reading-video-understanding": {
+          "last_modified": "2026-09-15T00:37:25Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "Removesurgery/american-football_field_segmentation": {
-          "last_modified": "2026-09-10T08:32:58Z",
-          "last_seen_at": "2026-09-11T01:09:15.052640Z"
+          "last_modified": "2026-09-14T07:29:55Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "Reza2kn/rf-detr-segmentation-NVFP4": {
           "last_modified": "2026-09-09T22:59:13Z",
@@ -325,6 +345,10 @@
         "SEMVISSER/paper_022175325_robotics_vision_language": {
           "last_modified": "2026-08-21T19:07:46Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "Saputrafiona/robotics-vision-language": {
+          "last_modified": "2026-09-14T01:45:09Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "Sathyag007/speaker-segmentation-fine-tuned-callhome-jpn": {
           "last_modified": "2026-08-05T12:20:00Z",
@@ -458,6 +482,10 @@
           "last_modified": "2026-09-08T20:50:25Z",
           "last_seen_at": "2026-09-09T01:16:11.190836Z"
         },
+        "akashmishracu/quick-vision-language-pretraining47": {
+          "last_modified": "2026-09-15T01:24:01Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "akifkaradag/cardiac-segmentation-diagnosis": {
           "last_modified": "2026-09-13T10:27:08Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
@@ -550,6 +578,10 @@
           "last_modified": "2026-08-21T23:49:36Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
+        "bdgrahman/robotics-vision-language-survey": {
+          "last_modified": "2026-09-14T11:57:45Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "benmeyer2005/quick-vision-language-pretraining": {
           "last_modified": "2026-08-27T14:42:22Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
@@ -583,8 +615,8 @@
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
         },
         "calvinyong1/arabidopsis-segmentation-model": {
-          "last_modified": "2026-08-17T18:09:30Z",
-          "last_seen_at": "2026-08-17T23:39:51.375533Z"
+          "last_modified": "2026-09-14T19:43:38Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "calvinyong1/arabidopsis-segmentation-moel": {
           "last_modified": "2026-08-17T17:57:26Z",
@@ -601,6 +633,10 @@
         "chengwij37/paper_023191774_video_understanding": {
           "last_modified": "2026-08-21T19:48:33Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "chenoscar/video-understanding": {
+          "last_modified": "2026-09-14T08:30:46Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "chrisga13/Models-Object-Detection-and-OCR-System-for-Engineering-Drawings": {
           "last_modified": "2026-09-06T11:15:00Z",
@@ -669,6 +705,10 @@
         "deepakmukherjee/paper_021393628_robotics_vision_language": {
           "last_modified": "2026-08-23T08:43:26Z",
           "last_seen_at": "2026-08-23T23:37:28.246327Z"
+        },
+        "dennisschulz/vision-language-pretraining47": {
+          "last_modified": "2026-09-14T06:44:21Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "dfki-av/BIMStruct3D-segmentation": {
           "last_modified": "2026-09-02T06:51:46Z",
@@ -770,6 +810,10 @@
           "last_modified": "2026-09-13T17:11:39Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
+        "gabri-elltb7/video-understanding-lite": {
+          "last_modified": "2026-09-14T21:46:14Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "gabrielpere/robotics-vision-language-fast-2024": {
           "last_modified": "2026-08-27T03:02:36Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -870,6 +914,10 @@
           "last_modified": "2026-08-27T04:59:46Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
+        "jackywangger/video-understanding-small": {
+          "last_modified": "2026-09-14T14:00:17Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "jacobgcampbell/robotics-vision-language-beta": {
           "last_modified": "2026-09-12T23:36:34Z",
           "last_seen_at": "2026-09-13T01:03:44.845143Z"
@@ -889,6 +937,10 @@
         "jason-johnson/video-understanding-review": {
           "last_modified": "2026-08-26T13:11:36Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
+        },
+        "jasonkobay/vision-language-pretraining-v2-2023": {
+          "last_modified": "2026-09-14T03:38:15Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "jennifercook/paper_021891815_robotics_vision_language": {
           "last_modified": "2026-08-21T14:50:23Z",
@@ -939,8 +991,8 @@
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
         "jujeongho/Qwen3.5-0.8B-LayerExpansion-Welding-Component-Segmentation-v2": {
-          "last_modified": "2026-09-11T14:13:31Z",
-          "last_seen_at": "2026-09-12T01:10:02.109017Z"
+          "last_modified": "2026-09-14T13:00:11Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "jujeongho/Qwen3.5-0.8B-LoRA-Welding-Component-Segmentation": {
           "last_modified": "2026-09-10T05:52:23Z",
@@ -951,8 +1003,8 @@
           "last_seen_at": "2026-09-11T01:09:15.052640Z"
         },
         "jujeongho/Qwen3.5-4B-LoRA-Welding-Component-Segmentation-v2": {
-          "last_modified": "2026-09-11T16:16:10Z",
-          "last_seen_at": "2026-09-12T01:10:02.109017Z"
+          "last_modified": "2026-09-14T13:32:10Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "julesbir/vision-language-pretraining": {
           "last_modified": "2026-08-30T16:07:26Z",
@@ -989,6 +1041,10 @@
         "kmakarov/paper_004356805_vision_language_pretraining": {
           "last_modified": "2026-08-21T19:03:45Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "kunle-ogunleye/notes-robotics-vision-language34": {
+          "last_modified": "2026-09-14T07:31:54Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "kyledavis/robotics-vision-language-v3": {
           "last_modified": "2026-08-26T08:15:40Z",
@@ -1074,6 +1130,10 @@
           "last_modified": "2026-08-17T19:47:13Z",
           "last_seen_at": "2026-08-17T23:39:51.375533Z"
         },
+        "mkdemir8/robotics-vision-language-finetune": {
+          "last_modified": "2026-09-14T05:21:42Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "mlboydaisuke/pyannote-segmentation-3.0-CoreML": {
           "last_modified": "2026-08-15T05:15:59Z",
           "last_seen_at": "2026-08-15T23:36:30.730423Z"
@@ -1089,6 +1149,10 @@
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "niclasclassen/segmentations-of-distended-and-collapsed-colons-from-ct-scans": {
+          "last_modified": "2026-09-14T14:41:38Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "nicoleju/video-understanding-reading": {
           "last_modified": "2026-08-29T01:06:45Z",
@@ -1161,6 +1225,10 @@
         "puneverma1986/video-understanding": {
           "last_modified": "2026-08-28T04:43:14Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "qizhangslam/blur-slam-exp-best-preservation-s1": {
+          "last_modified": "2026-09-14T20:49:58Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "qkyo559/pointclouds": {
           "last_modified": "2026-09-10T02:06:43Z",
@@ -1246,6 +1314,10 @@
           "last_modified": "2026-09-02T13:36:20Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
         },
+        "sergiojimenezbur/robotics-vision-language": {
+          "last_modified": "2026-09-14T11:26:33Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
         "sgouet/dog-breeds-multiclass-image-classification-with-vit": {
           "last_modified": "2026-08-26T13:35:51Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -1317,6 +1389,10 @@
         "tony-yip/survey-vision-language-pretraining": {
           "last_modified": "2026-08-27T15:23:37Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "tonykuo85/video-understanding": {
+          "last_modified": "2026-09-14T15:06:14Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "tonyliu5/video-understanding48": {
           "last_modified": "2026-08-29T00:37:49Z",
@@ -1909,6 +1985,10 @@
         "walk-er88/paper_021859239_robotics_vision_language": {
           "last_modified": "2026-08-22T06:37:51Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "wannaphong/pyannote-segmentation-3.0": {
+          "last_modified": "2026-09-14T13:00:44Z",
+          "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "wellesley-easel/randall-segmentation-model": {
           "last_modified": "2026-08-27T00:06:42Z",
