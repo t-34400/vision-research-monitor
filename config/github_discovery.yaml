@@ -51,13 +51,19 @@ search:
   - augmented reality
   - mixed reality
   - virtual reality
+  - multi-view
+  - stereo
+  - geometry
 research_quality:
   baseline_score: 0.15
   research_candidate_score: 0.40
   minimum_venue_only_score: 0.40
   semantic_only_acceptance_similarity: 0.28
   research_term_bonus: 0.30
+  supporting_research_term_bonus: 0.05
+  supporting_only_cap: 0.35
   publication_link_bonus: 0.50
+  readme_evidence_characters: 6000
   venue_bonus: 0.15
   homepage_bonus: 0.05
   stars_50_bonus: 0.10
@@ -72,6 +78,11 @@ research_quality:
   - papers list
   - resource list
   - reading list
+  - arxiv daily
+  - daily arxiv
+  - paper digest
+  - paper tracker
+  - compendium
   tutorial_terms:
   - tutorial
   - introduction
@@ -83,14 +94,39 @@ research_quality:
   - class project
   - homework
   - hands-on introduction
+  - kaggle
+  - portfolio
+  - interview questions
+  - practice project
+  - learning exercise
+  - educational project
+  - school project
+  - college project
   research_terms:
   - official implementation
   - official code
   - code for our paper
   - code for the paper
   - paper implementation
-  - implementation of
   - research code
+  - bibtex
+  - paper code
+  - arxiv
+  - openreview
+  readme_research_terms:
+  - official implementation
+  - official code
+  - code for our paper
+  - code for the paper
+  - paper implementation
+  - research code
+  - bibtex
+  - arxiv
+  - openreview
+  - paper code
+  supporting_research_terms:
+  - implementation of
+  - official repository
   - benchmark
   - dataset
   - framework
@@ -99,37 +135,10 @@ research_quality:
   - pretrained model
   - checkpoint
   - project page
-  - bibtex
   - model weights
   - training code
   - evaluation code
   - inference code
-  - official repository
-  - paper code
-  - arxiv
-  - openreview
-  readme_research_terms:
-  - official implementation
-  - official code
-  - official repository
-  - code for our paper
-  - code for the paper
-  - paper implementation
-  - research code
-  - benchmark
-  - dataset
-  - pretrained weights
-  - pretrained model
-  - checkpoint
-  - model weights
-  - training code
-  - evaluation code
-  - inference code
-  - project page
-  - bibtex
-  - arxiv
-  - openreview
-  - paper code
   publication_hosts:
   - arxiv.org
   - openreview.net

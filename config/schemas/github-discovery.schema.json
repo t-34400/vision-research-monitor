@@ -59,10 +59,11 @@
       "additionalProperties": false,
       "required": [
         "baseline_score", "research_candidate_score", "minimum_venue_only_score",
-        "semantic_only_acceptance_similarity", "research_term_bonus", "publication_link_bonus",
-        "venue_bonus", "homepage_bonus", "stars_50_bonus", "stars_250_bonus",
-        "stars_1000_bonus", "collection_cap", "tutorial_cap", "collection_terms",
-        "tutorial_terms", "research_terms", "readme_research_terms", "publication_hosts"
+        "semantic_only_acceptance_similarity", "research_term_bonus", "supporting_research_term_bonus",
+        "supporting_only_cap", "publication_link_bonus", "readme_evidence_characters", "venue_bonus", "homepage_bonus",
+        "stars_50_bonus", "stars_250_bonus", "stars_1000_bonus", "collection_cap", "tutorial_cap",
+        "collection_terms", "tutorial_terms", "research_terms", "readme_research_terms",
+        "supporting_research_terms", "publication_hosts"
       ],
       "properties": {
         "baseline_score": {"type": "number", "minimum": 0, "maximum": 1},
@@ -70,7 +71,10 @@
         "minimum_venue_only_score": {"type": "number", "minimum": 0, "maximum": 1},
         "semantic_only_acceptance_similarity": {"type": "number", "minimum": 0, "maximum": 1},
         "research_term_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "supporting_research_term_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "supporting_only_cap": {"type": "number", "minimum": 0, "maximum": 1},
         "publication_link_bonus": {"type": "number", "minimum": 0, "maximum": 1},
+        "readme_evidence_characters": {"type": "integer", "minimum": 500, "maximum": 50000},
         "venue_bonus": {"type": "number", "minimum": 0, "maximum": 1},
         "homepage_bonus": {"type": "number", "minimum": 0, "maximum": 1},
         "stars_50_bonus": {"type": "number", "minimum": 0, "maximum": 1},
@@ -91,6 +95,10 @@
           "items": {"type": "string", "minLength": 1}
         },
         "readme_research_terms": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "supporting_research_terms": {
           "type": "array", "minItems": 1, "uniqueItems": true,
           "items": {"type": "string", "minLength": 1}
         },

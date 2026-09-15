@@ -28,20 +28,24 @@ def assess_repository_research_quality(
             ]
         )
     )
-    readme_text = normalize_text(readme or "")
+    readme_lead = (readme or "")[: int(config["readme_evidence_characters"])]
+    readme_text = normalize_text(readme_lead)
     homepage = str(repository.get("homepage") or "").strip()
-    link_text = " ".join([homepage, str(repository.get("description") or ""), readme or ""])
+    link_text = " ".join([homepage, str(repository.get("description") or ""), readme_lead])
 
     collection_terms = [normalize_text(value) for value in config["collection_terms"]]
     tutorial_terms = [normalize_text(value) for value in config["tutorial_terms"]]
     research_terms = [normalize_text(value) for value in config["research_terms"]]
-    readme_research_terms = [
-        normalize_text(value) for value in config["readme_research_terms"]
+    readme_research_terms = [normalize_text(value) for value in config["readme_research_terms"]]
+    supporting_research_terms = [
+        normalize_text(value) for value in config["supporting_research_terms"]
     ]
     publication_hosts = [str(value).casefold() for value in config["publication_hosts"]]
 
     is_collection = any(
-        term and contains_normalized(identity_text, term) for term in collection_terms
+        term
+        and (contains_normalized(identity_text, term) or contains_normalized(readme_text, term))
+        for term in collection_terms
     )
     is_tutorial = any(term and contains_normalized(identity_text, term) for term in tutorial_terms)
 
@@ -54,18 +58,30 @@ def assess_repository_research_quality(
     readme_research_term = any(
         term and contains_normalized(readme_text, term) for term in readme_research_terms
     )
-    if metadata_research_term or readme_research_term:
+    has_strong_research_evidence = metadata_research_term or readme_research_term
+    if has_strong_research_evidence:
         score += float(config["research_term_bonus"])
         signals.append("research_term")
+
+    supporting_research_term = any(
+        term
+        and (contains_normalized(identity_text, term) or contains_normalized(readme_text, term))
+        for term in supporting_research_terms
+    )
+    if supporting_research_term:
+        score += float(config["supporting_research_term_bonus"])
+        signals.append("supporting_research_term")
 
     normalized_link_text = link_text.casefold()
     if any(host in normalized_link_text for host in publication_hosts):
         score += float(config["publication_link_bonus"])
         signals.append("publication_link")
+        has_strong_research_evidence = True
 
     if venue_hits:
         score += float(config["venue_bonus"])
         signals.append("venue")
+        has_strong_research_evidence = True
 
     if homepage:
         score += float(config["homepage_bonus"])
@@ -80,6 +96,10 @@ def assess_repository_research_quality(
         if stars >= threshold:
             score += float(bonus)
             signals.append(f"stars_{threshold}")
+
+    if not has_strong_research_evidence:
+        score = min(score, float(config["supporting_only_cap"]))
+        signals.append("supporting_only_cap")
 
     category = "candidate"
     if is_collection:

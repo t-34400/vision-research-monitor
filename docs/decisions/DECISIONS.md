@@ -717,15 +717,23 @@ intelligence, human motion, and generic 3D reconstruction/generation. Broad term
 remain context-gated so query expansion does not turn Discovery into generic ML
 search.
 
-README content is not added to broad GitHub Search. Instead, once a repository is
-a candidate, Discovery may fetch a bounded and truncated README through the normal
-REST resource. README evidence can recover missing vision context for broad
-queries, gate venue-only candidates, and improve the separate
-`research_relevance` score used by Daily Digest. Topic-query repositories are not
-dropped solely for low research value; they remain archived and the existing
-reporting threshold controls digest precision. README failures and enrichment-cap
-exhaustion degrade to metadata-only scoring rather than failing unrelated search
-coverage.
+README content is not added to broad GitHub Search. Broad queries must establish
+vision context from repository name, description, or topics; README text cannot
+rescue a generic ML/data hit into the candidate set. Once a topic-relevant
+repository is accepted, Discovery may fetch a bounded and truncated README through
+the normal REST resource to gate venue-only candidates and improve the separate
+`research_relevance` score used by Daily Digest. README research evidence is
+restricted to an early lead window so deep citation/reference sections do not turn
+generic libraries into research releases. Venue-only candidates without lexical
+metadata topics must also show explicit vision/3D/robotics context in that README
+lead before semantic classification can rescue them. Collection markers are
+recognized from both repository metadata and the bounded README lead. Strong
+paper/code evidence and weaker artifact evidence are scored separately, and
+supporting/popularity evidence alone is capped below the digest research threshold.
+Topic-query repositories are not dropped solely for low research value; they remain
+archived and the existing reporting threshold controls digest precision. README
+failures and enrichment-cap exhaustion degrade to metadata-only scoring rather than
+failing unrelated search coverage.
 
 ## Future decisions
 

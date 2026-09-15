@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Related tasks:** `GHD-001` through `GHD-010`  
-**Related decisions:** `D-001`, `D-003`, `D-004`, `D-115`, `D-116`, `D-117`, `D-118`, `D-119`, `D-134`, `D-135`, `D-154`, `D-158`
+**Related decisions:** `D-001`, `D-003`, `D-004`, `D-115`, `D-116`, `D-117`, `D-118`, `D-119`, `D-134`, `D-135`, `D-154`, `D-158`, `D-164`
 
 ## Purpose
 
@@ -24,7 +24,7 @@ The configuration owns:
 - one or more search queries grouped into topic query families;
 - optional per-query `created` / `pushed` modes;
 - venue/year README discovery;
-- bounded README enrichment for research-value evidence and broad-query context recovery;
+- bounded README enrichment for research-value evidence after metadata context gating;
 - bounded auto-watch promotion thresholds for repositories whose future tool
   updates merit release/tag/default-branch monitoring.
 
@@ -61,7 +61,7 @@ current `Asia/Tokyo` year. The collector searches for strings such as
 `"CVPR 2026" in:readme` using the same bounded `created` and `pushed` modes.
 
 A venue match alone does not establish topical relevance. Venue-only candidates
-must match the research taxonomy through repository metadata or a bounded README
+must match the research taxonomy through repository metadata or one bounded README
 enrichment request.
 
 ## Collection windows and checkpoints
@@ -100,10 +100,11 @@ are issued serially with a configured minimum interval. Normal GitHub REST retry
 and rate-limit handling remains active as a second line of defense.
 
 README enrichment uses the normal REST API resource and has a per-run cap. It is
-used for venue-only topical gating, to recover explicit vision context for broad
-queries whose repository metadata is ambiguous, and to assess research value for
-accepted topic-query candidates. README content is truncated to a configured
-maximum before deterministic scoring. Repeated needs for the same repository
+used for venue-only topical gating and to assess research value for accepted
+topic-query candidates. Broad-query vision context is decided from repository
+metadata before any README request. README content is truncated to a configured
+maximum before deterministic scoring, and research-value evidence is limited to a
+smaller configured README lead window. Repeated needs for the same repository
 within one run reuse an in-memory result.
 
 ## Relevance classification
@@ -116,23 +117,28 @@ Evidence is drawn from:
 - repository name/full name;
 - repository description;
 - GitHub topics;
-- README text when venue-only topical gating or broad-query context recovery is required.
+- README text when venue-only topical gating is required.
 
 Topic-query evidence is weak (`0.10`) and cannot satisfy the normal topic
 threshold by itself. A repository needs corroborating name, description, topic,
 or later semantic evidence. Broad terms such as quantization, model compression, self-supervised learning,
 synthetic data, foundation models, world models, motion generation, and imitation
 learning require explicit vision context unless the same repository was
-independently surfaced by an unrestricted topic query. Metadata is checked first;
-if it is inconclusive, one bounded README enrichment may establish the missing
-context. This keeps general LLM/software repositories out of the vision archive
-without weakening more specific computer-vision queries.
+independently surfaced by an unrestricted topic query. Vision context must be
+present in repository name, description, or GitHub topics; README text does not
+rescue an otherwise generic broad-query hit. This keeps general LLM/software
+repositories out of the vision archive without weakening more specific
+computer-vision queries.
 
 Venue candidates have no topic-query baseline and must independently match at
-least one taxonomy topic. A venue string alone is not enough: venue-only
-candidates must also clear the configured repository research-quality threshold.
-This prevents README collections that merely mention many conference names from
-being treated as conference project repositories.
+least one taxonomy topic. A venue string alone is not enough: when repository
+metadata has no lexical topic evidence, the bounded README lead must first contain
+explicit vision/3D/robotics context before semantic topic classification is
+allowed. Venue-only candidates must also clear the configured repository
+research-quality threshold. Collection markers are checked in repository metadata
+and the same bounded README lead. This prevents generic repositories, surveys, and
+README collections that merely mention many conference names from being treated as
+conference project repositories.
 
 From Phase 6 onward, a candidate that does not pass the configured lexical
 threshold may be evaluated by the local semantic-profile classifier. This does
@@ -149,9 +155,12 @@ Repository topic relevance and repository research value are separate. Every
 accepted topic-query repository receives `scores.research_relevance` from
 configuration-driven evidence such as explicit research/implementation wording,
 publication links, venue evidence, a project homepage, supporting popularity, and
-bounded README evidence when available. README term evidence uses a stricter list
-than repository metadata, so generic words such as `framework` or `library` do
-not become sufficient research evidence merely because they occur in long docs.
+bounded README evidence when available. README evidence is evaluated only within
+a configured lead window. Strong paper/code terms and publication links may
+establish research value; generic artifact terms such as `framework`, `library`,
+`dataset`, `checkpoint`, or training/evaluation code contribute only a small
+supporting bonus. Repositories with no strong paper, publication-link, or venue
+evidence are capped below the research threshold regardless of popularity.
 Absolute stars are only supporting evidence and cannot make a generic repository
 research-relevant by themselves. Awesome/curated lists and tutorial-style
 repositories are identified from repository metadata and capped below the normal
@@ -243,6 +252,6 @@ override applies.
 - [x] Venue-only candidates require research-value corroboration beyond a conference mention.
 - [x] Awesome/list and tutorial repositories are retained as candidates but capped below digest eligibility.
 - [x] Accepted topic-query repositories receive bounded README research-evidence enrichment.
-- [x] Broad query candidates may use bounded README text to establish missing vision context.
+- [x] Broad query candidates require explicit vision context in repository metadata.
 - [x] A curated starred-repository positive set guards key query-vocabulary coverage.
-- [x] Fixture-based tests cover aggregation, splitting, README enrichment, stale checkpoints, and broad-query context gating.
+- [x] Fixture-based tests cover aggregation, splitting, README enrichment, stale checkpoints, broad-query metadata context gating, and generic README false-positive suppression.

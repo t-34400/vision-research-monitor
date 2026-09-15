@@ -381,10 +381,8 @@ class GitHubDiscoveryCollector:
         for candidate in candidates.values():
             readme: str | None = None
             if self._requires_missing_vision_context(candidate):
-                readme = self._readme_for_candidate(candidate, result)
-                if self._requires_missing_vision_context(candidate, readme=readme):
-                    result.rejected_for_context += 1
-                    continue
+                result.rejected_for_context += 1
+                continue
 
             lexical = self.scorer.score(
                 candidate.repository,
@@ -395,6 +393,9 @@ class GitHubDiscoveryCollector:
             if is_venue_only and not lexical.topics:
                 if readme is None:
                     readme = self._readme_for_candidate(candidate, result)
+                if readme is not None and not self._readme_has_vision_context(readme):
+                    result.rejected_for_context += 1
+                    continue
                 if readme is not None:
                     lexical = self.scorer.score(
                         candidate.repository,
@@ -452,9 +453,7 @@ class GitHubDiscoveryCollector:
         threshold = float(self.config["research_quality"]["semantic_only_acceptance_similarity"])
         return float(similarity) < threshold
 
-    def _requires_missing_vision_context(
-        self, candidate: Candidate, *, readme: str | None = None
-    ) -> bool:
+    def _requires_missing_vision_context(self, candidate: Candidate) -> bool:
         if not candidate.requires_vision_context or candidate.has_unrestricted_query:
             return False
         repository = candidate.repository
@@ -464,13 +463,17 @@ class GitHubDiscoveryCollector:
                     str(repository.get("full_name") or repository.get("name") or ""),
                     str(repository.get("description") or ""),
                     " ".join(repository.get("topics") or []),
-                    readme or "",
                 ]
             )
         )
-        return not any(
-            term and contains_normalized(text, term) for term in self._vision_context_terms
-        )
+        return not self._has_vision_context(text)
+
+    def _readme_has_vision_context(self, readme: str) -> bool:
+        lead_characters = int(self.config["research_quality"]["readme_evidence_characters"])
+        return self._has_vision_context(normalize_text(readme[:lead_characters]))
+
+    def _has_vision_context(self, text: str) -> bool:
+        return any(term and contains_normalized(text, term) for term in self._vision_context_terms)
 
     def _classify_candidate(
         self,

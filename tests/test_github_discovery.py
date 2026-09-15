@@ -236,6 +236,49 @@ def test_venue_only_candidate_uses_readme_for_topic_gate() -> None:
     assert result.items[0].metadata["venue_hits"][0]["venue"] == "cvpr"
 
 
+def test_venue_only_candidate_requires_vision_context_in_readme_lead() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["query_families"] = []
+    config["venue_search"] = {
+        "enabled": True,
+        "priorities": ["core"],
+        "venue_ids": ["cvpr"],
+        "year_offsets": [0],
+        "modes": ["created"],
+    }
+    candidate = repository(302, "A comprehensive guide to language-model evaluation")
+    candidate["full_name"] = "example/LLMEvaluation"
+    candidate["name"] = "LLMEvaluation"
+    candidate["topics"] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
+            return httpx.Response(
+                200,
+                text=(
+                    "CVPR 2026 is discussed in this compendium of LLM evaluation methods. "
+                    "This repository reviews language-model benchmarks and evaluation practice."
+                ),
+            )
+        return httpx.Response(
+            200, json={"total_count": 1, "incomplete_results": False, "items": [candidate]}
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert result.rejected_for_context == 1
+    assert result.items == []
+
+
 def test_stale_checkpoint_requires_explicit_backfill() -> None:
     config, taxonomy, venues = load_fixture_config()
     state = {
@@ -416,8 +459,7 @@ def test_github_discovery_uses_stricter_semantic_only_acceptance() -> None:
     assert result.items == []
 
 
-
-def test_broad_query_can_use_readme_for_vision_context() -> None:
+def test_broad_query_requires_metadata_vision_context_even_when_readme_mentions_vision() -> None:
     config, taxonomy, venues = load_fixture_config()
     config = deepcopy(config)
     config["search"]["request_interval_seconds"] = 0
@@ -436,19 +478,60 @@ def test_broad_query_can_use_readme_for_vision_context() -> None:
         }
     ]
     config["venue_search"]["enabled"] = False
-    candidate = repository(601, "Official foundation model implementation")
+    candidate = repository(601, "General-purpose foundation model")
     candidate["name"] = "foundation-model"
     candidate["full_name"] = "research/foundation-model"
     candidate["topics"] = []
 
     def handler(request: httpx.Request) -> httpx.Response:
         if request.url.path.endswith("/readme"):
+            raise AssertionError("context-rejected broad queries must not fetch README")
+        return httpx.Response(
+            200,
+            json={"total_count": 1, "incomplete_results": False, "items": [candidate]},
+        )
+
+    state = {"version": 1, "http_cache": {}}
+    run_at = datetime(2026, 8, 8, 2, tzinfo=UTC)
+    with GitHubClient(None, state["http_cache"], transport=httpx.MockTransport(handler)) as client:
+        result = GitHubDiscoveryCollector(client, state, config, taxonomy, venues).collect(
+            run_at,
+            window_start=run_at - timedelta(hours=12),
+            window_end=run_at,
+        )
+
+    assert result.rejected_for_context == 1
+    assert result.items == []
+    assert result.readme_enrichment_requests == 0
+
+
+def test_broad_query_accepts_explicit_metadata_vision_context() -> None:
+    config, taxonomy, venues = load_fixture_config()
+    config = deepcopy(config)
+    config["search"]["request_interval_seconds"] = 0
+    config["query_families"] = [
+        {
+            "id": "foundation_representation",
+            "queries": [
+                {
+                    "id": "foundation_model",
+                    "text": '"foundation model"',
+                    "topics": ["vision_foundation_models"],
+                    "modes": ["created"],
+                    "requires_vision_context": True,
+                }
+            ],
+        }
+    ]
+    config["venue_search"]["enabled"] = False
+    candidate = repository(605, "Foundation model for 3D vision and camera geometry")
+    candidate["full_name"] = "research/vision-foundation-model"
+    candidate["topics"] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.endswith("/readme"):
             return httpx.Response(
-                200,
-                text=(
-                    "Foundation model for 3D vision and camera geometry. "
-                    "https://arxiv.org/abs/2601.00601"
-                ),
+                200, text="Official implementation https://arxiv.org/abs/2601.00605"
             )
         return httpx.Response(
             200,
@@ -468,7 +551,6 @@ def test_broad_query_can_use_readme_for_vision_context() -> None:
     assert len(result.items) == 1
     assert "vision_foundation_models" in result.items[0].topics
     assert result.readme_enrichment_requests == 1
-    assert result.readme_enrichment_successes == 1
 
 
 def test_topic_candidate_uses_readme_for_research_quality() -> None:
@@ -520,8 +602,7 @@ def test_topic_candidate_uses_readme_for_research_quality() -> None:
     assert len(result.items) == 1
     item = result.items[0]
     assert (
-        item.scores["research_relevance"]
-        >= config["research_quality"]["research_candidate_score"]
+        item.scores["research_relevance"] >= config["research_quality"]["research_candidate_score"]
     )
     assert "publication_link" in item.metadata["research_quality"]["signals"]
     assert result.readme_enrichment_requests == 1
@@ -583,9 +664,7 @@ def test_starred_positive_regression_repositories_have_direct_query_coverage() -
         (ROOT / "evaluation/github_discovery_positive_repos.yaml").read_text(encoding="utf-8")
     )
     queries = {
-        query["id"]: query
-        for family in config["query_families"]
-        for query in family["queries"]
+        query["id"]: query for family in config["query_families"] for query in family["queries"]
     }
 
     from vision_research_monitor.github.discovery import contains_normalized, normalize_text
