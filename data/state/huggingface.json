@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-17T01:28:21.476167Z",
+      "last_successful_at": "2026-09-18T01:18:04.767799Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -25,6 +25,10 @@
         "Adityadas5350/review-robotics-vision-language33": {
           "last_modified": "2026-08-26T07:39:02Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
+        },
+        "AdvaitAdv/vision-language-pretraining-reading": {
+          "last_modified": "2026-09-17T09:54:23Z",
+          "last_seen_at": "2026-09-18T01:18:04.767799Z"
         },
         "Ai-Adam-Six-Sigma/melanoma-segmentation": {
           "last_modified": "2026-08-18T22:00:30Z",
@@ -87,8 +91,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-09-17T01:11:58Z",
-          "last_seen_at": "2026-09-17T01:28:21.476167Z"
+          "last_modified": "2026-09-18T01:16:48Z",
+          "last_seen_at": "2026-09-18T01:18:04.767799Z"
         },
         "Chunyutsai6/video-understanding-v3": {
           "last_modified": "2026-09-14T19:28:25Z",
@@ -117,6 +121,10 @@
         "DenisaB/rfdetr-instance-segmentation-leibniz-manuscripts": {
           "last_modified": "2026-09-02T14:56:01Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
+        },
+        "DigiGreen/pyannote-segmentation-agri-indic": {
+          "last_modified": "2026-09-17T13:13:06Z",
+          "last_seen_at": "2026-09-18T01:18:04.767799Z"
         },
         "DivineMohammed/survey-video-understanding": {
           "last_modified": "2026-08-28T03:35:09Z",
@@ -1390,6 +1398,10 @@
           "last_modified": "2026-08-28T18:01:27Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
         },
+        "sedeboer/course-robotics-vision-language": {
+          "last_modified": "2026-09-17T23:06:39Z",
+          "last_seen_at": "2026-09-18T01:18:04.767799Z"
+        },
         "sedeboer/vision-language-pretraining": {
           "last_modified": "2026-09-02T13:36:20Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
@@ -1418,9 +1430,13 @@
           "last_modified": "2026-08-19T14:06:46Z",
           "last_seen_at": "2026-08-19T23:40:31.224144Z"
         },
+        "siddharthmu/robotics-vision-language": {
+          "last_modified": "2026-09-17T05:01:25Z",
+          "last_seen_at": "2026-09-18T01:18:04.767799Z"
+        },
         "software-mansion/react-native-executorch-rfdetr-nano-segmentation": {
-          "last_modified": "2026-09-07T13:55:15Z",
-          "last_seen_at": "2026-09-08T01:14:03.015028Z"
+          "last_modified": "2026-09-17T12:00:30Z",
+          "last_seen_at": "2026-09-18T01:18:04.767799Z"
         },
         "software-mansion/react-native-executorch-selfie-segmentation": {
           "last_modified": "2026-09-16T15:18:25Z",
@@ -1429,6 +1445,10 @@
         "srilubis/paper_021725602_robotics_vision_language": {
           "last_modified": "2026-08-22T05:37:29Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "ssaitokenny90/vision-language-pretraining-notebook": {
+          "last_modified": "2026-09-17T13:56:06Z",
+          "last_seen_at": "2026-09-18T01:18:04.767799Z"
         },
         "steven0226/steel-defect-segmentation": {
           "last_modified": "2026-09-02T17:33:52Z",
