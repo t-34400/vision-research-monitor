@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-09-19T01:22:55.037812Z",
+  "last_updated_at": "2026-09-20T01:22:09.389174Z",
   "repositories": {
     "103442898": {
       "first_promoted_at": "2026-08-14T23:46:55.593969Z",
@@ -45,7 +45,7 @@
     "104003936": {
       "first_promoted_at": "2026-09-02T01:12:40.389942Z",
       "full_name": "Gforcex/OpenGraphic",
-      "last_observed_at": "2026-09-19T01:22:55.037812Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -392,21 +392,19 @@
     "129712017": {
       "first_promoted_at": "2026-09-05T01:14:10.648577Z",
       "full_name": "satellite-image-deep-learning/techniques",
-      "last_observed_at": "2026-09-13T01:16:23.817385Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
-        "research_tool",
-        "strong_research"
+        "research_tool"
       ],
       "repo_id": "129712017",
       "research_category": "research",
-      "research_relevance": 0.8,
-      "stars": 10255,
+      "research_relevance": 0.55,
+      "stars": 10260,
       "topics": [
         "image_classification",
-        "object_detection",
-        "visual_representation_learning"
+        "object_detection"
       ],
       "url": "https://github.com/satellite-image-deep-learning/techniques"
     },
@@ -492,7 +490,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-09-19T01:22:55.037812Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -500,7 +498,7 @@
       "repo_id": "167694194",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 35981,
+      "stars": 36004,
       "topics": [
         "object_detection"
       ],
@@ -601,17 +599,15 @@
     "22850110": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "introlab/rtabmap",
-      "last_observed_at": "2026-09-14T01:20:34.045981Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
-        "established",
-        "research_tool",
-        "strong_research"
+        "established"
       ],
       "repo_id": "22850110",
-      "research_category": "research",
-      "research_relevance": 0.7,
-      "stars": 3994,
+      "research_category": "candidate",
+      "research_relevance": 0.35,
+      "stars": 4003,
       "topics": [
         "robotics_mapping",
         "slam"
@@ -681,16 +677,15 @@
     "235070415": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "AaronFeng753/Waifu2x-Extension-GUI",
-      "last_observed_at": "2026-09-06T01:11:34.372782Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
-        "established",
-        "research_tool"
+        "established"
       ],
       "repo_id": "235070415",
-      "research_category": "research",
-      "research_relevance": 0.4,
-      "stars": 16971,
+      "research_category": "candidate",
+      "research_relevance": 0.35,
+      "stars": 17017,
       "topics": [
         "super_resolution"
       ],
@@ -907,7 +902,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-09-19T01:22:55.037812Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -915,7 +910,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 14939,
+      "stars": 14950,
       "topics": [
         "super_resolution"
       ],
@@ -964,7 +959,7 @@
     "409653223": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Nixtla/nixtla",
-      "last_observed_at": "2026-09-19T01:22:55.037812Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1083,6 +1078,25 @@
       ],
       "url": "https://github.com/koide3/glim"
     },
+    "439439857": {
+      "first_promoted_at": "2026-09-20T01:22:09.389174Z",
+      "full_name": "StanfordVL/BEHAVIOR-1K",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "439439857",
+      "research_category": "research",
+      "research_relevance": 0.75,
+      "stars": 1708,
+      "topics": [
+        "embodied_vision"
+      ],
+      "url": "https://github.com/StanfordVL/BEHAVIOR-1K"
+    },
     "442286037": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "EyeTrackVR/EyeTrackVR",
@@ -1187,7 +1201,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-09-19T01:22:55.037812Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1195,7 +1209,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 61761,
+      "stars": 61792,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1251,15 +1265,17 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-09-19T01:22:55.037812Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
-        "established"
+        "established",
+        "research_tool",
+        "strong_research"
       ],
       "repo_id": "567038244",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 8164,
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 8171,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1290,23 +1306,6 @@
         "visual_representation_learning"
       ],
       "url": "https://github.com/Pointcept/Pointcept"
-    },
-    "62519414": {
-      "first_promoted_at": "2026-08-09T23:57:39.970527Z",
-      "full_name": "bjornbytes/lovr",
-      "last_observed_at": "2026-09-19T01:22:55.037812Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "established"
-      ],
-      "repo_id": "62519414",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 2598,
-      "topics": [
-        "vr_mr_xr"
-      ],
-      "url": "https://github.com/bjornbytes/lovr"
     },
     "638806609": {
       "first_promoted_at": "2026-08-10T23:59:47.708090Z",
@@ -1380,16 +1379,15 @@
     "683223775": {
       "first_promoted_at": "2026-08-12T00:06:45.191668Z",
       "full_name": "nerfstudio-project/gsplat",
-      "last_observed_at": "2026-09-04T01:09:15.986199Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
-        "established",
-        "research_tool"
+        "established"
       ],
       "repo_id": "683223775",
-      "research_category": "research",
-      "research_relevance": 0.4,
-      "stars": 5628,
+      "research_category": "candidate",
+      "research_relevance": 0.35,
+      "stars": 5701,
       "topics": [
         "gaussian_splatting"
       ],
@@ -1928,7 +1926,7 @@
     "989132343": {
       "first_promoted_at": "2026-08-24T23:45:37.001575Z",
       "full_name": "sparkjsdev/spark",
-      "last_observed_at": "2026-09-15T01:41:36.242202Z",
+      "last_observed_at": "2026-09-20T01:22:09.389174Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1936,7 +1934,7 @@
       "repo_id": "989132343",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 3613,
+      "stars": 3638,
       "topics": [
         "gaussian_splatting"
       ],
