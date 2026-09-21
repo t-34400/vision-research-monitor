@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-20T01:12:55.686866Z",
+      "last_successful_at": "2026-09-21T01:09:43.080818Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -95,8 +95,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-09-20T00:10:00Z",
-          "last_seen_at": "2026-09-20T01:12:55.686866Z"
+          "last_modified": "2026-09-20T19:13:29Z",
+          "last_seen_at": "2026-09-21T01:09:43.080818Z"
         },
         "Chunyutsai6/video-understanding-v3": {
           "last_modified": "2026-09-14T19:28:25Z",
@@ -269,6 +269,10 @@
         "Krishchauhan/undergrad-video-understanding": {
           "last_modified": "2026-08-27T20:11:32Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "LUCAWAGNER/robotics-vision-language-survey": {
+          "last_modified": "2026-09-20T12:03:24Z",
+          "last_seen_at": "2026-09-21T01:09:43.080818Z"
         },
         "Leonyly7970/review-vision-language-pretraining53": {
           "last_modified": "2026-09-15T13:23:31Z",
@@ -822,6 +826,10 @@
           "last_modified": "2026-09-18T20:33:25Z",
           "last_seen_at": "2026-09-19T01:13:09.583854Z"
         },
+        "einarolafsson/toxoplasma-plaque-segmentation-cpsam-r5": {
+          "last_modified": "2026-09-20T03:31:51Z",
+          "last_seen_at": "2026-09-21T01:09:43.080818Z"
+        },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam": {
           "last_modified": "2026-09-18T20:33:24Z",
           "last_seen_at": "2026-09-19T01:13:09.583854Z"
@@ -1246,6 +1254,10 @@
           "last_modified": "2026-08-28T20:36:23Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
         },
+        "mifunae/unet_pet_segmentation_3class_20epoch": {
+          "last_modified": "2026-09-20T16:01:15Z",
+          "last_seen_at": "2026-09-21T01:09:43.080818Z"
+        },
         "miguelozaalon/speaker-segmentation-atc": {
           "last_modified": "2026-08-11T12:26:46Z",
           "last_seen_at": "2026-08-12T00:01:56.517702Z"
@@ -1305,6 +1317,10 @@
         "nomikos-project/segmentation-blla": {
           "last_modified": "2026-08-29T15:30:10Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
+        },
+        "nomikos-project/segmentation-ppocrv6-det": {
+          "last_modified": "2026-09-20T12:33:43Z",
+          "last_seen_at": "2026-09-21T01:09:43.080818Z"
         },
         "nqkowalczyk/robotics-vision-language-review": {
           "last_modified": "2026-08-28T23:29:33Z",
@@ -1523,8 +1539,8 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "tahaz122/weak-segmentation": {
-          "last_modified": "2026-09-20T00:30:23Z",
-          "last_seen_at": "2026-09-20T01:12:55.686866Z"
+          "last_modified": "2026-09-20T12:15:39Z",
+          "last_seen_at": "2026-09-21T01:09:43.080818Z"
         },
         "tea98/sam3-for-insects-segmentation": {
           "last_modified": "2026-08-18T10:59:16Z",
