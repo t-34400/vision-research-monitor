@@ -48,8 +48,10 @@ def test_pipeline_derived_outputs_stay_inside_work_root(tmp_path: Path, capsys) 
     )
     JsonlItemStore(paths.items).append([item])
 
-    assert link_items.main(["--work-root", str(tmp_path)]) == 0
     assert build_digest.main(["--work-root", str(tmp_path), "--date", "2026-08-09"]) == 0
+    assert not (paths.entities / "links.json").exists()
+
+    assert link_items.main(["--work-root", str(tmp_path)]) == 0
     assert build_trends.main(["--work-root", str(tmp_path), "--date", "2026-08-09"]) == 0
     assert search_archive.main(["--work-root", str(tmp_path), "Runtime Test"]) == 0
     capsys.readouterr()

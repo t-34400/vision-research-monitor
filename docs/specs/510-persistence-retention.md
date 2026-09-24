@@ -19,8 +19,6 @@ data/
     YYYY/
       MM/
         DD.jsonl
-  entities/
-    links.json
   ranking/
     YYYY-MM-DD.json
   analytics/
@@ -37,10 +35,13 @@ reports/
 ```
 
 Normalized items use append-friendly JSONL partitioned by UTC discovery date.
-Collector state is explicit mutable JSON. Entity-link output is a derived JSON
-sidecar that can be regenerated from normalized items. Per-day ranking and
-analytics documents, the searchable archive index, and daily/trend Markdown
-reports are also derived outputs.
+Collector state is explicit mutable JSON. Per-day ranking and analytics
+documents, the searchable archive index, and daily/trend Markdown reports are
+derived outputs that remain version controlled. The full entity-link graph is
+also derived, but it is computed in memory for scheduled reporting rather than
+committed because its monolithic JSON representation can exceed repository blob
+limits. `link_items` may materialize `data/entities/links.json` locally on
+demand; that file is ignored by Git.
 
 The storage abstraction may migrate later, but collectors and normalized item
 semantics must not depend on Git as a database-specific API.
@@ -49,7 +50,7 @@ semantics must not depend on Git as a database-specific API.
 
 - normalized items: retained indefinitely unless a future storage migration
   changes the policy;
-- entity-link sidecar: retained as the current derived graph and freely regenerable;
+- entity-link sidecar: optional local diagnostic output, not version controlled, and freely regenerable;
 - per-day ranking and analytics sidecars: retained with the corresponding reports and freely regenerable;
 - searchable archive index: only the latest derived index is required;
 - daily and trend reports: retained indefinitely;

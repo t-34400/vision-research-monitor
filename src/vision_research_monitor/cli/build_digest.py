@@ -42,7 +42,6 @@ def main(argv: list[str] | None = None) -> int:
 
     items = JsonlItemStore(paths.items).load_items()
     link_result = EntityLinker(linking).link(items, generated_at=deterministic_link_time(items))
-    JsonDocumentStore(paths.entities / "links.json").save(link_result.to_dict())
 
     digest = DailyDigestBuilder(reporting, taxonomy, venues).build(
         items, link_result, report_date=report_date

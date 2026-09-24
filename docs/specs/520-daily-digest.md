@@ -38,10 +38,10 @@ window.
 
 ## Derived outputs
 
-```text
-data/entities/links.json
-  current regenerated entity-link graph
+The builder regenerates entity links in memory for deduplication and ranking; it
+does not write the full relationship graph as part of the daily workflow.
 
+```text
 data/ranking/YYYY-MM-DD.json
   report window, included item IDs, independent ranking signals, total score,
   watched override flag, and change label
@@ -110,10 +110,11 @@ explicitly rather than silently disappearing.
 
 ## Failure behavior
 
-The builder writes each derived file atomically. A failed build does not modify
-collector checkpoints. The GitHub Actions workflow stages only
-`data/entities`, `data/ranking`, and `reports/daily`, and separately verifies
-that `.chatgpt-workspace-manifest.json` was not modified.
+The builder writes each persisted derived file atomically. A failed build does
+not modify collector checkpoints. The GitHub Actions workflow does not stage the
+on-demand entity-link sidecar; it stages ranking, analytics, archive, and report
+outputs only, and separately verifies that `.chatgpt-workspace-manifest.json`
+was not modified.
 
 ## Acceptance criteria
 

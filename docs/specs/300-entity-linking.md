@@ -14,13 +14,17 @@ append-only collection history.
 
 ## Inputs and output
 
-The linker reads normalized records from `data/items/**/*.jsonl` and writes:
+The linker reads normalized records from `data/items/**/*.jsonl` and produces an
+in-memory relationship graph. Daily reporting consumes that graph directly and
+does not serialize the full graph to disk.
+
+The standalone `link_items` CLI can materialize the graph on demand as:
 
 ```text
 data/entities/links.json
 ```
 
-The sidecar contains:
+The optional sidecar contains:
 
 - direct accepted links and their evidence;
 - connected entity components derived from those links;
@@ -163,9 +167,11 @@ evidence with every other member.
 The linker is deterministic for the same item set and configuration except for
 the output `generated_at` timestamp. It performs no network requests.
 
-`data/entities/links.json` is fully derived and can be safely regenerated from
-canonical items. A failed write uses atomic replacement and leaves the previous
-complete sidecar intact.
+`data/entities/links.json` is fully derived, ignored by Git, and can be safely
+regenerated from canonical items when `link_items` is invoked. Daily digest and
+trend builds use the in-memory result and do not depend on the sidecar. A failed
+explicit sidecar write uses atomic replacement and leaves the previous complete
+sidecar intact.
 
 ## Acceptance criteria
 

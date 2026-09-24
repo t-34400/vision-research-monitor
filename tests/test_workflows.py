@@ -105,3 +105,16 @@ def test_collectors_pass_only_their_state_file_and_items_to_commit_helper() -> N
             )
         else:
             assert commit_line.endswith(f"data/items {state_path}")
+
+
+def test_daily_digest_does_not_commit_entity_link_sidecar() -> None:
+    commit_line = next(
+        line.strip()
+        for line in workflow_text("build-digest.yml").splitlines()
+        if ".github/scripts/commit-runtime-changes.sh" in line
+    )
+
+    assert "data/entities" not in commit_line
+    assert commit_line.endswith(
+        "data/ranking data/analytics data/archive reports/daily reports/trends"
+    )

@@ -286,14 +286,17 @@ Scheduled collection starts with a 48-hour lookback, overlaps by 180 minutes,
 and allows 120 hours of automatic catch-up. Explicit backfills do not advance
 the scheduled checkpoint.
 
-### D-125 — Persist entity links as a derived sidecar
+### D-125 — Keep entity links as an on-demand derived sidecar
 
 **Status:** Accepted
 
 Phase 4 does not rewrite append-only normalized JSONL when new cross-source links
-are discovered. It regenerates `data/entities/links.json` from canonical items
-and materializes `related_items` at read time. This keeps collection history
-stable while allowing linking rules to evolve.
+are discovered. Daily reporting regenerates the relationship graph in memory and
+materializes `related_items` at read time without persisting the full graph. The
+standalone `link_items` CLI may write `data/entities/links.json` on demand for
+diagnostics or inspection. The sidecar is ignored by Git because it is fully
+reconstructable from canonical items and can exceed repository blob limits. This
+keeps collection history stable while allowing linking rules to evolve.
 
 ### D-126 — Prefer exact external identifiers over fuzzy evidence
 

@@ -74,4 +74,4 @@ jobs:
       - name: Commit derived reports and analytics
         shell: bash
         run: |
-          .github/scripts/commit-runtime-changes.sh 'Update daily research reports' data/entities data/ranking data/analytics data/archive reports/daily reports/trends
+          .github/scripts/commit-runtime-changes.sh 'Update daily research reports' data/ranking data/analytics data/archive reports/daily reports/trends
