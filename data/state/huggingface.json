@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-25T01:33:45.673902Z",
+      "last_successful_at": "2026-09-26T01:36:57.089601Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -151,8 +151,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-09-25T00:59:04Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-09-25T17:17:42Z",
+          "last_seen_at": "2026-09-26T01:36:57.089601Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -206,6 +206,10 @@
           "last_modified": "2026-09-13T19:09:42Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
+        "Elpapudex/Ner-full": {
+          "last_modified": "2026-09-26T00:43:17Z",
+          "last_seen_at": "2026-09-26T01:36:57.089601Z"
+        },
         "EricFujita/video-understanding66": {
           "last_modified": "2026-08-26T07:40:35Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -225,6 +229,10 @@
         "Farhan2000/skin-lesion-segmentation-unet": {
           "last_modified": "2026-09-18T13:22:35Z",
           "last_seen_at": "2026-09-19T01:13:09.583854Z"
+        },
+        "Fionareyes/robotics-vision-language": {
+          "last_modified": "2026-09-25T10:24:30Z",
+          "last_seen_at": "2026-09-26T01:36:57.089601Z"
         },
         "Fude-boer/paper_022724606_video_understanding": {
           "last_modified": "2026-08-22T01:05:01Z",
@@ -787,8 +795,8 @@
           "last_seen_at": "2026-09-13T01:03:44.845143Z"
         },
         "chagatai-project/chagatai-sentence-segmentation": {
-          "last_modified": "2026-09-22T13:40:02Z",
-          "last_seen_at": "2026-09-23T01:31:48.620589Z"
+          "last_modified": "2026-09-25T10:52:25Z",
+          "last_seen_at": "2026-09-26T01:36:57.089601Z"
         },
         "chengwij37/paper_023191774_video_understanding": {
           "last_modified": "2026-08-21T19:48:33Z",
@@ -1306,6 +1314,10 @@
           "last_modified": "2026-08-27T14:49:51Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
+        "lima0425/review-vision-language-pretraining54": {
+          "last_modified": "2026-09-25T06:23:28Z",
+          "last_seen_at": "2026-09-26T01:36:57.089601Z"
+        },
         "litert-community/Cloth-Segmentation-U2Net-LiteRT": {
           "last_modified": "2026-09-08T08:42:58Z",
           "last_seen_at": "2026-09-09T01:16:11.190836Z"
@@ -1405,6 +1417,10 @@
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "nguyenmich/vision-language-pretraining-reading": {
+          "last_modified": "2026-09-26T00:45:33Z",
+          "last_seen_at": "2026-09-26T01:36:57.089601Z"
         },
         "niclasclassen/segmentations-of-distended-and-collapsed-colons-from-ct-scans": {
           "last_modified": "2026-09-14T14:41:38Z",
