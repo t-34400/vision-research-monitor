@@ -1,0 +1,2836 @@
+{
+  "items": [
+    {
+      "change_label": "RELEASED",
+      "item_id": "github:release:535360445:release:395964735",
+      "signals": {
+        "freshness": 0.7606,
+        "novelty": 1.0,
+        "popularity": 0.7641,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6673,
+      "watched_override": false
+    },
+    {
+      "change_label": "RELEASED",
+      "item_id": "github:release:951534260:release:395862787",
+      "signals": {
+        "freshness": 0.7508,
+        "novelty": 1.0,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6451,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9f008a96806758fe64ecac13",
+      "signals": {
+        "freshness": 0.6579,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.6437,
+      "watched_override": false
+    },
+    {
+      "change_label": "RELEASED",
+      "item_id": "github:release:787462297:release:395850826",
+      "signals": {
+        "freshness": 0.7422,
+        "novelty": 1.0,
+        "popularity": 0.238,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6382,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "research_blog:article:b11745c21b862e2e284878ee",
+      "signals": {
+        "freshness": 0.6361,
+        "novelty": 0.75,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.6354,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:535360445:tag:v8.4.162",
+      "signals": {
+        "freshness": 0.8121,
+        "novelty": 0.65,
+        "popularity": 0.7641,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.605,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "research_blog:article:27cfd4d34c5c3d155699986e",
+      "signals": {
+        "freshness": 0.7686,
+        "novelty": 0.75,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.4118,
+        "research": 1.0
+      },
+      "total": 0.5988,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:19696006:tag:v2.23.0-beta.18",
+      "signals": {
+        "freshness": 0.8121,
+        "novelty": 0.65,
+        "popularity": 0.5868,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5962,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:951534260:tag:1.11.0",
+      "signals": {
+        "freshness": 0.8121,
+        "novelty": 0.65,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5843,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b02abc7b7aea7d986444db82",
+      "signals": {
+        "freshness": 0.7156,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7653,
+        "research": 1.0
+      },
+      "total": 0.5819,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:787462297:tag:v0.7.3",
+      "signals": {
+        "freshness": 0.8121,
+        "novelty": 0.65,
+        "popularity": 0.238,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5787,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:05039f603f213a9e012016fb",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5738,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0ee7d2662fade95bb61c98ce",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5738,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:1607a11a733c85906a14e8b7",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5738,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:2b697371ffd282702995fd75",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5738,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:bc6896bf6887861c2d904ee2",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5738,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c943b6eeb6faada8e75ffc78",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5738,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:deed4b16a7aa779815f2ec9d",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5738,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0395f92bc61c3cd7cc429391",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0545be228df041755548ecf7",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:1620643586189e23d8ef82d5",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:1ac37c6cf79aa1be213407d5",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:1e2420bd87e6215180551887",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:2acdc41de4809eda371fcdd1",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:2f80fdfcdef05d2fd0213db2",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:343aee45b4f0514e897666ea",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:381ab9e86e55c3350f6834a7",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:3cb795891d87baeaedbf4ab9",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:4132be15933a1188289fd95d",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:44652b470bfe0ff121f3166f",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:61bcc307682e29d57a2ae198",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:7883fb6bc058d78e1cd2127e",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:81122bda573865fd716c22e7",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:8be89f88ce4c86dd65e83a25",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9d2ec4460eeb0ca3097ebb61",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:ab971efae2ebf8ebfef90fe1",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b58e87776d1b6a8facc4ca8d",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b6e942239170d4759f0441ca",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c7c4d4b144b8794078c8ab42",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c824f99e00381b4ba4ad735a",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c8bd656b85cd444e8ec1aa06",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:d9894630b6228c3c850d8ac8",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:de3e5ba3f55aea3cfc0f74ae",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:ead73eac39db82809902436a",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f1355f25fdabba5695ebc0f4",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:fda62a6f4fab6e7e8ba5f4e2",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:fef7943a034a8edd4683092a",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 1.0,
+        "research": 1.0
+      },
+      "total": 0.5737,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:958563030",
+      "signals": {
+        "freshness": 0.6538,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.8115,
+        "research": 0.4
+      },
+      "total": 0.5715,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:06ae261bb457cde6be92504a",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9858,
+        "research": 1.0
+      },
+      "total": 0.5695,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:79a9ddffeba8eb6336638df5",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.974,
+        "research": 1.0
+      },
+      "total": 0.5659,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:e1c196ec5ac029088728597c",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9709,
+        "research": 1.0
+      },
+      "total": 0.565,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:535360445:commit:0ea465b1016fbb1b88b24f521af41fe4a0352545",
+      "signals": {
+        "freshness": 0.7892,
+        "novelty": 0.45,
+        "popularity": 0.7641,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5616,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:de01c26ba95e11e30cad5f2a",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9522,
+        "research": 1.0
+      },
+      "total": 0.5594,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:158619497b95add6662e8b21",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9488,
+        "research": 1.0
+      },
+      "total": 0.5584,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:1277471539:commit:ce671ce500a393be27e3cbb2a08799fbca9b6e28",
+      "signals": {
+        "freshness": 0.6796,
+        "novelty": 0.45,
+        "popularity": 1.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5569,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:19696006:commit:a71b5de79c5f53ec58358b35afc7e49df31b5feb",
+      "signals": {
+        "freshness": 0.7955,
+        "novelty": 0.45,
+        "popularity": 0.5868,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5537,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:44e2ded92addcf800359e23f",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9304,
+        "research": 1.0
+      },
+      "total": 0.5529,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:49d997bffad4870ccb55b463",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9304,
+        "research": 1.0
+      },
+      "total": 0.5529,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:503c8ce6e04349c2782122ce",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9304,
+        "research": 1.0
+      },
+      "total": 0.5529,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:92a76802c62fc1e68bba45d6",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9269,
+        "research": 1.0
+      },
+      "total": 0.5518,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:167694194:commit:6791df7971ac4c79834a73f668e0830893bc4c89",
+      "signals": {
+        "freshness": 0.7841,
+        "novelty": 0.45,
+        "popularity": 0.5196,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5486,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:567038244:commit:481a676a993b4054f46556ebd2c14a155b87602f",
+      "signals": {
+        "freshness": 0.7831,
+        "novelty": 0.45,
+        "popularity": 0.5196,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5484,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:944414751:commit:35de9ba202a5dc212b139820eef9f9d999a2edb2",
+      "signals": {
+        "freshness": 0.6679,
+        "novelty": 0.45,
+        "popularity": 0.8433,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5474,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:425aa692c09da3d823ab1c7d",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9113,
+        "research": 1.0
+      },
+      "total": 0.5471,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "research_blog:article:bb3a8b2cca95135d11e027ef",
+      "signals": {
+        "freshness": 0.6361,
+        "novelty": 0.75,
+        "popularity": 0.0,
+        "priority": 0.7,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.5454,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f43c5dd3c88bb0266543e5ea",
+      "signals": {
+        "freshness": 0.8002,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.545,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:672651553:commit:f66c82a3205cf5f2a791f5743ca07a84f59eb4ec",
+      "signals": {
+        "freshness": 0.7824,
+        "novelty": 0.45,
+        "popularity": 0.4506,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5449,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:1264722786:commit:840d9c37639172408fd2ffaa7babaadf814a1032",
+      "signals": {
+        "freshness": 0.679,
+        "novelty": 0.45,
+        "popularity": 0.722,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.543,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:712225112:commit:8dcd7a525652069c76a4f37690e02cd0ab2c5629",
+      "signals": {
+        "freshness": 0.7573,
+        "novelty": 0.45,
+        "popularity": 0.4506,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5411,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:951534260:commit:62f7f8f6a730b1f293f3e53270b23323d7e8e723",
+      "signals": {
+        "freshness": 0.7773,
+        "novelty": 0.45,
+        "popularity": 0.3487,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.539,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c190512ded0f04d53d2e8afb",
+      "signals": {
+        "freshness": 0.7559,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5384,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:787462297:commit:407a46fde91e340304982a349fd1a66ecf4b4738",
+      "signals": {
+        "freshness": 0.796,
+        "novelty": 0.45,
+        "popularity": 0.238,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5363,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:23007417:commit:f0fdafc3b54b23f5ae03482d9f504e8993804115",
+      "signals": {
+        "freshness": 0.735,
+        "novelty": 0.45,
+        "popularity": 0.4216,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5363,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:900320441:commit:1cb6ec9d4a89cc1049818442d9b34b4007647328",
+      "signals": {
+        "freshness": 0.6961,
+        "novelty": 0.45,
+        "popularity": 0.5196,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5354,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:event:35825593:metadata:2026-09-24T07:49:04Z:4e3fa5ee993beae2",
+      "signals": {
+        "freshness": 0.6858,
+        "novelty": 0.55,
+        "popularity": 0.1502,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5354,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:409653223:commit:efa56814224586f4af6798d10dfd556a90711149",
+      "signals": {
+        "freshness": 0.8081,
+        "novelty": 0.45,
+        "popularity": 0.1502,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5337,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0089639b78d276529b1bedea",
+      "signals": {
+        "freshness": 0.7203,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.533,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:989132343:commit:d7e7f8cd83278067c01f0a5424cd73c34073b9c9",
+      "signals": {
+        "freshness": 0.7419,
+        "novelty": 0.45,
+        "popularity": 0.238,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5282,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:340575109:commit:47fdadec8b12ccaf0ee54d3f774ef46c8b6fca78",
+      "signals": {
+        "freshness": 0.8049,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5257,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:007cee6d682ab1a378794e0a",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8319,
+        "research": 1.0
+      },
+      "total": 0.5233,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:3022771efa24bf26b968908f",
+      "signals": {
+        "freshness": 0.6527,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.5229,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:dfcbddf3aadede31343c84f4",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8223,
+        "research": 1.0
+      },
+      "total": 0.5204,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1233332668",
+      "signals": {
+        "freshness": 0.7636,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.585,
+        "research": 1.0
+      },
+      "total": 0.52,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:1098724072:commit:1ef4179e53cf860f7e6fd8276a292e5d05b3e927",
+      "signals": {
+        "freshness": 0.6857,
+        "novelty": 0.45,
+        "popularity": 0.238,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5198,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:859294552:commit:ea8b21121ebb3cd201ff5b3fe361944ac94eda3f",
+      "signals": {
+        "freshness": 0.6594,
+        "novelty": 0.45,
+        "popularity": 0.3004,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5189,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:131131855b03bc43b3fd46a0",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.8134,
+        "research": 1.0
+      },
+      "total": 0.5177,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:76f0872157555b0542929794",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7978,
+        "research": 1.0
+      },
+      "total": 0.5131,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0b5951f924eab76ab8b5a5dd",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7939,
+        "research": 1.0
+      },
+      "total": 0.5119,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:69c5b96ed99f98260c6bea7a",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7936,
+        "research": 1.0
+      },
+      "total": 0.5118,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f907bc6861ae11823804663f",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7936,
+        "research": 1.0
+      },
+      "total": 0.5118,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:18b8bcefa65f6fc7c4adc203",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7926,
+        "research": 1.0
+      },
+      "total": 0.5115,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:468d1d6b0b560897d57204cc",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7926,
+        "research": 1.0
+      },
+      "total": 0.5115,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:83f70377b48d2ea272ecf71a",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7926,
+        "research": 1.0
+      },
+      "total": 0.5115,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:e9518aa6865b12ae35883c3e",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7926,
+        "research": 1.0
+      },
+      "total": 0.5115,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:06ce19a6c06b15c94e977ddc",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7885,
+        "research": 1.0
+      },
+      "total": 0.5103,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:75b538928735cba13d0cecc9",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7885,
+        "research": 1.0
+      },
+      "total": 0.5103,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b614839c3ecb4ba90b328510",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7885,
+        "research": 1.0
+      },
+      "total": 0.5103,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:2695499d8082fbe40f0055df",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7854,
+        "research": 1.0
+      },
+      "total": 0.5093,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:6c91270631c1a38b3cefd4cc",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7854,
+        "research": 1.0
+      },
+      "total": 0.5093,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:6d5b4597d79051fd590e5914",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7854,
+        "research": 1.0
+      },
+      "total": 0.5093,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:1235ff17fa22c51d31807baa",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7849,
+        "research": 1.0
+      },
+      "total": 0.5092,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:779b2a541a6f20d4a7ac04f6",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7849,
+        "research": 1.0
+      },
+      "total": 0.5092,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:ef5865246a16a81793ccce5c",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7849,
+        "research": 1.0
+      },
+      "total": 0.5092,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1350745669",
+      "signals": {
+        "freshness": 0.741,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.555,
+        "research": 0.8
+      },
+      "total": 0.5077,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:31e880c40c3cff2b35a2590c",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7716,
+        "research": 1.0
+      },
+      "total": 0.5052,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:926ef88cc8b6b273a95fb98a",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7716,
+        "research": 1.0
+      },
+      "total": 0.5052,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:fe42b7b25ddc45e3c1df7d1b",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7716,
+        "research": 1.0
+      },
+      "total": 0.5052,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:207d18ee1c3bf9c0f44cd0de",
+      "signals": {
+        "freshness": 0.7247,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.5039,
+        "research": 1.0
+      },
+      "total": 0.5049,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:859d58412d9bf9c888b98de6",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7693,
+        "research": 1.0
+      },
+      "total": 0.5045,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b12c6ed20c1ce61286f26e94",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7693,
+        "research": 1.0
+      },
+      "total": 0.5045,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c268afec2f60eb3fcc4d009f",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7693,
+        "research": 1.0
+      },
+      "total": 0.5045,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0c34a12f97d838f3de32fbd4",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7613,
+        "research": 1.0
+      },
+      "total": 0.5021,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0b5c5b24e5ad1c6d380e43a1",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7586,
+        "research": 1.0
+      },
+      "total": 0.5013,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:d7eb6bacc58c70ce0eed09c9",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7582,
+        "research": 1.0
+      },
+      "total": 0.5012,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:8d6e1eae2cdea2b782b5e21c",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.758,
+        "research": 1.0
+      },
+      "total": 0.5011,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:5c2ab12c4a9dc14a780f5bd0",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7569,
+        "research": 1.0
+      },
+      "total": 0.5008,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:158adb5d4abeba4e5f0cabeb",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7529,
+        "research": 1.0
+      },
+      "total": 0.4996,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:5ac947c6768e1d7b3a4f74ed",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7506,
+        "research": 1.0
+      },
+      "total": 0.4989,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:27ad9ffc7b7d6d9685cd0b11",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7503,
+        "research": 1.0
+      },
+      "total": 0.4988,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:1c9a698a76d1ffcc1deabea1",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7491,
+        "research": 1.0
+      },
+      "total": 0.4984,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:24ff06a4900c4e52b611b0c4",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7491,
+        "research": 1.0
+      },
+      "total": 0.4984,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:abfea8dad3d7dbe70cbe94e5",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7477,
+        "research": 1.0
+      },
+      "total": 0.498,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:527deaa08129b1cc2b741de3",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7474,
+        "research": 1.0
+      },
+      "total": 0.4979,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:ca47b770ef339e180e6bfc06",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7451,
+        "research": 1.0
+      },
+      "total": 0.4972,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9798ff2f017f3cc740ee91c8",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7422,
+        "research": 1.0
+      },
+      "total": 0.4964,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:5a685f820c4138f6900f933c",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7419,
+        "research": 1.0
+      },
+      "total": 0.4963,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:87e5cf585317a1c4ba84fa89",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7368,
+        "research": 1.0
+      },
+      "total": 0.4948,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f77d8fed23a3f82d8bb53170",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7346,
+        "research": 1.0
+      },
+      "total": 0.4941,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:581e5eb250ed4b6f8f628920",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.729,
+        "research": 1.0
+      },
+      "total": 0.4924,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:16cf1b6066fab002a2689333",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7251,
+        "research": 1.0
+      },
+      "total": 0.4912,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1384615354",
+      "signals": {
+        "freshness": 0.74,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 1.0
+      },
+      "total": 0.491,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385108507",
+      "signals": {
+        "freshness": 0.7204,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 1.0
+      },
+      "total": 0.4881,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385199327",
+      "signals": {
+        "freshness": 0.8075,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.45,
+        "research": 0.75
+      },
+      "total": 0.4861,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385122619",
+      "signals": {
+        "freshness": 0.705,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.95
+      },
+      "total": 0.4858,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:24a1f7e70841c15c0e29eb6b",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7055,
+        "research": 1.0
+      },
+      "total": 0.4854,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:4eda5d3c49a92e4da98e1f45",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7004,
+        "research": 1.0
+      },
+      "total": 0.4838,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1031708429",
+      "signals": {
+        "freshness": 0.7894,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.45,
+        "research": 0.8
+      },
+      "total": 0.4834,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:84ca0ae1ee844afdfb48ce02",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6957,
+        "research": 1.0
+      },
+      "total": 0.4824,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:822847934",
+      "signals": {
+        "freshness": 0.7793,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.45,
+        "research": 0.8
+      },
+      "total": 0.4819,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1384433500",
+      "signals": {
+        "freshness": 0.6675,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 1.0
+      },
+      "total": 0.4801,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1062093780",
+      "signals": {
+        "freshness": 0.7968,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.43,
+        "research": 1.0
+      },
+      "total": 0.4785,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1386310688",
+      "signals": {
+        "freshness": 0.8119,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4718,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1369624742",
+      "signals": {
+        "freshness": 0.7911,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.41,
+        "research": 0.65
+      },
+      "total": 0.4717,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1386344779",
+      "signals": {
+        "freshness": 0.7795,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.95
+      },
+      "total": 0.4669,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1384332069",
+      "signals": {
+        "freshness": 0.7787,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4668,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385087205",
+      "signals": {
+        "freshness": 0.7732,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.466,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1384733651",
+      "signals": {
+        "freshness": 0.6706,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.45,
+        "research": 1.0
+      },
+      "total": 0.4656,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385077743",
+      "signals": {
+        "freshness": 0.7688,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4653,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1236203421",
+      "signals": {
+        "freshness": 0.7464,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.41,
+        "research": 1.0
+      },
+      "total": 0.465,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385418596",
+      "signals": {
+        "freshness": 0.7523,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4628,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385367979",
+      "signals": {
+        "freshness": 0.7186,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4578,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385440197",
+      "signals": {
+        "freshness": 0.7165,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4575,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:8484dd52afcde03beefd3163",
+      "signals": {
+        "freshness": 0.809,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6036,
+        "research": 1.0
+      },
+      "total": 0.4574,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:776033194",
+      "signals": {
+        "freshness": 0.7062,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4559,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385010815",
+      "signals": {
+        "freshness": 0.7055,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4558,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:897375907",
+      "signals": {
+        "freshness": 0.7319,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.385,
+        "research": 0.8
+      },
+      "total": 0.4553,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385210668",
+      "signals": {
+        "freshness": 0.7001,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.7
+      },
+      "total": 0.455,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1385011820",
+      "signals": {
+        "freshness": 0.6883,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4532,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1384493841",
+      "signals": {
+        "freshness": 0.6833,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4525,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:1239482169",
+      "signals": {
+        "freshness": 0.679,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4519,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1384727755",
+      "signals": {
+        "freshness": 0.6691,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4504,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9c6c0df4024157390e411a6a",
+      "signals": {
+        "freshness": 0.7478,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.5842,
+        "research": 1.0
+      },
+      "total": 0.4424,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:2ec235af75c4593f6d9846f6",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9bd4f5125ee0f03969c8e436",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:bda3f71afa910f47176ebca3",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:d3b5879fddeaa6b4edf60c2a",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:d841070ccc1adddf11cb21d6",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:e012c3263d76bcaf24a05628",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:e39239c3871216e95894f501",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f1e9d5dc481e4e8381f70ac6",
+      "signals": {
+        "freshness": 0.7917,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3788,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:4febf55b7bbb939b320cff66",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3787,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:5985799f772ad1bcea1c9a10",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3787,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:83b546334d4081e3bb074a4c",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3787,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9e00d7c2b52fe071aac8f0c1",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.3787,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b5140d1d7a0b4e3e2669a916",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.324,
+        "research": 1.0
+      },
+      "total": 0.3709,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:17aea9073f15f5cb1756f983",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b6cc998729fb127810d13829",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:eb6cc40e1ec150721bc2dfed",
+      "signals": {
+        "freshness": 0.7916,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:94737e7ebd0e333c30899027",
+      "signals": {
+        "freshness": 0.7915,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0673403e03a0fa77a780d5ff",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0c2f239c3ccb923b84727feb",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:121843e7a3151ec86bd9c64a",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:13bf7b9d0bda9db66c457f19",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:34810c8b309aa452441b9e9b",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:3b9dffb4008357da346e142f",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:403f93fd6f4f5a86350a7796",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:41024db9a2331daf13d7892d",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:60257e11f4f890beae6433cb",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b1b9ead6cc0d7889fb0c7c0b",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:b670ed931d22d36130dd61eb",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c1e9cd9919366b16012e0882",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:c8901490ac844b2c494c39c9",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:dc64ffc1d25ad8b4e25ae970",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:df6b5da8ab67b0194a42003d",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:e4388f044d32787fb4f70989",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f728080adeaacfc38c2bb53a",
+      "signals": {
+        "freshness": 0.7914,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:2424441945ad51c3cc557c77",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:345e910fcab1be3eadb86f86",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:5683903f6458384073c2bd5c",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:be513c06acb2f991db05e9b4",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:be57c8c0f1fc67dc3c360c7d",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f41900ab3c5e790ba740178e",
+      "signals": {
+        "freshness": 0.7913,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.3637,
+      "watched_override": false
+    }
+  ],
+  "report_date": "2026-09-26",
+  "version": 1,
+  "window_end": "2026-09-25T23:00:00Z",
+  "window_start": "2026-09-24T23:00:00Z"
+}
