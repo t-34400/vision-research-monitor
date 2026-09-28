@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-27T01:30:40.827507Z",
+      "last_successful_at": "2026-09-28T01:42:28.427739Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -151,8 +151,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-09-27T00:42:25Z",
-          "last_seen_at": "2026-09-27T01:30:40.827507Z"
+          "last_modified": "2026-09-28T01:35:46Z",
+          "last_seen_at": "2026-09-28T01:42:28.427739Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -361,6 +361,10 @@
         "MYRASHARMA/paper_004382978_vision_language_pretraining": {
           "last_modified": "2026-08-21T14:38:42Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "Maamar93600/DeepLabV3Plus-ResNet101-Drone-Segmentation": {
+          "last_modified": "2026-09-27T20:13:32Z",
+          "last_seen_at": "2026-09-28T01:42:28.427739Z"
         },
         "Manuelaskll/robotics-vision-language-run3": {
           "last_modified": "2026-09-13T17:44:31Z",
@@ -605,6 +609,10 @@
         "aandra-dedavi/video-understanding": {
           "last_modified": "2026-08-28T15:18:04Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
+        },
+        "aaravkumarna/intern-vision-language-pretraining81": {
+          "last_modified": "2026-09-27T11:42:19Z",
+          "last_seen_at": "2026-09-28T01:42:28.427739Z"
         },
         "abdollah111/brain-tumor-segmentation": {
           "last_modified": "2026-08-11T09:30:21Z",
@@ -1042,6 +1050,10 @@
           "last_modified": "2026-09-15T22:18:42Z",
           "last_seen_at": "2026-09-16T01:27:55.281883Z"
         },
+        "hai-tran/video-understanding": {
+          "last_modified": "2026-09-28T01:16:46Z",
+          "last_seen_at": "2026-09-28T01:42:28.427739Z"
+        },
         "hallisa80/study-robotics-vision-language": {
           "last_modified": "2026-09-03T00:31:52Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
@@ -1366,6 +1378,10 @@
           "last_modified": "2026-08-28T08:01:57Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
         },
+        "martinmbiro/resnet18-unet-crack-segmentation": {
+          "last_modified": "2026-09-27T11:40:08Z",
+          "last_seen_at": "2026-09-28T01:42:28.427739Z"
+        },
         "martinvalentin/paper_023087866_video_understanding": {
           "last_modified": "2026-08-22T01:51:09Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
@@ -1425,6 +1441,10 @@
         "monikanmn/paper_003862285_vision_language_pretraining": {
           "last_modified": "2026-08-21T19:20:07Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "motazalqaoud/brain-tumor-segmentation-weights": {
+          "last_modified": "2026-09-28T00:30:12Z",
+          "last_seen_at": "2026-09-28T01:42:28.427739Z"
         },
         "mrsubtle/pyannote-segmentation-3.0": {
           "last_modified": "2026-09-03T06:19:24Z",
@@ -2401,6 +2421,10 @@
         "yeetmq/retrieval-augmented-segmentation": {
           "last_modified": "2026-08-11T14:28:01Z",
           "last_seen_at": "2026-08-12T00:01:56.517702Z"
+        },
+        "yei-pi/ner-feature": {
+          "last_modified": "2026-09-27T04:32:24Z",
+          "last_seen_at": "2026-09-28T01:42:28.427739Z"
         },
         "yusufhandayani/video-understanding-analysis": {
           "last_modified": "2026-08-27T19:27:16Z",
