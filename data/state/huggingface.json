@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-28T01:42:28.427739Z",
+      "last_successful_at": "2026-09-29T02:35:51.287817Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -151,8 +151,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-09-28T01:35:46Z",
-          "last_seen_at": "2026-09-28T01:42:28.427739Z"
+          "last_modified": "2026-09-28T23:57:37Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -746,6 +746,10 @@
           "last_modified": "2026-08-30T20:47:50Z",
           "last_seen_at": "2026-08-31T01:23:23.502843Z"
         },
+        "avacartergun/homework-vision-language-pretraining": {
+          "last_modified": "2026-09-28T23:46:26Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
+        },
         "ayaemad2/segmentation": {
           "last_modified": "2026-08-20T04:15:06Z",
           "last_seen_at": "2026-08-20T23:42:37.686967Z"
@@ -773,6 +777,10 @@
         "bryantil/vision-language-pretraining-review5": {
           "last_modified": "2026-09-03T00:38:04Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
+        },
+        "caiooliveiraski/vision-language-pretraining-tryout": {
+          "last_modified": "2026-09-28T08:43:01Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
         },
         "caiosilvaberg/vision-language-pretraining": {
           "last_modified": "2026-08-27T21:35:20Z",
@@ -990,6 +998,22 @@
           "last_modified": "2026-08-21T07:03:18Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
+        "fafraob/point-cloud-ogb-cube": {
+          "last_modified": "2026-09-28T12:59:57Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
+        },
+        "fafraob/point-cloud-pusht": {
+          "last_modified": "2026-09-28T13:00:26Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
+        },
+        "fafraob/point-cloud-reacher": {
+          "last_modified": "2026-09-28T13:00:56Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
+        },
+        "fafraob/point-cloud-tworoom": {
+          "last_modified": "2026-09-28T13:01:32Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
+        },
         "fedeceri/cochlea-hair-cell-binary-segmentation-unet2d": {
           "last_modified": "2026-08-18T10:33:23Z",
           "last_seen_at": "2026-08-18T23:40:12.441598Z"
@@ -1021,6 +1045,10 @@
         "francescores/vision-language-pretraining-study": {
           "last_modified": "2026-09-13T17:11:39Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
+        },
+        "furkandemirna/video-understanding-notes": {
+          "last_modified": "2026-09-28T02:05:48Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
         },
         "gabri-elltb7/video-understanding-lite": {
           "last_modified": "2026-09-14T21:46:14Z",
@@ -1065,6 +1093,10 @@
         "hammoualiyoucef20/quran-segmentation-space": {
           "last_modified": "2026-09-10T12:54:50Z",
           "last_seen_at": "2026-09-11T01:09:15.052640Z"
+        },
+        "hannahsmi4316/video-understanding-lite": {
+          "last_modified": "2026-09-28T12:12:09Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
         },
         "harrytaylor/video-understanding-reading": {
           "last_modified": "2026-08-26T12:39:44Z",
@@ -1289,6 +1321,10 @@
         "kaizhao96/personal-vision-language-pretraining-2024": {
           "last_modified": "2026-08-28T20:29:13Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
+        },
+        "karankumarova/robotics-vision-language-small": {
+          "last_modified": "2026-09-28T02:40:10Z",
+          "last_seen_at": "2026-09-29T02:35:51.287817Z"
         },
         "katiekelly/paper_022736999_video_understanding": {
           "last_modified": "2026-08-22T04:20:04Z",
