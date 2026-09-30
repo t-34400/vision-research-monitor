@@ -4,11 +4,15 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-09-29T02:35:51.287817Z",
+      "last_successful_at": "2026-09-30T02:09:31.699451Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
           "last_seen_at": "2026-09-04T01:01:04.578232Z"
+        },
+        "5ss/oxford-pet-segmentation": {
+          "last_modified": "2026-09-29T07:54:53Z",
+          "last_seen_at": "2026-09-30T02:09:31.699451Z"
         },
         "AaravAgarwalna/video-understanding-proto": {
           "last_modified": "2026-09-10T16:08:16Z",
@@ -399,8 +403,8 @@
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "Murtazakhanpro/object-detections-model": {
-          "last_modified": "2026-09-26T16:14:52Z",
-          "last_seen_at": "2026-09-27T01:30:40.827507Z"
+          "last_modified": "2026-09-29T22:26:53Z",
+          "last_seen_at": "2026-09-30T02:09:31.699451Z"
         },
         "Navadeep018/brain-mri-tumor-segmentation": {
           "last_modified": "2026-08-14T15:48:37Z",
@@ -499,8 +503,8 @@
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "Sathyag007/speaker-segmentation-fine-tuned-callhome-jpn": {
-          "last_modified": "2026-08-05T12:20:00Z",
-          "last_seen_at": "2026-08-08T12:16:32.445138Z"
+          "last_modified": "2026-09-29T07:38:59Z",
+          "last_seen_at": "2026-09-30T02:09:31.699451Z"
         },
         "Seoulhan/reading-vision-language-pretraining": {
           "last_modified": "2026-09-13T14:34:44Z",
@@ -815,8 +819,8 @@
           "last_seen_at": "2026-09-13T01:03:44.845143Z"
         },
         "chagatai-project/chagatai-sentence-segmentation": {
-          "last_modified": "2026-09-25T10:52:25Z",
-          "last_seen_at": "2026-09-26T01:36:57.089601Z"
+          "last_modified": "2026-09-29T15:04:14Z",
+          "last_seen_at": "2026-09-30T02:09:31.699451Z"
         },
         "chengwij37/paper_023191774_video_understanding": {
           "last_modified": "2026-08-21T19:48:33Z",
@@ -1317,6 +1321,10 @@
         "justinrahman/vision-language-pretraining-best": {
           "last_modified": "2026-08-27T04:57:25Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "justtaeyoungoh/vision-language-pretraining": {
+          "last_modified": "2026-09-29T23:16:12Z",
+          "last_seen_at": "2026-09-30T02:09:31.699451Z"
         },
         "kaizhao96/personal-vision-language-pretraining-2024": {
           "last_modified": "2026-08-28T20:29:13Z",
