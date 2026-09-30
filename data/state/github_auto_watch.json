@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-09-29T02:39:03.078406Z",
+  "last_updated_at": "2026-09-30T02:16:04.844950Z",
   "repositories": {
     "103442898": {
       "first_promoted_at": "2026-08-14T23:46:55.593969Z",
@@ -336,7 +336,7 @@
     "1144211118": {
       "first_promoted_at": "2026-09-18T01:22:00.042316Z",
       "full_name": "OpenMOSS/MOVA",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -346,7 +346,7 @@
       "repo_id": "1144211118",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 1118,
+      "stars": 1119,
       "topics": [
         "vision_foundation_models",
         "vision_language_models"
@@ -452,7 +452,7 @@
     "1277471539": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "bilawalsidhu/gods-eye-view",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -460,7 +460,7 @@
       "repo_id": "1277471539",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 44628,
+      "stars": 45116,
       "topics": [
         "spatial_intelligence"
       ],
@@ -573,7 +573,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -581,7 +581,7 @@
       "repo_id": "167694194",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 36164,
+      "stars": 36183,
       "topics": [
         "object_detection"
       ],
@@ -705,7 +705,7 @@
     "23007417": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "colmap/colmap",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -713,7 +713,7 @@
       "repo_id": "23007417",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 12833,
+      "stars": 12839,
       "topics": [
         "multi_view_stereo",
         "structure_from_motion"
@@ -857,7 +857,7 @@
     "291498455": {
       "first_promoted_at": "2026-09-29T02:39:03.078406Z",
       "full_name": "roflcoopter/viseron",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -865,7 +865,7 @@
       "repo_id": "291498455",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 3553,
+      "stars": 3554,
       "topics": [
         "object_detection",
         "open_vocabulary_recognition"
@@ -930,7 +930,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -938,7 +938,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 15096,
+      "stars": 15135,
       "topics": [
         "super_resolution"
       ],
@@ -967,7 +967,7 @@
     "358678977": {
       "first_promoted_at": "2026-09-23T01:37:54.532016Z",
       "full_name": "NVlabs/tiny-cuda-nn",
-      "last_observed_at": "2026-09-23T01:37:54.532016Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -975,7 +975,7 @@
       "repo_id": "358678977",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 4536,
+      "stars": 4538,
       "topics": [
         "nerf",
         "neural_rendering"
@@ -1006,7 +1006,7 @@
     "409653223": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Nixtla/nixtla",
-      "last_observed_at": "2026-09-26T01:47:09.999772Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1014,7 +1014,7 @@
       "repo_id": "409653223",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 4013,
+      "stars": 4018,
       "topics": [
         "object_detection",
         "vision_foundation_models"
@@ -1206,7 +1206,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1214,7 +1214,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 62075,
+      "stars": 62109,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1269,7 +1269,7 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1277,7 +1277,7 @@
       "repo_id": "567038244",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 8244,
+      "stars": 8252,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1329,7 +1329,7 @@
     "655489856": {
       "first_promoted_at": "2026-08-20T23:49:27.938033Z",
       "full_name": "EutropicAI/Final2x",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1364,7 +1364,7 @@
     "672651553": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "MrNeRF/LichtFeld-Studio",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1372,7 +1372,7 @@
       "repo_id": "672651553",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 3783,
+      "stars": 3788,
       "topics": [
         "gaussian_splatting"
       ],
@@ -1398,7 +1398,7 @@
     "707265118": {
       "first_promoted_at": "2026-08-14T00:06:56.122838Z",
       "full_name": "playcanvas/supersplat",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1406,7 +1406,7 @@
       "repo_id": "707265118",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 10276,
+      "stars": 10284,
       "topics": [
         "gaussian_splatting"
       ],
@@ -1415,7 +1415,7 @@
     "712225112": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Genesis-Embodied-AI/genesis-world",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1423,7 +1423,7 @@
       "repo_id": "712225112",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 29993,
+      "stars": 30005,
       "topics": [
         "embodied_vision"
       ],
@@ -1543,7 +1543,7 @@
     "787462297": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "Blaizzy/mlx-vlm",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1551,7 +1551,7 @@
       "repo_id": "787462297",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 5545,
+      "stars": 5550,
       "topics": [
         "vision_language_models"
       ],
@@ -1717,7 +1717,7 @@
     "900320441": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "datawhalechina/every-embodied",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1726,7 +1726,7 @@
       "repo_id": "900320441",
       "research_category": "research",
       "research_relevance": 0.5,
-      "stars": 3877,
+      "stars": 3890,
       "topics": [
         "embodied_vision",
         "vision_language_action"
@@ -1793,7 +1793,7 @@
     "951534260": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/rf-detr",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1803,7 +1803,7 @@
       "repo_id": "951534260",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 9634,
+      "stars": 9655,
       "topics": [
         "instance_segmentation",
         "object_detection",
@@ -1910,7 +1910,7 @@
     "966243985": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/trackers",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-09-30T02:16:04.844950Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1920,7 +1920,7 @@
       "repo_id": "966243985",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 3857,
+      "stars": 3860,
       "topics": [
         "object_detection",
         "object_tracking"
