@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-09-30T02:16:04.844950Z",
+  "last_updated_at": "2026-10-01T02:17:15.440508Z",
   "repositories": {
     "103442898": {
       "first_promoted_at": "2026-08-14T23:46:55.593969Z",
@@ -573,7 +573,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -581,7 +581,7 @@
       "repo_id": "167694194",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 36183,
+      "stars": 36274,
       "topics": [
         "object_detection"
       ],
@@ -626,7 +626,7 @@
     "206660580": {
       "first_promoted_at": "2026-08-19T23:46:06.095722Z",
       "full_name": "facebookresearch/detectron2",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -636,7 +636,7 @@
       "repo_id": "206660580",
       "research_category": "research",
       "research_relevance": 0.75,
-      "stars": 34736,
+      "stars": 34743,
       "topics": [
         "object_detection",
         "open_vocabulary_recognition"
@@ -705,7 +705,7 @@
     "23007417": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "colmap/colmap",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -889,6 +889,25 @@
       ],
       "url": "https://github.com/lightly-ai/lightly"
     },
+    "307222796": {
+      "first_promoted_at": "2026-10-01T02:17:15.440508Z",
+      "full_name": "MaximeVandegar/Papers-in-100-Lines-of-Code",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "307222796",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 2897,
+      "topics": [
+        "nerf"
+      ],
+      "url": "https://github.com/MaximeVandegar/Papers-in-100-Lines-of-Code"
+    },
     "329620403": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "zju3dv/EasyMocap",
@@ -930,7 +949,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -938,7 +957,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 15135,
+      "stars": 15162,
       "topics": [
         "super_resolution"
       ],
@@ -1125,27 +1144,6 @@
       ],
       "url": "https://github.com/EyeTrackVR/EyeTrackVR"
     },
-    "444900243": {
-      "first_promoted_at": "2026-08-19T23:46:06.095722Z",
-      "full_name": "symforce-org/symforce",
-      "last_observed_at": "2026-08-28T06:59:53.471379Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "established",
-        "research_tool"
-      ],
-      "repo_id": "444900243",
-      "research_category": "research",
-      "research_relevance": 0.4,
-      "stars": 1637,
-      "topics": [
-        "robotics_mapping",
-        "robotics_perception",
-        "slam",
-        "structure_from_motion"
-      ],
-      "url": "https://github.com/symforce-org/symforce"
-    },
     "449377543": {
       "first_promoted_at": "2026-09-09T01:21:31.156122Z",
       "full_name": "JingyunLiang/VRT",
@@ -1206,7 +1204,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1214,7 +1212,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 62109,
+      "stars": 62134,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1227,7 +1225,7 @@
     "54376220": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "AtsushiSakai/PythonRobotics",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1235,7 +1233,7 @@
       "repo_id": "54376220",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 30605,
+      "stars": 30614,
       "topics": [
         "robotics_mapping",
         "robotics_perception",
@@ -1269,7 +1267,7 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1277,7 +1275,7 @@
       "repo_id": "567038244",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 8252,
+      "stars": 8264,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1329,7 +1327,7 @@
     "655489856": {
       "first_promoted_at": "2026-08-20T23:49:27.938033Z",
       "full_name": "EutropicAI/Final2x",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1337,34 +1335,16 @@
       "repo_id": "655489856",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 7336,
+      "stars": 7334,
       "topics": [
         "super_resolution"
       ],
       "url": "https://github.com/EutropicAI/Final2x"
     },
-    "657910387": {
-      "first_promoted_at": "2026-08-15T23:43:55.759434Z",
-      "full_name": "BrokenSource/DepthFlow",
-      "last_observed_at": "2026-08-25T23:48:15.423665Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "established",
-        "research_tool"
-      ],
-      "repo_id": "657910387",
-      "research_category": "research",
-      "research_relevance": 0.4,
-      "stars": 1510,
-      "topics": [
-        "monocular_depth"
-      ],
-      "url": "https://github.com/BrokenSource/DepthFlow"
-    },
     "672651553": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "MrNeRF/LichtFeld-Studio",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1372,7 +1352,7 @@
       "repo_id": "672651553",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 3788,
+      "stars": 3794,
       "topics": [
         "gaussian_splatting"
       ],
@@ -1415,7 +1395,7 @@
     "712225112": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Genesis-Embodied-AI/genesis-world",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1423,7 +1403,7 @@
       "repo_id": "712225112",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 30005,
+      "stars": 30013,
       "topics": [
         "embodied_vision"
       ],
@@ -1543,7 +1523,7 @@
     "787462297": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "Blaizzy/mlx-vlm",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1551,7 +1531,7 @@
       "repo_id": "787462297",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 5550,
+      "stars": 5555,
       "topics": [
         "vision_language_models"
       ],
@@ -1793,7 +1773,7 @@
     "951534260": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/rf-detr",
-      "last_observed_at": "2026-09-30T02:16:04.844950Z",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1803,7 +1783,7 @@
       "repo_id": "951534260",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 9655,
+      "stars": 9665,
       "topics": [
         "instance_segmentation",
         "object_detection",
@@ -1946,6 +1926,23 @@
         "vision_language_models"
       ],
       "url": "https://github.com/apple-aiml-research/ml-fastvlm"
+    },
+    "989132343": {
+      "first_promoted_at": "2026-10-01T02:17:15.440508Z",
+      "full_name": "sparkjsdev/spark",
+      "last_observed_at": "2026-10-01T02:17:15.440508Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established"
+      ],
+      "repo_id": "989132343",
+      "research_category": "candidate",
+      "research_relevance": 0.35,
+      "stars": 3677,
+      "topics": [
+        "gaussian_splatting"
+      ],
+      "url": "https://github.com/sparkjsdev/spark"
     }
   },
   "version": 1
