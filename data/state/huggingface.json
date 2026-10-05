@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-04T02:42:37.648794Z",
+      "last_successful_at": "2026-10-05T02:02:37.829768Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -129,6 +129,14 @@
         "Bboykoroman/paper_023167298_video_understanding": {
           "last_modified": "2026-08-22T03:04:14Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "Bernardorodrigues/vision-language-pretraining-playground": {
+          "last_modified": "2026-10-04T15:35:11Z",
+          "last_seen_at": "2026-10-05T02:02:37.829768Z"
+        },
+        "Bhanu624/brain-tumor-segmentation": {
+          "last_modified": "2026-10-04T05:34:09Z",
+          "last_seen_at": "2026-10-05T02:02:37.829768Z"
         },
         "BiernyVR/vr-guardian-segmentation": {
           "last_modified": "2026-09-14T10:13:59Z",
@@ -1426,6 +1434,10 @@
           "last_modified": "2026-08-30T12:16:10Z",
           "last_seen_at": "2026-08-31T01:23:23.502843Z"
         },
+        "kim2548TH/attn-lanenet-lane-segmentation": {
+          "last_modified": "2026-10-04T21:21:03Z",
+          "last_seen_at": "2026-10-05T02:02:37.829768Z"
+        },
         "kkkamur07/segmentation-blla": {
           "last_modified": "2026-08-06T00:15:25Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
@@ -1449,6 +1461,10 @@
         "lawalkunle/video-understanding": {
           "last_modified": "2026-09-10T20:51:29Z",
           "last_seen_at": "2026-09-11T01:09:15.052640Z"
+        },
+        "lazarus-loop/neuroheist-segmentation": {
+          "last_modified": "2026-10-04T09:21:31Z",
+          "last_seen_at": "2026-10-05T02:02:37.829768Z"
         },
         "lblod/decide-marked-segmentation": {
           "last_modified": "2026-08-25T06:57:21Z",
@@ -1581,6 +1597,10 @@
         "mulemp/slamminthejack": {
           "last_modified": "2026-08-08T03:50:22Z",
           "last_seen_at": "2026-08-08T12:16:32.445138Z"
+        },
+        "mundoamundo/slither-worm-segmentation-200-20261004": {
+          "last_modified": "2026-10-04T17:08:14Z",
+          "last_seen_at": "2026-10-05T02:02:37.829768Z"
         },
         "mwilliamsdale/robotics-vision-language-survey": {
           "last_modified": "2026-10-02T10:02:59Z",
@@ -1909,6 +1929,10 @@
         "timothy-perez/study-robotics-vision-language": {
           "last_modified": "2026-08-28T23:04:58Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
+        },
+        "tobiasbecktes/cs231n-video-understanding": {
+          "last_modified": "2026-10-04T10:20:08Z",
+          "last_seen_at": "2026-10-05T02:02:37.829768Z"
         },
         "tomaszkeqk/video-understanding-survey": {
           "last_modified": "2026-08-28T14:04:06Z",
@@ -2565,6 +2589,10 @@
         "viveksharmacus/video-understanding": {
           "last_modified": "2026-10-03T14:07:21Z",
           "last_seen_at": "2026-10-04T02:42:37.648794Z"
+        },
+        "waelGabsi01/fruit-vegetable-image-classification": {
+          "last_modified": "2026-10-04T15:27:30Z",
+          "last_seen_at": "2026-10-05T02:02:37.829768Z"
         },
         "walk-er88/paper_021859239_robotics_vision_language": {
           "last_modified": "2026-08-22T06:37:51Z",
