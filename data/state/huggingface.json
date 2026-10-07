@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-06T03:02:17.518811Z",
+      "last_successful_at": "2026-10-07T02:26:12.402126Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -13,6 +13,10 @@
         "5ss/oxford-pet-segmentation": {
           "last_modified": "2026-09-29T07:54:53Z",
           "last_seen_at": "2026-09-30T02:09:31.699451Z"
+        },
+        "AFZALS/siglip2-image-classification": {
+          "last_modified": "2026-10-06T04:33:02Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "AaravAgarwalna/video-understanding-proto": {
           "last_modified": "2026-09-10T16:08:16Z",
@@ -122,6 +126,10 @@
           "last_modified": "2026-10-01T18:47:47Z",
           "last_seen_at": "2026-10-02T02:18:15.161894Z"
         },
+        "Artemegorov/vision-language-pretraining": {
+          "last_modified": "2026-10-06T11:57:57Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+        },
         "Asher-1/2DGS-SLAM-GGML": {
           "last_modified": "2026-08-25T09:47:30Z",
           "last_seen_at": "2026-08-25T23:40:47.806863Z"
@@ -163,8 +171,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-10-03T17:52:41Z",
-          "last_seen_at": "2026-10-04T02:42:37.648794Z"
+          "last_modified": "2026-10-07T01:25:12Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -550,6 +558,10 @@
           "last_modified": "2026-09-13T14:34:44Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
+        "Shrutiguptaah/study-vision-language-pretraining": {
+          "last_modified": "2026-10-06T11:50:02Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+        },
         "ShwetaMsm3867/survey-vision-language-pretraining56": {
           "last_modified": "2026-08-26T08:19:08Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -593,6 +605,10 @@
         "TPELEE83/video-understanding": {
           "last_modified": "2026-09-10T22:28:41Z",
           "last_seen_at": "2026-09-11T01:09:15.052640Z"
+        },
+        "TakuyaMatsumoto/cs229-robotics-vision-language": {
+          "last_modified": "2026-10-07T01:57:06Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "Tanishjain9/fast-scnn-floor-segmentation": {
           "last_modified": "2026-08-08T18:36:00Z",
@@ -1263,8 +1279,8 @@
           "last_seen_at": "2026-09-12T01:10:02.109017Z"
         },
         "impresso-project/image-classification-siglip2": {
-          "last_modified": "2026-10-05T14:54:00Z",
-          "last_seen_at": "2026-10-06T03:02:17.518811Z"
+          "last_modified": "2026-10-06T15:19:40Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "itsukimori/experiment-video-understanding22": {
           "last_modified": "2026-09-22T09:19:35Z",
@@ -1722,6 +1738,10 @@
           "last_modified": "2026-09-04T12:42:15Z",
           "last_seen_at": "2026-09-05T01:00:22.694220Z"
         },
+        "oodogan3127/robotics-vision-language-reading": {
+          "last_modified": "2026-10-06T17:52:21Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+        },
         "oozkanemre88/paper_022210137_robotics_vision_language": {
           "last_modified": "2026-08-21T19:23:48Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
@@ -1779,28 +1799,28 @@
           "last_seen_at": "2026-09-11T01:09:15.052640Z"
         },
         "qualcomm/MediaPipe-Selfie-Segmentation": {
-          "last_modified": "2026-09-23T22:08:51Z",
-          "last_seen_at": "2026-09-24T01:27:23.187663Z"
+          "last_modified": "2026-10-07T00:01:01Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "qualcomm/Unet-Segmentation": {
-          "last_modified": "2026-09-23T22:04:38Z",
-          "last_seen_at": "2026-09-24T01:27:23.187663Z"
+          "last_modified": "2026-10-07T00:10:58Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "qualcomm/YOLO26-Segmentation": {
-          "last_modified": "2026-09-23T22:04:00Z",
-          "last_seen_at": "2026-09-24T01:27:23.187663Z"
+          "last_modified": "2026-10-07T00:17:34Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "qualcomm/YOLOE-Segmentation": {
-          "last_modified": "2026-09-23T22:04:16Z",
-          "last_seen_at": "2026-09-24T01:27:23.187663Z"
+          "last_modified": "2026-10-07T00:09:19Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "qualcomm/YOLOv11-Segmentation": {
-          "last_modified": "2026-09-23T22:02:48Z",
-          "last_seen_at": "2026-09-24T01:27:23.187663Z"
+          "last_modified": "2026-10-06T23:58:50Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "qualcomm/YOLOv8-Segmentation": {
-          "last_modified": "2026-09-23T22:14:40Z",
-          "last_seen_at": "2026-09-24T01:27:23.187663Z"
+          "last_modified": "2026-10-07T00:12:45Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "rachin01/my-unet-segmentation": {
           "last_modified": "2026-09-19T13:11:55Z",
@@ -1917,6 +1937,10 @@
         "sherjahongir/football-object-detection": {
           "last_modified": "2026-08-19T14:06:46Z",
           "last_seen_at": "2026-08-19T23:40:31.224144Z"
+        },
+        "shubhamkapoorso/vision-language-pretraining-study-2024": {
+          "last_modified": "2026-10-06T03:27:28Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "siddharthmu/robotics-vision-language": {
           "last_modified": "2026-09-17T05:01:25Z",
@@ -2713,6 +2737,10 @@
         "yzabelletor05/review-vision-language-pretraining": {
           "last_modified": "2026-08-28T15:12:42Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
+        },
+        "zem214/pyannote-segmentation-3.0": {
+          "last_modified": "2026-10-06T11:20:15Z",
+          "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
         "zwc2003/tmp-slam-model": {
           "last_modified": "2026-08-26T02:43:43Z",
