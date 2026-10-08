@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-07T02:26:12.402126Z",
+      "last_successful_at": "2026-10-08T02:43:01.024537Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -134,6 +134,10 @@
           "last_modified": "2026-08-25T09:47:30Z",
           "last_seen_at": "2026-08-25T23:40:47.806863Z"
         },
+        "Atlwright/video-understanding-scratch": {
+          "last_modified": "2026-10-07T09:42:56Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "Bboykoroman/paper_023167298_video_understanding": {
           "last_modified": "2026-08-22T03:04:14Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
@@ -171,8 +175,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-10-07T01:25:12Z",
-          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+          "last_modified": "2026-10-08T01:42:55Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -226,6 +230,10 @@
           "last_modified": "2026-09-07T06:32:20Z",
           "last_seen_at": "2026-09-08T01:14:03.015028Z"
         },
+        "Edgonzalez3/video-understanding": {
+          "last_modified": "2026-10-07T08:11:50Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "Edwinjeon/vision-language-pretraining-alpha": {
           "last_modified": "2026-09-13T19:09:42Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
@@ -261,6 +269,10 @@
         "Fude-boer/paper_022724606_video_understanding": {
           "last_modified": "2026-08-22T01:05:01Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "GabrielDelacruz/video-understanding": {
+          "last_modified": "2026-10-07T19:33:13Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "Gertrude01/3Class-Gel-Segmentation-Expanded-Aug-2026": {
           "last_modified": "2026-09-04T08:20:36Z",
@@ -539,12 +551,16 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "SaguaroAIMonitoring/yolo-object-detection": {
-          "last_modified": "2026-10-01T22:15:32Z",
-          "last_seen_at": "2026-10-02T02:18:15.161894Z"
+          "last_modified": "2026-10-08T00:02:02Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "Samantharde/vision-language-pretraining-notes": {
           "last_modified": "2026-09-16T14:50:04Z",
           "last_seen_at": "2026-09-17T01:28:21.476167Z"
+        },
+        "SandraZimmermann/robotics-vision-language-efficient-2023": {
+          "last_modified": "2026-10-07T11:58:19Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "Saputrafiona/robotics-vision-language": {
           "last_modified": "2026-09-14T01:45:09Z",
@@ -614,6 +630,10 @@
           "last_modified": "2026-08-08T18:36:00Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
         },
+        "TheGreatDargon/oxford-pet-segmentation": {
+          "last_modified": "2026-10-07T16:35:53Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "Tohirju/sl-amber2": {
           "last_modified": "2026-08-14T12:49:04Z",
           "last_seen_at": "2026-08-14T23:39:50.102348Z"
@@ -653,6 +673,10 @@
         "YounessBoumlik/face-segmentation-models": {
           "last_modified": "2026-09-19T16:06:51Z",
           "last_seen_at": "2026-09-20T01:12:55.686866Z"
+        },
+        "YuxuanZha/vision-language-pretraining-reading": {
+          "last_modified": "2026-10-07T07:48:08Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "ZiyadSaleh/research-video-understanding": {
           "last_modified": "2026-08-28T09:34:40Z",
@@ -1042,6 +1066,10 @@
           "last_modified": "2026-09-09T22:34:55Z",
           "last_seen_at": "2026-09-10T01:07:45.246899Z"
         },
+        "ehvmeijer/robotics-vision-language14": {
+          "last_modified": "2026-10-07T08:09:02Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "einarolafsson/live-cell-segmentation-cpsam": {
           "last_modified": "2026-09-21T19:29:23Z",
           "last_seen_at": "2026-09-22T01:37:30.054825Z"
@@ -1186,6 +1214,10 @@
           "last_modified": "2026-09-15T21:41:45Z",
           "last_seen_at": "2026-09-16T01:27:55.281883Z"
         },
+        "gokhanersoy/slam-asr-tr-commonvoice": {
+          "last_modified": "2026-10-07T19:19:48Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "gonzjer6/survey-vision-language-pretraining": {
           "last_modified": "2026-09-15T22:18:42Z",
           "last_seen_at": "2026-09-16T01:27:55.281883Z"
@@ -1318,6 +1350,10 @@
           "last_modified": "2026-08-27T08:35:07Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
+        "jamesthomassen/study-vision-language-pretraining": {
+          "last_modified": "2026-10-07T20:32:45Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "jankowskipawel/robotics-vision-language-study": {
           "last_modified": "2026-08-26T13:08:34Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -1397,6 +1433,10 @@
         "joshuacqth/vision-language-pretraining-reading": {
           "last_modified": "2026-09-03T23:04:46Z",
           "last_seen_at": "2026-09-04T01:01:04.578232Z"
+        },
+        "joshuahernandez/vision-language-pretraining": {
+          "last_modified": "2026-10-07T06:17:44Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "joshuaogunleye/survey-vision-language-pretraining": {
           "last_modified": "2026-08-28T16:24:04Z",
@@ -1590,6 +1630,10 @@
           "last_modified": "2026-08-22T01:51:09Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
+        "mathieurou7/robotics-vision-language-prototype": {
+          "last_modified": "2026-10-07T04:20:53Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "mednasserallah/manga109-segmentation-bubble-onnx": {
           "last_modified": "2026-08-13T04:42:33Z",
           "last_seen_at": "2026-08-14T00:00:58.321044Z"
@@ -1609,6 +1653,10 @@
         "mhqin/518_slam_origin_model": {
           "last_modified": "2026-08-22T02:41:34Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "mic-szym/study-vision-language-pretraining58": {
+          "last_modified": "2026-10-08T02:22:00Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "michaeldavisdale/survey-video-understanding": {
           "last_modified": "2026-09-10T21:14:20Z",
@@ -1698,6 +1746,10 @@
           "last_modified": "2026-10-01T13:36:23Z",
           "last_seen_at": "2026-10-02T02:18:15.161894Z"
         },
+        "nikitarao/review-vision-language-pretraining": {
+          "last_modified": "2026-10-07T20:19:18Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "niksixus/Mask2Former-Traffic-Segmentation": {
           "last_modified": "2026-08-27T17:35:14Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
@@ -1705,6 +1757,10 @@
         "nmariotto/scratch-assay-segmentation": {
           "last_modified": "2026-08-26T03:49:58Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
+        },
+        "noah-hofmann/vision-language-pretraining59": {
+          "last_modified": "2026-10-07T05:52:16Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "noahkb05/paper_022963481_video_understanding": {
           "last_modified": "2026-08-22T03:06:00Z",
@@ -1830,6 +1886,10 @@
           "last_modified": "2026-08-26T10:42:53Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
         },
+        "rahulsinghsy/video-understanding-medium2": {
+          "last_modified": "2026-10-07T17:55:04Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "rajeshmc/vision-language-pretraining-survey58": {
           "last_modified": "2026-09-26T02:12:41Z",
           "last_seen_at": "2026-09-27T01:30:40.827507Z"
@@ -1853,6 +1913,10 @@
         "ritsumeineurolab/paper_022625277_video_understanding": {
           "last_modified": "2026-08-21T16:56:13Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "robert-scott/side-video-understanding": {
+          "last_modified": "2026-10-07T05:05:38Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "robi-nson/paper_023392364_video_understanding": {
           "last_modified": "2026-08-22T01:27:46Z",
@@ -1893,6 +1957,10 @@
         "sanjeevkiitm/dlp-26t2-super-resolution": {
           "last_modified": "2026-09-06T14:01:36Z",
           "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
+        "sbynu-groho/video-understanding": {
+          "last_modified": "2026-10-07T11:46:24Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "sciencialab/grobid-model-segmentation": {
           "last_modified": "2026-10-01T19:35:17Z",
@@ -2002,9 +2070,17 @@
           "last_modified": "2026-08-18T10:59:16Z",
           "last_seen_at": "2026-08-18T23:40:12.441598Z"
         },
+        "teokonkwo/robotics-vision-language-run178": {
+          "last_modified": "2026-10-08T01:43:42Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
+        },
         "thaovytran/robotics-vision-language-study": {
           "last_modified": "2026-09-15T13:22:10Z",
           "last_seen_at": "2026-09-16T01:27:55.281883Z"
+        },
+        "tianzengsy/robotics-vision-language-survey": {
+          "last_modified": "2026-10-07T04:53:14Z",
+          "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "tidepo0lrahul/robotics-vision-language-study": {
           "last_modified": "2026-10-05T21:59:34Z",
