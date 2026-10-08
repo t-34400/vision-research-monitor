@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-10-07T02:34:39.635099Z",
+  "last_updated_at": "2026-10-08T02:49:00.862894Z",
   "repositories": {
     "103442898": {
       "first_promoted_at": "2026-08-14T23:46:55.593969Z",
@@ -469,7 +469,7 @@
     "1277471539": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "bilawalsidhu/gods-eye-view",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -477,7 +477,7 @@
       "repo_id": "1277471539",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 48409,
+      "stars": 48793,
       "topics": [
         "spatial_intelligence"
       ],
@@ -505,7 +505,7 @@
     "1301140808": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "img2threejs/img2threejs",
-      "last_observed_at": "2026-10-06T03:11:54.185492Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -513,7 +513,7 @@
       "repo_id": "1301140808",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 17555,
+      "stars": 17664,
       "topics": [
         "image_to_3d",
         "three_d_generation"
@@ -588,7 +588,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -596,7 +596,7 @@
       "repo_id": "167694194",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 36402,
+      "stars": 36416,
       "topics": [
         "object_detection"
       ],
@@ -700,19 +700,19 @@
     "221787282": {
       "first_promoted_at": "2026-08-14T23:46:55.593969Z",
       "full_name": "NVIDIAGameWorks/kaolin",
-      "last_observed_at": "2026-09-10T01:17:14.747799Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
-        "research_tool",
-        "strong_research"
+        "research_tool"
       ],
       "repo_id": "221787282",
       "research_category": "research",
-      "research_relevance": 0.8,
-      "stars": 5171,
+      "research_relevance": 0.55,
+      "stars": 5183,
       "topics": [
-        "gaussian_splatting"
+        "gaussian_splatting",
+        "neural_rendering"
       ],
       "url": "https://github.com/NVIDIAGameWorks/kaolin"
     },
@@ -759,7 +759,7 @@
     "23007417": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "colmap/colmap",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -767,7 +767,7 @@
       "repo_id": "23007417",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 12862,
+      "stars": 12865,
       "topics": [
         "multi_view_stereo",
         "structure_from_motion"
@@ -814,7 +814,7 @@
     "236951017": {
       "first_promoted_at": "2026-08-20T23:49:27.938033Z",
       "full_name": "PoseLib/PoseLib",
-      "last_observed_at": "2026-09-29T02:39:03.078406Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -823,7 +823,7 @@
       "repo_id": "236951017",
       "research_category": "research",
       "research_relevance": 0.55,
-      "stars": 1218,
+      "stars": 1221,
       "topics": [
         "camera_calibration",
         "camera_pose_estimation"
@@ -966,7 +966,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-10-06T03:11:54.185492Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -974,7 +974,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 15270,
+      "stars": 15346,
       "topics": [
         "super_resolution"
       ],
@@ -1042,7 +1042,7 @@
     "409653223": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Nixtla/nixtla",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1050,7 +1050,7 @@
       "repo_id": "409653223",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 4018,
+      "stars": 4019,
       "topics": [
         "object_detection",
         "vision_foundation_models"
@@ -1121,26 +1121,6 @@
         "slam"
       ],
       "url": "https://github.com/pypose/pypose"
-    },
-    "429813020": {
-      "first_promoted_at": "2026-08-12T00:06:45.191668Z",
-      "full_name": "koide3/glim",
-      "last_observed_at": "2026-09-07T01:11:39.537810Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "established",
-        "research_tool",
-        "strong_research"
-      ],
-      "repo_id": "429813020",
-      "research_category": "research",
-      "research_relevance": 0.7,
-      "stars": 1783,
-      "topics": [
-        "point_cloud_reconstruction",
-        "slam"
-      ],
-      "url": "https://github.com/koide3/glim"
     },
     "442286037": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
@@ -1221,7 +1201,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1229,7 +1209,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 62249,
+      "stars": 62276,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1284,7 +1264,7 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1292,7 +1272,7 @@
       "repo_id": "567038244",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 8289,
+      "stars": 8293,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1540,7 +1520,7 @@
     "787462297": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "Blaizzy/mlx-vlm",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1548,7 +1528,7 @@
       "repo_id": "787462297",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 5574,
+      "stars": 5584,
       "topics": [
         "vision_language_models"
       ],
@@ -1649,6 +1629,28 @@
         "robotics_perception"
       ],
       "url": "https://github.com/RoboTwin-Platform/RoboTwin"
+    },
+    "861761349": {
+      "first_promoted_at": "2026-10-08T02:49:00.862894Z",
+      "full_name": "microsoft/MoGe",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "861761349",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 3011,
+      "topics": [
+        "depth_estimation",
+        "monocular_depth",
+        "three_d_reconstruction",
+        "visual_geometry"
+      ],
+      "url": "https://github.com/microsoft/MoGe"
     },
     "869954329": {
       "first_promoted_at": "2026-08-23T23:44:51.913398Z",
@@ -1790,7 +1792,7 @@
     "951534260": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/rf-detr",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-08T02:49:00.862894Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1800,7 +1802,7 @@
       "repo_id": "951534260",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 9708,
+      "stars": 9719,
       "topics": [
         "instance_segmentation",
         "object_detection",
