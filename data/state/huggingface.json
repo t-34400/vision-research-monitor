@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-11T01:57:12.657176Z",
+      "last_successful_at": "2026-10-12T02:27:03.817574Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -818,6 +818,10 @@
           "last_modified": "2026-08-28T06:36:15Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
+        "anantv07/NER_FT": {
+          "last_modified": "2026-10-11T12:03:04Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
+        },
         "andrewand03/robotics-vision-language-tutorial-2023": {
           "last_modified": "2026-10-08T02:45:37Z",
           "last_seen_at": "2026-10-09T02:57:26.211665Z"
@@ -863,8 +867,8 @@
           "last_seen_at": "2026-10-11T01:57:12.657176Z"
         },
         "aryana-haghjoo/roman-spectral-superresolution": {
-          "last_modified": "2026-10-09T18:03:25Z",
-          "last_seen_at": "2026-10-10T02:22:59.746779Z"
+          "last_modified": "2026-10-11T17:11:19Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "ashishdaswu/vision-language-pretraining-tiny": {
           "last_modified": "2026-09-13T13:29:15Z",
@@ -965,6 +969,10 @@
         "chagatai-project/chagatai-sentence-segmentation": {
           "last_modified": "2026-09-29T15:04:14Z",
           "last_seen_at": "2026-09-30T02:09:31.699451Z"
+        },
+        "chameleon-ai/pyannote-segmentation-3.0": {
+          "last_modified": "2026-10-11T14:24:52Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "chengwij37/paper_023191774_video_understanding": {
           "last_modified": "2026-08-21T19:48:33Z",
@@ -1147,40 +1155,40 @@
           "last_seen_at": "2026-09-22T01:37:30.054825Z"
         },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam": {
-          "last_modified": "2026-09-18T20:33:25Z",
-          "last_seen_at": "2026-09-19T01:13:09.583854Z"
+          "last_modified": "2026-10-12T02:04:35Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam-r5": {
-          "last_modified": "2026-10-10T23:07:17Z",
-          "last_seen_at": "2026-10-11T01:57:12.657176Z"
+          "last_modified": "2026-10-12T02:04:36Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam-r5-geldoc": {
-          "last_modified": "2026-10-10T23:07:16Z",
-          "last_seen_at": "2026-10-11T01:57:12.657176Z"
+          "last_modified": "2026-10-12T02:04:37Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam-r6": {
-          "last_modified": "2026-10-10T18:15:31Z",
-          "last_seen_at": "2026-10-11T01:57:12.657176Z"
+          "last_modified": "2026-10-12T02:04:38Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam": {
-          "last_modified": "2026-09-18T20:33:24Z",
-          "last_seen_at": "2026-09-19T01:13:09.583854Z"
+          "last_modified": "2026-10-12T02:04:38Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam-r5": {
-          "last_modified": "2026-09-19T13:44:32Z",
-          "last_seen_at": "2026-09-20T01:12:55.686866Z"
+          "last_modified": "2026-10-12T02:04:39Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam-r6": {
-          "last_modified": "2026-09-19T17:09:03Z",
-          "last_seen_at": "2026-09-20T01:12:55.686866Z"
+          "last_modified": "2026-10-12T02:04:40Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam-r7": {
-          "last_modified": "2026-10-09T01:08:06Z",
-          "last_seen_at": "2026-10-09T02:57:26.211665Z"
+          "last_modified": "2026-10-12T02:04:40Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam-r8": {
-          "last_modified": "2026-10-10T18:14:59Z",
-          "last_seen_at": "2026-10-11T01:57:12.657176Z"
+          "last_modified": "2026-10-12T02:04:41Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "eljohnsonfield/paper_022621347_video_understanding": {
           "last_modified": "2026-08-21T21:39:37Z",
@@ -1249,6 +1257,10 @@
         "fedorovivan/hw1-vision-language-pretraining56": {
           "last_modified": "2026-08-26T08:20:41Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
+        },
+        "ferferefer/glaucoma-swin-cup-disc-segmentation": {
+          "last_modified": "2026-10-11T12:37:13Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "fionakcej/notes-robotics-vision-language": {
           "last_modified": "2026-08-26T12:00:01Z",
@@ -1337,6 +1349,10 @@
         "harsha532/low-light-super-resolution": {
           "last_modified": "2026-09-06T06:40:22Z",
           "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
+        "heitorhei/vision-language-pretraining-baseline": {
+          "last_modified": "2026-10-11T03:27:14Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "hernandezadrian/vision-language-pretraining-small": {
           "last_modified": "2026-09-09T17:57:01Z",
@@ -1997,6 +2013,10 @@
         "rajeshmc/vision-language-pretraining-survey58": {
           "last_modified": "2026-09-26T02:12:41Z",
           "last_seen_at": "2026-09-27T01:30:40.827507Z"
+        },
+        "ramosl-orenzo/robotics-vision-language-finetune70-2024": {
+          "last_modified": "2026-10-11T10:09:07Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "rangerhkai/ranger-bridge-pathology-segmentation-detection-model": {
           "last_modified": "2026-08-28T10:18:00Z",
@@ -2898,9 +2918,25 @@
           "last_modified": "2026-09-24T03:30:27Z",
           "last_seen_at": "2026-09-25T01:33:45.673902Z"
         },
+        "wq2012/knee_3d_mri_segmentation_OAI_downsampled": {
+          "last_modified": "2026-10-11T18:44:12Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
+        },
+        "wq2012/knee_3d_mri_segmentation_OAI_downsampled_subchondral_atlas": {
+          "last_modified": "2026-10-11T18:44:19Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
+        },
+        "wq2012/knee_3d_mri_segmentation_SKI10": {
+          "last_modified": "2026-10-11T17:26:22Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
+        },
+        "wq2012/knee_3d_mri_segmentation_SKI10_OAI_subchondral_atlas": {
+          "last_modified": "2026-10-11T18:47:11Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
+        },
         "wq2012/knee_3d_mri_segmentation_SKI10_subchondral_atlas": {
-          "last_modified": "2026-10-11T00:05:51Z",
-          "last_seen_at": "2026-10-11T01:57:12.657176Z"
+          "last_modified": "2026-10-11T18:44:16Z",
+          "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
         "wrokozlowski8/robotics-vision-language-2024": {
           "last_modified": "2026-08-28T03:16:31Z",
