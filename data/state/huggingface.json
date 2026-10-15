@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-14T01:55:57.448962Z",
+      "last_successful_at": "2026-10-15T01:30:58.752947Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -94,6 +94,10 @@
           "last_modified": "2026-09-17T09:54:23Z",
           "last_seen_at": "2026-09-18T01:18:04.767799Z"
         },
+        "Advantech-EIOT/Intel_human-pose-estimation-0001_FP16": {
+          "last_modified": "2026-10-14T03:53:03Z",
+          "last_seen_at": "2026-10-15T01:30:58.752947Z"
+        },
         "Ai-Adam-Six-Sigma/melanoma-segmentation": {
           "last_modified": "2026-08-18T22:00:30Z",
           "last_seen_at": "2026-08-18T23:40:12.441598Z"
@@ -133,6 +137,14 @@
         "Asher-1/2DGS-SLAM-GGML": {
           "last_modified": "2026-08-25T09:47:30Z",
           "last_seen_at": "2026-08-25T23:40:47.806863Z"
+        },
+        "Ashishraosy/reading-video-understanding-2023": {
+          "last_modified": "2026-10-14T10:27:27Z",
+          "last_seen_at": "2026-10-15T01:30:58.752947Z"
+        },
+        "AtharvKum/robotics-vision-language-review": {
+          "last_modified": "2026-10-14T17:33:17Z",
+          "last_seen_at": "2026-10-15T01:30:58.752947Z"
         },
         "Atlwright/video-understanding-scratch": {
           "last_modified": "2026-10-07T09:42:56Z",
@@ -1130,6 +1142,10 @@
           "last_modified": "2026-10-09T03:32:52Z",
           "last_seen_at": "2026-10-10T02:22:59.746779Z"
         },
+        "ddabrowskifranciszek/notes-video-understanding": {
+          "last_modified": "2026-10-14T22:51:02Z",
+          "last_seen_at": "2026-10-15T01:30:58.752947Z"
+        },
         "deboerlucas/robotics-vision-language-notebook": {
           "last_modified": "2026-10-08T14:38:59Z",
           "last_seen_at": "2026-10-09T02:57:26.211665Z"
@@ -1191,8 +1207,8 @@
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
         "egyx/hydroflow-water-segmentation": {
-          "last_modified": "2026-10-10T21:44:17Z",
-          "last_seen_at": "2026-10-11T01:57:12.657176Z"
+          "last_modified": "2026-10-15T00:36:34Z",
+          "last_seen_at": "2026-10-15T01:30:58.752947Z"
         },
         "ehhendriks/robotics-vision-language": {
           "last_modified": "2026-10-13T16:51:57Z",
@@ -1554,6 +1570,10 @@
           "last_modified": "2026-10-13T22:29:22Z",
           "last_seen_at": "2026-10-14T01:55:57.448962Z"
         },
+        "jerryzhengmaz/robotics-vision-language-proto": {
+          "last_modified": "2026-10-14T09:35:08Z",
+          "last_seen_at": "2026-10-15T01:30:58.752947Z"
+        },
         "jiahaowuna/paper_023480734_video_understanding": {
           "last_modified": "2026-08-21T18:07:08Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
@@ -1719,8 +1739,8 @@
           "last_seen_at": "2026-10-05T02:02:37.829768Z"
         },
         "kiselyovd/brain-mri-segmentation": {
-          "last_modified": "2026-10-13T08:43:37Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-14T14:56:47Z",
+          "last_seen_at": "2026-10-15T01:30:58.752947Z"
         },
         "kkkamur07/segmentation-blla": {
           "last_modified": "2026-08-06T00:15:25Z",
