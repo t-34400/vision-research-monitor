@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-15T01:30:58.752947Z",
+      "last_successful_at": "2026-10-16T01:24:55.837329Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -150,6 +150,10 @@
           "last_modified": "2026-10-07T09:42:56Z",
           "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
+        "Avcuongy/Polyp_Segmentation_BKAI": {
+          "last_modified": "2026-10-15T11:16:41Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
+        },
         "BNarayanaReddy/wavlm-mfcc-speaker-segmentation": {
           "last_modified": "2026-10-10T07:57:20Z",
           "last_seen_at": "2026-10-11T01:57:12.657176Z"
@@ -237,6 +241,10 @@
         "DenisaB/rfdetr-instance-segmentation-leibniz-manuscripts": {
           "last_modified": "2026-09-02T14:56:01Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
+        },
+        "DenisaBumba/rfdetr-instance-segmentation-leibniz-manuscripts": {
+          "last_modified": "2026-10-15T07:49:24Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
         },
         "DigiGreen/pyannote-segmentation-agri-indic": {
           "last_modified": "2026-09-19T08:34:46Z",
@@ -866,6 +874,10 @@
           "last_modified": "2026-10-11T12:03:04Z",
           "last_seen_at": "2026-10-12T02:27:03.817574Z"
         },
+        "ananyamishrason/survey-vision-language-pretraining": {
+          "last_modified": "2026-10-15T11:28:34Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
+        },
         "and-erix/ml-vision-language-pretraining": {
           "last_modified": "2026-10-13T22:40:53Z",
           "last_seen_at": "2026-10-14T01:55:57.448962Z"
@@ -926,6 +938,10 @@
           "last_modified": "2026-09-13T13:29:15Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
+        "atara57769/nanovision-segmentation": {
+          "last_modified": "2026-10-15T11:29:05Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
+        },
         "atharvpatley/paper_003417550_vision_language_pretraining": {
           "last_modified": "2026-08-22T00:12:01Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
@@ -949,6 +965,10 @@
         "b-rosel/PiD_upscaler_image_restoration_tutorial_video": {
           "last_modified": "2026-08-21T23:49:36Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "bbrownchristina34/robotics-vision-language-survey-2023": {
+          "last_modified": "2026-10-15T09:31:12Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
         },
         "bdgrahman/robotics-vision-language-survey": {
           "last_modified": "2026-09-14T11:57:45Z",
@@ -1739,8 +1759,8 @@
           "last_seen_at": "2026-10-05T02:02:37.829768Z"
         },
         "kiselyovd/brain-mri-segmentation": {
-          "last_modified": "2026-10-14T14:56:47Z",
-          "last_seen_at": "2026-10-15T01:30:58.752947Z"
+          "last_modified": "2026-10-15T16:10:35Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
         },
         "kkkamur07/segmentation-blla": {
           "last_modified": "2026-08-06T00:15:25Z",
@@ -1765,6 +1785,10 @@
         "kyledavis/robotics-vision-language-v3": {
           "last_modified": "2026-08-26T08:15:40Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
+        },
+        "latheamit/review-robotics-vision-language": {
+          "last_modified": "2026-10-15T19:14:44Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
         },
         "lawalkunle/video-understanding": {
           "last_modified": "2026-09-10T20:51:29Z",
@@ -1853,6 +1877,10 @@
         "martinvalentin/paper_023087866_video_understanding": {
           "last_modified": "2026-08-22T01:51:09Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "masmi-rnov99/video-understanding-practice": {
+          "last_modified": "2026-10-15T10:28:35Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
         },
         "mathieurou7/robotics-vision-language-prototype": {
           "last_modified": "2026-10-07T04:20:53Z",
@@ -2069,6 +2097,10 @@
         "promes-mantra/receipt-segmentation": {
           "last_modified": "2026-08-19T09:24:13Z",
           "last_seen_at": "2026-08-19T23:40:31.224144Z"
+        },
+        "promitbhattacharjee/dental-panoramic-xray-segmentation": {
+          "last_modified": "2026-10-15T19:32:44Z",
+          "last_seen_at": "2026-10-16T01:24:55.837329Z"
         },
         "psisnotavailable/srresnet-4x-image-super-resolution": {
           "last_modified": "2026-09-07T11:05:26Z",
