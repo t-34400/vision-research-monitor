@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-10-17T01:24:07.237639Z",
+  "last_updated_at": "2026-10-18T01:21:40.025275Z",
   "repositories": {
     "103442898": {
       "first_promoted_at": "2026-08-14T23:46:55.593969Z",
@@ -470,7 +470,7 @@
     "1277471539": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "bilawalsidhu/gods-eye-view",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -478,7 +478,7 @@
       "repo_id": "1277471539",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 57255,
+      "stars": 57656,
       "topics": [
         "spatial_intelligence"
       ],
@@ -487,7 +487,7 @@
     "129712017": {
       "first_promoted_at": "2026-09-05T01:14:10.648577Z",
       "full_name": "satellite-image-deep-learning/techniques",
-      "last_observed_at": "2026-10-11T02:02:36.508568Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -496,7 +496,7 @@
       "repo_id": "129712017",
       "research_category": "research",
       "research_relevance": 0.55,
-      "stars": 10276,
+      "stars": 10283,
       "topics": [
         "image_classification",
         "object_detection"
@@ -506,7 +506,7 @@
     "1301140808": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "img2threejs/img2threejs",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -514,7 +514,7 @@
       "repo_id": "1301140808",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 18247,
+      "stars": 18314,
       "topics": [
         "image_to_3d",
         "three_d_generation"
@@ -589,7 +589,7 @@
     "146165888": {
       "first_promoted_at": "2026-08-15T23:43:55.759434Z",
       "full_name": "ultralytics/yolov3",
-      "last_observed_at": "2026-10-10T02:32:25.257907Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -597,7 +597,7 @@
       "repo_id": "146165888",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 10616,
+      "stars": 10621,
       "topics": [
         "object_detection"
       ],
@@ -776,7 +776,7 @@
     "23007417": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "colmap/colmap",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -784,7 +784,7 @@
       "repo_id": "23007417",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 12970,
+      "stars": 12977,
       "topics": [
         "multi_view_stereo",
         "structure_from_motion"
@@ -814,7 +814,7 @@
     "235070415": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "AaronFeng753/Waifu2x-Extension-GUI",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -822,7 +822,7 @@
       "repo_id": "235070415",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 17120,
+      "stars": 17121,
       "topics": [
         "super_resolution"
       ],
@@ -850,7 +850,7 @@
     "264818686": {
       "first_promoted_at": "2026-08-15T23:43:55.759434Z",
       "full_name": "ultralytics/yolov5",
-      "last_observed_at": "2026-10-07T02:34:39.635099Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -858,7 +858,7 @@
       "repo_id": "264818686",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 58109,
+      "stars": 58179,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -869,7 +869,7 @@
     "275118967": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "mikel-brostrom/boxmot",
-      "last_observed_at": "2026-10-14T02:03:21.501905Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -879,7 +879,7 @@
       "repo_id": "275118967",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 8314,
+      "stars": 8315,
       "topics": [
         "object_detection",
         "object_tracking"
@@ -966,7 +966,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -974,7 +974,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 15800,
+      "stars": 15844,
       "topics": [
         "super_resolution"
       ],
@@ -1199,7 +1199,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1207,7 +1207,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 62572,
+      "stars": 62595,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1262,7 +1262,7 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1270,7 +1270,7 @@
       "repo_id": "567038244",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 8366,
+      "stars": 8373,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1324,7 +1324,7 @@
     "655489856": {
       "first_promoted_at": "2026-08-20T23:49:27.938033Z",
       "full_name": "EutropicAI/Final2x",
-      "last_observed_at": "2026-10-01T02:17:15.440508Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1332,7 +1332,7 @@
       "repo_id": "655489856",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 7334,
+      "stars": 7384,
       "topics": [
         "super_resolution"
       ],
@@ -1392,7 +1392,7 @@
     "712225112": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Genesis-Embodied-AI/genesis-world",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1400,7 +1400,7 @@
       "repo_id": "712225112",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 30067,
+      "stars": 30071,
       "topics": [
         "embodied_vision"
       ],
@@ -1518,7 +1518,7 @@
     "787462297": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "Blaizzy/mlx-vlm",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1526,7 +1526,7 @@
       "repo_id": "787462297",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 5634,
+      "stars": 5635,
       "topics": [
         "vision_language_models"
       ],
@@ -1907,7 +1907,7 @@
     "966243985": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/trackers",
-      "last_observed_at": "2026-10-17T01:24:07.237639Z",
+      "last_observed_at": "2026-10-18T01:21:40.025275Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1917,7 +1917,7 @@
       "repo_id": "966243985",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 3951,
+      "stars": 3950,
       "topics": [
         "object_detection",
         "object_tracking"
