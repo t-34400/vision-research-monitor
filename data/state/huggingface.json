@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-18T01:06:49.596492Z",
+      "last_successful_at": "2026-10-19T01:19:33.335824Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -17,6 +17,10 @@
         "AFZALS/siglip2-image-classification": {
           "last_modified": "2026-10-06T04:33:02Z",
           "last_seen_at": "2026-10-07T02:26:12.402126Z"
+        },
+        "Aalmutairison/random-robotics-vision-language-2024": {
+          "last_modified": "2026-10-18T01:28:39Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "AaravAgarwalna/video-understanding-proto": {
           "last_modified": "2026-09-10T16:08:16Z",
@@ -958,6 +962,10 @@
           "last_modified": "2026-09-13T13:29:15Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
+        "assokolov/notes-video-understanding": {
+          "last_modified": "2026-10-18T22:43:33Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+        },
         "atara57769/nanovision-segmentation": {
           "last_modified": "2026-10-15T11:29:05Z",
           "last_seen_at": "2026-10-16T01:24:55.837329Z"
@@ -1085,6 +1093,10 @@
         "chenoscar/video-understanding": {
           "last_modified": "2026-09-14T08:30:46Z",
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
+        "chnyadav4742/notes-video-understanding": {
+          "last_modified": "2026-10-18T04:50:39Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "chrisga13/Models-Object-Detection-and-OCR-System-for-Engineering-Drawings": {
           "last_modified": "2026-09-06T11:15:00Z",
@@ -1287,8 +1299,8 @@
           "last_seen_at": "2026-10-13T03:35:52.280620Z"
         },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam-r6": {
-          "last_modified": "2026-10-12T19:52:56Z",
-          "last_seen_at": "2026-10-13T03:35:52.280620Z"
+          "last_modified": "2026-10-18T11:38:22Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam-r7": {
           "last_modified": "2026-10-17T23:56:24Z",
@@ -1449,6 +1461,10 @@
         "gonzjer6/survey-vision-language-pretraining": {
           "last_modified": "2026-09-15T22:18:42Z",
           "last_seen_at": "2026-09-16T01:27:55.281883Z"
+        },
+        "gpalmeida/video-understanding": {
+          "last_modified": "2026-10-18T04:52:11Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "hai-tran/video-understanding": {
           "last_modified": "2026-09-28T01:16:46Z",
@@ -2083,8 +2099,8 @@
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
         "nmariotto/scratch-assay-segmentation": {
-          "last_modified": "2026-10-17T17:37:53Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-18T17:43:42Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "noah-hofmann/vision-language-pretraining59": {
           "last_modified": "2026-10-07T05:52:16Z",
@@ -2421,6 +2437,10 @@
         "sunilchopra/paper_021856383_robotics_vision_language": {
           "last_modified": "2026-08-22T02:35:40Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "svpe-trov/notes-robotics-vision-language": {
+          "last_modified": "2026-10-19T00:56:30Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "szluo9641/notes-video-understanding": {
           "last_modified": "2026-10-08T06:48:33Z",
@@ -3034,9 +3054,25 @@
           "last_modified": "2026-10-13T08:01:29Z",
           "last_seen_at": "2026-10-14T01:55:57.448962Z"
         },
+        "torch-pointcloud/pvcnn-c0p125.s3dis-area5.mit-han-lab": {
+          "last_modified": "2026-10-18T16:17:58Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+        },
+        "torch-pointcloud/pvcnn-c0p25.s3dis-area5.mit-han-lab": {
+          "last_modified": "2026-10-18T16:18:00Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+        },
         "torch-pointcloud/pvcnn.s3dis-area5.mit-han-lab": {
-          "last_modified": "2026-10-13T08:01:30Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-18T16:18:02Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+        },
+        "torch-pointcloud/pvcnn2-c0p5.s3dis-area5.mit-han-lab": {
+          "last_modified": "2026-10-18T16:18:06Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+        },
+        "torch-pointcloud/pvcnn2.s3dis-area5.mit-han-lab": {
+          "last_modified": "2026-10-18T16:18:10Z",
+          "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "torch-pointcloud/randlanet.parislille3d.open3d": {
           "last_modified": "2026-10-17T11:28:27Z",
