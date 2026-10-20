@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-19T01:19:33.335824Z",
+      "last_successful_at": "2026-10-20T01:51:37.679938Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -203,8 +203,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-10-17T14:50:03Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T01:36:40Z",
+          "last_seen_at": "2026-10-20T01:51:37.679938Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -466,6 +466,10 @@
           "last_modified": "2026-10-08T16:35:05Z",
           "last_seen_at": "2026-10-09T02:57:26.211665Z"
         },
+        "Leazschaefer/nlp-video-understanding": {
+          "last_modified": "2026-10-19T13:23:36Z",
+          "last_seen_at": "2026-10-20T01:51:37.679938Z"
+        },
         "Leonyly7970/review-vision-language-pretraining53": {
           "last_modified": "2026-09-15T13:23:31Z",
           "last_seen_at": "2026-09-16T01:27:55.281883Z"
@@ -521,6 +525,10 @@
         "MelenL/EfficientNetB0_Ensemble_for_Satellite_Image_Classification": {
           "last_modified": "2026-09-06T17:09:21Z",
           "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
+        "Mmillersarah/survey-robotics-vision-language": {
+          "last_modified": "2026-10-19T14:19:21Z",
+          "last_seen_at": "2026-10-20T01:51:37.679938Z"
         },
         "Moleys/manga-speech-bubble-segmentation-libreyolo": {
           "last_modified": "2026-08-29T18:20:05Z",
@@ -1081,6 +1089,10 @@
         "changgyu/gaussian-splatting-projection-in-pointclip-on-modelnet40": {
           "last_modified": "2026-10-17T08:04:33Z",
           "last_seen_at": "2026-10-18T01:06:49.596492Z"
+        },
+        "chemahc94/dentex-tooth-segmentation": {
+          "last_modified": "2026-10-19T17:08:05Z",
+          "last_seen_at": "2026-10-20T01:51:37.679938Z"
         },
         "chengwij37/paper_023191774_video_understanding": {
           "last_modified": "2026-08-21T19:48:33Z",
@@ -2269,6 +2281,10 @@
         "rangerhkai/ranger-bridge-pathology-segmentation-detection-model": {
           "last_modified": "2026-08-28T10:18:00Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
+        },
+        "read855/brain-mri-segmentation-resnet50-unet": {
+          "last_modified": "2026-10-19T16:17:24Z",
+          "last_seen_at": "2026-10-20T01:51:37.679938Z"
         },
         "reddyrohitora/vision-language-pretraining-kaggle": {
           "last_modified": "2026-08-27T14:05:48Z",
