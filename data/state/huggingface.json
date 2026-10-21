@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-20T01:51:37.679938Z",
+      "last_successful_at": "2026-10-21T01:38:02.771880Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -203,8 +203,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-10-20T01:36:40Z",
-          "last_seen_at": "2026-10-20T01:51:37.679938Z"
+          "last_modified": "2026-10-21T00:24:19Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -727,8 +727,8 @@
           "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "Tohirju/sl-amber2": {
-          "last_modified": "2026-08-14T12:49:04Z",
-          "last_seen_at": "2026-08-14T23:39:50.102348Z"
+          "last_modified": "2026-10-20T20:39:17Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "TrickyTech32/Breast-Cancer-Segmentation-Model": {
           "last_modified": "2026-08-31T12:03:38Z",
@@ -749,6 +749,10 @@
         "WasiqSaleem/low-cost-autonomous-slam-nav2": {
           "last_modified": "2026-09-04T23:33:37Z",
           "last_seen_at": "2026-09-05T01:00:22.694220Z"
+        },
+        "WorasitSangjan/Leaf-CT-Segmentation-Model": {
+          "last_modified": "2026-10-20T03:20:08Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "YMmim/object-detection-scratch": {
           "last_modified": "2026-08-23T06:31:16Z",
@@ -833,6 +837,10 @@
         "adeel107/object-detection-tracking": {
           "last_modified": "2026-10-13T22:00:11Z",
           "last_seen_at": "2026-10-14T01:55:57.448962Z"
+        },
+        "adpandey52/vision-language-pretraining": {
+          "last_modified": "2026-10-21T01:16:49Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "ahmedalghamdi/vision-language-pretraining-prototype": {
           "last_modified": "2026-08-27T05:15:25Z",
@@ -1590,6 +1598,10 @@
           "last_modified": "2026-10-06T15:19:40Z",
           "last_seen_at": "2026-10-07T02:26:12.402126Z"
         },
+        "irfanhossainsust/oxbow-lake-segmentation": {
+          "last_modified": "2026-10-20T14:46:16Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
         "itsukimori/experiment-video-understanding22": {
           "last_modified": "2026-09-22T09:19:35Z",
           "last_seen_at": "2026-09-23T01:31:48.620589Z"
@@ -1890,6 +1902,10 @@
           "last_modified": "2026-08-27T14:49:51Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
+        "lewandowski1992/study-robotics-vision-language": {
+          "last_modified": "2026-10-20T10:41:46Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
         "lima0425/review-vision-language-pretraining54": {
           "last_modified": "2026-09-25T06:23:28Z",
           "last_seen_at": "2026-09-26T01:36:57.089601Z"
@@ -1901,6 +1917,10 @@
         "llehoangnam/cs231n-vision-language-pretraining": {
           "last_modified": "2026-10-05T14:27:37Z",
           "last_seen_at": "2026-10-06T03:02:17.518811Z"
+        },
+        "llopezmichael/dissertation-video-understanding": {
+          "last_modified": "2026-10-20T03:00:06Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "lobianchi/robotics-vision-language-analysis": {
           "last_modified": "2026-10-16T07:27:27Z",
@@ -2282,6 +2302,10 @@
           "last_modified": "2026-08-28T10:18:00Z",
           "last_seen_at": "2026-08-29T04:10:50.501043Z"
         },
+        "rapidrabbit76/pyannote-segmentation-3.0": {
+          "last_modified": "2026-10-20T16:52:45Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
         "read855/brain-mri-segmentation-resnet50-unet": {
           "last_modified": "2026-10-19T16:17:24Z",
           "last_seen_at": "2026-10-20T01:51:37.679938Z"
@@ -2297,6 +2321,10 @@
         "reproducible-ai/nerf-pytorch-lego": {
           "last_modified": "2026-08-11T17:52:57Z",
           "last_seen_at": "2026-08-12T00:01:56.517702Z"
+        },
+        "rikushimizu/notes-video-understanding-2024": {
+          "last_modified": "2026-10-20T09:18:24Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "ritsumeineurolab/paper_022625277_video_understanding": {
           "last_modified": "2026-08-21T16:56:13Z",
@@ -2418,6 +2446,10 @@
           "last_modified": "2026-09-24T17:56:10Z",
           "last_seen_at": "2026-09-25T01:33:45.673902Z"
         },
+        "smiriva1988ph/robotics-vision-language98": {
+          "last_modified": "2026-10-20T10:38:27Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
         "software-mansion/react-native-executorch-rfdetr-nano-segmentation": {
           "last_modified": "2026-10-12T19:11:31Z",
           "last_seen_at": "2026-10-13T03:35:52.280620Z"
@@ -2531,16 +2563,16 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "torch-pointcloud/3detr-m.scannet.fair": {
-          "last_modified": "2026-10-13T07:59:23Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:32Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/3detr.scannet.fair": {
-          "last_modified": "2026-10-13T07:59:25Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:33Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/3detr.sunrgbd.fair": {
-          "last_modified": "2026-10-13T07:59:26Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:34Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/concerto-base.pretrain.pointcept": {
           "last_modified": "2026-09-24T22:41:19Z",
@@ -2563,512 +2595,512 @@
           "last_seen_at": "2026-09-25T01:33:45.673902Z"
         },
         "torch-pointcloud/dgcnn.modelnet40-1024.an-tao": {
-          "last_modified": "2026-10-13T07:59:31Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:35Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.modelnet40-2048.an-tao": {
-          "last_modified": "2026-10-13T07:59:32Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:36Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.s3dis-area1.an-tao": {
-          "last_modified": "2026-09-24T22:41:29Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:43:37Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.s3dis-area2.an-tao": {
-          "last_modified": "2026-09-24T22:41:30Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:43:38Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.s3dis-area3.an-tao": {
-          "last_modified": "2026-09-24T22:41:31Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:43:39Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.s3dis-area4.an-tao": {
-          "last_modified": "2026-09-24T22:41:33Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:43:40Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.s3dis-area5.an-tao": {
-          "last_modified": "2026-09-24T22:41:34Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:43:41Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.s3dis-area6.an-tao": {
-          "last_modified": "2026-09-24T22:41:36Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:43:43Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.scannet20.an-tao": {
-          "last_modified": "2026-10-13T07:59:36Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:44Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/dgcnn.shapenetpart.an-tao": {
-          "last_modified": "2026-10-13T07:59:37Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:45Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn-base-deform.s3dis-area5.hugues-thomas": {
-          "last_modified": "2026-10-13T07:59:38Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:46Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn-base-deform.s3dis.hugues-thomas": {
           "last_modified": "2026-08-29T09:38:46Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/kpfcnn-base-sm-deform.s3dis-area5.hugues-thomas": {
-          "last_modified": "2026-10-13T07:59:39Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:47Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn-base-sm-deform.s3dis.hugues-thomas": {
           "last_modified": "2026-08-29T09:38:47Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/kpfcnn-base-sm.s3dis-area5.hugues-thomas": {
-          "last_modified": "2026-10-13T07:59:41Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:48Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn-base-sm.s3dis.hugues-thomas": {
           "last_modified": "2026-08-29T09:38:48Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/kpfcnn-base.s3dis-area5.hugues-thomas": {
-          "last_modified": "2026-10-13T07:59:42Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:50Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn-base.s3dis.hugues-thomas": {
           "last_modified": "2026-08-29T09:38:50Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/kpfcnn-deform.parislille3d.open3d": {
-          "last_modified": "2026-10-17T11:28:03Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:43:51Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn.s3dis-area3.open3d": {
-          "last_modified": "2026-10-17T11:28:08Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:43:52Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn.semantickitti.open3d": {
-          "last_modified": "2026-10-17T11:28:14Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:43:54Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/kpfcnn.toronto3d.open3d": {
-          "last_modified": "2026-10-17T11:28:19Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:43:55Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/lion-mamba.nuscenes.zhe-liu": {
-          "last_modified": "2026-10-13T07:59:43Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:56Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/octformer-base.modelnet40.octree-nn": {
-          "last_modified": "2026-10-13T07:59:45Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:57Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/octformer-base.scannet20.octree-nn": {
-          "last_modified": "2026-10-13T07:59:46Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:58Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/octformer-base.scannet200.octree-nn": {
-          "last_modified": "2026-10-13T07:59:47Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:43:59Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.dvae.xumin-yu": {
-          "last_modified": "2026-09-24T22:41:51Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:01Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.modelnet40-4k.xumin-yu": {
-          "last_modified": "2026-10-13T07:59:49Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:02Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.modelnet40-8k.xumin-yu": {
-          "last_modified": "2026-10-13T07:59:50Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:04Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.modelnet40.xumin-yu": {
-          "last_modified": "2026-10-13T07:59:52Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:05Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.pretrain.xumin-yu": {
-          "last_modified": "2026-09-24T22:41:57Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:06Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.scanobjectnn-hardest.xumin-yu": {
-          "last_modified": "2026-10-13T07:59:53Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:08Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.scanobjectnn-objbg.xumin-yu": {
-          "last_modified": "2026-10-13T07:59:55Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:09Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-bert-base.scanobjectnn-objonly.xumin-yu": {
-          "last_modified": "2026-10-13T07:59:56Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:11Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-m2ae-base.modelnet40.renrui-zhang": {
-          "last_modified": "2026-10-13T07:59:57Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:12Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-m2ae-base.pretrain.renrui-zhang": {
-          "last_modified": "2026-09-24T22:42:04Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:13Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-m2ae-base.scanobjectnn-hardest.renrui-zhang": {
-          "last_modified": "2026-10-13T07:59:59Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:14Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-m2ae-base.scanobjectnn-objbg.renrui-zhang": {
-          "last_modified": "2026-10-13T08:00:01Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:16Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-m2ae-base.shapenetpart.renrui-zhang": {
-          "last_modified": "2026-10-13T08:00:02Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:17Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mae-base.modelnet40-8k.yatian-pang": {
-          "last_modified": "2026-10-13T08:00:04Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:19Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mae-base.modelnet40.yatian-pang": {
-          "last_modified": "2026-10-13T08:00:05Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:20Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mae-base.pretrain.yatian-pang": {
-          "last_modified": "2026-09-24T22:42:13Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:21Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mae-base.scanobjectnn-hardest.yatian-pang": {
-          "last_modified": "2026-10-13T08:00:07Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:22Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mae-base.scanobjectnn-objbg.yatian-pang": {
-          "last_modified": "2026-10-13T08:00:08Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:24Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mae-base.scanobjectnn-objonly.yatian-pang": {
-          "last_modified": "2026-10-13T08:00:09Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:25Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mae-base.shapenetpart.yatian-pang": {
-          "last_modified": "2026-10-13T08:00:11Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:26Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mamba-base.modelnet40.dingkang-liang": {
-          "last_modified": "2026-10-13T08:00:15Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:27Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mamba-base.pretrain.dingkang-liang": {
-          "last_modified": "2026-09-24T22:42:22Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:28Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mamba-base.scanobjectnn-augmentedrot-scale75.dingkang-liang": {
           "last_modified": "2026-08-29T20:30:38Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/point-mamba-base.scanobjectnn-hardest.dingkang-liang": {
-          "last_modified": "2026-10-13T08:00:17Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:29Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mamba-base.scanobjectnn-nobg.dingkang-liang": {
           "last_modified": "2026-08-29T20:30:39Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/point-mamba-base.scanobjectnn-objbg.dingkang-liang": {
-          "last_modified": "2026-10-13T08:00:18Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:31Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mamba-base.scanobjectnn-objonly.dingkang-liang": {
-          "last_modified": "2026-10-13T08:00:20Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:32Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/point-mamba-base.scanobjectnn.dingkang-liang": {
           "last_modified": "2026-08-29T20:30:41Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/point-transformer.s3dis-area5.open3d": {
-          "last_modified": "2026-10-17T11:28:24Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:44:33Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointconv-density-base.modelnet40.wenxuan-wu": {
-          "last_modified": "2026-10-13T08:00:21Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:35Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-b.modelnet40-8k.guangyan-chen": {
-          "last_modified": "2026-09-24T22:42:30Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:36Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-b.modelnet40.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:23Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:37Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-b.pretrain.guangyan-chen": {
-          "last_modified": "2026-09-24T22:42:33Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:39Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-b.scanobjectnn-hardest.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:25Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:40Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-b.scanobjectnn-objbg.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:26Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:41Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-b.scanobjectnn-objonly.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:28Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:42Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-l.modelnet40-8k.guangyan-chen": {
-          "last_modified": "2026-09-24T22:42:39Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:43Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-l.modelnet40.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:30Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:45Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-l.pretrain.guangyan-chen": {
-          "last_modified": "2026-09-24T22:42:42Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:46Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-l.scanobjectnn-hardest.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:33Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:47Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-l.scanobjectnn-objbg.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:34Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:49Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-l.scanobjectnn-objonly.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:36Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:50Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-s.modelnet40-8k.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:37Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:51Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-s.modelnet40.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:39Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:53Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-s.pretrain.guangyan-chen": {
-          "last_modified": "2026-09-24T22:42:52Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:44:54Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-s.scanobjectnn-hardest.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:41Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:55Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-s.scanobjectnn-objbg.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:42Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:57Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointgpt-s.scanobjectnn-objonly.guangyan-chen": {
-          "last_modified": "2026-10-13T08:00:44Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:58Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointmlp-base.modelnet40.xu-ma": {
-          "last_modified": "2026-10-13T08:00:45Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:44:59Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointmlp-base.scanobjectnn-hardest.xu-ma": {
-          "last_modified": "2026-10-13T08:00:47Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:00Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointmlp-base.scanobjectnn.xu-ma": {
           "last_modified": "2026-08-29T09:39:59Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/pointmlp-elite.modelnet40.xu-ma": {
-          "last_modified": "2026-10-13T08:00:48Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:02Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointmlp-elite.scanobjectnn-hardest.xu-ma": {
-          "last_modified": "2026-10-13T08:00:49Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:03Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointmlp-elite.scanobjectnn.xu-ma": {
           "last_modified": "2026-08-29T09:40:01Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/pointnet2-msg.modelnet40.xu-yan": {
-          "last_modified": "2026-10-13T08:00:50Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:04Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2-ssg.modelnet40.xu-yan": {
-          "last_modified": "2026-10-13T08:00:52Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:06Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.modelnet40.openpoints": {
-          "last_modified": "2026-10-13T08:00:53Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:07Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.s3dis-area1.openpoints": {
-          "last_modified": "2026-09-24T22:43:07Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:09Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.s3dis-area2.openpoints": {
-          "last_modified": "2026-09-24T22:43:08Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:10Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.s3dis-area3.openpoints": {
-          "last_modified": "2026-09-24T22:43:09Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:11Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.s3dis-area4.openpoints": {
-          "last_modified": "2026-09-24T22:43:11Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:12Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.s3dis-area5.openpoints": {
-          "last_modified": "2026-10-13T08:00:56Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:14Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.s3dis-area5.xu-yan": {
-          "last_modified": "2026-10-13T08:00:57Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:15Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.s3dis-area6.openpoints": {
-          "last_modified": "2026-09-24T22:43:15Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:16Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.scanobjectnn-hardest.openpoints": {
-          "last_modified": "2026-10-13T08:00:59Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:17Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnet2.scanobjectnn.openpoints": {
           "last_modified": "2026-08-29T09:40:16Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/pointnext-base.s3dis-area1.openpoints": {
-          "last_modified": "2026-09-24T22:43:18Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:18Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-base.s3dis-area2.openpoints": {
-          "last_modified": "2026-09-24T22:43:19Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:19Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-base.s3dis-area3.openpoints": {
-          "last_modified": "2026-09-24T22:43:20Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:20Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-base.s3dis-area4.openpoints": {
-          "last_modified": "2026-09-24T22:43:22Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:22Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-base.s3dis-area5.openpoints": {
-          "last_modified": "2026-10-13T08:01:02Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:23Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-base.s3dis-area6.openpoints": {
-          "last_modified": "2026-09-24T22:43:24Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:24Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-lg.s3dis-area1.openpoints": {
-          "last_modified": "2026-09-24T22:43:25Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:25Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-lg.s3dis-area2.openpoints": {
-          "last_modified": "2026-09-24T22:43:27Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:27Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-lg.s3dis-area3.openpoints": {
-          "last_modified": "2026-09-24T22:43:28Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:28Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-lg.s3dis-area4.openpoints": {
-          "last_modified": "2026-09-24T22:43:30Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:29Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-lg.s3dis-area5.openpoints": {
-          "last_modified": "2026-10-13T08:01:06Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:30Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-lg.s3dis-area6.openpoints": {
-          "last_modified": "2026-09-24T22:43:33Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:31Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm-c160.shapenetpart.openpoints": {
-          "last_modified": "2026-10-13T08:01:08Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:33Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm-c64.modelnet40.openpoints": {
-          "last_modified": "2026-10-13T08:01:09Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:34Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm-c64.shapenetpart.openpoints": {
-          "last_modified": "2026-10-13T08:01:10Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:36Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.s3dis-area1.openpoints": {
-          "last_modified": "2026-09-24T22:43:38Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:37Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.s3dis-area2.openpoints": {
-          "last_modified": "2026-09-24T22:43:40Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:38Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.s3dis-area3.openpoints": {
-          "last_modified": "2026-09-24T22:43:41Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:39Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.s3dis-area4.openpoints": {
-          "last_modified": "2026-09-24T22:43:42Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:40Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.s3dis-area5.openpoints": {
-          "last_modified": "2026-10-13T08:01:14Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:41Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.s3dis-area6.openpoints": {
-          "last_modified": "2026-09-24T22:43:45Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:42Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.scanobjectnn-hardest.openpoints": {
-          "last_modified": "2026-10-13T08:01:15Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:43Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-sm.scanobjectnn.openpoints": {
           "last_modified": "2026-08-29T09:40:45Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
         "torch-pointcloud/pointnext-sm.shapenetpart.openpoints": {
-          "last_modified": "2026-10-13T08:01:16Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:44Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-xl.s3dis-area1.openpoints": {
-          "last_modified": "2026-09-24T22:43:49Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:46Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-xl.s3dis-area2.openpoints": {
-          "last_modified": "2026-09-24T22:43:50Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:47Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-xl.s3dis-area3.openpoints": {
-          "last_modified": "2026-09-24T22:43:52Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:48Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-xl.s3dis-area4.openpoints": {
-          "last_modified": "2026-09-24T22:43:53Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-20T20:45:49Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointnext-xl.s3dis-area5.openpoints": {
-          "last_modified": "2026-10-13T08:01:20Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:50Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointpillars-multihead.nuscenes.openpcdet": {
-          "last_modified": "2026-10-13T08:01:22Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:51Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointpillars.kitti.openpcdet": {
-          "last_modified": "2026-10-13T08:01:23Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:53Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointrcnn.kitti.openpcdet": {
-          "last_modified": "2026-10-13T08:01:24Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:54Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/ptv3-base.s3dis-area5.pointcept": {
-          "last_modified": "2026-10-13T08:01:26Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:55Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/ptv3-base.scannet20.pointcept": {
-          "last_modified": "2026-10-13T08:01:27Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:56Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/ptv3-base.scannet200.pointcept": {
-          "last_modified": "2026-10-13T08:01:29Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:45:58Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pvcnn-c0p125.s3dis-area5.mit-han-lab": {
           "last_modified": "2026-10-18T16:17:58Z",
@@ -3091,36 +3123,36 @@
           "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "torch-pointcloud/randlanet.parislille3d.open3d": {
-          "last_modified": "2026-10-17T11:28:27Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:46:00Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/randlanet.s3dis-area3.open3d": {
-          "last_modified": "2026-10-17T11:28:31Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:46:02Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/randlanet.semantic3d.open3d": {
-          "last_modified": "2026-10-17T11:28:35Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:46:03Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/randlanet.semantickitti.open3d": {
-          "last_modified": "2026-10-17T11:28:38Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:46:04Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/randlanet.semantickitti.tsung-han-wu": {
-          "last_modified": "2026-10-13T08:01:31Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:05Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/randlanet.toronto3d.open3d": {
-          "last_modified": "2026-10-17T11:28:41Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:46:06Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/second-multihead.nuscenes.openpcdet": {
-          "last_modified": "2026-10-13T08:01:33Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:08Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/second.kitti.openpcdet": {
-          "last_modified": "2026-10-13T08:01:35Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:09Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/sonata-base.pretrain.fair": {
           "last_modified": "2026-09-24T22:44:10Z",
@@ -3131,24 +3163,24 @@
           "last_seen_at": "2026-10-14T01:55:57.448962Z"
         },
         "torch-pointcloud/spformer-unet.scannet20.open3d": {
-          "last_modified": "2026-10-17T11:28:47Z",
-          "last_seen_at": "2026-10-18T01:06:49.596492Z"
+          "last_modified": "2026-10-20T20:46:10Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/spunet-v1m1.scannet20.pointcept": {
-          "last_modified": "2026-10-13T08:01:38Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:11Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/spvcnn-119gmacs.semantickitti.mit-han-lab": {
-          "last_modified": "2026-10-13T08:01:39Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:12Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/spvcnn-30gmacs.semantickitti.mit-han-lab": {
-          "last_modified": "2026-10-13T08:01:40Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:14Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/spvcnn-47gmacs.semantickitti.mit-han-lab": {
-          "last_modified": "2026-10-13T08:01:42Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:15Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/utonia-lp.scannet20.pointcept": {
           "last_modified": "2026-10-13T08:01:43Z",
@@ -3159,16 +3191,16 @@
           "last_seen_at": "2026-09-25T01:33:45.673902Z"
         },
         "torch-pointcloud/votenet.scannet.fair": {
-          "last_modified": "2026-10-13T08:01:45Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:16Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/votenet.sunrgbd.fair": {
-          "last_modified": "2026-10-13T08:01:46Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:17Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/voxelnext.nuscenes.openpcdet": {
-          "last_modified": "2026-10-13T08:01:48Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-20T20:46:18Z",
+          "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "tphan3020/thesis-vision-language-pretraining93": {
           "last_modified": "2026-08-28T19:25:43Z",
