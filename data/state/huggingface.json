@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-21T01:38:02.771880Z",
+      "last_successful_at": "2026-10-22T01:33:17.733662Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -155,8 +155,8 @@
           "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "Avcuongy/Polyp_Segmentation_BKAI": {
-          "last_modified": "2026-10-15T11:16:41Z",
-          "last_seen_at": "2026-10-16T01:24:55.837329Z"
+          "last_modified": "2026-10-21T12:17:12Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "BNarayanaReddy/wavlm-mfcc-speaker-segmentation": {
           "last_modified": "2026-10-10T07:57:20Z",
@@ -203,8 +203,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-10-21T00:24:19Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-22T00:09:51Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -970,6 +970,10 @@
           "last_modified": "2026-10-10T04:03:40Z",
           "last_seen_at": "2026-10-11T01:57:12.657176Z"
         },
+        "aryamaula4/robotics-vision-language-reading": {
+          "last_modified": "2026-10-21T05:17:47Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
+        },
         "aryana-haghjoo/roman-spectral-superresolution": {
           "last_modified": "2026-10-16T20:36:58Z",
           "last_seen_at": "2026-10-17T01:20:23.610409Z"
@@ -1482,6 +1486,10 @@
           "last_modified": "2026-09-15T22:18:42Z",
           "last_seen_at": "2026-09-16T01:27:55.281883Z"
         },
+        "goodnessabubakar04/video-understanding-reading-2023": {
+          "last_modified": "2026-10-21T17:12:16Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
+        },
         "gpalmeida/video-understanding": {
           "last_modified": "2026-10-18T04:52:11Z",
           "last_seen_at": "2026-10-19T01:19:33.335824Z"
@@ -1942,6 +1950,10 @@
           "last_modified": "2026-08-30T00:17:44Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
+        "luoji12103/2610-superresolution-opt014": {
+          "last_modified": "2026-10-21T03:00:38Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
+        },
         "mabogee03/Aerial-Object-Detection-Model": {
           "last_modified": "2026-09-11T11:18:45Z",
           "last_seen_at": "2026-09-12T01:10:02.109017Z"
@@ -2250,29 +2262,37 @@
           "last_modified": "2026-09-10T02:06:43Z",
           "last_seen_at": "2026-09-11T01:09:15.052640Z"
         },
+        "qualcomm/Detectron2-Panoptic-Segmentation": {
+          "last_modified": "2026-10-21T17:43:43Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
+        },
         "qualcomm/MediaPipe-Selfie-Segmentation": {
-          "last_modified": "2026-10-07T00:01:01Z",
-          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+          "last_modified": "2026-10-21T17:48:41Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
+        },
+        "qualcomm/U2Net-Segmentation": {
+          "last_modified": "2026-10-21T17:44:55Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "qualcomm/Unet-Segmentation": {
-          "last_modified": "2026-10-07T00:10:58Z",
-          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+          "last_modified": "2026-10-21T17:42:43Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "qualcomm/YOLO26-Segmentation": {
-          "last_modified": "2026-10-07T00:17:34Z",
-          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+          "last_modified": "2026-10-21T17:52:24Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "qualcomm/YOLOE-Segmentation": {
-          "last_modified": "2026-10-07T00:09:19Z",
-          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+          "last_modified": "2026-10-21T17:45:49Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "qualcomm/YOLOv11-Segmentation": {
-          "last_modified": "2026-10-06T23:58:50Z",
-          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+          "last_modified": "2026-10-21T17:54:51Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "qualcomm/YOLOv8-Segmentation": {
-          "last_modified": "2026-10-07T00:12:45Z",
-          "last_seen_at": "2026-10-07T02:26:12.402126Z"
+          "last_modified": "2026-10-21T17:58:17Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "quanphamvij/vision-language-pretraining-reading": {
           "last_modified": "2026-10-13T22:49:23Z",
@@ -2575,24 +2595,24 @@
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/concerto-base.pretrain.pointcept": {
-          "last_modified": "2026-09-24T22:41:19Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-21T06:10:18Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/concerto-large-lp.scannet20.pointcept": {
-          "last_modified": "2026-10-13T07:59:28Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-21T06:10:19Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/concerto-large.pretrain.pointcept": {
-          "last_modified": "2026-09-24T22:41:22Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-21T06:10:20Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/concerto-small.pretrain.pointcept": {
-          "last_modified": "2026-09-24T22:41:23Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-21T06:10:22Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/concerto-tiny.pretrain.pointcept": {
-          "last_modified": "2026-09-24T22:41:25Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-21T06:10:23Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/dgcnn.modelnet40-1024.an-tao": {
           "last_modified": "2026-10-20T20:43:35Z",
@@ -2683,8 +2703,8 @@
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/lion-mamba.nuscenes.zhe-liu": {
-          "last_modified": "2026-10-20T20:43:56Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-21T20:42:55Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/octformer-base.modelnet40.octree-nn": {
           "last_modified": "2026-10-20T20:43:57Z",
@@ -3079,8 +3099,8 @@
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/pointpillars-multihead.nuscenes.openpcdet": {
-          "last_modified": "2026-10-20T20:45:51Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-21T20:43:12Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/pointpillars.kitti.openpcdet": {
           "last_modified": "2026-10-20T20:45:53Z",
@@ -3089,6 +3109,10 @@
         "torch-pointcloud/pointrcnn.kitti.openpcdet": {
           "last_modified": "2026-10-20T20:45:54Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
+        "torch-pointcloud/ptv3-base.nuscenes.pointcept": {
+          "last_modified": "2026-10-21T20:42:48Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/ptv3-base.s3dis-area5.pointcept": {
           "last_modified": "2026-10-20T20:45:55Z",
@@ -3123,20 +3147,20 @@
           "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "torch-pointcloud/randlanet.parislille3d.open3d": {
-          "last_modified": "2026-10-20T20:46:00Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-21T06:10:09Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/randlanet.s3dis-area3.open3d": {
           "last_modified": "2026-10-20T20:46:02Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/randlanet.semantic3d.open3d": {
-          "last_modified": "2026-10-20T20:46:03Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-21T06:10:11Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/randlanet.semantickitti.open3d": {
-          "last_modified": "2026-10-20T20:46:04Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-21T06:10:12Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/randlanet.semantickitti.tsung-han-wu": {
           "last_modified": "2026-10-20T20:46:05Z",
@@ -3147,20 +3171,20 @@
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/second-multihead.nuscenes.openpcdet": {
-          "last_modified": "2026-10-20T20:46:08Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-21T20:43:14Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/second.kitti.openpcdet": {
           "last_modified": "2026-10-20T20:46:09Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/sonata-base.pretrain.fair": {
-          "last_modified": "2026-09-24T22:44:10Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-21T06:10:24Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/sonata-lp.scannet20.fair": {
-          "last_modified": "2026-10-13T08:01:36Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-21T06:10:26Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/spformer-unet.scannet20.open3d": {
           "last_modified": "2026-10-20T20:46:10Z",
@@ -3183,12 +3207,12 @@
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/utonia-lp.scannet20.pointcept": {
-          "last_modified": "2026-10-13T08:01:43Z",
-          "last_seen_at": "2026-10-14T01:55:57.448962Z"
+          "last_modified": "2026-10-21T06:10:27Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/utonia.pretrain.pointcept": {
-          "last_modified": "2026-09-24T22:44:20Z",
-          "last_seen_at": "2026-09-25T01:33:45.673902Z"
+          "last_modified": "2026-10-21T06:10:28Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "torch-pointcloud/votenet.scannet.fair": {
           "last_modified": "2026-10-20T20:46:16Z",
@@ -3199,8 +3223,8 @@
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/voxelnext.nuscenes.openpcdet": {
-          "last_modified": "2026-10-20T20:46:18Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-21T20:43:15Z",
+          "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
         "tphan3020/thesis-vision-language-pretraining93": {
           "last_modified": "2026-08-28T19:25:43Z",
