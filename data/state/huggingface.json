@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-26T01:14:52.132916Z",
+      "last_successful_at": "2026-10-27T02:07:16.364132Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -117,6 +117,10 @@
         "Aleksanderszyma/paper_022036027_robotics_vision_language": {
           "last_modified": "2026-08-22T04:03:41Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "AlgomCorp/hair-segmentation-unet": {
+          "last_modified": "2026-10-26T13:14:22Z",
+          "last_seen_at": "2026-10-27T02:07:16.364132Z"
         },
         "Ali78-d/Medical-Image-Classification-ChestXray": {
           "last_modified": "2026-10-22T16:59:28Z",
@@ -319,8 +323,8 @@
           "last_seen_at": "2026-10-08T02:43:01.024537Z"
         },
         "Gertrude01/3Class-Gel-Segmentation-Expanded-Aug-2026": {
-          "last_modified": "2026-09-04T08:20:36Z",
-          "last_seen_at": "2026-09-05T01:00:22.694220Z"
+          "last_modified": "2026-10-26T14:07:15Z",
+          "last_seen_at": "2026-10-27T02:07:16.364132Z"
         },
         "Gertrude01/3Class-Gel-Segmentation-Mar-2026": {
           "last_modified": "2026-09-04T08:21:26Z",
@@ -1258,6 +1262,10 @@
           "last_modified": "2026-09-14T06:44:21Z",
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
+        "deshanc/unet-mobilenet-portrait-segmentation": {
+          "last_modified": "2026-10-26T16:48:27Z",
+          "last_seen_at": "2026-10-27T02:07:16.364132Z"
+        },
         "dfki-av/BIMStruct3D-segmentation": {
           "last_modified": "2026-09-02T06:51:46Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
@@ -2101,6 +2109,10 @@
         "motazalqaoud/brain-tumor-segmentation-weights": {
           "last_modified": "2026-09-28T00:30:12Z",
           "last_seen_at": "2026-09-28T01:42:28.427739Z"
+        },
+        "mri-lab-2026/brain-mri-segmentation": {
+          "last_modified": "2026-10-26T15:33:42Z",
+          "last_seen_at": "2026-10-27T02:07:16.364132Z"
         },
         "mrsubtle/pyannote-segmentation-3.0": {
           "last_modified": "2026-09-03T06:19:24Z",
