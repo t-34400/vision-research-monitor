@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-27T02:07:16.364132Z",
+      "last_successful_at": "2026-10-28T02:19:50.640822Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -119,8 +119,8 @@
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
         "AlgomCorp/hair-segmentation-unet": {
-          "last_modified": "2026-10-26T13:14:22Z",
-          "last_seen_at": "2026-10-27T02:07:16.364132Z"
+          "last_modified": "2026-10-28T02:05:29Z",
+          "last_seen_at": "2026-10-28T02:19:50.640822Z"
         },
         "Ali78-d/Medical-Image-Classification-ChestXray": {
           "last_modified": "2026-10-22T16:59:28Z",
@@ -637,6 +637,10 @@
         "Rohitiyerpan/paper_022001300_robotics_vision_language": {
           "last_modified": "2026-08-22T01:21:05Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
+        },
+        "RunningHubAI/rh-texture-hd-enhancement-universal-adjustment-hd-restoration-portrait-restoration-image-up-lora": {
+          "last_modified": "2026-10-27T04:49:03Z",
+          "last_seen_at": "2026-10-28T02:19:50.640822Z"
         },
         "SEMVISSER/paper_022175325_robotics_vision_language": {
           "last_modified": "2026-08-21T19:07:46Z",
