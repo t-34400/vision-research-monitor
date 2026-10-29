@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-10-28T02:29:35.317003Z",
+  "last_updated_at": "2026-10-29T02:37:21.874883Z",
   "repositories": {
     "1035697953": {
       "first_promoted_at": "2026-08-18T23:46:15.396556Z",
@@ -319,7 +319,7 @@
     "1144211118": {
       "first_promoted_at": "2026-09-18T01:22:00.042316Z",
       "full_name": "OpenMOSS/MOVA",
-      "last_observed_at": "2026-10-27T02:16:47.741284Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -329,7 +329,7 @@
       "repo_id": "1144211118",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 1131,
+      "stars": 1134,
       "topics": [
         "vision_foundation_models",
         "vision_language_models"
@@ -454,7 +454,7 @@
     "1277471539": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "bilawalsidhu/gods-eye-view",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -462,7 +462,7 @@
       "repo_id": "1277471539",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 60720,
+      "stars": 60952,
       "topics": [
         "spatial_intelligence"
       ],
@@ -490,7 +490,7 @@
     "1301140808": {
       "first_promoted_at": "2026-08-09T23:57:39.970527Z",
       "full_name": "img2threejs/img2threejs",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -498,7 +498,7 @@
       "repo_id": "1301140808",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 19625,
+      "stars": 19724,
       "topics": [
         "image_to_3d",
         "three_d_generation"
@@ -610,7 +610,7 @@
     "165469880": {
       "first_promoted_at": "2026-10-20T01:58:54.762126Z",
       "full_name": "Denys88/rl_games",
-      "last_observed_at": "2026-10-20T01:58:54.762126Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -619,7 +619,7 @@
       "repo_id": "165469880",
       "research_category": "research",
       "research_relevance": 0.5,
-      "stars": 1400,
+      "stars": 1407,
       "topics": [
         "self_supervised_learning",
         "visual_representation_learning"
@@ -629,7 +629,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -637,7 +637,7 @@
       "repo_id": "167694194",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 37015,
+      "stars": 37046,
       "topics": [
         "object_detection"
       ],
@@ -684,7 +684,7 @@
     "19696006": {
       "first_promoted_at": "2026-09-17T01:35:17.250204Z",
       "full_name": "playcanvas/engine",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -692,7 +692,7 @@
       "repo_id": "19696006",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 17151,
+      "stars": 17157,
       "topics": [
         "gaussian_splatting",
         "vr_mr_xr"
@@ -781,7 +781,7 @@
     "23007417": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "colmap/colmap",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -789,7 +789,7 @@
       "repo_id": "23007417",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 13084,
+      "stars": 13092,
       "topics": [
         "multi_view_stereo",
         "structure_from_motion"
@@ -972,7 +972,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -980,7 +980,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 16140,
+      "stars": 16171,
       "topics": [
         "super_resolution"
       ],
@@ -1146,7 +1146,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1154,7 +1154,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 62913,
+      "stars": 62944,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1209,7 +1209,7 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1217,7 +1217,7 @@
       "repo_id": "567038244",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 8496,
+      "stars": 8511,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1360,7 +1360,7 @@
     "712225112": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Genesis-Embodied-AI/genesis-world",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1368,7 +1368,7 @@
       "repo_id": "712225112",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 30131,
+      "stars": 30136,
       "topics": [
         "embodied_vision"
       ],
@@ -1464,23 +1464,6 @@
         "video_understanding"
       ],
       "url": "https://github.com/OpenBMB/MiniCPM-V"
-    },
-    "787462297": {
-      "first_promoted_at": "2026-08-08T23:54:19.915276Z",
-      "full_name": "Blaizzy/mlx-vlm",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "established"
-      ],
-      "repo_id": "787462297",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 5677,
-      "topics": [
-        "vision_language_models"
-      ],
-      "url": "https://github.com/Blaizzy/mlx-vlm"
     },
     "792627308": {
       "first_promoted_at": "2026-08-25T23:48:15.423665Z",
@@ -1797,7 +1780,7 @@
     "951534260": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/rf-detr",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1807,7 +1790,7 @@
       "repo_id": "951534260",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 9917,
+      "stars": 9924,
       "topics": [
         "instance_segmentation",
         "object_detection",
@@ -1818,7 +1801,7 @@
     "951600229": {
       "first_promoted_at": "2026-08-20T23:49:27.938033Z",
       "full_name": "nv-tlabs/3dgrut",
-      "last_observed_at": "2026-10-24T01:47:14.527437Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1827,7 +1810,7 @@
       "repo_id": "951600229",
       "research_category": "research",
       "research_relevance": 0.5,
-      "stars": 2468,
+      "stars": 2477,
       "topics": [
         "gaussian_splatting",
         "three_d_reconstruction"
@@ -1893,7 +1876,7 @@
     "963801533": {
       "first_promoted_at": "2026-08-12T00:06:45.191668Z",
       "full_name": "lightly-ai/lightly-train",
-      "last_observed_at": "2026-10-25T01:23:48.741853Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1902,7 +1885,7 @@
       "repo_id": "963801533",
       "research_category": "research",
       "research_relevance": 0.55,
-      "stars": 1716,
+      "stars": 1726,
       "topics": [
         "depth_estimation",
         "object_detection",
@@ -1914,7 +1897,7 @@
     "966243985": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/trackers",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1950,6 +1933,26 @@
         "vision_language_models"
       ],
       "url": "https://github.com/apple-aiml-research/ml-fastvlm"
+    },
+    "978649191": {
+      "first_promoted_at": "2026-10-29T02:37:21.874883Z",
+      "full_name": "SkyworkAI/Matrix-Game",
+      "last_observed_at": "2026-10-29T02:37:21.874883Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "978649191",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 2804,
+      "topics": [
+        "neural_rendering",
+        "spatial_intelligence"
+      ],
+      "url": "https://github.com/SkyworkAI/Matrix-Game"
     }
   },
   "version": 1
