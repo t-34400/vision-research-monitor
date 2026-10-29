@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-28T02:19:50.640822Z",
+      "last_successful_at": "2026-10-29T02:28:24.663191Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -638,6 +638,10 @@
           "last_modified": "2026-08-22T01:21:05Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
+        "RunningHubAI/rh-body-slam-lora": {
+          "last_modified": "2026-10-28T15:59:01Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
+        },
         "RunningHubAI/rh-texture-hd-enhancement-universal-adjustment-hd-restoration-portrait-restoration-image-up-lora": {
           "last_modified": "2026-10-27T04:49:03Z",
           "last_seen_at": "2026-10-28T02:19:50.640822Z"
@@ -645,6 +649,10 @@
         "SEMVISSER/paper_022175325_robotics_vision_language": {
           "last_modified": "2026-08-21T19:07:46Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "SHK4K/hadith-segmentation-bert": {
+          "last_modified": "2026-10-28T15:28:20Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
         },
         "SaguaroAIMonitoring/yolo-object-detection": {
           "last_modified": "2026-10-08T00:02:02Z",
@@ -733,6 +741,14 @@
         "Tanishjain9/fast-scnn-floor-segmentation": {
           "last_modified": "2026-08-08T18:36:00Z",
           "last_seen_at": "2026-08-08T23:47:11.566111Z"
+        },
+        "Tanuj124/image-super-resolution-edsr-x2": {
+          "last_modified": "2026-10-28T21:18:23Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
+        },
+        "Tanuj124/image-super-resolution-edsr-x4": {
+          "last_modified": "2026-10-28T21:20:20Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
         },
         "TheGreatDargon/oxford-pet-segmentation": {
           "last_modified": "2026-10-07T16:35:53Z",
@@ -1003,8 +1019,8 @@
           "last_seen_at": "2026-10-19T01:19:33.335824Z"
         },
         "atara57769/nanovision-segmentation": {
-          "last_modified": "2026-10-15T11:29:05Z",
-          "last_seen_at": "2026-10-16T01:24:55.837329Z"
+          "last_modified": "2026-10-28T18:29:33Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
         },
         "atharvpatley/paper_003417550_vision_language_pretraining": {
           "last_modified": "2026-08-22T00:12:01Z",
@@ -1274,6 +1290,10 @@
           "last_modified": "2026-09-02T06:51:46Z",
           "last_seen_at": "2026-09-03T01:08:26.045621Z"
         },
+        "dhanashyam/Imageclassification": {
+          "last_modified": "2026-10-28T15:34:45Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
+        },
         "dilrajdeveloper/low-light-4x-super-resolution": {
           "last_modified": "2026-09-07T12:08:45Z",
           "last_seen_at": "2026-09-08T01:14:03.015028Z"
@@ -1538,6 +1558,10 @@
           "last_modified": "2026-09-28T12:12:09Z",
           "last_seen_at": "2026-09-29T02:35:51.287817Z"
         },
+        "hanyawael/glaucoma-segmentation": {
+          "last_modified": "2026-10-28T22:36:21Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
+        },
         "haoranchenwyn/review-video-understanding": {
           "last_modified": "2026-10-17T19:14:28Z",
           "last_seen_at": "2026-10-18T01:06:49.596492Z"
@@ -1637,6 +1661,10 @@
         "irfanhossainsust/oxbow-lake-segmentation": {
           "last_modified": "2026-10-20T14:46:16Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
+        "ismaielnounou/shelf-segmentation-2": {
+          "last_modified": "2026-10-28T13:44:42Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
         },
         "itsukimori/experiment-video-understanding22": {
           "last_modified": "2026-09-22T09:19:35Z",
@@ -1913,6 +1941,10 @@
         "kyledavis/robotics-vision-language-v3": {
           "last_modified": "2026-08-26T08:15:40Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
+        },
+        "kylinfires/gaussian-splatting-vulkan": {
+          "last_modified": "2026-10-28T02:29:40Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
         },
         "latheamit/review-robotics-vision-language": {
           "last_modified": "2026-10-15T19:14:44Z",
@@ -3385,6 +3417,10 @@
         "williamgwg/vision-language-pretraining-v1": {
           "last_modified": "2026-09-24T03:30:27Z",
           "last_seen_at": "2026-09-25T01:33:45.673902Z"
+        },
+        "winston1214/scalpvision_hair_segmentation": {
+          "last_modified": "2026-10-28T09:36:01Z",
+          "last_seen_at": "2026-10-29T02:28:24.663191Z"
         },
         "wq2012/knee_3d_mri_segmentation_OAI_downsampled": {
           "last_modified": "2026-10-11T18:44:12Z",
