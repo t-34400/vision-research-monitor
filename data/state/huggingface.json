@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-29T02:28:24.663191Z",
+      "last_successful_at": "2026-10-30T02:38:44.870855Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -373,6 +373,10 @@
         "Iusokolov/reading-vision-language-pretraining": {
           "last_modified": "2026-09-15T00:18:49Z",
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
+        "JSONOD/roomorph-segmentation-onnx": {
+          "last_modified": "2026-10-29T03:54:42Z",
+          "last_seen_at": "2026-10-30T02:38:44.870855Z"
         },
         "JULIANSNPZ/vision-language-pretraining-distilled": {
           "last_modified": "2026-09-15T20:03:55Z",
@@ -762,6 +766,10 @@
           "last_modified": "2026-10-20T20:39:17Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "Tomt996/uavcrack-crack-segmentation": {
+          "last_modified": "2026-10-29T11:42:35Z",
+          "last_seen_at": "2026-10-30T02:38:44.870855Z"
+        },
         "TrickyTech32/Breast-Cancer-Segmentation-Model": {
           "last_modified": "2026-08-31T12:03:38Z",
           "last_seen_at": "2026-09-01T01:50:37.132983Z"
@@ -1149,6 +1157,10 @@
         "chenoscar/video-understanding": {
           "last_modified": "2026-09-14T08:30:46Z",
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
+        "cherry0018/brain-tumor-classification-segmentation": {
+          "last_modified": "2026-10-29T14:42:55Z",
+          "last_seen_at": "2026-10-30T02:38:44.870855Z"
         },
         "chnyadav4742/notes-video-understanding": {
           "last_modified": "2026-10-18T04:50:39Z",
@@ -2255,8 +2267,8 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "onemira/pyannote-segmentation-3.0-onnx": {
-          "last_modified": "2026-09-04T12:42:15Z",
-          "last_seen_at": "2026-09-05T01:00:22.694220Z"
+          "last_modified": "2026-10-29T07:32:07Z",
+          "last_seen_at": "2026-10-30T02:38:44.870855Z"
         },
         "oodogan3127/robotics-vision-language-reading": {
           "last_modified": "2026-10-06T17:52:21Z",
@@ -2289,6 +2301,10 @@
         "perezmichael/cv-robotics-vision-language70": {
           "last_modified": "2026-09-13T17:42:25Z",
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
+        },
+        "poornanandnaik24/CXR_Rib_Segmentation": {
+          "last_modified": "2026-10-29T07:27:16Z",
+          "last_seen_at": "2026-10-30T02:38:44.870855Z"
         },
         "ppandeynitin/vision-language-pretraining-analysis": {
           "last_modified": "2026-10-08T11:36:51Z",
@@ -2585,6 +2601,10 @@
         "svpe-trov/notes-robotics-vision-language": {
           "last_modified": "2026-10-19T00:56:30Z",
           "last_seen_at": "2026-10-19T01:19:33.335824Z"
+        },
+        "syssec-utd/pylingual-shared-segmentation-v1": {
+          "last_modified": "2026-10-29T22:27:03Z",
+          "last_seen_at": "2026-10-30T02:38:44.870855Z"
         },
         "szluo9641/notes-video-understanding": {
           "last_modified": "2026-10-08T06:48:33Z",
@@ -3419,8 +3439,8 @@
           "last_seen_at": "2026-09-25T01:33:45.673902Z"
         },
         "winston1214/scalpvision_hair_segmentation": {
-          "last_modified": "2026-10-28T09:36:01Z",
-          "last_seen_at": "2026-10-29T02:28:24.663191Z"
+          "last_modified": "2026-10-29T06:17:28Z",
+          "last_seen_at": "2026-10-30T02:38:44.870855Z"
         },
         "wq2012/knee_3d_mri_segmentation_OAI_downsampled": {
           "last_modified": "2026-10-11T18:44:12Z",
