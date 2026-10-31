@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-30T02:38:44.870855Z",
+      "last_successful_at": "2026-10-31T02:26:42.372825Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -2015,8 +2015,8 @@
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
         "loom-ai-org/pyannote-segmentation-3.0-loom": {
-          "last_modified": "2026-10-01T19:57:36Z",
-          "last_seen_at": "2026-10-02T02:18:15.161894Z"
+          "last_modified": "2026-10-31T01:25:15Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "luciagarcia/video-understanding-analysis": {
           "last_modified": "2026-09-23T01:16:10Z",
@@ -2682,6 +2682,10 @@
           "last_modified": "2026-10-20T20:43:32Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/3detr-m.sunrgbd.fair": {
+          "last_modified": "2026-10-30T20:57:17Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/3detr.scannet.fair": {
           "last_modified": "2026-10-20T20:43:33Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
@@ -2689,6 +2693,30 @@
         "torch-pointcloud/3detr.sunrgbd.fair": {
           "last_modified": "2026-10-20T20:43:34Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
+        "torch-pointcloud/act.dvae.runpei-dong": {
+          "last_modified": "2026-10-30T20:41:36Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/act.modelnet40.runpei-dong": {
+          "last_modified": "2026-10-30T20:41:43Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/act.pretrain.runpei-dong": {
+          "last_modified": "2026-10-30T20:41:49Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/act.scanobjectnn-hardest.runpei-dong": {
+          "last_modified": "2026-10-30T20:41:55Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/act.scanobjectnn-objbg.runpei-dong": {
+          "last_modified": "2026-10-30T20:42:02Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/act.scanobjectnn-objonly.runpei-dong": {
+          "last_modified": "2026-10-30T20:42:09Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/centerpoint-pillar02.nuscenes.mmdet3d": {
           "last_modified": "2026-10-22T21:34:58Z",
@@ -2721,6 +2749,22 @@
         "torch-pointcloud/concerto-tiny.pretrain.pointcept": {
           "last_modified": "2026-10-21T06:10:23Z",
           "last_seen_at": "2026-10-22T01:33:17.733662Z"
+        },
+        "torch-pointcloud/cylinder3d-0p5x.nuscenes.yuenan-hou": {
+          "last_modified": "2026-10-30T20:36:10Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/cylinder3d-laser-polar-mix.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T20:36:17Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/cylinder3d.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T20:36:23Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/cylinder3d.semantickitti.xinge-zhu": {
+          "last_modified": "2026-10-30T20:36:31Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/dgcnn.modelnet40-1024.an-tao": {
           "last_modified": "2026-10-20T20:43:35Z",
@@ -2762,17 +2806,61 @@
           "last_modified": "2026-10-20T20:43:45Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/fcaf3d.s3dis-area5.mmdet3d": {
+          "last_modified": "2026-10-30T20:58:07Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/fcaf3d.scannet.mmdet3d": {
+          "last_modified": "2026-10-30T20:58:16Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/fcaf3d.sunrgbd.mmdet3d": {
+          "last_modified": "2026-10-30T20:58:36Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/geotransformer.3dmatch.zheng-qin": {
           "last_modified": "2026-10-25T20:24:57Z",
           "last_seen_at": "2026-10-26T01:14:52.132916Z"
         },
         "torch-pointcloud/geotransformer.kitti.zheng-qin": {
-          "last_modified": "2026-10-25T20:24:59Z",
-          "last_seen_at": "2026-10-26T01:14:52.132916Z"
+          "last_modified": "2026-10-30T20:55:54Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/geotransformer.modelnet40.zheng-qin": {
           "last_modified": "2026-10-25T20:25:00Z",
           "last_seen_at": "2026-10-26T01:14:52.132916Z"
+        },
+        "torch-pointcloud/groupfree3d-l12-o256.scannet.mmdet3d": {
+          "last_modified": "2026-10-30T20:51:10Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/groupfree3d-l12-o256.scannet.ze-liu": {
+          "last_modified": "2026-10-30T20:51:16Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/groupfree3d-l6-o256.scannet.mmdet3d": {
+          "last_modified": "2026-10-30T20:51:21Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/groupfree3d-l6-o256.scannet.ze-liu": {
+          "last_modified": "2026-10-30T20:51:27Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/groupfree3d-w2x-l12-o256.scannet.mmdet3d": {
+          "last_modified": "2026-10-30T20:51:33Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/groupfree3d-w2x-l12-o256.scannet.ze-liu": {
+          "last_modified": "2026-10-30T20:51:39Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/groupfree3d-w2x-l12-o512.scannet.mmdet3d": {
+          "last_modified": "2026-10-30T20:51:45Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/groupfree3d-w2x-l12-o512.scannet.ze-liu": {
+          "last_modified": "2026-10-30T20:51:50Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/kpfcnn-base-deform.s3dis-area5.hugues-thomas": {
           "last_modified": "2026-10-20T20:43:46Z",
@@ -2823,8 +2911,80 @@
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
         "torch-pointcloud/lion-mamba.nuscenes.zhe-liu": {
-          "last_modified": "2026-10-21T20:42:55Z",
-          "last_seen_at": "2026-10-22T01:33:17.733662Z"
+          "last_modified": "2026-10-30T20:55:46Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/litept-base.structured3d.prs-eth": {
+          "last_modified": "2026-10-30T20:50:59Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/litept-large.nuscenes.prs-eth": {
+          "last_modified": "2026-10-30T20:51:06Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/litept-large.structured3d.prs-eth": {
+          "last_modified": "2026-10-30T20:51:09Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/litept-small.nuscenes.prs-eth": {
+          "last_modified": "2026-10-30T20:51:13Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/litept-small.scannet20.prs-eth": {
+          "last_modified": "2026-10-30T20:51:17Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/litept-small.structured3d.prs-eth": {
+          "last_modified": "2026-10-30T20:51:21Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet18-w16.semantickitti.mit-han-lab": {
+          "last_modified": "2026-10-30T20:59:39Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet18-w16.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T20:59:43Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet18-w20.semantickitti.mit-han-lab": {
+          "last_modified": "2026-10-30T20:59:48Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet18-w20.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T20:59:52Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet18-w32.semantickitti.mit-han-lab": {
+          "last_modified": "2026-10-30T20:59:58Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet18-w32.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T21:00:04Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet34-w32-minkowski.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T21:00:11Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet34-w32-spconv-amp.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T21:00:22Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet34-w32-spconv.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T21:00:31Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet34-w32-torchsparse-amp.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T21:00:37Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet34-w32-torchsparse.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T21:00:44Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/minkunet34v2-w32.semantickitti.mmdet3d": {
+          "last_modified": "2026-10-30T21:00:50Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/octformer-base.modelnet40.octree-nn": {
           "last_modified": "2026-10-20T20:43:57Z",
@@ -2838,6 +2998,18 @@
           "last_modified": "2026-10-20T20:43:59Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/openscene-lseg.scannet20.songyou-peng": {
+          "last_modified": "2026-10-30T20:33:42Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/openscene-openseg.nuscenes.songyou-peng": {
+          "last_modified": "2026-10-30T20:33:48Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/openscene-openseg.scannet20.songyou-peng": {
+          "last_modified": "2026-10-30T20:33:53Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/part-a2.kitti-car.mmdet3d": {
           "last_modified": "2026-10-25T20:26:55Z",
           "last_seen_at": "2026-10-26T01:14:52.132916Z"
@@ -2845,6 +3017,26 @@
         "torch-pointcloud/part-a2.kitti.mmdet3d": {
           "last_modified": "2026-10-25T20:26:56Z",
           "last_seen_at": "2026-10-26T01:14:52.132916Z"
+        },
+        "torch-pointcloud/pcp-mae.modelnet40.xiangdong-zhang": {
+          "last_modified": "2026-10-30T20:42:25Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pcp-mae.pretrain.xiangdong-zhang": {
+          "last_modified": "2026-10-30T20:42:34Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pcp-mae.scanobjectnn-hardest.xiangdong-zhang": {
+          "last_modified": "2026-10-30T20:42:40Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pcp-mae.scanobjectnn-objbg.xiangdong-zhang": {
+          "last_modified": "2026-10-30T20:42:47Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pcp-mae.scanobjectnn-objonly.xiangdong-zhang": {
+          "last_modified": "2026-10-30T20:42:55Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/point-bert-base.dvae.xumin-yu": {
           "last_modified": "2026-10-20T20:44:01Z",
@@ -2990,6 +3182,10 @@
           "last_modified": "2026-10-20T20:44:42Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/pointgpt-b.shapenetpart.guangyan-chen": {
+          "last_modified": "2026-10-30T21:00:57Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/pointgpt-l.modelnet40-8k.guangyan-chen": {
           "last_modified": "2026-10-20T20:44:43Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
@@ -3062,13 +3258,33 @@
           "last_modified": "2026-08-29T09:40:01Z",
           "last_seen_at": "2026-08-30T01:17:10.582048Z"
         },
+        "torch-pointcloud/pointnet.modelnet40.jiawei-ren": {
+          "last_modified": "2026-10-30T20:49:15Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pointnet.s3dis-area5.xu-yan": {
+          "last_modified": "2026-10-30T20:49:18Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pointnet.scanobjectnn-hardest.openpoints": {
+          "last_modified": "2026-10-30T20:49:22Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/pointnet2-msg.modelnet40.xu-yan": {
           "last_modified": "2026-10-20T20:45:04Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/pointnet2-msg.shapenetpart.mit-han-lab": {
+          "last_modified": "2026-10-30T20:54:51Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/pointnet2-ssg.modelnet40.xu-yan": {
           "last_modified": "2026-10-20T20:45:06Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
+        "torch-pointcloud/pointnet2-ssg.shapenetpart.mit-han-lab": {
+          "last_modified": "2026-10-30T20:54:55Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/pointnet2.modelnet40.openpoints": {
           "last_modified": "2026-10-20T20:45:07Z",
@@ -3226,13 +3442,33 @@
           "last_modified": "2026-10-20T20:45:50Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/pointpillars-fpn.nuscenes.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:04Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/pointpillars-multihead.nuscenes.openpcdet": {
           "last_modified": "2026-10-21T20:43:12Z",
           "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
+        "torch-pointcloud/pointpillars.kitti-car.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:07Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pointpillars.kitti.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:13Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/pointpillars.kitti.openpcdet": {
-          "last_modified": "2026-10-20T20:45:53Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-30T20:57:25Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pointpillars.nuscenes.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:17Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pointrcnn-iou.kitti.openpcdet": {
+          "last_modified": "2026-10-30T20:57:01Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/pointrcnn.kitti.openpcdet": {
           "last_modified": "2026-10-20T20:45:54Z",
@@ -3255,20 +3491,40 @@
           "last_seen_at": "2026-10-26T01:14:52.132916Z"
         },
         "torch-pointcloud/pv-rcnn.kitti.mmdet3d": {
-          "last_modified": "2026-10-25T20:26:57Z",
-          "last_seen_at": "2026-10-26T01:14:52.132916Z"
+          "last_modified": "2026-10-30T20:57:40Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/pvcnn-c0p125.s3dis-area5.mit-han-lab": {
-          "last_modified": "2026-10-18T16:17:58Z",
-          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+          "last_modified": "2026-10-30T20:35:29Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pvcnn-c0p25-dml.shapenetpart.mit-han-lab": {
+          "last_modified": "2026-10-30T20:54:58Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/pvcnn-c0p25.s3dis-area5.mit-han-lab": {
-          "last_modified": "2026-10-18T16:18:00Z",
-          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+          "last_modified": "2026-10-30T20:35:21Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pvcnn-c0p25.shapenetpart.mit-han-lab": {
+          "last_modified": "2026-10-30T20:55:01Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pvcnn-c0p5.shapenetpart.mit-han-lab": {
+          "last_modified": "2026-10-30T20:55:04Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pvcnn-dml.shapenetpart.mit-han-lab": {
+          "last_modified": "2026-10-30T20:55:08Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/pvcnn.s3dis-area5.mit-han-lab": {
-          "last_modified": "2026-10-18T16:18:02Z",
-          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+          "last_modified": "2026-10-30T20:35:01Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/pvcnn.shapenetpart.mit-han-lab": {
+          "last_modified": "2026-10-30T20:55:12Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/pvcnn2-c0p5.s3dis-area5.mit-han-lab": {
           "last_modified": "2026-10-18T16:18:06Z",
@@ -3302,13 +3558,57 @@
           "last_modified": "2026-10-20T20:46:06Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/recon.modelnet40-8k.zekun-qi": {
+          "last_modified": "2026-10-30T20:40:27Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/recon.modelnet40.zekun-qi": {
+          "last_modified": "2026-10-30T20:40:33Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/recon.pretrain.zekun-qi": {
+          "last_modified": "2026-10-30T20:40:40Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/recon.scanobjectnn-hardest.zekun-qi": {
+          "last_modified": "2026-10-30T20:40:47Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/recon.scanobjectnn-objbg.zekun-qi": {
+          "last_modified": "2026-10-30T20:40:53Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/recon.scanobjectnn-objonly.zekun-qi": {
+          "last_modified": "2026-10-30T20:40:58Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/recon.shapenetpart.zekun-qi": {
+          "last_modified": "2026-10-30T20:41:19Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/second-dynamic-voxel.kitti.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:27Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/second-iou.kitti.openpcdet": {
+          "last_modified": "2026-10-30T20:57:06Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/second-multihead.nuscenes.openpcdet": {
           "last_modified": "2026-10-21T20:43:14Z",
           "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
+        "torch-pointcloud/second.kitti-car.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:32Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/second.kitti.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:36Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/second.kitti.openpcdet": {
-          "last_modified": "2026-10-20T20:46:09Z",
-          "last_seen_at": "2026-10-21T01:38:02.771880Z"
+          "last_modified": "2026-10-30T20:57:33Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/sonata-base.pretrain.fair": {
           "last_modified": "2026-10-21T06:10:24Z",
@@ -3321,6 +3621,10 @@
         "torch-pointcloud/spformer-unet.scannet20.open3d": {
           "last_modified": "2026-10-20T20:46:10Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
+        "torch-pointcloud/spformer.scannet.jiahao-sun": {
+          "last_modified": "2026-10-30T20:44:12Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/spunet-v1m1.scannet20.pointcept": {
           "last_modified": "2026-10-20T20:46:11Z",
@@ -3338,6 +3642,22 @@
           "last_modified": "2026-10-20T20:46:15Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/tr3d.s3dis-area5.mmdet3d": {
+          "last_modified": "2026-10-30T20:58:47Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/tr3d.scannet.mmdet3d": {
+          "last_modified": "2026-10-30T20:58:53Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/tr3d.sunrgbd.mmdet3d": {
+          "last_modified": "2026-10-30T20:58:58Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/transfusion-lidar.nuscenes.openpcdet": {
+          "last_modified": "2026-10-30T20:55:39Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/utonia-lp.scannet20.pointcept": {
           "last_modified": "2026-10-21T06:10:27Z",
           "last_seen_at": "2026-10-22T01:33:17.733662Z"
@@ -3346,13 +3666,57 @@
           "last_modified": "2026-10-21T06:10:28Z",
           "last_seen_at": "2026-10-22T01:33:17.733662Z"
         },
+        "torch-pointcloud/volt-b-joint.scannet20.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:10Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/volt-b-joint.scannet200.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:17Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/volt-s-joint.scannet20.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:21Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/volt-s-joint.scannet200.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:24Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/volt-s.nuscenes.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:30Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/volt-s.scannet20.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:34Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/volt-s.scannet200.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:38Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/volt-s.semantickitti.kadir-yilmaz": {
+          "last_modified": "2026-10-30T20:55:44Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/votenet.scannet.fair": {
           "last_modified": "2026-10-20T20:46:16Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
         },
+        "torch-pointcloud/votenet.scannet.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:47Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
         "torch-pointcloud/votenet.sunrgbd.fair": {
           "last_modified": "2026-10-20T20:46:17Z",
           "last_seen_at": "2026-10-21T01:38:02.771880Z"
+        },
+        "torch-pointcloud/votenet.sunrgbd.mmdet3d": {
+          "last_modified": "2026-10-30T20:56:51Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
+        },
+        "torch-pointcloud/voxel-rcnn.kitti-car.openpcdet": {
+          "last_modified": "2026-10-30T20:55:29Z",
+          "last_seen_at": "2026-10-31T02:26:42.372825Z"
         },
         "torch-pointcloud/voxelnext.nuscenes.openpcdet": {
           "last_modified": "2026-10-21T20:43:15Z",
