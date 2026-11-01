@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-10-31T02:26:42.372825Z",
+      "last_successful_at": "2026-11-01T02:16:23.266923Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -210,6 +210,10 @@
           "last_modified": "2026-08-22T02:28:55Z",
           "last_seen_at": "2026-08-22T23:37:03.699754Z"
         },
+        "Chichonnade/Comparative-Analysis-3D-2.5D-MRI-Super-Resolution-EDM": {
+          "last_modified": "2026-10-31T17:13:40Z",
+          "last_seen_at": "2026-11-01T02:16:23.266923Z"
+        },
         "ChodBhangra/knee-cartilage-segmentation": {
           "last_modified": "2026-10-22T23:59:12Z",
           "last_seen_at": "2026-10-23T01:33:35.949838Z"
@@ -345,6 +349,10 @@
         "HarshDefy/paper_021511188_robotics_vision_language": {
           "last_modified": "2026-08-21T16:38:43Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "HoqueMahmudul/convective-cloud-3d-instance-segmentation": {
+          "last_modified": "2026-10-31T03:22:29Z",
+          "last_seen_at": "2026-11-01T02:16:23.266923Z"
         },
         "Hugheschristopher/video-understanding-reading": {
           "last_modified": "2026-10-16T05:23:29Z",
@@ -1582,6 +1590,10 @@
           "last_modified": "2026-10-04T00:08:21Z",
           "last_seen_at": "2026-10-04T02:42:37.648794Z"
         },
+        "haroonx02/polyp-segmentation-unet-resnet34": {
+          "last_modified": "2026-10-31T22:41:43Z",
+          "last_seen_at": "2026-11-01T02:16:23.266923Z"
+        },
         "harrytaylor/video-understanding-reading": {
           "last_modified": "2026-08-26T12:39:44Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -1957,6 +1969,10 @@
         "kylinfires/gaussian-splatting-vulkan": {
           "last_modified": "2026-10-28T02:29:40Z",
           "last_seen_at": "2026-10-29T02:28:24.663191Z"
+        },
+        "lafen237/beans_image_classification": {
+          "last_modified": "2026-10-31T14:02:41Z",
+          "last_seen_at": "2026-11-01T02:16:23.266923Z"
         },
         "latheamit/review-robotics-vision-language": {
           "last_modified": "2026-10-15T19:14:44Z",
