@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-11-03T03:58:31.590421Z",
+  "last_updated_at": "2026-11-04T03:06:05.856491Z",
   "repositories": {
     "1035697953": {
       "first_promoted_at": "2026-08-18T23:46:15.396556Z",
@@ -340,7 +340,7 @@
     "1144211118": {
       "first_promoted_at": "2026-09-18T01:22:00.042316Z",
       "full_name": "OpenMOSS/MOVA",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -350,7 +350,7 @@
       "repo_id": "1144211118",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 1134,
+      "stars": 1136,
       "topics": [
         "vision_foundation_models",
         "vision_language_models"
@@ -475,7 +475,7 @@
     "1277471539": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "bilawalsidhu/gods-eye-view",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -483,7 +483,7 @@
       "repo_id": "1277471539",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 62352,
+      "stars": 62571,
       "topics": [
         "spatial_intelligence"
       ],
@@ -650,7 +650,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -658,7 +658,7 @@
       "repo_id": "167694194",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 37164,
+      "stars": 37204,
       "topics": [
         "object_detection"
       ],
@@ -703,7 +703,7 @@
     "19696006": {
       "first_promoted_at": "2026-09-17T01:35:17.250204Z",
       "full_name": "playcanvas/engine",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -711,7 +711,7 @@
       "repo_id": "19696006",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 17183,
+      "stars": 17187,
       "topics": [
         "gaussian_splatting",
         "vr_mr_xr"
@@ -800,7 +800,7 @@
     "23007417": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "colmap/colmap",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -808,7 +808,7 @@
       "repo_id": "23007417",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 13136,
+      "stars": 13142,
       "topics": [
         "multi_view_stereo",
         "structure_from_motion"
@@ -991,7 +991,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -999,7 +999,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 16268,
+      "stars": 16281,
       "topics": [
         "super_resolution"
       ],
@@ -1165,7 +1165,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1173,7 +1173,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 63051,
+      "stars": 63093,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1228,7 +1228,7 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1236,7 +1236,7 @@
       "repo_id": "567038244",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 8555,
+      "stars": 8564,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1356,7 +1356,7 @@
     "712225112": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Genesis-Embodied-AI/genesis-world",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1364,7 +1364,7 @@
       "repo_id": "712225112",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 30160,
+      "stars": 30164,
       "topics": [
         "embodied_vision"
       ],
@@ -1463,8 +1463,8 @@
     },
     "787462297": {
       "first_promoted_at": "2026-10-31T02:37:35.360287Z",
-      "full_name": "Blaizzy/mlx-vlm",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "full_name": "Neywa-Labs/mlx-vlm",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1472,11 +1472,11 @@
       "repo_id": "787462297",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 5710,
+      "stars": 5792,
       "topics": [
         "vision_language_models"
       ],
-      "url": "https://github.com/Blaizzy/mlx-vlm"
+      "url": "https://github.com/Neywa-Labs/mlx-vlm"
     },
     "792627308": {
       "first_promoted_at": "2026-08-25T23:48:15.423665Z",
@@ -1698,7 +1698,7 @@
     "900320441": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "datawhalechina/every-embodied",
-      "last_observed_at": "2026-10-31T02:37:35.360287Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1707,7 +1707,7 @@
       "repo_id": "900320441",
       "research_category": "research",
       "research_relevance": 0.5,
-      "stars": 4305,
+      "stars": 4356,
       "topics": [
         "embodied_vision",
         "vision_language_action"
@@ -1791,7 +1791,7 @@
     "951534260": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "roboflow/rf-detr",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1801,7 +1801,7 @@
       "repo_id": "951534260",
       "research_category": "research",
       "research_relevance": 1.0,
-      "stars": 9955,
+      "stars": 9966,
       "topics": [
         "instance_segmentation",
         "object_detection",
@@ -1887,7 +1887,7 @@
     "963801533": {
       "first_promoted_at": "2026-08-12T00:06:45.191668Z",
       "full_name": "lightly-ai/lightly-train",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
+      "last_observed_at": "2026-11-04T03:06:05.856491Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
