@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-11-03T03:56:30.704214Z",
+      "last_successful_at": "2026-11-04T03:01:42.990734Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -219,8 +219,8 @@
           "last_seen_at": "2026-11-02T02:33:29.309017Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-10-22T23:59:12Z",
-          "last_seen_at": "2026-10-23T01:33:35.949838Z"
+          "last_modified": "2026-11-04T02:08:08Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -269,6 +269,10 @@
         "DenisaBumba/rfdetr-instance-segmentation-leibniz-manuscripts": {
           "last_modified": "2026-10-15T07:49:24Z",
           "last_seen_at": "2026-10-16T01:24:55.837329Z"
+        },
+        "DenisaBumba/rfdetr-instance-segmentation-leibniz-manuscripts-v2": {
+          "last_modified": "2026-11-03T16:45:50Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "DigiGreen/pyannote-segmentation-agri-indic": {
           "last_modified": "2026-09-19T08:34:46Z",
@@ -362,6 +366,10 @@
           "last_modified": "2026-10-16T05:23:29Z",
           "last_seen_at": "2026-10-17T01:20:23.610409Z"
         },
+        "Hussnain1/ikidney-tumor-segmentation-unet25d": {
+          "last_modified": "2026-11-03T20:09:26Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
+        },
         "ISAAC-corpus/isaac-generalization-segmentation": {
           "last_modified": "2026-09-24T16:48:37Z",
           "last_seen_at": "2026-09-25T01:33:45.673902Z"
@@ -375,8 +383,8 @@
           "last_seen_at": "2026-10-18T01:06:49.596492Z"
         },
         "Inseop97/mp-segmentation-models": {
-          "last_modified": "2026-09-21T07:25:59Z",
-          "last_seen_at": "2026-09-22T01:37:30.054825Z"
+          "last_modified": "2026-11-03T07:38:42Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "Intel/object-detection": {
           "last_modified": "2026-09-10T21:58:20Z",
@@ -385,6 +393,10 @@
         "Iusokolov/reading-vision-language-pretraining": {
           "last_modified": "2026-09-15T00:18:49Z",
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
+        },
+        "JFenic/industrial-defect-segmentation-ksdd2": {
+          "last_modified": "2026-11-04T00:03:58Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "JSONOD/roomorph-segmentation-onnx": {
           "last_modified": "2026-10-29T03:54:42Z",
@@ -429,6 +441,10 @@
         "KaranDas/video-understanding-notes": {
           "last_modified": "2026-10-05T13:05:15Z",
           "last_seen_at": "2026-10-06T03:02:17.518811Z"
+        },
+        "Karonwala/Tobacco-Leaf-Vein-Segmentation-Model": {
+          "last_modified": "2026-11-03T05:27:52Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "KartikPat250905/hc-segmentation-model": {
           "last_modified": "2026-08-29T23:18:22Z",
@@ -689,6 +705,10 @@
         "Sathyag007/speaker-segmentation-fine-tuned-callhome-jpn": {
           "last_modified": "2026-09-29T07:38:59Z",
           "last_seen_at": "2026-09-30T02:09:31.699451Z"
+        },
+        "Sawarn/surfaceguard-defect-segmentation": {
+          "last_modified": "2026-11-03T16:38:27Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "Seoulhan/reading-vision-language-pretraining": {
           "last_modified": "2026-09-13T14:34:44Z",
@@ -1397,6 +1417,10 @@
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam-v6": {
           "last_modified": "2026-10-25T13:24:00Z",
           "last_seen_at": "2026-10-26T01:14:52.132916Z"
+        },
+        "einarolafsson/toxoplasma-plaque-segmentation-cpsam-v8-e50": {
+          "last_modified": "2026-11-03T18:05:13Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam": {
           "last_modified": "2026-10-12T19:52:57Z",
@@ -2279,8 +2303,8 @@
           "last_seen_at": "2026-09-14T01:09:51.095376Z"
         },
         "occurra/object_detection": {
-          "last_modified": "2026-11-03T03:15:50Z",
-          "last_seen_at": "2026-11-03T03:56:30.704214Z"
+          "last_modified": "2026-11-03T17:16:49Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "olgasmirnov/cs224n-vision-language-pretraining": {
           "last_modified": "2026-10-16T04:53:31Z",
@@ -2641,6 +2665,10 @@
         "syssec-utd/pylingual-shared-segmentation-v2": {
           "last_modified": "2026-11-02T04:44:23Z",
           "last_seen_at": "2026-11-03T03:56:30.704214Z"
+        },
+        "syssec-utd/pylingual-shared-segmentation-v3": {
+          "last_modified": "2026-11-03T15:53:03Z",
+          "last_seen_at": "2026-11-04T03:01:42.990734Z"
         },
         "szluo9641/notes-video-understanding": {
           "last_modified": "2026-10-08T06:48:33Z",
