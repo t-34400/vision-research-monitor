@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-11-07T02:59:37.602865Z",
+  "last_updated_at": "2026-11-08T02:37:51.376765Z",
   "repositories": {
     "104003936": {
       "first_promoted_at": "2026-09-02T01:12:40.389942Z",
@@ -453,7 +453,7 @@
     "1277471539": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "bilawalsidhu/gods-eye-view",
-      "last_observed_at": "2026-11-06T03:31:30.974896Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -461,7 +461,7 @@
       "repo_id": "1277471539",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 63039,
+      "stars": 63417,
       "topics": [
         "spatial_intelligence"
       ],
@@ -470,7 +470,7 @@
     "129712017": {
       "first_promoted_at": "2026-09-05T01:14:10.648577Z",
       "full_name": "satellite-image-deep-learning/techniques",
-      "last_observed_at": "2026-11-01T02:24:59.425546Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -479,7 +479,7 @@
       "repo_id": "129712017",
       "research_category": "research",
       "research_relevance": 0.55,
-      "stars": 10296,
+      "stars": 10300,
       "topics": [
         "image_classification",
         "object_detection"
@@ -572,7 +572,7 @@
     "146165888": {
       "first_promoted_at": "2026-08-15T23:43:55.759434Z",
       "full_name": "ultralytics/yolov3",
-      "last_observed_at": "2026-11-05T03:36:30.044353Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -580,7 +580,7 @@
       "repo_id": "146165888",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 10633,
+      "stars": 10632,
       "topics": [
         "object_detection"
       ],
@@ -628,7 +628,7 @@
     "167694194": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "blakeblackshear/frigate",
-      "last_observed_at": "2026-11-07T02:59:37.602865Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -636,7 +636,7 @@
       "repo_id": "167694194",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 37297,
+      "stars": 37324,
       "topics": [
         "object_detection"
       ],
@@ -659,24 +659,6 @@
         "semantic_segmentation"
       ],
       "url": "https://github.com/qubvel-org/segmentation_models.pytorch"
-    },
-    "184593965": {
-      "first_promoted_at": "2026-10-06T03:11:54.185492Z",
-      "full_name": "nianticlabs/monodepth2",
-      "last_observed_at": "2026-11-03T03:58:31.590421Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "established"
-      ],
-      "repo_id": "184593965",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 4510,
-      "topics": [
-        "depth_estimation",
-        "monocular_depth"
-      ],
-      "url": "https://github.com/nianticlabs/monodepth2"
     },
     "19696006": {
       "first_promoted_at": "2026-09-17T01:35:17.250204Z",
@@ -778,7 +760,7 @@
     "23007417": {
       "first_promoted_at": "2026-08-08T23:54:19.915276Z",
       "full_name": "colmap/colmap",
-      "last_observed_at": "2026-11-07T02:59:37.602865Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -786,7 +768,7 @@
       "repo_id": "23007417",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 13171,
+      "stars": 13175,
       "topics": [
         "multi_view_stereo",
         "structure_from_motion"
@@ -852,7 +834,7 @@
     "264818686": {
       "first_promoted_at": "2026-08-15T23:43:55.759434Z",
       "full_name": "ultralytics/yolov5",
-      "last_observed_at": "2026-11-05T03:36:30.044353Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -860,7 +842,7 @@
       "repo_id": "264818686",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 58253,
+      "stars": 58256,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -908,24 +890,6 @@
       ],
       "url": "https://github.com/john-rocky/CoreML-Models"
     },
-    "310296": {
-      "first_promoted_at": "2026-10-28T02:29:35.317003Z",
-      "full_name": "kornelski/pngquant",
-      "last_observed_at": "2026-10-28T02:29:35.317003Z",
-      "priority": "normal",
-      "promotion_reasons": [
-        "established"
-      ],
-      "repo_id": "310296",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 5765,
-      "topics": [
-        "model_compression",
-        "quantization"
-      ],
-      "url": "https://github.com/kornelski/pngquant"
-    },
     "325519051": {
       "first_promoted_at": "2026-10-25T01:23:48.741853Z",
       "full_name": "LogosIntelligenceLab/SETR",
@@ -969,7 +933,7 @@
     "340660525": {
       "first_promoted_at": "2026-08-13T00:06:15.297495Z",
       "full_name": "Blinue/Magpie",
-      "last_observed_at": "2026-11-07T02:59:37.602865Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -977,7 +941,7 @@
       "repo_id": "340660525",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 16318,
+      "stars": 16326,
       "topics": [
         "super_resolution"
       ],
@@ -1065,6 +1029,25 @@
       ],
       "url": "https://github.com/zuruoke/watermark-removal"
     },
+    "439439857": {
+      "first_promoted_at": "2026-11-08T02:37:51.376765Z",
+      "full_name": "StanfordVL/BEHAVIOR-1K",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "439439857",
+      "research_category": "research",
+      "research_relevance": 0.75,
+      "stars": 1796,
+      "topics": [
+        "embodied_vision"
+      ],
+      "url": "https://github.com/StanfordVL/BEHAVIOR-1K"
+    },
     "449377543": {
       "first_promoted_at": "2026-09-09T01:21:31.156122Z",
       "full_name": "JingyunLiang/VRT",
@@ -1143,7 +1126,7 @@
     "535360445": {
       "first_promoted_at": "2026-08-08T13:19:49.174985Z",
       "full_name": "ultralytics/ultralytics",
-      "last_observed_at": "2026-11-07T02:59:37.602865Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established"
@@ -1151,7 +1134,7 @@
       "repo_id": "535360445",
       "research_category": "candidate",
       "research_relevance": 0.35,
-      "stars": 63177,
+      "stars": 63198,
       "topics": [
         "image_classification",
         "instance_segmentation",
@@ -1206,15 +1189,17 @@
     "567038244": {
       "first_promoted_at": "2026-09-15T08:10:58.059582Z",
       "full_name": "isaac-sim/IsaacLab",
-      "last_observed_at": "2026-11-07T02:59:37.602865Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
-        "established"
+        "established",
+        "research_tool",
+        "strong_research"
       ],
       "repo_id": "567038244",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 8581,
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 8589,
       "topics": [
         "robot_learning",
         "robotics_mapping",
@@ -1354,15 +1339,17 @@
     "712225112": {
       "first_promoted_at": "2026-09-16T01:31:15.245059Z",
       "full_name": "Genesis-Embodied-AI/genesis-world",
-      "last_observed_at": "2026-11-07T02:59:37.602865Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
-        "established"
+        "established",
+        "research_tool",
+        "strong_research"
       ],
       "repo_id": "712225112",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 30190,
+      "research_category": "research",
+      "research_relevance": 0.7,
+      "stars": 30197,
       "topics": [
         "embodied_vision"
       ],
@@ -1518,7 +1505,7 @@
     "8096326": {
       "first_promoted_at": "2026-08-31T01:27:08.434154Z",
       "full_name": "openMVG/openMVG",
-      "last_observed_at": "2026-11-07T02:59:37.602865Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1528,30 +1515,31 @@
       "repo_id": "8096326",
       "research_category": "research",
       "research_relevance": 0.9,
-      "stars": 6590,
+      "stars": 6592,
       "topics": [
         "structure_from_motion",
         "three_d_reconstruction"
       ],
       "url": "https://github.com/openMVG/openMVG"
     },
-    "847933360": {
-      "first_promoted_at": "2026-09-12T01:20:52.471665Z",
-      "full_name": "apple-aiml-research/ml-depth-pro",
-      "last_observed_at": "2026-09-12T01:20:52.471665Z",
+    "820789280": {
+      "first_promoted_at": "2026-11-08T02:37:51.376765Z",
+      "full_name": "NVlabs/Eagle",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
-        "established"
+        "established",
+        "research_tool",
+        "strong_research"
       ],
-      "repo_id": "847933360",
-      "research_category": "candidate",
-      "research_relevance": 0.35,
-      "stars": 5711,
+      "repo_id": "820789280",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 3810,
       "topics": [
-        "metric_depth",
-        "monocular_depth"
+        "vision_language_models"
       ],
-      "url": "https://github.com/apple-aiml-research/ml-depth-pro"
+      "url": "https://github.com/NVlabs/Eagle"
     },
     "859294552": {
       "first_promoted_at": "2026-09-23T01:37:54.532016Z",
@@ -1712,6 +1700,25 @@
         "vision_language_action"
       ],
       "url": "https://github.com/datawhalechina/every-embodied"
+    },
+    "905946140": {
+      "first_promoted_at": "2026-11-08T02:37:51.376765Z",
+      "full_name": "nvidia-isaac/cuVSLAM",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
+      "priority": "normal",
+      "promotion_reasons": [
+        "established",
+        "research_tool",
+        "strong_research"
+      ],
+      "repo_id": "905946140",
+      "research_category": "research",
+      "research_relevance": 1.0,
+      "stars": 1899,
+      "topics": [
+        "slam"
+      ],
+      "url": "https://github.com/nvidia-isaac/cuVSLAM"
     },
     "912869501": {
       "first_promoted_at": "2026-10-27T02:16:47.741284Z",
@@ -1886,7 +1893,7 @@
     "963801533": {
       "first_promoted_at": "2026-08-12T00:06:45.191668Z",
       "full_name": "lightly-ai/lightly-train",
-      "last_observed_at": "2026-11-06T03:31:30.974896Z",
+      "last_observed_at": "2026-11-08T02:37:51.376765Z",
       "priority": "normal",
       "promotion_reasons": [
         "established",
@@ -1895,7 +1902,7 @@
       "repo_id": "963801533",
       "research_category": "research",
       "research_relevance": 0.55,
-      "stars": 1727,
+      "stars": 1728,
       "topics": [
         "depth_estimation",
         "object_detection",
