@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-11-07T02:51:19.369650Z",
+      "last_successful_at": "2026-11-08T02:31:34.562274Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -187,8 +187,8 @@
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "BohdanZasymovych/ai-hw2-object-detection": {
-          "last_modified": "2026-11-07T02:33:59Z",
-          "last_seen_at": "2026-11-07T02:51:19.369650Z"
+          "last_modified": "2026-11-08T01:50:10Z",
+          "last_seen_at": "2026-11-08T02:31:34.562274Z"
         },
         "Brijeshsharma/nppe3-4x-super-resolution-denoise": {
           "last_modified": "2026-09-05T18:24:03Z",
@@ -223,8 +223,8 @@
           "last_seen_at": "2026-11-02T02:33:29.309017Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-11-05T09:27:12Z",
-          "last_seen_at": "2026-11-06T03:27:37.848310Z"
+          "last_modified": "2026-11-08T01:17:44Z",
+          "last_seen_at": "2026-11-08T02:31:34.562274Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -369,6 +369,10 @@
         "HarshDefy/paper_021511188_robotics_vision_language": {
           "last_modified": "2026-08-21T16:38:43Z",
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
+        },
+        "HeOCR/heocr-r4d-segmentation": {
+          "last_modified": "2026-11-07T07:01:31Z",
+          "last_seen_at": "2026-11-08T02:31:34.562274Z"
         },
         "HoqueMahmudul/convective-cloud-3d-instance-segmentation": {
           "last_modified": "2026-10-31T03:22:29Z",
@@ -2258,6 +2262,10 @@
           "last_modified": "2026-09-14T05:21:42Z",
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
+        "mlboydaisuke/Cloth-Segmentation-U2Net-OpenVINO": {
+          "last_modified": "2026-11-07T06:50:35Z",
+          "last_seen_at": "2026-11-08T02:31:34.562274Z"
+        },
         "mlboydaisuke/pyannote-segmentation-3.0-CoreML": {
           "last_modified": "2026-08-15T05:15:59Z",
           "last_seen_at": "2026-08-15T23:36:30.730423Z"
@@ -2343,8 +2351,8 @@
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
         },
         "nmariotto/scratch-assay-segmentation": {
-          "last_modified": "2026-10-18T17:43:42Z",
-          "last_seen_at": "2026-10-19T01:19:33.335824Z"
+          "last_modified": "2026-11-07T14:13:26Z",
+          "last_seen_at": "2026-11-08T02:31:34.562274Z"
         },
         "noah-hofmann/vision-language-pretraining59": {
           "last_modified": "2026-10-07T05:52:16Z",
@@ -3949,6 +3957,10 @@
         "venkatvaradarajan/rcan-super-resolution": {
           "last_modified": "2026-09-07T00:46:49Z",
           "last_seen_at": "2026-09-07T01:03:33.070326Z"
+        },
+        "vinimuchulski/sky-segmentation-wolosky-net-model": {
+          "last_modified": "2026-11-07T19:59:13Z",
+          "last_seen_at": "2026-11-08T02:31:34.562274Z"
         },
         "viveksharmacus/video-understanding": {
           "last_modified": "2026-10-03T14:07:21Z",
