@@ -1,0 +1,820 @@
+{
+  "items": [
+    {
+      "change_label": "RELEASED",
+      "item_id": "github:release:535360445:release:438313621",
+      "signals": {
+        "freshness": 0.7342,
+        "novelty": 1.0,
+        "popularity": 0.7141,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6608,
+      "watched_override": false
+    },
+    {
+      "change_label": "RELEASED",
+      "item_id": "github:release:712225112:release:438447306",
+      "signals": {
+        "freshness": 0.7857,
+        "novelty": 1.0,
+        "popularity": 0.3004,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6479,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:535360445:tag:v8.4.208",
+      "signals": {
+        "freshness": 0.8213,
+        "novelty": 0.65,
+        "popularity": 0.7141,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.6039,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:19696006:tag:v2.24.0-beta.36",
+      "signals": {
+        "freshness": 0.8213,
+        "novelty": 0.65,
+        "popularity": 0.4761,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.592,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:tag:712225112:tag:v1.4.6",
+      "signals": {
+        "freshness": 0.8213,
+        "novelty": 0.65,
+        "popularity": 0.3004,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5832,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:1277471539:commit:1453794573a00591282d738364039dc1ea5188c4",
+      "signals": {
+        "freshness": 0.8205,
+        "novelty": 0.45,
+        "popularity": 1.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5781,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:282b672221e9d6d81fdf2de6",
+      "signals": {
+        "freshness": 0.8157,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7009,
+        "research": 1.0
+      },
+      "total": 0.5776,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:535360445:commit:6bc84f1eda65fc8b0aa2a2c71b2eb60908b00711",
+      "signals": {
+        "freshness": 0.8132,
+        "novelty": 0.45,
+        "popularity": 0.7141,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5627,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:19696006:commit:934e4e70c7ec69e699a311a5bdb083edcb276021",
+      "signals": {
+        "freshness": 0.8189,
+        "novelty": 0.45,
+        "popularity": 0.4761,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5516,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:167694194:commit:52d469ed20cc083d29f670b2f88acfecad8841fd",
+      "signals": {
+        "freshness": 0.7325,
+        "novelty": 0.45,
+        "popularity": 0.6597,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5479,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:567038244:commit:1be7689096a718cdebcfcefad2e2cd5fe04dfdeb",
+      "signals": {
+        "freshness": 0.7696,
+        "novelty": 0.45,
+        "popularity": 0.4761,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5442,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:951534260:commit:70bf21767a3dc49ed53c8b031ee640d8d995409a",
+      "signals": {
+        "freshness": 0.7923,
+        "novelty": 0.45,
+        "popularity": 0.3882,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5433,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:21fbb6a32a2498e693289293",
+      "signals": {
+        "freshness": 0.3894,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7986,
+        "research": 1.0
+      },
+      "total": 0.543,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:e2fbb60d9485d69f969c4f00",
+      "signals": {
+        "freshness": 0.3894,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7986,
+        "research": 1.0
+      },
+      "total": 0.543,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:e671c665ec976296267596f7",
+      "signals": {
+        "freshness": 0.6726,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.656,
+        "research": 1.0
+      },
+      "total": 0.5427,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:0efcb504c88fa9fd8bae77c8",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9087,
+        "research": 1.0
+      },
+      "total": 0.5405,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f84bad8469fe8369fe61abf7",
+      "signals": {
+        "freshness": 0.7525,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.9087,
+        "research": 1.0
+      },
+      "total": 0.5405,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:712225112:commit:5dc441df4961fc0d84784adcf412048f720f5def",
+      "signals": {
+        "freshness": 0.7919,
+        "novelty": 0.45,
+        "popularity": 0.3004,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5388,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:23007417:commit:3c1a1b957cc96d88849e4d30e1d0ec51c9da501b",
+      "signals": {
+        "freshness": 0.7908,
+        "novelty": 0.45,
+        "popularity": 0.3004,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5386,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:900320441:commit:f2a09c59e17675d5041e855199a6771e0cb3e7e8",
+      "signals": {
+        "freshness": 0.7015,
+        "novelty": 0.45,
+        "popularity": 0.4216,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5313,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:340575109:commit:5e4a80ef2ec72e7462b6f82a48a44816ff3cd5ac",
+      "signals": {
+        "freshness": 0.8138,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5271,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:805139589",
+      "signals": {
+        "freshness": 0.8239,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.555,
+        "research": 1.0
+      },
+      "total": 0.5201,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:746997268",
+      "signals": {
+        "freshness": 0.8191,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.555,
+        "research": 1.0
+      },
+      "total": 0.5194,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:7415bc411a1b38fab2e57dd1",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7937,
+        "research": 1.0
+      },
+      "total": 0.506,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:aab710cf227667a3ec1c8ab6",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7937,
+        "research": 1.0
+      },
+      "total": 0.506,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9336885b71dd03b1e9cee3a0",
+      "signals": {
+        "freshness": 0.7525,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7937,
+        "research": 1.0
+      },
+      "total": 0.506,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:f9779cc1f5bc63d0e904aae9",
+      "signals": {
+        "freshness": 0.7525,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7937,
+        "research": 1.0
+      },
+      "total": 0.506,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "github:commit:165469880:commit:9c0b3a0d3e2581bc184955676657b4693ffb5cf9",
+      "signals": {
+        "freshness": 0.668,
+        "novelty": 0.45,
+        "popularity": 0.0,
+        "priority": 0.5,
+        "relevance": 0.55,
+        "research": 1.0
+      },
+      "total": 0.5052,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:420f7e87b44320fb32cddf3b",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7896,
+        "research": 1.0
+      },
+      "total": 0.5048,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:48c44655827e36706c9d2192",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7896,
+        "research": 1.0
+      },
+      "total": 0.5048,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1449878369",
+      "signals": {
+        "freshness": 0.7523,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.54,
+        "research": 1.0
+      },
+      "total": 0.5048,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:a40e84002875ea009164a63f",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7865,
+        "research": 1.0
+      },
+      "total": 0.5038,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:cb51eb3f33e968f88112b63f",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7865,
+        "research": 1.0
+      },
+      "total": 0.5038,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:cfd58f9ecd2bc508b11238a9",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.786,
+        "research": 1.0
+      },
+      "total": 0.5037,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:dc6533caf761bac0d1c27009",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.786,
+        "research": 1.0
+      },
+      "total": 0.5037,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:132ad3d02dc81caa24c6f911",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7739,
+        "research": 1.0
+      },
+      "total": 0.5001,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:af017c740c2337cc1b754085",
+      "signals": {
+        "freshness": 0.7526,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.7739,
+        "research": 1.0
+      },
+      "total": 0.5001,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:930423600",
+      "signals": {
+        "freshness": 0.6909,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.555,
+        "research": 1.0
+      },
+      "total": 0.5001,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450739568",
+      "signals": {
+        "freshness": 0.7954,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.5
+      },
+      "total": 0.4993,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450536685",
+      "signals": {
+        "freshness": 0.8032,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.485,
+        "research": 0.55
+      },
+      "total": 0.496,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:818279949",
+      "signals": {
+        "freshness": 0.7008,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.75
+      },
+      "total": 0.4851,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450042826",
+      "signals": {
+        "freshness": 0.6801,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.5,
+        "research": 0.5
+      },
+      "total": 0.482,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450268821",
+      "signals": {
+        "freshness": 0.8243,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4736,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450795209",
+      "signals": {
+        "freshness": 0.8144,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4722,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:748390251",
+      "signals": {
+        "freshness": 0.8126,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4719,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450806382",
+      "signals": {
+        "freshness": 0.8121,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.7
+      },
+      "total": 0.4718,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450678821",
+      "signals": {
+        "freshness": 0.8088,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4713,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450675216",
+      "signals": {
+        "freshness": 0.7835,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 1.0
+      },
+      "total": 0.4675,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450458912",
+      "signals": {
+        "freshness": 0.7703,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4655,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:eb5de5a48d219ec9b13f4198",
+      "signals": {
+        "freshness": 0.8195,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6036,
+        "research": 1.0
+      },
+      "total": 0.459,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:eb5c1c5010e8f287610264dc",
+      "signals": {
+        "freshness": 0.7773,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.324,
+        "research": 1.0
+      },
+      "total": 0.4588,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:533d9fcd104a50e0bfd777c4",
+      "signals": {
+        "freshness": 0.8191,
+        "novelty": 0.55,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.6,
+        "research": 1.0
+      },
+      "total": 0.4579,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450272255",
+      "signals": {
+        "freshness": 0.7189,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.45
+      },
+      "total": 0.4578,
+      "watched_override": false
+    },
+    {
+      "change_label": "DISCOVERED",
+      "item_id": "github:repository:921468271",
+      "signals": {
+        "freshness": 0.6606,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.41,
+        "research": 1.0
+      },
+      "total": 0.4521,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450034186",
+      "signals": {
+        "freshness": 0.6771,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4516,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:9a39bc93c58b5d5484f1c555",
+      "signals": {
+        "freshness": 0.6743,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.35,
+        "research": 1.0
+      },
+      "total": 0.4511,
+      "watched_override": false
+    },
+    {
+      "change_label": "NEW",
+      "item_id": "github:repository:1450012388",
+      "signals": {
+        "freshness": 0.6727,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.1,
+        "relevance": 0.4,
+        "research": 0.5
+      },
+      "total": 0.4509,
+      "watched_override": false
+    },
+    {
+      "change_label": "UPDATED",
+      "item_id": "huggingface:model:5c3d707f347bc89209a1b21f",
+      "signals": {
+        "freshness": 0.7346,
+        "novelty": 1.0,
+        "popularity": 0.0,
+        "priority": 0.15,
+        "relevance": 0.3,
+        "research": 1.0
+      },
+      "total": 0.4452,
+      "watched_override": false
+    }
+  ],
+  "report_date": "2026-11-10",
+  "version": 1,
+  "window_end": "2026-11-09T23:00:00Z",
+  "window_start": "2026-11-08T23:00:00Z"
+}
