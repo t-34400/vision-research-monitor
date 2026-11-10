@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-11-09T02:41:53.994345Z",
+      "last_successful_at": "2026-11-10T04:38:38.445184Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -17,6 +17,18 @@
         "AFZALS/siglip2-image-classification": {
           "last_modified": "2026-10-06T04:33:02Z",
           "last_seen_at": "2026-10-07T02:26:12.402126Z"
+        },
+        "APLUX-Agora/MediaPipe-Selfie-Segmentation": {
+          "last_modified": "2026-11-09T10:04:46Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
+        },
+        "APLUX-Agora/YOLOv8s-Segmentation": {
+          "last_modified": "2026-11-09T10:02:19Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
+        },
+        "APLUX-Agora/yolov26s-segmentation": {
+          "last_modified": "2026-11-09T10:02:36Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "Aalmutairison/random-robotics-vision-language-2024": {
           "last_modified": "2026-10-18T01:28:39Z",
@@ -187,8 +199,8 @@
           "last_seen_at": "2026-09-15T01:31:06.796851Z"
         },
         "BohdanZasymovych/ai-hw2-object-detection": {
-          "last_modified": "2026-11-09T02:15:58Z",
-          "last_seen_at": "2026-11-09T02:41:53.994345Z"
+          "last_modified": "2026-11-10T04:22:08Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "Brijeshsharma/nppe3-4x-super-resolution-denoise": {
           "last_modified": "2026-09-05T18:24:03Z",
@@ -227,8 +239,8 @@
           "last_seen_at": "2026-11-02T02:33:29.309017Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-11-09T02:19:20Z",
-          "last_seen_at": "2026-11-09T02:41:53.994345Z"
+          "last_modified": "2026-11-10T04:35:50Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -289,6 +301,10 @@
         "DivineMohammed/survey-video-understanding": {
           "last_modified": "2026-08-28T03:35:09Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "Dongkkka/AIWorker-Arm-Segmentation-v1": {
+          "last_modified": "2026-11-10T02:31:13Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "Duongtuankiet/vision-language-pretraining-ablation": {
           "last_modified": "2026-10-08T13:33:36Z",
@@ -521,6 +537,10 @@
         "Krishchauhan/undergrad-video-understanding": {
           "last_modified": "2026-08-27T20:11:32Z",
           "last_seen_at": "2026-08-28T06:56:48.491684Z"
+        },
+        "Krrrrish/industrial-surface-defect-segmentation": {
+          "last_modified": "2026-11-09T19:41:54Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "LUCAWAGNER/robotics-vision-language-survey": {
           "last_modified": "2026-09-20T12:03:24Z",
@@ -1146,6 +1166,10 @@
           "last_modified": "2026-10-09T07:06:36Z",
           "last_seen_at": "2026-10-10T02:22:59.746779Z"
         },
+        "bharghavairigela/isic2018-segmentation-models": {
+          "last_modified": "2026-11-09T21:46:57Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
+        },
         "bhatr-eyansh/robotics-vision-language-lab": {
           "last_modified": "2026-08-26T13:36:19Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -1242,6 +1266,10 @@
           "last_modified": "2026-09-06T11:15:00Z",
           "last_seen_at": "2026-09-07T01:03:33.070326Z"
         },
+        "christiankhoury05/lesion-segmentation-model-1": {
+          "last_modified": "2026-11-09T20:47:28Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
+        },
         "christianschmi/review-vision-language-pretraining": {
           "last_modified": "2026-08-26T07:53:04Z",
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
@@ -1299,8 +1327,8 @@
           "last_seen_at": "2026-11-07T02:51:19.369650Z"
         },
         "cubert-gmbh/XMR_Demo_Industrial_Foreign_Object_Detection_Lentils": {
-          "last_modified": "2026-11-06T13:29:22Z",
-          "last_seen_at": "2026-11-07T02:51:19.369650Z"
+          "last_modified": "2026-11-09T09:56:47Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "cutaylor82/review-vision-language-pretraining26": {
           "last_modified": "2026-10-13T18:32:44Z",
@@ -1469,6 +1497,10 @@
         "einarolafsson/toxoplasma-plaque-segmentation-cpsam-v8-e50": {
           "last_modified": "2026-11-03T18:05:13Z",
           "last_seen_at": "2026-11-04T03:01:42.990734Z"
+        },
+        "einarolafsson/toxoplasma-plaque-segmentation-cpsam-v9": {
+          "last_modified": "2026-11-10T02:14:54Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "einarolafsson/toxoplasma-pv-segmentation-cpsam": {
           "last_modified": "2026-10-12T19:52:57Z",
@@ -2415,8 +2447,8 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "onemira/pyannote-segmentation-3.0-onnx": {
-          "last_modified": "2026-10-29T07:32:07Z",
-          "last_seen_at": "2026-10-30T02:38:44.870855Z"
+          "last_modified": "2026-11-09T19:47:28Z",
+          "last_seen_at": "2026-11-10T04:38:38.445184Z"
         },
         "oodogan3127/robotics-vision-language-reading": {
           "last_modified": "2026-10-06T17:52:21Z",
