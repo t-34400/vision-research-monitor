@@ -4,7 +4,7 @@
   "repositories": {},
   "sources": {
     "huggingface": {
-      "last_successful_at": "2026-11-12T03:50:27.987000Z",
+      "last_successful_at": "2026-11-13T03:26:03.275684Z",
       "repositories": {
         "27Kushal/PIXEL-Srishti-Segmentation": {
           "last_modified": "2026-09-03T20:21:49Z",
@@ -155,8 +155,8 @@
           "last_seen_at": "2026-10-02T02:18:15.161894Z"
         },
         "Arijaan/cpsamv2_he-cell-segmentation-human-breast": {
-          "last_modified": "2026-11-11T10:09:02Z",
-          "last_seen_at": "2026-11-12T03:50:27.987000Z"
+          "last_modified": "2026-11-12T14:44:09Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
         },
         "Arijaan/cpsamv2_he-whole-cell-segmentation-human-Lung-NSCLC": {
           "last_modified": "2026-11-11T10:09:05Z",
@@ -251,8 +251,8 @@
           "last_seen_at": "2026-11-02T02:33:29.309017Z"
         },
         "ChodBhangra/knee-cartilage-segmentation": {
-          "last_modified": "2026-11-12T03:41:00Z",
-          "last_seen_at": "2026-11-12T03:50:27.987000Z"
+          "last_modified": "2026-11-13T03:07:18Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
         },
         "ChristopherDavis/video-understanding-review": {
           "last_modified": "2026-09-24T12:55:32Z",
@@ -1183,8 +1183,8 @@
           "last_seen_at": "2026-10-10T02:22:59.746779Z"
         },
         "bharghavairigela/isic2018-segmentation-models": {
-          "last_modified": "2026-11-09T21:46:57Z",
-          "last_seen_at": "2026-11-10T04:38:38.445184Z"
+          "last_modified": "2026-11-12T21:45:51Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
         },
         "bhatr-eyansh/robotics-vision-language-lab": {
           "last_modified": "2026-08-26T13:36:19Z",
@@ -1241,6 +1241,10 @@
         "carmenwijaya/robotics-vision-language-study": {
           "last_modified": "2026-09-12T08:37:32Z",
           "last_seen_at": "2026-09-13T01:03:44.845143Z"
+        },
+        "chabasx/NoteTkr-mirror-Pyannote-Segmentation-MLX": {
+          "last_modified": "2026-11-12T14:53:54Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
         },
         "chagatai-project/chagatai-sentence-segmentation": {
           "last_modified": "2026-09-29T15:04:14Z",
@@ -1563,8 +1567,12 @@
           "last_seen_at": "2026-08-27T04:32:16.683237Z"
         },
         "eurocontrol-asu/deepcontrail-segmentation": {
-          "last_modified": "2026-11-11T15:02:39Z",
-          "last_seen_at": "2026-11-12T03:50:27.987000Z"
+          "last_modified": "2026-11-12T09:35:51Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
+        },
+        "evergyu2/MSK_segmentation": {
+          "last_modified": "2026-11-13T01:34:59Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
         },
         "eylulpelinkilic/Colored_Point_Clouds": {
           "last_modified": "2026-08-06T20:28:43Z",
@@ -1591,8 +1599,8 @@
           "last_seen_at": "2026-09-29T02:35:51.287817Z"
         },
         "fedeceri/cochlea-calcium-waves-binary-segmentation-unet3d": {
-          "last_modified": "2026-11-08T14:58:31Z",
-          "last_seen_at": "2026-11-09T02:41:53.994345Z"
+          "last_modified": "2026-11-12T12:07:16Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
         },
         "fedeceri/cochlea-hair-cell-binary-segmentation-unet2d": {
           "last_modified": "2026-08-18T10:33:23Z",
@@ -2463,8 +2471,8 @@
           "last_seen_at": "2026-08-21T23:41:57.870437Z"
         },
         "onemira/pyannote-segmentation-3.0-onnx": {
-          "last_modified": "2026-11-11T01:03:31Z",
-          "last_seen_at": "2026-11-11T02:50:03.440288Z"
+          "last_modified": "2026-11-12T05:44:05Z",
+          "last_seen_at": "2026-11-13T03:26:03.275684Z"
         },
         "oodogan3127/robotics-vision-language-reading": {
           "last_modified": "2026-10-06T17:52:21Z",
